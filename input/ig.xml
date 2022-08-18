@@ -48,17 +48,12 @@
 		<version value="current"/>
 	</dependsOn>
 	<definition>
-		<grouping id="p1">
-			<name value="base"/>
-		</grouping>
-		<!--
     <resource>
       <reference>
         <reference value="StructureDefinition/au-core-allergyintolerance"/>
       </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
+	<!--
     <resource>
       <reference>
         <reference value="StructureDefinition/au-core-composition"/>
