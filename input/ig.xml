@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.au.core"/>
+  <url value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
+  <name value="AUCoreImplementationGuide"/>
+  <title value="AU Core Implementation Guide"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="HL7 Australia"/>
+  <contact>
+    <name value="HL7 Australia Patient Administration Working Group"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://confluence.hl7australia.com/display/PA"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="HL7 Australia Orders and Observations Working Group"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://confluence.hl7australia.com/display/OO"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="HL7 Australia Medications Working Group"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://confluence.hl7australia.com/display/MED"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="This implementation guide is provided to support the use of FHIR®© in an Australian context, and defines the minimum set of constraints on the FHIR resources to create the AU Core profiles. This implementation guide forms the foundation to build future AU Realm FHIR implementation guides and its content will continue to grow to meet the needs of AU implementers."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.au.base"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="aubaser4">
+    <uri value="http://hl7.org.au/fhir/ImplementationGuide/au-base"/>
+    <packageId value="hl7.fhir.au.base"/>
+    <version value="current"/>
+  </dependsOn>
+  <definition>
+    <grouping id="p1">
+      <name value="base"/>
+    </grouping>
+    <!--
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-allergyintolerance"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-composition"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-condition"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-diagnosticreport"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-encounter"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-healthcareservice"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-immunization"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-location"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medication"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationadministration"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationdispense"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationrequest"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationstatement"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-organization"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-patient"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-practitioner"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-practitionerrole"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-procedure"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-relatedperson"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-specimen"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-substance"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+	-->
+    <!--VITAL SIGNS-->
+	<!--
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-bloodpressure"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-bodyheight"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-bodyweight"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-vitalspanel"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-oxygensat"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-bmi"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-bodytemp"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-resprate"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-headcircum"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-heartrate"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+	-->
+    <!--LIFESTYLE FACTOR-->
+    <!--
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-alcoholstatus"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-healthprogramparticipation"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-smokingceasedate"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-smokingstartdate"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-smokingstatus"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+	-->
+    <!--PREGNANCY RELATED-->
+    <!--
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-estimateddateofdelivery"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-gestationalage"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-lastmenstrualperiod"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-gravidity"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-parity"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    -->
+    <page>
+      <nameUrl value="index.html"/>
+      <title value="Australian Core Implementation Guide"/>
+      <generation value="html"/>
+    </page>
+    <parameter>
+      <code value="generate-xml"/>
+      <value value="xml"/>
+    </parameter>
+    <parameter>
+      <code value="generate-json"/>
+      <value value="JSON"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>
