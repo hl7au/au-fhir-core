@@ -1,20 +1,15 @@
 {
- "package-id" : "hl7.fhir.uv.myig",
- "title" : "Your User Friendly Name for MyIG Here", 
- "canonical" : "http://hl7.org/fhir/uv/myig", 
- "introduction" : "The introduction that should appear in the FHIR IG registry",
- "list" : [{
-  "version" : "current",
-  "desc" : "Continuous Integration Build (latest in version control)",
-  "path" : "http://hl7.org/fhir/ig/HL7/myig",
-  "status" : "ci-build",
-  "current" : true
- },{
-  "version" : "0.1.0",  
-  "date" : "2099-01-01", 
-  "desc" : "Initial STU ballot (Mmm yyyy Ballot)",   
-  "path" : "http://hl7.org/fhir/yyyyMmm/myig.html",   
-  "status" : "ballot",   
-  "sequence" : "DSTU 1"
- }]
+  "package-id": "hl7.fhir.au.core",
+  "title": "AU Core",
+  "canonical": "http://hl7.org.au/fhir/core",
+  "introduction": "AU Core",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "http://build.fhir.org/ig/hl7au/au-fhir-core",
+      "status": "ci-build",
+      "current": true
+    }
+  ]
 }

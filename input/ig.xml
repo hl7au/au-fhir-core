@@ -39,7 +39,7 @@
 			<code value="AU"/>
 		</coding>
 	</jurisdiction>
-	<packageId value="hl7.fhir.au.base"/>
+	<packageId value="hl7.fhir.au.core"/>
 	<license value="CC0-1.0"/>
 	<fhirVersion value="4.0.1"/>
 	<dependsOn id="aubaser4">
