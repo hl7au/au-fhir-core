@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="dh-medicationadministration-core-1"/>
-  <url
-    value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-medicationadministration-core-1"/>
-  <version value="0.0.5"/>
-  <name value="ADHAMedicationAdministrationCore"/>
-  <title value="ADHA Core MedicationAdministration"/>
+  <id value="au-core-medicationadministration"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationadministration"/>
+  <name value="AUCoreMedicationAdministration"/>
+  <title value="AU Core MedicationAdministration"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <publisher value="Australian Digital Health Agency"/>
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
-      <system value="email"/>
-      <value value="help@digitalhealth.gov.au"/>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
     </telecom>
   </contact>
-  <description
-    value="The purpose of this profile is to provide a core representation of a medication administration for the electronic exchange of health information between individuals, healthcare providers, and the My Health Record system infrastructure in Australia."/>
-  <copyright
-    value="Copyright © 2022 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+  <description value="This profile TBD." />
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved. This resource includes SNOMED Clinical Terms™ (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO. The rights to use and implement or implementation of SNOMED CT content are limited to the extent it is necessary to allow for the end use of this material.  No further rights are granted in respect of the International Release and no further use of any SNOMED CT content by any other party is permitted. All copies of this resource must include this copyright statement and all information contained in this statement. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2022, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc." />
   <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
@@ -84,7 +84,7 @@
       <sliceName value="medicationReference"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-medication-core-1"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
       </type>
     </element>
     <element id="MedicationAdministration.subject">
@@ -92,17 +92,8 @@
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-patient-core-1"/>
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
       </type>
-      <condition value="inv-dh-mad-01"/>
-      <constraint>
-        <key value="inv-dh-mad-01"/>
-        <severity value="error"/>
-        <human value="At least reference or a valid identifier shall be present"/>
-        <expression value="reference.exists() or identifier.where(system.count() + value.count() &gt;1).exists()"/>
-        <xpath value="exists(f:reference) or exists(f:identifier)"/>
-        <source value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-medicationadministration-core-1"/>
-      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationAdministration.context">
@@ -110,7 +101,7 @@
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-encounter-core-1"/>
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -120,18 +111,6 @@
     </element>
     <element id="MedicationAdministration.performer">
       <path value="MedicationAdministration.performer"/>
-      <constraint>
-        <key value="inv-dh-mad-02"/>
-        <severity value="error"/>
-        <human
-          value="If present, an actor shall at least have a reference, an identifier or a display"/>
-        <expression
-          value="actor.exists() implies actor.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())"/>
-        <xpath value="not(exists(f:actor)) or exists(f:actor/f:reference) or exists(f:actor/f:identifier) or exists(f:actor/f:display)"/>
-        <source
-          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-medicationadministration-core-1"
-        />
-      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationAdministration.performer.function">
@@ -143,13 +122,12 @@
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-practitionerrole-author-1"/>
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-relatedperson-author-1"/>
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-patient-core-1"/>
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
       </type>
-      <condition value="inv-dh-mad-02"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationAdministration.reasonCode">
