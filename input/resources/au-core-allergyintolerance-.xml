@@ -96,9 +96,9 @@
         <targetProfile
           value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
         <targetProfile
-          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson-author-1"/>
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
         <targetProfile
-          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole-author-1"
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"
         />
       </type>
       <mustSupport value="true"/>

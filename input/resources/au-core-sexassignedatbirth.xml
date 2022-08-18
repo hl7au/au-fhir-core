@@ -104,6 +104,7 @@
       <path value="Observation.value[x]" />
       <short value="Sex assigned at birth" />
       <definition value="The biological sex assigned at birth (male, female, intersex) or an assertion that the observation of biological sex is indeterminate." />
+      <min value="1"/>
       <type>
         <code value="CodeableConcept" />
       </type>
