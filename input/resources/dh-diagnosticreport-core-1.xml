@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="dh-diagnosticreport-core-1"/>
+  <url value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-diagnosticreport-core-1"/>
+  <version value="0.2.3"/>
+  <name value="ADHADiagnosticReportCore"/>
+  <title value="ADHA Core DiagnosticReport"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Australian Digital Health Agency"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="help@digitalhealth.gov.au"/>
+    </telecom>
+  </contact>
+  <description
+    value="The purpose of this profile is to define a core representation of a diagnostic report issued by the diagnostic service provider to support the electronic exchange of the electronic exchange of health information between individuals, healthcare providers, and the My Health Record system infrastructure in Australia. This profile is intended to be capable of supporting reporting for specialist and other diagnostic disciplines that are not pathology or imaging."/>
+  <copyright
+    value="Copyright © 2022 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="DiagnosticReport"/>
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticreport"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="DiagnosticReport">
+      <path value="DiagnosticReport"/>
+      <constraint>
+        <key value="inv-dh-dir-01"/>
+        <severity value="error"/>
+        <human value="The report shall at least have a result or a presentedForm"/>
+        <expression value="result.exists() or presentedForm.exists()"/>
+        <xpath value="exists(f:result) or exists(f:presentedForm)"/> 
+        <source
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-diagnosticreport-core-1"
+        />
+      </constraint>
+    </element>
+    <element id="DiagnosticReport.identifier">
+      <path value="DiagnosticReport.identifier"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DiagnosticReport.basedOn">
+      <path value="DiagnosticReport.basedOn"/>
+      <short value="Diagnostic investigation order"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-servicerequest-core-1"
+        />
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DiagnosticReport.status">
+      <path value="DiagnosticReport.status"/>
+      <short value="partial | preliminary | final +"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet
+          value="https://healthterminologies.gov.au/fhir/ValueSet/diagnosticreportstatus-report-available-1"
+        />
+      </binding>
+    </element>
+    <element id="DiagnosticReport.category">
+      <path value="DiagnosticReport.category"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/diagnostic-service-sections"/>
+      </binding>
+    </element>
+    <element id="DiagnosticReport.code">
+      <path value="DiagnosticReport.code"/>
+      <short value="Diagnostic examination name / study name / group name"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DiagnosticReport.subject">
+      <path value="DiagnosticReport.subject"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-patient-core-1"/>
+      </type>
+      <condition value="inv-dh-dir-02"/>
+      <constraint>
+        <key value="inv-dh-dir-02"/>
+        <severity value="error"/>
+        <human value="At least reference or a valid identifier shall be present"/>
+        <expression value="reference.exists() or identifier.where(system.count() + value.count() &gt;1).exists()"/>
+        <xpath value="exists(f:reference) or exists(f:identifier)"/>
+        <source value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-diagnosticreport-core-1"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DiagnosticReport.effective[x]">
+      <path value="DiagnosticReport.effective[x]"/>
+      <min value="1"/>
+      <condition value="inv-dh-dir-04"/>
+      <constraint>
+        <key value="inv-dh-dir-04"/>
+        <severity value="error"/>
+        <human value="Date shall be at least to day"/>
+        <expression value="$this is DateTime implies $this.toString().length() &gt;= 10"/>
+        <xpath value="f:matches(effectiveDateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)"/>
+        <source value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-diagnosticreport-core-1"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DiagnosticReport.issued">
+      <path value="DiagnosticReport.issued"/>
+      <short value="Diagnostic report date time"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DiagnosticReport.performer">
+      <path value="DiagnosticReport.performer"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-practitionerrole-author-1"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-organization-core-1"
+        />
+      </type>
+      <condition value="inv-dh-dir-03"/>
+      <constraint>
+        <key value="inv-dh-dir-03"/>
+        <severity value="error"/>
+        <human value="At least reference or a valid identifier shall be present"/>
+        <expression value="reference.exists() or identifier.where(system.count() + value.count() &gt;1).exists()"/>
+        <xpath value="exists(f:reference) or exists(f:display) or exists(f:identifier)"/>
+        <source value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-diagnosticreport-core-1"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DiagnosticReport.result">
+      <path value="DiagnosticReport.result"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-observation-diagnosticresult-1"/>
+        <targetProfile value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-observation-diagnosticresult-imag-1"/>
+        <targetProfile value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-observation-diagnosticresult-path-1"/>
+      </type>
+      <condition value="inv-dh-dir-01"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DiagnosticReport.result.reference">
+      <path value="DiagnosticReport.result.reference"/>
+      <min value="1"/>
+    </element>
+    <element id="DiagnosticReport.media">
+      <path value="DiagnosticReport.media"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DiagnosticReport.media.link">
+      <path value="DiagnosticReport.media.link"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-media-core-1"/>
+      </type>
+    </element>
+    <element id="DiagnosticReport.conclusion">
+      <path value="DiagnosticReport.conclusion"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DiagnosticReport.conclusionCode">
+      <path value="DiagnosticReport.conclusionCode"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DiagnosticReport.presentedForm">
+      <path value="DiagnosticReport.presentedForm"/>
+      <condition value="inv-dh-dir-01"/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>

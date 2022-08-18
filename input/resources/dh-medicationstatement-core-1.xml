@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="dh-medicationstatement-core-1"/>
+  <url
+    value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-medicationstatement-core-1"/>
+  <version value="0.0.5"/>
+  <name value="ADHAMedicationStatementCore"/>
+  <title value="ADHA Core MedicationStatement"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Australian Digital Health Agency"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="help@digitalhealth.gov.au"/>
+    </telecom>
+  </contact>
+  <description
+    value="The purpose of this profile is to provide a core representation of a medication statement for the electronic exchange of health information between individuals, healthcare providers, and the My Health Record system infrastructure in Australia. This profile supports a statement of medication usage for a known medicine including asserting negation for a specific medicine."/>
+  <copyright
+    value="Copyright © 2022 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="MedicationStatement"/>
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="MedicationStatement">
+      <path value="MedicationStatement"/>
+      <constraint>
+        <key value="inv-dh-mst-01"/>
+        <severity value="error"/>
+        <human
+          value="If present, an information source shall at least have a reference, an identifier or a display"/>
+        <expression
+          value="informationSource.exists() implies informationSource.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())"/>
+        <xpath value="not(exists(f:informationSource)) or exists(f:informationSource/f:reference) or exists(f:informationSource/f:identifier) or exists(f:informationSource/f:display)"/>
+        <source
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-medicationstatement-core-1"
+        />
+      </constraint>
+    </element>
+    <element id="MedicationStatement.basedOn">
+      <path value="MedicationStatement.basedOn"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-medicationrequest-core-1"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-servicerequest-core-1"
+        />
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.status">
+      <path value="MedicationStatement.status"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.statusReason">
+      <path value="MedicationStatement.statusReason"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.category">
+      <path value="MedicationStatement.category"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.medication[x]">
+      <path value="MedicationStatement.medication[x]"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="$this"/>
+        </discriminator>
+        <rules value="closed"/>
+      </slicing>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.medication[x]:medicationCodeableConcept">
+      <path value="MedicationStatement.medication[x]"/>
+      <sliceName value="medicationCodeableConcept"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+    <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding">
+      <path value="MedicationStatement.medication[x].coding"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="system"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:pbs">
+      <path value="MedicationStatement.medication[x].coding"/>
+      <sliceName value="pbs"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt">
+      <path value="MedicationStatement.medication[x].coding"/>
+      <sliceName value="amt"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.medication[x]:medicationReference">
+      <path value="MedicationStatement.medication[x]"/>
+      <sliceName value="medicationReference"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-medication-core-1"/>
+      </type>
+    </element>
+    <element id="MedicationStatement.subject">
+      <path value="MedicationStatement.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-patient-core-1"/>
+      </type>
+      <condition value="inv-dh-mst-02"/>
+      <constraint>
+        <key value="inv-dh-mst-02"/>
+        <severity value="error"/>
+        <human value="At least reference or a valid identifier shall be present"/>
+        <expression value="reference.exists() or identifier.where(system.count() + value.count() &gt;1).exists()"/>
+        <xpath value="exists(f:reference) or exists(f:identifier)"/>
+        <source value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-medicationstatement-core-1"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.context">
+      <path value="MedicationStatement.context"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-encounter-core-1"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.effective[x]">
+      <path value="MedicationStatement.effective[x]"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.dateAsserted">
+      <path value="MedicationStatement.dateAsserted"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.informationSource">
+      <path value="MedicationStatement.informationSource"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-patient-core-1"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-practitionerrole-core-1"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-relatedperson-core-1"
+        />
+      </type>
+      <condition value="inv-dh-mst-01"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.reasonCode">
+      <path value="MedicationStatement.reasonCode"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.note">
+      <path value="MedicationStatement.note"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.dosage">
+      <path value="MedicationStatement.dosage"/>
+      <condition value="inv-dh-mst-03"/>
+      <constraint>
+        <key value="inv-dh-mst-03"/>
+        <severity value="error"/>
+        <human value="If present, the dosage shall at least have text or patient instructions"/>
+        <expression value="text.exists() or patientInstruction.exists()"/>
+        <xpath value="exists(f:text) or exists(f:patientInstruction)"/>
+        <source
+          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-medicationstatement-core-1"
+        />
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>
