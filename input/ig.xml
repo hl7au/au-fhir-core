@@ -344,18 +344,74 @@
       <groupingId value="p1"/>
     </resource>
     -->
+		
 		<page>
-			<nameUrl value="index.html"/>
-			<title value="Australian Core Implementation Guide"/>
+			<!-- The root will always be toc.html - the template will force it if you don't do it -->
+			<nameUrl value="toc.html"/>
+			<title value="Table of Contents"/>
 			<generation value="html"/>
+			<page>
+				<nameUrl value="index.html"/>
+				<title value="Australian Core Implementation Guide"/>
+				<generation value="html"/>
+			</page>
+			<page>
+				<nameUrl value="background.html"/>
+				<title value="Background"/>
+				<generation value="html"/>
+			</page>
+			<page>
+				<nameUrl value="downloads.html"/>
+				<title value="Useful Downloads"/>
+				<generation value="html"/>
+			</page>
 		</page>
+		<!-- copyright year is a mandatory parameter -->
 		<parameter>
-			<code value="generate-xml"/>
-			<value value="xml"/>
+			<code value="copyrightyear"/>
+			<value value="2022+"/>
+		</parameter>
+		<!-- releaselabel should be the ballot status for HL7-published IGs. -->
+		<parameter>
+			<code value="releaselabel"/>
+			<value value="CI Build"/>
 		</parameter>
 		<parameter>
-			<code value="generate-json"/>
-			<value value="JSON"/>
+			<code value="find-other-resources"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="path-resource"/>
+			<value value="input\history"/>
+		</parameter>
+		<parameter>
+			<code value="path-liquid"/>
+			<value value="templates\liquid"/>
+		</parameter>
+		<parameter>
+			<code value="shownav"/>
+			<value value="true"/>
+		</parameter>
+		<!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
+    <parameter>
+      <code value="excludexml"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludejson"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludettl"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludemap"/>
+      <value value="true"/>
+    </parameter>-->
+		<parameter>
+			<code value="showsource"/>
+			<value value="true"/>
 		</parameter>
 	</definition>
 </ImplementationGuide>
