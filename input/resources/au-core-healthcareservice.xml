@@ -4,7 +4,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="0"/> 
   </extension>
-  <url value="http://ns.electronichealth.net.au/fhir/StructureDefinition/au-core-healthcareservice"/>
+  <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
   <name value="AU CoreHealthcareService"/>
   <title value="AU Core HealthcareService"/>
   <status value="draft"/>
@@ -61,7 +61,7 @@
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/au-core-organization"
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"
         />
       </type>
       <mustSupport value="true"/>
@@ -83,7 +83,7 @@
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/fhir/StructureDefinition/au-core-location"/>
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
       </type>
       <mustSupport value="true"/>
     </element>

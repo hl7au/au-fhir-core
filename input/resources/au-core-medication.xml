@@ -5,7 +5,6 @@
     <valueInteger value="0"/> 
   </extension>
   <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
-  <version value="1.0.0"/>
   <name value="ADHAMedicationCore"/>
   <title value="ADHA Core Medication"/>
   <status value="active"/>
