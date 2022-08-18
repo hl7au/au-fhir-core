@@ -75,7 +75,6 @@
     </element>
     <element id="Procedure.recorder">
       <path value="Procedure.recorder"/>
-      <min value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile

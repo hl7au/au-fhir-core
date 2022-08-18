@@ -132,17 +132,14 @@
     </element>
     <element id="MedicationDispense.performer">
       <path value="MedicationDispense.performer"/>
-      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationDispense.performer.function">
       <path value="MedicationDispense.performer.function"/>
-      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationDispense.performer.actor">
       <path value="MedicationDispense.performer.actor"/>
-      <min value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile

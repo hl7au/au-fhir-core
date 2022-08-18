@@ -90,7 +90,6 @@
     </element>
     <element id="AllergyIntolerance.recorder">
       <path value="AllergyIntolerance.recorder"/>
-      <min value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile
