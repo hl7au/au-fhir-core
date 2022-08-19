@@ -88,6 +88,7 @@
       <path value="Observation.effective[x]" />
       <short value="Date, and optionally time, the observation was performed" />
       <definition value="Date, and optionally time, the observation was performed." />
+      <min value="1" />
       <type>
         <code value="dateTime" />
       </type>
