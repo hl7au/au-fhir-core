@@ -134,6 +134,12 @@
     </element>
     <element id="MedicationAdministration.reasonReference">
       <path value="MedicationAdministration.reasonReference"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition" />
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticreport"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationAdministration.note">
