@@ -8,7 +8,7 @@
   <name value="AUCoreBiologicalSexAssignedAtBirth" />
   <title value="AU Core Biological Sex Assigned at Birth" />
   <status value="draft" />
-  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <publisher value="Health Level Seven Australia" />
   <contact>
     <telecom>
       <system value="url" />
@@ -17,7 +17,7 @@
     </telecom>
   </contact>
   <description value="This profile TBD." />
-  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved. This resource includes SNOMED Clinical Terms™ (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO. The rights to use and implement or implementation of SNOMED CT content are limited to the extent it is necessary to allow for the end use of this material.  No further rights are granted in respect of the International Release and no further use of any SNOMED CT content by any other party is permitted. All copies of this resource must include this copyright statement and all information contained in this statement. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2022, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc." />
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved.&#xa;&#xa;This resource includes SNOMED Clinical Terms™ (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO. The rights to use and implement or implementation of SNOMED CT content are limited to the extent it is necessary to allow for the end use of this material.  No further rights are granted in respect of the International Release and no further use of any SNOMED CT content by any other party is permitted. &#xa;&#xa;This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2021, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.&#xa;&#xa;All copies of this resource must include this copyright statement and all information contained in this statement." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -39,7 +39,11 @@
       <fixedCode value="final" />
       <mustSupport value="true"/>
     </element>
-        <element id="Observation.code.coding">
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
       <slicing>
         <discriminator>
@@ -87,6 +91,7 @@
       <type>
         <code value="dateTime" />
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.performer">
       <path value="Observation.performer" />

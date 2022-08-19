@@ -4,7 +4,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="0"/> 
   </extension>
-  <url value="http://ns.electronichealth.net.au/fhir/StructureDefinition/au-core-location"/>
+  <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
   <name value="AU CoreLocation"/>
   <title value="AU Core Location"/>
   <status value="draft" />
@@ -35,7 +35,7 @@
         <human value="The location shall at least have a valid identifier or address or type" />
         <expression value="address.exists() or type.exists() or identifier.where(system.count() + value.count() &gt;1).exists()" />
         <xpath value="exists(f:address) or exists(f:type) or exists(f:identifier)"/>
-        <source value="http://ns.electronichealth.net.au/fhir/StructureDefinition/au-core-location" />
+        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location" />
       </constraint>
     </element>
     <element id="Location.identifier">
@@ -75,7 +75,7 @@
       <path value="Location.managingOrganization" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/fhir/StructureDefinition/au-core-organization" />
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -83,7 +83,7 @@
       <path value="Location.partOf" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/fhir/StructureDefinition/au-core-location" />
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location" />
       </type>
       <mustSupport value="true" />
     </element>

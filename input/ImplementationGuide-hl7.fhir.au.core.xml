@@ -57,9 +57,9 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
-    <!--<resource>
+    <resource>
       <reference>
-        <reference value="StructureDefinition/au-core-composition"/>
+        <reference value="StructureDefinition/au-core-documentcomposition"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -80,19 +80,19 @@
         <reference value="StructureDefinition/au-core-encounter"/>
       </reference>
       <exampleBoolean value="false"/>
-    </resource>-->
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-core-healthcareservice"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
-    <!--<resource>
+    <resource>
       <reference>
         <reference value="StructureDefinition/au-core-immunization"/>
       </reference>
       <exampleBoolean value="false"/>
-    </resource>-->
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-core-location"/>
@@ -105,7 +105,7 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
-    <!--<resource>
+    <resource>
       <reference>
         <reference value="StructureDefinition/au-core-medicationadministration"/>
       </reference>
@@ -128,7 +128,7 @@
         <reference value="StructureDefinition/au-core-medicationstatement"/>
       </reference>
       <exampleBoolean value="false"/>
-    </resource>-->
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-core-organization"/>
@@ -153,19 +153,19 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
-    <!--<resource>
+    <resource>
       <reference>
         <reference value="StructureDefinition/au-core-procedure"/>
       </reference>
       <exampleBoolean value="false"/>
-    </resource>-->
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-core-relatedperson"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
-    <!--<resource>
+    <resource>
       <reference>
         <reference value="StructureDefinition/au-core-specimen"/>
       </reference>
@@ -177,7 +177,7 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
-    <!-\\-VITAL SIGNS-\\->
+    <!--VITAL SIGNS-->
     <resource>
       <reference>
         <reference value="StructureDefinition/au-core-bloodpressure"/>
@@ -238,7 +238,7 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
-    <!-\\-LIFESTYLE FACTOR-\\->
+    <!--LIFESTYLE FACTOR-->
     <resource>
       <reference>
         <reference value="StructureDefinition/au-core-alcoholstatus"/>
@@ -269,7 +269,7 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
-    <!-\\-PREGNANCY RELATED-\\->
+    <!--PREGNANCY RELATED-->
     <resource>
       <reference>
         <reference value="StructureDefinition/au-core-estimateddateofdelivery"/>
@@ -299,7 +299,7 @@
         <reference value="StructureDefinition/au-core-parity"/>
       </reference>
       <exampleBoolean value="false"/>
-    </resource>-->
+    </resource>
 
     <page>
       <nameUrl value="toc.html"/>
