@@ -74,9 +74,9 @@
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]"/>
       <min value="1"/>
-      <condition value="au-core-obs-07"/>
+      <condition value="au-core-obs-01"/>
       <constraint>
-        <key value="au-core-obs-07"/>
+        <key value="au-core-obs-01"/>
         <severity value="error"/>
         <human value="Date shall be at least to day"/>
         <expression value="$this is DateTime implies $this.toString().length() &gt;= 10"/>
@@ -166,8 +166,8 @@
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-imag-1"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path-1"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-imag"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
       </type>
       <mustSupport value="true"/>
     </element>

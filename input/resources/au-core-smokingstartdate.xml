@@ -81,12 +81,22 @@
       <type>
         <code value="dateTime" />
       </type>
+      <condition value="au-core-obs-01"/>
+      <constraint>
+        <key value="au-core-obs-01"/>
+        <severity value="error"/>
+        <human value="Date shall be at least to day"/>
+        <expression value="$this is DateTime implies $this.toString().length() &gt;= 10"/>
+        <xpath value="f:matches(effectiveDateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)"/>
+        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstartdate"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.performer">
       <path value="Observation.performer"/>
       <type>
         <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>

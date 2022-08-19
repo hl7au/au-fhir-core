@@ -79,9 +79,9 @@
       <type>
         <code value="dateTime" />
       </type>
-      <condition value="au-core-hpp-01"/>
+      <condition value="au-core-obs-01"/>
       <constraint>
-        <key value="au-core-hpp-01"/>
+        <key value="au-core-obs-01"/>
         <severity value="error"/>
         <human value="Date shall be at least to day"/>
         <expression value="toString().length() &gt;= 10"/>
