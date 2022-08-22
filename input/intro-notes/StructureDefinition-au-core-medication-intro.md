@@ -8,7 +8,7 @@ The following are example usage scenarios for this profile:
 
 **Profile specific implementation guidance**
 
-- See the implementation guidance section for the [US Core Vital Signs Profile]
+- See the implementation guidance section for the [Medicinal Product Identification]
 
 
 
