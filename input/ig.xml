@@ -48,323 +48,284 @@
 		<version value="current"/>
 	</dependsOn>
 	<definition>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-allergyintolerance"/>
-      </reference>
-    </resource>
-	<!--
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-composition"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-condition"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-diagnosticreport"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-encounter"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-healthcareservice"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-immunization"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-location"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-medication"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-medicationadministration"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-medicationdispense"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-medicationrequest"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-medicationstatement"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-organization"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-patient"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-practitioner"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-practitionerrole"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-procedure"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-relatedperson"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-specimen"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-substance"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-	-->
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-allergyintolerance"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-documentcomposition"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-condition"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-diagnosticreport"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-encounter"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-healthcareservice"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-immunization"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-location"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-medication"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-medicationadministration"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-medicationdispense"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-medicationrequest"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-medicationstatement"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-organization"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-patient"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-practitioner"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-practitionerrole"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-procedure"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-relatedperson"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-specimen"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-substance"/>
+			</reference>
+		</resource>
 		<!--VITAL SIGNS-->
-		<!--
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-bloodpressure"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-bodyheight"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-bodyweight"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-vitalspanel"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-oxygensat"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-bmi"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-bodytemp"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-resprate"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-headcircum"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-heartrate"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-	-->
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-bloodpressure"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-bodyheight"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-bodyweight"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-vitalspanel"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-oxygensat"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-bmi"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-bodytemp"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-resprate"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-headcircum"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-heartrate"/>
+			</reference>
+		</resource>
 		<!--LIFESTYLE FACTOR-->
-		<!--
-	<resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-alcoholstatus"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-healthprogramparticipation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-smokingceasedate"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-smokingstartdate"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-smokingstatus"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-	-->
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-alcoholstatus"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-healthprogramparticipation"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-smokingceasedate"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-smokingstartdate"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-smokingstatus"/>
+			</reference>
+		</resource>
 		<!--PREGNANCY RELATED-->
-		<!--
-	<resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-estimateddateofdelivery"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-gestationalage"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-lastmenstrualperiod"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-gravidity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/au-core-parity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    -->
-		
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-estimateddateofdelivery"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-gestationalage"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-lastmenstrualperiod"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-gravidity"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-parity"/>
+			</reference>
+		</resource>
+
 		<page>
-			<!-- The root will always be toc.html - the template will force it if you don't do it -->
 			<nameUrl value="toc.html"/>
 			<title value="Table of Contents"/>
 			<generation value="html"/>
 			<page>
 				<nameUrl value="index.html"/>
-				<title value="Australian Core Implementation Guide"/>
-				<generation value="html"/>
+				<title value="Home"/>
+				<generation value="markdown"/>
 			</page>
 			<page>
-				<nameUrl value="background.html"/>
-				<title value="Background"/>
-				<generation value="html"/>
+				<nameUrl value="conformance.html"/>
+				<title value="Conformance"/>
+				<generation value="markdown"/>
+				<page>
+					<nameUrl value="general-requirements.html"/>
+					<title value="General Requirements"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="must-support.html"/>
+					<title value="Must Support"/>
+					<generation value="markdown"/>
+				</page>
+			</page>
+			<page>
+				<nameUrl value="guidance.html"/>
+				<title value="Guidance"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="profiles-and-extensions.html"/>
+				<title value="Profiles and Extensions"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="capability-statements.html"/>
+				<title value="Capability Statements"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="search-parameters-and-operations.html"/>
+				<title value="Search Parameters and Operations"/>
+				<generation value="markdown"/>
+			</page>
+			<!--<page>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
+        <generation value="markdown"/>
+      </page>-->
+			<!--<page>
+        <nameUrl value="security.html"/>
+        <title value="Security"/>
+        <generation value="markdown"/>
+      </page>-->
+			<page>
+				<nameUrl value="examples.html"/>
+				<title value="Examples"/>
+				<generation value="markdown"/>
 			</page>
 			<page>
 				<nameUrl value="downloads.html"/>
-				<title value="Useful Downloads"/>
-				<generation value="html"/>
+				<title value="Downloads"/>
+				<generation value="markdown"/>
 			</page>
+			<!--<page>
+        <nameUrl value="changes.html"/>
+        <title value="Change Log"/>
+        <generation value="markdown"/>
+      </page>-->
 		</page>
 		<!-- copyright year is a mandatory parameter -->
 		<parameter>
