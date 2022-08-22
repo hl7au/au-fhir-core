@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-core-encounter"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+  <name value="AUCoreEncounter"/>
+  <title value="AU Core Encounter"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Health Level Seven Australia" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This profile sets minimum expectations for an Encounter resource to record, search, and fetch basic encounter information for a patient. It is based on the [AU Base Encounter](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-encounter.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Encounter when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Encounter"/>
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-encounter"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Encounter">
+      <path value="Encounter"/>
+    </element>
+    <element id="Encounter.extension:encounterDescription">
+      <path value="Encounter.extension"/>
+      <sliceName value="encounterDescription"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.status">
+      <path value="Encounter.status"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.class">
+      <path value="Encounter.class"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.type">
+      <path value="Encounter.type"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1"/>
+      </binding>
+    </element>
+    <element id="Encounter.serviceType">
+      <path value="Encounter.serviceType"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/service-type-1"/>
+      </binding>
+    </element>
+    <element id="Encounter.subject">
+      <path value="Encounter.subject"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.participant">
+      <path value="Encounter.participant"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.participant.type">
+      <path value="Encounter.participant.type"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.participant.individual">
+      <path value="Encounter.participant.individual"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.period">
+      <path value="Encounter.period"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.reasonCode">
+      <path value="Encounter.reasonCode"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.reasonReference[x]">
+      <path value="Encounter.reasonReference[x]"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.hospitalization">
+      <path value="Encounter.hospitalization"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition">
+      <path value="Encounter.hospitalization.dischargeDisposition"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.location">
+      <path value="Encounter.location"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.location.location">
+      <path value="Encounter.location.location"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Encounter.serviceProvider">
+      <path value="Encounter.serviceProvider"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>

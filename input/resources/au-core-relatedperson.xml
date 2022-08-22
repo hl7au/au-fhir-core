@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-core-relatedperson"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
+  <name value="AUCoreRelatedPerson"/>
+  <title value="AU Core RelatedPerson"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Health Level Seven Australia" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This profile sets minimum expectations for a RelatedPerson resource to record, search, and fetch related persons associated with a patient. It is based on the [AU Base RelatedPerson](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the RelatedPerson resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."/>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="RelatedPerson"/>
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="RelatedPerson">
+      <path value="RelatedPerson"/>
+      <definition
+        value="A person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process. A related person might be a family member, close friend, carer, legal guardian, or someone with enduring power of attorney. "/>
+      <comment
+        value="In the context of the My Health Record, a related person may manage another individual's My Health Record as an authorised representative, or they may view or help manage another individual's My Health Record as a nominated representative. "/>
+      <constraint>
+        <key value="au-core-relper-01"/>
+        <severity value="error"/>
+        <human
+          value="If present, name shall at least have text, family name, or given name"/>
+        <expression
+          value="name.exists() implies name.all(text.exists() or family.exists() or given.exists())"/>
+        <source
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"
+        />
+      </constraint>
+    </element>
+    <element id="RelatedPerson.identifier">
+      <path value="RelatedPerson.identifier"/>
+      <definition value="Identifier for a person within a particular scope."/>
+      <slicing>
+        <discriminator>
+          <type value="pattern"/>
+          <path value="type"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <mustSupport value="true"/>
+    </element>
+    <element id="RelatedPerson.identifier:ihi">
+      <path value="RelatedPerson.identifier"/>
+      <sliceName value="ihi"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-ihi"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="RelatedPerson.identifier:medicare">
+      <path value="RelatedPerson.identifier"/>
+      <sliceName value="medicare"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="RelatedPerson.identifier:dva">
+      <path value="RelatedPerson.identifier"/>
+      <sliceName value="dva"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-dvanumber"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="RelatedPerson.active">
+      <path value="RelatedPerson.active"/>
+      <fixedBoolean value="true"/>
+    </element>
+    <element id="RelatedPerson.patient">
+      <path value="RelatedPerson.patient"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="RelatedPerson.relationship">
+      <path value="RelatedPerson.relationship"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="RelatedPerson.name">
+      <path value="RelatedPerson.name"/>
+      <condition value="inv-au-core-relper-01"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="RelatedPerson.telecom">
+      <path value="RelatedPerson.telecom"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="RelatedPerson.address">
+      <path value="RelatedPerson.address"/>
+      <definition value="Address where the related person can be contacted or visited."/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="RelatedPerson.communication">
+      <path value="RelatedPerson.communication"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="RelatedPerson.communication.language">
+      <path value="RelatedPerson.communication.language"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="RelatedPerson.communication.preferred">
+      <path value="RelatedPerson.communication.preferred"/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>

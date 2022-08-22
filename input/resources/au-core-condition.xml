@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-core-condition"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+  <name value="AUCoreCondition"/>
+  <title value="AU Core Condition"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This profile sets minimum expectations for a Condition resource to record, search, and fetch problems, diagnoses, and health concerns associated with a patient. It is based on the [AU Base Condition](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-condition.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Condition resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Condition"/>
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-condition"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Condition">
+      <path value="Condition"/>
+      <constraint> 
+        <key value="au-core-cond-05"/> 
+        <severity value="error"/> 
+        <human value="Clinical status shall be present if verification status is not entered-in-error"/> 
+        <expression value="clinicalStatus.exists() or verificationStatus.coding.where(system='http://terminology.hl7.org/CodeSystem/condition-ver-status' and code = 'entered-in-error').exists()"/> 
+        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/> 
+      </constraint>
+    </element>
+    <element id="Condition.clinicalStatus">
+      <path value="Condition.clinicalStatus"/>
+      <mustSupport value="true"/>
+      <condition value="au-core-cond-05"/>
+    </element>
+    <element id="Condition.verificationStatus">
+      <path value="Condition.verificationStatus"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.category">
+      <path value="Condition.category"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.severity">
+      <path value="Condition.severity"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/condition-severity"/>
+      </binding>
+    </element>
+    <element id="Condition.code">
+      <path value="Condition.code"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1"/>
+      </binding>
+    </element>
+    <element id="Condition.bodySite">
+      <path value="Condition.bodySite"/>
+      <condition value="au-core-cond-02"/>
+      <constraint>
+        <key value="au-core-cond-02"/>
+        <severity value="error"/>
+        <human value="If a coded body site is provided, at least one code shall be from SNOMED CT"/>
+        <expression value="coding.exists() implies coding.where(system='http://snomed.info/sct').exists()"/>
+        <xpath value="not(exists(f:coding/f:system)) or exists(f:coding/f:system[@value='http://snomed.info/sct'])"/>
+        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1"/>
+      </binding>
+    </element>
+    <element id="Condition.subject">
+      <path value="Condition.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.encounter">
+      <path value="Condition.encounter"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.onset[x]">
+      <path value="Condition.onset[x]"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Age"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <type>
+        <code value="Range"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.abatement[x]">
+      <path value="Condition.abatement[x]"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Age"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <type>
+        <code value="Range"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.recorder">
+      <path value="Condition.recorder"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.asserter">
+      <path value="Condition.asserter"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.note">
+      <path value="Condition.note"/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>

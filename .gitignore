@@ -4,3 +4,34 @@
 .vs/slnx.sqlite
 .vs/VSWorkspaceState.json
 .vs/au-fhir-core/v17/.suo
+input-cache/**
+output/**
+temp/**
+template/**
+txCache/
+*.swp
+
+# Temporary folders # (at any level)
+#####################
+temp/
+template/
+output/
+input-cache/
+/input-cache
+/output
+/terms
+
+
+# Windows generated files #
+###########################
+Thumbs.db
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+
+# backup files #
+################
+*.bak
+build.bat
