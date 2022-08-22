@@ -17,7 +17,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile TBD." />
+  <description value="This profile sets minimum expectations for an Observation resource to record, search, and fetch diagnostic imaging results associated with a patient. It is based on the [AU Base Diagnostic Imaging Result](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-imagingresult.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Observation when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
