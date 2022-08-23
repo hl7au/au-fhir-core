@@ -8,4 +8,5 @@ The following are supported usage scenarios for this profile:
 
 #### Profile specific implementation guidance
 {% include observation_coding_guidance.md -%}
+- A more specific code is used to indicate the method, for example 738070007 *Estimated date of delivery from antenatal ultrasound scan*
 - Antenatal observations will represent the pregnant individual as `Observation.subject` and the fetus as `Observation.focus`

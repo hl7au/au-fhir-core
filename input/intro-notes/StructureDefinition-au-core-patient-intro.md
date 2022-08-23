@@ -1,17 +1,14 @@
-**Example usage scenarios**
+#### Usage scenarios
 
-The following are example usage scenarios for this profile:
+The following are supported usage scenarios for this profile:
 
+- Query for records associated with a patient
+- Record or update a record associated with a patient
+- Query for basic demographics and other administrative information about a patient
+- Record or update basic demographics and other administrative information about a patient
+
+
+#### Profile specific implementation guidance
 - TBD
-- TBD
-
-
-**Profile specific implementation guidance**
-
-- TBD
-
-
-
-
 
 
