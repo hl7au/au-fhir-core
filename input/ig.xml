@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
 	<id value="hl7.fhir.au.core"/>
-	<url value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
 	<version value="0.0.1"/>
 	<name value="AUCoreImplementationGuide"/>
 	<title value="AU Core Implementation Guide"/>
@@ -353,6 +356,10 @@
 			<code value="shownav"/>
 			<value value="true"/>
 		</parameter>
+		<parameter>
+			<code value="show-inherited-invariants"/>
+			<value value="false"/>
+		</parameter>
 		<!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
     <parameter>
       <code value="excludexml"/>
@@ -367,12 +374,16 @@
       <value value="true"/>
     </parameter>
     <parameter>
-      <code value="excludemap"/>
+      <code value="excludeexample"/>
       <value value="true"/>
     </parameter>-->
-		<parameter>
-			<code value="showsource"/>
-			<value value="true"/>
-		</parameter>
+    <parameter>
+      <code value="excludemap"/>
+      <value value="true"/>
+    </parameter>
+	<parameter>
+      <code value="showsource"/>
+      <value value="true"/>
+	</parameter>
 	</definition>
 </ImplementationGuide>
