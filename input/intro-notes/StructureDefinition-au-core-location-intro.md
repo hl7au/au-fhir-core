@@ -1,17 +1,10 @@
-**Example usage scenarios**
+#### Usage scenarios
 
-The following are example usage scenarios for this profile:
+The following are supported usage scenarios for this profile:
 
-- TBD
-- TBD
-
-
-**Profile specific implementation guidance**
-
-- TBD
+- Record or update basic information for a location
+- Read information about a location referenced by another resource
 
 
-
-
-
-
+#### Profile specific implementation guidance
+None.
