@@ -1,16 +1,13 @@
-**Example usage scenarios**
+#### Usage scenarios
 
-The following are example usage scenarios for this profile:
+The following are supported usage scenarios for this profile:
 
-- TBD
-- TBD
-
-
-**Profile specific implementation guidance**
-
-- TBD
+- Query for observations of tobacco smoking start date associated with a patient
+- Record or update an observation of tobacco smoking start date associated with a patient
 
 
+#### Profile specific implementation guidance
+{% include observation_coding_guidance.md -%}
 
 
 

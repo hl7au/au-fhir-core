@@ -353,6 +353,18 @@
 			<value value="templates\liquid"/>
 		</parameter>
 		<parameter>
+			<code value="path-pages"/>
+			<value value="input\includes"/>
+		</parameter>
+		<parameter>
+			<code value="path-pages"/>
+			<value value="input\intro-notes"/>
+		</parameter>
+		<parameter>
+			<code value="path-pages"/>
+			<value value="input\pagecontent"/>
+		</parameter>
+		<parameter>
 			<code value="shownav"/>
 			<value value="true"/>
 		</parameter>

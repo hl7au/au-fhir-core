@@ -28,7 +28,8 @@
     <element id="Observation">
       <path value="Observation" />
       <short value="Parity" />
-      <definition value="An observation of parity count related to pregnancy at a point in time." />
+      <definition value="An observation of parity count related to pregnancy at a point in time. Parity is the total number of previous pregnancies experienced by the woman that have resulted in a live birth or a stillbirth." />
+      <comment value="This concept is equivalent to Australian Institute of Health and Welfare data element 733287 [Female—parity, total pregnancies N[N]](https://meteor.aihw.gov.au/content/733287)."/>
       <constraint>
         <key value="au-core-obs-02"/>
         <severity value="error"/>
