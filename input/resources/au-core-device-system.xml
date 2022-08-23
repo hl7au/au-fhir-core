@@ -77,7 +77,7 @@
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://hl7.org.au/fhir/core/StructureDefinition/dh-organization-core-1"
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"
         />
       </type>
       <mustSupport value="true"/>

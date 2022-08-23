@@ -5,7 +5,7 @@
     <valueInteger value="0"/> 
   </extension>
   <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
-  <name value="AU CoreHealthcareService"/>
+  <name value="AUCoreHealthcareService"/>
   <title value="AU Core HealthcareService"/>
   <status value="draft"/>
   <experimental value="false"/>
