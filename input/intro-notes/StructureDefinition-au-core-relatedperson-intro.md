@@ -1,17 +1,9 @@
-**Example usage scenarios**
+#### Usage scenarios
 
-The following are example usage scenarios for this profile:
+The following are supported usage scenarios for this profile:
 
-- TBD
-- TBD
+- Record or update information about a related person referenced by another resource
+- Read information about a related person referenced by another resource
 
-
-**Profile specific implementation guidance**
-
-- TBD
-
-
-
-
-
-
+#### Profile specific implementation guidance
+- See the [Representing communication preferences](guidance.html#representing-communication-preferences) section for guidance
