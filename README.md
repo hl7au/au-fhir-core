@@ -1,5 +1,5 @@
 # au-fhir-core
-FHIR core implementable standard for Australia
+FHIR core implementable standard for Australia. Continuous integration build viewable from [here](http://build.fhir.org/ig/hl7au/au-fhir-core/branches/main/index.html).
 
 AU Core provides FHIR profiles to support conformance and implementation in systems.
 This uses AU Base representations as the basis of typical use for many purposes. In this regard it is similar in nature to other international FHIR specifications such as US Core FHIR Implementation Guide. 
