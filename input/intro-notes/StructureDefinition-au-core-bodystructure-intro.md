@@ -1,17 +1,10 @@
-**Example usage scenarios**
+#### Usage scenarios
 
-The following are example usage scenarios for this profile:
+The following are supported usage scenarios for this profile:
 
-- TBD
-- TBD
-
-
-**Profile specific implementation guidance**
-
-- TBD
+- Recording or updating body structure information associated with a patient
+- Reading body structures information associated with a patient referenced by another resource
 
 
-
-
-
-
+#### Profile specific implementation guidance
+None.

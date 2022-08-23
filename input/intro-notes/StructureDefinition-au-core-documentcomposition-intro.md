@@ -1,17 +1,10 @@
-**Example usage scenarios**
+#### Usage scenarios
 
-The following are example usage scenarios for this profile:
+The following are supported usage scenarios for this profile:
 
-- TBD
-- TBD
-
-
-**Profile specific implementation guidance**
-
-- TBD
+- Query for a clinical document for a patient
+- Record or update a clinical document for a patient
 
 
-
-
-
-
+#### Profile specific implementation guidance
+None.

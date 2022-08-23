@@ -1,17 +1,10 @@
-**Example usage scenarios**
+#### Usage scenarios
 
-The following are example usage scenarios for this profile:
+The following are supported usage scenarios for this profile:
 
-- TBD
-- TBD
-
-
-**Profile specific implementation guidance**
-
-- TBD
+- Query for a patient's immunisations
+- Record or update an immunisation record for a patient
 
 
-
-
-
-
+#### Profile specific implementation guidance
+- Use the status code: `not-done` to represent that an immunization was *not* given.

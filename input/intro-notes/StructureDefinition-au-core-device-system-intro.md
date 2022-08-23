@@ -1,17 +1,11 @@
-**Example usage scenarios**
+#### Usage scenarios
 
-The following are example usage scenarios for this profile:
+The following are supported usage scenarios for this profile:
 
-- TBD
-- TBD
-
-
-**Profile specific implementation guidance**
-
-- TBD
+- Query for basic information for a system device by name or identifier
+- Recording or updating basic information for a system device 
 
 
-
-
-
+#### Profile specific implementation guidance
+None.
 
