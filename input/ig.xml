@@ -301,6 +301,15 @@
 			<exampleBoolean value="false"/>
 		</resource>
 		<!--EXAMPLES-->
+		<!--ENCOUNTER EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Encounter/annualvisit-1"/>
+			</reference>
+			<name value="Annual check up"/>
+			<description value="Annual check encounter for Observation-healthprogramparticipation-1"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+		</resource>
 		<!--OBSERVATION EXAMPLES-->
 		<resource>
 			<reference>
@@ -329,6 +338,34 @@
 			</reference>
 			<name value="Length of John Smith recorded by GP at 6 months"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/bodyweight-1"/>
+			</reference>
+			<name value="Body weight of John Smith recorded by Mother at 6 months"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/bodyweight-2"/>
+			</reference>
+			<name value="Body weight of John Smith recorded by GP at 6 months"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/healthprogramparticipation-1"/>
+			</reference>
+			<name value="Active participation in 12 step alcohol program"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthprogramparticipation"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/healthprogramparticipation-2"/>
+			</reference>
+			<name value="Deferred BreastScreen Australia screening due to travel"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthprogramparticipation"/>
 		</resource>
 		<resource>
 			<reference>
@@ -382,7 +419,7 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Patient/anne-bennelong"/>
+				<reference value="Patient/bennelong-anne"/>
 			</reference>
 			<name value="Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>

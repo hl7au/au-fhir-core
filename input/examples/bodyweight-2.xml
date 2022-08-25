@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="bodyweight-2"/>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="vital-signs"/>
+      <display value="Vital Signs"/>
+    </coding>
+    <text value="Vital Signs"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="29463-7"/>
+      <display value="Body weight"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="27113001"/>
+    </coding>
+    <text value="weight"/>
+  </code>
+  <subject>
+    <reference value="Patient/baby-smith-john"/>
+  </subject>
+  <effectiveDateTime value="2023-03-14"/>
+  <performer>
+    <reference value="RelatedPerson/smith-emma-john"/>
+    <identifier>
+      <use value="official"/>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+          <code value="NI"/>
+          <display value="National unique individual identifier"/>
+        </coding>
+      </type>
+      <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+      <value value="8003608333563104"/>
+    </identifier>
+  </performer>
+  <valueQuantity>
+    <value value="7.9"/>
+    <unit value="kg"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="kg"/>
+  </valueQuantity>
+</Observation>
