@@ -2,9 +2,6 @@
 <Patient xmlns="http://hl7.org/fhir">
     <id value="baby-smith-john"/>
     <!--baby Patient instance -->
-    <meta>
-        <profile value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-patient-core-1"/>
-    </meta>
     <identifier>
         <use value="temp"/>
         <type>

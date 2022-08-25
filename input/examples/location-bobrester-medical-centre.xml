@@ -3,7 +3,7 @@
     <id value="bobrester-medical-centre"/>
     <status value="active"/>
     <name value="Tindal Building"/>
-    <alias value="Bobregster Medical Centre"/>
+    <alias value="Bobrester Medical Centre"/>
     <mode value="instance"/>
     <type>
         <coding>
