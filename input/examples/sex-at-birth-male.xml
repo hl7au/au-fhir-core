@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="sex-at-birth-male"/>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1515311000168102"/>
+        </coding>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="76689-9"/>
+            <display value="Sex assigned at birth"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/baby-smith-john"/>
+    </subject>
+    <effectiveDateTime value="2022-09-14"/>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="248153007"/>
+            <display value="Male"/>
+        </coding>
+    </valueCodeableConcept>
+</Observation>

@@ -55,212 +55,260 @@
 			<reference>
 				<reference value="StructureDefinition/au-core-allergyintolerance"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-documentcomposition"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-condition"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-diagnosticreport"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-encounter"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-healthcareservice"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-immunization"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-location"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-medication"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-medicationadministration"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-medicationdispense"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-medicationrequest"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-medicationstatement"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-organization"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-patient"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-practitioner"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-practitionerrole"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-procedure"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-relatedperson"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-specimen"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-substance"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<!--VITAL SIGNS-->
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-bloodpressure"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-bodyheight"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-bodyweight"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-vitalspanel"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-oxygensat"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-bmi"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-bodytemp"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-resprate"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-headcircum"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-heartrate"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<!--LIFESTYLE FACTOR-->
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-alcoholstatus"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-healthprogramparticipation"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-smokingceasedate"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-smokingstartdate"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-smokingstatus"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<!--PREGNANCY RELATED-->
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-estimateddateofdelivery"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-gestationalage"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-lastmenstrualperiod"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-gravidity"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-parity"/>
 			</reference>
+			<exampleBoolean value="false"/>
 		</resource>
 		<!--EXAMPLES-->
 		<!--OBSERVATION EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Observation/headcircum-1"/>
+			</reference>
+			<name value="Head circumference of John Smith recorded by GP at 6 months"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-headcircum"/>
+		</resource>
 		<resource>
 			<reference>
 				<reference value="Observation/bodyheight-1"/>
@@ -281,6 +329,34 @@
 			</reference>
 			<name value="Length of John Smith recorded by GP at 6 months"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/sex-at-birth-intersex"/>
+			</reference>
+			<name value="Biological sex assigned at birth - Intersex"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-sexassignedatbirth"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/sex-at-birth-female"/>
+			</reference>
+			<name value="Biological sex assigned at birth - Female"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-sexassignedatbirth"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/sex-at-birth-male"/>
+			</reference>
+			<name value="Biological sex assigned at birth - Male"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-sexassignedatbirth"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/smokingstatus-1"/>
+			</reference>
+			<name value="Smoking status of Mr. Li Wang recorded by GP"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus"/>
 		</resource>
 		<!--PATIENT EXAMPLES-->
 		<resource>
@@ -341,18 +417,18 @@
 			<name value="Bobrester Medical Centre"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
-		<resource>
+		<!--<resource>
 			<reference>
-				<reference value="Practitioner/bobrester-bob-gp"/>
+				<reference value="Practitioner/bobrester-bob"/>
 			</reference>
 			<name value="Dr. Bob Bobrester"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-		</resource>
+		</resource>-->
 		<resource>
 			<reference>
 				<reference value="PractitionerRole/bobrester-bob-gp"/>
 			</reference>
-			<name value="Dr. Bob bobrester, GP, at Bobrester Medical Centre"/>
+			<name value="Dr. Bob Bobrester, GP, at Bobrester Medical Centre"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<!--PAGES-->

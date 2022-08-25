@@ -1,0 +1,21 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="sex-at-birth-female"/>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1515311000168102"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/anne-bennelong"/>
+    </subject>
+    <effectiveDateTime value="1968-10-11"/>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="248152002"/>
+        </coding>
+        <text value="Female"/>
+    </valueCodeableConcept>
+</Observation>
