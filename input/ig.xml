@@ -313,10 +313,18 @@
 		<!--OBSERVATION EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="Observation/headcircum-1"/>
+				<reference value="Observation/bloodpressure-1"/>
 			</reference>
-			<name value="Head circumference of John Smith recorded by GP at 6 months"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-headcircum"/>
+			<name value="Blood Pressure of Mr. Li Wang - isolated diastolic hypertension"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/bloodpressure-2"/>
+			</reference>
+			<name value="Blood Pressure of Mrs. Anne Bennelong - systemic hypertension"/>
+			<description value="Blood Pressure of Mrs. Anne Bennelong - systemic hypertension, with interpretation, bodySite, method and referenceRange"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
 		</resource>
 		<resource>
 			<reference>
@@ -352,6 +360,13 @@
 			</reference>
 			<name value="Body weight of John Smith recorded by GP at 6 months"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/headcircum-1"/>
+			</reference>
+			<name value="Head circumference of John Smith recorded by GP at 6 months"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-headcircum"/>
 		</resource>
 		<resource>
 			<reference>
