@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
+    <id value="anne-bennelong"/>
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/indigenous-status">
+        <valueCoding>
+            <system
+                value="https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"/>
+            <code value="1"/>
+            <display value="Aboriginal but not Torres Strait Islander origin"/>
+        </valueCoding>
+    </extension>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="MC"/>
+            </coding>
+            <text value="Medicare Number"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
+        <value value="6951449677"/>
+    </identifier>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="NI"/>
+                <display value="National unique individual identifier"/>
+            </coding>
+            <text value="IHI"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+        <value value="8003608833357361"/>
+    </identifier>
+    <name>
+        <use value="official"/>
+        <text value="Mrs. Anne Bennelong"/>
+        <family value="Thompson"/>
+        <given value="Anne"/>
+        <prefix value="Mrs"/>
+    </name>
+    <telecom>
+        <system value="phone"/>
+        <value value="0491 572 665"/>
+        <use value="mobile"/>
+    </telecom>
+    <gender value="female"/>
+    <birthDate value="1968-10-11"/>
+    <address>
+        <use value="home"/>
+        <line value="4 Brisbane Street"/>
+        <city value="Brisbane"/>
+        <state value="QLD"/>
+        <postalCode value="4112"/>
+        <country value="Australia"/>
+    </address>
+    <communication>
+        <language>
+            <coding>
+                <system value="urn:ietf:bcp:47"/>
+                <code value="yub"/>
+            </coding>
+            <text value="Yugambal"/>
+        </language>
+    </communication>
+</Patient>

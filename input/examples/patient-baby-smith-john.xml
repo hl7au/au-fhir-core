@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
+    <id value="baby-smith-john"/>
+    <!--baby Patient instance -->
+    <meta>
+        <profile value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-patient-core-1"/>
+    </meta>
+    <identifier>
+        <use value="temp"/>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="MR"/>
+            </coding>
+        </type>
+        <system
+            value="http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0/51824753003"/>
+        <value value="7746677"/>
+        <assigner>
+            <display value="QLD Hospital"/>
+        </assigner>
+    </identifier>
+    <name>
+        <use value="temp"/>
+        <family value="SMITH"/>
+        <given value="Baby of Emma"/>
+    </name>
+    <gender value="male"/>    
+    <birthDate value="2022-09-14"/>
+</Patient>
