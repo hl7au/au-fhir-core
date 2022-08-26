@@ -367,14 +367,14 @@
 				<reference value="Observation/bodyweight-1"/>
 			</reference>
 			<name value="Body weight of John Smith recorded by Mother at 6 months"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="Observation/bodyweight-2"/>
 			</reference>
 			<name value="Body weight of John Smith recorded by GP at 6 months"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight"/>
 		</resource>
 		<resource>
 			<reference>
