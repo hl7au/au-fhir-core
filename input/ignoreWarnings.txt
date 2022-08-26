@@ -102,4 +102,8 @@ ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-program-partici
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/service-type-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/metric-body-length-units-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/participation-in-health-program-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/metric-body-temperature-units-1 not found by validator
 

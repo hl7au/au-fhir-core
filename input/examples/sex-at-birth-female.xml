@@ -8,7 +8,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/anne-bennelong"/>
+        <reference value="Patient/bennelong-anne"/>
     </subject>
     <effectiveDateTime value="1968-10-11"/>
     <valueCodeableConcept>

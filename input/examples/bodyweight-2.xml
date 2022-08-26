@@ -29,16 +29,16 @@
   <performer>
     <reference value="RelatedPerson/smith-emma-john"/>
     <identifier>
-      <use value="official"/>
       <type>
         <coding>
           <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-          <code value="NI"/>
-          <display value="National unique individual identifier"/>
+          <code value="MC"/>
+          <display value="Patient's Medicare Number"/>
         </coding>
+        <text value="Medicare Number"/>
       </type>
-      <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-      <value value="8003608333563104"/>
+      <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
+      <value value="1234567892"/>
     </identifier>
   </performer>
   <valueQuantity>

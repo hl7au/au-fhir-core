@@ -343,6 +343,13 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Observation/bmi-1"/>
+			</reference>
+			<name value="BMI of Mr. Li Wang recorded by GP"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Observation/bodyheight-1"/>
 			</reference>
 			<name value="Height of Mr. Li Wang recorded by GP"/>
@@ -407,6 +414,13 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Observation/resprate-1"/>
+			</reference>
+			<name value="Respiration rate of Ms. Emma SMITH"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-resprate"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Observation/sex-at-birth-intersex"/>
 			</reference>
 			<name value="Biological sex assigned at birth - Intersex"/>
@@ -445,7 +459,7 @@
 			<reference>
 				<reference value="Patient/smith-emma"/>
 			</reference>
-			<name value="Mrs. Emma SMITH"/>
+			<name value="Ms. Emma SMITH"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<resource>
@@ -467,7 +481,7 @@
 			<reference>
 				<reference value="RelatedPerson/smith-emma-john"/>
 			</reference>
-			<name value="Mrs. Emma SMITH - Mother of John Smith"/>
+			<name value="Ms. Emma SMITH - Mother of John Smith"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
 		</resource>
 		<!--BOBRESTER CLUSTER-->
