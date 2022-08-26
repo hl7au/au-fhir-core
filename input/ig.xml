@@ -301,6 +301,21 @@
 			<exampleBoolean value="false"/>
 		</resource>
 		<!--EXAMPLES-->
+		<!--DEVICE EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Device/mhr-system"/>
+			</reference>
+			<name value="My Health Record system"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-device-system"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Device/medicare-repo"/>
+			</reference>
+			<name value="Medicare repository service"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-device-system"/>
+		</resource>
 		<!--ENCOUNTER EXAMPLES-->
 		<resource>
 			<reference>
@@ -381,6 +396,14 @@
 			</reference>
 			<name value="Deferred BreastScreen Australia screening due to travel"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthprogramparticipation"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/norelevantfinding-1"/>
+			</reference>
+			<name value="Mr. Li Wang - no current medications"/>
+			<description value="Mr. Li Wang not taking any medications at 2016-07-02"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-norelevantfinding"/>
 		</resource>
 		<resource>
 			<reference>
