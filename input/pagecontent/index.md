@@ -38,7 +38,7 @@ implementation. This implementation guide will be used as the basis for Australi
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home](index.html): This page provides the introduction and scope for this guide.
-- [Conformance](conformance.html): This page describes the set of rules to claim conformance to this guide including the expectations for must support elements in the profiles governed by this guide, referred to as ADHA (Australian Digital Health Agency) profiles.
+- [Conformance](conformance.html): This page describes the set of rules to claim conformance to this guide including the expectations for must support elements in AU Core profiles.
   - [General Requirements](general-requirements.html): This page defines requirements common to all actors and profiles used in this guide including how CapabilityStatements are used to claim conformance.
   - [Must Support](must-support.html): This page defines the expectations for mandatory and must support elements in the US Core Profiles.
 - [Guidance](guidance.html): This page provides guidance on using the profiles defined in this guide.
@@ -47,7 +47,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Search Parameters and Operations](search-parameters-and-operations.html): This page lists the defined Operations and Search Parameters that are used in transactions.
   - [Capability Statements](capability-statements.html): This set of pages describes the expected FHIR capabilities of the various actors.
 - [Examples](examples.html): This page lists all the examples used in this guide.
-- [Downloads](downloads.html): This page provides links to downloadable artefacts including the Agency FHIR NPM package.
+- [Downloads](downloads.html): This page provides links to downloadable artefacts including the AU Core FHIR NPM package.
 
 
 ## Collaboration
