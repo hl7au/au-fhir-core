@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <HealthcareService xmlns="http://hl7.org/fhir">
-    <id value="bobrester-medical-centre"/>
+    <id value="bobrester-medical-center"/>
     <identifier>
         <type>
             <coding>
@@ -13,7 +13,7 @@
         <value value="8003621566699776"/>
     </identifier>
     <providedBy>
-        <reference value="Organization/bobrester-medical-centre"/>
+        <reference value="Organization/bobrester-medical-center"/>
     </providedBy>
     <type>
         <coding>
@@ -37,7 +37,7 @@
         </coding>
     </type>
     <location>
-        <reference value="Location/bobrester-medical-centre"/>
+        <reference value="Location/bobrester-medical-center"/>
     </location>
     <name value="Bobrester Medical Centre"/>
     <telecom>

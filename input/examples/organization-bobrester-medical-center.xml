@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Organization xmlns="http://hl7.org/fhir">
-    <id value="bobrester-medical-centre"/>
+    <id value="bobrester-medical-center"/>
     <identifier>
         <type>
             <coding>
@@ -16,14 +16,14 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="288565001"/>
-            <display value="Medical centre"/>
+            <display value="Medical center"/>
         </coding>
-        <text value="Medical Centre"/>
+        <text value="Medical Center"/>
     </type>
-    <name value="Bobregster Medical Centre"/>
+    <name value="Bobrester Medical Center"/>
     <telecom>
         <system value="email"/>
-        <value value="info@bobregstermedical.example.com"/>
+        <value value="info@bobrestermedical.example.com"/>
         <use value="work"/>
     </telecom>
     <telecom>

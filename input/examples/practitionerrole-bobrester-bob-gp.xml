@@ -32,7 +32,7 @@
         <reference value="Practitioner/bobrester-greg"/>
     </practitioner> 
     <organization>
-        <reference value="Organization/bobrester-medical-centre"/>
+        <reference value="Organization/bobrester-medical-center"/>
     </organization>
     <code>
         <coding>
@@ -46,7 +46,7 @@
         <text value="General Practitioner"/>
     </code>
     <location>
-        <reference value="Location/bobrester-medical-centre"/>
+        <reference value="Location/bobrester-medical-center"/>
     </location>
     <telecom>
         <system value="phone"/>
