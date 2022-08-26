@@ -130,6 +130,7 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <condition value="au-core-obs-02"/>
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible" />

@@ -35,7 +35,7 @@
         <human value="At least value or data absent reason shall be present"/>
         <expression value="dataAbsentReason.exists() or value.exists()"/>
         <xpath value="exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"/>
-        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
+        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-alcoholstatus"/>
       </constraint>
     </element>
     <element id="Observation.status">
@@ -86,6 +86,14 @@
       </type>
      <mustSupport value="true"/>
     </element>
+    <element id="Observation.encounter">
+      <path value="Observation.encounter"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter" />
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
       <short value="Date, and optionally time, the observation was performed"/>
@@ -119,10 +127,10 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]"/>
-      <min value="1" />
       <type>
         <code value="CodeableConcept"/>
       </type>
+      <condition value="au-core-obs-02"/>
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
