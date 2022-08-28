@@ -84,7 +84,9 @@ Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-s
 Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1' is unknown so the code cannot be validated
 Code System URI 'http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0' is unknown so the code cannot be validated
 
-
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1 not found by validator
