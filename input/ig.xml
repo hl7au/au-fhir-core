@@ -322,7 +322,7 @@
 				<reference value="BodyStructure/right-knee"/>
 			</reference>
 			<name value="Right Knee - Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-BodyStructure"/>
+			<exampleBoolean value="true"/>
 		</resource>
 		<!--DEVICE EXAMPLES-->
 		<resource>
@@ -600,6 +600,13 @@
 			<name value="Cryotherapy - Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="Procedure/stentinsertion"/>
+			</reference>
+			<name value="Cryotherapy - Mrs. Anne Bennelong"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
+		</resource>
 		<!--RELATEDPERSON EXAMPLES-->
 		<resource>
 			<reference>
@@ -651,6 +658,35 @@
 			</reference>
 			<name value="Dr. Bob Bobrester, GP, at Bobrester Medical Centre"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+		</resource>
+		<!--AU HOSPITAL CLUSTER-->
+		<resource>
+			<reference>
+				<reference value="Location/au-hospital"/>
+			</reference>
+			<name value="AU Hopstial Site"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Location/au-hospital-er"/>
+			</reference>
+			<name value="Emergency room - part of AU Hospital Site"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Location/au-hospital-pharm-in"/>
+			</reference>
+			<name value="Inpatient pharmacy - part of AU Hospital Site"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/hospital-int"/>
+			</reference>
+			<name value="Hospitals International"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<!--PAGES-->
 		<page>
