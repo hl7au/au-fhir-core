@@ -263,12 +263,12 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
-		<resource>
+		<!--<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-smokingstatus"/>
 			</reference>
 			<exampleBoolean value="false"/>
-		</resource>
+		</resource>-->
 		<!--PREGNANCY RELATED-->
 		<resource>
 			<reference>
@@ -341,6 +341,13 @@
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
 		</resource>
 		<!--OBSERVATION EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Observation/alcoholstatus-1"/>
+			</reference>
+			<name value="Mr. Li Wang - occasional drinker - recorded by GP"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-alcoholstatus"/>
+		</resource>
 		<resource>
 			<reference>
 				<reference value="Observation/bloodpressure-1"/>
