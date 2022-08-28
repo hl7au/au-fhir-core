@@ -1,0 +1,24 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="smokingceasedate-1"/>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="social-history"/>
+      <display value="Social History"/>
+    </coding>
+    <text value="Social History"/>
+  </category>
+  <code>
+   <coding>
+      <system value="http://snomed.info/sct"/>
+     <code value="160625004" />
+    </coding>
+    <text value="Quit date"/>
+  </code>
+  <subject>
+    <reference value="Patient/bennelong-anne"/>
+  </subject>
+  <effectiveDateTime value="2020-10-02"/>
+  <valueDateTime value="2001-10"/>
+</Observation>

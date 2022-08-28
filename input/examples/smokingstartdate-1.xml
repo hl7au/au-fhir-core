@@ -1,5 +1,5 @@
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="smokingstatus-1"/>
+  <id value="smokingstartdate-1"/>
   <status value="final"/>
   <category>
     <coding>
@@ -12,13 +12,9 @@
   <code>
    <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="266918002" />
+     <code value="NCTSRequestSubmitted" />
     </coding>
-    <coding>
-      <system value="http://loinc.org"/>
-      <code value="72166-2"/>
-    </coding>
-    <text value="Smoking status"/>
+    <text value="Smoking start date"/>
   </code>
   <subject>
     <reference value="Patient/wang-li"/>
@@ -42,12 +38,5 @@
       <value value="8003614900041243"/>
     </identifier>
   </performer>
-  <valueCodeableConcept>
-    <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="77176002"/>
-      <display value="Current smoker"/>
-    </coding>
-    <text value="Smoker"/>
-  </valueCodeableConcept>
+  <valueDateTime value="1989"/>
 </Observation>
