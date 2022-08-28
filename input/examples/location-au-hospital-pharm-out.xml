@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Location xmlns="http://hl7.org/fhir">
-    <id value="au-hospital-pharm-in"/>
+    <id value="au-hospital-pharm-out"/>
     <status value="active"/>
-    <name value="Building 31"/>
-    <alias value="Pharmacy - QLD Hospital"/>
+    <name value="Friends Pharmacy - AU Hospital"/>
     <mode value="instance"/>
     <type>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
-            <code value="INPHARM"/>
-            <display value="inpatient pharmacy"/>
+            <code value="OUTPHARM"/>
+            <display value="outpatient pharmacy"/>
+        </coding>
+    </type>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="PHARM"/>
+            <display value="Pharmacy"/>
         </coding>
     </type>
     <address>
-        <text value="Building 31, 54301 Stanley St, South Brisbane QLD 4101" />
-        <line value="Building 31"/>
+        <line value="Suite 14, Building 31"/>
         <line value="54301 Stanley St"/>
         <city value="South Brisbane"/>
         <state value="QLD"/>

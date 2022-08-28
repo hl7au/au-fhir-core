@@ -84,7 +84,9 @@ Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1
 Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1' is unknown so the code cannot be validated
 Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1' is unknown so the code cannot be validated
 Code System URI 'http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0' is unknown so the code cannot be validated
+Code System URI 'http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0' is unknown so the code cannot be validated
 
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/body-site-relative-site-qualifier-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/procedure-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/information-system-device-type-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/alcohol-intake-status-1 not found by validator
@@ -117,3 +119,10 @@ ValueSet https://healthterminologies.gov.au/fhir/ValueSet/metric-body-temperatur
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1 not found by validator
 
+
+Found multiple matching profiles among choices: ; [http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address]
+Found multiple matching profiles among choices: ; [http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier]
+Found multiple matching profiles among choices: ; [http://hl7.org/fhir/StructureDefinition/Identifier, http://hl7.org.au/fhir/StructureDefinition/au-employeenumber]
+Found multiple matching profiles among choices: ; [http://hl7.org/fhir/StructureDefinition/Identifier, http://hl7.org.au/fhir/StructureDefinition/au-medicalrecordnumber]
+Found multiple matching profiles among choices: ; [http://hl7.org/fhir/StructureDefinition/Identifier, http://hl7.org.au/fhir/StructureDefinition/au-hpio]
+Found multiple matching profiles among choices: ; [http://hl7.org/fhir/StructureDefinition/Identifier, http://hl7.org.au/fhir/StructureDefinition/au-ihi]

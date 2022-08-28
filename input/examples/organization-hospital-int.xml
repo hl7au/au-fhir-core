@@ -10,7 +10,7 @@
             <text value="HPI-O"/>
         </type>
         <system value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
-        <value value="8003619900015717"/>
+        <value value="8003621566684455"/>
     </identifier>
     <!--Invalid ABN format that passes profile validation used as the fictitious ABN to avoid introducing ambiguity with real world organisations-->
     <identifier>

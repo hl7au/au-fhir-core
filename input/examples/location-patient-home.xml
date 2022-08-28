@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Location xmlns="http://hl7.org/fhir">
+    <id value="patient-home"/>
+    <status value="active"/>
+    <name value="Patient's home"/> 
+    <mode value="kind"/>
+    <type> 
+        <coding> 
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/> 
+            <code value="PTRES"/> 
+            <display value="Patient's Residence"/> 
+        </coding> 
+        <coding> 
+            <system value="http://snomed.info/sct"/> 
+            <code value="394778007"/> 
+            <display value="Client's or patient's home"/> 
+        </coding> 
+    </type> 
+    <physicalType> 
+        <coding> 
+            <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/> 
+            <code value="ho"/> 
+            <display value="House"/> 
+        </coding> 
+    </physicalType>
+</Location>

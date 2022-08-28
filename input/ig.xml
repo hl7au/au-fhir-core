@@ -364,6 +364,15 @@
 			<name value="Mrs. Anne Bennelong - COVID Dose 1"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
 		</resource>
+		<!--LOCATION EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Location/patient-home"/>
+			</reference>
+			<name value="Patient home"/>
+			<name value="Patient home as kind of location (not a specific patient's location)."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
+		</resource>
 		<!--OBSERVATION EXAMPLES-->
 		<resource>
 			<reference>
@@ -623,7 +632,7 @@
 			<name value="Mrs. Anne Bennelong - Order for Chest CT"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
 		</resource>
-		<!--BOBRESTER CLUSTER-->
+		<!--BOBRESTER GP EXAMPLE CLUSTER-->
 		<resource>
 			<reference>
 				<reference value="HealthcareService/bobrester-medical-center"/>
@@ -659,26 +668,20 @@
 			<name value="Dr. Bob Bobrester, GP, at Bobrester Medical Centre"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
-		<!--AU HOSPITAL CLUSTER-->
+		<!--AU HOSPITAL EXAMPLE CLUSTER-->
 		<resource>
 			<reference>
 				<reference value="Location/au-hospital"/>
 			</reference>
-			<name value="AU Hopstial Site"/>
+			<name value="AU Hospital Site"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Location/au-hospital-er"/>
+				<reference value="Location/au-hospital-pharm-out"/>
 			</reference>
-			<name value="Emergency room - part of AU Hospital Site"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Location/au-hospital-pharm-in"/>
-			</reference>
-			<name value="Inpatient pharmacy - part of AU Hospital Site"/>
+			<name value="Friends Pharmacy"/>
+			<description value="Friends Pharmacy (outpatient) - part of AU Hospital Site"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
 		</resource>
 		<resource>
