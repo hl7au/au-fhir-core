@@ -346,7 +346,7 @@
 				<reference value="Observation/bmi-1"/>
 			</reference>
 			<name value="BMI of Mr. Li Wang recorded by GP"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bmi"/>
 		</resource>
 		<resource>
 			<reference>
@@ -385,6 +385,13 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Observation/bodytemp-1"/>
+			</reference>
+			<name value="Temperature of Mrs. Anne Bennelong"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Observation/headcircum-1"/>
 			</reference>
 			<name value="Head circumference of John Smith recorded by GP at 6 months"/>
@@ -406,11 +413,25 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Observation/heartrate-1"/>
+			</reference>
+			<name value="Heart rate of Mr. Li Wang recorded by GP"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Observation/norelevantfinding-1"/>
 			</reference>
 			<name value="Mr. Li Wang - no current medications"/>
 			<description value="Mr. Li Wang not taking any medications at 2016-07-02"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-norelevantfinding"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/oxygensat-1"/>
+			</reference>
+			<name value="Oxygen saturation of Mrs. Anne Bennelong"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-oxygensat"/>
 		</resource>
 		<resource>
 			<reference>
