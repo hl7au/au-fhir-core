@@ -1,5 +1,6 @@
 == Suppressed Messages ==
 
+The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-3 on element Immunization.statusReason could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/alcohol-intake-status-1 on element Observation.value[x] could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2 on element AllergyIntolerance.code could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1 on element AllergyIntolerance.reaction.substance could not be resolved
@@ -84,6 +85,11 @@ Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-s
 Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1' is unknown so the code cannot be validated
 Code System URI 'http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0' is unknown so the code cannot be validated
 
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/procedure-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/information-system-device-type-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/alcohol-intake-status-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/estimated-date-of-delivery-LOINC-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/estimated-date-of-delivery-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 not found by validator
@@ -108,4 +114,6 @@ ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-states-terr
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/participation-in-health-program-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/metric-body-temperature-units-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1 not found by validator
 

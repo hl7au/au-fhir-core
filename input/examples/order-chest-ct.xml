@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceRequest xmlns="http://hl7.org/fhir">
+    <id value="order-chest-ct"/>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="PLAC"/>
+                <display value="Placer Identifier"/>
+            </coding>
+            <text value="Placer Order Identifier"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hpio-scoped/order/1.0/8003621566684455"/>
+        <value value="13142351"/>
+        <assigner>
+            <display value ="Top End Medical Clinic"/>
+        </assigner>
+    </identifier>
+    <status value="active"/>
+    <intent value="order"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="708175003"/>
+            <display value="Diagnostic imaging service"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="312251004"/>
+            <display value="Computed tomography imaging - action"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="169069000"/>
+            <display value="CT of chest"/>
+        </coding>
+        <text value="Chest CT"/>
+    </code>
+    <subject>
+        <reference value="Patient/bennelong-anne"/>
+    </subject>
+    <authoredOn value="2022-03-19T08:15:00+10:00"/>
+    <requester>
+        <reference value="PractitionerRole/bobrester-bob-gp"/>
+    </requester>
+    <performer>
+        <reference value="HealthcareService/lge-priv-xray"/>
+    </performer>
+    <bodySite>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="816094009"/>
+            <display value="Structure of thoracic cross-sectional segment of trunk"/>
+        </coding>
+    </bodySite>
+</ServiceRequest>

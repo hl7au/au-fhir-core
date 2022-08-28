@@ -1,36 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
-	<id value="gestationalage-1"/>
+	<id value="parity-1"/>
 	<status value="final"/>
-	<category>
-		<coding>
-			<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
-			<code value="imaging"/>
-			<display value="Imaging"/>
-		</coding>
-	</category>
 	<code>
 		<coding>
 			<system value="http://snomed.info/sct"/>
-			<code value="57036006"/>
-			<display value="Fetal gestational age"/>
+			<code value="364325004"/>
+			<display value="Parity"/>
 		</coding>
 		<coding>
 			<system value="http://loinc.org"/>
-			<code value="11888-5"/>
+			<code value="11977-6"/>
+			<display value="Parity"/>
 		</coding>
 	</code>
 	<subject>
 		<reference value="Patient/smith-emma"/>
 	</subject>
-	<focus>
-		<display value="Baby of Emma SMITH"/>
-	</focus>
 	<effectiveDateTime value="2022-06-06T09:30:10+10:00"/>
 	<valueQuantity>
-		<value value="46"/>
-		<unit value="days"/>
+		<value value="1"/>
 		<system value="http://unitsofmeasure.org"/>
-		<code value="d"/>		
+		<code value="1"/>		
 	</valueQuantity>		
 </Observation>
