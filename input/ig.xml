@@ -527,7 +527,8 @@
 			<reference>
 				<reference value="Observation/resprate-1"/>
 			</reference>
-			<name value="Respiration rate of Ms. Emma SMITH"/>
+			<name value="Respiration rate"/>
+			<description value="Observation of respiration rate&#xa;&#xa;Patient: Ms. Emma SMITH"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-resprate"/>
 		</resource>
 		<resource>
@@ -555,21 +556,24 @@
 			<reference>
 				<reference value="Observation/smokingceasedate-1"/>
 			</reference>
-			<name value="Mrs. Anne Bennelong - quit date October 2001"/>
+			<name value="Smoking quit date October 2001"/>
+			<description value="Observation of smoking cease (quit) date of October 2001&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingceasedate"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="Observation/smokingstatus-1"/>
 			</reference>
-			<name value="Mr. Li Wang - current smoker - recorded by GP"/>
+			<name value="Current smoker - recorded by GP"/>
+			<description value="Observation of smoking status of current smoker&#xa;&#xa;Patient: Mr. Li Wang&#xa;&#xa;Performer: Dr. Bob Bobrester, GP"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="Observation/smokingstartdate-1"/>
 			</reference>
-			<name value="Mr. Li Wang - smoking started 1989 - recorded by GP"/>
+			<name value="Smoking started 1989"/>
+			<description value="Observation of smoking start date of 1989&#xa;&#xa;&#xa;Patient: Mr. Li Wang&#xa;&#xa;Performer: Dr. Bob Bobrester, GP"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstartdate"/>
 		</resource>
 		<!--PATIENT EXAMPLES-->
@@ -606,14 +610,16 @@
 			<reference>
 				<reference value="Procedure/cryotherapy"/>
 			</reference>
-			<name value="Cryotherapy - Mrs. Anne Bennelong"/>
+			<name value="Cryotherapy"/>
+			<description value="Cryotherapy&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="Procedure/stentinsertion"/>
 			</reference>
-			<name value="Cryotherapy - Mrs. Anne Bennelong"/>
+			<name value="Placement of stent in coronary artery"/>
+			<description value="Placement of stent in coronary artery&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
 		</resource>
 		<!--RELATEDPERSON EXAMPLES-->
@@ -621,7 +627,8 @@
 			<reference>
 				<reference value="RelatedPerson/smith-emma-john"/>
 			</reference>
-			<name value="Ms. Emma SMITH - Mother of John Smith"/>
+			<name value="Mother of John Smith"/>
+			<description value="RelatedPerson: Ms. Emma SMITH&#xa;&#xa;Relationship to Patient: Mother of John Smith"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
 		</resource>
 		<!--SERVICEREQUEST EXAMPLES-->
@@ -629,7 +636,8 @@
 			<reference>
 				<reference value="ServiceRequest/order-chest-ct"/>
 			</reference>
-			<name value="Mrs. Anne Bennelong - Order for Chest CT"/>
+			<name value="Order for Chest CT"/>
+			<description value="Order for Chest CT&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
 		</resource>
 		<!--BOBRESTER GP EXAMPLE CLUSTER-->
