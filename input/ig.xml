@@ -322,7 +322,7 @@
 				<reference value="BodyStructure/right-knee"/>
 			</reference>
 			<name value="Right Knee - Mr. Li Wang"/>
-			<exampleBoolean value="true"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodystructure"/>
 		</resource>
 		<!--DEVICE EXAMPLES-->
 		<resource>
