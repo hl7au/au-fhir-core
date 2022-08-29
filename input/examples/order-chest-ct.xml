@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ServiceRequest xmlns="http://hl7.org/fhir">
     <id value="order-chest-ct"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
+    </meta>
     <identifier>
         <type>
             <coding>

@@ -1,8 +1,8 @@
 <Observation xmlns="http://hl7.org/fhir">
   <id value="bodyheight-3"/>
-	<meta>
-		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-bodyheight"/>
-	</meta>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
+  </meta>
   <status value="final"/>
   <category>
     <coding>

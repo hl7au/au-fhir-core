@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AllergyIntolerance xmlns="http://hl7.org/fhir">
     <id value="noneknown"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
+    </meta>
     <clinicalStatus>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
