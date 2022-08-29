@@ -5,7 +5,7 @@ If referencing a contained resource, both the contained resource and the referen
 
 In AU Core profiles:
 - Systems constructing a resource that represent medication or body structure information are encouraged to make use of contained resources. 
-  - Operations on Medication resources are expected to be within the context of a referencing resource query such as an ExplanationOfBenefit, Flag, MedicationAdministration, MedicationDipsense, MedicationRequest or MedicationStatement.
+  - Operations on Medication resources are expected to be within the context of a referencing resource query such as an ExplanationOfBenefit, Flag, MedicationAdministration, MedicationDispense, MedicationRequest or MedicationStatement.
   - Operations on BodyStructure resources are expected to be within the context of a referencing resource query such as a Consent, DiagnosticReport, Observation, or ServiceRequest.
 - Otherwise, when responding to a query, servers should not use inline contained resources to represent the returned data.
 
@@ -133,7 +133,7 @@ The FHIR standard defines the following resources for exchanging medicine inform
 [AU Core Medication](StructureDefinition-au-core-medication.html) is profiled to support medicinal product identification in an Australian healthcare context.
 AU Core profiles of MedicationStatement (with AU Core Medication) are used to support summary statements of medicine use. 
 AU Core profiles of MedicationAdministration (with AU Core Medication) are used to support medication chart and other administration use cases.
-AU Core profiles of MedicationDipsense (with AU Core Medication) are used to support to support dispense records and ePrescribing use cases.
+AU Core profiles of MedicationDispense (with AU Core Medication) are used to support to support dispense records and ePrescribing use cases.
 AU Core profiles of MedicationRequest (with AU Core Medication) are used to support prescription, ordering, and ePrescribing use cases.
 
 **Medicinal Product Identification**
@@ -377,7 +377,7 @@ The table below provides guidance on representing communication preferences for 
     </tbody>
 </table>
 
-Example: Patient resource with intepreter required and language is known
+Example: Patient resource with interpreter required and language is known
 ~~~
 {
   "resourceType" : "Patient",
