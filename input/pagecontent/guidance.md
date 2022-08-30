@@ -11,11 +11,11 @@ In AU Core profiles:
 
 ## Missing Data
 
-There are situations when information for a particular data element is missing and the source system does not know reason for the absence of data. If the source system does not have data for an element with a minimum cardinality = 0 (including elements labeled *Must Support*), the data element **SHALL** be omitted from the resource.  If the data element is a *Mandatory* element (in other words, where the minimum cardinality is > 0), it **SHALL** be present for *even if* the source system does not have data. The core specification provides guidance for what to do in this situation, which is summarised below:
+There are situations when information for a particular data element is missing and the source system does not know reason for the absence of data. If the source system does not have data for an element with a minimum cardinality = 0 (including elements labelled *Must Support*), the data element **SHALL** be omitted from the resource.  If the data element is a *Mandatory* element (in other words, where the minimum cardinality is > 0), it **SHALL** be present for *even if* the source system does not have data. The core specification provides guidance for what to do in this situation, which is summarised below:
 
 1.  For *non-coded* data elements including type [Reference](http://hl7.org/fhir/R4/references.html#Reference), 
   - use the [DataAbsentReason extension](http://hl7.org/fhir/StructureDefinition/data-absent-reason) in the data type if the AU Core profile for that resource does not require a child element
-  - if the AU Core profile mandates a child element such as a valid identifier or reference then the resource must that element otherwise the instance will not be conformant
+  - if the AU Core profile mandates a child element, such as a valid identifier or reference, then the resource must contain that element otherwise the instance will not be conformant
   - use the code `unknown` - The value is expected to exist but is not known.
   
     Example: ExplanationOfBenefit resource where the patient's insurance coverage is not available.
@@ -43,7 +43,7 @@ There are situations when information for a particular data element is missing a
 
 1. For *coded* data elements:
    - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept , or Coding datatypes):
-      - if the source systems has text but no coded data, only the text element is used.
+      - if the source system has text but no coded data, only the text element is used.
           - for Coding datatypes, the text only data is represented as a `display` element.
       - if there is neither text or coded data:
         - the appropriate "unknown" concept code **SHALL** be present if the binding strength is *extensible*
@@ -71,8 +71,8 @@ There are situations when information for a particular data element is missing a
         ~~~
 
    - *required* binding strength (CodeableConcept or code datatypes):
-      - the appropriate "unknown" concept code **SHALL** be present if available
-      - if the value set does not have the appropriate “unknown” concept code you must use a concept from the value set otherwise the instance will not be conformant
+      - the appropriate "unknown" concept code **SHALL** be present if available.
+      - if the value set does not have the appropriate “unknown” concept code you must use a concept from the value set otherwise the instance will not be conformant.
 
         - For AU Core profiles, the following mandatory or conditionally mandatory* status elements with required binding have no appropriate "unknown" concept code:
           - `AllergyIntolerance.clinicalStatus`*
@@ -92,11 +92,11 @@ There are situations when information for a particular data element is missing a
 
 
 ## Suppressed Data
-In some circumstances, specific pieces of data may hidden due to security or privacy reasons. Elements with a minimum cardinality = 0 (including elements labeled Must Support), the element SHALL be omitted from the resource if they are suppressed.
+In some circumstances, specific pieces of data may hidden due to security or privacy reasons. Elements with a minimum cardinality = 0 (including elements labelled Must Support), the element **SHALL** be omitted from the resource if they are suppressed.
 
-For mandatory elements (minimum cardinality is > 0), the element SHALL be populated but it may exceed the data receiver’s access rights to know that the data is suppressed:
-- where a receiver does not have access rights to know that data is suppressed use the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](guidance.html#missing-data)
-- where a receiver may know that the data is suppressed use the code `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](guidance.html#missing-data)
+For mandatory elements (minimum cardinality is > 0), the element **SHALL** be populated but it may exceed the data receiver’s access rights to know that the data is suppressed:
+- where a receiver does not have access rights to know that data is suppressed use the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](guidance.html#missing-data).
+- where a receiver may know that the data is suppressed use the code `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](guidance.html#missing-data).
 
 
 ## Extensibility – “additional” elements
@@ -140,7 +140,7 @@ AU Core profiles of MedicationRequest (with AU Core Medication) are used to supp
 
 For extemporaneous medications, the medication code is the mandatory primary mechanism to identify a medicine but contain only a text list of ingredients or it may be a code from a medicines terminology.
 
-For non-extemporaneous medications, the medication code (or set of codes) is the mandatory primary mechanism to identify a medicine and it's defining attributes (by terminology lookup) including form and strength. 
+For non-extemporaneous medications, the medication code (or set of codes) is the mandatory primary mechanism to identify a medicine and its defining attributes (by terminology lookup) including form and strength. 
 
 Australian Medicines Terminology (AMT) is the national terminology for identification and naming of medicines in clinical systems for Australia. 
 The AMT is published monthly to include new items on the Australian Register of Therapeutic Goods from the TGA, as well as items listed on the Pharmaceutical Benefits Scheme. 
@@ -431,7 +431,7 @@ The table below provides guidance on representing communication preferences for 
         <td>Preferred language is English</td>
         <td></td>
         <td></td>
-        <td>No element sent, as per the guidance in the Comments</a> of RelatedPerson.communication</td>
+        <td>No element sent, as per the guidance in the <a href="http://hl7.org/fhir/relatedperson-definitions.html#RelatedPerson.communication">Comments</a> of RelatedPerson.communication</td>
       </tr>
       <tr>
         <td>Preferred language is other than English</td>
