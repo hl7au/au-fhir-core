@@ -1,6 +1,6 @@
 
 
-## Introduction
+### Introduction
 This implementation guide is provided to support the use of FHIR<sup>&reg;&copy;</sup> in an Australian context.
 
 AU Core provides FHIR profiles to support conformance and implementation in systems. This uses AU Base representations as the basis of typical use for many purposes. In this regard it is similar in nature to other international FHIR specifications such as US Core FHIR Implementation Guide.
@@ -25,7 +25,7 @@ AU Core is particularly useful in defining:
 Assuming capabilities defined in AU Core are implemented allow specifications, applications and business logic to be developed generally with confidence that systems can readily supply this capability.
 
 
-## Usage
+### Usage
 
 This document is a working specification that may be directly implemented by FHIR<sup>&reg;&copy;</sup> system producers.
 
@@ -33,7 +33,7 @@ FHIR<sup>&reg;&copy;</sup> connectathon events are key to the verification of th
 implementation. This implementation guide will be used as the basis for Australian connectathon events.
 
 
-## How to read this guide
+### How to read this guide
 
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
@@ -50,7 +50,7 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Downloads](downloads.html): This page provides links to downloadable artefacts including the AU Core FHIR NPM package.
 
 
-## Collaboration
+### Collaboration
 This guide is the product of collaborative work undertaken with participants from:
 
 * Australian FHIR Implementers Community
