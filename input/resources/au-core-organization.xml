@@ -18,7 +18,6 @@
     </telecom>
   </contact>
   <description value="This profile sets minimum expectations for a Organization resource to record, search, and fetch information about an organisation. It is based on the [AU Base Organization](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organization.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Organization when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."/>
-  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>

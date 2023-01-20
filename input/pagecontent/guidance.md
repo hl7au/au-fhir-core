@@ -95,8 +95,8 @@ There are situations when information for a particular data element is missing a
 In some circumstances, specific pieces of data may hidden due to security or privacy reasons. Elements with a minimum cardinality = 0 (including elements labelled Must Support), the element **SHALL** be omitted from the resource if they are suppressed.
 
 For mandatory elements (minimum cardinality is > 0), the element **SHALL** be populated but it may exceed the data receiver’s access rights to know that the data is suppressed:
-- where a receiver does not have access rights to know that data is suppressed use the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](guidance.html#missing-data).
-- where a receiver may know that the data is suppressed use the code `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](guidance.html#missing-data).
+- where a receiver does not have access rights to know that data is suppressed use the code `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](guidance.html#missing-data).
+- where a receiver may know that the data is suppressed use the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](guidance.html#missing-data).
 
 
 ### Extensibility – “additional” elements
