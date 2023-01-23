@@ -97,6 +97,12 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
+		<!--<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-lipid-result"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>-->
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-location"/>
@@ -384,6 +390,14 @@
 		<!--LOCATION EXAMPLES-->
 		<resource>
 			<reference>
+				<reference value="Location/au-jurisdiction"/>
+			</reference>
+			<name value="Location - Jurisdiction of Australia"/>
+			<description value="Jurisdiction of Australia as kind of location."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Location/patient-home"/>
 			</reference>
 			<name value="Location - Patient home"/>
@@ -471,6 +485,14 @@
 			<description value="Temperature of Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp"/>
 		</resource>
+		<!--<resource>
+			<reference>
+				<reference value="Observation/cholesterol-1"/>
+			</reference>
+			<name value="Observation - Cholesterol"/>
+			<description value="Cholesterol results for Ms. Emma Smith"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+		</resource>-->
 		<resource>
 			<reference>
 				<reference value="Observation/edd-1"/>
@@ -615,6 +637,14 @@
 			<description value="Observation of smoking start date of 1989&#xa;&#xa;&#xa;Patient: Mr. Li Wang&#xa;&#xa;Performer: Dr. Bob Bobrester, GP"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstartdate"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/waistcircum-1"/>
+			</reference>
+			<name value="Observation - Waist Circumference 1"/>
+			<description value="Waist Circumference of baby John Smith"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-waistcircum"/>
+		</resource>
 		<!--PATIENT EXAMPLES-->
 		<resource>
 			<reference>
@@ -712,7 +742,7 @@
 			<reference>
 				<reference value="Practitioner/bobrester-bob"/>
 			</reference>
-			<name value="Dr. Bob Bobrester"/>
+			<name value="Practitioner - Dr. Bob Bobrester"/>
 			<description value="Dr. Bob Bobrester"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>-->
@@ -795,10 +825,10 @@
 				<generation value="markdown"/>
 			</page>
 			<!--<page>
-        <nameUrl value="terminology.html"/>
-        <title value="Terminology"/>
-        <generation value="markdown"/>
-      </page>-->
+				<nameUrl value="terminology.html"/>
+				<title value="Terminology"/>
+				<generation value="markdown"/>
+			</page>-->
 			<!--<page>
         <nameUrl value="security.html"/>
         <title value="Security"/>
@@ -825,10 +855,6 @@
 			<code value="copyrightyear"/>
 			<value value="2023+"/>
 		</parameter>
-		<parameter>
-			<code value="fmm-definition"/>
-			<value value="http://hl7.org.au/fhir/4.0.0/guidance.html#maturity-levels"/>
-		</parameter>
 		<!-- releaselabel should be the ballot status for HL7-published IGs. -->
 		<parameter>
 			<code value="releaselabel"/>
@@ -840,23 +866,19 @@
 		</parameter>
 		<parameter>
 			<code value="path-resource"/>
-			<value value="input\history"/>
-		</parameter>
-		<parameter>
-			<code value="path-liquid"/>
-			<value value="templates\liquid"/>
+			<value value="input/resources"/>
 		</parameter>
 		<parameter>
 			<code value="path-pages"/>
-			<value value="input\includes"/>
+			<value value="input/includes"/>
 		</parameter>
 		<parameter>
 			<code value="path-pages"/>
-			<value value="input\intro-notes"/>
+			<value value="input/intro-notes"/>
 		</parameter>
 		<parameter>
 			<code value="path-pages"/>
-			<value value="input\pagecontent"/>
+			<value value="input/pagecontent"/>
 		</parameter>
 		<parameter>
 			<code value="shownav"/>
@@ -890,6 +912,10 @@
 	<parameter>
       <code value="showsource"/>
       <value value="true"/>
+	</parameter>
+	<parameter>
+		<code value="path-expansion-params"/>
+		<value value="../input/_resources/exp-params.json"/>
 	</parameter>
 	</definition>
 </ImplementationGuide>

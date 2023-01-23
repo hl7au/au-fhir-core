@@ -15,7 +15,7 @@
   <code>
    <coding>
       <system value="http://snomed.info/sct"/>
-     <code value="NCTSRequestSubmitted" />
+      <code value="NCTSRequestSubmitted" />
     </coding>
     <text value="Smoking start date"/>
   </code>

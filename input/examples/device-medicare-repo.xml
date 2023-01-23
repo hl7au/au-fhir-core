@@ -24,7 +24,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="1617311000168101"/>
-            <display value="Medicare register systems"/>
+            <display value="Medicare register system"/>
         </coding>
         <text value="Medicare register systems"/>
     </type>
