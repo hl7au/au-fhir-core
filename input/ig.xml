@@ -97,12 +97,12 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
-		<!--<resource>
+		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-lipid-result"/>
 			</reference>
 			<exampleBoolean value="false"/>
-		</resource>-->
+		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-location"/>
@@ -485,14 +485,14 @@
 			<description value="Temperature of Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp"/>
 		</resource>
-		<!--<resource>
+		<resource>
 			<reference>
 				<reference value="Observation/cholesterol-1"/>
 			</reference>
 			<name value="Observation - Cholesterol"/>
 			<description value="Cholesterol results for Ms. Emma Smith"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
-		</resource>-->
+		</resource>
 		<resource>
 			<reference>
 				<reference value="Observation/edd-1"/>

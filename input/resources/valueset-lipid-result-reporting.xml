@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="lipid-result-reporting"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <url value="http://hl7.org.au/fhir/core/ValueSet/lipid-result-reporting"/>
+  <name value="LipidResultReporting"/>
+  <title value="Lipid Result Reporting"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Health Level Seven Australia"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.com.au"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="The Lipid Result Reporting value set includes values that may be used to represent individual lipid measurement observations. The values included align with the RCPA Standardised Pathology Informatics in Australia (SPIA) reporting guidelines."/>
+  <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2022, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc."/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <concept>
+        <code value="14647-2"/>
+      </concept>
+      <concept>
+        <code value="32309-7"/>
+      </concept>
+      <concept>
+        <code value="14646-4"/>
+      </concept>
+      <concept>
+        <code value="22748-8"/>
+      </concept>
+      <concept>
+        <code value="70204-3"/>
+      </concept>
+      <concept>
+        <code value="14927-8"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
