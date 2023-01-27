@@ -27,7 +27,3 @@ These code systems have been defined for this implementation guide.
 {% include res-list-generator.md type="CodeSystem" %}
 
 <!-- ================================================ -->
-
-
-
-

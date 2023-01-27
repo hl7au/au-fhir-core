@@ -822,25 +822,10 @@
 				<generation value="markdown"/>
 			</page>
 			<page>
-				<nameUrl value="capability-statements.html"/>
-				<title value="Capability Statements"/>
-				<generation value="markdown"/>
-			</page>
-			<page>
-				<nameUrl value="search-parameters-and-operations.html"/>
-				<title value="Search Parameters and Operations"/>
-				<generation value="markdown"/>
-			</page>
-			<!--<page>
 				<nameUrl value="terminology.html"/>
 				<title value="Terminology"/>
 				<generation value="markdown"/>
-			</page>-->
-			<!--<page>
-        <nameUrl value="security.html"/>
-        <title value="Security"/>
-        <generation value="markdown"/>
-      </page>-->
+			</page>
 			<page>
 				<nameUrl value="examples.html"/>
 				<title value="Examples"/>
@@ -851,11 +836,6 @@
 				<title value="Downloads"/>
 				<generation value="markdown"/>
 			</page>
-			<!--<page>
-        <nameUrl value="changes.html"/>
-        <title value="Change Log"/>
-        <generation value="markdown"/>
-      </page>-->
 		</page>
 		<!-- copyright year is a mandatory parameter -->
 		<parameter>
@@ -877,15 +857,15 @@
 		</parameter>
 		<parameter>
 			<code value="path-pages"/>
-			<value value="input/includes"/>
-		</parameter>
-		<parameter>
-			<code value="path-pages"/>
 			<value value="input/intro-notes"/>
 		</parameter>
 		<parameter>
 			<code value="path-pages"/>
 			<value value="input/pagecontent"/>
+		</parameter>
+		<parameter>
+			<code value="path-pages"/>
+			<value value="input/includes"/>
 		</parameter>
 		<parameter>
 			<code value="shownav"/>
