@@ -32,7 +32,7 @@
         <value value="8003619900015717"/>
     </identifier>
     <practitioner>
-        <reference value="Practitioner/bobrester-greg"/>
+        <reference value="Practitioner/bobrester-bob"/>
     </practitioner> 
     <organization>
         <reference value="Organization/bobrester-medical-center"/>

@@ -745,14 +745,14 @@
 			<description value="Bobrester Medical Centre"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
-		<!--<resource>
+		<resource>
 			<reference>
 				<reference value="Practitioner/bobrester-bob"/>
 			</reference>
 			<name value="Practitioner - Dr. Bob Bobrester"/>
 			<description value="Dr. Bob Bobrester"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-		</resource>-->
+		</resource>
 		<resource>
 			<reference>
 				<reference value="PractitionerRole/bobrester-bob-gp"/>
