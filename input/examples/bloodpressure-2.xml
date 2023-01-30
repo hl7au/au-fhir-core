@@ -27,7 +27,10 @@
   <subject>
     <reference value="Patient/bennelong-anne"/>
   </subject>
-  <effectiveDateTime value="2022-02-10T10:00:00+10:00"/>
+  <effectiveDateTime value="2022-02-10"/>
+  <performer>
+      <reference value="PractitionerRole/bobrester-bob-gp"/>
+  </performer>
   <interpretation>
     <coding>
       <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
