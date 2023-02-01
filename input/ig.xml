@@ -63,13 +63,19 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="StructureDefinition/au-core-documentcomposition"/>
+				<reference value="StructureDefinition/au-core-careteam"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-condition"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-documentcomposition"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
