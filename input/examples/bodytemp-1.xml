@@ -28,7 +28,10 @@
 	<subject>
 		<reference value="Patient/bennelong-anne"/>
 	</subject>
-	<effectiveDateTime value="2021-12-02"/>
+	<effectiveDateTime value="2022-02-10"/>
+	<performer>
+      <reference value="PractitionerRole/bobrester-bob-gp"/>
+    </performer>
 	<valueQuantity>
 		<value value="36.5"/>
 		<unit value="C"/>

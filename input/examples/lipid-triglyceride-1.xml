@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="lipid-triglyceride-1" />
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result" />
+    </meta>
+    <status value="final" />
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+            <code value="laboratory" />
+            <display value="Laboratory" />
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+            <code value="CH" />
+            <display value="Chemistry" />
+        </coding>
+        <text value="Chemistry" />
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org" />
+            <code value="14927-8" />
+            <display value="Triglyceride [Moles/volume] in Serum or Plasma" />
+        </coding>
+        <text value="Triglyceride" />
+    </code>
+    <subject>
+        <reference value="Patient/smith-emma" />
+    </subject>
+    <effectiveDateTime value="2023-01-17" />
+    <valueQuantity>
+        <value value="1.9" />
+        <unit value="mmol/L" />
+        <system value="http://unitsofmeasure.org" />
+        <code value="mmol/L" />
+    </valueQuantity>
+    <interpretation>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="N"/>
+            <display value="Normal"/>
+        </coding>
+    </interpretation>
+    <referenceRange>
+        <high>
+            <value value="2.0" />
+            <unit value="mmol/L" />
+            <system value="http://unitsofmeasure.org" />
+            <code value="mmol/L" />
+        </high>
+    </referenceRange>
+</Observation>
