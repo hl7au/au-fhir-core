@@ -177,6 +177,12 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/au-core-pregnancystatus"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-core-procedure"/>
 			</reference>
 			<exampleBoolean value="false"/>
@@ -332,6 +338,12 @@
 		<resource>
 			<reference>
 				<reference value="ValueSet/lipid-result-reporting"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/pregnancy-status"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
