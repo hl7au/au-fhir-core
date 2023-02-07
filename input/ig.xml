@@ -81,6 +81,12 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/au-core-coverage"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-core-documentcomposition"/>
 			</reference>
 			<exampleBoolean value="false"/>
@@ -382,6 +388,39 @@
 			<name value="Condition - Acute coronary syndrome"/>
 			<description value="Acute coronary syndrome - Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+		</resource>
+		<!--COVERAGE EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Coverage/aaaaaia-smith-emma"/>
+			</reference>
+			<name value="Coverage -  AAAAAIA HI PTY LTD"/>
+			<description value="AAAAAIA Gold Plan -  Ms. Emma SMITH"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-coverage"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Coverage/dva"/>
+			</reference>
+			<name value="Coverage - DVA Gold Card"/>
+			<description value="DVA Gold Card - Mr. Harry Dan"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-coverage"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Coverage/medicare-smith-emma"/>
+			</reference>
+			<name value="Coverage - Medicare"/>
+			<description value="Medicare - Ms. Emma SMITH"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-coverage"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Coverage/selfpay-smith-emma"/>
+			</reference>
+			<name value="Coverage - Selfpay"/>
+			<description value="Self pay at hospital -  Ms. Emma SMITH"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-coverage"/>
 		</resource>
 		<!--DEVICE EXAMPLES-->
 		<resource>
@@ -774,6 +813,39 @@
 			<description value="Waist Circumference of baby John Smith"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-waistcircum"/>
 		</resource>
+		<!--ORGANIZATION EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Organization/aaaaaia-insurer"/>
+			</reference>
+			<name value="Organization - AAAAAIA HI PTY LTD"/>
+			<description value="AAAAAIA HI PTY LTD (Private Health Insurer)"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/dva-au"/>
+			</reference>
+			<name value="Organization - Department of Veterans' Affairs"/>
+			<description value="Australian Government Department of Veterans' Affairs"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/health-au"/>
+			</reference>
+			<name value="Organization - Department of Health and Aged Care"/>
+			<description value="Australian Government Department of Health and Aged Care"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/services-au"/>
+			</reference>
+			<name value="Organization - Services Australia"/>
+			<description value="Services Australia (Australian Government)"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
+		</resource>
 		<!--PATIENT EXAMPLES-->
 		<resource>
 			<reference>
@@ -781,6 +853,14 @@
 			</reference>
 			<name value="Patient - Baby patient"/>
 			<description value="John SMITH, Baby of Emma SMITH"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/dan-harry"/>
+			</reference>
+			<name value="Patient - Mr. Harry Dan"/>
+			<description value="Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<resource>
