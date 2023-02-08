@@ -9,14 +9,6 @@
   <title value="Lipid Result Reporting"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <publisher value="Health Level Seven Australia"/>
-  <contact>
-    <telecom>
-      <system value="url"/>
-      <value value="http://hl7.com.au"/>
-      <use value="work"/>
-    </telecom>
-  </contact>
   <description value="The Lipid Result Reporting value set includes values that may be used to represent individual lipid measurement observations. The values included align with the RCPA Standardised Pathology Informatics in Australia (SPIA) reporting guidelines."/>
   <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2022, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc."/>
   <compose>

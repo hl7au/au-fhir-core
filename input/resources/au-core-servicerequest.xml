@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-core-servicerequest"/>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="0"/> 
-  </extension>
   <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
   <name value="AUCoreServiceRequest"/>
   <title value="AU Core ServiceRequest"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <publisher value="Health Level Seven Australia" />
-  <contact>
-    <telecom>
-      <system value="url" />
-      <value value="http://hl7.com.au" />
-      <use value="work" />
-    </telecom>
-  </contact>
   <description value="This profile sets minimum expectations for a ServiceRequest resource to record, search, and fetch information about requests, plans, or orders for a service for a patient. It is based on the core [ServiceRequest]( http://hl7.org/fhir/R4/servicerequest.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the ServiceRequest when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
   <fhirVersion value="4.0.1"/>
   <kind value="resource"/>

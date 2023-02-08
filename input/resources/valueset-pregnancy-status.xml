@@ -9,14 +9,6 @@
   <title value="Pregnancy Status"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <publisher value="Health Level Seven Australia"/>
-  <contact>
-    <telecom>
-      <system value="url"/>
-      <value value="http://hl7.com.au"/>
-      <use value="work"/>
-    </telecom>
-  </contact>
   <description value="The Pregnancy Status value set includes values that may be used to represent the pregnancy status of a patient. The values included align with the IPS and US Core."/>
   <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
   <compose>

@@ -15,6 +15,13 @@
 	<experimental value="false"/>
 	<publisher value="HL7 Australia"/>
 	<contact>
+    	<telecom>
+      		<system value="url" />
+      		<value value="http://hl7.com.au" />
+      		<use value="work" />
+    	</telecom>
+  	</contact>
+	<contact>
 		<name value="HL7 Australia Patient Administration Working Group"/>
 		<telecom>
 			<system value="url"/>
@@ -45,7 +52,7 @@
 			<code value="AU"/>
 		</coding>
 	</jurisdiction>
-	<copyright value="HL7 Australia© 2023+; Licensed Under Creative Commons No Rights Reserved."/>
+	<copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
 	<packageId value="hl7.fhir.au.core"/>
 	<license value="CC0-1.0"/>
 	<fhirVersion value="4.0.1"/>
