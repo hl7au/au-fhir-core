@@ -750,6 +750,22 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Observation/pregnancy-status-1"/>
+			</reference>
+			<name value="Observation - Pregnancy Status (Pregnant)"/>
+			<description value="Pregnancy Status (Pregnant) - Ms. Emma SMITH"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-pregnancystatus"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/pregnancy-status-2"/>
+			</reference>
+			<name value="Observation - Pregnancy Status (Not Pregnant)"/>
+			<description value="Pregnancy Status (Not Pregnant) - Ms. Emma SMITH"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-pregnancystatus"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Observation/resprate-1"/>
 			</reference>
 			<name value="Observation - Respiration rate"/>
