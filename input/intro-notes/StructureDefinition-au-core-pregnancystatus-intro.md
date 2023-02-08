@@ -2,7 +2,8 @@
 
 The following are supported usage scenarios for this profile:
 
-TBD
+- Query for pregnancy status for a patient
+- Record or update pregnancy status for a patient
 
 
 #### Profile specific implementation guidance
