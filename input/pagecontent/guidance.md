@@ -159,8 +159,8 @@ These data elements may be supported as coded, or text, and systems are likely t
       - generic item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
       - branded item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
    - If the resource is a Medication resource:
-      - form and strength are also provided in `form`, `ingredient.itemCodeableConcept` and `ingredient.strength`
-      - manufacturer = `manufacturer.identifer`
+      - form and strength are also provided in `Medication.form`, `Medication.ingredient.itemCodeableConcept` and `Medication.ingredient.strength`
+      - manufacturer = `Medication.manufacturer.identifier`
 
     Example: Medication with coded brand name, generic name, manufacturer, item form and strength.
     ~~~
@@ -275,10 +275,10 @@ These data elements may be supported as coded, or text, and systems are likely t
 
 1.  For *non-coded* support for brand name, generic name, manufacturer, item form and strength:
     - Fully non-coded support is provided using the Medication resource
-        - brand name = [Medication Brand Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
-        - generic name = [Medication Generic Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html)
-        - item form and strength = `code.text`
-        - manufacturer = `manufacturer.display`
+        - brand name = `Medication.extension` [Medication Brand Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
+        - generic name = `Medication.extension` [Medication Generic Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html)
+        - item form and strength = `Medication.code.text`
+        - manufacturer = `Medication.manufacturer.display`
   
     Example: Medication with text only brand name, generic name, item form and strength.
     ~~~
