@@ -387,6 +387,14 @@
 			<description value="Right Knee - Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodystructure"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="BodyStructure/left-knee"/>
+			</reference>
+			<name value="BodyStructure - Left Knee"/>
+			<description value="Left Knee - Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodystructure"/>
+		</resource>
 		<!--CONDITION EXAMPLES-->
 		<resource>
 			<reference>
@@ -947,10 +955,58 @@
 		<!--SERVICEREQUEST EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="ServiceRequest/order-chest-ct"/>
+				<reference value="ServiceRequest/order-chestct"/>
 			</reference>
 			<name value="ServiceRequest - Chest CT"/>
-			<description value="Order for Chest CT&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
+			<description value="Order for Chest CT&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ServiceRequest/order-chestxray"/>
+			</reference>
+			<name value="ServiceRequest - Chest X-ray"/>
+			<description value="Order for Chest X-ray&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ServiceRequest/order-ct-abpelcontrast"/>
+			</reference>
+			<name value="ServiceRequest - CT of abdomen and pelvis with contrast"/>
+			<description value="Order for CT of abdomen and pelvis with contrast&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ServiceRequest/order-lk-ctcontrast"/>
+			</reference>
+			<name value="ServiceRequest - Left Knee CT with contrast"/>
+			<description value="Order for Left Knee CT with contrast&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ServiceRequest/order-lkxray"/>
+			</reference>
+			<name value="ServiceRequest - Left Knee X-ray"/>
+			<description value="Order for Left Knee X-ray&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ServiceRequest/order-rk-ctcontrast"/>
+			</reference>
+			<name value="ServiceRequest - Right Knee CT with contrast"/>
+			<description value="Order for Right Knee CT with contrast&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ServiceRequest/order-rkxray"/>
+			</reference>
+			<name value="ServiceRequest - Right Knee X-ray"/>
+			<description value="Order for Right Knee X-ray&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
 		</resource>
 		<!--SUBSTANCE EXAMPLES-->

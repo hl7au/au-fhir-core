@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceRequest xmlns="http://hl7.org/fhir">
+    <id value="order-lk-ctcontrast"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticrequest"/>
+    </meta>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="PLAC"/>
+                <display value="Placer Identifier"/>
+            </coding>
+            <text value="Placer Order Identifier"/>
+        </type>
+        <system value="http://bobrestergp.example.com/order"/>
+        <value value="3451451247"/>
+        <assigner>
+            <display value ="Bobregster Medical Center QLD"/>
+        </assigner>
+    </identifier>
+    <status value="revoked"/>
+    <intent value="order"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="708175003"/>
+            <display value="Diagnostic imaging service"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="312251004"/>
+            <display value="Computed tomography imaging - action"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="410321000119109"/>
+            <display value="CT of left knee with contrast"/>
+        </coding>
+        <text value="CT of Left Knee with Contrast"/>
+    </code>
+    <subject>
+        <reference value="Patient/wang-li"/>
+    </subject>
+    <authoredOn value="2023-02-01T09:55:00+10:00"/>
+    <requester>
+        <reference value="PractitionerRole/bobrester-bob-gp"/>
+    </requester>
+</ServiceRequest>
