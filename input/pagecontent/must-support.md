@@ -56,7 +56,7 @@ Example: AU Core AllergyIntolerance profile showing clinicalStatus and verificat
 When rendered in an implementation publication each profile is presented in different formal views in a tree format under tabs labelled "Differential Table" and "Snapshot Table".
 
 The elements labelled *MustSupport* in the "Differential Table" and "Snapshot Table" view are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. To see the full set of elements that must be supported a reader needs to view the "Snapshot Table". 
-The "Snapshot Table" presents the elements labelled MustSupport in this profile (shown in the "Differential Table") and the elements labelled MustSupport inherited from a base profile (e.g. [AU Core Body Height](StructureDefinition-au-core-bodyheight.html) based on core [FHIR Body Height Profile](http://hl7.org/fhir/R4B/bodyheight.html)) 
+The "Snapshot Table" presents the elements labelled MustSupport in this profile (shown in the "Differential Table") and the elements labelled MustSupport inherited from a base profile (e.g. [AU Core Body Height](StructureDefinition-au-core-bodyheight.html) based on core [FHIR Body Height Profile](http://hl7.org/fhir/R4/bodyheight.html)). 
 
 Implementers should take note that the full set of constraints (i.e. invariants) defined in a profile are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile. The "Differential Table" only presents constraints introduced in this profile in addition to the constraints present in the base profile and base resource. The "Snapshot Table" only presents the constraints visible in the "Differential Table" and additionally presents those constraints set in slices in the base profile.
 
@@ -70,7 +70,7 @@ A profile may include rules that:
 - limit what is considered 'valid'
 - extend the potential subelements by including an extension
 
-Typically AU Core profiles will extend the potential subelements by inheriting from a HL7 AU Base profile, e.g. the element `Medication.code` in profile [AU Core Medication](StructureDefinition-au-core-medication.html) is of type CodeableConcept and is extended by inheriting a medicine specific subelement `Medication.code.coding.extension` [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) from [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-medication.html). 
+Typically AU Core profiles will extend the potential subelements by inheriting from a HL7 AU Base profile, e.g. the element `Medication.code` in profile [AU Core Medication](StructureDefinition-au-core-medication.html) is of type CodeableConcept and is extended by inheriting a medicine specific subelement `Medication.code.coding.extension` [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) from [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html). 
 The full set of subelements is visible in the "Snapshot Table" which shows the subelements defined in this profile (shown in the "Differential Table") and the subelements inherited from a base profile.
 
 
@@ -104,7 +104,7 @@ For some complex types a meaningful, valid, value can be populated with only one
 - A receiving system **SHALL** be capable of meaningfully processing all choices (since the receiver cannot anticipate which data type or profile might be populated) 
 - A persisting system **SHALL** be capable of persisting all choices (since the persister cannot anticipate which data type or profile might be populated)
 
-A profile may slice an element that has a choice of data types or profiles to constrain the set of choices to be supported. For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) constrains the choices for `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number:
+A profile may slice an element that has a choice of data types or profiles to constrain the set of choices to be supported. For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) constrains the choices for `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number:
 - A sending system **SHALL** be capable of populating the element with a value that conforms to at least one of those three identifier choices, and **SHOULD** be capable of populating every choice for which the sending system might possess data
 - A receiving system **SHALL** be capable of meaningfully processing all supported identifier choices (since the receiver cannot anticipate which data type or profile might be populated) 
 - A persisting system **SHALL** be capable of persisting all supported identifier choices (since the persister cannot anticipate which data type or profile might be populated)
@@ -120,7 +120,7 @@ A resource may support two elements that are used to indicate a reason, e.g. `En
 
 ##### Must support elements with a choice of terminology bindings
 
-A profile may slice an element that has a choice of terminology bindings to constrain the set of choices to be supported. For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) constrains the optional terminology choices for `Medication.code` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-medication.html) to support AMT and PBS:
+A profile may slice an element that has a choice of terminology bindings to constrain the set of choices to be supported. For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) constrains the optional terminology choices for `Medication.code` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support AMT and PBS:
 - A sending system that supplies a coded value **SHALL** be capable of populating the element with a value that conforms to at least one of those two terminology choices, and **SHOULD** be capable of populating every choice for which the sending system might possess data
   - In this profile, a coded value is optional, a sending system that does not have the capability to supply a coded value from a terminology may supply a text value 
 - A receiving system **SHALL** be capable of meaningfully processing all supported terminology choices (since the receiver cannot anticipate which data type or profile might be populated) 
