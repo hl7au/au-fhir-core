@@ -69,4 +69,7 @@
         <start value="2022-02-10T09:20:00+10:00"/>
         <end value="2022-02-10T09:35:00+10:00"/>
     </period>
+    <serviceProvider>
+        <display value="TAS GP Medical Center TAS"/>
+    </serviceProvider>
 </Encounter>

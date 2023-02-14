@@ -57,7 +57,6 @@
     </element>
     <element id="Encounter.participant">
       <path value="Encounter.participant"/>
-      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Encounter.participant.type">

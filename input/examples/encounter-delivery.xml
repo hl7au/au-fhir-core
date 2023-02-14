@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="delivery"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+  </meta>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="IMP"/>
+    <display value="inpatient encounter"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="177184002"/>
+      <display value="Normal delivery procedure"/>
+    </coding>
+    <text value="Normal delivery"/>
+  </type>
+  <subject>
+    <reference value="Patient/smith-emma"/>
+  </subject>
+  <period>
+    <end value="2023-01-24"/>
+  </period>
+  <location>
+    <location>
+      <reference value="Location/au-hospital"/>
+    </location>
+  </location>
+  <serviceProvider>
+    <reference value="Organization/hospital-au"/>
+  </serviceProvider>
+</Encounter>

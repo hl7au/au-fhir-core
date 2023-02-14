@@ -40,6 +40,6 @@
         </coding>
     </physicalType>
     <managingOrganization>
-        <reference value="Organization/hospital-int"/>
+        <reference value="Organization/hospital-au"/>
     </managingOrganization>
 </Location>
