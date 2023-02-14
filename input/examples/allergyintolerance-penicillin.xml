@@ -36,7 +36,6 @@
   </recorder>
   <asserter>
     <reference value="Patient/dan-harry"/>
-    <reference value="PractitionerRole/bobrester-bob-gp"/>
   </asserter>
   <reaction>
     <substance>
