@@ -32,4 +32,16 @@
         </coding>
         <text value="Occlusion of right coronary artery"/>
     </reasonCode>
+    <focalDevice> 
+        <action> 
+            <coding> 
+                <system value="http://snomed.info/sct"/> 
+                <code value="425362007"/> 
+                <display value="Surgical insertion - action"/>
+            </coding> 
+        </action> 
+        <manipulated> 
+            <display value="coronary stent"/> 
+        </manipulated> 
+  </focalDevice>
 </Procedure>
