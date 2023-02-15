@@ -78,6 +78,13 @@
     <requester>
         <reference value="PractitionerRole/bobrester-bob-gp"/>
     </requester>
+    <performerType>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="78729002"/>
+        </coding>
+        <text value="Diagnostic radiologist"/>
+    </performerType>
     <reasonCode>
         <coding>
             <system value="http://snomed.info/sct"/>

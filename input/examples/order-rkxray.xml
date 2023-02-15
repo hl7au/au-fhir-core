@@ -78,6 +78,9 @@
     <requester>
         <display value="Bobregster Medical Center QLD"/>
     </requester>
+    <performer>
+        <display value="QLDXRAYS"/>
+    </performer>
     <reasonCode>
         <coding>
             <system value="http://snomed.info/sct"/>

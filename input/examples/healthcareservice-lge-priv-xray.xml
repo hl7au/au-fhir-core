@@ -18,4 +18,14 @@
         <value value="51824997755"/>
     </identifier>
     <name value="Large Private X-RAY"/>
+    <telecom>
+        <system value="phone"/>
+        <value value="1300 975 707"/>
+        <use value="work"/>
+    </telecom>
+    <telecom>
+        <system value="url"/>
+        <value value="https://lge-private-xray.example.com"/>
+        <use value="work"/>
+    </telecom>
 </HealthcareService>

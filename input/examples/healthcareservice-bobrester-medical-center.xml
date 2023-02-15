@@ -13,7 +13,7 @@
             <text value="HPI-O"/>
         </type>
         <system value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
-        <value value="8003621566699776"/>
+        <value value="8003621566684455"/>
     </identifier>
     <providedBy>
         <reference value="Organization/bobrester-medical-center"/>

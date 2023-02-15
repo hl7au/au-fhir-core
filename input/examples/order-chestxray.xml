@@ -52,7 +52,7 @@
         <reference value="PractitionerRole/bobrester-bob-gp"/>
     </requester>
     <performer>
-        <display value="QLDXRAYS"/>
+        <reference value="HealthcareService/lge-priv-xray"/>
     </performer>
     <bodySite>
         <coding>
