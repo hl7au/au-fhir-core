@@ -3,6 +3,7 @@
     <id value="healthprogramparticipation-2"/>
     <meta>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthprogramparticipation"/>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
     </meta>
     <!--Scenario: Deferred BreastScreen Australia Screening due to travel
     Scenario Description: Participant was invited to screen, Deferred screening for 10 months due to travel.  

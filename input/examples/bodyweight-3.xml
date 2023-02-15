@@ -3,6 +3,7 @@
   <id value="bodyweight-3"/>
   <meta>
     <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight"/>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
   </meta>
   <status value="final"/>
   <category>

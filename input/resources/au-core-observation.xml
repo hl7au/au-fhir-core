@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-core-observation"/>
+  <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation" />
+  <name value="AUCoreObservation" />
+  <title value="AU Core Observation" />
+  <status value="draft" />
+  <description value="This profile sets minimum expectations for an Observation resource to record, search, and fetch observations that represent simple measurements and assertions about a patient. It is based on the core FHIR [Observation](http://hl7.org/fhir/R4/observation.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Observation resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation"/>
+      <constraint>
+        <key value="au-core-obs-05"/>
+        <severity value="error"/>
+        <human value="If there is no component or hasMember element then at least value or data absent reason shall be present"/>
+        <expression value="(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())"/>
+        <xpath value="exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"/>
+        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
+      </constraint>
+    </element>
+   <element id="Observation.status">
+      <path value="Observation.status" />
+     <mustSupport value="true"/>
+    </element>
+    <element id="Observation.category">
+      <path value="Observation.category" />
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient" />
+      </type>
+    </element>
+    <element id="Observation.encounter">
+      <path value="Observation.encounter"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter" />
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <short value="Date, and optionally time, the observation was performed"/>
+      <definition value="Date, and optionally time, the observation was performed." />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <condition value="au-core-obs-01"/>
+      <constraint>
+        <key value="au-core-obs-01"/>
+        <severity value="error"/>
+        <human value="Date shall be at least to day"/>
+        <expression value="$this is DateTime implies $this.toString().length() &gt;= 10"/>
+        <xpath value="f:matches(effectiveDateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)"/>
+        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.performer">
+      <path value="Observation.performer"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]"/>
+      <condition value="au-core-obs-05"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.dataAbsentReason">
+      <path value="Observation.dataAbsentReason"/>
+      <condition value="au-core-obs-05"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.note">
+      <path value="Observation.note"/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>
