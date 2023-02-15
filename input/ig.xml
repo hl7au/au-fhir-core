@@ -999,6 +999,56 @@
 			<description value="Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
+		<!--PRACTITIONER EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Practitioner/bobrester-bob"/>
+			</reference>
+			<name value="Practitioner - Dr. Bob Bobrester"/>
+			<description value="Dr. Bob Bobrester"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Practitioner/sandyson-sandy"/>
+			</reference>
+			<name value="Practitioner - Ms. Sandy Sandyson"/>
+			<description value="Ms. Sandy Sandyson"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Practitioner/surgeon-david"/>
+			</reference>
+			<name value="Practitioner - Dr. David Surgeon"/>
+			<description value="Dr. David Surgeon"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
+		</resource>
+		<!--PRACTITIONERROLE EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="PractitionerRole/bobrester-bob-gp"/>
+			</reference>
+			<name value="PractitionerRole - GP"/>
+			<description value="Dr. Bob Bobrester, GP, at Bobrester Medical Centre"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="PractitionerRole/sandyson-sandy-nurse"/>
+			</reference>
+			<name value="PractitionerRole - GP"/>
+			<description value="Ms. Sandy Sandyson, Registered nurse, at Hospital Australia"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="PractitionerRole/surgeon-david-surgeon"/>
+			</reference>
+			<name value="PractitionerRole - Surgeon"/>
+			<description value="Dr. David Surgeon, Surgeon, at Hospital Australia"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+		</resource>
 		<!--PROCEDURE EXAMPLES-->
 		<resource>
 			<reference>
@@ -1131,22 +1181,6 @@
 			<name value="Organization - Bobrester Medical Centre"/>
 			<description value="Bobrester Medical Centre"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Practitioner/bobrester-bob"/>
-			</reference>
-			<name value="Practitioner - Dr. Bob Bobrester"/>
-			<description value="Dr. Bob Bobrester"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="PractitionerRole/bobrester-bob-gp"/>
-			</reference>
-			<name value="PractitionerRole - GP"/>
-			<description value="Dr. Bob Bobrester, GP, at Bobrester Medical Centre"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<!--AU HOSPITAL EXAMPLE CLUSTER-->
 		<resource>
