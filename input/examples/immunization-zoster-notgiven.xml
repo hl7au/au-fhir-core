@@ -1,0 +1,43 @@
+<Immunization xmlns="http://hl7.org/fhir">
+	<id value="zoster-notgiven"/>
+	<meta>
+		<profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
+	</meta>
+	<status value="not-done"/>
+	<statusReason>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="1620681000168106"/>
+			<display value="Patient objection"/>
+		</coding>
+	</statusReason>
+	<vaccineCode>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="830851000168105"/>
+			<display value="varicella-zoster live vaccine"/>
+		</coding>
+	</vaccineCode>
+	<patient>
+		<reference value="Patient/dan-harry"/>
+		<display value="Mr. Harry DAN"/>
+	</patient>
+	<occurrenceDateTime value="2017-08-15"/>
+	<primarySource value="true"/>
+	<performer>
+		<function>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
+				<code value="AP"/>
+				<display value="Administering Provider"/>
+			</coding>
+			<text value="Administering Provider"/>
+		</function>
+		<actor>
+			<reference value="Practitioner/bobrester-bob"/> 
+		</actor>
+	</performer>
+	<note>
+		<text value="Patient refused administration of Zostavax"/>
+	</note>
+</Immunization>

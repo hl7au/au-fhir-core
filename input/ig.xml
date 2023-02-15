@@ -420,6 +420,30 @@
 			<description value="Acute coronary syndrome - Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="Condition/fever"/>
+			</reference>
+			<name value="Condition - Fever"/>
+			<description value="Moderate fever - Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Condition/nailwound"/>
+			</reference>
+			<name value="Condition - Nail wound"/>
+			<description value="Nail wound on sole of foot - Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Condition/uti"/>
+			</reference>
+			<name value="Condition - Urinary tract infection"/>
+			<description value="Urinary tract infection - Ms. Emma SMITH"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+		</resource>
 		<!--COVERAGE EXAMPLES-->
 		<resource>
 			<reference>
@@ -497,6 +521,14 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Encounter/nailwound"/>
+			</reference>
+			<name value="Encounter - presentation at GP for nail wound"/>
+			<description value="presentation at GP for nail wound on sole of foot&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Encounter/telehealth"/>
 			</reference>
 			<name value="Encounter - telehealth"/>
@@ -545,13 +577,20 @@
 			<description value="Mrs. Anne Bennelong - COVID Dose 1"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
 		</resource>
-
 		<resource>
 			<reference>
 				<reference value="Immunization/hepb-1"/>
 			</reference>
 			<name value="Immunization - Administration of Hepatitis B vaccination at birth"/>
 			<description value="Administration of Hepatitis B vaccination at birth&#xa;&#xa;Patient: John Smith"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Immunization/zoster-notgiven"/>
+			</reference>
+			<name value="Immunization - Administration of Zoster vaccination refused"/>
+			<description value="Administration of Zoster vaccination refused (patient objection)&#xa;&#xa;Patient: Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
 		</resource>
 		<!--LOCATION EXAMPLES-->
@@ -691,6 +730,14 @@
 			</reference>
 			<name value="Observation - Temperature"/>
 			<description value="Temperature of Mrs. Anne Bennelong"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/bodytemp-fever"/>
+			</reference>
+			<name value="Observation - Temperature (fever)"/>
+			<description value="Temperature of 39.4 of Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp"/>
 		</resource>
 		<resource>
@@ -1029,7 +1076,7 @@
 			<reference>
 				<reference value="PractitionerRole/bobrester-bob-gp"/>
 			</reference>
-			<name value="PractitionerRole - GP"/>
+			<name value="PractitionerRole - General practitioner"/>
 			<description value="Dr. Bob Bobrester, GP, at Bobrester Medical Centre"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
@@ -1037,7 +1084,7 @@
 			<reference>
 				<reference value="PractitionerRole/sandyson-sandy-nurse"/>
 			</reference>
-			<name value="PractitionerRole - GP"/>
+			<name value="PractitionerRole - Registered nurse"/>
 			<description value="Ms. Sandy Sandyson, Registered nurse, at Hospital Australia"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>

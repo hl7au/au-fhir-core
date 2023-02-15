@@ -35,7 +35,7 @@
         <reference value="Practitioner/surgeon-david"/>
     </practitioner> 
     <organization>
-        <reference value="Organization/au-hospital"/>
+        <reference value="Organization/hospital-au"/>
     </organization>
     <code>
         <coding>
@@ -49,7 +49,7 @@
         <text value="Surgeon"/>
     </code>
     <location>
-        <reference value="Location/hospital-au"/>
+        <reference value="Location/au-hospital"/>
     </location>
     <telecom>
         <system value="phone"/>
