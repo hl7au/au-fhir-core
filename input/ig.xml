@@ -374,7 +374,7 @@
 			<reference>
 				<reference value="AllergyIntolerance/nkda"/>
 			</reference>
-			<name value="AllergyIntolerance - No known allergy"/>
+			<name value="AllergyIntolerance - No known drug allergy"/>
 			<description value="No Known Drug Allergy - John SMITH"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
 		</resource>
@@ -515,10 +515,43 @@
 		<!--IMMUNIZATION EXAMPLES-->
 		<resource>
 			<reference>
+				<reference value="Immunization/air-covid-1"/>
+			</reference>
+			<name value="Immunization - Australian Immunisaton Register Record of COVID Dose 1"/>
+			<description value="Australian Immunisaton Register Record for Mrs. Anne Bennelong - COVID Dose 1"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Immunization/air-covid-2"/>
+			</reference>
+			<name value="Immunization - Australian Immunisation Register Record of COVID Dose 2"/>
+			<description value="Australian Immunisation Register Record for Mrs. Anne Bennelong - COVID Dose 1"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Immunization/covid-1"/>
 			</reference>
 			<name value="Immunization - COVID Dose 1"/>
 			<description value="Mrs. Anne Bennelong - COVID Dose 1"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Immunization/covid-2"/>
+			</reference>
+			<name value="Immunization - COVID Dose 2"/>
+			<description value="Mrs. Anne Bennelong - COVID Dose 1"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<reference value="Immunization/hepb-1"/>
+			</reference>
+			<name value="Immunization - Administration of Hepatitis B vaccination at birth"/>
+			<description value="Administration of Hepatitis B vaccination at birth&#xa;&#xa;Patient: John Smith"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
 		</resource>
 		<!--LOCATION EXAMPLES-->

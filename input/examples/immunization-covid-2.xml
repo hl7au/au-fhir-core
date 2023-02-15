@@ -1,11 +1,11 @@
 <Immunization xmlns="http://hl7.org/fhir">
-	<id value="covid-1"/>
+	<id value="covid-2"/>
 	<meta>
 		<profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
 	</meta>
 	<extension url="http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number">
 		<!--Vial serial number below does not conform to reporting requirements to avoid conflict with real world values-->
-		<valueString value="vNo1111"/>
+		<valueString value="vNo1awef1111"/>
 	</extension>
 	<status value="completed"/>
 	<vaccineCode>
@@ -35,8 +35,8 @@
 			<value value="8003608833357361"/>
 		</identifier>
 	</patient>
-	<occurrenceDateTime value="2021-06-17"/>
-	<recorded value="2021-06-17"/>
+	<occurrenceDateTime value="2021-08-01"/>
+	<recorded value="2021-08-01"/>
 	<primarySource value="true"/>
 	<location>
 		<reference value="Location/bobrester-medical-center"/> 
@@ -45,23 +45,7 @@
 		<display value="Pfizer Australia Ltd" />
 	</manufacturer>
 	<!--Lot number below does not conform to batch number reporting requirements to avoid conflict with real world values-->
-	<lotNumber value="200000000P" />
-	<site>
-		<coding>
-			<system value="http://snomed.info/sct"/>
-			<code value="368208006"/>
-			<display value="Left upper arm structure"/>
-		</coding>
-		<text value="Left upper arm"/>
-	</site>
-	<route>
-		<coding>
-			<system value="http://snomed.info/sct"/>
-			<code value="78421000"/>
-			<display value="Intramuscular route"/>
-		</coding>
-		<text value="Intramuscular"/>
-	</route>
+	<lotNumber value="300000000P" />
 	<performer>
 		<function>
 			<coding>
@@ -96,6 +80,6 @@
 			</coding>
 			<text value="COVID-19"/>
 		</targetDisease>
-		<doseNumberPositiveInt value="1"/>
+		<doseNumberPositiveInt value="2"/>
 	</protocolApplied>
 </Immunization>
