@@ -5,7 +5,6 @@
   <name value="AUCoreDiagnosticReport"/>
   <title value="AU Core DiagnosticReport"/>
   <status value="draft"/>
-  <experimental value="false"/>
   <description value="This profile sets minimum expectations for a DiagnosticReport resource to record, search, and fetch diagnostic reports associated with a patient. It is based on the [AU Base Diagnostic Report](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-diagnosticreport.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the DiagnosticReport when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
   <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
@@ -124,10 +123,7 @@
     </element>
     <element id="DiagnosticReport.media.link">
       <path value="DiagnosticReport.media.link"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-media"/>
-      </type>
+      <mustSupport value="true"/>
     </element>
     <element id="DiagnosticReport.conclusion">
       <path value="DiagnosticReport.conclusion"/>

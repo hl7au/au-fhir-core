@@ -35,7 +35,6 @@
         <type value="Organization"/>
         <display value="Crisis Care Support"/>
     </custodian>
-    <description value="Mr. Li Wang's Advance Care Plan"/>
     <content>
         <attachment>
             <contentType value="application/pdf" />

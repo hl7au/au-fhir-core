@@ -5,7 +5,6 @@
   <name value="AUCoreCareTeam"/>
   <title value="AU Core Care Team"/>
   <status value="draft"/>
-  <experimental value="false"/>
   <description value="This profile sets minimum expectations for a CareTeam resource to record, search, and fetch information about a care team. It is based on the core [CareTeam]( http://hl7.org/fhir/R4/careteam.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the CareTeam when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."/>
   <fhirVersion value="4.0.1"/>
   <kind value="resource"/>

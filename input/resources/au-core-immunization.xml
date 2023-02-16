@@ -5,7 +5,6 @@
   <name value="AUCoreImmunization"/>
   <title value="AU Core Immunization"/>
   <status value="draft"/>
-  <experimental value="false"/>
   <description value="This profile sets minimum expectations for an Immunization resource to record, search, and fetch immunisation history associated with a patient. It is based on the [AU Base Immunisation](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-immunization.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Immunization resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
   <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
