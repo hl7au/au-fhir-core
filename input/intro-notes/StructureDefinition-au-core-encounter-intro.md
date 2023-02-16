@@ -2,8 +2,9 @@
 
 The following are example usage scenarios for this profile:
 
-- TBD
-- TBD
+- Query for a specific patient encounter
+- Query for all patient encounters
+- Record or update a patient encounter
 
 
 **Profile specific implementation guidance**

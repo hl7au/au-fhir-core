@@ -106,6 +106,12 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/au-core-documentreference"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-core-encounter"/>
 			</reference>
 			<exampleBoolean value="false"/>
