@@ -506,6 +506,23 @@
 			<description value="Medicare repository service"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-device-system"/>
 		</resource>
+		<!--DOCUMENTREFERENCE EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="DocumentReference/acp"/>
+			</reference>
+			<name value="DocumentReference - Advance Care Plan"/>
+			<description value="Mr. Li Wang's Advance Care Plan"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="DocumentReference/mental-health-crisis-plan"/>
+			</reference>
+			<name value="DocumentReference - Mental health crisis plan"/>
+			<description value="Mental health crisis plan (Ms. Emma SMITH)"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
+		</resource>
 		<!--ENCOUNTER EXAMPLES-->
 		<resource>
 			<reference>
@@ -890,6 +907,14 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Observation/pathresult-covid-1"/>
+			</reference>
+			<name value="Observation - COVID Pathology Result"/>
+			<description value="COVID Pathology Result - Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Observation/pregnancy-status-1"/>
 			</reference>
 			<name value="Observation - Pregnancy Status (Pregnant)"/>
@@ -1190,6 +1215,15 @@
 			<name value="ServiceRequest - Right Knee X-ray order"/>
 			<description value="Order for Right Knee X-ray&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
+		</resource>
+		<!--SPECIMEN EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Specimen/nasoswab"/>
+			</reference>
+			<name value="Specimen - Naso swab (COVID test)"/>
+			<description value="Naso swab specimen for COVID test for Mr Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-specimen"/>
 		</resource>
 		<!--SUBSTANCE EXAMPLES-->
 		<resource>

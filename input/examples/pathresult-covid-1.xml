@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="pathresult-covid-1"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+            <code value="MB"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="94309-2"/>
+        </coding>
+        <text value="2019-Novel Coronavirus PCR"/>
+    </code>
+    <subject>
+        <reference value="Patient/wang-li"/>
+    </subject>
+    <effectiveDateTime value="2021-02-15T12:00:00+10:00"/>
+    <performer>
+        <display value="PATHOLOGY LAB"/>
+    </performer>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260415000"/>
+            <display value="Not detected"/>
+        </coding>
+        <text value="Not detected"/>
+    </valueCodeableConcept>
+    <note>
+        <text value="PATHOLOGY LAB NATA/RCPA accreditation does not cover the SARS-CoV-2 (COVID-19) PCR test."/>
+    </note>
+    <note>
+        <text value="This test is currently under evaluation and has not been fully validated. Failure to detect organism-specific nucleic acids does not exclude the presence of disease due to this agent."/>
+    </note>
+    <specimen>
+        <reference value="Specimen/nasoswab"/>
+    </specimen>
+</Observation>
