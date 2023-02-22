@@ -6,7 +6,6 @@
   <title value="AU Core Assertion of No Relevant Finding"/>
   <status value="draft"/>
   <description value="This profile sets minimum expectations for an Observation resource to record, search, and fetch observation of clinical assertions that there are no items of interest, e.g. no current medications, for a patient. It is based on the core [Observation](http://hl7.org/fhir/R4/observation.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Observation when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
-  <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Observation"/>

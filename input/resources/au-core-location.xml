@@ -6,7 +6,6 @@
   <title value="AU Core Location"/>
   <status value="draft" />
   <description value="This profile sets minimum expectations for a Location resource to record, search, and fetch information about a location. It is based on the [AU Base Location](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-location.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Location when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
-  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Location"/>

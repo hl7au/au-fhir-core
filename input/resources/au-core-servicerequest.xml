@@ -6,7 +6,6 @@
   <title value="AU Core ServiceRequest"/>
   <status value="draft"/>
   <description value="This profile sets minimum expectations for a ServiceRequest resource to record, search, and fetch information about requests, plans, or orders for a service for a patient. It is based on the core [ServiceRequest]( http://hl7.org/fhir/R4/servicerequest.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the ServiceRequest when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
-  <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="ServiceRequest"/>

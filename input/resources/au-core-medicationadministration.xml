@@ -6,7 +6,6 @@
   <title value="AU Core MedicationAdministration"/>
   <status value="draft"/>
   <description value="This profile sets minimum expectations for a MedicationAdministration resource to record, search, and fetch history of administration or consumption of non-vaccine medications associated with a patient. It is based on the [AU Base Medication Administration](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationadministration.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the MedicationAdministration when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
-  <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="MedicationAdministration"/>

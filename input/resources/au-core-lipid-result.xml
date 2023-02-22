@@ -6,7 +6,6 @@
     <title value="AU Core Lipid Result" />
     <status value="draft" />
     <description value="This profile sets minimum expectations for an Observation resource to record, search, and fetch lipids observations associated with a patient and with standard coding and units of measure. It is based on the [AU Core Pathology Result Observation](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-diagnosticresult-path.html) and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Observation resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
-    <fhirVersion value="4.0.1" />
     <kind value="resource" />
     <abstract value="false" />
     <type value="Observation" />

@@ -44,6 +44,7 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Guidance](guidance.html): This page provides guidance on using the profiles defined in this guide.
 - [FHIR Artefacts](artifacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This set of pages describes the profiles and extensions that are defined in this guide to exchange quality data. Each profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.
+  - [Terminology](terminology.html): This set of pages lists the value sets and code systems defined in this guide.
 - [Examples](examples.html): This page lists all the examples used in this guide.
 - [Downloads](downloads.html): This page provides links to downloadable artefacts including the AU Core FHIR NPM package.
 

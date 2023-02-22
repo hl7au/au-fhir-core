@@ -6,7 +6,6 @@
   <title value="AU Core AllergyIntolerance"/>
   <status value="draft"/>
   <description value="This profile sets minimum expectations for an AllergyIntolerance resource to record, search, and fetch allergies/adverse reactions associated with a patient. It is based on the [AU Base Allergy Intolerance](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-allergyintolerance.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the AllergyIntolerance resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."/>
-  <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="AllergyIntolerance"/>
