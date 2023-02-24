@@ -96,8 +96,9 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="Observation.value[x]">
+    <element id="Observation.value[x]:V">
       <path value="Observation.value[x]"/>
+      <sliceName value="valueQuantity"/>
       <short value="Respiration rate"/>
       <condition value="au-core-obs-02"/>
     </element>
