@@ -12,6 +12,15 @@
       "status": "ci-build",
       "fhirversion": "4.0.1",
       "current": true
+    },
+    {
+      "version": "0.0.1-draft",
+      "date": "2023-02-27",
+      "desc": "March 2022 Connectathon",
+      "path": "http://hl7.org.au/fhir/core/0.0.1-draft",
+      "fhirversion": "4.0.1",
+      "status": "draft",
+      "sequence": "AU Core R4"
     }
   ]
 }
