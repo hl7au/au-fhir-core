@@ -663,6 +663,58 @@
 			<description value="Product with four active ingredients."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
 		</resource>
+		<!--MEDICATIONADMINISTRATION EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="MedicationAdministration/self-admin-lantus"/>
+			</reference>
+			<name value="MedicationAdministration - self administration lantus injection"/>
+			<description value="Self-administration of lantus 100 units/mL injection."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationadministration"/>
+		</resource>
+		<!--MEDICATIONDISPENSE EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="MedicationDispense/reaptan-1"/>
+			</reference>
+			<name value="MedicationDispense - First dispense for Reaptan"/>
+			<description value="First dispense for Reaptan."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationDispense/reaptan-2"/>
+			</reference>
+			<name value="MedicationDispense - Second dispense for Reaptan"/>
+			<description value="Second dispense for Reaptan."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
+		</resource>
+		<!--MEDICATIONREQUEST EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="MedicationRequest/paracetamol-codeine"/>
+			</reference>
+			<name value="MedicationRequest - active prescription, paracetamol 500 mg + codeine phosphate hemihydrate 30 mg"/>
+			<description value="Active prescription for paracetamol 500 mg + codeine phosphate hemihydrate 30 mg tablet."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationRequest/reaptan"/>
+			</reference>
+			<name value="MedicationRequest - active prescription, Reaptan"/>
+			<description value="Active prescription for Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablet, 10."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
+		</resource>
+		<!--MEDICATIONSTATEMENT EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="MedicationStatement/previous-use"/>
+			</reference>
+			<name value="MedicationStatement - practitioner reported previous use of Diflucan"/>
+			<description value="Practitioner reports patient has taken Diflucan in the past but is not taking it any more."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
+		</resource>
 		<!--OBSERVATION EXAMPLES-->
 		<resource>
 			<reference>
@@ -1118,6 +1170,14 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="PractitionerRole/pharmacist-retail"/>
+			</reference>
+			<name value="PractitionerRole - Retail pharmacist"/>
+			<description value="Mr. Pharmacist, Retail pharmacist, at A Local Pharmacy"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="PractitionerRole/sandyson-sandy-nurse"/>
 			</reference>
 			<name value="PractitionerRole - Registered nurse"/>
@@ -1361,7 +1421,7 @@
 		<!-- copyright year is a mandatory parameter -->
 		<parameter>
 			<code value="copyrightyear"/>
-			<value value="2023+"/>
+			<value value="2022+"/>
 		</parameter>
 		<!-- releaselabel should be the ballot status for HL7-published IGs. -->
 		<parameter>
