@@ -3,14 +3,17 @@ Labelling an element [MustSupport]( https://www.hl7.org/fhir/conformance-rules.h
 
 A sending system:
 - when making a request to an endpoint **SHALL** conform to the Conformance/CapabilityStatement for that endpoint and conform to all applicable AU Core conformance requirements 
-- when responding to a request - TBD
+- when responding to a request:
+   - **SHALL** be capable of populating all data elements as part of the query results as specified by the TBD
+   - **SHALL NOT** include TBD    
 - when constructing a resource:
    - **SHALL** ensure the resource conforms to the applicable AU Core profile
    - **SHALL** implement the guidance on extensibility if including “additional” elements according to section on [Extensibility – “additional” elements](guidance.html#extensibility--additional-elements)
    - **SHALL** implement the guidance on missing data if asserting a mandatory element is missing according to the section on [Missing Data](guidance.html#missing-data)
    - **SHALL** populate all elements labelled MustSupport where the sending system has that information unless:
       - there is a clinical reason why supplying the information would be unsafe, misleading, or otherwise clinically inappropriate
-      - the data is suppressed due to a security or privacy reason 
+      - the data is suppressed due to a security or privacy reason (see guidance in section [Suppressed Data](guidance.html#suppressed-data))
+   - **SHALL NOT** populate an element that is not mandatory if information on a particular data element is not present and the reason for absence is unknown    
 
 A receiving system:
 - **SHALL** be capable of meaningfully processing all elements labelled MustSupport where the resource has been constructed in accordance with AU Core conformance requirements; depending on local requirements this may mean display, persist, index, or action in an event or request workflow
@@ -70,7 +73,7 @@ A profile may include rules that:
 - limit what is considered 'valid'
 - extend the potential subelements by including an extension
 
-Typically AU Core profiles will extend the potential subelements by inheriting from a HL7 AU Base profile, e.g. the element `Medication.code` in profile [AU Core Medication](StructureDefinition-au-core-medication.html) is of type CodeableConcept and is extended by inheriting a medicine specific subelement `Medication.code.coding.extension` [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) from [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html). 
+Typically AU Core profiles will extend the potential subelements by inheriting from a HL7 AU Base profile, e.g. the element `Medication.code` in profile [AU Core Medication](StructureDefinition-au-core-medication.html) is of type CodeableConcept and is extended by inheriting a medicine specific subelement `Medication.code.coding.extension` [Medication Type extension](https://hl7.org.au/fhir/4.1.0/StructureDefinition-medication-type.html) from [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html). 
 The full set of subelements is visible in the "Snapshot Table" which shows the subelements defined in this profile (shown in the "Differential Table") and the subelements inherited from a base profile.
 
 
