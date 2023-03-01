@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Encounter xmlns="http://hl7.org/fhir">
+    <id value="nailwound"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+    </meta>
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/encounter-description">
+        <valueString
+            value="Patient presented with open injury to sole of left foot caused by stepping on rusty nail yesterday. 
+            Wound red and swollen, no calf muscle tenderness, no coughing nor chest pain which excludes pulmonary embolism. 
+            Patient has an existing allergy to adhesive tape, which manifests as urticaria. 
+            Patient was given booster dose of anti tetanus and prescribed amoxicillin 500mg 3 times a day. 
+            Wound was attended. Advised to present in 2 days to the usual GPs clinic for a change of dressings."
+        />
+    </extension>
+    <status value="finished"/>
+    <class>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+        <code value="AMB"/>
+        <display value="ambulatory"/>                    
+    </class>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="270427003"/>
+            <display value="Patient-initiated encounter"/>  
+        </coding>
+    </type>
+    <serviceType>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="788007007"/>
+            <display value="General practice service"/>      
+        </coding>
+    </serviceType>
+    <subject>
+        <reference value="Patient/wang-li"/>
+    </subject>
+    <participant>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+                <code value="PPRF"/>
+                <display value="primary performer"/>   
+            </coding>
+        </type>
+        <individual>
+            <reference value="PractitionerRole/bobrester-bob-gp"/>
+        </individual>
+    </participant>
+    <period>
+        <start value="2017-03-31T15:20:00+10:00"/>
+        <end value="2017-03-31T15:40:00+10:00"/>
+    </period>
+    <reasonCode>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="283680004"/>
+            <display value="Nail wound of sole of foot"/>
+        </coding>
+    </reasonCode>
+    <reasonReference>
+        <reference value="Condition/nailwound"/>
+    </reasonReference>
+</Encounter>

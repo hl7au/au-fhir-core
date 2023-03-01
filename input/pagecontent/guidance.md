@@ -1,21 +1,21 @@
-## Contained Resources
+### Contained Resources
 In some circumstances, the content referred to in the resource reference does not have an independent existence apart from the resource that contains it - it cannot be identified independently, and nor can it have its own independent transaction scope. For example, use of a Medication resource to represent medicinal product identification within the context of a MedicationRequest. In these circumstances the resource should be [contained](http://hl7.org/fhir/R4/references.html#contained). 
 
 If referencing a contained resource, both the contained resource and the referencing resource **SHALL** conform to an AU Core profile. Further guidance about the general use case for [contained resources](http://hl7.org/fhir/R4/references.html#contained) can be found in the base FHIR specification.
 
 In AU Core profiles:
 - Systems constructing a resource that represent medication or body structure information are encouraged to make use of contained resources. 
-  - Operations on Medication resources are expected to be within the context of a referencing resource query such as an ExplanationOfBenefit, Flag, MedicationAdministration, MedicationDipsense, MedicationRequest or MedicationStatement.
+  - Operations on Medication resources are expected to be within the context of a referencing resource query such as an ExplanationOfBenefit, Flag, MedicationAdministration, MedicationDispense, MedicationRequest or MedicationStatement.
   - Operations on BodyStructure resources are expected to be within the context of a referencing resource query such as a Consent, DiagnosticReport, Observation, or ServiceRequest.
 - Otherwise, when responding to a query, servers should not use inline contained resources to represent the returned data.
 
-## Missing Data
+### Missing Data
 
-There are situations when information for a particular data element is missing and the source system does not know reason for the absence of data. If the source system does not have data for an element with a minimum cardinality = 0 (including elements labeled *Must Support*), the data element **SHALL** be omitted from the resource.  If the data element is a *Mandatory* element (in other words, where the minimum cardinality is > 0), it **SHALL** be present for *even if* the source system does not have data. The core specification provides guidance for what to do in this situation, which is summarised below:
+There are situations when information for a particular data element is missing and the source system does not know reason for the absence of data. If the source system does not have data for an element with a minimum cardinality = 0 (including elements labelled *Must Support*), the data element **SHALL** be omitted from the resource.  If the data element is a *Mandatory* element (in other words, where the minimum cardinality is > 0), it **SHALL** be present for *even if* the source system does not have data. The core specification provides guidance for what to do in this situation, which is summarised below:
 
 1.  For *non-coded* data elements including type [Reference](http://hl7.org/fhir/R4/references.html#Reference), 
   - use the [DataAbsentReason extension](http://hl7.org/fhir/StructureDefinition/data-absent-reason) in the data type if the AU Core profile for that resource does not require a child element
-  - if the AU Core profile mandates a child element such as a valid identifier or reference then the resource must that element otherwise the instance will not be conformant
+  - if the AU Core profile mandates a child element, such as a valid identifier or reference, then the resource must contain that element otherwise the instance will not be conformant
   - use the code `unknown` - The value is expected to exist but is not known.
   
     Example: ExplanationOfBenefit resource where the patient's insurance coverage is not available.
@@ -43,7 +43,7 @@ There are situations when information for a particular data element is missing a
 
 1. For *coded* data elements:
    - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept , or Coding datatypes):
-      - if the source systems has text but no coded data, only the text element is used.
+      - if the source system has text but no coded data, only the text element is used.
           - for Coding datatypes, the text only data is represented as a `display` element.
       - if there is neither text or coded data:
         - the appropriate "unknown" concept code **SHALL** be present if the binding strength is *extensible*
@@ -71,8 +71,8 @@ There are situations when information for a particular data element is missing a
         ~~~
 
    - *required* binding strength (CodeableConcept or code datatypes):
-      - the appropriate "unknown" concept code **SHALL** be present if available
-      - if the value set does not have the appropriate “unknown” concept code you must use a concept from the value set otherwise the instance will not be conformant
+      - the appropriate "unknown" concept code **SHALL** be present if available.
+      - if the value set does not have the appropriate “unknown” concept code you must use a concept from the value set otherwise the instance will not be conformant.
 
         - For AU Core profiles, the following mandatory or conditionally mandatory* status elements with required binding have no appropriate "unknown" concept code:
           - `AllergyIntolerance.clinicalStatus`*
@@ -91,15 +91,15 @@ There are situations when information for a particular data element is missing a
 <!-- If one of these status code is missing, in response to a read transaction on the resource a `404` http error code and an OperationOutcome **SHALL** be returned. If returning a response to a search, the problematic resource **SHALL** be excluded from the search set and a *warning* OperationOutcome **SHOULD** be included indicating that additional search results were found but could not be compliantly expressed and have been suppressed. -->
 
 
-## Suppressed Data
-In some circumstances, specific pieces of data may hidden due to security or privacy reasons. Elements with a minimum cardinality = 0 (including elements labeled Must Support), the element SHALL be omitted from the resource if they are suppressed.
+### Suppressed Data
+In some circumstances, specific pieces of data may hidden due to security or privacy reasons. Elements with a minimum cardinality = 0 (including elements labelled Must Support), the element **SHALL** be omitted from the resource if they are suppressed.
 
-For mandatory elements (minimum cardinality is > 0), the element SHALL be populated but it may exceed the data receiver’s access rights to know that the data is suppressed:
-- where a receiver does not have access rights to know that data is suppressed use the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](guidance.html#missing-data)
-- where a receiver may know that the data is suppressed use the code `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](guidance.html#missing-data)
+For mandatory elements (minimum cardinality is > 0), the element **SHALL** be populated but it may exceed the data receiver’s access rights to know that the data is suppressed:
+- where a receiver does not have access rights to know that data is suppressed use the code `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](guidance.html#missing-data).
+- where a receiver may know that the data is suppressed use the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](guidance.html#missing-data).
 
 
-## Extensibility – “additional” elements
+### Extensibility – “additional” elements
 A sending system may send "additional" elements beyond those flagged with Must Support in an AU Core profile. Additional elements allow local requirements to be reflected including technical and workflow context for the resource, and extending the health information supported in exchanges. For this reason extensibility is generally allowed in AU Core profiles, only in some use case profiles are the rules tightened to limit the nature of additional information that can be sent.
 
 Depending on local requirements, a receiving or persisting system may ignore these "additional" elements, may treat the data as for rendering only, or be capable of recognising and using the element. A resource exchanged containing an additional element **SHALL** conform to AU Core conformance requirements. Requirements applicable to handling additional elements are summarised below: 
@@ -121,7 +121,7 @@ System obligations on handling additional elements are:
   - **MAY** choose to reject non-conformant resources but are not required to
 
 
-## Medicine information
+### Medicine information
 
 The FHIR standard defines the following resources for exchanging medicine information:
 - [Medication](http://hl7.org/fhir/R4/medication.html)
@@ -133,14 +133,14 @@ The FHIR standard defines the following resources for exchanging medicine inform
 [AU Core Medication](StructureDefinition-au-core-medication.html) is profiled to support medicinal product identification in an Australian healthcare context.
 AU Core profiles of MedicationStatement (with AU Core Medication) are used to support summary statements of medicine use. 
 AU Core profiles of MedicationAdministration (with AU Core Medication) are used to support medication chart and other administration use cases.
-AU Core profiles of MedicationDipsense (with AU Core Medication) are used to support to support dispense records and ePrescribing use cases.
+AU Core profiles of MedicationDispense (with AU Core Medication) are used to support to support dispense records and ePrescribing use cases.
 AU Core profiles of MedicationRequest (with AU Core Medication) are used to support prescription, ordering, and ePrescribing use cases.
 
 **Medicinal Product Identification**
 
 For extemporaneous medications, the medication code is the mandatory primary mechanism to identify a medicine but contain only a text list of ingredients or it may be a code from a medicines terminology.
 
-For non-extemporaneous medications, the medication code (or set of codes) is the mandatory primary mechanism to identify a medicine and it's defining attributes (by terminology lookup) including form and strength. 
+For non-extemporaneous medications, the medication code (or set of codes) is the mandatory primary mechanism to identify a medicine and its defining attributes (by terminology lookup) including form and strength. 
 
 Australian Medicines Terminology (AMT) is the national terminology for identification and naming of medicines in clinical systems for Australia. 
 The AMT is published monthly to include new items on the Australian Register of Therapeutic Goods from the TGA, as well as items listed on the Pharmaceutical Benefits Scheme. 
@@ -153,14 +153,14 @@ In addition to the medication code, the majority of use cases support exchange o
 These data elements may be supported as coded, or text, and systems are likely to use a combination of coded and text elements when constructing a Medication resource. The guidance for how to support coded or text is summarised below: 
 
 1. For *coded* support for brand name, generic name, manufacturer, item form and strength:
-   - Fully coded support is provided using code.coding with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) extension in the resource (i.e. MedicationAdministration, MedicationStatement, MedicationDispense, MedicationRequest, Medication):
-      - brand name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
-      - generic name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
-      - generic item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
-      - branded item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
+   - Fully coded support is provided using code.coding with [Medication Type extension](https://hl7.org.au/fhir/4.1.0/StructureDefinition-medication-type.html) extension in the resource (i.e. MedicationAdministration, MedicationStatement, MedicationDispense, MedicationRequest, Medication):
+      - brand name = `code.coding` with [Medication Type extension](https://hl7.org.au/fhir/4.1.0/StructureDefinition-medication-type.html) using `BPD` from the [Medication Type code system](https://hl7.org.au/fhir/4.1.0/CodeSystem-medication-type.html)
+      - generic name = `code.coding` with [Medication Type extension](https://hl7.org.au/fhir/4.1.0/StructureDefinition-medication-type.html) using `UPD` from the [Medication Type code system](https://hl7.org.au/fhir/4.1.0/CodeSystem-medication-type.html)
+      - generic item form and strength = `code.coding` with [Medication Type extension](https://hl7.org.au/fhir/4.1.0/StructureDefinition-medication-type.html) using `UPDSF` from the [Medication Type code system](https://hl7.org.au/fhir/4.1.0/CodeSystem-medication-type.html)
+      - branded item form and strength = `code.coding` with [Medication Type extension](https://hl7.org.au/fhir/4.1.0/StructureDefinition-medication-type.html) using `BPDSF` from the [Medication Type code system](https://hl7.org.au/fhir/4.1.0/CodeSystem-medication-type.html)
    - If the resource is a Medication resource:
-      - form and strength are also provided in `form`, `ingredient.itemCodeableConcept` and `ingredient.strength`
-      - manufacturer = `manufacturer.identifer`
+      - form and strength are also provided in `Medication.form`, `Medication.ingredient.itemCodeableConcept` and `Medication.ingredient.strength`
+      - manufacturer = `Medication.manufacturer.identifier`
 
     Example: Medication with coded brand name, generic name, manufacturer, item form and strength.
     ~~~
@@ -275,10 +275,10 @@ These data elements may be supported as coded, or text, and systems are likely t
 
 1.  For *non-coded* support for brand name, generic name, manufacturer, item form and strength:
     - Fully non-coded support is provided using the Medication resource
-        - brand name = [Medication Brand Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
-        - generic name = [Medication Generic Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html)
-        - item form and strength = `code.text`
-        - manufacturer = `manufacturer.display`
+        - brand name = `Medication.extension` [Medication Brand Name extension](https://hl7.org.au/fhir/4.1.0/StructureDefinition-medication-brand-name.html)
+        - generic name = `Medication.extension` [Medication Generic Name extension](https://hl7.org.au/fhir/4.1.0/StructureDefinition-medication-generic-name.html)
+        - item form and strength = `Medication.code.text`
+        - manufacturer = `Medication.manufacturer.display`
   
     Example: Medication with text only brand name, generic name, item form and strength.
     ~~~
@@ -305,12 +305,12 @@ These data elements may be supported as coded, or text, and systems are likely t
     ~~~
 
 
-## Lists
+### Lists
 
 *TBD: Insert guidance.*
 
 
-## Representing communication preferences
+### Representing communication preferences
 
 **Patient**
 
@@ -377,7 +377,7 @@ The table below provides guidance on representing communication preferences for 
     </tbody>
 </table>
 
-Example: Patient resource with intepreter required and language is known
+Example: Patient resource with interpreter required and language is known
 ~~~
 {
   "resourceType" : "Patient",
@@ -431,7 +431,7 @@ The table below provides guidance on representing communication preferences for 
         <td>Preferred language is English</td>
         <td></td>
         <td></td>
-        <td>No element sent, as per the guidance in the Comments</a> of RelatedPerson.communication</td>
+        <td>No element sent, as per the guidance in the <a href="http://hl7.org/fhir/relatedperson-definitions.html#RelatedPerson.communication">Comments</a> of RelatedPerson.communication</td>
       </tr>
       <tr>
         <td>Preferred language is other than English</td>

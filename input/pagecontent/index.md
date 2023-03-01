@@ -1,7 +1,7 @@
 
 
-## Introduction
-This implementation guide is provided to support the use of FHIR<sup>&reg;&copy;</sup> in an Australian context.
+### Introduction
+This implementation guide is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context.
 
 AU Core provides FHIR profiles to support conformance and implementation in systems. This uses AU Base representations as the basis of typical use for many purposes. In this regard it is similar in nature to other international FHIR specifications such as US Core FHIR Implementation Guide.
 
@@ -25,7 +25,7 @@ AU Core is particularly useful in defining:
 Assuming capabilities defined in AU Core are implemented allow specifications, applications and business logic to be developed generally with confidence that systems can readily supply this capability.
 
 
-## Usage
+### Usage
 
 This document is a working specification that may be directly implemented by FHIR<sup>&reg;&copy;</sup> system producers.
 
@@ -33,29 +33,29 @@ FHIR<sup>&reg;&copy;</sup> connectathon events are key to the verification of th
 implementation. This implementation guide will be used as the basis for Australian connectathon events.
 
 
-## How to read this guide
+### How to read this guide
 
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home](index.html): This page provides the introduction and scope for this guide.
-- [Conformance](conformance.html): This page describes the set of rules to claim conformance to this guide including the expectations for must support elements in the profiles governed by this guide, referred to as ADHA (Australian Digital Health Agency) profiles.
+- [Conformance](conformance.html): This page describes the set of rules to claim conformance to this guide including the expectations for must support elements in AU Core profiles.
   - [General Requirements](general-requirements.html): This page defines requirements common to all actors and profiles used in this guide including how CapabilityStatements are used to claim conformance.
-  - [Must Support](must-support.html): This page defines the expectations for mandatory and must support elements in the US Core Profiles.
+  - [Must Support](must-support.html): This page defines the expectations for mandatory and must support elements in AU Core Profiles.
 - [Guidance](guidance.html): This page provides guidance on using the profiles defined in this guide.
 - [FHIR Artefacts](artifacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This set of pages describes the profiles and extensions that are defined in this guide to exchange quality data. Each profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.
-  - [Search Parameters and Operations](search-parameters-and-operations.html): This page lists the defined Operations and Search Parameters that are used in transactions.
-  - [Capability Statements](capability-statements.html): This set of pages describes the expected FHIR capabilities of the various actors.
+  - [Terminology](terminology.html): This set of pages lists the value sets and code systems defined in this guide.
 - [Examples](examples.html): This page lists all the examples used in this guide.
-- [Downloads](downloads.html): This page provides links to downloadable artefacts including the Agency FHIR NPM package.
+- [Downloads](downloads.html): This page provides links to downloadable artefacts including the AU Core FHIR NPM package.
 
 
-## Collaboration
+### Collaboration
 This guide is the product of collaborative work undertaken with participants from:
 
 * Australian FHIR Implementers Community
 * HL7 Australia Working Groups
 * Australian Digital Health Agency
+* CSIRO Australian e-Health Research Centre 
 * Secure Messaging Technical Working Group
 
 

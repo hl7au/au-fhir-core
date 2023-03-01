@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PractitionerRole xmlns="http://hl7.org/fhir">
-    <id value="bobrester-bob-gp"/> 
+    <id value="bobrester-bob-gp"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+    </meta>
     <identifier>
         <type>
             <coding>
@@ -29,10 +32,10 @@
         <value value="8003619900015717"/>
     </identifier>
     <practitioner>
-        <reference value="Practitioner/bobrester-greg"/>
+        <reference value="Practitioner/bobrester-bob"/>
     </practitioner> 
     <organization>
-        <reference value="Organization/bobrester-medical-centre"/>
+        <reference value="Organization/bobrester-medical-center"/>
     </organization>
     <code>
         <coding>
@@ -46,7 +49,7 @@
         <text value="General Practitioner"/>
     </code>
     <location>
-        <reference value="Location/bobrester-medical-centre"/>
+        <reference value="Location/bobrester-medical-center"/>
     </location>
     <telecom>
         <system value="phone"/>

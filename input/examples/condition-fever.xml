@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="fever"/>
+  <meta>
+   <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+  </meta>
+  <clinicalStatus>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="resolved"/>
+            <display value="Resolved"/>
+        </coding>
+    </clinicalStatus>
+  <verificationStatus>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+        </coding>
+    </verificationStatus>
+  <category> 
+    <coding> 
+      <system value="http://snomed.info/sct"/> 
+      <code value="55607006"/> 
+      <display value="Problem"/> 
+    </coding> 
+    <coding> 
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/> 
+      <code value="problem-list-item"/> 
+    </coding> 
+  </category>
+  <severity> 
+    <coding> 
+      <system value="http://snomed.info/sct"/> 
+      <code value="6736007"/> 
+      <display value="Moderate"/> 
+    </coding> 
+  </severity> 
+  <code>
+   <coding>
+    <system value="http://snomed.info/sct"/>
+    <code value="386661006"/>
+    <display value="Fever"/>
+   </coding>
+  </code>
+  <subject>
+   <reference value="Patient/wang-li"/>
+  </subject>
+  <onsetDateTime value="2015-02-11"/>
+  <abatementDateTime value="2015-02-14"/>
+  <recordedDate value="2015-02-12"/>
+  <recorder>
+   <reference value="PractitionerRole/sandyson-sandy-nurse"/>
+  </recorder>
+  <asserter>
+   <reference value="PractitionerRole/sandyson-sandy-nurse"/>
+  </asserter>
+  <evidence> 
+    <!--   Problem is confirmed by 39 degrees Celsius   -->
+    <code> 
+      <coding> 
+        <system value="http://snomed.info/sct"/> 
+        <code value="258710007"/> 
+        <display value="degrees C"/> 
+      </coding> 
+    </code> 
+    <detail> 
+      <reference value="Observation/bodytemp-fever"/> 
+      <display value="Temperature"/> 
+    </detail> 
+  </evidence>
+ </Condition>

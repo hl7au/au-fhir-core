@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HealthcareService xmlns="http://hl7.org/fhir">
+    <id value="lge-priv-xray"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
+    </meta>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="XX"/>
+            </coding>
+            <text value="ABN"/>
+        </type>
+        <system value="http://hl7.org.au/id/abn"/>
+        <!-- Not a valid ABN. This example uses a fictional
+        ABN that does not conform to ABN format to ensure no conflict with real world values -->
+        <value value="51824997755"/>
+    </identifier>
+    <name value="Large Private X-RAY"/>
+    <telecom>
+        <system value="phone"/>
+        <value value="1300 975 707"/>
+        <use value="work"/>
+    </telecom>
+    <telecom>
+        <system value="url"/>
+        <value value="https://lge-private-xray.example.com"/>
+        <use value="work"/>
+    </telecom>
+</HealthcareService>

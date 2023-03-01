@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
     <id value="healthprogramparticipation-2"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthprogramparticipation"/>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
+    </meta>
     <!--Scenario: Deferred BreastScreen Australia Screening due to travel
     Scenario Description: Participant was invited to screen, Deferred screening for 10 months due to travel.  
     Information recorded by BreastScreen VIC -->
@@ -17,7 +21,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="1602091000168107"/>
-            <display value="Breast cancer screening program participation"/>
+            <display value="Patient participation in national breast cancer screening program"/>
         </coding>
         <text value="BreastScreen Australia Program Participation"/>
     </code>

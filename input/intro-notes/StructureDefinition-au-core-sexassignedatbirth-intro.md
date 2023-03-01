@@ -1,17 +1,13 @@
-**Example usage scenarios**
+#### Usage scenarios
 
-The following are example usage scenarios for this profile:
+The following are supported usage scenarios for this profile:
 
-- TBD
-- TBD
-
-
-**Profile specific implementation guidance**
-
-- TBD
+- Query for observation of a patient's sex assigned at birth
+- Record or update an observation of a patient's sex assigned at birth
 
 
-
+#### Profile specific implementation guidance
+{% include observation_coding_guidance.md -%}
 
 
 

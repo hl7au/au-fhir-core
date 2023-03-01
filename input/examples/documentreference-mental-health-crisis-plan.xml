@@ -1,0 +1,57 @@
+<DocumentReference xmlns="http://hl7.org/fhir">
+    <id value="mental-health-crisis-plan"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
+    </meta>
+    <identifier>
+        <system value="urn:ietf:rfc:3986" />
+        <value value="urn:uuid:59370790-3d45-4389-a854-2573b9c3394d" />
+    </identifier>
+    <status value="current"/>
+    <docStatus value="final"/>
+     <type>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="736253002" />
+            <display value="Mental health crisis plan" />
+        </coding>
+    </type>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="734163000" />
+            <display value="Care plan" />
+        </coding>
+    </category>
+    <subject>
+        <reference value="Patient/smith-emma"/>
+    </subject>
+    <date value="2019-11-03T12:35:00+10:00"/>
+    <author>
+        <type value="Organization"/>
+        <display value="Crisis Care Support"/>
+    </author>
+    <custodian>
+        <type value="Organization"/>
+        <display value="Crisis Care Support"/>
+    </custodian>
+    <content>
+        <attachment>
+            <contentType value="application/pdf" />
+            <url value="https://caresupport.example.au/MentalhealthCrisisPlanReport.pdf" />
+            <creation value="2016-03-08T15:26:00+01:00" />
+        </attachment>
+    </content>
+    <context>
+        <period>
+            <start value="2016-03-07T13:34:00+01:00" />
+        </period>
+        <practiceSetting>
+            <coding>
+                <system value="http://snomed.info/sct" />
+                <code value="708168004" />
+                <display value="Mental health service" />
+            </coding>
+        </practiceSetting>
+    </context>
+</DocumentReference>

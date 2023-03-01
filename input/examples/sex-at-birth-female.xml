@@ -1,5 +1,9 @@
 <Observation xmlns="http://hl7.org/fhir">
     <id value="sex-at-birth-female"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-sexassignedatbirth"/>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
+    </meta>
     <status value="final"/>
     <code>
         <coding>
@@ -8,7 +12,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/anne-bennelong"/>
+        <reference value="Patient/bennelong-anne"/>
     </subject>
     <effectiveDateTime value="1968-10-11"/>
     <valueCodeableConcept>

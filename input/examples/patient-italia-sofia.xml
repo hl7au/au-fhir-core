@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
+    <id value="italia-sofia"/>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="PPN"/>
+            </coding>
+            <text value="Passport Number"/>
+        </type>
+        <system value="http://hl7.org/fhir/sid/passport-ITA"/>
+        <value value="IT1111111"/>
+    </identifier>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="MR"/>
+                <display value="Medical record number"/>
+            </coding>
+            <text value="Medical Record Number"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0/8003626566699734" />
+        <value value="2338111" />
+        <assigner>
+            <display value="Large Metropolitan Hospital"/>
+        </assigner>
+    </identifier>
+    <name>
+        <family value="Italia"/>
+        <given value="Sofia"/>
+        <prefix value="Ms"/>
+    </name>
+    <gender value="female"/>
+    <birthDate value="1989-05-07">
+    </birthDate>
+    <address>
+        <use value="home"/>
+        <line value="Piazza del Colosseo"/>
+        <city value="Rome"/>
+        <state value="Lazio"/>
+        <postalCode value="00184"/>
+        <country value="ITA"/>
+    </address>
+</Patient>

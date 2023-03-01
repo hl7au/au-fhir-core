@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure xmlns="http://hl7.org/fhir">
+    <id value="stentinsertion"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
+    </meta>
+    <status value="completed"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="36969009"/>
+            <display value="Placement of stent in coronary artery"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/wang-li"/>
+    </subject>
+    <performedDateTime value="2021-09-25"/>
+    <performer>
+        <actor>
+            <display value="Dr. David Surgeon"/>
+        </actor>
+    </performer>
+    <location>
+        <reference value="Location/au-hospital"/>
+    </location>
+    <reasonCode>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="876856005"/>
+            <display value="Stenosis of right coronary artery"/>
+        </coding>
+        <text value="Occlusion of right coronary artery"/>
+    </reasonCode>
+    <focalDevice> 
+        <action> 
+            <coding> 
+                <system value="http://snomed.info/sct"/> 
+                <code value="425362007"/> 
+                <display value="Surgical insertion - action"/>
+            </coding> 
+        </action> 
+        <manipulated> 
+            <display value="coronary stent"/> 
+        </manipulated> 
+  </focalDevice>
+</Procedure>

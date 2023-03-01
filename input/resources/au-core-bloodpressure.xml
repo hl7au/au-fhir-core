@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-core-bloodpressure" />
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="0"/> 
-  </extension>
   <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure" />
   <name value="AUCoreBloodPressure" />
   <title value="AU Core Blood Pressure" />
   <status value="draft" />
-  <publisher value="Health Level Seven Australia" />
-  <contact>
-    <telecom>
-      <system value="url" />
-      <value value="http://hl7.com.au" />
-      <use value="work" />
-    </telecom>
-  </contact>
   <description value="This profile sets minimum expectations for an Observation resource to record, search, and fetch blood pressure observations with standard coding and units of measure. It is based on the [FHIR Blood Pressure Profile](http://hl7.org/fhir/R4/bp.html) and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Observation resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved.&#xa;&#xa;This resource includes SNOMED Clinical Terms™ (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO. The rights to use and implement or implementation of SNOMED CT content are limited to the extent it is necessary to allow for the end use of this material.  No further rights are granted in respect of the International Release and no further use of any SNOMED CT content by any other party is permitted. &#xa;&#xa;This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2021, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.&#xa;&#xa;All copies of this resource must include this copyright statement and all information contained in this statement." />
-  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
@@ -30,14 +18,6 @@
       <short value="Blood pressure"/>
       <definition value="Measurement of a patient's blood pressure at a point in time."/>
       <comment value="Blood pressure (BP) observation using a LOINC code, a SNOMED CT code and UCUM unit of measure. It has no value in Observation.valueQuantity but contains two components, one for systolic BP and the other for diastolic BP."/>
-      <constraint>
-        <key value="au-core-obs-02"/>
-        <severity value="error"/>
-        <human value="At least value or data absent reason shall be present"/>
-        <expression value="dataAbsentReason.exists() or value.exists()"/>
-        <xpath value="exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"/>
-        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
-      </constraint>
     </element>
     <element id="Observation.status">
       <path value="Observation.status" />
@@ -63,6 +43,21 @@
       <path value="Observation.code.coding.code" />
       <min value="1" />
       <fixedCode value="75367002" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient" />
+      </type>
+    </element>
+    <element id="Observation.encounter">
+      <path value="Observation.encounter"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter" />
+      </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
@@ -95,7 +90,6 @@
     </element>
     <element id="Observation.dataAbsentReason">
       <path value="Observation.dataAbsentReason"/>
-      <condition value="au-core-obs-02"/>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.bodySite">
@@ -107,7 +101,7 @@
         <human value="If a coded body site is provided, at least one code shall be from SNOMED CT"/>
         <expression value="coding.exists() implies coding.where(system='http://snomed.info/sct').exists()"/>
         <xpath value="not(exists(f:coding/f:system)) or exists(f:coding/f:system[@value='http://snomed.info/sct'])"/>
-        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-imag"/>
+        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
       </constraint>
       <binding>
         <strength value="extensible" />
@@ -136,6 +130,10 @@
       <min value="1" />
       <fixedCode value="271649006" />
     </element>
+    <element id="Observation.component:SystolicBP.dataAbsentReason">
+      <path value="Observation.component.dataAbsentReason" />
+      <mustSupport value="true"/>
+    </element>
     <element id="Observation.component:DiastolicBP">
       <path value="Observation.component" />
       <sliceName value="DiastolicBP" />
@@ -157,6 +155,10 @@
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
       <fixedCode value="271650006" />
+    </element>
+    <element id="Observation.component:DiastolicBP.dataAbsentReason">
+      <path value="Observation.component.dataAbsentReason" />
+      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>
