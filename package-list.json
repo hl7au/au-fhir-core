@@ -14,10 +14,10 @@
       "current": true
     },
     {
-      "version": "0.0.1-draft",
-      "date": "2023-02-27",
+      "version": "0.1.0-draft",
+      "date": "2023-03-01",
       "desc": "March 2023 Connectathon",
-      "path": "http://hl7.org.au/fhir/core/0.0.1-draft",
+      "path": "http://hl7.org.au/fhir/core/0.1.0-draft",
       "fhirversion": "4.0.1",
       "status": "draft",
       "sequence": "AU Core R4"
