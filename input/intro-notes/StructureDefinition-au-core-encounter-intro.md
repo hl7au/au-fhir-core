@@ -7,6 +7,13 @@ The following are example usage scenarios for this profile:
 - Record or update a patient encounter
 
 
+#### Relationship with national and international specifications
+- Conformant to xxx
+- Conformant to xxx
+
+No equivalent IPA Encounter profile.
+
+
 **Profile specific implementation guidance**
 
 - TBD

@@ -6,6 +6,12 @@ The following are supported usage scenarios for this profile:
 - Record or update a patient's allergies/adverse reactions
 
 
+#### Relationship with national and international specifications
+- Conformant to [IPA-AllergyIntolerance](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance)
+- Conformant to xxx
+- Conformant to xxx
+
+
 #### Profile specific implementation guidance
 - `AllergyIntolerance.verificationStatus` is "unconfirmed" where a sending system does not clearly have this element or "confirmed" depending on the level of certainty
 - To represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 716184000 \|No known latex allergy\|) is used in `AllergyIntolerance.code`

@@ -6,6 +6,13 @@ The following are supported usage scenarios for this profile:
 - Record or update a record of a procedure performed on a patient
 
 
+#### Relationship with national and international specifications
+- Conformant to xxx
+- Conformant to xxx
+
+No equivalent IPA Procedure profile.
+
+
 #### Profile specific implementation guidance
 - `Procedure.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
 - In an exchange with the My Health Record system `Procedure.status` is "completed"

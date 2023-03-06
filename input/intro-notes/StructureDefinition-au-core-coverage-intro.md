@@ -6,6 +6,13 @@ The following are supported usage scenarios for this profile:
 - Record or update a patient's insurance coverages
 
 
+#### Relationship with national and international specifications
+- Conformant to xxx
+- Conformant to xxx
+
+No equivalent IPA Coverage profile.
+
+
 #### Profile specific implementation guidance
 TBD
 

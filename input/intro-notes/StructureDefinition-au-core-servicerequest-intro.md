@@ -8,6 +8,13 @@ The following are supported usage scenarios for this profile:
 - Record or update a request for a service for a patient
 
 
+#### Relationship with national and international specifications
+- Conformant to xxx
+- Conformant to xxx
+
+No equivalent IPA ServiceRequest profile.
+
+
 #### Profile specific implementation guidance
 - `ServiceRequest.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
 - The ServiceRequest resource can represent a reason as a code with `ServiceRequest.reasonCode`, or a reference with `ServiceRequest.reasonReference` to a Condition or other resource.

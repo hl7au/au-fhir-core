@@ -6,6 +6,12 @@ The following are supported usage scenarios for this profile:
 - Record or update information about health programs associated with a patient
 
 
+#### Relationship with national and international specifications
+- Conformant to [IPA-Observation](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html)
+- Conformant to xxx
+- Conformant to xxx
+
+
 #### Profile specific implementation guidance
 - `Observation.code` identifies the health program and nature of the observation (e.g. 1602081000168109 \|National bowel cancer screening program participation\| or 1602101000168102 \|National cervical cancer screening program participation	\|)
 - Participant status is represented as a SNOMED CT-AU coded value in `Observation.component.valueCodeableConcept` with `Observation.component.code`= "1603781000168102" 

@@ -6,6 +6,12 @@ The following are supported usage scenarios for this profile:
 - Record or update a patient's problem, diagnosis, or health concern
 
 
+#### Relationship with national and international specifications
+- Conformant to [IPA-Condition](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition)
+- Conformant to xxx
+- Conformant to xxx
+
+
 #### Profile specific implementation guidance
 - `Condition.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations. 
 - An active condition is represented using "active" in `Condition.clinicalStatus`

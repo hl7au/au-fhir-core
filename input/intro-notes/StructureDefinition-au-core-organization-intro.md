@@ -7,6 +7,13 @@ The following are supported usage scenarios for this profile:
 - Read information about an organisation referenced by another resource
 
 
+#### Relationship with national and international specifications
+- Conformant to xxx
+- Conformant to xxx
+
+No equivalent IPA Organization profile.
+
+
 #### Profile specific implementation guidance
 - TBD
 

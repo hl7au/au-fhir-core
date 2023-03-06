@@ -6,5 +6,12 @@ The following are supported usage scenarios for this profile:
 - Reading body structures information associated with a patient referenced by another resource
 
 
+#### Relationship with national and international specifications
+- Conformant to xxx
+- Conformant to xxx
+
+No equivalent IPA BodyStructure profile.
+
+
 #### Profile specific implementation guidance
 None.

@@ -6,6 +6,12 @@ The following are supported usage scenarios for this profile:
 - Record or update medication orders or prescriptions for a patient
 
 
+#### Relationship with national and international specifications
+- Conformant to [IPA-MedicationRequest](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationrequest)
+- Conformant to xxx
+- Conformant to xxx
+
+
 #### Profile specific implementation guidance
 - See the [Medicine information](guidance.html#medicine-information) section for guidance 
 - MedicationRequest resources can represent a medication using either a code, or reference a [Medication](http://hl7.org/fhir/R4/medication.html) resource

@@ -6,5 +6,12 @@ The following are supported usage scenarios for this profile:
 - Read information about a location referenced by another resource
 
 
+#### Relationship with national and international specifications
+- Conformant to xxx
+- Conformant to xxx
+
+No equivalent IPA Location profile.
+
+
 #### Profile specific implementation guidance
 None.
