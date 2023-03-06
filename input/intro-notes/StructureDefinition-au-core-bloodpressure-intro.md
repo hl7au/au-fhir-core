@@ -7,6 +7,7 @@ The following are supported usage scenarios for this profile:
 
 
 #### Relationship with national and international specifications
+
 A resource conforming to this profile is conformant to:
 - [observation-bp](http://hl7.org/fhir/R4/observation-bp.html)
   - and therefore conformant to IPS
