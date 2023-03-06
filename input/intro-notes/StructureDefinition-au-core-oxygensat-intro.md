@@ -9,7 +9,7 @@ The following are supported usage scenarios for this profile:
 #### Relationship with national and international specifications
 
 A resource conforming to this profile is conformant to:
-- [observation-heartrate](http://hl7.org/fhir/R4/observation-heartrate.html)
+- [observation-oxygensat](http://hl7.org/fhir/R4/observation-oxygensat.html)
   - and therefore conformant to IPS
 - [IPA-Observation](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html)
 
