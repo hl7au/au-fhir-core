@@ -7,10 +7,8 @@ The following are supported usage scenarios for this profile:
 
 
 #### Relationship with national and international specifications
-- Conformant to xxx
-- Conformant to xxx
 
-No equivalent IPA BodyStructure profile.
+No equivalent IPA BodyStructure, BodyStructure (IPS), or US Core BodyStructure profile.
 
 
 #### Profile specific implementation guidance

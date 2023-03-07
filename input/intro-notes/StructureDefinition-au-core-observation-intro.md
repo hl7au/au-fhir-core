@@ -36,9 +36,13 @@ The following core profiles for the Observation resource have been defined. If i
 
 
 #### Relationship with national and international specifications
-- Conformant to [IPA-Observation](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html)
-- Conformant to xxx
-- Conformant to xxx
+
+A resource conforming to this profile is conformant to:
+- [IPA-Observation](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html)
+
+No equivalent US Core Observation or IPS Observation profile.
+
+Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa), [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips), or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
 
 
 #### Usage scenarios
