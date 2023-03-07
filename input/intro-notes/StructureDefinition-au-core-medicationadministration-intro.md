@@ -7,10 +7,8 @@ The following are supported usage scenarios for this profile:
 
 
 #### Relationship with national and international specifications
-- Conformant to xxx
-- Conformant to xxx
 
-No equivalent IPA MedicationAdministration profile.
+No equivalent IPA MedicationAdministration, IPS MedicationAdministration, or US Core MedicationAdministration profile.
 
 
 #### Profile specific implementation guidance

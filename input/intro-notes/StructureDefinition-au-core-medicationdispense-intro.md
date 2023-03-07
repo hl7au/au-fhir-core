@@ -7,10 +7,13 @@ The following are supported usage scenarios for this profile:
 
 
 #### Relationship with national and international specifications
-- Conformant to xxx
-- Conformant to xxx
 
-No equivalent IPA MedicationDispense profile.
+A resource conforming to this profile is conformant to:
+- [US Core MedicationDispense](http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense)
+
+No equivalent IPA MedicationDispense or IPS MedicationDispense profile.
+
+Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
 
 
 #### Profile specific implementation guidance

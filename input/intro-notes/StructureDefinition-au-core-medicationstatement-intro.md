@@ -7,9 +7,14 @@ The following are supported usage scenarios for this profile:
 
 
 #### Relationship with national and international specifications
-- Conformant to [IPA-MedicationStatement](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement)
-- Conformant to xxx
-- Conformant to xxx
+
+A resource conforming to this profile is conformant to:
+- [IPA-MedicationStatement](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement)
+- and **MAY** be conformant to [Medication Statement (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips) if MedicationStatement.effective[x] is included and patient is supported as MedicationStatement.subject.reference
+
+No equivalent US Core MedicationStatement profile.
+
+Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa) or [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips) **MAY NOT** conform to AU Core.
 
 
 #### Profile specific implementation guidance

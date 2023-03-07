@@ -7,10 +7,12 @@ The following are supported usage scenarios for this profile:
 
 
 #### Relationship with national and international specifications
-- Conformant to xxx
-- Conformant to xxx
 
-No equivalent IPA Coverage profile.
+A resource conforming to this profile:
+- **MAY** be conformant to:
+  - [US Core Coverage](http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage) if Coverage.relationship is included
+
+No equivalent IPA Coverage or IPS Coverage profile.
 
 
 #### Profile specific implementation guidance

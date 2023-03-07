@@ -7,10 +7,8 @@ The following are supported usage scenarios for this profile:
 
 
 #### Relationship with national and international specifications
-- Conformant to xxx
-- Conformant to xxx
 
-No equivalent IPA Device profile.
+No equivalent IPA Device, IPS Device, or US Core Device profile.
 
 
 #### Profile specific implementation guidance
