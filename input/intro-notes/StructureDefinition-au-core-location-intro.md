@@ -7,10 +7,13 @@ The following are supported usage scenarios for this profile:
 
 
 #### Relationship with national and international specifications
-- Conformant to xxx
-- Conformant to xxx
 
-No equivalent IPA Location profile.
+A resource conforming to this profile:
+- **MAY** be conformant to [US Core Location](http://hl7.org/fhir/us/core/StructureDefinition/us-core-location) if Location.name is supplied
+
+No equivalent IPA Location or IPS Location profile.
+
+Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core](http://hl7.org/fhir/us/core] **MAY NOT** conform to AU Core.
 
 
 #### Profile specific implementation guidance

@@ -13,7 +13,7 @@ A resource conforming to this profile is conformant to:
 
 No equivalent IPA CareTeam or IPS CareTeam profile.
 
-Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core](http://hl7.org/fhir/us/core] **MAY NOT** conform to AU Core.
+Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
 
 
 #### Profile specific implementation guidance
