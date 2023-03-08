@@ -9,7 +9,7 @@ The following are supported usage scenarios for this profile:
 
 #### Relationship with national and international specifications
 
-No equivalent IPA, IPS, or US Core profile.
+No equivalent International Patient Access, International Patient Summary, or US Core profile.
 
 
 #### Profile specific implementation guidance

@@ -10,7 +10,7 @@ The following are supported usage scenarios for this profile:
 
 A resource conforming to this profile is conformant to:
 - [observation-bodyheight](http://hl7.org/fhir/R4/observation-bodyheight.html)
-  - and therefore conformant to IPS
+  - and therefore conformant to [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips)
 - [IPA-Observation](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html)
 - [US Core Body Height](http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height)
 
