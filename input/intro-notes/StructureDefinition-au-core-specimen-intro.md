@@ -13,7 +13,7 @@ A resource conforming to this profile:
 - **MAY** be conformant to [Specimen (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips) if patient is supported as Specimen.subject.reference
 - **MAY** be conformant to [US Core Specimen](http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen) if Specimen.type is included
 
-No equivalent IPA Specimen profile.
+No equivalent IPA profile.
 
 Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips) or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
 

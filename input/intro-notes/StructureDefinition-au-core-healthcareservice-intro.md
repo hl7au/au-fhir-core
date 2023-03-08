@@ -8,10 +8,8 @@ The following are supported usage scenarios for this profile:
 
 
 #### Relationship with national and international specifications
-- Conformant to xxx
-- Conformant to xxx
 
-No equivalent IPA HealthcareService profile.
+No equivalent IPA, IPS, or US Core profile.
 
 
 #### Profile specific implementation guidance

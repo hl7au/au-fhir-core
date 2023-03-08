@@ -8,7 +8,7 @@ The following are supported usage scenarios for this profile:
 
 #### Relationship with national and international specifications
 
-No equivalent IPA BodyStructure, BodyStructure (IPS), or US Core BodyStructure profile.
+No equivalent IPA, IPS, or US Core profile.
 
 
 #### Profile specific implementation guidance

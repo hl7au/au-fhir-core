@@ -7,10 +7,13 @@ The following are supported usage scenarios for this profile:
 
 
 #### Relationship with national and international specifications
-- Conformant to xxx
-- Conformant to xxx
 
-No equivalent IPA RelatedPerson profile.
+A resource conforming to this profile:
+- **MAY** be conformant to [US Core RelatedPerson](http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson) if RelatedPerson.active is supplied
+
+No equivalent IPA or IPS profile.
+
+Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
 
 
 #### Profile specific implementation guidance

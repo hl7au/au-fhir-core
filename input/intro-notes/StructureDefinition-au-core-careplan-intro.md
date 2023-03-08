@@ -11,7 +11,7 @@ The following are supported usage scenarios for this profile:
 A resource conforming to this profile:
 - **MAY** be conformant to [US Core CarePlan](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-careplan.html) if CarePlan.text is included and CarePlan.category supplies the US Core specific terminology
 
-No equivalent IPA CarePlan or IPS CarePlan profile noting that IPS supports the core FHIR CarePlan resource unprofiled.
+No equivalent IPA or IPS profile, noting that IPS supports the core FHIR CarePlan resource unprofiled.
 
 
 #### Profile specific implementation guidance
