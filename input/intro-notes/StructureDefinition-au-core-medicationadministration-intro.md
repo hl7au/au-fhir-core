@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update a medication administration record for a patient
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 No equivalent International Patient Access, International Patient Summary, or US Core profile.
 

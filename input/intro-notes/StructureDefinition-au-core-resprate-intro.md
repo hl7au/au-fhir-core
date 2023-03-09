@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update an observation of respiration rate associated with a patient
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [observation-resprate](http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate)

@@ -7,7 +7,7 @@ The following are example usage scenarios for this profile:
 - Record or update a patient encounter
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 A resource conforming to this profile:
 - **MAY** be conformant to [US Core Encounter](http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter) if Encounter.type is supplied

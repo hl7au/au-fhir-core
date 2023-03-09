@@ -6,15 +6,19 @@ The following are supported usage scenarios for this profile:
 - Record or update a clinical document for a patient
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 A resource conforming to this profile:
 - **MAY** be conformant to [Composition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips) if:
-  - Composition.type is 60591-5
+  - Composition.type is `60591-5`
   - patient is supported as Composition.subject.reference
-  - a medications section is supplied with Section.code 10160-0, has at least one section.entry with a supported resource type, and does not include unsupported resource types
-  - an allergies section is supplied with Section.code 48765-2, has at least one section.entry with a supported resource type, and does not include unsupported resource types
-  - a problems section is supplied with Section.code 11450-4, has at least one section.entry with a supported resource type, and does not include unsupported resource types
+  - any section
+    - does not supply Section.emptyReason or Section.section
+    - supplies at least one Section.entry with a supported resource type
+    - does not supply unsupported resource types in Section.entry
+  - a medications section is supplied with Section.code `10160-0`
+  - an allergies section is supplied with Section.code `48765-2`
+  - a problems section is supplied with Section.code `11450-4`
 
 No equivalent International Patient Access or US Core profile.
 

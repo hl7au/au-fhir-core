@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Read information about a location referenced by another resource
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 A resource conforming to this profile:
 - **MAY** be conformant to [US Core Location](http://hl7.org/fhir/us/core/StructureDefinition/us-core-location) if Location.name is supplied

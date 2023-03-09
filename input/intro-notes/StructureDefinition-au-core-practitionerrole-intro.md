@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Read information about a practitioner in a role referenced by another resource
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [IPA-PractitionerRole](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-practitionerrole.html)

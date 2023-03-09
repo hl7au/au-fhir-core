@@ -7,7 +7,7 @@ The following are supported usage scenarios for this profile:
 - Read information about a healthcare service referenced by another resource
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 No equivalent International Patient Access, International Patient Summary, or US Core profile.
 

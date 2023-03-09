@@ -7,7 +7,7 @@ The following are supported usage scenarios for this profile:
 - Read information about an organisation referenced by another resource
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [Organization (IPS)](http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/Organization-uv-ips)

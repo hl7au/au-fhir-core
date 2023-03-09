@@ -29,6 +29,7 @@
     </element>
     <element id="Observation.category">
       <path value="Observation.category" />
+      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.code">

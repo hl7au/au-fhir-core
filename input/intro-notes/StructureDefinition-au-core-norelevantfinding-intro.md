@@ -6,7 +6,7 @@ The following are example usage scenarios for this profile:
 - TBD
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [IPA-Observation](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html)

@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update an observation of body mass index associated with a patient
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [observation-bmi](http://hl7.org/fhir/R4/observation-bmi.html)

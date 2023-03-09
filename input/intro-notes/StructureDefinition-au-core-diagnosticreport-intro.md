@@ -6,6 +6,18 @@ The following are supported usage scenarios for this profile:
 - Query for category of diagnostic report (e.g. all cardiology reports)
 - Record or update a diagnostic report for a patient
 
+#### Comparison with other national and international specifications
+
+A resource conforming to this profile:
+- **MAY** be conformant to
+    - [DiagnosticReport (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips) if patient is supported as DiagnosticReport.subject.reference and DiagnosticReport.status is `final`
+    - [US Core DiagnosticReport Profile for Report and Note Exchange](http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note) noting that US Core extensibly binds Observation.code to a subset of LOINC
+    - [US Core DiagnosticReport Profile for Laboratory Results Reporting](http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab) if Observation.category is `LAB`, noting that US Core extensibly binds Observation.code to a subset of LOINC
+
+No equivalent IPA profile.
+
+Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips) or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
+
 
 #### Profile specific implementation guidance
 - `DiagnosticReport.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.

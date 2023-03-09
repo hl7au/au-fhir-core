@@ -9,7 +9,7 @@ The following are supported usage scenarios for this profile:
 - Read information about a patient referenced by another resource
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [IPA-Patient](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-patient.html)

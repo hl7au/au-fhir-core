@@ -6,7 +6,7 @@ The following are example usage scenarios for this profile:
 - TBD
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [observation-vitalspanel](http://hl7.org/fhir/R4/observation-vitalspanel.html)

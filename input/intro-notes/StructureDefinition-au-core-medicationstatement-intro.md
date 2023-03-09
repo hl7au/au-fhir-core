@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update a record of a medication the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [IPA-MedicationStatement](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement)

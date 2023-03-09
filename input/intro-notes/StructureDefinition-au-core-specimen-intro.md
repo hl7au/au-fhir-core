@@ -7,7 +7,7 @@ The following are example usage scenarios for this profile:
 - Read specimens associated with a patient referenced by another resource
 
 
-#### Relationship with national and international specifications
+#### Comparison with other national and international specifications
 
 A resource conforming to this profile:
 - **MAY** be conformant to [Specimen (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips) if patient is supported as Specimen.subject.reference
