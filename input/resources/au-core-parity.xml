@@ -32,6 +32,18 @@
       <fixedCode value="final" />
       <mustSupport value="true"/>
     </element>
+    <element id="Observation.category">
+      <path value="Observation.category" />
+      <slicing>
+        <discriminator>
+          <type value="pattern"/>
+          <path value="$this"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <min value="1" />
+     <mustSupport value="true"/>
+    </element>
     <element id="Observation.code">
       <path value="Observation.code" />
       <patternCodeableConcept>
