@@ -25,6 +25,19 @@ AU Core is particularly useful in defining:
 Assuming capabilities defined in AU Core are implemented allow specifications, applications and business logic to be developed generally with confidence that systems can readily supply this capability.
 
 
+### Dependencies
+
+AU Core is dependent on:
+- [FHIR R4](http://hl7.org/fhir/R4/)
+- [HL7 Terminology](https://terminology.hl7.org/5.0.0/)
+- [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/)
+- terminology published in Australia's [National Clinical Terminology Service](https://www.healthterminologies.gov.au/access-clinical-terminology/access-fhir-terminology-resources/)
+
+In addition, the following FHIR implementation guides are referenced:
+- [Bulk Data](https://hl7.org/fhir/uv/bulkdata)
+- [SMART on FHIR](http://www.hl7.org/fhir/smart-app-launch)
+
+
 ### Usage
 
 This document is a working specification that may be directly implemented by FHIR<sup>&reg;&copy;</sup> system producers.
