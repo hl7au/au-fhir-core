@@ -9,7 +9,7 @@ The following are supported usage scenarios for this profile:
 A resource conforming to this profile is conformant to:
 - [IPA-Immunization](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization)
 - and **MAY** be conformant to
-  - [Immunization (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips) if patient is supported as AllergyIntolerance.patient.reference
+  - [Immunization (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips) if patient is supported as Immunization.patient.reference
   - [US Core Immunization](http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance) noting that US Core extensibly binds to CVX which is not an AU vaccine terminology
 
 Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa), [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips), or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.

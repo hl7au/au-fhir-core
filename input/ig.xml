@@ -5,21 +5,21 @@
 		<valueCode value="draft"/>
 	</extension>
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="0"/> 
-  </extension>
-  <url value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
+		<valueInteger value="0"/>
+	</extension>
+	<url value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
 	<version value="0.1.1"/>
 	<name value="AUCoreImplementationGuide"/>
 	<title value="AU Core Implementation Guide"/>
 	<status value="draft"/>
 	<publisher value="HL7 Australia"/>
 	<contact>
-    	<telecom>
-      		<system value="url" />
-      		<value value="http://hl7.com.au" />
-      		<use value="work" />
-    	</telecom>
-  	</contact>
+		<telecom>
+			<system value="url" />
+			<value value="http://hl7.com.au" />
+			<use value="work" />
+		</telecom>
+	</contact>
 	<contact>
 		<name value="HL7 Australia Patient Administration Working Group"/>
 		<telecom>
@@ -1396,6 +1396,16 @@
 				<nameUrl value="guidance.html"/>
 				<title value="Guidance"/>
 				<generation value="markdown"/>
+				<page>
+					<nameUrl value="general-guidance.html"/>
+					<title value="General Guidance"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="comparison.html"/>
+					<title value="Comparison with other national and international specifications"/>
+					<generation value="markdown"/>
+				</page>
 			</page>
 			<page>
 				<nameUrl value="profiles-and-extensions.html"/>
@@ -1473,17 +1483,17 @@
       <code value="excludeexample"/>
       <value value="true"/>
     </parameter>-->
-    <parameter>
-      <code value="excludemap"/>
-      <value value="true"/>
-    </parameter>
-	<parameter>
-      <code value="showsource"/>
-      <value value="true"/>
-	</parameter>
-	<parameter>
-		<code value="path-expansion-params"/>
-		<value value="../input/_resources/exp-params.json"/>
-	</parameter>
+		<parameter>
+			<code value="excludemap"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="showsource"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="path-expansion-params"/>
+			<value value="../input/_resources/exp-params.json"/>
+		</parameter>
 	</definition>
 </ImplementationGuide>
