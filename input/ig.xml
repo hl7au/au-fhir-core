@@ -213,6 +213,12 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/au-core-provenance"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-core-relatedperson"/>
 			</reference>
 			<exampleBoolean value="false"/>
