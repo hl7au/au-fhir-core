@@ -11,6 +11,7 @@ The following are supported usage scenarios for this profile:
 A resource conforming to this profile is conformant to:
 - [IPA-Condition](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition)
 - and **MAY** be conformant to
+    - [IPA-problem-list-item](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-problem-list-item) if one Condition.category `problem-list-item` is supplied 
     - [Condition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips) if patient is supported as Condition.subject.reference
     - [US Core Condition Problems and Health Concerns](http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns) if one Condition.category is supplied with a value from the US Core Problem or Health Concern value set
     - [US Core Condition Encounter Diagnosis](http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis) if one Condition.category `encounter-diagnosis` is supplied 
