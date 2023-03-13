@@ -7,8 +7,8 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 <table border="1" cellspacing="0" cellpadding="0">
     <tbody>
         <tr>
-            <td width="105" valign="top">
-                <p align="center">
+            <td width="93" valign="top">
+                <p>
                     <strong>
                         <a href="https://build.fhir.org/ig/hl7au/au-fhir-core">
                             AU Core
@@ -16,46 +16,42 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </strong>
                 </p>
             </td>
-            <td width="125" colspan="2" valign="top">
-                <p align="center">
-                    <strong>
-                        <a href="https://build.fhir.org/ig/HL7/fhir-ipa">
-                            International Patient Access
-                        </a>
-                    </strong>
+            <td width="191" colspan="2" valign="top">
+                <p>
+                    <a href="https://build.fhir.org/ig/HL7/fhir-ipa">
+                        <strong>International Patient Access</strong>
+                    </a>
+                    <strong></strong>
                 </p>
             </td>
-            <td width="223" colspan="2" valign="top">
-                <p align="center">
-                    <strong>
-                        <a href="https://build.fhir.org/ig/HL7/fhir-ips">
-                            International Patient Summary
-                        </a>
-                    </strong>
+            <td width="198" colspan="2" valign="top">
+                <p>
+                    <a href="https://build.fhir.org/ig/HL7/fhir-ips">
+                        <strong>International Patient Summary</strong>
+                    </a>
+                    <strong></strong>
                 </p>
             </td>
-            <td width="243" colspan="2" valign="top">
-                <p align="center">
-                    <strong>
-                        <a href="http://build.fhir.org/ig/HL7/US-Core">
-                            US Core
-                        </a>
-                    </strong>
+            <td width="215" colspan="2" valign="top">
+                <p>
+                    <a href="http://build.fhir.org/ig/HL7/US-Core">
+                        <strong>US Core</strong>
+                    </a>
+                    <strong></strong>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-alcoholstatus.html"
-                        title="StructureDefinition/au-core-alcoholstatus"
+                        href="StructureDefinition-au-core-alcoholstatus.html"
                     >
                         AU Core Alcohol Status
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -64,19 +60,19 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p align="center">
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <strong></strong>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
@@ -85,23 +81,23 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-allergyintolerance.html"
+                        href="StructureDefinition-au-core-allergyintolerance.html"
                     >
                         AU Core AllergyIntolerance
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance"
@@ -110,12 +106,12 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p align="center">
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
@@ -124,13 +120,13 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
                     AllergyIntolerance.patient.reference
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
@@ -139,24 +135,23 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-norelevantfinding.html"
-                        title="StructureDefinition/au-core-norelevantfinding"
+                        href="StructureDefinition-au-core-norelevantfinding.html"
                     >
                         AU Core Assertion of No Relevant Finding
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -165,35 +160,34 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p align="center">
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <strong></strong>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-sexassignedatbirth.html"
-                        title="StructureDefinition/au-core-sexassignedatbirth"
+                        href="StructureDefinition-au-core-sexassignedatbirth.html"
                     >
                         AU Core Biological Sex Assigned at Birth
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -202,19 +196,19 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p align="center">
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <strong></strong>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
@@ -223,24 +217,23 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-bloodpressure.html"
-                        title="StructureDefinition/au-core-bloodpressure"
+                        href="StructureDefinition-au-core-bloodpressure.html"
                     >
                         AU Core Blood Pressure
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -249,24 +242,24 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p align="center">
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a href="http://hl7.org/fhir/R4/observation-bp.html">
                         observation-bp
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
@@ -275,24 +268,23 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-bmi.html"
-                        title="StructureDefinition/au-core-bmi"
+                        href="StructureDefinition-au-core-bmi.html"
                     >
                         AU Core BMI
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -301,24 +293,24 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p align="center">
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a href="http://hl7.org/fhir/R4/observation-bmi.html">
                         observation-bmi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi"
@@ -327,24 +319,23 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-bodyheight.html"
-                        title="StructureDefinition/au-core-bodyheight"
+                        href="StructureDefinition-au-core-bodyheight.html"
                     >
                         AU Core Body Height
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -353,12 +344,12 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p align="center">
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/R4/observation-bodyheight.html"
@@ -367,12 +358,12 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height"
@@ -381,48 +372,46 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-bodystructure.html"
-                        title="StructureDefinition/au-core-bodystructure"
+                        href="StructureDefinition-au-core-bodystructure.html"
                     >
                         AU Core Body Structure
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-bodytemp.html"
-                        title="StructureDefinition/au-core-bodytemp"
+                        href="StructureDefinition-au-core-bodytemp.html"
                     >
                         AU Core Body Temperature
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -431,24 +420,24 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p align="center">
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a href="http://hl7.org/fhir/R4/observation-bodytemp.html">
                         observation-bodytemp
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature"
@@ -457,24 +446,23 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-bodyweight.html"
-                        title="StructureDefinition/au-core-bodyweight"
+                        href="StructureDefinition-au-core-bodyweight.html"
                     >
                         AU Core Body Weight
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -483,12 +471,12 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p align="center">
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/R4/observation-bodyweight.html"
@@ -497,12 +485,12 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight"
@@ -511,31 +499,31 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-careplan.html"
+                        href="StructureDefinition-au-core-careplan.html"
                     >
                         AU Core CarePlan
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-careplan.html"
@@ -544,7 +532,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if CarePlan.text is included and CarePlan.category
                     supplies the US Core specific terminology
@@ -552,24 +540,24 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-careteam.html"
+                        href="StructureDefinition-au-core-careteam.html"
                     >
                         AU Core Care Team
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-careteam.html"
@@ -578,23 +566,23 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" rowspan="2" valign="top">
+            <td width="93" rowspan="2" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-condition.html"
+                        href="StructureDefinition-au-core-condition.html"
                     >
                         AU Core Condition
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition"
@@ -603,12 +591,12 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p align="center">
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" rowspan="2" valign="top">
+            <td width="68" rowspan="2" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
@@ -617,12 +605,12 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="147" rowspan="2" valign="top">
+            <td width="130" rowspan="2" valign="top">
                 <p>
                     if patient is supported as Condition.subject.reference
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
@@ -631,7 +619,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if one Condition.category is supplied with a value
                     from the US Core Problem or Health Concern value set
@@ -639,7 +627,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
             </td>
         </tr>
         <tr>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-problem-list-item"
@@ -648,12 +636,12 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
 <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if one Condition.category                    <code>problem-list-item</code> is supplied
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
@@ -662,31 +650,31 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
 <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if one Condition.category                    <code>encounter-diagnosis</code> is supplied
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-coverage.html"
+                        href="StructureDefinition-au-core-coverage.html"
                     >
                         AU Core Coverage
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage"
@@ -695,32 +683,31 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if Coverage.relationship is included
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-documentcomposition.html"
-                        title="StructureDefinition/au-core-documentcomposition"
+                        href="StructureDefinition-au-core-documentcomposition.html"
                     >
                         AU Core Document Composition
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"
@@ -729,7 +716,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <strong><img src="https://hl7.org/fhir/R4/assets/images/tick.png"/></strong>
                     <strong> </strong>
@@ -771,17 +758,16 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-diagnosticresult-imag.html"
-                        title="StructureDefinition/au-core-diagnosticresult-imag"
+                        href="StructureDefinition-au-core-diagnosticresult-imag.html"
                     >
                         AU Core Diagnostic Imaging Result Observation
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -790,12 +776,12 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"
@@ -804,14 +790,14 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
 Observation.subject.reference, Observation.status is                    <code>final</code>, and Observation.performer is supplied,
                     noting that IPS extensibly binds Observation.code to LOINC
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
@@ -820,7 +806,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> noting that US Core extensibly binds Observation.code
                     to LOINC and restricts Observation.quantity[x] to UCUM for
@@ -829,17 +815,16 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-diagnosticresult.html"
-                        title="StructureDefinition/au-core-diagnosticresult"
+                        href="StructureDefinition-au-core-diagnosticresult.html
                     >
                         AU Core Diagnostic Result Observation
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -848,12 +833,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips"
@@ -862,13 +847,13 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
 Observation.subject.reference and Observation.status is                    <code>final</code>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
@@ -877,7 +862,7 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> noting that US Core extensibly binds Observation.code
                     to LOINC and restricts Observation.quantity[x] to UCUM for
@@ -886,21 +871,20 @@ Observation.subject.reference and Observation.status is                    <code
             </td>
         </tr>
         <tr>
-            <td width="105" rowspan="2" valign="top">
+            <td width="93" rowspan="2" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-diagnosticreport.html"
-                        title="StructureDefinition/au-core-diagnosticreport"
+                        href="StructureDefinition-au-core-diagnosticreport.html"
                     >
                         AU Core DiagnosticReport
                     </a>
                 </p>
             </td>
-            <td width="91" rowspan="2" valign="top">
+            <td width="81" rowspan="2" valign="top">
             </td>
-            <td width="35" rowspan="2" valign="top">
+            <td width="111" rowspan="2" valign="top">
             </td>
-            <td width="76" rowspan="2" valign="top">
+            <td width="68" rowspan="2" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
@@ -909,14 +893,14 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="147" rowspan="2" valign="top">
+            <td width="130" rowspan="2" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
                     DiagnosticReport.subject.reference and
                     DiagnosticReport.status is <code>final</code>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
@@ -926,7 +910,7 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> noting that US Core extensibly binds Observation.code
                     to a subset of LOINC
@@ -934,7 +918,7 @@ Observation.subject.reference and Observation.status is                    <code
             </td>
         </tr>
         <tr>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
@@ -944,7 +928,7 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if Observation.category is <code>LAB</code>, noting
                     that US Core extensibly binds Observation.code to a subset
@@ -953,17 +937,16 @@ Observation.subject.reference and Observation.status is                    <code
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-documentreference.html"
-                        title="StructureDefinition/au-core-documentreference"
+                        href="StructureDefinition-au-core-documentreference.html"
                     >
                         AU Core DocumentReference
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference"
@@ -972,16 +955,16 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
@@ -990,7 +973,7 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if DocumentReference.code is supplied with a value
                     from the US Core DocumentReference Type value set
@@ -998,25 +981,24 @@ Observation.subject.reference and Observation.status is                    <code
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-encounter.html"
-                        title="StructureDefinition/au-core-encounter"
+                        href="StructureDefinition-au-core-encounter.html"
                     >
                         AU Core Encounter
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
@@ -1025,24 +1007,23 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if Encounter.type is supplied
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-estimateddateofdelivery.html"
-                        title="StructureDefinition/au-core-estimateddateofdelivery"
+                        href="StructureDefinition-au-core-estimateddateofdelivery.html"
                     >
                         AU Core Estimated Date of Delivery
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -1051,16 +1032,16 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
@@ -1069,24 +1050,23 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-gestationalage.html"
-                        title="StructureDefinition/au-core-gestationalage"
+                        href="StructureDefinition-au-core-gestationalage.html"
                     >
                         AU Core Gestational Age
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -1095,16 +1075,16 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
@@ -1113,24 +1093,23 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-gravidity.html"
-                        title="StructureDefinition/au-core-gravidity"
+                        href="StructureDefinition-au-core-gravidity.html"
                     >
                         AU Core Gravidity
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -1139,16 +1118,16 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
@@ -1157,24 +1136,23 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-headcircum.html"
-                        title="StructureDefinition/au-core-headcircum"
+                        href="StructureDefinition-au-core-headcircum.html"
                     >
                         AU Core Head Circumference
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -1183,32 +1161,31 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-healthprogramparticipation.html"
-                        title="StructureDefinition/au-core-healthprogramparticipation"
+                        href="StructureDefinition-au-core-healthprogramparticipation.html"
                     >
                         AU Core Health Program Participation Summary
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -1217,16 +1194,16 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
@@ -1235,48 +1212,46 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-healthcareservice.html"
-                        title="StructureDefinition/au-core-healthcareservice"
+                        href="StructureDefinition-au-core-healthcareservice.html"
                     >
                         AU Core HealthcareService
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-heartrate.html"
-                        title="StructureDefinition/au-core-heartrate"
+                        href="StructureDefinition-au-core-heartrate.html"
                     >
                         AU Core Heart Rate
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -1285,24 +1260,24 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a href="http://hl7.org/fhir/R4/observation-heartrate.html">
                         observation-heartrate
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate"
@@ -1311,24 +1286,23 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-immunization.html"
-                        title="StructureDefinition/au-core-immunization"
+                        href="StructureDefinition-au-core-immunization.html"
                     >
                         AU Core Immunization
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization"
@@ -1337,12 +1311,12 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
@@ -1351,13 +1325,13 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
                     AllergyIntolerance.patient.reference
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
@@ -1366,7 +1340,7 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> noting that US Core extensibly binds to CVX which is
                     not an AU vaccine terminology
@@ -1374,17 +1348,16 @@ Observation.subject.reference and Observation.status is                    <code
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-lastmenstrualperiod.html"
-                        title="StructureDefinition/au-core-lastmenstrualperiod"
+                        href="StructureDefinition-au-core-lastmenstrualperiod.html"
                     >
                         AU Core Last Menstrual Period
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -1393,16 +1366,16 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
@@ -1411,24 +1384,23 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" rowspan="2" valign="top">
+            <td width="93" rowspan="2" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-lipid-result.html"
-                        title="StructureDefinition/au-core-lipid-result"
+                        href="StructureDefinition-au-core-lipid-result.html"
                     >
                         AU Core Lipid Result
                     </a>
                 </p>
             </td>
-            <td width="91" rowspan="2" valign="top">
+            <td width="81" rowspan="2" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -1437,12 +1409,12 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="35" rowspan="2" valign="top">
+            <td width="111" rowspan="2" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-uv-ips"
@@ -1451,13 +1423,13 @@ Observation.subject.reference and Observation.status is                    <code
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
 Observation.subject.reference, Observation.status is                    <code>final</code> and Observation.performer is supplied
                 </p>
             </td>
-            <td width="87" rowspan="2" valign="top">
+            <td width="78" rowspan="2" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
@@ -1466,14 +1438,14 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" rowspan="2" valign="top">
+            <td width="137" rowspan="2" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-pathology-uv-ips"
@@ -1482,7 +1454,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
                     Observation.subject.reference and Observation.performer is
@@ -1491,25 +1463,24 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-location.html"
-                        title="StructureDefinition/au-core-location"
+                        href="StructureDefinition-au-core-location.html"
                     >
                         AU Core Location
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
@@ -1518,24 +1489,23 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if Location.name is supplied
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-medication.html"
-                        title="StructureDefinition/au-core-medication"
+                        href="StructureDefinition-au-core-medication.html"
                     >
                         AU Core Medication
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication"
@@ -1544,12 +1514,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips"
@@ -1558,7 +1528,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if
                     <a
@@ -1569,7 +1539,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     constraints are met
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
@@ -1578,7 +1548,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> noting that US Core extensibly binds to RxNorm which
                     is not an AU medicines terminology
@@ -1586,49 +1556,47 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-medicationadministration.html"
-                        title="StructureDefinition/au-core-medicationadministration"
+                        href="StructureDefinition-au-core-medicationadministration.html"
                     >
                         AU Core MedicationAdministration
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-medicationdispense.html"
-                        title="StructureDefinition/au-core-medicationdispense"
+                        href="StructureDefinition-au-core-medicationdispense.html"
                     >
                         U Core MedicationDispense
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense"
@@ -1637,21 +1605,20 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-medicationrequest.html"
-                        title="StructureDefinition/au-core-medicationrequest"
+                        href="StructureDefinition-au-core-medicationrequest.html"
                     >
                         AU Core MedicationRequest
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationrequest"
@@ -1660,12 +1627,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips"
@@ -1674,13 +1641,13 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
                     MedicationRequest.subject.reference
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
@@ -1689,7 +1656,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if core FHIR MedicationRequest Category codes are
                     supplied in MedicationRequest.category
@@ -1697,17 +1664,16 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-medicationstatement.html"
-                        title="StructureDefinition/au-core-medicationstatement"
+                        href="StructureDefinition-au-core-medicationstatement.html"
                     >
                         AU Core MedicationStatement
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement"
@@ -1716,16 +1682,16 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
@@ -1734,7 +1700,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if MedicationStatement.effective[x] is included and
                     patient is supported as
@@ -1743,17 +1709,16 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-observation.html"
-                        title="StructureDefinition/au-core-observation"
+                        href="StructureDefinition-au-core-observation.html"
                     >
                         AU Core Observation
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -1762,32 +1727,31 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-organization.html"
-                        title="StructureDefinition/au-core-organization"
+                        href="StructureDefinition-au-core-organization.html"
                     >
                         AU Core Organization
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/Organization-uv-ips"
@@ -1796,12 +1760,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/Organization-uv-ips"
@@ -1810,12 +1774,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
@@ -1824,24 +1788,23 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-oxygensat.html"
-                        title="StructureDefinition/au-core-oxygensat"
+                        href="StructureDefinition-au-core-oxygensat.html"
                     >
                         AU Core Oxygen Saturation
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -1850,43 +1813,42 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a href="http://hl7.org/fhir/R4/observation-oxygensat.html">
                         observation-oxygensat
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     TBD
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-parity.html"
-                        title="StructureDefinition/au-core-parity"
+                        href="StructureDefinition-au-core-parity.html"
                     >
                         AU Core Parity
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -1895,16 +1857,16 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
@@ -1913,24 +1875,23 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" rowspan="2" valign="top">
+            <td width="93" rowspan="2" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-diagnosticresult-path.html"
-                        title="StructureDefinition/au-core-diagnosticresult-path"
+                        href="StructureDefinition-au-core-diagnosticresult-path.html"
                     >
                         AU Core Pathology Result Observation
                     </a>
                 </p>
             </td>
-            <td width="91" rowspan="2" valign="top">
+            <td width="81" rowspan="2" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -1939,12 +1900,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" rowspan="2" valign="top">
+            <td width="111" rowspan="2" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-uv-ips"
@@ -1953,13 +1914,13 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
 Observation.subject.reference, Observation.status is                    <code>final</code> and Observation.performer is supplied
                 </p>
             </td>
-            <td width="87" rowspan="2" valign="top">
+            <td width="78" rowspan="2" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
@@ -1968,14 +1929,14 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" rowspan="2" valign="top">
+            <td width="137" rowspan="2" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-pathology-uv-ips"
@@ -1984,7 +1945,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
                     Observation.subject.reference and Observation.performer is
@@ -1993,17 +1954,16 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-patient.html"
-                        title="StructureDefinition/au-core-patient"
+                        href="StructureDefinition-au-core-patient.html"
                     >
                         AU Core Patient
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-patient.html"
@@ -2012,12 +1972,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/Patient-uv-ips"
@@ -2026,12 +1986,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
@@ -2040,24 +2000,23 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-practitioner.html"
-                        title="StructureDefinition/au-core-practitioner"
+                        href="StructureDefinition-au-core-practitioner.html"
                     >
                         AU Core Practitioner
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-practitioner.html"
@@ -2066,12 +2025,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/Practitioner-uv-ips"
@@ -2080,12 +2039,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
@@ -2094,24 +2053,23 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-practitionerrole.html"
-                        title="StructureDefinition/au-core-practitionerrole"
+                        href="StructureDefinition-au-core-practitionerrole.html"
                     >
                         AU Core PractitionerRole
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-practitionerrole.html"
@@ -2120,12 +2078,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/PractitionerRole-uv-ips"
@@ -2134,12 +2092,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
@@ -2148,7 +2106,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> noting that AU Core does not enforce the US Core
                     constraint <strong>pd-1</strong>: SHALL have contact
@@ -2157,17 +2115,16 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-pregnancystatus.html"
-                        title="StructureDefinition/au-core-pregnancystatus"
+                        href="StructureDefinition-au-core-pregnancystatus.html"
                     >
                         AU Core Pregnancy Status
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -2176,12 +2133,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"
@@ -2190,14 +2147,14 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if an additional coding is sent in Observtion.code
                     from the set of supported LOINC codes (AU &amp; IPS support
                     the same LOINC concepts)
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
@@ -2206,28 +2163,27 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-procedure.html"
-                        title="StructureDefinition/au-core-procedure"
+                        href="StructureDefinition-au-core-procedure.html"
                     >
                         AU Core Procedure
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
@@ -2236,13 +2192,13 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
                     Procedure.subject.reference
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
@@ -2251,7 +2207,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
                     Procedure.subject.reference
@@ -2259,25 +2215,57 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-relatedperson.html"
-                        title="StructureDefinition/au-core-relatedperson"
+                        href="StructureDefinition-au-core-provenance.html"
+                    >
+                        AU Core Provenance
+                    </a>
+                </p>
+            </td>
+            <td width="81" valign="top">
+            </td>
+            <td width="111" valign="top">
+            </td>
+            <td width="68" valign="top">
+            </td>
+            <td width="130" valign="top">
+            </td>
+            <td width="78" valign="top">
+                <p>
+                    <a
+                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+                    >
+                        US Core Provenance
+                    </a>
+                </p>
+            </td>
+            <td width="137" valign="top">
+                <p>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="93" valign="top">
+                <p>
+                    <a
+                        href="StructureDefinition-au-core-relatedperson.html"
                     >
                         AU Core RelatedPerson
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
@@ -2286,24 +2274,23 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if RelatedPerson.active is supplied
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-resprate.html"
-                        title="StructureDefinition/au-core-resprate"
+                        href="StructureDefinition-au-core-resprate.html"
                     >
                         AU Core Respiration Rate
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -2312,12 +2299,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate"
@@ -2326,12 +2313,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate"
@@ -2340,32 +2327,31 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-servicerequest.html"
-                        title="StructureDefinition/au-core-servicerequest"
+                        href="StructureDefinition-au-core-servicerequest.html"
                     >
                         AU Core ServiceRequest
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
@@ -2374,24 +2360,23 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-smokingceasedate.html"
-                        title="StructureDefinition/au-core-smokingceasedate"
+                        href="StructureDefinition-au-core-smokingceasedate.html"
                     >
                         AU Core Smoking Cease Date
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -2400,16 +2385,16 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
@@ -2418,24 +2403,23 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-smokingstartdate.html"
-                        title="StructureDefinition/au-core-smokingstartdate"
+                        href="StructureDefinition-au-core-smokingstartdate.html"
                     >
                         AU Core Smoking Start Date
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -2444,16 +2428,16 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
@@ -2462,24 +2446,23 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-smokingstatus.html"
-                        title="StructureDefinition/au-core-smokingstatus"
+                        href="StructureDefinition-au-core-smokingstatus.html"
                     >
                         AU Core Smoking Status
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -2488,12 +2471,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"
@@ -2502,14 +2485,14 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if additional LOINC coding is supplied in
                     Observation.code and Observation.valueCodeableConcept, and
                     patient is supported in Observation.subject.reference
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
@@ -2518,28 +2501,27 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-specimen.html"
-                        title="StructureDefinition/au-core-specimen"
+                        href="StructureDefinition-au-core-specimen.html"
                     >
                         AU Core Specimen
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips"
@@ -2548,12 +2530,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as Specimen.subject.reference
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen"
@@ -2562,72 +2544,69 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if Specimen.type is included
                 </p>
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-substance.html"
-                        title="StructureDefinition/au-core-substance"
+                        href="StructureDefinition-au-core-substance.html"
                     >
                         AU Core Substance
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-device-system.html"
-                        title="StructureDefinition/au-core-device-system"
+                        href="StructureDefinition-au-core-device-system.html"
                     >
                         AU Core System Device
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-vitalspanel.html"
-                        title="StructureDefinition/au-core-vitalspanel"
+                        href="StructureDefinition-au-core-vitalspanel.html"
                     >
                         AU Core Vitals Panel
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -2636,40 +2615,39 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
                 <p>
                     <a href="http://hl7.org/fhir/R4/vitalspanel.html">
                         observation-vitalspanel
                     </a>
                 </p>
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
             </td>
         </tr>
         <tr>
-            <td width="105" valign="top">
+            <td width="93" valign="top">
                 <p>
                     <a
-                        href="file:///C:/work/git/au-fhir-core/output/StructureDefinition-au-core-waistcircum.html"
-                        title="StructureDefinition/au-core-waistcircum"
+                        href="StructureDefinition-au-core-waistcircum.html"
                     >
                         AU Core Waist Circumference
                     </a>
                 </p>
             </td>
-            <td width="91" valign="top">
+            <td width="81" valign="top">
                 <p>
                     <a
                         href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
@@ -2678,16 +2656,16 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="35" valign="top">
+            <td width="111" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
-            <td width="76" valign="top">
+            <td width="68" valign="top">
             </td>
-            <td width="147" valign="top">
+            <td width="130" valign="top">
             </td>
-            <td width="87" valign="top">
+            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
@@ -2696,7 +2674,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="156" valign="top">
+            <td width="137" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
