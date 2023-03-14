@@ -1,20 +1,74 @@
 Below is an overview of the mandatory and optional search parameters. FHIR search operations and the syntax used to describe the interactions is described <a href="http://hl7.org/fhir/R4/search.html">here</a>.
 
-<table class="list" width="100%">
+<table class="list">
 <tbody>
   <tr>
-    <th>Name</th>
-    <th>Type</th>
+    <th>Parameter(s)</th>
     <th>Conformance</th>
-    <th>Description</th>
-    <th>Path</th>
   </tr>
   <tr>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>patient</td>
+        <td>SHALL</td>
+  </tr>
+  <tr>
+        <td>patient.identifier</td>
+        <td>SHOULD</td>
+  </tr>
+   <tr>
+        <td>identifier</td>
+        <td>SHOULD</td>
+  </tr>
+  <tr>
+        <td>_id_</td>
+        <td>SHOULD</td>
+  </tr>
+  <tr>
+        <td>category</td>
+        <td>MAY</td>
+  </tr>
+  <tr>
+        <td>contenttype</td>
+        <td>MAY</td>
+  </tr>
+  <tr>
+        <td>type</td>
+        <td>MAY</td>
+  </tr>
+  <tr>
+        <td>date</td>
+        <td>MAY</td>
+  </tr>
+  <tr>
+        <td>status</td>
+        <td>MAY</td>
+  </tr>
+  <tr>
+        <td>patient+status</td>
+        <td>SHOULD</td>
+  </tr>
+  <tr>
+        <td>patient+category</td>
+        <td>SHALL</td>
+  </tr>
+  <tr>
+        <td>patient+contenttype</td>
+        <td>SHOULD</td>
+  </tr>
+  <tr>
+        <td>patient+type</td>
+        <td>SHOULD</td>
+  </tr>
+  <tr>
+        <td>patient+category+date</td>
+        <td>SHALL</td>
+  </tr>
+  <tr>
+        <td>patient+category+status</td>
+        <td>SHOULD</td>
+  </tr>
+  <tr>
+        <td>patient+type+date</td>
+        <td>SHOULD</td>
   </tr>
  </tbody>
 </table>

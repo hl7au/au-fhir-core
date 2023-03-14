@@ -15,6 +15,10 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
         <td>SHALL</td>
   </tr>
   <tr>
+        <td>patient.identifier</td>
+        <td>SHOULD</td>
+  </tr>
+  <tr>
         <td>patient+clinical-status</td>
         <td>SHOULD</td>
   </tr>
