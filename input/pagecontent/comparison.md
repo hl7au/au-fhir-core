@@ -607,7 +607,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
             </td>
             <td width="130" rowspan="2" valign="top">
                 <p>
-                    if patient is supported as Condition.subject.reference
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as Condition.subject.reference
                 </p>
             </td>
             <td width="78" valign="top">
@@ -718,42 +718,11 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
             </td>
             <td width="137" valign="top">
                 <p>
-                    <strong><img src="https://hl7.org/fhir/R4/assets/images/tick.png"/></strong>
-                    <strong> </strong>
-                    if:
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if Composition.type is <code>60591-5</code> and patient is supported as Composition.subject.reference
                 </p>
-                <ul>
-                    <li>
-                        Composition.type is <code>60591-5</code>
-                    </li>
-                </ul>
-                <p>
-                    · patient is supported as Composition.subject.reference
+                <p>Composition contains at least a medications section with Section.code <code>10160-0</code>, an allergies section with Section.code<code>48765-2</code>, and a problems section with Section.code<code>11450-4</code>, with at least one section.entry with a supported resource type and does not supply an unsupported resource type
                 </p>
-                <ul>
-                    <li>
-                        any section
-                    </li>
-                </ul>
-                <p>
-                    o does not supply Section.emptyReason or Section.section
-                </p>
-                <p>
-                    o supplies at least one Section.entry with a supported
-                    resource type
-                </p>
-                <p>
-                    o does not supply unsupported resource types in
-                    Section.entry
-                </p>
-                <p>
-· a medications section is supplied with Section.code                    <code>10160-0</code>
-                </p>
-                <p>
-· an allergies section is supplied with Section.code                    <code>48765-2</code>
-                </p>
-                <p>
-· a problems section is supplied with Section.code                    <code>11450-4</code>
+                <p>Composition does not contain Composition.section.emptyReason or Composition.section.section 
                 </p>
             </td>
         </tr>
@@ -818,7 +787,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
             <td width="93" valign="top">
                 <p>
                     <a
-                        href="StructureDefinition-au-core-diagnosticresult.html
+                        href="StructureDefinition-au-core-diagnosticresult.html"
                     >
                         AU Core Diagnostic Result Observation
                     </a>
