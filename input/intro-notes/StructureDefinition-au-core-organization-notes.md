@@ -5,22 +5,27 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
   <tr>
     <th>Parameter(s)</th>
     <th>Conformance</th>
-  </tr>
-  <tr>
-        <td>_id</td>
-        <td>SHOULD</td>
+    <th>Type(s)</th>
   </tr>
   <tr>
         <td>address</td>
-        <td>SHALL</td>
+        <td><b>SHALL</b></td>
+        <td><code>string</code></td>
   </tr>
   <tr>
         <td>identifier</td>
-        <td>SHALL</td>
+        <td><b>SHALL</b></td>
+        <td><code>token</code></td>
   </tr>
   <tr>
         <td>name</td>
-        <td>SHALL</td>
+        <td><b>SHALL</b></td>
+        <td><code>string</code></td>
+  </tr>
+  <tr>
+        <td>_id</td>
+        <td><b>SHOULD</b></td>
+        <td><code>token</code></td>
   </tr>
  </tbody>
 </table>

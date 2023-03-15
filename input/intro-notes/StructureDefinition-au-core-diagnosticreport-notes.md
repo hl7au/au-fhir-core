@@ -5,62 +5,77 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
   <tr>
     <th>Parameter(s)</th>
     <th>Conformance</th>
+    <th>Type(s)</th>
   </tr>
   <tr>
         <td>patient</td>
-        <td>SHALL</td>
-  </tr>
-  <tr>
-        <td>patient.identifier</td>
-        <td>SHOULD</td>
-  </tr>
-  <tr>
-        <td>_id</td>
-        <td>SHOULD</td>
-  </tr>
-   <tr>
-        <td>identifier</td>
-        <td>SHOULD</td>
-  </tr>
-  <tr>
-        <td>category</td>
-        <td>MAY</td>
-  </tr>
-  <tr>
-        <td>code</td>
-        <td>MAY</td>
-  </tr>
-  <tr>
-        <td>date</td>
-        <td>MAY</td>
-  </tr>
-  <tr>
-        <td>status</td>
-        <td>MAY</td>
-  </tr>
-  <tr>
-        <td>patient+status</td>
-        <td>SHOULD</td>
+        <td><b>SHALL</b></td>
+        <td><code>reference</code></td>
   </tr>
   <tr>
         <td>patient+category</td>
-        <td>SHALL</td>
-  </tr>
-  <tr>
-        <td>patient+code</td>
-        <td>SHOULD</td>
+        <td><b>SHALL</b></td>
+        <td><code>reference</code>+<code>token</code></td>
   </tr>
   <tr>
         <td>patient+category+date</td>
-        <td>SHALL</td>
+        <td><b>SHALL</b></td>
+        <td><code>reference</code>+<code>token</code>+<code>date</code></td>
+  </tr>
+  <tr>
+        <td>_id</td>
+        <td><b>SHOULD</b></td>
+        <td><code>token</code></td>
+  </tr>
+  <tr>
+        <td>identifier</td>
+        <td><b>SHOULD</b></td>
+        <td><code>token</code></td>
   </tr>
   <tr>
         <td>patient+category+status</td>
-        <td>SHOULD</td>
+        <td><b>SHOULD</b></td>
+        <td><code>reference</code>+<code>token</code>+<code>token</code></td>
+  </tr>
+  <tr>
+        <td>patient.identifier</td>
+        <td><b>SHOULD</b></td>
+        <td><code>reference</code>.<code>token</code></td>
+  </tr>
+  <tr>
+        <td>patient+status</td>
+        <td><b>SHOULD</b></td>
+        <td><code>reference</code>+<code>token</code></td>
+  </tr>
+  <tr>
+        <td>patient+code</td>
+        <td><b>SHOULD</b></td>
+        <td><code>reference</code>+<code>token</code></td>
   </tr>
   <tr>
         <td>patient+code+date</td>
-        <td>SHOULD</td>
+        <td><b>SHOULD</b></td>
+        <td><code>reference</code>+<code>token</code>+<code>date</code></td>
+  </tr>
+  <tr>
+        <td>category</td>
+        <td><b>MAY</b></td>
+        <td><code>token</code></td>
+  </tr>
+  <tr>
+        <td>code</td>
+        <td><b>MAY</b></td>
+        <td><code>token</code></td>
+  </tr>
+  <tr>
+        <td>date</td>
+        <td><b>MAY</b></td>
+        <td><code>date</code></td>
+  </tr>
+  <tr>
+        <td>status</td>
+        <td><b>MAY</b></td>
+        <td><code>token</code></td>
   </tr>
  </tbody>
 </table>
