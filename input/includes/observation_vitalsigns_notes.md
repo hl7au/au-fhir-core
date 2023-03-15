@@ -35,7 +35,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     
       1. GET [base]/Observation?patient=5678&amp;code=http://snomed.info/sct\|364075005,http://loinc.org\|9279-1,http://loinc.org\|85354-9
 
-    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code(s).  SHOULD support search by multiple codes. The Observation `code` parameter searches `Observation.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code(s).  **SHOULD** support search by multiple codes. The Observation `code` parameter searches `Observation.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/observation.html#search)** and **[`category`](https://hl7.org/fhir/R4/observation.html#search)** and **[`date`](https://hl7.org/fhir/R4/observation.html#search)** search parameters:
     - including support for these `date` comparators: `gt,lt,ge,le`
@@ -78,6 +78,6 @@ The following search parameter combinations **SHOULD** be supported:
       1. GET [base]/Observation?patient=5678&amp;code=http://snomed.info/sct\|364075005,http://loinc.org\|9279-1,http://loinc.org\|85354-9&amp;date=ge2020-01-01T00:00:00Z
       1. GET [base]/Observation?patient.identifier=http://example.org/fhir/mrn|12345&amp;code=http://snomed.info/sct\|364075005,http://loinc.org\|9279-1,http://loinc.org\|85354-9&amp;date=ge2020-01-01T00:00:00Z
 
-    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and date and report code(s).  SHOULD support search by multiple codes. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
+    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and date and report code(s).  **SHOULD** support search by multiple codes. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
 
