@@ -27,6 +27,10 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
         <td>SHALL</td>
   </tr>
   <tr>
+        <td>patient+status+effective-time</td>
+        <td>SHOULD</td>
+  </tr>
+  <tr>
         <td>patient+effective-time</td>
         <td>SHOULD</td>
   </tr>

@@ -19,7 +19,7 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
         <td>SHOULD</td>
   </tr>
   <tr>
-        <td>_id_</td>
+        <td>_id</td>
         <td>SHOULD</td>
   </tr>
   <tr>

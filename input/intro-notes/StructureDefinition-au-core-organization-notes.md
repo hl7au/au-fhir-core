@@ -7,6 +7,10 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
     <th>Conformance</th>
   </tr>
   <tr>
+        <td>_id</td>
+        <td>SHOULD</td>
+  </tr>
+  <tr>
         <td>address</td>
         <td>SHALL</td>
   </tr>

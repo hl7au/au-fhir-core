@@ -1,36 +1,42 @@
 Below is an overview of the mandatory and optional search parameters. FHIR search operations and the syntax used to describe the interactions is described <a href="http://hl7.org/fhir/R4/search.html">here</a>.
 
-<table class="list" width="100%">
+<table class="list">
 <tbody>
   <tr>
-    <th>Name</th>
-    <th>Type</th>
+    <th>Parameter(s)</th>
     <th>Conformance</th>
   </tr>
   <tr>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>_id</td>
+        <td>SHALL</td>
   </tr>
   <tr>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>identifier</td>
+        <td>SHALL</td>
   </tr>
   <tr>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>name</td>
+        <td>SHOULD</td>
   </tr>
   <tr>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>family</td>
+        <td>SHOULD</td>
   </tr>
   <tr>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>family+gender</td>
+        <td>SHOULD</td>
+  </tr>
+  <tr>
+        <td>gender+name</td>
+        <td>SHOULD</td>
+  </tr>
+  <tr>
+        <td>birthdate+family</td>
+        <td>SHOULD</td>
+  </tr>
+  <tr>
+        <td>birthdate+name</td>
+        <td>SHOULD</td>
   </tr>
  </tbody>
 </table>
