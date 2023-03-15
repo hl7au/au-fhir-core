@@ -3,18 +3,20 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
 <table class="list" width="100%">
 <tbody>
   <tr>
-    <th>Name</th>
-    <th>Type</th>
+    <th>Parameter(s)</th>
     <th>Conformance</th>
-    <th>Description</th>
-    <th>Path</th>
   </tr>
   <tr>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>address</td>
+        <td>SHALL</td>
+  </tr>
+  <tr>
+        <td>identifier</td>
+        <td>SHALL</td>
+  </tr>
+  <tr>
+        <td>name</td>
+        <td>SHALL</td>
   </tr>
  </tbody>
 </table>
