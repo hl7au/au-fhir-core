@@ -195,7 +195,6 @@ The following search parameter combinations **SHOULD** be supported:
     Example:
     
       1. GET [base]/DiagnosticReport?patient=5678&amp;code=http://loinc.org\|94309-2,http://loinc.org\|2164-2&amp;date=ge2020-01-01T00:00:00Z
-      
       1. GET [base]/DiagnosticReport?patient.identifier=http://example.org/fhir/mrn\|12345&amp;code=http://loinc.org\|94309-2,http://loinc.org\|2164-2&amp;date=ge2020-01-01T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and date and report code(s).  **SHOULD** support search by multiple codes. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
