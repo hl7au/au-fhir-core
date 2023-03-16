@@ -18,21 +18,25 @@ Below is an overview of the mandatory and optional search parameters and combine
         <td>patient+category</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient+category+date</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code>+<code>date</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient+category+status</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code>+<code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient+category+status+date</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code>+<code>token</code>+<code>date</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient.identifier</td>
@@ -49,6 +53,8 @@ Below is an overview of the mandatory and optional search parameters and combine
   <tr>
         <td>date</td>
         <td><b>MAY</b></td>
+        <td><code>date</code></td>
+        <td>A client <b>SHALL</b> provide a value precise to the second + time offset. A server <b>SHALL</b> support a value precise to the second + time offset.</td>
   </tr>
   <tr>
         <td>status</td>
@@ -80,7 +86,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/careplan.html.html#search)** and **[`category`](https://hl7.org/fhir/R4/careplan.html.html#search)** search parameters:
 
-    `GET [base]/CarePlan?patient={Type/}[id]&category=http://snomed.info/sct|736248007`
+    `GET [base]/CarePlan?patient={Type/}[id]&category={system|}[code]`
 
     Example:
     
@@ -96,7 +102,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     - including support for these `date` comparators: `gt,lt,ge,le`
     - including optional support for *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
-    `GET [base]/CarePlan?patient={Type/}[id]&category=http://snomed.info/sct|736248007&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/CarePlan?patient={Type/}[id]&category={system|}[code]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
@@ -107,11 +113,11 @@ The following search parameters and search parameter combinations **SHOULD** be 
     1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/careplan.html.html#search)** and **[`category`](https://hl7.org/fhir/R4/careplan.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/careplan.html.html#search)** search parameters:
     - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
-    `GET [base]/CarePlan?patient={Type/}[id]&category=http://snomed.info/sct|736248007&status={system|}[code]{,{system|}[code],...}`
+    `GET [base]/CarePlan?patient={Type/}[id]&category={system|}[code]&status={system|}[code]{,{system|}[code],...}`
 
     Example:
     
-      1. GET [base]/CarePlan?patient=5678&amp;category=http://snomed.info/sct\|736248007&amp;status=final
+      1. GET [base]/CarePlan?patient=5678&amp;category=http://snomed.info/sct\|736248007&amp;status=active
 
     *Implementation Notes:* Fetches a bundle of all CarePlan resources for the specified patient and category and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
@@ -120,10 +126,10 @@ The following search parameters and search parameter combinations **SHOULD** be 
     - including support for these `date` comparators: `gt,lt,ge,le`
     - including optional support for *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
-    `GET [base]/CarePlan?patient={Type/}[id]&category=http://snomed.info/sct|736248007&status={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/CarePlan?patient={Type/}[id]&category={system|}[code]&status={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
-      1. GET [base]/CarePlan?patient=5678&amp;category=http://snomed.info/sct\|736248007&amp;status=final&amp;date=ge2020-01-01T00:00:00Z
+      1. GET [base]/CarePlan?patient=5678&amp;category=http://snomed.info/sct\|736248007&amp;status=active&amp;date=ge2020-01-01T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all CarePlan resources for the specified patient and category and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token)) and [how to search by date](http://hl7.org/fhir/R4/search.html#date)) 

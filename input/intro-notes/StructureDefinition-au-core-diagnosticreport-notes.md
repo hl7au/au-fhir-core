@@ -18,16 +18,19 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
         <td>patient+category</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient+category+date</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>token</code>+<code>date</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>_id</td>
         <td><b>SHOULD</b></td>
         <td><code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>identifier</td>
@@ -39,6 +42,7 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
         <td>patient+category+status</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code>+<code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient.identifier</td>
@@ -50,16 +54,19 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
         <td>patient+code</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient+code+date</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code>+<code>date</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient+status</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>category</td>
@@ -109,25 +116,25 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/diagnosticreport.html.html#search)** and **[`category`](https://hl7.org/fhir/R4/diagnosticreport.html.html#search)** search parameters:
 
-    `GET [base]/DiagnosticReport?patient={Type/}[id]&category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`
+    `GET [base]/DiagnosticReport?patient={Type/}[id]&category={system|}[code]`
 
     Example:
     
-      1. GET [base]/DiagnosticReport?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|laboratory
+      1. GET [base]/DiagnosticReport?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|LAB
 
-    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and a category code = `laboratory` ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and a category code = `LAB` ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/diagnosticreport.html.html#search)** and **[`category`](https://hl7.org/fhir/R4/diagnosticreport.html.html#search)** and **[`date`](https://hl7.org/fhir/R4/diagnosticreport.html.html#search)** search parameters:
     - including support for these `date` comparators: `gt,lt,ge,le`
     - including optional support for *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
-    `GET [base]/DiagnosticReport?patient={Type/}[id]&category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/DiagnosticReport?patient={Type/}[id]&category={system|}[code]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
-      1. GET [base]/DiagnosticReport?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|laboratory&amp;date=ge2020-01-01T00:00:00Z
+      1. GET [base]/DiagnosticReport?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|LAB&amp;date=ge2020-01-01T00:00:00Z
 
-    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and date and a category code = `laboratory` ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
+    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and date and a category code = `LAB` ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
 
 #### Optional Search Parameters:
@@ -158,11 +165,11 @@ The following search parameter combinations **SHOULD** be supported:
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/diagnosticreport.html.html#search)** and **[`category`](https://hl7.org/fhir/R4/diagnosticreport.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/diagnosticreport.html.html#search)** search parameters:
     - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
-    `GET [base]/DiagnosticReport?patient={Type/}[id]&category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory&status={system|}[code]{,{system|}[code],...}`
+    `GET [base]/DiagnosticReport?patient={Type/}[id]&category={system|}[code]&status={system|}[code]{,{system|}[code],...}`
 
     Example:
     
-      1. GET [base]/DiagnosticReport?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|laboratory&amp;status=final
+      1. GET [base]/DiagnosticReport?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|LAB&amp;status=final
 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and category and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 

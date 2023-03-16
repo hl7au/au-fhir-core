@@ -25,17 +25,7 @@ Below is an overview of the mandatory and optional search parameters and combine
         <td><code>reference</code>.<code>token</code></td>
         <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
   </tr>
-  <tr>
-        <td>patient+role</td>
-        <td><b>SHOULD</b></td>
-        <td><code>reference</code>+<code>token</code></td>
-  </tr>
-  <tr>
-        <td>role</td>
-        <td>MAY</td>
-        <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
-  </tr>
+
   <tr>
         <td>status</td>
         <td>MAY</td>
@@ -75,17 +65,3 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     *Implementation Notes:* Fetches a bundle of all CareTeam resources for the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-#### Optional Search Parameters
-
-The following search parameters and search parameter combinations **SHOULD** be supported:
-
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/careteam.html.html#search)** and **[`role`](https://hl7.org/fhir/R4/careteam.html.html#search)** search parameters:
-    - including support for *OR* search on `role` (e.g.`role={system|}[code],{system|}[code],...`)
-
-    `GET [base]/CareTeam?patient={Type/}[id]&role={system|}[code]{,{system|}[code],...}`
-
-    Example:
-    
-      1. GET [base]/CareTeam?patient=5678&amp;role=http://snomed.info/sct|17561000
-
-    *Implementation Notes:* Fetches a bundle of all CareTeam resources for the specified patient and role ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))

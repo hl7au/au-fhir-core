@@ -19,6 +19,7 @@ Below is an overview of the mandatory and optional search parameters and combine
         <td>patient+clinical-status</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient.identifier</td>
