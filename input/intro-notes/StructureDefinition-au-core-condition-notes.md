@@ -94,7 +94,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/condition.html.html#search)** and **[`category`](https://hl7.org/fhir/R4/condition.html.html#search)** search parameters:
 
-    `GET [base]/Condition?patient={Type/}[id]&category=http://terminology.hl7.org/CodeSystem/condition-category|encounter-diagnosis`
+    `GET [base]/Condition?patient={Type/}[id]&category={system|}[code]`
 
     Example:
     
@@ -104,7 +104,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/condition.html.html#search)** and **[`clinical-status`](https://hl7.org/fhir/R4/condition.html.html#search)** search parameters:
 
-    `GET [base]/Condition?patient={Type/}[id]&clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical|active`
+    `GET [base]/Condition?patient={Type/}[id]&clinical-status={system|}[code]`
 
     Example:
     
@@ -134,7 +134,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     Example:
     
-      1. GET [base]/Condition?patient=5678&amp;code=http://loinc.org\|94309-2,http://loinc.org\|2164-2
+      1. GET [base]/Condition?patient=5678&amp;code=http://snomed.info/sct\|68566005,http://snomed.info/sct\|394659003
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and diagnostic report code(s).  **SHOULD** support search by multiple codes. The Condition `code` parameter searches `Condition.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
@@ -148,6 +148,6 @@ The following search parameters and search parameter combinations **SHOULD** be 
     Example:
     
       1. GET [base]/Condition?patient=5678&amp;onset-date=ge2020-01-01T00:00:00Z
-      1. GET [base]/Condition?patient.identifier=http://example.org/fhir/mrn|12345&amp;onset-date=ge2020-01-01T00:00:00Z
+      1. GET [base]/Condition?patient.identifier=http://example.org/fhir/mrn\|12345&amp;onset-date=ge2020-01-01T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and onset-date and report code(s).  **SHOULD** support search by multiple codes. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
