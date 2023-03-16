@@ -44,12 +44,7 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
         <td>patient.identifier</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>.<code>token</code></td>
-        <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
-  </tr>
-  <tr>
-        <td>patient+status</td>
-        <td><b>SHOULD</b></td>
-        <td><code>reference</code>+<code>token</code></td>
+        <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both.</>
   </tr>
   <tr>
         <td>patient+code</td>
@@ -60,6 +55,11 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
         <td>patient+code+date</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code>+<code>date</code></td>
+  </tr>
+  <tr>
+        <td>patient+status</td>
+        <td><b>SHOULD</b></td>
+        <td><code>reference</code>+<code>token</code></td>
   </tr>
   <tr>
         <td>category</td>
@@ -93,10 +93,10 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/diganosticreport.html.html#search)** search parameter:
-    - including optional support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
+    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
 
     `GET [base]/DiagnosticReport?patient={Type/}[id]`
-    with optional support for `GET [base]/DiagnosticReport?patient.identifier={system|}[value]`
+    **SHOULD** support for `GET [base]/DiagnosticReport?patient.identifier={system|}[value]`
 
     Example:
     
@@ -191,4 +191,14 @@ The following search parameter combinations **SHOULD** be supported:
 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and date and report code(s).  **SHOULD** support search by multiple codes. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/diganosticreport.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/diganosticreport.html.html#search)** search parameters:
+    - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
+
+    `GET [base]/DiagnosticReport?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
+
+    Example:
+    
+      1. GET [base]/DiagnosticReport?patient=5678&amp;status=final
+
+    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
