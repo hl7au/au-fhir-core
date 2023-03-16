@@ -1,4 +1,4 @@
-#### Mandatory Search Parameters:5678
+#### Mandatory Search Parameters
 
 The following search parameters and search parameter combinations **SHALL** be supported:
 

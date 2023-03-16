@@ -24,7 +24,7 @@ Below is an overview of the mandatory and optional search parameters and combine
         <td>patient.identifier</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>.<code>token</code></td>
-        <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both.</>
+        <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>clinical-status</td>
@@ -58,14 +58,14 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/allergyintolerance.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/allergyintolerance.html.html#search)** search parameters:
-    - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/allergyintolerance.html.html#search)** and **[`clinical-status`](https://hl7.org/fhir/R4/allergyintolerance.html.html#search)** search parameters:
+    - including support for *OR* search on `clinical-status` (e.g.`clinical-status={system|}[code],{system|}[code],...`)
 
-    `GET [base]/AllergyIntolerance?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
+    `GET [base]/AllergyIntolerance?patient={Type/}[id]&clinical-status={system|}[code]{,{system|}[code],...}`
 
     Example:
     
-      1. GET [base]/AllergyIntolerance?patient=5678&amp;&amp;status=final
+      1. GET [base]/AllergyIntolerance?patient=5678&amp;&amp;clinical-status=http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|active
 
     *Implementation Notes:* Fetches a bundle of all AllergyIntolerance resources for the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
