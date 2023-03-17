@@ -6,15 +6,17 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
     <th>Parameter(s)</th>
     <th>Conformance</th>
     <th>Type(s)</th>
+    <th>Requirements (when used alone or in combination)</th>
+  </tr>
+   <tr>
+        <td>identifier</td>
+        <td><b>SHALL</b></td>
+        <td><code>token</code></td>
+        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>_id</td>
         <td><b>SHOULD</b></td>
-        <td><code>token</code></td>
-  </tr>
-  <tr>
-        <td>identifier</td>
-        <td><b>SHALL</b></td>
         <td><code>token</code></td>
   </tr>
   <tr>
@@ -28,8 +30,40 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
 
 #### Mandatory Search Parameters
 
-The following search parameters and search parameter combinations **SHALL** be supported:
+The following search parameters **SHALL** be supported:
 
-#### Optional Search Parameters
+1. **SHALL** support searching a practitioner by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/practitioner.html.html#search)** search parameter:
 
-The following search parameters and search parameter combinations **SHOULD** be supported:
+    `GET [base]/Practitioner?identifier={system|}[code]`
+
+    Example:
+    
+      1. GET [base]/Practitioner?identifier=http://ns.electronichealth.net.au/id/hi/hpii/1.0\|8003619900015717
+      1. GET [base]/Practitioner?identifier=http://ns.electronichealth.net.au/id/medicare-prescriber-number\|553255
+
+    *Implementation Notes:* Fetches a bundle containing any Practitioner resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+
+#### Optional Search Parameters:
+
+The following search parameters **SHOULD** be supported:
+
+1. **SHOULD** support fetching a Practitioner using the **[`_id`](https://hl7.org/fhir/R4/practitioner.html.html#search)** search parameter:
+
+    `GET [base]/Practitioner/[id]` or `GET [base]/Practitioner?_id=[id]`
+
+    Example:
+    
+      1. GET [base]/Practitioner/5678
+      1. GET [base]/Practitioner?_id=5678
+
+    *Implementation Notes:*  ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+
+1. **SHOULD** support searching for a practitioner based on text name using the **[`name`](https://hl7.org/fhir/R4/practitioner.html.html#search)** search parameter:
+
+    `GET [base]/Practitioner?name=[string]`
+
+    Example:
+    
+      1. GET [base]/Practitioner?name=Sandyson
+
+    *Implementation Notes:* Fetches a bundle of all Practitioner resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))

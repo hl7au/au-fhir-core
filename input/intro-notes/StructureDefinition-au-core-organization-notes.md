@@ -50,7 +50,7 @@ The following search parameters **SHALL** be supported:
 
     *Implementation Notes:* Fetches a bundle of all Organization resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
-1. **SHALL** support searching an organisation by an identifier such as a MPI using the **[`identifier`](https://hl7.org/fhir/R4/organization.html.html#search)** search parameter:
+1. **SHALL** support searching an organisation by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/organization.html.html#search)** search parameter:
 
     `GET [base]/Organization?identifier={system|}[code]`
 
@@ -61,7 +61,7 @@ The following search parameters **SHALL** be supported:
 
     *Implementation Notes:* Fetches a bundle containing any Organization resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHALL** support searching for an organisation by a server-defined search that matches any of the string fields in the HumanName, including family, given, prefix, suffix, and/or text using the **[`name`](https://hl7.org/fhir/R4/organization.html.html#search)** search parameter:
+1. **SHALL** support searching for an organisation based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html.html#search)** search parameter:
 
     `GET [base]/Organization?name=[string]`
 

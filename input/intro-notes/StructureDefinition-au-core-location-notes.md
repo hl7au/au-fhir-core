@@ -3,18 +3,46 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
 <table class="list" width="100%">
 <tbody>
   <tr>
-    <th>Name</th>
-    <th>Type</th>
+    <th>Parameter(s)</th>
     <th>Conformance</th>
-    <th>Description</th>
-    <th>Path</th>
+    <th>Type(s)</th>
+    <th>Requirements (when used alone or in combination)</th>
   </tr>
   <tr>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>address</td>
+        <td><b>SHALL</b></td>
+        <td><code>string</code></td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>name</td>
+        <td><b>SHALL</b></td>
+        <td><code>string</code></td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>address-city</td>
+        <td><b>SHOULD</b></td>
+        <td><code>string</code></td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>address-state</td>
+        <td><b>SHOULD</b></td>
+        <td><code>string</code></td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>address-postalcode</td>
+        <td><b>SHOULD</b></td>
+        <td><code>string</code></td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>identifier</td>
+        <td><b>MAY</b></td>
+        <td><code>token</code></td>
+        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
   </tr>
  </tbody>
 </table>
@@ -22,8 +50,59 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
 
 #### Mandatory Search Parameters
 
-The following search parameters and search parameter combinations **SHALL** be supported:
+The following search parameters **SHALL** be supported:
 
-#### Optional Search Parameters
+1. **SHALL** support searching for an location based on text address using the **[`address`](https://hl7.org/fhir/R4/location.html.html#search)** search parameter:
 
-The following search parameters and search parameter combinations **SHOULD** be supported:
+    `GET [base]/Location?address=[string]`
+
+    Example:
+    
+      1. GET [base]/Location?address=QLD
+
+    *Implementation Notes:* Fetches a bundle of all Location resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
+
+1. **SHALL** support searching for an location based on text name using the **[`name`](https://hl7.org/fhir/R4/location.html.html#search)** search parameter:
+
+    `GET [base]/Location?name=[string]`
+
+    Example:
+    
+      1. GET [base]/Location?name=Hospital
+
+    *Implementation Notes:* Fetches a bundle of all Location resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
+
+
+#### Optional Search Parameters:
+
+The following search parameters **SHOULD** be supported:
+
+1. **SHOULD** support searching for an location based on the **[`address-city`](https://hl7.org/fhir/R4/location.html.html#search)** search parameter:
+
+    `GET [base]/Location?address-city=[string]`
+
+    Example:
+    
+      1. GET [base]/Location?address-city=Westmead
+
+    *Implementation Notes:* Fetches a bundle of all Location resources for the city ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
+
+1. **SHOULD** support searching for an location based on the **[`addresss-postalcode`](https://hl7.org/fhir/R4/location.html.html#search)** search parameter:
+
+    `GET [base]/Location?addresss-postalcode=[string]`
+
+    Example:
+    
+      1. GET [base]/Location?addresss-postalcode=3005
+
+    *Implementation Notes:* Fetches a bundle of all Location resources matching the post code ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
+
+1. **SHOULD** support searching for an location based on the **[`address`](https://hl7.org/fhir/R4/location.html.html#search)** search parameter:
+
+    `GET [base]/Location?address-state=[string]`
+
+    Example:
+    
+      1. GET [base]/Location?address-state=TAS
+
+    *Implementation Notes:* Fetches a bundle of all Location resources matching the state ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
