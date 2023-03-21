@@ -52,7 +52,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 #### Optional Search Parameters:
 
-The following search parameter combinations **SHOULD** be supported:
+The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/observation.html#search)** and **[`category`](https://hl7.org/fhir/R4/observation.html#search)** and **[`status`](https://hl7.org/fhir/R4/observation.html#search)** search parameters:
     - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)

@@ -151,7 +151,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 #### Optional Search Parameters:
 
-The following search parameter combinations **SHOULD** be supported:
+The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support fetching a DocumentReference using the **[`_id`](https://hl7.org/fhir/R4/documentreference.html.html#search)** search parameter:
 

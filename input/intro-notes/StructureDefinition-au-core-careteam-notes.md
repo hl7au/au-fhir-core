@@ -28,7 +28,7 @@ Below is an overview of the mandatory and optional search parameters and combine
 
   <tr>
         <td>status</td>
-        <td>MAY</td>
+        <td><b>MAY</b></td>
         <td><code>token</code></td>
         <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
   </tr>

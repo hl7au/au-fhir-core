@@ -135,7 +135,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 #### Optional Search Parameters:
 
-The following search parameter combinations **SHOULD** be supported:
+The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html.html#search)** and **[`class`](https://hl7.org/fhir/R4/encounter.html.html#search)** search parameters:
 
