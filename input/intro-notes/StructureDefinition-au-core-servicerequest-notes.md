@@ -161,7 +161,7 @@ The following search parameter combinations **SHOULD** be supported:
       1. GET [base]/ServiceRequest/2169591
       1. GET [base]/ServiceRequest?_id=2169591
 
-    *Implementation Notes:* Fetches a single ServiceRequest. The document itself is represented as a base64 encoded binary data element or retrieved using the link provided by the resource. If the document is a relative link to a [Binary] resource like a resource reference, it can be subsequently retrieved using: `GET [base]/Binary/[id]`. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Fetches a single ServiceRequest. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHOULD** support searching using the **[`identifier`](https://hl7.org/fhir/R4/servicerequest.html.html#search)** search parameter:
 

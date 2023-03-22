@@ -84,7 +84,7 @@ Below is an overview of the mandatory and optional search parameters and combine
       1. GET [base]/Patient/5678
       1. GET [base]/Patient?_id=5678
 
-    *Implementation Notes:*  ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Returns a single Patient resource. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHALL** support searching a patient by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/patient.html.html#search)** search parameter:
 

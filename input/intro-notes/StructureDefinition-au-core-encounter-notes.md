@@ -107,7 +107,7 @@ Below is an overview of the mandatory and optional search parameters and combine
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/encounter.html.html#search)** search parameter:
-    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
+    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
 
     `GET [base]/Encounter?patient={Type/}[id]`
     **SHOULD** support for `GET [base]/Encounter?patient.identifier={system|}[value]`
@@ -145,7 +145,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     
       1. GET [base]/Encounter?patient=5678&amp;class=http://terminology.hl7.org/CodeSystem/v3-ActCode\|AMB
 
-    *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient and a class code = `AMB` ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient and class ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html.html#search)** and **[`discharge-disposition`](https://hl7.org/fhir/R4/encounter.html.html#search)** search parameters:
 

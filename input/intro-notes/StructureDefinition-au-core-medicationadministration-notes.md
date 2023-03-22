@@ -89,7 +89,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationadministration.html.html#search)** and **[`effective-time`](https://hl7.org/fhir/R4/medicationadministration.html.html#search)** search parameters:
-    - including optional support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
+    - including optional support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
     - including support for these `date` comparators: `gt,lt,ge,le`
     - including optional support for *AND* search on `effective-time` (e.g.`effective-time=[date]&effective-time=[date]]&...`)
 

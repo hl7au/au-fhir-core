@@ -72,6 +72,17 @@ The following search parameters **SHALL** be supported:
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
+1. **SHOULD** support fetching a PractitionerRole using the **[`_id`](https://hl7.org/fhir/R4/practitioner.html.html#search)** search parameter:
+
+    `GET [base]/PractitionerRole/[id]` or `GET [base]/PractitionerRole?_id=[id]`
+
+    Example:
+    
+      1. GET [base]/PractitionerRole/5678
+      1. GET [base]/PractitionerRole?_id=5678
+
+    *Implementation Notes:* Returns a single PractitionerRole resource. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+
 1. **SHOULD** support searching using the **[`specialty`](https://hl7.org/fhir/R4/encounter.html.html#search)** search parameter:
 
     `GET [base]/PractitionerRole?specialty={system|}[code]`

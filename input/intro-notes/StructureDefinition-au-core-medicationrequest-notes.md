@@ -83,7 +83,7 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html.html#search)** search parameter:
-    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
+    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
 
     `GET [base]/MedicationRequest?patient={Type/}[id]`
     **SHOULD** support for `GET [base]/MedicationRequest?patient.identifier={system|}[value]`
@@ -97,7 +97,6 @@ The following search parameters and search parameter combinations **SHALL** be s
     *Implementation Notes:* Fetches a bundle of all MedicationRequest resources for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html.html#search)** and **[`intent`](https://hl7.org/fhir/R4/medicationrequest.html.html#search)** search parameters:
-    - including support for these `date` comparators: `gt,lt,ge,le`
 
     `GET [base]/MedicationRequest?patient={Type/}[id]&intent={system|}[code]`
 
@@ -132,7 +131,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/MedicationRequest/2169591
       1. GET [base]/MedicationRequest?_id=2169591
 
-    *Implementation Notes:* Fetches a single MedicationRequest. The document itself is represented as a base64 encoded binary data element or retrieved using the link provided by the resource. If the document is a relative link to a [Binary] resource like a resource reference, it can be subsequently retrieved using: `GET [base]/Binary/[id]`. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Fetches a single MedicationRequest. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHOULD** support searching using the **[`identifier`](https://hl7.org/fhir/R4/medicationrequest.html.html#search)** search parameter:
 

@@ -113,7 +113,7 @@ Below is an overview of the mandatory and optional search parameters. FHIR searc
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/documentreference.html.html#search)** search parameter:
-    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
+    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
 
     `GET [base]/DocumentReference?patient={Type/}[id]`
     **SHOULD** support for `GET [base]/DocumentReference?patient.identifier={system|}[value]`
