@@ -145,7 +145,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     
       1. GET [base]/ServiceRequest?patient=5678&amp;code=http://snomed.info/sct\|169069000,http://snomed.info/sct\|399208008
 
-    *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and diagnostic report code(s).  **SHOULD** support search by multiple codes. The ServiceRequest `code` parameter searches `ServiceRequest.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and diagnostic request code(s).  **SHOULD** support search by multiple codes. The ServiceRequest `code` parameter searches `ServiceRequest.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 
 #### Optional Search Parameters:
@@ -197,7 +197,7 @@ The following search parameter combinations **SHOULD** be supported:
       1. GET [base]/ServiceRequest?patient=5678&amp;code=http://snomed.info/sct\|169069000,http://snomed.info/sct\|399208008&amp;authored=ge2020-01-01T00:00:00Z
       1. GET [base]/ServiceRequest?patient.identifier=http://example.org/fhir/mrn\|12345&amp;code=http://snomed.info/sct\|169069000,http://snomed.info/sct\|399208008&amp;authored=ge2020-01-01T00:00:00Z
 
-    *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and date and report code(s).  **SHOULD** support search by multiple codes. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
+    *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and date and request code(s).  **SHOULD** support search by multiple codes. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/servicerequest.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/servicerequest.html.html#search)** search parameters:
     - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
