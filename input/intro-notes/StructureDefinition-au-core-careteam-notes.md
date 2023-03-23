@@ -56,7 +56,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/careteam.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/careteam.html.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
-    - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
+    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
     `GET [base]/CareTeam?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
 

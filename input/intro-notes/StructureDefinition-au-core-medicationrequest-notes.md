@@ -114,7 +114,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html.html#search)** and **[`intent`](https://hl7.org/fhir/R4/medicationrequest.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/medicationrequest.html.html#search)** search parameters:
     - **SHOULD** support these `_include` parameters: `MedicationRequest:medication`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
-    - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
+    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
 
     `GET [base]/MedicationRequest?patient={Type/}[id]&intent={system|}[code]&status={system|}[code]{,{system|}[code],...}`
 
@@ -156,7 +156,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     - **SHOULD** support these `_include` parameters: `MedicationRequest:medication`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
     - including support for these `authoredOn` comparators: `gt,lt,ge,le`
-    - including optional support for *AND* search on `authoredOn` (e.g.`authoredOn=[date]&authoredOn=[date]]&...`)
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `authoredOn` (e.g.`authoredOn=[date]&authoredOn=[date]]&...`)
 
     `GET [base]/MedicationRequest?patient={Type/}[id]&intent={system|}[code]&authoredOn={gt|lt|ge|le}[date]{&authoredOn={gt|lt|ge|le}[date]&...}`
 
