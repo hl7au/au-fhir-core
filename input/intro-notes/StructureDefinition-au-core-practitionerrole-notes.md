@@ -47,7 +47,7 @@ Below is an overview of the mandatory and optional search parameters and combine
 
 The following search parameters **SHALL** be supported:
 
-1. **SHALL** support searching a practitioner role by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/practitioner.html.html#search)** search parameter:
+1. **SHALL** support searching a practitioner role by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/practitionerrole.html.html#search)** search parameter:
 
     `GET [base]/PractitionerRole?identifier={system|}[code]`
 

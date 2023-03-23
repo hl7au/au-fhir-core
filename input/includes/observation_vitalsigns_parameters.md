@@ -27,6 +27,11 @@ Below is an overview of the mandatory and optional search parameters and combine
         <td></td>
   </tr>
   <tr>
+        <td>patient+code+date</td>
+        <td><b>SHALL</b></td>
+        <td><code>reference</code>+<code>token</code>+<code>date</code></td>
+  </tr>
+  <tr>
         <td>patient+category+status</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code>+<code>token</code></td>
@@ -37,11 +42,6 @@ Below is an overview of the mandatory and optional search parameters and combine
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code></td>
         <td></td>
-  </tr>
-   <tr>
-        <td>patient+code+date</td>
-        <td><b>SHALL</b></td>
-        <td><code>reference</code>+<code>token</code>+<code>date</code></td>
   </tr>
   <tr>
         <td>patient.identifier</td>

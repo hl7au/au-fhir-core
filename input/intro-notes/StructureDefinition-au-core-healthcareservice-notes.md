@@ -6,41 +6,49 @@ Below is an overview of the mandatory and optional search parameters and combine
     <th>Parameter(s)</th>
     <th>Conformance</th>
     <th>Type(s)</th>
+    <th>Requirements (when used alone or in combination)</th>
   </tr>
   <tr>
         <td>name</td>
         <td><b>SHALL</b></td>
         <td><code>string</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>category</td>
         <td><b>SHOULD</b></td>
         <td><code>token</code></td>
+        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>identifier</td>
         <td><b>SHOULD</b></td>
         <td><code>token</code></td>
+        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>location</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code></td>
+        <td>The client <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The server <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>organization</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code></td>
+        <td>The client <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The server <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>specialty</td>
         <td><b>SHOULD</b></td>
         <td><code>token</code></td>
+        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>type</td>
         <td><b>SHOULD</b></td>
         <td><code>token</code></td>
+        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
   </tr>
  </tbody>
 </table>
@@ -50,6 +58,47 @@ Below is an overview of the mandatory and optional search parameters and combine
 
 The following search parameters and search parameter combinations **SHALL** be supported:
 
+1. **SHALL** support searching for a healthcare service based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html.html#search)** search parameter:
+
+    `GET [base]/HealthcareService?name=[string]`
+
+    Example:
+    
+      1. GET [base]/HealthcareService?name=Hospital
+
+    *Implementation Notes:* Fetches a bundle of all HealthcareService resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
+
 #### Optional Search Parameters
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
+
+1. **SHOULD** support searching a healthcare service by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/healthcareservice.html.html#search)** search parameter:
+
+    `GET [base]/HealthcareService?identifier={system|}[code]`
+
+    Example:
+    
+      1. GET [base]/HealthcareService?identifier=http://ns.electronichealth.net.au/id/hi/hpio/1.0\|8003621566684455
+      1. GET [base]/HealthcareService?identifier=http://ns.electronichealth.net.au/id/residential-aged-care-service-id\|0009
+
+    *Implementation Notes:* Fetches a bundle containing any Practitioner resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+
+1. **following** support searching using the **[`location`](https://hl7.org/fhir/R4/healthcareservice.html.html#search)** search parameters:
+
+    `GET [base]/HealthcareService?location={Type/}[id]`
+
+    Example:
+    
+      1. GET [base]/HealthcareService?location=Location/Hospital
+
+    *Implementation Notes:* Fetches a bundle of all HealthcareService resources matching the specified location ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference)
+
+1. **following** support searching using the **[`organization`](https://hl7.org/fhir/R4/healthcareservice.html.html#search)** search parameters:
+
+    `GET [base]/HealthcareService?organization={Type/}[id]`
+
+    Example:
+    
+      1. GET [base]/HealthcareService?organization=Organization/Hospital
+
+    *Implementation Notes:* Fetches a bundle of all HealthcareService resources matching the specified organisation ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference)

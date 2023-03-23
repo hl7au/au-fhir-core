@@ -18,11 +18,13 @@ Below is an overview of the mandatory and optional search parameters and combine
         <td>patient+date</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>date</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient+code+date</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code>+<code>date</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient.identifier</td>
@@ -34,6 +36,7 @@ Below is an overview of the mandatory and optional search parameters and combine
         <td>patient+status</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>code</td>
@@ -45,7 +48,6 @@ Below is an overview of the mandatory and optional search parameters and combine
         <td>date</td>
         <td><b>MAY</b></td>
         <td><code>date</code></td>
-        <td><code>token</code></td>
         <td>A client <b>SHALL</b> provide a value precise to the second + time offset. A server <b>SHALL</b> support a value precise to the second + time offset.</td>
   </tr>
   <tr>
