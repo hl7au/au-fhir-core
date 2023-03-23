@@ -71,7 +71,7 @@ Below is an overview of the mandatory and optional search parameters and combine
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/careplan.html.html#search)** search parameter:
-    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
 
     `GET [base]/CarePlan?patient={Type/}[id]`
     **SHOULD** support for `GET [base]/CarePlan?patient.identifier={system|}[value]`
@@ -85,7 +85,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     *Implementation Notes:* Fetches a bundle of all CarePlan resources for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/careplan.html.html#search)** and **[`category`](https://hl7.org/fhir/R4/careplan.html.html#search)** search parameters:
-    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
 
     `GET [base]/CarePlan?patient={Type/}[id]&category={system|}[code]`
 
@@ -100,7 +100,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/careplan.html.html#search)** and **[`category`](https://hl7.org/fhir/R4/careplan.html.html#search)** and **[`date`](https://hl7.org/fhir/R4/careplan.html.html#search)** search parameters:
-    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
     - including support for these `date` comparators: `gt,lt,ge,le`
     - including optional support for *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
@@ -124,7 +124,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle of all CarePlan resources for the specified patient and category and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
     1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/careplan.html.html#search)** and **[`category`](https://hl7.org/fhir/R4/careplan.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/careplan.html.html#search)** and **[`date`](https://hl7.org/fhir/R4/careplan.html.html#search)** search parameters:
-    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
     - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
     - including support for these `date` comparators: `gt,lt,ge,le`
     - including optional support for *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
