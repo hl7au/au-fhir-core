@@ -60,6 +60,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/allergyintolerance.html.html#search)** and **[`clinical-status`](https://hl7.org/fhir/R4/allergyintolerance.html.html#search)** search parameters:
+    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
     - including support for *OR* search on `clinical-status` (e.g.`clinical-status={system|}[code],{system|}[code],...`)
 
     `GET [base]/AllergyIntolerance?patient={Type/}[id]&clinical-status={system|}[code]{,{system|}[code],...}`

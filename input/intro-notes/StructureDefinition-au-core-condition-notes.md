@@ -93,6 +93,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/condition.html.html#search)** and **[`category`](https://hl7.org/fhir/R4/condition.html.html#search)** search parameters:
+    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
 
     `GET [base]/Condition?patient={Type/}[id]&category={system|}[code]`
 
@@ -103,6 +104,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and category code = `encounter-diagnosis` ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/condition.html.html#search)** and **[`clinical-status`](https://hl7.org/fhir/R4/condition.html.html#search)** search parameters:
+    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
 
     `GET [base]/Condition?patient={Type/}[id]&clinical-status={system|}[code]`
 
@@ -118,6 +120,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/condition.html.html#search)** and **[`category`](https://hl7.org/fhir/R4/condition.html.html#search)** and **[`clinical-status`](https://hl7.org/fhir/R4/condition.html.html#search)** search parameters:
+    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
 
     `GET [base]/Condition?patient={Type/}[id]&category={system|}[code]&clinical-status={system|}[code]`
 
@@ -127,7 +130,8 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and category and clinical-status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-    1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/condition.html.html#search)** and **[`code`](https://hl7.org/fhir/R4/condition.html.html#search)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/condition.html.html#search)** and **[`code`](https://hl7.org/fhir/R4/condition.html.html#search)** search parameters:
+    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
     - including optional support for *OR* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
 
     `GET [base]/Condition?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}`
@@ -139,7 +143,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and condition code(s).  **SHOULD** support search by multiple codes. The Condition `code` parameter searches `Condition.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
     1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/condition.html.html#search)** and **[`onset-date`](https://hl7.org/fhir/R4/condition.html.html#search)** search parameters:
-    - including optional support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
+    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
     - including support for these `onset-date` comparators: `gt,lt,ge,le`
     - including optional support for *AND* search on `onset-date` (e.g.`onset-date=[date]&date=[date]]&...`)
 
