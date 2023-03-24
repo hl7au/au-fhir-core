@@ -122,8 +122,8 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html.html#search)** and **[`date`](https://hl7.org/fhir/R4/encounter.html.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
-    - including support for these `date` comparators: `gt,lt,ge,le`
-    - including optional support for *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
+    - **SHALL** support these `date` comparators: `gt,lt,ge,le`
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
     `GET [base]/Encounter?patient={Type/}[id]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
@@ -162,7 +162,6 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html.html#search)** and **[`location`](https://hl7.org/fhir/R4/encounter.html.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
-    - including optional support for *OR* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
 
     `GET [base]/Encounter?patient={Type/}[id]&location={Type/}[id]`
 

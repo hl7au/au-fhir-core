@@ -77,7 +77,6 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/immunization.html#search)** and **[`status`](https://hl7.org/fhir/R4/immunization.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
-    - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
     `GET [base]/Immunization?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
 
@@ -94,9 +93,9 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/immunization.html#search)** and **[`date`](https://hl7.org/fhir/R4/immunization.html#search)** search parameters:
-    - **SHOULD** optional support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
-    - including support for these `date` comparators: `gt,lt,ge,le`
-    - including optional support for *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
+    - **SHALL** support these `date` comparators: `gt,lt,ge,le`
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
     `GET [base]/Immunization?patient={Type/}[id]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
@@ -109,7 +108,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/immunization.html#search)** and **[`vaccine-code`](https://hl7.org/fhir/R4/immunization.html#search)** search parameters:
     - **SHOULD** optional support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
-    - including optional support for *OR* search on `vaccine-code` (e.g.`code={system|}[code],{system|}[code],...`)
+    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `vaccine-code` (e.g.`code={system|}[code],{system|}[code],...`)
 
     `GET [base]/Immunization?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}`
 
