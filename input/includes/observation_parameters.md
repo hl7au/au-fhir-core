@@ -1,5 +1,3 @@
-Below is an overview of the mandatory and optional search parameters and combined search parameters. FHIR search operations and the syntax used to describe the interactions is described <a href="http://hl7.org/fhir/R4/search.html">here</a>.
-
 <table class="list">
 <tbody>
   <tr>
