@@ -189,7 +189,7 @@ The following search parameter combinations **SHOULD** be supported:
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and category and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/servicerequest.html.html#search)** and **[`code`](https://hl7.org/fhir/R4/servicerequest.html.html#search)** and **[`authored`](https://hl7.org/fhir/R4/servicerequest.html.html#search)** search parameters:
-    - **SHOULD** optional support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
     - **SHALL** support these `date` comparators: `gt,lt,ge,le`
     - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `authored` (e.g.`authored=[date]&authored=[date]]&...`)
