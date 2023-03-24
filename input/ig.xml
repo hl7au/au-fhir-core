@@ -428,6 +428,15 @@
 			<description value="Left Knee - Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodystructure"/>
 		</resource>
+		<!--CARETEAM EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="CareTeam/heart"/>
+			</reference>
+			<name value="CareTeam - heart condition"/>
+			<description value="Heart condition focused care team for Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-careteam"/>
+		</resource>
 		<!--CONDITION EXAMPLES-->
 		<resource>
 			<reference>
@@ -1151,6 +1160,14 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Practitioner/cardy-igist"/>
+			</reference>
+			<name value="Practitioner - Dr. Igist Cardy"/>
+			<description value="Dr. Igist Cardy"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Practitioner/sandyson-sandy"/>
 			</reference>
 			<name value="Practitioner - Ms. Sandy Sandyson"/>
@@ -1172,6 +1189,22 @@
 			</reference>
 			<name value="PractitionerRole - General practitioner"/>
 			<description value="Dr. Bob Bobrester, GP, at Bobrester Medical Centre"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="PractitionerRole/cardiologist-cardy-igist"/>
+			</reference>
+			<name value="PractitionerRole - Cardiologist"/>
+			<description value="Dr. Igist Cardy, GP, at Hospital Australia"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="PractitionerRole/dietician-tan-patricia"/>
+			</reference>
+			<name value="PractitionerRole - Dietician"/>
+			<description value="Ms. Patricia Tan, Dietician, at Dieticians Australia"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
