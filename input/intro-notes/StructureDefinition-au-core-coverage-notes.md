@@ -97,6 +97,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
       *Implementation Notes:* Fetches a bundle containing any Coverage resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/coverage.html.html#search)** and **[`type`](https://hl7.org/fhir/R4/coverage.html.html#search)** search parameters:
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
 
     `GET [base]/Coverage?patient={Type/}[id]&type={system|}[code]{,{system|}[code],...}`

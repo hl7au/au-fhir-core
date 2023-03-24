@@ -178,7 +178,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html.html#search)** and **[`category`](https://hl7.org/fhir/R4/documentreference.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/documentreference.html.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
-    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
+    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
 
     `GET [base]/DocumentReference?patient={Type/}[id]&category={system|}[code]&status={system|}[code]{,{system|}[code],...}`
 
@@ -188,9 +188,9 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and category and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html.html#search)** and **[`code`](https://hl7.org/fhir/R4/documentreference.html.html#search)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html.html#search)** and **[`type`](https://hl7.org/fhir/R4/documentreference.html.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
-    - including optional support for *OR* search on `code` (e.g.`type={system|}[code],{system|}[code],...`)
+    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
 
     `GET [base]/DocumentReference?patient={Type/}[id]&type={system|}[code]{,{system|}[code],...}`
 
@@ -198,11 +198,11 @@ The following search parameters and search parameter combinations **SHOULD** be 
     
       1. GET [base]/DocumentReference?patient=5678&amp;type=http://loinc.org\|60591-5,http://loinc.org\|34133-9,http://loinc.org\|18842-5
 
-    *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and diagnostic report code(s). The DocumentReference `code` parameter searches `DocumentReference.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and diagnostic report code(s). The DocumentReference `type` parameter searches `DocumentReference.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html.html#search)** and **[`code`](https://hl7.org/fhir/R4/documentreference.html.html#search)** and **[`date`](https://hl7.org/fhir/R4/documentreference.html.html#search)** search parameters:
-    - **SHOULD** optional support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
-    - including optional support for *OR* search on `code` (e.g.`type={system|}[code],{system|}[code],...`)
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html.html#search)** and **[`type`](https://hl7.org/fhir/R4/documentreference.html.html#search)** and **[`date`](https://hl7.org/fhir/R4/documentreference.html.html#search)** search parameters:
+    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
+    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
     - **SHALL** support these `date` comparators: `gt,lt,ge,le`
     - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
@@ -217,7 +217,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html.html#search)** and **[`contenttype`](https://hl7.org/fhir/R4/documentreference.html.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
-    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
+    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
 
     `GET [base]/DocumentReference?patient={Type/}[id]&contenttype={system|}[code]{,{system|}[code],...}`
 
@@ -229,7 +229,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/documentreference.html.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
-    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
+    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
 
     `GET [base]/DocumentReference?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
 

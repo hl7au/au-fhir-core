@@ -167,6 +167,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/composition.html.html#search)** and **[`category`](https://hl7.org/fhir/R4/composition.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/composition.html.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
+    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
     `GET [base]/Composition?patient={Type/}[id]&category={system|}[code]&status={system|}[code]{,{system|}[code],...}`
 
@@ -176,9 +177,10 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     *Implementation Notes:* Fetches a bundle of all Composition resources for the specified patient and category and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/composition.html.html#search)** and **[`code`](https://hl7.org/fhir/R4/composition.html.html#search)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/composition.html.html#search)** and **[`type`](https://hl7.org/fhir/R4/composition.html.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
-    - including optional support for *OR* search on `code` (e.g.`type={system|}[code],{system|}[code],...`)
+    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
+    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
     `GET [base]/Composition?patient={Type/}[id]&type={system|}[code]{,{system|}[code],...}`
 
@@ -186,11 +188,11 @@ The following search parameters and search parameter combinations **SHOULD** be 
     
       1. GET [base]/Composition?patient=5678&amp;type=http://loinc.org\|60591-5,http://loinc.org\|34133-9,http://loinc.org\|18842-5
 
-    *Implementation Notes:* Fetches a bundle of all Composition resources for the specified patient and diagnostic report code(s). The Composition `code` parameter searches `Composition.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all Composition resources for the specified patient and document code(s). The Composition `code` parameter searches `Composition.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/composition.html.html#search)** and **[`code`](https://hl7.org/fhir/R4/composition.html.html#search)** and **[`date`](https://hl7.org/fhir/R4/composition.html.html#search)** search parameters:
-    - **SHOULD** optional support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
-    - including optional support for *OR* search on `code` (e.g.`type={system|}[code],{system|}[code],...`)
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/composition.html.html#search)** and **[`type`](https://hl7.org/fhir/R4/composition.html.html#search)** and **[`date`](https://hl7.org/fhir/R4/composition.html.html#search)** search parameters:
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
+    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
     - **SHALL** support these `date` comparators: `gt,lt,ge,le`
     - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
@@ -201,11 +203,12 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/Composition?patient=5678&amp;type=http://loinc.org\|60591-5,http://loinc.org\|34133-9,http://loinc.org\|18842-5&amp;date=ge2020-01-01T00:00:00Z
       1. GET [base]/Composition?patient.identifier=http://example.org/fhir/mrn\|12345&amp;type=type=http://loinc.org\|60591-5,http://loinc.org\|34133-9,http://loinc.org\|18842-5&amp;date=ge2020-01-01T00:00:00Z
 
-    *Implementation Notes:* Fetches a bundle of all Composition resources for the specified patient and date and report code(s). ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
+    *Implementation Notes:* Fetches a bundle of all Composition resources for the specified patient and date and document code(s). ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/composition.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/composition.html.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
-    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
+    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
+    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
     `GET [base]/Composition?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
 
