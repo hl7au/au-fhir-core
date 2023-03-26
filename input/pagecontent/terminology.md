@@ -16,4 +16,4 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 
 ## Code systems
 
-No code systems have been defined for this implementation guide.
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR.  All code systems used in this guide are defined in the base FHIR specification or [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html). No code systems have been defined for this implementation guide.
