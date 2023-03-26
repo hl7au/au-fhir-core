@@ -28,6 +28,7 @@
         <td>patient+code+date</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>token</code>+<code>date</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient+category+status</td>
