@@ -17,4 +17,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core
 
 
 #### Profile specific implementation guidance
-- See the [Representing communication preferences](guidance.html#representing-communication-preferences) section for guidance
+- See the [Representing communication preferences](general-guidance.html#representing-communication-preferences) section for guidance

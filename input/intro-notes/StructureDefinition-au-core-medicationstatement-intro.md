@@ -18,6 +18,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 
 #### Profile specific implementation guidance
-- See the [Medicine information](guidance.html#medicine-information) section for guidance 
+- See the [Medicine information](general-guidance.html#medicine-information) section for guidance 
 - MedicationStatement resources can represent a medication using either a code, or reference a [Medication](http://hl7.org/fhir/R4/medication.html) resource
   - When referencing a Medication resource, it is preferred the resource is [contained](http://hl7.org/fhir/R4/references.html#contained) but it may be an external resource

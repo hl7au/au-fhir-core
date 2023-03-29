@@ -6,8 +6,8 @@ A sending system:
 - when responding to a request - TBD
 - when constructing a resource:
    - **SHALL** ensure the resource conforms to the applicable AU Core profile
-   - **SHALL** implement the guidance on extensibility if including “additional” elements according to section on [Extensibility – “additional” elements](guidance.html#extensibility--additional-elements)
-   - **SHALL** implement the guidance on missing data if asserting a mandatory element is missing according to the section on [Missing Data](guidance.html#missing-data)
+   - **SHALL** implement the guidance on extensibility if including “additional” elements according to section on [Extensibility – “additional” elements](general-guidance.html#extensibility--additional-elements)
+   - **SHALL** implement the guidance on missing data if asserting a mandatory element is missing according to the section on [Missing Data](general-guidance.html#missing-data)
    - **SHALL** populate all elements labelled MustSupport where the sending system has that information unless:
       - there is a clinical reason why supplying the information would be unsafe, misleading, or otherwise clinically inappropriate
       - the data is suppressed due to a security or privacy reason 
@@ -16,13 +16,13 @@ A receiving system:
 - **SHALL** be capable of meaningfully processing all elements labelled MustSupport where the resource has been constructed in accordance with AU Core conformance requirements; depending on local requirements this may mean display, persist, index, or action in an event or request workflow
 - **MAY** choose to reject non-conformant resources 
 - **SHALL** interpret missing data elements within resource instances as data not present in the source system
-- **SHALL** be able to process resources containing “additional” elements according to section on [Extensibility – “additional” elements](guidance.html#extensibility--additional-elements)
+- **SHALL** be able to process resources containing “additional” elements according to section on [Extensibility – “additional” elements](general-guidance.html#extensibility--additional-elements)
 
 A persisting system:
 - **SHALL** reject any request to create or update a resource that is not supported by the Conformance/CapabilityStatement, contains a modifier extension that is not supported by the Conformance/CapabilityStatement, or is a supported type but does not conform to the Conformance/CapabilityStatement resource for that endpoint.  
 - in circumstances other than those specified above (request to create or update a resource) **MAY** choose to reject non-conformant resources but is not required to do so
-- **SHALL** be able to persist resources containing data elements asserting missing information according to the section on [Missing Data](guidance.html#missing-data)
-- **SHALL** be able to persist resources containing "additional" elements according to section on [Extensibility – “additional” elements](guidance.html#extensibility--additional-elements)
+- **SHALL** be able to persist resources containing data elements asserting missing information according to the section on [Missing Data](general-guidance.html#missing-data)
+- **SHALL** be able to persist resources containing "additional" elements according to section on [Extensibility – “additional” elements](general-guidance.html#extensibility--additional-elements)
 
 
 #### Presentation of elements labelled MustSupport in profile views
