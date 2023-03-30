@@ -17,7 +17,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core
 
 
 #### Profile specific implementation guidance
-TBD
+- When querying if a patient is covered `Coverage.status` and `Coverage.period` are relevant. The coverage may not be active at the time of query but may have been applicable during the time of service or claim.
 
 
 
