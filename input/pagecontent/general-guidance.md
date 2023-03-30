@@ -5,7 +5,7 @@ If referencing a contained resource, both the contained resource and the referen
 
 In AU Core profiles:
 - Systems constructing a resource that represent medication or body structure information are encouraged to make use of contained resources. 
-  - Operations on Medication resources are expected to be within the context of a referencing resource query such as an ExplanationOfBenefit, Flag, MedicationAdministration, MedicationDispense, MedicationRequest or MedicationStatement.
+  - Operations on Medication resources are expected to be within the context of a referencing resource query such as an MedicationAdministration, MedicationDispense, MedicationRequest or MedicationStatement.
   - Operations on BodyStructure resources are expected to be within the context of a referencing resource query such as a Consent, DiagnosticReport, Observation, or ServiceRequest.
 - Otherwise, when responding to a query, servers should not use inline contained resources to represent the returned data.
 

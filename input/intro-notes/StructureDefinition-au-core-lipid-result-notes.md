@@ -1,4 +1,4 @@
-{% include none_parameters.md -%}
+{% include search_parameters_intro.md -%}
 {% include observation_parameters.md -%}
 
 #### Mandatory Search Parameters:

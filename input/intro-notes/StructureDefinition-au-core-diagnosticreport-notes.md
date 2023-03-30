@@ -1,4 +1,5 @@
 {% include search_parameters_intro.md -%}
+
 <table class="list">
 <tbody>
   <tr>
@@ -213,3 +214,4 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/DiagnosticReport?patient=5678&amp;status=final
 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    
