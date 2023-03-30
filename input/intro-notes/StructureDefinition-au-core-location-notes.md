@@ -1,4 +1,4 @@
-{% include none_parameters.md -%}
+{% include search_parameters_intro.md -%}
 <table class="list" width="100%">
 <tbody>
   <tr>
