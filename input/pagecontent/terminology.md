@@ -28,6 +28,16 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 - [Smoking Status](https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1)
 
 
-## Code systems
+### Code systems
 
-See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR.  All code systems used in this guide are defined in the base FHIR specification or [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html). No code systems have been defined for this implementation guide.
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR.  All code systems used in this guide are defined in the base FHIR specification or [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html). 
+
+No code systems have been defined for this implementation guide.
+
+### Concept Maps
+
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-conceptmaps.html) for a complete discussion on concept maps and a list of concept map names used in FHIR.  Most concept maps relevant to this guide are defined in the base FHIR specification or [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html). The following concept maps are unique to this guide.
+
+**Concept maps published in the NCTS**
+- [ObservationStatus Result Available to v2 OBSERVATION RESULT STATUS](https://healthterminologies.gov.au/fhir/ConceptMap/observstatus-result-avail-to-v2-obs-result-status-1)
+- [v2 OBSERVATION RESULT STATUS to ObservationStatus Result Available](https://healthterminologies.gov.au/fhir/ConceptMap/v2-obs-result-status-to-observstatus-result-avail-1)
