@@ -45,7 +45,7 @@
     <element id="Practitioner.name">
       <path value="Practitioner.name"/>
       <min value="1"/>
-      <condition value="inv-au-core-prac-01"/>
+      <condition value="au-core-prac-01"/>
       <constraint>
         <key value="au-core-prac-01"/>
         <severity value="error"/>

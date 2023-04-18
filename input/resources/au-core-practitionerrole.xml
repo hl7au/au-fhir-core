@@ -73,7 +73,7 @@
           value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"
         />
       </type>
-      <condition value="inv-au-core-prarol-01"/>
+      <condition value="au-core-prarol-01"/>
       <constraint>
         <key value="au-core-prarol-01"/>
         <severity value="error"/>

@@ -92,7 +92,7 @@
     </element>
     <element id="RelatedPerson.name">
       <path value="RelatedPerson.name"/>
-      <condition value="inv-au-core-relper-01"/>
+      <condition value="au-core-relper-01"/>
       <mustSupport value="true"/>
     </element>
     <element id="RelatedPerson.telecom">
