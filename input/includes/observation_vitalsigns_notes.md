@@ -35,7 +35,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     Example:
     
-      1. GET [base]/Observation?patient=5678&amp;code=http://snomed.info/sct\|364075005,http://loinc.org\|9279-1,http://loinc.org\|85354-9
+      1. GET [base]/Observation?patient=5678&amp;code=http://snomed.info/sct\|364075005,http://loinc.org\|{{ code_code }},http://loinc.org\|85354-9
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code(s). The Observation `code` parameter searches `Observation.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
@@ -79,7 +79,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     Example:
     
-      1. GET [base]/Observation?patient=5678&amp;code=http://snomed.info/sct\|364075005,http://loinc.org\|9279-1,http://loinc.org\|85354-9&amp;date=ge2020-01-01T00:00:00Z
-      1. GET [base]/Observation?patient.identifier=http://example.org/fhir/mrn\|12345&amp;code=http://snomed.info/sct\|364075005,http://loinc.org\|9279-1,http://loinc.org\|85354-9&amp;date=ge2020-01-01T00:00:00Z
+      1. GET [base]/Observation?patient=5678&amp;code=http://snomed.info/sct\|364075005,http://loinc.org\|{{ code_code }},http://loinc.org\|85354-9&amp;date=ge2020-01-01T00:00:00Z
+      1. GET [base]/Observation?patient.identifier=http://example.org/fhir/mrn\|12345&amp;code=http://snomed.info/sct\|364075005,http://loinc.org\|{{ code_code }},http://loinc.org\|85354-9&amp;date=ge2020-01-01T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and date and observation code(s). ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
