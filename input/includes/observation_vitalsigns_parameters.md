@@ -25,9 +25,9 @@
         <td></td>
   </tr>
   <tr>
-        <td>patient+code+date</td>
+        <td>patient+code</td>
         <td><b>SHALL</b></td>
-        <td><code>reference</code>+<code>token</code>+<code>date</code></td>
+        <td><code>reference</code>+<code>token</code></td>
         <td></td>
   </tr>
   <tr>
@@ -37,9 +37,9 @@
         <td></td>
   </tr>
   <tr>
-        <td>patient+code</td>
+        <td>patient+code+date</td>
         <td><b>SHOULD</b></td>
-        <td><code>reference</code>+<code>token</code></td>
+        <td><code>reference</code>+<code>token</code>+<code>date</code></td>
         <td></td>
   </tr>
   <tr>
@@ -52,13 +52,13 @@
         <td>category</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both. The client <b>SHALL</b> support search using the LOINC codes defined in each profile. The server <b>SHALL</b> support search using the LOINC codes defined in each profile.</td>
+        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both. The client <b>SHALL</b> support search using the 'vital-sign' category defined in each profile. The server <b>SHALL</b> support search using the 'vital-sign' category defined in each profile.</td>
   </tr>
   <tr>
         <td>code</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
+        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both. The client <b>SHALL</b> support search using the LOINC codes defined in each profile. The server <b>SHALL</b> support search using the LOINC codes defined in each profile.</td>
   </tr>
   <tr>
         <td>date</td>
