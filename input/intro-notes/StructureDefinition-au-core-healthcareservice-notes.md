@@ -71,6 +71,16 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
+1. **SHOULD** support searching using a healthcare service using the **[`category`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
+
+    `GET [base]/HealthcareService?category={system|}[code]`
+
+    Example:
+    
+      1. GET [base]/HealthcareService?category=http://snomed.info/sct\|708175003
+
+    *Implementation Notes:* Fetches a bundle of all HealthcareService resources for the specified category ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+
 1. **SHOULD** support searching a healthcare service by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
 
     `GET [base]/HealthcareService?identifier={system|}[code]`
@@ -101,3 +111,23 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/HealthcareService?organization=Organization/Hospital
 
     *Implementation Notes:* Fetches a bundle of all HealthcareService resources matching the specified organisation ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference)
+
+1. **SHOULD** support searching using a healthcare service using the **[`specialty`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
+
+    `GET [base]/HealthcareService?specialty={system|}[code]`
+
+    Example:
+    
+      1. GET [base]/HealthcareService?specialty=http://snomed.info/sct\|394579002
+
+    *Implementation Notes:* Fetches a bundle of all HealthcareService resources for the specified specialty ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+
+1. **SHOULD** support searching using a healthcare service using the **[`type`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
+
+    `GET [base]/HealthcareService?type={system|}[code]`
+
+    Example:
+    
+      1. GET [base]/HealthcareService?type=http://snomed.info/sct\|708172000
+
+    *Implementation Notes:* Fetches a bundle of all HealthcareService resources for the specified type ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
