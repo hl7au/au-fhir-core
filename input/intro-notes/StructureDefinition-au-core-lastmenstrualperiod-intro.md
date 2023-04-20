@@ -18,7 +18,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 
 #### Profile specific implementation guidance
-{% include observation_vitalsigns_guidance.md -%}
+{% include observation_coding_guidance.md -%}
 
 
 
