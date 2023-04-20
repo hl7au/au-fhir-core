@@ -57,7 +57,7 @@
 
 The following search parameters and search parameter combinations **SHALL** be supported:
 
-1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/medicationadministration.html.html#search)** search parameter:
+1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/medicationadministration.html#search)** search parameter:
     - **SHOULD** support these `_include` parameters: `MedicationAdministration:medication`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
 
@@ -73,7 +73,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     *Implementation Notes:* Fetches a bundle of all MedicationAdministration resources for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationadministration.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/medicationadministration.html.html#search)** search parameters:
+1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationadministration.html#search)** and **[`status`](https://hl7.org/fhir/R4/medicationadministration.html#search)** search parameters:
     - **SHOULD** support these `_include` parameters: `MedicationAdministration:medication`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
@@ -91,7 +91,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationadministration.html.html#search)** and **[`effective-time`](https://hl7.org/fhir/R4/medicationadministration.html.html#search)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationadministration.html#search)** and **[`effective-time`](https://hl7.org/fhir/R4/medicationadministration.html#search)** search parameters:
     - **SHOULD** support these `_include` parameters: `MedicationAdministration:medication`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
     - **SHALL** support these `effective-time` comparators: `gt,lt,ge,le`
@@ -106,7 +106,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     *Implementation Notes:* Fetches a bundle of all MedicationAdministration resources for the specified patient and date. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationadministration.html.html#search)** and **[`status`](https://hl7.org/fhir/R4/medicationadministration.html.html#search)** and **[`effective-time`](https://hl7.org/fhir/R4/medicationadministration.html.html#search)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationadministration.html#search)** and **[`status`](https://hl7.org/fhir/R4/medicationadministration.html#search)** and **[`effective-time`](https://hl7.org/fhir/R4/medicationadministration.html#search)** search parameters:
     - **SHOULD** support these `_include` parameters: `MedicationAdministration:medication`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)

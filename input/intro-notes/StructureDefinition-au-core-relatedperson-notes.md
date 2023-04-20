@@ -51,7 +51,7 @@
 
 The following search parameters and search parameter combinations **SHALL** be supported:
 
-1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/procedure.html.html#search)** search parameter:
+1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/procedure.html#search)** search parameter:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
 
     `GET [base]/RelatedPerson?patient={Type/}[id]`
@@ -69,7 +69,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
-1. **SHOULD** support fetching a RelatedPerson using the **[`_id`](https://hl7.org/fhir/R4/relatedperson.html.html#search)** search parameter:
+1. **SHOULD** support fetching a RelatedPerson using the **[`_id`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
 
     `GET [base]/RelatedPerson/[id]` or `GET [base]/RelatedPerson?_id=[id]`
 
@@ -80,7 +80,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     *Implementation Notes:* Fetches a single RelatedPerson. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
-1. **SHOULD** support searching for a related person by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/relatedperson.html.html#search)** search parameter:
+1. **SHOULD** support searching for a related person by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
 
     `GET [base]/RelatedPerson?identifier={system|}[code]`
 
@@ -92,7 +92,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     *Implementation Notes:* Fetches a bundle containing any RelatedPerson resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHOULD** support searching for a related person based on text name using the **[`name`](https://hl7.org/fhir/R4/relatedperson.html.html#search)** search parameter:
+1. **SHOULD** support searching for a related person based on text name using the **[`name`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
 
     `GET [base]/RelatedPerson?name=[string]`
 

@@ -57,7 +57,7 @@
 
 The following search parameters and search parameter combinations **SHALL** be supported:
 
-1. **SHALL** support searching for a healthcare service based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html.html#search)** search parameter:
+1. **SHALL** support searching for a healthcare service based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
 
     `GET [base]/HealthcareService?name=[string]`
 
@@ -71,7 +71,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
-1. **SHOULD** support searching a healthcare service by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/healthcareservice.html.html#search)** search parameter:
+1. **SHOULD** support searching a healthcare service by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
 
     `GET [base]/HealthcareService?identifier={system|}[code]`
 
@@ -82,7 +82,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     *Implementation Notes:* Fetches a bundle containing any Practitioner resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **following** support searching using the **[`location`](https://hl7.org/fhir/R4/healthcareservice.html.html#search)** search parameters:
+1. **following** support searching using the **[`location`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
 
     `GET [base]/HealthcareService?location={Type/}[id]`
 
@@ -92,7 +92,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     *Implementation Notes:* Fetches a bundle of all HealthcareService resources matching the specified location ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference)
 
-1. **following** support searching using the **[`organization`](https://hl7.org/fhir/R4/healthcareservice.html.html#search)** search parameters:
+1. **following** support searching using the **[`organization`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
 
     `GET [base]/HealthcareService?organization={Type/}[id]`
 

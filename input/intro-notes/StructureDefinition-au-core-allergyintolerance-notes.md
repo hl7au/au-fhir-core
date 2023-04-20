@@ -39,7 +39,7 @@
 
 The following search parameters and search parameter combinations **SHALL** be supported:
 
-1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/allergyintolerance.html.html#search)** search parameter:
+1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/allergyintolerance.html#search)** search parameter:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
 
     `GET [base]/AllergyIntolerance?patient={Type/}[id]`
@@ -57,7 +57,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/allergyintolerance.html.html#search)** and **[`clinical-status`](https://hl7.org/fhir/R4/allergyintolerance.html.html#search)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/allergyintolerance.html#search)** and **[`clinical-status`](https://hl7.org/fhir/R4/allergyintolerance.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
 
     `GET [base]/AllergyIntolerance?patient={Type/}[id]&clinical-status={system|}[code]{,{system|}[code],...}`
