@@ -19,6 +19,9 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 #### Profile specific implementation guidance
 {% include observation_vitalsigns_guidance.md -%}
+- Because blood pressure values are communicated in the *mandatory* systolic and diastolic components:
+  - `Observation.value[x]` element **SHOULD** be omitted
+  - an Observation without a systolic or diastolic result value, **SHOULD** include a reason why the data is absent in `Observation.component.dataAbsentReason`
 
 
 
