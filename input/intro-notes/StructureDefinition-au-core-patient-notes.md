@@ -139,9 +139,9 @@ The following search parameter combinations **SHOULD** be supported:
     
       1. GET [base]/Patient?name=Wang&amp;birthdate=2007-03-20
 
-    *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified birthdate and name ([how to search by date](http://hl7.org/fhir/R4/search.html#date) and [how to search by string])
+    *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified birthdate and name ([how to search by date](http://hl7.org/fhir/R4/search.html#date) and [how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
-1. **SHOULD** support searching using the combination of the **[`family`](https://hl7.org/fhir/R4/patient.html.html#search)** and **[`gender`]https://hl7.org/fhir/R4/patient.html.html#search)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`family`](https://hl7.org/fhir/R4/patient.html.html#search)** and **[`gender`](https://hl7.org/fhir/R4/patient.html.html#search)** search parameters:
 
     `GET [base]/Patient?family=[string]&gender={system|}[code]`
 
@@ -151,7 +151,7 @@ The following search parameter combinations **SHOULD** be supported:
 
     *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified family and gender ([how to search by string](http://hl7.org/fhir/R4/search.html#string) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHOULD** support searching using the combination of the **[`gender`](https://hl7.org/fhir/R4/patient.html.html#search)** and **[`name`]https://hl7.org/fhir/R4/patient.html.html#search)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`gender`](https://hl7.org/fhir/R4/patient.html.html#search)** and **[`name`](https://hl7.org/fhir/R4/patient.html.html#search)** search parameters:
 
     `GET [base]/Patient?gender={system|}[code]&name=[string]`
 
