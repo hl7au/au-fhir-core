@@ -10,12 +10,15 @@
   <tr>
         <td>patient</td>
         <td><b>SHALL</b></td>
+        <td><code>reference</code></td>
         <td>The client <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The server <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>patient+status</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>token</code></td>
+        <td></td>
+  </tr>
   </tr>
   <tr>
         <td>patient.identifier</td>
@@ -75,7 +78,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     Example:
     
-      1. GET [base]/Coverage?patient=5678&amp;status=final
+      1. GET [base]/Coverage?patient=5678&amp;status=active
 
     *Implementation Notes:* Fetches a bundle of all Coverage resources for the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
@@ -97,7 +100,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/coverage.html#search)** and **[`type`](https://hl7.org/fhir/R4/coverage.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
-    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
+    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
 
     `GET [base]/Coverage?patient={Type/}[id]&type={system|}[code]{,{system|}[code],...}`
 

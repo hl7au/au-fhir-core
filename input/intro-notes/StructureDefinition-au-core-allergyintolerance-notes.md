@@ -64,6 +64,6 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     Example:
     
-      1. GET [base]/AllergyIntolerance?patient=5678&amp;&amp;clinical-status=http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|active
+      1. GET [base]/AllergyIntolerance?patient=5678&amp;clinical-status=http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|active
 
     *Implementation Notes:* Fetches a bundle of all AllergyIntolerance resources for the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
