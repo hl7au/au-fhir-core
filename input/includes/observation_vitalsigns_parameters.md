@@ -52,7 +52,7 @@
         <td>category</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both. The client <b>SHALL</b> support search using the 'vital-sign' category defined in each profile. The server <b>SHALL</b> support search using the 'vital-sign' category defined in each profile.</td>
+        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both. The client <b>SHALL</b> support search using the 'vital-signs' category defined in each profile. The server <b>SHALL</b> support search using the 'vital-signs' category defined in each profile.</td>
   </tr>
   <tr>
         <td>code</td>
