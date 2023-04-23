@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Encounter xmlns="http://hl7.org/fhir">
+    <id value="annualvisit-2"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+    </meta>
+    <status value="finished"/>
+    <class>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+        <code value="AMB"/>
+        <display value="ambulatory"/>                    
+    </class>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="866149003"/>
+            <display value="Annual visit"/>  
+        </coding>
+    </type>
+    <serviceType>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="788007007"/>
+            <display value="General practice service"/>      
+        </coding>
+    </serviceType>
+    <subject>
+        <reference value="Patient/bennelong-anne"/>
+    </subject>
+    <participant>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+                <code value="PPRF"/>
+                <display value="primary performer"/>   
+            </coding>
+        </type>
+        <individual>
+            <reference value="PractitionerRole/bobrester-bob-gp"/>
+        </individual>
+    </participant>
+    <period>
+        <end value="2022-02-10"/>
+    </period>
+    <serviceProvider>
+        <reference value="Organization/bobrester-medical-center"/>
+    </serviceProvider>
+</Encounter>

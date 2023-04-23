@@ -27,12 +27,15 @@
     <text value="weight"/>
   </code>
   <subject>
-		<reference value="Patient/bennelong-anne"/>
-    </subject>
-	<effectiveDateTime value="2022-02-10"/>
-	<performer>
-      <reference value="PractitionerRole/bobrester-bob-gp"/>
-    </performer>
+    <reference value="Patient/bennelong-anne"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/annualvisit-2"/>
+  </encounter>
+  <effectiveDateTime value="2022-02-10"/>
+  <performer>
+    <reference value="PractitionerRole/bobrester-bob-gp"/>
+  </performer>
   <valueQuantity>
     <value value="77.3"/>
     <unit value="kg"/>
