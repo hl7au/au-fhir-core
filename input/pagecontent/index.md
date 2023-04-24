@@ -54,7 +54,9 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Conformance](conformance.html): This page describes the set of rules to claim conformance to this guide including the expectations for must support elements in AU Core profiles.
   - [General Requirements](general-requirements.html): This page defines requirements common to all actors and profiles used in this guide including how CapabilityStatements are used to claim conformance.
   - [Must Support](must-support.html): This page defines the expectations for mandatory and must support elements in AU Core Profiles.
-- [Guidance](guidance.html): This page provides guidance on using the profiles defined in this guide.
+- [Guidance](guidance.html):This set of pages lists the guidance for this guide.
+  - [General Guidance](general-guidance.html)  This page provides guidance on using the profiles defined in this guide.
+  - [Comparison with other national and international specifications](comparison.html): This page provides comparison between AU Core profiles and other national, or international implementation guides.
 - [FHIR Artefacts](artifacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This set of pages describes the profiles and extensions that are defined in this guide to exchange quality data. Each profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.
   - [Terminology](terminology.html): This set of pages lists the value sets and code systems defined in this guide.

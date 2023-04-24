@@ -1,14 +1,2 @@
-- [General Guidance]
-- [Comparison with other national and international specifications]
-
-{% include link-list.md %}
-
-
-
-
-
-
-
-
-
-
+- [General Guidance](general-guidance.html)
+- [Comparison with other national and international specifications](comparison.html)

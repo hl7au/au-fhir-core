@@ -21,7 +21,7 @@
         <text value="Alcohol status"/>
     </code>
     <subject>
-        <reference value="Patient/dan-harry"/>
+        <reference value="Patient/wang-li"/>
     </subject>
     <encounter>
         <display value="Clinic visit"/>
