@@ -20,6 +20,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 
 #### Profile specific implementation guidance
-- TBD
-
+- See the [Representing communication preferences](general-guidance.html#representing-communication-preferences) section for guidance
+- An international address can be represented using the core [Address](http://hl7.org/fhir/R4/datatypes.html#Address) data type.
+- An Australian address **SHOULD** be represented using the [Australian Address](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-address.html) data type profile.
 
