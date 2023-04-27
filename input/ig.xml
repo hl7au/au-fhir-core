@@ -437,6 +437,15 @@
 			<description value="Heart condition focused care team&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-careteam"/>
 		</resource>
+		<!--COMPOSITION EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Composition/covid-1"/>
+			</reference>
+			<name value="Composition - 2019-Novel Coronavirus PCR"/>
+			<description value="2019-Novel Coronavirus PCR report&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentcomposition"/>
+		</resource>
 		<!--CONDITION EXAMPLES-->
 		<resource>
 			<reference>
@@ -519,6 +528,15 @@
 			<name value="Device - Medicare repository service"/>
 			<description value="Medicare repository service"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-device-system"/>
+		</resource>
+		<!--DIAGNOSTICREPORT EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="DiagnosticReport/lipid-panel"/>
+			</reference>
+			<name value="DiagnosticReport - Lipid Panel"/>
+			<description value="Lipid Panel diagnostic report&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticreport"/>
 		</resource>
 		<!--DOCUMENTREFERENCE EXAMPLES-->
 		<resource>
@@ -1320,6 +1338,14 @@
 			</reference>
 			<name value="ServiceRequest - CT of abdomen and pelvis with contrast order"/>
 			<description value="Order for CT of abdomen and pelvis with contrast&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ServiceRequest/order-covid"/>
+			</reference>
+			<name value="ServiceRequest - 2019-Novel Coronavirus PCR order"/>
+			<description value="Order for 2019-Novel Coronavirus PCR&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
 		</resource>
 		<resource>
