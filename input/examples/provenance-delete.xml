@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Provenance xmlns="http://hl7.org/fhir">
+    <id value="delete"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-provenance"/>
+    </meta>
+    <target>
+        <reference value="http://apps.example.com/DocumentReference/232847/_history/2"/>
+    </target>
+    <recorded value="2023-04-01T08:22:54+10:00"/>
+    <reason>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+            <code value="RECORDMGT"/>
+        </coding>
+    </reason>
+    <activity>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-DataOperation"/>
+            <code value="DELETE"/>
+        </coding>
+    </activity>
+    <agent>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+                <code value="author"/>
+            </coding>
+        </type>
+        <who>
+            <reference value="Patient/smith-emma"/>
+        </who>
+    </agent>
+    <entity>
+        <role value="source"/>
+        <what>
+            <reference value="http://apps.example.com/DocumentReference/232847/_history/2"/>
+        </what>
+    </entity>
+</Provenance>
