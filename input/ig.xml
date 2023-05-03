@@ -1601,10 +1601,6 @@
 			<value value="true"/>
 		</parameter>
 		<parameter>
-			<code value="showsource"/>
-			<value value="true"/>
-		</parameter>
-		<parameter>
 			<code value="path-expansion-params"/>
 			<value value="../input/_resources/exp-params.json"/>
 		</parameter>
