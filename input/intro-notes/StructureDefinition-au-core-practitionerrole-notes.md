@@ -48,7 +48,7 @@ The following search parameters **SHALL** be supported:
 
 1. **SHALL** support searching a practitioner role by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/practitionerrole.html#search)** search parameter:
     - **SHOULD** support these `_include` parameters: `PractitionerRole:practitioner`
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
 
     `GET [base]/PractitionerRole?identifier={system|}[code]`
 
@@ -62,7 +62,7 @@ The following search parameters **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`practitioner`](https://hl7.org/fhir/R4/practitionerrole.html#search)** search parameters:
     - **SHOULD** support these `_include` parameters: `PractitionerRole:practitioner`
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
 
     `GET [base]/PractitionerRole?practitioner={Type/}[id]`
 
@@ -79,7 +79,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support fetching a PractitionerRole using the **[`_id`](https://hl7.org/fhir/R4/practitioner.html#search)** search parameter:
     - **SHOULD** support these `_include` parameters: `PractitionerRole:practitioner`
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
 
     `GET [base]/PractitionerRole/[id]` or `GET [base]/PractitionerRole?_id=[id]`
 
@@ -93,7 +93,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the **[`specialty`](https://hl7.org/fhir/R4/encounter.html#search)** search parameter:
     - **SHOULD** support these `_include` parameters: `PractitionerRole:practitioner`
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
 
     `GET [base]/PractitionerRole?specialty={system|}[code]`
 

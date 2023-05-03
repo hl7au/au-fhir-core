@@ -40,7 +40,7 @@
 The following search parameters **SHALL** be supported:
 
 1. **SHALL** support searching for an organisation based on text address using the **[`address`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Organization?address=[string]`
 
@@ -51,7 +51,7 @@ The following search parameters **SHALL** be supported:
     *Implementation Notes:* Fetches a bundle of all Organization resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 1. **SHALL** support searching an organisation by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Organization?identifier={system|}[code]`
 
@@ -63,7 +63,7 @@ The following search parameters **SHALL** be supported:
     *Implementation Notes:* Fetches a bundle containing any Organization resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching for an organisation based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Organization?name=[string]`
 
@@ -80,7 +80,7 @@ The following search parameters **SHALL** be supported:
 The following search parameters **SHOULD** be supported:
 
 1. **SHOULD** support fetching a Organization using the **[`_id`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Organization/[id]` or `GET [base]/Organization?_id=[id]`
 

@@ -74,7 +74,7 @@
 #### Mandatory Search Parameters
 
 1. **SHALL** support fetching a Patient using the **[`_id`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Patient/[id]` or `GET [base]/Patient?_id=[id]`
 
@@ -86,7 +86,7 @@
     *Implementation Notes:* Returns a single Patient resource. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHALL** support searching a patient by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Patient?identifier={system|}[code]`
 
@@ -99,7 +99,7 @@
     *Implementation Notes:* Fetches a bundle containing any Patient resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching for a patient by a server-defined search that matches any of the string fields in the HumanName, including family, given, prefix, suffix, and/or text using the **[`name`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Patient?name=[string]`
 
@@ -111,7 +111,7 @@
     *Implementation Notes:* Fetches a bundle of all Patient resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 1. **SHALL** support searching using the combination of the **[`gender`](https://hl7.org/fhir/R4/patient.html#search)** and **[`name`](https://hl7.org/fhir/R4/patient.html#search)** search parameters:
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Patient?gender={system|}[code]&name=[string]`
 
@@ -127,7 +127,7 @@
 The following search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`birthdate`](https://hl7.org/fhir/R4/patient.html#search)** and **[`family`](https://hl7.org/fhir/R4/patient.html#search)** search parameters:
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Patient?birthdate=[date]&family=[string]`
 
@@ -138,7 +138,7 @@ The following search parameter combinations **SHOULD** be supported:
     *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified birthdate and family ([how to search by date](http://hl7.org/fhir/R4/search.html#date) and [how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 1. **SHOULD** support searching using the combination of the **[`birthdate`](https://hl7.org/fhir/R4/patient.html#search)** and **[`name`](https://hl7.org/fhir/R4/patient.html#search)** search parameters:
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Patient?birthdate=[date]&name=[string]`
 
@@ -149,7 +149,7 @@ The following search parameter combinations **SHOULD** be supported:
     *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified birthdate and name ([how to search by date](http://hl7.org/fhir/R4/search.html#date) and [how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 1. **SHOULD** support searching using the combination of the **[`family`](https://hl7.org/fhir/R4/patient.html#search)** and **[`gender`](https://hl7.org/fhir/R4/patient.html#search)** search parameters:
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Patient?family=[string]&gender={system|}[code]`
 
@@ -160,7 +160,7 @@ The following search parameter combinations **SHOULD** be supported:
     *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified family and gender ([how to search by string](http://hl7.org/fhir/R4/search.html#string) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`gender`](https://hl7.org/fhir/R4/patient.html#search)** and **[`name`](https://hl7.org/fhir/R4/patient.html#search)** search parameters:
-    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Patient?gender={system|}[code]&name=[string]`
 

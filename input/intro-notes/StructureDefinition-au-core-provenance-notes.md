@@ -1,29 +1,31 @@
-Below is an overview of the mandatory and optional search parameters. FHIR search operations and the syntax used to describe the interactions is described <a href="http://hl7.org/fhir/R4/search.html">here</a>.
+{% include search_parameters_intro.md -%}
 
-<table class="list" width="100%">
-<tbody>
-  <tr>
-    <th>Name</th>
-    <th>Type</th>
-    <th>Conformance</th>
-    <th>Description</th>
-    <th>Path</th>
-  </tr>
-  <tr>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
-  </tr>
- </tbody>
-</table>
-
+{% include prov-white-list.md -%}
 
 #### Mandatory Search Parameters
 
-The following search parameters and search parameter combinations **SHALL** be supported:
+The following search parameter combinations **SHALL** be supported:
+
+1. **SHALL** support searching for all resources (that are one of the [resource types listed above](#prov-white-list)) for a patient and all the Provenance records for those resources using a combination of the **[`patient`](https://hl7.org/fhir/R4/observation.html#search)** and **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** search parameters:
+
+    `GET [base]/[Resource]?patient=[id]&_revinclude=Provenance:target`
+
+    Example:
+
+      1. GET [base]/AllergyIntolerance?patient=[id]5&_revinclude=Provenance:target
+
+    *Implementation Notes:* Fetches a bundle of all resources of a particular type for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference)) and any corresponding Provenance resources.
+
+1. **SHALL** support searching for a particular resource (that are one of the [resource types listed above](#prov-white-list)) and all its Provenance resources using combination of the **[`_id`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** and the **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** search parameters:
+
+    `GET [base]/[Resource]?_id=[id]&_revinclude=Provenance:target`
+
+    Example:
+
+      1. GET [base]/AllergyIntolerance?_id=[id]&_revinclude=Provenance:target
+
+    *Implementation Notes:* Fetches a bundle of a resource of a particular type (within the clients authorization scope) and any corresponding Provenance resources. ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 #### Optional Search Parameters
 
-The following search parameters and search parameter combinations **SHOULD** be supported:
+No optional search parameters for this profile.
