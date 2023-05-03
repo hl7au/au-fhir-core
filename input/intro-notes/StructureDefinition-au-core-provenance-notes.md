@@ -12,7 +12,7 @@ The following search parameter combinations **SHALL** be supported:
 
     Example:
 
-      1. GET [base]/AllergyIntolerance?patient=[id]5&_revinclude=Provenance:target
+      1. GET [base]/AllergyIntolerance?patient=75&_revinclude=Provenance:target
 
     *Implementation Notes:* Fetches a bundle of all resources of a particular type for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference)) and any corresponding Provenance resources.
 
@@ -22,7 +22,7 @@ The following search parameter combinations **SHALL** be supported:
 
     Example:
 
-      1. GET [base]/AllergyIntolerance?_id=[id]&_revinclude=Provenance:target
+      1. GET [base]/AllergyIntolerance?_id=2425&_revinclude=Provenance:target
 
     *Implementation Notes:* Fetches a bundle of a resource of a particular type (within the clients authorization scope) and any corresponding Provenance resources. ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 

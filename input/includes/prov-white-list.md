@@ -1,3 +1,4 @@
+
 AU Core Provenance **SHALL** be supported for the following resource types that conform to an AU Core profile: 
 <ul id="prov-white-list">
 <li>AllergyIntolerance</li>
