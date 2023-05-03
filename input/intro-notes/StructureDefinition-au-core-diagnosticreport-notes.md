@@ -101,10 +101,11 @@
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** search parameter:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`)
 
     `GET [base]/DiagnosticReport?patient={Type/}[id]`
-    **SHOULD** support for `GET [base]/DiagnosticReport?patient.identifier={system|}[value]`
+    or optionally  `GET [base]/DiagnosticReport?patient.identifier=[system][value]`
 
     Example:
     
@@ -115,7 +116,8 @@ The following search parameters and search parameter combinations **SHALL** be s
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** and **[`category`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`)
 
     `GET [base]/DiagnosticReport?patient={Type/}[id]&category={system|}[code]`
 
@@ -126,7 +128,8 @@ The following search parameters and search parameter combinations **SHALL** be s
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and category ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** and **[`category`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** and **[`date`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`)
     - **SHALL** support these `date` comparators: `gt,lt,ge,le`
     - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
@@ -144,7 +147,8 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support fetching a DiagnosticReport using the **[`_id`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** search parameter:
-
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    
     `GET [base]/DiagnosticReport/[id]` or `GET [base]/DiagnosticReport?_id=[id]`
 
     Example:
@@ -155,17 +159,20 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a single DiagnosticReport. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHOULD** support searching using the **[`identifier`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** search parameter:
-
+     - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+     
      `GET [base]/DiagnosticReport?identifier={system|}[code]`
 
     Example:
     
       1. GET [base]/DiagnosticReport?identifier=http://laboratory.example.org\|1032333
+      1. GET [base]/DiagnosticReport?identifier=http://laboratory.example.org\|1032333&amp;_revinclude=Provenance:target
 
       *Implementation Notes:* Fetches a bundle containing any DiagnosticReport resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** and **[`category`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** and **[`status`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`)
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
 
     `GET [base]/DiagnosticReport?patient={Type/}[id]&category={system|}[code]&status={system|}[code]{,{system|}[code],...}`
@@ -177,7 +184,8 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and category and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** and **[`code`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`)
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
 
     `GET [base]/DiagnosticReport?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}`
@@ -189,7 +197,8 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and diagnostic report code(s). The DiagnosticReport `code` parameter searches `DiagnosticReport.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** and **[`code`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** and **[`date`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** search parameters:
-    - **SHOULD** support for chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
     - **SHALL** support these `date` comparators: `gt,lt,ge,le`
     - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`)
@@ -204,7 +213,8 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and date and report code(s). ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** and **[`status`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`)
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
 
     `GET [base]/DiagnosticReport?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`

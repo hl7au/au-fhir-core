@@ -58,7 +58,8 @@
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching for a healthcare service based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
-
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    
     `GET [base]/HealthcareService?name=[string]`
 
     Example:
@@ -72,7 +73,8 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using a healthcare service using the **[`category`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
-
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    
     `GET [base]/HealthcareService?category={system|}[code]`
 
     Example:
@@ -82,7 +84,8 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle of all HealthcareService resources for the specified category ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching a healthcare service by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
-
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    
     `GET [base]/HealthcareService?identifier={system|}[code]`
 
     Example:
@@ -93,7 +96,8 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle containing any Practitioner resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **following** support searching using the **[`location`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
-
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    
     `GET [base]/HealthcareService?location={Type/}[id]`
 
     Example:
@@ -103,7 +107,8 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle of all HealthcareService resources matching the specified location ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference)
 
 1. **following** support searching using the **[`organization`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
-
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    
     `GET [base]/HealthcareService?organization={Type/}[id]`
 
     Example:
@@ -113,17 +118,20 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle of all HealthcareService resources matching the specified organisation ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference)
 
 1. **SHOULD** support searching using a healthcare service using the **[`specialty`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
-
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    
     `GET [base]/HealthcareService?specialty={system|}[code]`
 
     Example:
     
       1. GET [base]/HealthcareService?specialty=http://snomed.info/sct\|394579002
+      1. GET [base]/HealthcareService?specialty=http://snomed.info/sct\|394579002&amp;_revinclude=Provenance:target
 
     *Implementation Notes:* Fetches a bundle of all HealthcareService resources for the specified specialty ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using a healthcare service using the **[`type`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
-
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    
     `GET [base]/HealthcareService?type={system|}[code]`
 
     Example:

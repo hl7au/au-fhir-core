@@ -100,10 +100,10 @@
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/servicerequest.html#search)** search parameter:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`
 
-    `GET [base]/ServiceRequest?patient={Type/}[id]`
-    **SHOULD** support for `GET [base]/ServiceRequest?patient.identifier={system|}[value]`
+    `GET [base]/ServiceRequest?patient={Type/}[id]` or optionally`GET [base]/ServiceRequest?patient.identifier=[system][value]`
 
     Example:
     
@@ -114,7 +114,8 @@ The following search parameters and search parameter combinations **SHALL** be s
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/servicerequest.html#search)** and **[`category`](https://hl7.org/fhir/R4/servicerequest.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`)
 
     `GET [base]/ServiceRequest?patient={Type/}[id]&category={system|}[code]`
 
@@ -125,6 +126,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and a category code = `708175003` ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/servicerequest.html#search)** and **[`category`](https://hl7.org/fhir/R4/servicerequest.html#search)** and **[`authored`](https://hl7.org/fhir/R4/servicerequest.html#search)** search parameters:
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
     - **SHALL** support these `date` comparators: `gt,lt,ge,le`
     - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `authored` (e.g.`authored=[date]&authored=[date]]&...`)
 
@@ -137,7 +139,8 @@ The following search parameters and search parameter combinations **SHALL** be s
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and date and a category code = `708175003` ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/servicerequest.html#search)** and **[`code`](https://hl7.org/fhir/R4/servicerequest.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`)
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
 
     `GET [base]/ServiceRequest?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}`
@@ -154,7 +157,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support fetching a ServiceRequest using the **[`_id`](https://hl7.org/fhir/R4/servicerequest.html#search)** search parameter:
-
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
     `GET [base]/ServiceRequest/[id]` or `GET [base]/ServiceRequest?_id=[id]`
 
     Example:
@@ -165,7 +168,7 @@ The following search parameter combinations **SHOULD** be supported:
     *Implementation Notes:* Fetches a single ServiceRequest. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHOULD** support searching using the **[`identifier`](https://hl7.org/fhir/R4/servicerequest.html#search)** search parameter:
-
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
      `GET [base]/ServiceRequest?identifier={system|}[code]`
 
     Example:
@@ -175,7 +178,8 @@ The following search parameter combinations **SHOULD** be supported:
       *Implementation Notes:* Fetches a bundle containing any ServiceRequest resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/servicerequest.html#search)** and **[`category`](https://hl7.org/fhir/R4/servicerequest.html#search)** and **[`status`](https://hl7.org/fhir/R4/servicerequest.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`)
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
@@ -188,7 +192,8 @@ The following search parameter combinations **SHOULD** be supported:
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and category and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/servicerequest.html#search)** and **[`code`](https://hl7.org/fhir/R4/servicerequest.html#search)** and **[`authored`](https://hl7.org/fhir/R4/servicerequest.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
     - **SHALL** support these `date` comparators: `gt,lt,ge,le`
     - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `authored` (e.g.`authored=[date]&authored=[date]]&...`)
@@ -203,7 +208,8 @@ The following search parameter combinations **SHOULD** be supported:
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and date and request code(s). ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/servicerequest.html#search)** and **[`status`](https://hl7.org/fhir/R4/servicerequest.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`)
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
@@ -212,5 +218,6 @@ The following search parameter combinations **SHOULD** be supported:
     Example:
     
       1. GET [base]/ServiceRequest?patient=5678&amp;status=active
+      1. GET [base]/ServiceRequest?patient=5678&amp;status=active&amp;_revinclude=Provenance:target
 
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))

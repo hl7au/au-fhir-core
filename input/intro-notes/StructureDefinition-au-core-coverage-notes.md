@@ -59,10 +59,11 @@
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/coverage.html#search)** search parameter:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`)
 
     `GET [base]/Coverage?patient={Type/}[id]`
-    **SHOULD** support for `GET [base]/Coverage?patient.identifier={system|}[value]`
+    or optionally  `GET [base]/Coverage?patient.identifier=[system][value]`
 
     Example:
     
@@ -73,7 +74,8 @@ The following search parameters and search parameter combinations **SHALL** be s
     *Implementation Notes:* Fetches a bundle of all Coverage resources for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/coverage.html#search)** and **[`status`](https://hl7.org/fhir/R4/coverage.html#search)** search parameters:
-
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    
     `GET [base]/Coverage?patient={Type/}[id]&status={system|}[code]`
 
     Example:
@@ -88,18 +90,21 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the **[`identifier`](https://hl7.org/fhir/R4/coverage.html#search)** search parameter:
-
+     - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+     
      `GET [base]/Coverage?identifier={system|}[code]`
 
     Example:
     
       1. GET [base]/Coverage?identifier=http://aaaaaia.example.com/member/memberid\|9999115
       1. GET [base]/Coverage?identifier=http://ns.electronichealth.net.au/id/dva\|NBUR9080
+      1. GET [base]/Coverage?identifier=233223329&amp;_revinclude=Provenance:target
 
       *Implementation Notes:* Fetches a bundle containing any Coverage resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/coverage.html#search)** and **[`type`](https://hl7.org/fhir/R4/coverage.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier={system|}[value]`)
+    - **SHOULD** support these `_revinclude` parameters: `Provenance:target`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`)
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
 
     `GET [base]/Coverage?patient={Type/}[id]&type={system|}[code]{,{system|}[code],...}`

@@ -64,5 +64,6 @@ The following search parameters **SHOULD** be supported:
     Example:
     
       1. GET [base]/Practitioner?name=Sandyson
+      1. GET [base]/Practitioner?name=Sandyson&amp;_revinclude=Provenance:target
 
     *Implementation Notes:* Fetches a bundle of all Practitioner resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
