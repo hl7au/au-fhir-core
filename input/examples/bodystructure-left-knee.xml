@@ -19,6 +19,6 @@
         </coding>
     </locationQualifier>
     <patient>
-        <reference value="Patient/Patient/pat2"/>
+        <reference value="Patient/wang-li"/>
     </patient>
 </BodyStructure>
