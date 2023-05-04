@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
-    <!--  Example adapted from R5 observation-bmd   -->
+    <!--  Example adapted from R5 observation-example-bmd   -->
     <id value="bonedensity-simple-contained"/>
     <meta>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-imag"/>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-imagingresult"/>
     </meta>
     <contained>
         <BodyStructure>
