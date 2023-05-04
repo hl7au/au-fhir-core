@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <!--  Example adapted from R5 observation-bmd   -->
+    <id value="bonedensity-simple-contained"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-imag"/>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
+    </meta>
+    <contained>
+        <BodyStructure>
+            <id value="left-femur"/>
+            <location>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="71341001"/>
+                    <display value="Bone structure of femur"/>
+                </coding>
+            </location>
+            <locationQualifier>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="7771000"/>
+                    <display value="Left"/>
+                </coding>
+            </locationQualifier>
+            <patient>
+                <reference value="Patient/dan-harry"/>
+            </patient>
+        </BodyStructure>
+    </contained>
+    <extension url="http://hl7.org/fhir/StructureDefinition/bodySite">
+        <valueReference>
+            <reference value="#left-femur"/>
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="imaging"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="24701-5"/>
+            <display value="DXA Femur [Mass/Area] Bone density"/>
+        </coding>
+        <text value="BMD - Left Femur"/>
+    </code>
+    <subject>
+        <reference value="Patient/dan-harry"/>
+    </subject>
+    <effectiveDateTime value="2022-02-10"/>
+    <performer>
+        <display value="Regional Imaging Diagnostics Center"/>
+    </performer>
+    <valueQuantity>
+        <value value="0.887"/>
+        <unit value="g/cm&#xB2;"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="g/cm-2"/>
+    </valueQuantity>
+    <bodySite>
+        <extension url="http://hl7.org/fhir/StructureDefinition/bodySite">
+            <valueReference>
+                <reference value="#left-femur"/>
+            </valueReference>
+        </extension>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="71341001"/>
+        </coding>
+        <text value="Left Femur"/>
+    </bodySite>
+</Observation>

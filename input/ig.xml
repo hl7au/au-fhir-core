@@ -887,6 +887,22 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Observation/bonedensity-simple-precon"/>
+			</reference>
+			<name value="Observation - Bone Density of Left Femur (pre-coordinated body site code)"/>
+			<description value="Bone Density of Left Femur 0.887 g/cm² showing pre-coordinated body site code&#xa;&#xa;Patient: Mr. Harry Dan"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-imag"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/bonedensity-simple-contained"/>
+			</reference>
+			<name value="Observation - Bone Density of Left Femur (contained BodyStructure)"/>
+			<description value="Bone Density of Left Femur 0.887 g/cm² showing contained BodyStructure&#xa;&#xa;Patient: Mr. Harry Dan"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-imag"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Observation/edd-1"/>
 			</reference>
 			<name value="Observation - Estimated Date of Delivery"/>

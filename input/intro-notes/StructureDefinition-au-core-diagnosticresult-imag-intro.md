@@ -21,4 +21,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 #### Profile specific implementation guidance
 {% include observation_diagnostics_guidance.md -%}
 
+<p class="stu-note">Specific feedback is sought on supporting complex body site information in Observations. Coded laterality (or other qualifiers) can be supplied using a post-coordinated concept e.g. Observation.bodySite.coding.code="71341001:272741003=7771000" (see <a href="Observation-bmd-simple-precon.html">Observation/bonedensity-simple-precon</a>) or by use of the extension <a href="http://hl7.org/fhir/R4/extension-bodysite.html">bodySite</a> to reference a BodyStructure resource a contained BodyStructure (see example <a href="Observation-bmd-simple-contained.html">Observation/bonedensity-simple-contained</a>). Additional body site information can only be supported by referenced BodyStructure resource.</p>
+
 
