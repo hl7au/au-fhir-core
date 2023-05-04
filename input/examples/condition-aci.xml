@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition xmlns="http://hl7.org/fhir">
+  <!--  Example adapted from International Patient Summary Implementation Guide eumfh-39-07-1  -->
+  <id value="aci"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="75326-9"/>
+      <display value="Problem"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="54329005"/>
+      <display value="Acute myocardial infarction of anterior wall"/>
+    </coding>
+    <coding>
+      <system value="http://id.who.int/icd/release/11/mms"/>
+      <code value="BA41.Z&amp;XA7RE3"/>
+      <display value="Acute myocardial infarction, unspecified [Anterior wall of heart]"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/wang-li"/>
+  </subject>
+  <onsetDateTime value="2014"/>
+  <asserter>
+    <reference value="Practitioner/bobrester-bob"/>
+  </asserter>
+</Condition>

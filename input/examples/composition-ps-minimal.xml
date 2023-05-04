@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composition xmlns="http://hl7.org/fhir">
+  <!--  Example adapted from International Patient Summary Implementation Guide composition-minimal  -->
+  <id value="ps-minimal"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentcomposition"/>
+  </meta>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="60591-5"/>
+      <display value="Patient summary Document"/>
+    </coding>
+  </type>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="60591-5"/>
+      <display value="Patient summary Document"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/wang-li"/>
+  </subject>
+  <date value="2020-12-11T14:30:00+01:00"/>
+  <author>
+    <reference value="PractitionerRole/bobrester-bob-gp"/>
+  </author>
+  <title value="Patient Summary as of December 11, 2020 14:30"/>
+  <attester>
+    <mode value="legal"/>
+    <time value="2020-12-11T14:30:00+01:00"/>
+    <party>
+      <reference value="PractitionerRole/bobrester-bob-gp"/>
+    </party>
+  </attester>
+  <custodian>
+    <reference value="Organization/bobrester-medical-center"/>
+  </custodian>
+  <relatesTo>
+    <code value="appends"/>
+    <targetIdentifier>
+      <system value="urn:oid:2.16.724.4.8.10.200.10"/>
+      <value value="20e12ce3-857f-49c0-b888-cb670597f191"/>
+    </targetIdentifier>
+  </relatesTo>
+  <section>
+    <title value="Active Problems"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="11450-4"/>
+        <display value="Problem list Reported"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Condition/aci"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Medication"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="10160-0"/>
+        <display value="History of Medication use Narrative"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="MedicationStatement/simvastatin"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Allergies and Intolerances"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48765-2"/>
+        <display value="Allergies and adverse reactions Document"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="AllergyIntolerance/noneknown"/>
+    </entry>
+  </section>
+</Composition>

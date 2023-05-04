@@ -44,13 +44,13 @@
     </custodian>
     <section>
         <title value="Pathology"/>
-        <coding>
+        <code>
+             <coding>
             <system value="http://loinc.org"/>
             <code value="11526-1"/>
             <display value="Pathology study"/>
         </coding>
-        <code>
-            <coding>
+        <coding>
                 <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
                 <code value="101.20018"/>
                 <display value="Pathology"/>

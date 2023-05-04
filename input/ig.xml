@@ -58,7 +58,7 @@
 	<dependsOn id="aubaser4">
 		<uri value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"/>
 		<packageId value="hl7.fhir.au.base"/>
-		<version value="4.1.0"/>
+		<version value="current"/>
 	</dependsOn>
 	<definition>
 		<resource>
@@ -446,7 +446,23 @@
 			<description value="2019-Novel Coronavirus PCR report&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentcomposition"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="Composition/ps-minimal"/>
+			</reference>
+			<name value="Composition - Patient Summary (Minimal)"/>
+			<description value="Minimal Patient Summary&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentcomposition"/>
+		</resource>
 		<!--CONDITION EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Condition/aci"/>
+			</reference>
+			<name value="Condition - Acute myocardial infarction of anterior wall"/>
+			<description value="Acute myocardial infarction of anterior wall&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+		</resource>
 		<resource>
 			<reference>
 				<reference value="Condition/coronary-syndrome"/>
@@ -712,6 +728,14 @@
 			<description value="Product with four active ingredients."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/simvastatin"/>
+			</reference>
+			<name value="Medication - Simvastatin 40 MG Disintegrating Oral Tablet"/>
+			<description value="Simvastatin 40 MG Disintegrating Oral Tablet."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
+		</resource>
 		<!--MEDICATIONADMINISTRATION EXAMPLES-->
 		<resource>
 			<reference>
@@ -762,6 +786,14 @@
 			</reference>
 			<name value="MedicationStatement - practitioner reported previous use of Diflucan"/>
 			<description value="Practitioner reports patient has taken Diflucan in the past but is not taking it any more."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationStatement/simvastatin"/>
+			</reference>
+			<name value="MedicationStatement - current use of Simvastatin"/>
+			<description value="Current use of Simvastatin 40 MG Disintegrating Oral Tablet."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
 		</resource>
 		<!--OBSERVATION EXAMPLES-->
