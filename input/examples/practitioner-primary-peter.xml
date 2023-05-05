@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Practitioner xmlns="http://hl7.org/fhir">
+  <!--  Example adapted from MCC eCare Plan Implementation Guide practitionerMCC-3  -->
+  <id value="primary-peter"/>
+  <meta>
+    <versionId value="2"/>
+    <lastUpdated value="2022-04-21T20:04:20.639+00:00"/>
+    <source value="#PFl2LJ5HsUkESlP1"/>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
+  </meta>
+  <identifier>
+    <system value="http://www.acme.org/practitioners"/>
+    <value value="25456"/>
+  </identifier>
+  <name>
+    <family value="Primary"/>
+    <given value="Peter"/>
+    <prefix value="Dr"/>
+  </name>
+  <address>
+    <use value="work"/>
+    <line value="310 Hay St"/>
+    <city value="East Perth"/>
+    <state value="WA"/>
+    <postalCode value="6004"/>
+  </address>
+</Practitioner>

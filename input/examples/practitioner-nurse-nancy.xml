@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Practitioner xmlns="http://hl7.org/fhir">
+  <!--  Example adapted from MCC eCare Plan Implementation Guide practitionerMCC-2  -->
+  <id value="nurse-nancy"/>
+  <meta>
+    <versionId value="2"/>
+    <lastUpdated value="2022-04-21T20:04:20.632+00:00"/>
+    <source value="#2i0KUIJOrgWECPPA"/>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
+  </meta>
+  <identifier>
+    <system value="http://www.acme.org/practitioners"/>
+    <value value="456789"/>
+  </identifier>
+  <name>
+    <family value="Nurse"/>
+    <given value="Nancy"/>
+    <prefix value="RNP"/>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="NNNP@direct.ExampleMedicalPractice.net"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <use value="work"/>
+    <line value="310 Hay St"/>
+    <city value="East Perth"/>
+    <state value="WA"/>
+    <postalCode value="6004"/>
+  </address>
+</Practitioner>

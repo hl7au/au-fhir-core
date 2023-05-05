@@ -5,7 +5,11 @@
   <meta>
     <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentcomposition"/>
   </meta>
-  <status value="final"/>
+   <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:uuid:a06a4e52-ba46-4923-b72d-a40c1c52808b"/>
+    </identifier>
+    <status value="final"/>
   <type>
     <coding>
       <system value="http://loinc.org"/>

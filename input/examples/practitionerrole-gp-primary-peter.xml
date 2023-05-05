@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <!--  Example adapted from MCC eCare Plan Implementation Guide PractitionerRoleMCC3  -->
+  <id value="gp-primary-peter"/>
+  <meta>
+    <versionId value="2"/>
+    <lastUpdated value="2022-05-18T23:39:06.982+00:00"/>
+    <source value="#iQ383PGcdyFc6WvK"/>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+  </meta>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="EI"/>
+        <display value="Employee number"/>
+      </coding>
+      <text value="Employee Number"/>
+    </type>
+    <system value="http://example.org/SomeOrganization/practitioners"/>
+    <value value="23"/>
+  </identifier>
+  <active value="true"/>
+  <period>
+    <start value="2012-01-01"/>
+    <end value="2012-03-31"/>
+  </period>
+  <practitioner>
+    <reference value="Practitioner/primary-peter"/>
+    <display value="Dr Peter Primary"/>
+  </practitioner>
+  <organization>
+    <reference value="http://example.org/SomeOrganization/123"/>
+  </organization>
+  <code>
+    <coding>
+      <system value="http://nucc.org/provider-taxonomy"/>
+      <code value="208D00000X"/>
+      <display value="General Practice Physician"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="62247001"/>
+    </coding>
+    <coding>
+      <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
+      <code value="253111"/>
+    </coding>
+  </code>
+  <specialty>
+    <coding>
+      <system value="http://nucc.org/provider-taxonomy"/>
+      <code value="2083P0901X"/>
+      <display value="General Preventive Medicine"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="394814009"/>
+      <display value="General practice (specialty)"/>
+    </coding>
+  </specialty>
+  <location>
+    <reference value="http://example.org/Location/SouthWing"/>
+    <display value="South Wing, second floor"/>
+  </location>
+  <healthcareService>
+    <reference value="http://example.org/HealthcareService/123"/>
+  </healthcareService>
+  <telecom>
+    <system value="phone"/>
+    <value value="(08) 7010 5556"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="PPP@example.org"/>
+    <use value="work"/>
+  </telecom>
+  <availableTime>
+    <daysOfWeek value="mon"/>
+    <daysOfWeek value="tue"/>
+    <daysOfWeek value="wed"/>
+    <availableStartTime value="09:00:00"/>
+    <availableEndTime value="16:30:00"/>
+  </availableTime>
+  <availableTime>
+    <daysOfWeek value="thu"/>
+    <daysOfWeek value="fri"/>
+    <availableStartTime value="09:00:00"/>
+    <availableEndTime value="12:00:00"/>
+  </availableTime>
+  <notAvailable>
+    <description value="Peter will be on extended leave during June 2022"/>
+    <during>
+      <start value="2017-05-01"/>
+      <end value="2017-05-20"/>
+    </during>
+  </notAvailable>
+  <availabilityExceptions value="Peter is generally unavailable on public holidays and during the Christmas/New Year break"/>
+</PractitionerRole>
