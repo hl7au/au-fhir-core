@@ -450,8 +450,8 @@
 			<reference>
 				<reference value="CareTeam/mcc"/>
 			</reference>
-			<name value="CareTeam - multiple chronic conditions"/>
-			<description value="Multiple chronic condition focused care team&#xa;&#xa;Patient: Mr. Harry Dan"/>
+			<name value="CareTeam - multiple chronic conditions (part of multiple chronic condition care plan)"/>
+			<description value="Multiple chronic condition focused care team (part of multiple chronic condition care plan).&#xa;&#xa;Patient: Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-careteam"/>
 		</resource>
 		<!--COMPOSITION EXAMPLES-->
@@ -484,8 +484,8 @@
 			<reference>
 				<reference value="Condition/ckd"/>
 			</reference>
-			<name value="Condition - Chronic Kidney Disease"/>
-			<description value="Chronic Kidney Disease (target to be addressed by MCC care plan)&#xa;&#xa;Patient: Mr. Harry Dan"/>
+			<name value="Condition - Chronic Kidney Disease (part of multiple chronic condition care plan)"/>
+			<description value="Chronic Kidney Disease (part of multiple chronic condition care plan)&#xa;&#xa;Patient: Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
 		<resource>
@@ -1004,8 +1004,8 @@
 			<reference>
 				<reference value="Observation/bodyweight-mcc"/>
 			</reference>
-			<name value="Observation - Body weight MCC"/>
-			<description value="Body weight observation related to care plan part of multiple chronic conditions.&#xa;&#xa;Patient: Mr. Harry Dan"/>
+			<name value="Observation - Body weight (part of multiple chronic condition care plan)"/>
+			<description value="Body weight observation related to care plan (part of multiple chronic condition care plan).&#xa;&#xa;Patient: Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight"/>
 		</resource>
 		<resource>
@@ -1028,8 +1028,8 @@
 			<reference>
 				<reference value="Observation/bun-mcc"/>
 			</reference>
-			<name value="Observation - Urea nitrogen [Mass/volume] in Serum or Plasma"/>
-			<description value="Urea nitrogen [Mass/volume] in Serum or Plasma 24 mg/dL part of multiple chronic condition care plan.&#xa;&#xa;Patient: Mr. Harry Dan"/>
+			<name value="Observation - Urea nitrogen [Mass/volume] in Serum or Plasma (part of multiple chronic condition care plan)"/>
+			<description value="Urea nitrogen [Mass/volume] in Serum or Plasma 24 mg/dL (part of multiple chronic condition care plan).&#xa;&#xa;Patient: Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -1423,24 +1423,24 @@
 			<reference>
 				<reference value="Practitioner/levin-henry"/>
 			</reference>
-			<name value="Practitioner - Dr Henry Levin VII"/>
-			<description value="Dr Henry Levin VII"/>
+			<name value="Practitioner - Dr Henry Levin VII (part of multiple chronic condition care plan)"/>
+			<description value="Dr Henry Levin VII (part of multiple chronic condition care plan)"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="Practitioner/nurse-nancy"/>
 			</reference>
-			<name value="Practitioner - RNP Nancy Nurse"/>
-			<description value="RNP Nancy Nurse"/>
+			<name value="Practitioner - RNP Nancy Nurse (part of multiple chronic condition care plan)"/>
+			<description value="RNP Nancy Nurse (part of multiple chronic condition care plan)"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="Practitioner/primary-peter"/>
 			</reference>
-			<name value="Practitioner - Dr Peter Primary"/>
-			<description value="Dr Peter Primary"/>
+			<name value="Practitioner - Dr Peter Primary (part of multiple chronic condition care plan)"/>
+			<description value="Dr Peter Primary (part of multiple chronic condition care plan)"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
@@ -1496,24 +1496,24 @@
 			<reference>
 				<reference value="PractitionerRole/gp-primary-peter"/>
 			</reference>
-			<name value="PractitionerRole - General Practitioner"/>
-			<description value="Dr Peter Primary, General Practitioner, at Some Organisation"/>
+			<name value="PractitionerRole - General Practitioner (part of multiple chronic condition care plan)"/>
+			<description value="Dr Peter Primary, General Practitioner, at Some Organisation (part of multiple chronic condition care plan)"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="PractitionerRole/nephrologist-levin-henry"/>
 			</reference>
-			<name value="PractitionerRole - Nephrologist"/>
-			<description value="Dr Henry Levin VII, Nephrologist, at Some Organisation"/>
+			<name value="PractitionerRole - Nephrologist (part of multiple chronic condition care plan)"/>
+			<description value="Dr Henry Levin VII, Nephrologist, at Some Organisation (part of multiple chronic condition care plan)"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="PractitionerRole/np-nurse-nancy"/>
 			</reference>
-			<name value="PractitionerRole - Registered nurse"/>
-			<description value="Nurse Nancy, Registered nurse, at Some Organisation"/>
+			<name value="PractitionerRole - Registered nurse (part of multiple chronic condition care plan)"/>
+			<description value="Nurse Nancy, Registered nurse, at Some Organisation (part of multiple chronic condition care plan)"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
