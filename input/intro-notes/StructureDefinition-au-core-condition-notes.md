@@ -17,22 +17,25 @@
         <td>patient+category</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient+clinical-status</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>token</code></td>
-        <td><code>reference</code>+<code>token</code>+<code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient+category+clinical-status</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code>+<code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient+code</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>patient.identifier</td>
