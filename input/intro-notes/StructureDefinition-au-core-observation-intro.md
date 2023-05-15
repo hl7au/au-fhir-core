@@ -55,7 +55,9 @@ The following are supported usage scenarios for this profile:
 
 
 #### Profile specific implementation guidance
-TBD
+- Codes **SHOULD** be drawn from SNOMED CT-AU or LOINC. Additional codes that translate or map to the code are allowed. For example providing both a local code and the SNOMED CT-AU code.
+- `Observation.category` provides an efficient way of supporting system interactions, e.g. restricting searches, to a defined context such as social history or laboratory. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
+  - An observation representing questions and responses to surveys and screening and assessment tools **SHALL** have one `Observation.category` as "survey".
 
 
 

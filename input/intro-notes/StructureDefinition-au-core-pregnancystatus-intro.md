@@ -17,8 +17,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 
 #### Profile specific implementation guidance
-TBD
+{% include observation_coding_guidance.md -%}
 
-
-
+<p class="stu-note">Specific feedback is sought on appropriate category values for Observations relating to pregnancy.</p>
 

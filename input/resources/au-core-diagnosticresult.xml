@@ -164,9 +164,7 @@
         <severity value="error"/>
         <human value="The component shall at least have a value or a data absent reason"/>
         <expression value="value.exists() or dataAbsentReason.exists()"/>
-        <source
-          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult"
-        />
+        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult"/>
       </constraint>
       <mustSupport value="true"/>
     </element>

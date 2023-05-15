@@ -22,5 +22,5 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - A more specific code is used to indicate the method, for example 11885-1 *Gestational age Estimated from last menstrual period* in addition to 57036006 *Fetal gestational age*
 - Antenatal observations will represent the pregnant individual as `Observation.subject` and the fetus as `Observation.focus`
 
-
+<p class="stu-note">Specific feedback is sought on appropriate category values for Observations relating to pregnancy.</p>
 
