@@ -21,4 +21,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 #### Profile specific implementation guidance
 {% include observation_diagnostics_guidance.md -%}
-
+- Unless the specimen is explicitly clear in `Observation.code`, the observation **SHOULD** be made available in `Observation.specimen`.

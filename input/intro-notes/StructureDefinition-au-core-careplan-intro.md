@@ -17,8 +17,10 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core
 
 
 #### Profile specific implementation guidance
-TBD
+- a care plan can be
+  - primarily narrative care plan supported using `CarePlan.text`
+  - structured using `CarePlan.goal` and `CarePlan.activity`
+- to tie a care plan to a specific condition, `CarePlan.addresses` can be used to reference a Condition resource.
+- a Provenance resource can be used for detailed review information such as date of last review and who reviewed the care plan.
 
-
-
-
+<p class="stu-note">Specific feedback is sought on appropriate category values for care plans.</p>

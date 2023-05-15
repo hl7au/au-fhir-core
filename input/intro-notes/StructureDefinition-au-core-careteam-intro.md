@@ -17,8 +17,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core
 
 
 #### Profile specific implementation guidance
-TBD
+- Because PractitionerRole supplies a provider’s location, contact information, and reference to the Practitioner, it **SHOULD** be referenced in `CareTeam.member` instead of the a Practitioner resource.
 
-
-
+<p class="stu-note">Specific feedback is sought on appropriate category values for care teams.</p>
 
