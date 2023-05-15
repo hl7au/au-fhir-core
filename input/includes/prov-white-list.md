@@ -11,6 +11,7 @@ AU Core Provenance **SHALL** be supported for the following resource types that 
 <li>DiagnosticReport</li>
 <li>DocumentReference</li>
 <li>Encounter</li>
+<li>HealthcareService</li>
 <li>Immunization</li>
 <li>MedicationAdministration</li>
 <li>MedicationDispense</li>
@@ -24,4 +25,5 @@ AU Core Provenance **SHALL** be supported for the following resource types that 
 <li>Procedure</li>
 <li>RelatedPerson</li>
 <li>ServiceRequest</li>
+<li>Specimen</li>
 </ul>

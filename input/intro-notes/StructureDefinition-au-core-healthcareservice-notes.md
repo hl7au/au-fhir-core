@@ -14,7 +14,7 @@
         <td></td>
   </tr>
   <tr>
-        <td>category</td>
+        <td>service-category</td>
         <td><b>SHOULD</b></td>
         <td><code>token</code></td>
         <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
@@ -44,7 +44,7 @@
         <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
   </tr>
   <tr>
-        <td>type</td>
+        <td>service-type</td>
         <td><b>SHOULD</b></td>
         <td><code>token</code></td>
         <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
@@ -72,16 +72,16 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
-1. **SHOULD** support searching using a healthcare service using the **[`category`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
+1. **SHOULD** support searching using a healthcare service using the **[`service-category`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
     - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
-    `GET [base]/HealthcareService?category={system|}[code]`
+    `GET [base]/HealthcareService?service-category={system|}[code]`
 
     Example:
     
-      1. GET [base]/HealthcareService?category=http://snomed.info/sct\|708175003
+      1. GET [base]/HealthcareService?service-category=http://snomed.info/sct\|708175003
 
-    *Implementation Notes:* Fetches a bundle of all HealthcareService resources for the specified category ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all HealthcareService resources for the specified service category ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching a healthcare service by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
     - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
@@ -129,13 +129,13 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     *Implementation Notes:* Fetches a bundle of all HealthcareService resources for the specified specialty ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHOULD** support searching using a healthcare service using the **[`type`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
+1. **SHOULD** support searching using a healthcare service using the **[`service-type`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
     - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
-    `GET [base]/HealthcareService?type={system|}[code]`
+    `GET [base]/HealthcareService?service-type={system|}[code]`
 
     Example:
     
-      1. GET [base]/HealthcareService?type=http://snomed.info/sct\|708172000
+      1. GET [base]/HealthcareService?service-type=http://snomed.info/sct\|708172000
 
     *Implementation Notes:* Fetches a bundle of all HealthcareService resources for the specified type ([how to search by token](http://hl7.org/fhir/R4/search.html#token))

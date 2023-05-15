@@ -30,6 +30,7 @@
         <td>patient+type</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code></td>
+         <td></td>
   </tr>
   <tr>
         <td>identifier</td>

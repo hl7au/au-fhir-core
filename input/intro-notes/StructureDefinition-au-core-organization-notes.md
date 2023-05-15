@@ -34,6 +34,8 @@
  </tbody>
 </table>
 
+<p class="stu-note">Specific feedback is sought on supporting search on Organization.address vs Organization.contact.address. The core FHIR search parameter `address` searches in Organization.contact.address. There is no core FHIR search parameter that searches Organization.adress.</p>
+
 
 #### Mandatory Search Parameters
 
