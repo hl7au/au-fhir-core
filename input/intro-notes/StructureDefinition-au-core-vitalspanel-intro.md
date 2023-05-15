@@ -2,9 +2,8 @@
 
 The following are example usage scenarios for this profile:
 
-- TBD
-- TBD
-
+- Query for a vital signs panel of a particular patient
+- Record or update a vital signs panel associated with a patient
 
 #### Comparison with other national and international specifications
 
@@ -19,11 +18,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 
 **Profile specific implementation guidance**
-
-- TBD
-
-
-
-
+{% include observation_coding_guidance.md -%}
 
 

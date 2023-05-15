@@ -14,28 +14,18 @@
   <differential>
     <element id="Specimen">
       <path value="Specimen"/>
-      <constraint>
-        <key value="au-core-spc-04"/>
-        <severity value="error"/>
-        <human value="The specimen shall at least have a valid identifier or method or type"/>
-        <expression value="type.exists() or collection.method.exists() or identifier.where(system.count() + value.count() &gt;1).exists() or accessionIdentifier.where(system.count() + value.count() &gt;1).exists()"/>
-        <xpath value="exists(f:type) or exists(f:collection/f:method) or exists(f:identifier) or exists(f:accessionIdentifier)"/>
-        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-specimen"/>
-      </constraint>
     </element>
     <element id="Specimen.identifier">
       <path value="Specimen.identifier"/>
-      <condition value="au-core-spc-04"/>
       <mustSupport value="true"/>
     </element>
     <element id="Specimen.accessionIdentifier">
       <path value="Specimen.accessionIdentifier"/>
-      <condition value="au-core-spc-04"/>
       <mustSupport value="true"/>
     </element>
     <element id="Specimen.type">
       <path value="Specimen.type"/>
-      <condition value="au-core-spc-04"/>
+      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Specimen.subject">
@@ -57,7 +47,6 @@
     </element>
     <element id="Specimen.collection">
       <path value="Specimen.collection"/>
-      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Specimen.collection.collector">
@@ -76,14 +65,13 @@
     </element>
     <element id="Specimen.collection.method">
       <path value="Specimen.collection.method"/>
-      <condition value="au-core-spc-04"/>
       <mustSupport value="true"/>
     </element>
     <element id="Specimen.collection.bodySite">
       <path value="Specimen.collection.bodySite"/>
-      <condition value="au-core-spc-03"/>
+      <condition value="au-core-spc-01"/>
       <constraint>
-        <key value="au-core-spc-03"/>
+        <key value="au-core-spc-01"/>
         <severity value="error"/>
         <human value="If a coded body site is provided, at least one code shall be from SNOMED CT"/>
         <expression value="coding.exists() implies coding.where(system='http://snomed.info/sct').exists()"/>
