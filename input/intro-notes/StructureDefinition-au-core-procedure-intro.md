@@ -19,6 +19,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 #### Profile specific implementation guidance
 - `Procedure.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
+- The use of coding can vary significantly across systems, client applications need to understand that they may encounter codes they do not recognise and be prepared to handle those resources appropriately. Servers **SHOULD** populate `Procedure.code.text` and/or `Procedure.code.coding.display` so that client applications can at least display the condition even if the client application does not recognise the code supplied.
 - In an exchange with the My Health Record system `Procedure.status` is "completed"
 - The Procedure resource can represent a reason as a code with `Procedure.reasonCode`, or a reference with `Procedure.reasonReference` to a Condition or other resource.
   - Although both are marked as must support, sending systems are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements

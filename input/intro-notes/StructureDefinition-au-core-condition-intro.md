@@ -21,6 +21,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 #### Profile specific implementation guidance
 - `Condition.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations. 
+- The use of coding can vary significantly across systems, client applications need to understand that they may encounter codes they do not recognise and be prepared to handle those resources appropriately. Servers **SHOULD** populate `Condition.code.text` and/or `Condition.code.coding.display` so that client applications can at least display the condition even if the client application does not recognise the code supplied.
 - An active condition is represented using "active" in `Condition.clinicalStatus`
 - To represent that a patient does not have a condition or history of condition, an appropriate negation code is used in `Condition.code`
 - Refutation is not expected to be handled except as above - an appropriate negation code in `Condition.code` and `Condition.verificationStatus` of "confirmed" or "unconfirmed"

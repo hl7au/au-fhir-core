@@ -20,6 +20,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core
 
 #### Profile specific implementation guidance
 - `ServiceRequest.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
+- The use of coding can vary significantly across systems, client applications need to understand that they may encounter codes they do not recognise and be prepared to handle those resources appropriately. Servers **SHOULD** populate `ServiceRequest.code.text` and/or `ServiceRequest.code.coding.display` so that client applications can at least display the condition even if the client application does not recognise the code supplied. 
 - The ServiceRequest resource can represent a reason as a code with `ServiceRequest.reasonCode`, or a reference with `ServiceRequest.reasonReference` to a Condition or other resource.
   - Although both are marked as must support, sending systems are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
   - A receiving or persisting system **SHALL** support both elements
