@@ -100,9 +100,9 @@ For mandatory elements (minimum cardinality is > 0), the element **SHALL** be po
 
 
 ### Extensibility – “additional” elements
-A sending system may send "additional" elements beyond those flagged with Must Support in an AU Core profile. Additional elements allow local requirements to be reflected including technical and workflow context for the resource, and extending the health information supported in exchanges. For this reason extensibility is generally allowed in AU Core profiles, only in some use case profiles are the rules tightened to limit the nature of additional information that can be sent.
+A server may send "additional" elements beyond those flagged with Must Support in an AU Core profile. Additional elements allow local requirements to be reflected including technical and workflow context for the resource, and extending the health information supported in exchanges. For this reason extensibility is generally allowed in AU Core profiles, only in some use case profiles are the rules tightened to limit the nature of additional information that can be sent.
 
-Depending on local requirements, a receiving or persisting system may ignore these "additional" elements, may treat the data as for rendering only, or be capable of recognising and using the element. A resource exchanged containing an additional element **SHALL** conform to AU Core conformance requirements. Requirements applicable to handling additional elements are summarised below: 
+Depending on local requirements, a client application may ignore these "additional" elements, may treat the data as for rendering only, or be capable of recognising and using the element. A resource exchanged containing an additional element **SHALL** conform to AU Core conformance requirements. Requirements applicable to handling additional elements are summarised below: 
 - an additional element **SHALL** be part of a supported resource, it may be a canonical element or an extension
 - an additional element **SHALL** conform to the HL7 FHIR standard 
 - a resource referenced by an additional element **SHALL** conform to an AU Core profile and the HL7 FHIR standard

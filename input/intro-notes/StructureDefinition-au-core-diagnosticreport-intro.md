@@ -24,10 +24,10 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - Results that are free text or report form are represented using ‘DiagnosticReport.presentedForm`.
 - References to a Media resource are preferred to be [contained](http://hl7.org/fhir/R4/references.html#contained) but may be an external resource
 - The DiagnosticReport resource can represent the clinical conclusion as a text summary with `DiagnosticReport.conclusion` or a set of codes with `DiagnosticReport.conclusionCode`.
-  - Although both are marked as must support, sending systems are not required to support both a text and a set of codes, but they **SHALL** support *at least one* of these elements
-  - A receiving or persisting system **SHALL** support both elements
+  - Although both are marked as must support, servers are not required to support both a text and a set of codes, but they **SHALL** support *at least one* of these elements
+  - A client application **SHALL** support both elements
 - The DiagnosticReport resource can represent the result as a text summary with `DiagnosticReport.conclusion` or a set of codes with `DiagnosticReport.conclusionCode`.
-  - Although both are marked as must support, sending systems are not required to support both a text and a set of codes, but they **SHALL** support *at least one* of these elements
-  - A receiving or persisting system **SHALL** support both elements
+  - Although both are marked as must support, servers are not required to support both a text and a set of codes, but they **SHALL** support *at least one* of these elements
+  - A client application **SHALL** support both elements
 
 
