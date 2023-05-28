@@ -53,9 +53,9 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/procedure.html#search)** search parameter:
     - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`)
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
-    `GET [base]/RelatedPerson?patient={Type/}[id]` or optionally`GET [base]/RelatedPerson?patient.identifier=[system][value]`
+    `GET [base]/RelatedPerson?patient={Type/}[id]` or optionally`GET [base]/RelatedPerson?patient.identifier=[system|][code]`
 
     Example:
     
