@@ -33,8 +33,7 @@
     <dataAbsentReason>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-            <code value="not-applicable"/>
-            <display value="asked-declined"/>
+            <code value="asked-declined"/>
         </coding>
         <text value="Patient declined to answer"/>
     </dataAbsentReason>

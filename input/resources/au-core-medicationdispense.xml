@@ -51,8 +51,8 @@
       <path value="MedicationDispense.status"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MedicationDispense.statusReason">
-      <path value="MedicationDispense.statusReason"/>
+    <element id="MedicationDispense.statusReason[x]">
+      <path value="MedicationDispense.statusReason[x]"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationDispense.category">
