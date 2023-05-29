@@ -17,6 +17,12 @@
         ABN that does not conform to ABN format to ensure no conflict with real world values -->
         <value value="51824997755"/>
     </identifier>
+    <specialty>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="394734003"/>
+        </coding>
+    </specialty>
     <name value="Large Private X-RAY"/>
     <telecom>
         <system value="phone"/>
@@ -28,4 +34,11 @@
         <value value="https://lge-private-xray.example.com"/>
         <use value="work"/>
     </telecom>
+    <serviceProvisionCode>
+        <coding>
+            <system value="http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"/>
+            <code value="FBB"/>
+            <display value="Fees and Bulk Billing"/>
+        </coding>
+    </serviceProvisionCode>
 </HealthcareService>
