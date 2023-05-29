@@ -48,13 +48,13 @@
     <coding>
       <system value="http://nucc.org/provider-taxonomy"/>
       <code value="207RN0300X"/>
-      <display value="Allopathic Osteopathic Physicians; Internal Medicine, Nephrology"/>
     </coding>
     <coding>
       <system value="http://snomed.info/sct"/>
       <code value="394589003"/>
       <display value="Nephrology"/>
     </coding>
+    <text value="Allopathic Osteopathic Physicians; Internal Medicine, Nephrology"/>
   </specialty>
   <location>
     <reference value="http://example.org/Location/SouthWing"/>

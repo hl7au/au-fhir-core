@@ -51,7 +51,7 @@
     <coding>
       <system value="http://nucc.org/provider-taxonomy"/>
       <code value="2083P0901X"/>
-      <display value="General Preventive Medicine"/>
+      <display value="Public Health &amp; General Preventive Medicine Physician"/>
     </coding>
     <coding>
       <system value="http://snomed.info/sct"/>

@@ -40,7 +40,7 @@
   <tr>
         <td>patient+relationship</td>
         <td><b>SHOULD</b></td>
-        <td><code>token</code></td>
+        <td><code>reference +token</code></td>
         <td></td>
   </tr>
  </tbody>
@@ -78,7 +78,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     
       1. GET [base]/RelatedPerson/2169591
       1. GET [base]/RelatedPerson?_id=2169591
-      1. GET [base]/RelatedPerson?_id=2169591&amp;_revinclude
+      1. GET [base]/RelatedPerson?_id=2169591&amp;_revinclude=Provenance:target
 
     *Implementation Notes:* Fetches a single RelatedPerson. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
