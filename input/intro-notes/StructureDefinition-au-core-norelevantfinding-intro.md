@@ -2,8 +2,8 @@
 
 The following are example usage scenarios for this profile:
 
-- TBD
-- TBD
+- Query for observations of clinical judgement of no relevant finding associated with a patient (e.g. no current medications or no history of vaccination)
+- Record or update a clinical judgement of no relevant finding associated with a patient (e.g. no current medications or no history of vaccination)
 
 
 #### Comparison with other national and international specifications
@@ -17,8 +17,10 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 
 **Profile specific implementation guidance**
-
-- TBD
+- An Observation of no relevant finding **SHOULD** only be used where there is no suitable other resource.
+  - negated allergy or no known allergies **SHOULD** be supported in an AllergyIntolerance resource.
+  - negated condition or no known problems **SHOULD** be supported in a Condition resource.
+{% include observation_coding_guidance.md -%}
 
 
 

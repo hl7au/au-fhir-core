@@ -6,6 +6,12 @@
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
     </meta>
     <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="survey"/>
+        </coding>
+    </category>
     <code>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
@@ -40,7 +46,7 @@
             <system value="http://snomed.info/sct"/>
             <code value="1234391000168107"/>
             <display value="No known current medicines"/>
-        </coding>        
+        </coding>
         <text value="Patient not taking any medications"/>
     </valueCodeableConcept>
 </Observation>
