@@ -30,4 +30,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - Although both are marked as must support, servers are not required to support both a text and a set of codes, but they **SHALL** support *at least one* of these elements
   - A client application **SHALL** support both elements
 
+  <p class="stu-note">Composition, DocumentReference, and DiagnosticReport resources support support the exchange of clinical notes. Specific feedback is sought on resource selection.</p>
+
 
