@@ -29,9 +29,9 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/specimen.html#search)** search parameter:
     - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system][value]`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`
 
-    `GET [base]/Specimen?patient={Type/}[id]` or optionally`GET [base]/Specimen?patient.identifier=[system][value]`
+    `GET [base]/Specimen?patient={Type/}[id]` or optionally`GET [base]/Specimen?patient.identifier=[system|][code]`
 
     Example:
     
@@ -54,5 +54,6 @@ The following search parameter combinations **SHOULD** be supported:
     
       1. GET [base]/Specimen/2169591
       1. GET [base]/Specimen?_id=2169591
+      1. GET [base]/Specimen?_id=2169591_revinclude=Provenance:target
 
     *Implementation Notes:* Fetches a single Specimen. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
