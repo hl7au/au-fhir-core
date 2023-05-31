@@ -2,7 +2,7 @@
 - The observations **MAY** have additional codes that translate or map to the Observation code or category codes. For example:
    -  providing a local code
    -  providing a more specific code
-- The use of coding can vary significantly across systems, client applications need to understand that they may encounter codes they do not recognise and be prepared to handle those resources appropriately. Servers **SHOULD** populate `Observation.code.text` and/or `Observation.code.coding.display` so that client applications can at least display the condition even if the client application does not recognise the code supplied. 
+- The use of coding can vary significantly across systems, client applications need to understand that they may encounter codes they do not recognise and be prepared to handle those resources appropriately. Servers **SHOULD** populate `Observation.code.text` and/or `Observation.code.coding.display` so that client applications can at least display the observation even if the client application does not recognise the code supplied. 
 - The Observation resource can represent a result using one or both of a single value with `Observation.value`, or set of results using either `Observation.component.value` or `Observation.hasMember`.
   - Although all are marked as must support, servers are not required to support all choices, but they **SHALL** support *at least one* of these elements
   - A client application **SHALL** support both elements

@@ -123,7 +123,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     Example:
     
-      1. GET [base]/DiagnosticReport?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|LAB
+      1. GET [base]/DiagnosticReport?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/v2-0074\|LAB
 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and category ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
@@ -137,7 +137,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     Example:
     
-      1. GET [base]/DiagnosticReport?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|LAB&amp;date=ge2020-01-01T00:00:00Z
+      1. GET [base]/DiagnosticReport?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/v2-0074\|LAB&amp;date=ge2020-01-01T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and date and category ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
@@ -179,7 +179,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     Example:
     
-      1. GET [base]/DiagnosticReport?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|LAB&amp;status=final
+      1. GET [base]/DiagnosticReport?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/v2-0074\|LAB&amp;status=final
 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and category and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
