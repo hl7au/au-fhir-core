@@ -1,4 +1,4 @@
-#### Usage scenarios
+### Usage scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Query for category of diagnostic report (e.g. all cardiology reports)
 - Record or update a diagnostic report for a patient
 
-#### Comparison with other national and international specifications
+### Comparison with other national and international specifications
 
 A resource conforming to this profile:
 - **MAY** be conformant to
@@ -19,7 +19,7 @@ No equivalent IPA profile.
 Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips) or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
 
 
-#### Profile specific implementation guidance
+### Profile specific implementation guidance
 - `DiagnosticReport.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
 - Results that are free text or report form are represented using ‘DiagnosticReport.presentedForm`.
 - References to a Media resource are preferred to be [contained](http://hl7.org/fhir/R4/references.html#contained) but may be an external resource

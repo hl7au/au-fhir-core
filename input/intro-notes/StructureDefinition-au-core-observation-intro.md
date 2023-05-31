@@ -1,4 +1,4 @@
-#### AU Core Profiles for Observation
+### AU Core Profiles for Observation
 The following core profiles for the Observation resource have been defined. If implementations use an Observation resource when expressing profile-specific concepts as structured data, they **SHOULD** conform to the following profiles:
 
 - [AU Core Assertion of No Relevant Finding](StructureDefinition-au-core-norelevantfinding.html).
@@ -35,7 +35,7 @@ The following core profiles for the Observation resource have been defined. If i
 [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html).
 
 
-#### Comparison with other national and international specifications
+### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [IPA-Observation](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html)
@@ -46,7 +46,7 @@ No equivalent International Patient Summary profile.
 Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa) or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
 
 
-#### Usage scenarios
+### Usage scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -54,7 +54,7 @@ The following are supported usage scenarios for this profile:
 - Record or update an observation about a patient
 
 
-#### Profile specific implementation guidance
+### Profile specific implementation guidance
 - Codes **SHOULD** be drawn from SNOMED CT-AU or LOINC. Additional codes that translate or map to the code are allowed. For example providing both a local code and the SNOMED CT-AU code.
 - `Observation.category` provides an efficient way of supporting system interactions, e.g. restricting searches, to a defined context such as social history or laboratory. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
   - An observation representing questions and responses to surveys and screening and assessment tools **SHALL** have one `Observation.category` as "survey".

@@ -1,4 +1,4 @@
-#### Usage scenarios
+### Usage scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update a record of a procedure performed on a patient
 
 
-#### Comparison with other national and international specifications
+### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [US Core Procedure](http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure)
@@ -17,7 +17,7 @@ No equivalent International Patient Access profile.
 Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips), or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
 
 
-#### Profile specific implementation guidance
+### Profile specific implementation guidance
 - `Procedure.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
 - The use of coding can vary significantly across systems, client applications need to understand that they may encounter codes they do not recognise and be prepared to handle those resources appropriately. Servers **SHOULD** populate `Procedure.code.text` and/or `Procedure.code.coding.display` so that client applications can at least display the condition even if the client application does not recognise the code supplied.
 - In an exchange with the My Health Record system `Procedure.status` is "completed"

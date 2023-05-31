@@ -1,4 +1,4 @@
-#### Usage scenarios
+### Usage scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -8,7 +8,7 @@ The following are supported usage scenarios for this profile:
 - Record or update a request for a service for a patient
 
 
-#### Comparison with other national and international specifications
+### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [US Core ServiceRequest](http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest)
@@ -18,7 +18,7 @@ No equivalent International Patient Access or International Patient Summary prof
 Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
 
 
-#### Profile specific implementation guidance
+### Profile specific implementation guidance
 - `ServiceRequest.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
 - The use of coding can vary significantly across systems, client applications need to understand that they may encounter codes they do not recognise and be prepared to handle those resources appropriately. Servers **SHOULD** populate `ServiceRequest.code.text` and/or `ServiceRequest.code.coding.display` so that client applications can at least display the condition even if the client application does not recognise the code supplied. 
 - The ServiceRequest resource can represent a reason as a code with `ServiceRequest.reasonCode`, or a reference with `ServiceRequest.reasonReference` to a Condition or other resource.

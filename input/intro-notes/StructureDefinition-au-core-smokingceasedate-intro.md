@@ -1,4 +1,4 @@
-#### Usage scenarios
+### Usage scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update an observation of tobacco smoking cease date (quit date) associated with a patient
 
 
-#### Comparison with other national and international specifications
+### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [IPA-Observation](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html)
@@ -17,7 +17,7 @@ No equivalent International Patient Summary profile.
 Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa) or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
 
 
-#### Profile specific implementation guidance
+### Profile specific implementation guidance
 {% include observation_coding_guidance.md -%}
 
 

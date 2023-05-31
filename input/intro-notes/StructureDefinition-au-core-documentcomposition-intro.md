@@ -1,4 +1,4 @@
-#### Usage scenarios
+### Usage scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update a clinical document for a patient
 
 
-#### Comparison with other national and international specifications
+### Comparison with other national and international specifications
 
 A resource conforming to this profile:
 - **MAY** be conformant to [Composition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips) if:
@@ -25,7 +25,7 @@ No equivalent International Patient Access or US Core profile.
 Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips) **MAY NOT** conform to AU Core.
 
 
-#### Profile specific implementation guidance
+### Profile specific implementation guidance
 - TBD
 
 <p class="stu-note">Composition, DocumentReference, and DiagnosticReport resources support support the exchange of clinical notes. Specific feedback is sought on resource selection to form agreement on the clinical notes that SHOULD be exposed via Composition.</p>

@@ -1,4 +1,4 @@
-#### Usage scenarios
+### Usage scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -7,7 +7,7 @@ The following are supported usage scenarios for this profile:
 - Record or update a document belonging to a patient
 
 
-#### Comparison with other national and international specifications
+### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [IPA-DocumentReference](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference)
@@ -18,7 +18,7 @@ No equivalent International Patient Summary profile.
 Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa) or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
 
 
-#### Profile specific implementation guidance
+### Profile specific implementation guidance
 - The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.content.attachment.url` or as inline base64 encoded data using `DocumentReference.content.attachment.data`.
     -  Although both are marked as must support, servers are not required to support an address and inline base64 encoded data, but **SHALL** support *at least one* of these elements.
     -  A client application **SHALL** support both elements.

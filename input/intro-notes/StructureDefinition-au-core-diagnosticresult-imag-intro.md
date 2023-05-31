@@ -1,4 +1,4 @@
-#### Usage scenarios
+### Usage scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -7,7 +7,7 @@ The following are supported usage scenarios for this profile:
 - Record or update diagnostic imaging results belonging to a patient
 
 
-#### Comparison with other national and international specifications
+### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
 - [IPA-Observation](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html)
@@ -18,7 +18,7 @@ A resource conforming to this profile is conformant to:
 Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa), [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips), or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
 
 
-#### Profile specific implementation guidance
+### Profile specific implementation guidance
 {% include observation_diagnostics_guidance.md -%}
 
 <p class="stu-note">Specific feedback is sought on supporting complex body site information in Observations. Coded laterality (or other qualifiers) can be supplied using a post-coordinated concept e.g. Observation.bodySite.coding.code="71341001:272741003=7771000" (see <a href="Observation-bonedensity-simple-precon.html">Observation/bonedensity-simple-precon</a>) or by use of the extension <a href="http://hl7.org/fhir/R4/extension-bodysite.html">bodySite</a> to reference a BodyStructure resource (see example <a href="Observation-bonedensity-simple-contained.html">Observation/bonedensity-simple-contained</a>). Additional body site information can only be supported by referenced BodyStructure resource.</p>

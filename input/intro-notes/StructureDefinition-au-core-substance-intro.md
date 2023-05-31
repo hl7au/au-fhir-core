@@ -1,4 +1,4 @@
-#### Usage scenarios
+### Usage scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -6,10 +6,10 @@ The following are supported usage scenarios for this profile:
 - Record or update information about a substance referenced by a Medication resource
 
 
-#### Comparison with other national and international specifications
+### Comparison with other national and international specifications
 
 No equivalent International Patient Access, International Patient Summary, or US Core profile.
 
 
-#### Profile specific implementation guidance
+### Profile specific implementation guidance
 None.

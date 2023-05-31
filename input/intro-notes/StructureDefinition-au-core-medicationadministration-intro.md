@@ -1,4 +1,4 @@
-#### Usage scenarios
+### Usage scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -6,12 +6,12 @@ The following are supported usage scenarios for this profile:
 - Record or update a medication administration record for a patient
 
 
-#### Comparison with other national and international specifications
+### Comparison with other national and international specifications
 
 No equivalent International Patient Access, International Patient Summary, or US Core profile.
 
 
-#### Profile specific implementation guidance
+### Profile specific implementation guidance
 - See the [Medicine information](general-guidance.html#medicine-information) section for guidance 
 - MedicationAdministration resources can represent a medication using either a code with `MedicationAdministration.medicationCodeableConcept`, or reference a [Medication](http://hl7.org/fhir/R4/medication.html) resource with `MedicationAdministration.medicationReference`.
   - Although both are marked as must support, servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
