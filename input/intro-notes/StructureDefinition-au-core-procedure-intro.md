@@ -2,7 +2,7 @@
 
 The following are supported usage scenarios for this profile:
 
-- Query for a procedures performed on a patient
+- Query for procedures performed on a patient
 - Record or update a record of a procedure performed on a patient
 
 

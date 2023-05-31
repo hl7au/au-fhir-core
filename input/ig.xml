@@ -428,6 +428,14 @@
 			<description value="Left Knee&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodystructure"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="BodyStructure/tumour-spleen"/>
+			</reference>
+			<name value="BodyStructure - Splenic mass"/>
+			<description value="7 cm maximum diameter splenic mass with image&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodystructure"/>
+		</resource>
 		<!--CAREPLAN EXAMPLES-->
 		<resource>
 			<reference>
