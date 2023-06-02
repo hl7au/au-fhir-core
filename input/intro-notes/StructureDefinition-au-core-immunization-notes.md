@@ -110,9 +110,9 @@ The following search parameters and search parameter combinations **SHOULD** be 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/immunization.html#search)** and **[`vaccine-code`](https://hl7.org/fhir/R4/immunization.html#search)** search parameters:
     - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`
-    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `vaccine-code` (e.g.`code={system|}[code],{system|}[code],...`)
+    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `vaccine-code` (e.g.`vaccine-code={system|}[code],{system|}[code],...`)
 
-    `GET [base]/Immunization?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}`
+    `GET [base]/Immunization?patient={Type/}[id]&vaccine-code={system|}[code]{,{system|}[code],...}`
 
     Example:
     

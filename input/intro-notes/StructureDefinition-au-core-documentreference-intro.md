@@ -22,11 +22,12 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.content.attachment.url` or as inline base64 encoded data using `DocumentReference.content.attachment.data`.
     -  Although both are marked as must support, servers are not required to support an address and inline base64 encoded data, but **SHALL** support *at least one* of these elements.
     -  A client application **SHALL** support both elements.
-    -  `DocumentReference.content.attachment.url` may refer to a FHIR Binary Resource (i.e. [base]/Binary/[id]), FHIR Document Bundle (i.e. [base]/Bundle/[id], or another endpoint.
+    -  `DocumentReference.content.attachment.url` may refer to a FHIR Binary Resource (i.e. [base]/Binary/[id]), FHIR Document Bundle (i.e. [base]/Bundle/[id]), or another endpoint.
 
 <p class="stu-note">Composition, DocumentReference, and DiagnosticReport resources support support the exchange of clinical notes. Specific feedback is sought on resource selection.</p>
 
-<p class="stu-note">Specific feedback is sought on a can.</p>
+<p class="stu-note">Specific feedback is sought on the set of clinical notes and associated codes to be supported in Australia.</p>
 
+<p class="stu-note">Specific feedback is sought on the defining the local requirements of $docref operation including <a href="http://hl7.org/fhir/uv/ipa/2022Jan/OperationDefinition-docref.html">IPAFetchDocumentReference</a>.</p>
 
 
