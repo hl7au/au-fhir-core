@@ -21,6 +21,12 @@
     </identifier>
     <status value="active"/>
     <intent value="order"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
+            <code value="outpatient"/>
+        </coding>
+    </category>
     <medicationCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct"/>

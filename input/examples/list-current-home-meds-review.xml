@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<List xmlns="http://hl7.org/fhir">
+    <id value="current-home-meds-review"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medlist" />
+    </meta>
+    <language value="en-AU"/>
+    <status value="current"/>
+    <mode value="snapshot"/>
+    <title value="Current Medicines List"/>
+    <code>
+        <coding>
+            <system
+                value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+            <code value="101.32009"/>
+            <display value="Current Medicines"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/bennelong-anne"/>
+        <identifier>
+            <type>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                    <code value="NI"/>
+                    <display value="National unique individual identifier"/>
+                </coding>
+                <text value="IHI"/>
+            </type>
+            <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+            <value value="8003608166895854"/>
+        </identifier>
+    </subject>
+    <encounter>
+        <reference value="Encounter/home-meds-review"/>
+    </encounter>
+    <date value="2019-02-05"/>
+    <source>
+        <reference value="PractitionerRole/retail-pharmacist"/>
+    </source>
+    <entry>
+        <flag>
+            <coding>
+                <system value="http://terminology.hl7.org.au/CodeSystem/medicine-item-change"/>
+                <code value="nochange"/>
+                <display value="Unchanged"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="MedicationStatement/active-amiodarone"/>
+        </item>
+    </entry>
+    <entry>
+        <flag>
+            <coding>
+                <system value="http://terminology.hl7.org.au/CodeSystem/medicine-item-change"/>
+                <code value="nochange"/>
+                <display value="Unchanged"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="MedicationStatement/active-bisoprolol"/>
+        </item>
+    </entry>
+    <entry>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+            <valueString value="New finding of Atrial fibrillation"/>
+        </extension>
+        <flag>
+            <coding>
+                <system value="http://terminology.hl7.org.au/CodeSystem/medicine-item-change"/>
+                <code value="new"/>
+                <display value="New"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="MedicationStatement/intended-coq10"/>
+        </item>
+    </entry>
+</List>

@@ -778,6 +778,23 @@
 			<description value="Administration of Zoster vaccination refused (patient objection)&#xa;&#xa;Patient: Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
 		</resource>
+		<!--LIST EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="List/ceased-home-meds-review"/>
+			</reference>
+			<name value="List - Ceased Medicines List"/>
+			<description value="Ceased Medicines List from Home Medicines Review"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/List"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="List/current-home-meds-review"/>
+			</reference>
+			<name value="List - Current Medicines List"/>
+			<description value="Current Medicines List from Home Medicines Review"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/List"/>
+		</resource>
 		<!--LOCATION EXAMPLES-->
 		<resource>
 			<reference>
@@ -825,6 +842,14 @@
 			</reference>
 			<name value="Location - Patient home"/>
 			<description value="Patient home as kind of location (not a specific patient's location)."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Location/pharmacy"/>
+			</reference>
+			<name value="Location - Pharmacy building"/>
+			<description value="Pharmacy at 6 Macquarie St."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
 		</resource>
 		<!--MEDICATION EXAMPLES-->
@@ -1380,6 +1405,14 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Organization/pharmacy"/>
+			</reference>
+			<name value="Organization - Retail Pharmacy"/>
+			<description value="A Chain Retail Pharmacy"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Organization/services-au"/>
 			</reference>
 			<name value="Organization - Services Australia"/>
@@ -1478,6 +1511,14 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Practitioner/pharmacist"/>
+			</reference>
+			<name value="Practitioner - Mr Representative Pharmacist"/>
+			<description value="Mr Representative Pharmacist"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Practitioner/primary-peter"/>
 			</reference>
 			<name value="Practitioner - Dr Peter Primary (part of multiple chronic condition care plan)"/>
@@ -1559,10 +1600,10 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="PractitionerRole/pharmacist-retail"/>
+				<reference value="PractitionerRole/retail-pharmacist"/>
 			</reference>
 			<name value="PractitionerRole - Retail pharmacist"/>
-			<description value="Mr. Pharmacist, Retail pharmacist, at A Local Pharmacy"/>
+			<description value="Mr. Pharmacist, Retail pharmacist, at A Chain Pharmacy"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>

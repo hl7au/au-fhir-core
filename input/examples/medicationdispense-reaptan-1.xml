@@ -34,7 +34,7 @@
     </subject>
     <performer>
         <actor>
-            <reference value="PractitionerRole/pharmacist-retail"/>
+            <reference value="PractitionerRole/retail-pharmacist"/>
         </actor>
     </performer>
     <authorizingPrescription>
