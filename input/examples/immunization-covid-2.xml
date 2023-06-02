@@ -35,11 +35,14 @@
 			<value value="8003608833357361"/>
 		</identifier>
 	</patient>
+	<encounter>
+		<reference value="Encounter/covid-admin-2"/>
+	</encounter>
 	<occurrenceDateTime value="2021-08-01"/>
 	<recorded value="2021-08-01"/>
 	<primarySource value="true"/>
 	<location>
-		<reference value="Location/bobrester-medical-center"/> 
+		<reference value="Location/bobrester-medical-center"/>
 	</location>
 	<manufacturer>
 		<display value="Pfizer Australia Ltd" />
@@ -56,7 +59,7 @@
 			<text value="Administering Provider"/>
 		</function>
 		<actor>
-			<reference value="PractitionerRole/bobrester-bob-gp"/> 
+			<reference value="PractitionerRole/bobrester-bob-gp"/>
 			<identifier>
 				<type>
 					<coding>
@@ -72,6 +75,7 @@
 		</actor>
 	</performer>
 	<protocolApplied>
+		<series value="primary vaccination course 2-dose"/>
 		<targetDisease>
 			<coding>
 				<system value="http://snomed.info/sct"/>

@@ -35,6 +35,9 @@
 			<value value="8003608833357361"/>
 		</identifier>
 	</patient>
+	<encounter>
+		<reference value="Encounter/covid-admin-1"/>
+	</encounter>
 	<occurrenceDateTime value="2021-06-17"/>
 	<recorded value="2021-06-17"/>
 	<primarySource value="true"/>
@@ -88,6 +91,7 @@
 		</actor>
 	</performer>
 	<protocolApplied>
+		<series value="primary vaccination course 2-dose"/>
 		<targetDisease>
 			<coding>
 				<system value="http://snomed.info/sct"/>

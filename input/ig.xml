@@ -623,6 +623,22 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Encounter/covid-admin-1"/>
+			</reference>
+			<name value="Encounter - COVID 19 Vaccine Administration 1"/>
+			<description value="COVID 19 Vaccine Administration for Immunization-covid-1&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Encounter/covid-admin-2"/>
+			</reference>
+			<name value="Encounter - COVID 19 Vaccine Administration 2"/>
+			<description value="COVID 19 Vaccine Administration for Immunization-covid-2&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Encounter/delivery"/>
 			</reference>
 			<name value="Encounter - Delivery"/>
@@ -1637,7 +1653,15 @@
 				<reference value="ServiceRequest/order-covid"/>
 			</reference>
 			<name value="ServiceRequest - 2019-Novel Coronavirus PCR order"/>
-			<description value="Order for 2019-Novel Coronavirus PCR&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<description value="Order for 2019-Novel Coronavirus PCR&#xa;&#xa;Patient: Ms. Emma Smith"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ServiceRequest/order-lipid"/>
+			</reference>
+			<name value="ServiceRequest - Lipid Panel order"/>
+			<description value="Order for Lipid Panel (part of DiagnosticReport-lipid-panel)&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
 		</resource>
 		<resource>

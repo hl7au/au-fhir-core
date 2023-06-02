@@ -6,6 +6,21 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyreport"/>
     </meta>
     <identifier>
+       <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="PLAC"/>
+                <display value="Placer Identifier"/>
+            </coding>
+            <text value="Placer Order Identifier"/>
+        </type>
+        <system value="http://bobrestergp.example.com/order"/>
+        <value value="34514444443"/>
+        <assigner>
+            <display value ="Bobregster Medical Center QLD"/>
+        </assigner>
+    </identifier>
+    <identifier>
         <type>
             <coding>
                 <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
@@ -16,6 +31,9 @@
         <system value="http://lab.example.com/labno"/>
         <value value="12901"/>
     </identifier>
+    <basedOn>
+        <reference value="ServiceRequest/order-lipid"/>
+    </basedOn>
     <status value="final"/>
     <category>
         <coding>
