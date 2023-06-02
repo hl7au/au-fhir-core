@@ -436,6 +436,15 @@
 			<description value="7 cm maximum diameter splenic mass with image&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodystructure"/>
 		</resource>
+		<!--BUNDLE EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Bundle/ps-01"/>
+			</reference>
+			<name value="Bundle - Patient Summary"/>
+			<description value="Patient Summary&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentcomposition"/>
+		</resource>
 		<!--CAREPLAN EXAMPLES-->
 		<resource>
 			<reference>
@@ -1621,6 +1630,14 @@
 			</reference>
 			<name value="RelatedPerson - Mother of John Smith"/>
 			<description value="RelatedPerson: Ms. Emma SMITH&#xa;&#xa;Relationship to Patient: Mother of John Smith"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="RelatedPerson/rabbit-peter"/>
+			</reference>
+			<name value="RelatedPerson - Friend of Mr Li Wang"/>
+			<description value="RelatedPerson: Mr. Peter Rabbit&#xa;&#xa;Relationship to Patient: Emergency Contact and Unrelated Friend of Mr Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
 		</resource>
 		<!--SERVICEREQUEST EXAMPLES-->
