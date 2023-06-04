@@ -6,7 +6,7 @@
     </meta>
     <extension url="http://hl7.org.au/fhir/StructureDefinition/encounter-description">
         <valueString
-            value="Patient has his medications packed into blister packs via ABC pharmacy. He finds them easy to use and they promote good adherence to his regime. His Bluecare nurse, Nurse B, was present for the interview. Of the medication listed on the referral, he is not currently taking Aldara 5% cream and Chloramphenicol ointment. In addition to the medication listed on the referral, he is also taking coQ10 150mg tab - 1 nocte.He reports occasional dizziness if he changes position quickly, and does report falling outside in the garden; he wears a falls alarm buzzer. He reports that he generally only experiences chest pain when he becomes stressed (doesn’t like paperwork). His blood pressure at the time of the interview was 158 /76."
+            value="Patient has medications packed into blister packs via ABC pharmacy. Patient finds them easy to use and they promote good adherence to his regime. Patient's Bluecare nurse, Nurse B, was present for the interview. Of the medication listed on the referral, he is not currently taking Aldara 5% cream and Chloramphenicol ointment. In addition to the medication listed on the referral, he is also taking coQ10 150mg tab - 1 nocte. Patient reports occasional dizziness if changing position quickly, and reports falling outside in the garden; Patient wears a falls alarm buzzer. Patient reports that they only experiences chest pain when they become stressed (doesn’t like paperwork). Patient blood pressure at the time of the interview was 158 /76."
         />
     </extension>
     <status value="finished"/>
