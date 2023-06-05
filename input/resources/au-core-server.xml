@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir">
   <id value="au-core-server"/>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2 id="title">AU Core Server CapabilityStatement</h2>
+      <ul>
+        <li>Implementation Guide Version: TBD</li>
+        <li>FHIR Version: 4.0.1</li>
+        <li>Supported Formats: <strong>SHALL</strong> support <code>json</code>, <strong>SHOULD</strong> support <code>xml</code>
+        </li>
+        <li>Supported Patch Formats: <strong>SHOULD</strong> support <code>application/json-patch+json</code>
+        </li>
+        <li>Published on: TBD</li>
+        <li>Published by: HL7 Australia - FHIR Work Group</li>
+      </ul>
+      <blockquote class="impl-note">
+        <p>
+          <strong>Note to Implementers: FHIR Capabilities</strong>
+        </p>
+        <p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as &quot;SHALL NOT&quot;. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p>
+      </blockquote>
+      <h3 id="shALLIGs">SHALL Support the following Implementation Guides</h3>
+      <ul>
+        <li>
+          <a href="https://hl7.org/fhir/uv/ipa/">International Patient Access</a>
+        </li>
+      </ul>
+      <h3 id="shouldIGs">SHOULD Support the following Implementation Guides</h3>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/smart-app-launch/history.html">SMART Application Launch Framework Implementation Guide</a>
+        </li>
+      </ul>
+    </div>
+  </text>
   <url value="http://hl7.org.au/fhir/core/CapabilityStatement/au-core-server"/>
   <name value="AUCoreServerCapabilityStatement"/>
   <title value="AU Core Server CapabilityStatement"/>
@@ -27,6 +61,11 @@
   <implementationGuide value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">
     <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
       <valueCode value="SHOULD"/>
+    </extension>
+  </implementationGuide>
+  <implementationGuide value="http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa">
+    <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+      <valueCode value="SHALL"/>
     </extension>
   </implementationGuide>
   <rest>
@@ -689,7 +728,7 @@
         <type value="token"/>
         <documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
       </searchParam>
-       <searchParam>
+      <searchParam>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="MAY"/>
         </extension>
@@ -769,7 +808,7 @@
         <documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
       </searchParam>
     </resource>
-     <!-- DIAGNOSTICREPORT :: TBD patient.identifier -->
+    <!-- DIAGNOSTICREPORT :: TBD patient.identifier -->
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
         <valueCode value="SHOULD"/>
@@ -1262,7 +1301,7 @@
         <type value="token"/>
         <documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
       </searchParam>
-       <searchParam>
+      <searchParam>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="MAY"/>
         </extension>
@@ -1364,7 +1403,7 @@
         <type value="token"/>
         <documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
       </searchParam>
-       <searchParam>
+      <searchParam>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="MAY"/>
         </extension>
@@ -1548,7 +1587,7 @@
         <definition value="http://hl7.org/fhir/SearchParameter/Location-address"/>
         <type value="string"/>
       </searchParam>
-       <searchParam>
+      <searchParam>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
@@ -1579,7 +1618,7 @@
         <name value="address-postalcode"/>
         <definition value="http://hl7.org/fhir/SearchParameter/Location-address-postalcode"/>
         <type value="string"/>
-      </searchParam>    
+      </searchParam>
       <searchParam>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="MAY"/>
@@ -1737,7 +1776,7 @@
         <extension url="required">
           <valueString value="whenhandedover"/>
         </extension>
-       </extension>
+      </extension>
       <type value="MedicationDispense"/>
       <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
       <documentation value="If the server supports the MedicationDispense resource, the server **SHALL** support the AU Core profile and the conformance expectations for the MedicationDispense resource."/>
