@@ -61,6 +61,12 @@
 		<version value="current"/>
 	</dependsOn>
 	<definition>
+	<resource>
+			<reference>
+				<reference value="CapabilityStatement/au-core-server"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-allergyintolerance"/>
@@ -1852,6 +1858,11 @@
 			<page>
 				<nameUrl value="terminology.html"/>
 				<title value="Terminology"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="capability-statements.html"/>
+				<title value="Capability Statements"/>
 				<generation value="markdown"/>
 			</page>
 			<page>
