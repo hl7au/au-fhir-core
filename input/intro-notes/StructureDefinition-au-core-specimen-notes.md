@@ -19,6 +19,12 @@
         <td><code>token</code></td>
         <td></td>
   </tr>
+  <tr>
+        <td>patient.identifier</td>
+        <td><b>SHOULD</b></td>
+        <td><code>reference</code>.<code>token</code></td>
+        <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
+  </tr>
 </tbody>
 </table>
 
