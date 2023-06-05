@@ -17,4 +17,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 
 ### Profile specific implementation guidance
-None.
+- See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
