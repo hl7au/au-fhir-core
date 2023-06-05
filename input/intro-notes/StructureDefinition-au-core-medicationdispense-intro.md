@@ -25,5 +25,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core
   - Although both are marked as must support, servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
   - A client application **SHALL** support both elements
   - When referencing a Medication resource, it is preferred the resource is [contained](http://hl7.org/fhir/R4/references.html#contained) but it may be an external resource
+- Source system identifiers **SHOULD** be included as [AU Local Dispense Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localdispenseidentifier.html) to support electronic medication management (EMM) workflow and deduplication across medication resources.
 
   <p class="stu-note">Specific feedback is sought on supporting the reason a dispense was not performed. Is support for text or a code sufficient? What is the case for supporting a referenced <a href="http://hl7.org/fhir/R4/detectedissue.html">DetectedIssue</a> resource?</p>

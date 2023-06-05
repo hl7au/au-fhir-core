@@ -11,7 +11,7 @@
         <td>identifier</td>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
+        <td>The client <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The server <b>SHALL</b> support both. The client <b>SHOULD</b> support search using a HPI-I identifier as defined in the profile. The server <b>SHOULD</b> support search using the using a HPI-I identifier as defined in the profile.</td>
   </tr>
   <tr>
         <td>_id</td>
