@@ -21,4 +21,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 ### Profile specific implementation guidance
 {% include observation_diagnostics_guidance.md -%}
-- Unless the specimen is explicitly clear in `Observation.code`, the observation **SHOULD** be made available in `Observation.specimen`.
+- Unless the specimen is explicitly clear in `Observation.code`, specimen information **SHOULD** be made available in `Observation.specimen`.
+- Source system identifiers that identify the business process (order ids and reporting identifiers) **MAY** be included as [AU Local Order Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localorderidentifier.html) and [AU Local Report Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localreportidentifier.html) to support workflow and deduplication of Observation resources.
+  - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.

@@ -20,6 +20,8 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 ### Profile specific implementation guidance
 {% include observation_diagnostics_guidance.md -%}
+- Source system identifiers that identify the business process (order ids and reporting identifiers) **MAY** be included as [AU Local Order Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localorderidentifier.html), [AU Accession Number](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-accessionnumber.html) and [AU Local Report Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localreportidentifier.html) to support workflow and deduplication of Observation resources.
+  - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
 
 <p class="stu-note">Specific feedback is sought on supporting complex body site information in Observations. Coded laterality (or other qualifiers) can be supplied using a post-coordinated concept e.g. Observation.bodySite.coding.code="71341001:272741003=7771000" (see <a href="Observation-bonedensity-simple-precon.html">Observation/bonedensity-simple-precon</a>) or by use of the extension <a href="http://hl7.org/fhir/R4/extension-bodysite.html">bodySite</a> to reference a BodyStructure resource (see example <a href="Observation-bonedensity-simple-contained.html">Observation/bonedensity-simple-contained</a>). Additional body site information can only be supported by referenced BodyStructure resource.</p>
 

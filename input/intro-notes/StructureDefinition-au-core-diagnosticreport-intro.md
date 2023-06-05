@@ -29,7 +29,8 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - The DiagnosticReport resource can represent the result as a text summary with `DiagnosticReport.conclusion` or a set of codes with `DiagnosticReport.conclusionCode`.
   - Although both are marked as must support, servers are not required to support both a text and a set of codes, but they **SHALL** support *at least one* of these elements
   - A client application **SHALL** support both elements
-- See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
+- Source system identifiers that identify the business process (order ids) **SHOULD** be included as [AU Local Order Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localorderidentifier.html) in addition to reporting identifiers (e.g. accession, lab number) to support workflow.
+  - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
 
   <p class="stu-note">Composition, DocumentReference, and DiagnosticReport resources support support the exchange of clinical notes. Specific feedback is sought on resource selection.</p>
 
