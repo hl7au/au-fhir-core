@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchParameter xmlns="http://hl7.org/fhir">
+    <id value="au-core-clinical-patient"/>
+    <url value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
+    <name value="AUCoreClinicalPatient"/>
+    <derivedFrom value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+    <status value="draft"/>
+    <description value="A clinical patient **SHOULD** support patient.identifier &#xA;**NOTE**: This AU Core SearchParameter extends the usage context of the&#xA;[clinical-patient parameter](http://hl7.org/fhir/SearchParameter/clinical-patient)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
+    <code value="patient"/>
+    <base value="AllergyIntolerance"/>
+    <base value="CarePlan"/>
+    <base value="CareTeam"/>
+    <base value="ClinicalImpression"/>
+    <base value="Composition"/>
+    <base value="Condition"/>
+    <base value="Consent"/>
+    <base value="DetectedIssue"/>
+    <base value="DeviceRequest"/>
+    <base value="DeviceUseStatement"/>
+    <base value="DiagnosticReport"/>
+    <base value="DocumentManifest"/>
+    <base value="DocumentReference"/>
+    <base value="Encounter"/>
+    <base value="EpisodeOfCare"/>
+    <base value="FamilyMemberHistory"/>
+    <base value="Flag"/>
+    <base value="Goal"/>
+    <base value="ImagingStudy"/>
+    <base value="Immunization"/>
+    <base value="List"/>
+    <base value="MedicationAdministration"/>
+    <base value="MedicationDispense"/>
+    <base value="MedicationRequest"/>
+    <base value="MedicationStatement"/>
+    <base value="NutritionOrder"/>
+    <base value="Observation"/>
+    <base value="Procedure"/>
+    <base value="RiskAssessment"/>
+    <base value="ServiceRequest"/>
+    <base value="SupplyDelivery"/>
+    <base value="VisionPrescription"/>
+    <type value="reference"/>
+    <expression value="AllergyIntolerance.patient | CarePlan.subject.where(resolve() is Patient) | CareTeam.subject.where(resolve() is Patient) | ClinicalImpression.subject.where(resolve() is Patient) | Composition.subject.where(resolve() is Patient) | Condition.subject.where(resolve() is Patient) | Consent.patient | DetectedIssue.patient | DeviceRequest.subject.where(resolve() is Patient) | DeviceUseStatement.subject | DiagnosticReport.subject.where(resolve() is Patient) | DocumentManifest.subject.where(resolve() is Patient) | DocumentReference.subject.where(resolve() is Patient) | Encounter.subject.where(resolve() is Patient) | EpisodeOfCare.patient | FamilyMemberHistory.patient | Flag.subject.where(resolve() is Patient) | Goal.subject.where(resolve() is Patient) | ImagingStudy.subject.where(resolve() is Patient) | Immunization.patient | List.subject.where(resolve() is Patient) | MedicationAdministration.subject.where(resolve() is Patient) | MedicationDispense.subject.where(resolve() is Patient) | MedicationRequest.subject.where(resolve() is Patient) | MedicationStatement.subject.where(resolve() is Patient) | NutritionOrder.patient | Observation.subject.where(resolve() is Patient) | Procedure.subject.where(resolve() is Patient) | RiskAssessment.subject.where(resolve() is Patient) | ServiceRequest.subject.where(resolve() is Patient) | SupplyDelivery.patient | VisionPrescription.patient"/>
+    <target value="Patient"/>
+    <multipleOr value="true">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+            <valueCode value="MAY"/>
+        </extension>
+    </multipleOr>
+    <multipleAnd value="true">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+            <valueCode value="MAY"/>
+        </extension>
+    </multipleAnd>
+    <chain value="identifier">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+            <valueCode value="SHOULD"/>
+        </extension>
+    </chain>
+</SearchParameter>

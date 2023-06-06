@@ -21,26 +21,10 @@
 		</telecom>
 	</contact>
 	<contact>
-		<name value="HL7 Australia Patient Administration Working Group"/>
+		<name value="HL7 Australia FHIR Working Group"/>
 		<telecom>
-			<system value="url"/>
-			<value value="http://confluence.hl7australia.com/display/PA"/>
-			<use value="work"/>
-		</telecom>
-	</contact>
-	<contact>
-		<name value="HL7 Australia Orders and Observations Working Group"/>
-		<telecom>
-			<system value="url"/>
-			<value value="https://confluence.hl7australia.com/display/OO"/>
-			<use value="work"/>
-		</telecom>
-	</contact>
-	<contact>
-		<name value="HL7 Australia Medications Working Group"/>
-		<telecom>
-			<system value="url"/>
-			<value value="https://confluence.hl7australia.com/display/MED"/>
+			<system value="email"/>
+			<value value="fhirwg@hl7.com.au"/>
 			<use value="work"/>
 		</telecom>
 	</contact>
@@ -65,6 +49,13 @@
 			<reference>
 				<reference value="CapabilityStatement/au-core-server"/>
 			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="SearchParameter/au-core-clinical-patient"/>
+			</reference>
+			<name value="AUCoreClinicalPatient"/>
 			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
@@ -1853,6 +1844,11 @@
 			<page>
 				<nameUrl value="profiles-and-extensions.html"/>
 				<title value="Profiles and Extensions"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="search-parameters.html"/>
+				<title value="Search Parameters"/>
 				<generation value="markdown"/>
 			</page>
 			<page>
