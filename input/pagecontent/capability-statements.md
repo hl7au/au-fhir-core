@@ -4,5 +4,7 @@ The following CapabilityStatements define the specific capabilities that differe
 NOTE: The following capability statements will progress with this guide. CapabilityStatements currently define the complete list of profiles and search parameters. RESTful operation definition is  incomplete.
 {:.bg-warning}
 
+<p class="stu-note">AU Core Client CapabilityStatement is not yet available.</p>
+
 - [AU Core Server CapabilityStatement](CapabilityStatement-au-core-server.html)
 This CapabilityStatement describes the basic rules for the AU Core server actor that is responsible for providing responses to queries submitted by AU Core clients. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core servers are defined in this CapabilityStatement.
