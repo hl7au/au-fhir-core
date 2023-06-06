@@ -5,7 +5,7 @@
     <name value="AUCoreRelatedPersonPatient"/>
     <derivedFrom value="http://hl7.org/fhir/SearchParameter/RelatedPerson-patient"/>
     <status value="draft"/>
-    <description value="A related person patient **SHOULD** support patient.identifier. NOTE: This AU Core SearchParameter extends the usage context of the&#xA;[clinical-patient parameter](http://hl7.org/fhir/SearchParameter/RelatedPerson-patient)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
+    <description value="A related person patient **SHOULD** support patient.identifier. NOTE: This AU Core SearchParameter extends the usage context of the&#xA;[RelatedPerson-patient parameter](http://hl7.org/fhir/SearchParameter/RelatedPerson-patient)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
     <code value="patient"/>
     <base value="RelatedPerson"/>
     <type value="reference"/>

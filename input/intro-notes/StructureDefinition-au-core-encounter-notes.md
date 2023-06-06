@@ -35,7 +35,7 @@
         <td>patient.identifier</td>
         <td><b>SHOULD</b></td>
          <td><code>reference</code>.<code>token</code></td>
-         <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
+         <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both. The client <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The server <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
   </tr>
    <tr>
         <td>patient+location</td>
