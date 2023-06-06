@@ -7,14 +7,14 @@ The [registry of standard search parameters]({{site.data.fhir.path}}searchparame
 
 - [clinical-patient](SearchParameter-au-core-clinical-patient.html)
 
-### Specimen search parameters
-
-- [TBD]()
-
 ### Coverage search parameters
 
-- [TBD]()
+- [coverage-patient](SearchParameter-au-core-coverage-patient.html)
 
 ### RelatedPerson search parameters
 
-- [TBD]()
+- [relatedperson-patient](SearchParameter-au-core-relatedperson-patient.html)
+
+### Specimen search parameters
+
+- [specimen-patient](SearchParameter-au-core-specimen-patient.html)

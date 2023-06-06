@@ -60,6 +60,27 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="SearchParameter/au-core-coverage-patient"/>
+			</reference>
+			<name value="AUCoreClinicalPatient"/>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="SearchParameter/au-core-relatedperson-patient"/>
+			</reference>
+			<name value="AUCoreClinicalPatient"/>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="SearchParameter/au-core-specimen-patient"/>
+			</reference>
+			<name value="AUCoreSpecimenPatient"/>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-core-allergyintolerance"/>
 			</reference>
 			<exampleBoolean value="false"/>
