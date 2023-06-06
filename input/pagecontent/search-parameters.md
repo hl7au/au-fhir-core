@@ -11,6 +11,10 @@ The [registry of standard search parameters]({{site.data.fhir.path}}searchparame
 
 - [coverage-patient](SearchParameter-au-core-coverage-patient.html)
 
+### PractitionerRole search parameters
+
+- [practitionerrole-practitioner](SearchParameter-au-core-practitionerrole-practitioner.html)
+
 ### RelatedPerson search parameters
 
 - [relatedperson-patient](SearchParameter-au-core-relatedperson-patient.html)

@@ -67,6 +67,13 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="SearchParameter/au-core-practitionerrole-practitioner"/>
+			</reference>
+			<name value="AUCoreClinicalPatient"/>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="SearchParameter/au-core-relatedperson-patient"/>
 			</reference>
 			<name value="AUCoreClinicalPatient"/>
