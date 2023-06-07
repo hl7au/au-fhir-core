@@ -665,7 +665,7 @@
 <td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
-<td>_id, authored, category, code,, identifier, patient, patient.identifier, patient+category, patient+category+authored, patient+category+status, patient+code, patient+code+authored, patient+status, status</td>
+<td>_id, authored, category, code, identifier, patient, patient.identifier, patient+category, patient+category+authored, patient+category+status, patient+code, patient+code+authored, patient+status, status</td>
 <td></td>
 <td>
 <code>Provenance:target</code>
@@ -2531,6 +2531,207 @@
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
+<h4 id="Immunization1-1" class="panel-title">
+<span style="float: right;">Resource Conformance: SHOULD</span>Immunization</h4>
+</div>
+<div class="panel-body">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Base System Profile</span>
+<br/>
+<a href="StructureDefinition-au-core-immunization.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization</a>
+</div>
+<div class="col-lg-3">
+<span class="lead">Profile Conformance</span>
+<br/>
+<b>SHALL</b>
+</div>
+<div class="col-lg-3">
+<span class="lead">Reference Policy</span>
+<br/>
+<code>resolves</code>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Interaction summary</span>
+<br/>
+<ul>
+<li>
+<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+</li>
+</ul>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-12">
+<span class="lead">Documentation</span>
+<blockquote>
+<div>
+<p>If the client supports the Immunization resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Immunization resource.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-7">
+<span class="lead">Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/immunization.html#search">patient</a>
+</td>
+<td>
+  <code>reference</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/immunization.html#search">patient.identifier</a>
+</td>
+<td>
+  <code>reference.token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/immunization.html#search">date</a>
+</td>
+<td>
+  <code>date</code>
+</td>
+<td>
+  <div>
+     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
+    <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/immunization.html#search">status</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+     <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/immunization.html#search">vaccine-code</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-lg-5">
+<span class="lead">Combined Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameters</th>
+<th>Types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/immunization.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/immunization.html#search">date</a>
+</td>
+<td>
+  <code>reference</code>+  <code>date</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/immunization.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/immunization.html#search">status</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/immunization.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/immunization.html#search">vaccine-code</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
 <h4 id="Medication1-1" class="panel-title">
 <span style="float: right;">Resource Conformance: MAY</span>Medication</h4>
 </div>
@@ -2577,6 +2778,1277 @@
 <p>If the server supports the Medication resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Medication resource.</p>
 </div>
 </blockquote>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 id="MedicationAdministration1-1" class="panel-title">
+<span style="float: right;">Resource Conformance: SHOULD</span>MedicationAdministration</h4>
+</div>
+<div class="panel-body">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Base System Profile</span>
+<br/>
+<a href="StructureDefinition-au-core-medicationadministration.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationadministration</a>
+</div>
+<div class="col-lg-3">
+<span class="lead">Profile Conformance</span>
+<br/>
+<b>SHALL</b>
+</div>
+<div class="col-lg-3">
+<span class="lead">Reference Policy</span>
+<br/>
+<code>resolves</code>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Interaction summary</span>
+<br/>
+<ul>
+<li>
+<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+</li>
+</ul>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-12">
+<span class="lead">Documentation</span>
+<blockquote>
+<div>
+<p>If the client supports the MedicationAdministration resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationAdministration resource.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-7">
+<span class="lead">Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">patient</a>
+</td>
+<td>
+  <code>reference</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">patient.identifier</a>
+</td>
+<td>
+  <code>reference.token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">effective-time</a>
+</td>
+<td>
+  <code>date</code>
+</td>
+<td>
+  <div>
+     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
+    <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">status</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+     <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-lg-5">
+<span class="lead">Combined Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameters</th>
+<th>Types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">effective-time</a>
+</td>
+<td>
+  <code>reference</code>+  <code>date</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">status</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">status</a>+  <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">effective-time</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>+  <code>date</code>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 id="MedicationDispense1-1" class="panel-title">
+<span style="float: right;">Resource Conformance: SHOULD</span>MedicationDispense</h4>
+</div>
+<div class="panel-body">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Base System Profile</span>
+<br/>
+<a href="StructureDefinition-au-core-medicationdispense.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense</a>
+</div>
+<div class="col-lg-3">
+<span class="lead">Profile Conformance</span>
+<br/>
+<b>SHALL</b>
+</div>
+<div class="col-lg-3">
+<span class="lead">Reference Policy</span>
+<br/>
+<code>resolves</code>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Interaction summary</span>
+<br/>
+<ul>
+<li>
+<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+</li>
+</ul>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-12">
+<span class="lead">Documentation</span>
+<blockquote>
+<div>
+<p>If the client supports the MedicationDispense resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationDispense resource.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-7">
+<span class="lead">Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationdispense.html#search">patient</a>
+</td>
+<td>
+  <code>reference</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationdispense.html#search">patient.identifier</a>
+</td>
+<td>
+  <code>reference.token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationdispense.html#search">status</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+     <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationdispense.html#search">whenhandedover</a>
+</td>
+<td>
+  <code>date</code>
+</td>
+<td>
+  <div>
+     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
+    <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+  </div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-lg-5">
+<span class="lead">Combined Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameters</th>
+<th>Types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationdispense.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/medicationdispense.html#search">status</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationdispense.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/medicationdispense.html#search">whenhandedover</a>
+</td>
+<td>
+  <code>reference</code>+  <code>date</code>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 id="MedicationStatement1-1" class="panel-title">
+<span style="float: right;">Resource Conformance: SHOULD</span>MedicationStatement</h4>
+</div>
+<div class="panel-body">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Base System Profile</span>
+<br/>
+<a href="StructureDefinition-au-core-medicationstatement.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement</a>
+</div>
+<div class="col-lg-3">
+<span class="lead">Profile Conformance</span>
+<br/>
+<b>SHALL</b>
+</div>
+<div class="col-lg-3">
+<span class="lead">Reference Policy</span>
+<br/>
+<code>resolves</code>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Interaction summary</span>
+<br/>
+<ul>
+<li>
+<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+</li>
+</ul>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-12">
+<span class="lead">Documentation</span>
+<blockquote>
+<div>
+<p>If the client supports the MedicationStatement resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationStatement resource.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-7">
+<span class="lead">Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">patient</a>
+</td>
+<td>
+  <code>reference</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">patient.identifier</a>
+</td>
+<td>
+  <code>reference.token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">effective</a>
+</td>
+<td>
+  <code>date</code>
+</td>
+<td>
+  <div>
+     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
+    <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">status</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+     <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-lg-5">
+<span class="lead">Combined Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameters</th>
+<th>Types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">effective</a>
+</td>
+<td>
+  <code>reference</code>+  <code>date</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">status</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 id="Observation1-1" class="panel-title">
+<span style="float: right;">Resource Conformance: SHOULD</span>Observation</h4>
+</div>
+<div class="panel-body">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Base System Profile</span>
+<br/>
+<a href="StructureDefinition-au-core-observation.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation</a>
+</div>
+<div class="col-lg-3">
+<span class="lead">Profile Conformance</span>
+<br/>
+<b>SHALL</b>
+</div>
+<div class="col-lg-3">
+<span class="lead">Reference Policy</span>
+<br/>
+<code>resolves</code>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Interaction summary</span>
+<br/>
+<ul>
+<li>
+<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+</li>
+</ul>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-12">
+<span class="lead">Documentation</span>
+<blockquote>
+<div>
+<p>If the client supports the Observation resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Observation resource.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-7">
+<span class="lead">Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>
+</td>
+<td>
+  <code>reference</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/observation.html#search">patient.identifier</a>
+</td>
+<td>
+  <code>reference.token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/observation.html#search">category</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/observation.html#search">code</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/observation.html#search">date</a>
+</td>
+<td>
+  <code>date</code>
+</td>
+<td>
+  <div>
+     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
+    <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/observation.html#search">status</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+     <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-lg-5">
+<span class="lead">Combined Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameters</th>
+<th>Types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">category</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">status</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>+  <code>token</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">date</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>+  <code>date</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">code</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">code</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">date</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>+  <code>date</code>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 id="Organization1-1" class="panel-title">
+<span style="float: right;">Resource Conformance: SHOULD</span>Organization</h4>
+</div>
+<div class="panel-body">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Base System Profile</span>
+<br/>
+<a href="StructureDefinition-au-core-organization.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization</a>
+</div>
+<div class="col-lg-3">
+<span class="lead">Profile Conformance</span>
+<br/>
+<b>SHALL</b>
+</div>
+<div class="col-lg-3">
+<span class="lead">Reference Policy</span>
+<br/>
+<code>resolves</code>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Interaction summary</span>
+<br/>
+<ul>
+<li>
+<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+</li>
+</ul>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-12">
+<span class="lead">Documentation</span>
+<blockquote>
+<div>
+<p>If the client supports the Organization resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Organization resource.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-7">
+<span class="lead">Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/organization.html#search">address</a>
+</td>
+<td>
+  <code>string</code>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/organization.html#search">identifier</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>SHOULD</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The client <strong>SHOULD</strong> support search using HPI-O and ABN identifiers as defined in the profile.</p>
+    <p>The server <strong>SHOULD</strong> support search using HPI-O and ABN identifiers as defined in the profile.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/organization.html#search">name</a>
+</td>
+<td>
+  <code>string</code>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/resource.html#search">_id</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 id="Practitioner1-1" class="panel-title">
+<span style="float: right;">Resource Conformance: SHOULD</span>Practitioner</h4>
+</div>
+<div class="panel-body">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Base System Profile</span>
+<br/>
+<a href="StructureDefinition-au-core-practitioner.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner</a>
+</div>
+<div class="col-lg-3">
+<span class="lead">Profile Conformance</span>
+<br/>
+<b>SHALL</b>
+</div>
+<div class="col-lg-3">
+<span class="lead">Reference Policy</span>
+<br/>
+<code>resolves</code>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Interaction summary</span>
+<br/>
+<ul>
+<li>
+<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+</li>
+</ul>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-12">
+<span class="lead">Documentation</span>
+<blockquote>
+<div>
+<p>If the client supports the Practitioner resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Practitioner resource.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-7">
+<span class="lead">Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/practitioner.html#search">identifier</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The client <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the profile.</p>
+    <p>The server <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the profile.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/practitioner.html#search">name</a>
+</td>
+<td>
+  <code>string</code>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/resource.html#search">_id</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 id="ServiceRequest1-1" class="panel-title">
+<span style="float: right;">Resource Conformance: SHOULD</span>ServiceRequest</h4>
+</div>
+<div class="panel-body">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Base System Profile</span>
+<br/>
+<a href="StructureDefinition-au-core-servicerequest.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest</a>
+</div>
+<div class="col-lg-3">
+<span class="lead">Profile Conformance</span>
+<br/>
+<b>SHALL</b>
+</div>
+<div class="col-lg-3">
+<span class="lead">Reference Policy</span>
+<br/>
+<code>resolves</code>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Interaction summary</span>
+<br/>
+<ul>
+<li>
+<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+</li>
+</ul>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-12">
+<span class="lead">Documentation</span>
+<blockquote>
+<div>
+<p>If the client supports the ServiceRequest resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the ServiceRequest resource.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-7">
+<span class="lead">Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/resource.html#search">_id</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">patient</a>
+</td>
+<td>
+  <code>reference</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">patient.identifier</a>
+</td>
+<td>
+  <code>reference.token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">identifier</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">category</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">code</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">authored</a>
+</td>
+<td>
+  <code>date</code>
+</td>
+<td>
+  <div>
+     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
+    <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">status</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+     <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-lg-5">
+<span class="lead">Combined Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameters</th>
+<th>Types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">category</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">status</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>+  <code>token</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">authored</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>+  <code>date</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">code</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">code</a>+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">authored</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>+  <code>date</code>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
