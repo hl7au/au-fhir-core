@@ -587,7 +587,7 @@
 <a href="StructureDefinition-au-core-practitioner.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner</a>
 </td>
 <td>y</td>
-<td class="text-center"></td>
+<td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
 <td>_id, identifier, name</td>
@@ -605,7 +605,7 @@
 <a href="StructureDefinition-au-core-practitionerrole.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole</a>
 </td>
 <td>y</td>
-<td class="text-center"></td>
+<td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
 <td>_id, identifier, organization, practitioner, practitioner.identifier, specialty</td>
@@ -625,7 +625,7 @@
 <a href="StructureDefinition-au-core-procedure.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure</a>
 </td>
 <td>y</td>
-<td class="text-center"></td>
+<td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
 <td>code, date, patient, patient.identifier, patient+code+date, patient+date, patient+status, status</td>
@@ -644,7 +644,7 @@
 <a href="StructureDefinition-au-core-relatedperson.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson</a>
 </td>
 <td>y</td>
-<td class="text-center"></td>
+<td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
 <td>_id, name, patient, patient.identifier, patient+relationship</td>
@@ -662,7 +662,7 @@
 <a href="StructureDefinition-au-core-servicerequest.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest</a>
 </td>
 <td>y</td>
-<td class="text-center"></td>
+<td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
 <td>_id, authored, category, code,, identifier, patient, patient.identifier, patient+category, patient+category+authored, patient+category+status, patient+code, patient+code+authored, patient+status, status</td>
@@ -680,7 +680,7 @@
 <a href="StructureDefinition-au-core-specimen.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-specimen</a>
 </td>
 <td>y</td>
-<td class="text-center"></td>
+<td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
 <td>_id, patient, patient.identifier</td>
@@ -2577,6 +2577,122 @@
 <p>If the server supports the Medication resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Medication resource.</p>
 </div>
 </blockquote>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 id="Specimen1-1" class="panel-title">
+<span style="float: right;">Resource Conformance: SHOULD</span>Specimen</h4>
+</div>
+<div class="panel-body">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Base System Profile</span>
+<br/>
+<a href="StructureDefinition-au-core-specimen.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-specimen</a>
+</div>
+<div class="col-lg-3">
+<span class="lead">Profile Conformance</span>
+<br/>
+<b>SHALL</b>
+</div>
+<div class="col-lg-3">
+<span class="lead">Reference Policy</span>
+<br/>
+<code>resolves</code>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Interaction summary</span>
+<br/>
+<ul>
+<li>
+<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+</li>
+</ul>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-12">
+<span class="lead">Documentation</span>
+<blockquote>
+<div>
+<p>If the client supports the Specimen resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Specimen resource.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-7">
+<span class="lead">Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHALL</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/specimen.html#search">patient</a>
+</td>
+<td>
+  <code>reference</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/resource.html#search">_id</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/specimen.html#search">patient.identifier</a>
+</td>
+<td>
+  <code>reference.token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+  </div>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
