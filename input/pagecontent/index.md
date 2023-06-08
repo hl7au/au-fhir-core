@@ -34,9 +34,10 @@ AU Core is dependent on:
 - terminology published in Australia's [National Clinical Terminology Service](https://www.healthterminologies.gov.au/access-clinical-terminology/access-fhir-terminology-resources/)
 
 In addition, the following FHIR implementation guides are referenced:
-- [Bulk Data](https://hl7.org/fhir/uv/bulkdata)
-- [SMART on FHIR](http://www.hl7.org/fhir/smart-app-launch)
-
+- [Bulk Data Export](https://hl7.org/fhir/uv/bulkdata)
+- [International Patient Access](https://hl7.org/fhir/uv/ipa)
+- [SMART Application Launch Framework](http://www.hl7.org/fhir/smart-app-launch)
+- [Structured Data Capture](https://hl7.org/fhir/uv/sdc)
 
 ### Usage
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir">
-  <id value="au-core-server"/>
+  <id value="au-core-client"/>
 <text>
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <h2 id="title">AU Core Server CapabilityStatement</h2>
+      <h2 id="title">AU Core Client CapabilityStatement</h2>
       <ul>
         <li>Implementation Guide Version: TBD</li>
         <li>FHIR Version: 4.0.1</li>
@@ -41,12 +41,12 @@
       <h2 id="rest">FHIR RESTful Capabilities</h2>
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 id="mode1" class="panel-title">Mode: <code>server</code>
+          <h3 id="mode1" class="panel-title">Mode: <code>client</code>
           </h3>
         </div>
         <div class="panel-body">
           <div>
-            <p>The AU Core Server <strong>SHALL</strong>:
+            <p>The AU Core Client <strong>SHALL</strong>:
             </p>
             <ol>
               <li>
@@ -78,11 +78,8 @@
               <li>
                 <p>Support JSON source formats for all AU Core interactions.</p>
               </li>
-              <li>
-                <p>Declare a CapabilityStatement identifying the list of profiles, operations, and search parameters supported.</p>
-              </li>
             </ol>
-            <p>The AU Core Server <strong>SHOULD</strong>:
+            <p>The AU Core Client <strong>SHOULD</strong>:
             </p>
             <ol>
               <li>Support XML source formats for all AU Core interactions.</li>
@@ -791,7 +788,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the AllergyIntolerance resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the AllergyIntolerance resource.</p>
+<p>If the client supports the AllergyIntolerance resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the AllergyIntolerance resource.</p>
 </div>
 </blockquote>
 </div>
@@ -939,7 +936,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>Observation, Procedure and ServiceRequest resources can represent body site information, using an external reference to a BodyStructure resource. If the server supports the BodyStructure resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the BodyStructure resource.</p>
+<p>Observation, Procedure and ServiceRequest resources can represent body site information, using an external reference to a BodyStructure resource. If the client supports the BodyStructure resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the BodyStructure resource.</p>
 </div>
 </blockquote>
 </div>
@@ -989,7 +986,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the CarePlan resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the CarePlan resource.</p>
+<p>If the client supports the CarePlan resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the CarePlan resource.</p>
 </div>
 </blockquote>
 </div>
@@ -1201,7 +1198,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the CareTeam resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the CareTeam resource.</p>
+<p>If the client supports the CareTeam resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the CareTeam resource.</p>
 </div>
 </blockquote>
 </div>
@@ -1346,7 +1343,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Composition resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Composition resource.</p>
+<p>If the client supports the Composition resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Composition resource.</p>
 </div>
 </blockquote>
 </div>
@@ -1414,7 +1411,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHALL</b>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/composition.html#search">identifier</a>
@@ -1615,7 +1612,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Condition resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Condition resource.</p>
+<p>If the client supports the Condition resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Condition resource.</p>
 </div>
 </blockquote>
 </div>
@@ -1855,7 +1852,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Coverage resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Coverage resource.</p>
+<p>If the client supports the Coverage resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Coverage resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2045,7 +2042,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the DiagnosticReport resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the DiagnosticReport resource.</p>
+<p>If the client supports the DiagnosticReport resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the DiagnosticReport resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2113,7 +2110,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHALL</b>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">identifier</a>
@@ -2314,7 +2311,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the DocumentReference resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the DocumentReference resource.</p>
+<p>If the client supports the DocumentReference resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the DocumentReference resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2382,7 +2379,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHALL</b>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/documentreference.html#search">identifier</a>
@@ -2612,7 +2609,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Encounter resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Encounter resource.</p>
+<p>If the client supports the Encounter resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Encounter resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2915,7 +2912,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the HealthcareService resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the HealthcareService resource.</p>
+<p>If the client supports the HealthcareService resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the HealthcareService resource.</p>
 </div>
 </blockquote>
 </div>
@@ -3096,7 +3093,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Immunization resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Immunization resource.</p>
+<p>If the client supports the Immunization resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Immunization resource.</p>
 </div>
 </blockquote>
 </div>
@@ -3298,7 +3295,7 @@
     <span class="lead">Documentation</span>
     <blockquote>
     <div>
-    <p>If the server supports the Location resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Location resource.</p>
+    <p>If the client supports the Location resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Location resource.</p>
     </div>
     </blockquote>
     </div>
@@ -3446,7 +3443,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>MedicationAdministration, MedicationDispense, MedicationRequest, and MedicationStatement resources can represent a medication, using an external reference to a Medication resource. If the server supports the Medication resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Medication resource.</p>
+<p>MedicationAdministration, MedicationDispense, MedicationRequest, and MedicationStatement resources can represent a medication, using an external reference to a Medication resource. If the client supports the Medication resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Medication resource.</p>
 </div>
 </blockquote>
 </div>
@@ -3496,7 +3493,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the MedicationAdministration resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationAdministration resource.</p>
+<p>If the client supports the MedicationAdministration resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationAdministration resource.</p>
 </div>
 </blockquote>
 </div>
@@ -3680,7 +3677,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the MedicationDispense resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationDispense resource.</p>
+<p>If the client supports the MedicationDispense resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationDispense resource.</p>
 </div>
 </blockquote>
 </div>
@@ -3853,7 +3850,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the MedicationRequest resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationRequest resource.</p>
+<p>If the client supports the MedicationRequest resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationRequest resource.</p>
 </div>
 </blockquote>
 </div>
@@ -3885,7 +3882,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHALL</b>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/composition.html#search">identifier</a>
@@ -4100,7 +4097,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the MedicationStatement resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationStatement resource.</p>
+<p>If the client supports the MedicationStatement resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationStatement resource.</p>
 </div>
 </blockquote>
 </div>
@@ -4328,7 +4325,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Observation resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Observation resource.</p>
+<p>If the client supports the Observation resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Observation resource.</p>
 </div>
 </blockquote>
 </div>
@@ -4568,7 +4565,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Organization resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Organization resource.</p>
+<p>If the client supports the Organization resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Organization resource.</p>
 </div>
 </blockquote>
 </div>
@@ -4690,7 +4687,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Patient resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Patient resource.</p>
+<p>If the client supports the Patient resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Patient resource.</p>
 </div>
 </blockquote>
 </div>
@@ -4940,7 +4937,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Practitioner resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Practitioner resource.</p>
+<p>If the client supports the Practitioner resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Practitioner resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5050,7 +5047,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the PractitionerRole resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the PractitionerRole resource.</p>
+<p>If the client supports the PractitionerRole resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the PractitionerRole resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5218,7 +5215,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Procedure resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Procedure resource.</p>
+<p>If the client supports the Procedure resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Procedure resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5422,7 +5419,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Provenance resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Provenance resource.</p>
+<p>If the client supports the Provenance resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Provenance resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5472,7 +5469,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the RelatedPerson resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the RelatedPerson resource.</p>
+<p>If the client supports the RelatedPerson resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the RelatedPerson resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5645,7 +5642,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the ServiceRequest resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the ServiceRequest resource.</p>
+<p>If the client supports the ServiceRequest resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the ServiceRequest resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5713,7 +5710,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHALL</b>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/servicerequest.html#search">identifier</a>
@@ -5914,7 +5911,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Specimen resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Specimen resource.</p>
+<p>If the client supports the Specimen resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Specimen resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5961,7 +5958,6 @@
 </td>
 <td></td>
 </tr>
-
 <tr>
 <td>
   <b>SHOULD</b>
@@ -6033,7 +6029,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Substance resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Substance resource.</p>
+<p>If the client supports the Substance resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Substance resource.</p>
 </div>
 </blockquote>
 </div>
@@ -6043,9 +6039,9 @@
 </div>
 </div>
 </text>
-<url value="http://hl7.org.au/fhir/core/CapabilityStatement/au-core-server"/>
-<name value="AUCoreServerCapabilityStatement"/>
-<title value="AU Core Server CapabilityStatement"/>
+<url value="http://hl7.org.au/fhir/core/CapabilityStatement/au-core-client"/>
+<name value="AUCoreClientCapabilityStatement"/>
+<title value="AU Core Client CapabilityStatement"/>
 <status value="draft"/>
 <date value="2023-05-15"/>
 <description value="This CapabilityStatement describes the basic rules for the AU Core server actor that is responsible for providing responses to queries submitted by AU Core clients. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core servers are defined in this CapabilityStatement."/>
@@ -6088,7 +6084,7 @@
 </implementationGuide>
 <rest>
 <mode value="server"/>
-<documentation value="The AU Core Server **SHALL**:&#xA;1. Support the AU Core Patient resource profile.&#xA;1. Support at least one additional resource profile from the list of AU Core Profiles.&#xA;1. Implement the RESTful behavior according to the FHIR specification.&#xA;1. Return the following response classes:&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;   - (Status 400): invalid parameter&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;   - (Status 401/4xx): unauthorized request&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;   - (Status 403): insufficient scope&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;   - (Status 404): unknown resource&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support JSON source formats for all AU Core interactions.&#xA;1. Declare a CapabilityStatement identifying the list of profiles, operations, and search parameters supported.&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;The AU Core Server **SHOULD**:&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support XML source formats for all AU Core interactions."/>
+<documentation value="The AU Core Client **SHALL**:&#xA;1. Support the AU Core Patient resource profile.&#xA;1. Support at least one additional resource profile from the list of AU Core Profiles.&#xA;1. Implement the RESTful behavior according to the FHIR specification.&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support JSON source formats for all AU Core interactions.&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;The AU Core Client **SHOULD**:&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support XML source formats for all AU Core interactions."/>
 <security>
 <description value="TBD requirements and recommendations."/>
 </security>
@@ -6110,7 +6106,7 @@
 </extension>
 <type value="AllergyIntolerance"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
-<documentation value="If the server supports the AllergyIntolerance resource, the server **SHALL** support the AU Core profile and the conformance expectations for the AllergyIntolerance resource."/>
+<documentation value="If the client supports the AllergyIntolerance resource, the server **SHALL** support the AU Core profile and the conformance expectations for the AllergyIntolerance resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -6159,7 +6155,7 @@
 </extension>
 <type value="BodyStructure"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodystructure"/>
-<documentation value="Observation, Procedure and ServiceRequest resources can represent body site information, using an external reference to a BodyStructure resource. If the server supports the BodyStructure resource, the server **SHALL** support the AU Core profile and the conformance expectations for the BodyStructure resource."/>
+<documentation value="Observation, Procedure and ServiceRequest resources can represent body site information, using an external reference to a BodyStructure resource. If the client supports the BodyStructure resource, the server **SHALL** support the AU Core profile and the conformance expectations for the BodyStructure resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -6241,7 +6237,7 @@
 </extension>
 <type value="CarePlan"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-careplan"/>
-<documentation value="If the server supports the CarePlan resource, the server **SHALL** support the AU Core profile and the conformance expectations for the CarePlan resource."/>
+<documentation value="If the client supports the CarePlan resource, the server **SHALL** support the AU Core profile and the conformance expectations for the CarePlan resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -6319,7 +6315,7 @@
 </extension>
 <type value="CareTeam"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-careteam"/>
-<documentation value="If the server supports the CareTeam resource, the server **SHALL** support the AU Core profile and the conformance expectations for the CareTeam resource."/>
+<documentation value="If the client supports the CareTeam resource, the server **SHALL** support the AU Core profile and the conformance expectations for the CareTeam resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -6447,7 +6443,7 @@
 <valueCode value="SHALL"/>
 </extension>
 </supportedProfile>
-<documentation value="If the server supports the Composition resource, the server **SHALL** support the AU Core profile and **SHALL** support the conformance expectations for the Composition resource."/>
+<documentation value="If the client supports the Composition resource, the server **SHALL** support the AU Core profile and **SHALL** support the conformance expectations for the Composition resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -6480,7 +6476,7 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-identifier"/>
@@ -6598,7 +6594,7 @@
 </extension>
 <type value="Condition"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
-<documentation value="If the server supports the Condition resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Condition resource."/>
+<documentation value="If the client supports the Condition resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Condition resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -6705,7 +6701,7 @@
 </extension>
 <type value="Coverage"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-coverage"/>
-<documentation value="If the server supports the Coverage resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Coverage resource."/>
+<documentation value="If the client supports the Coverage resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Coverage resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -6776,7 +6772,7 @@
 <valueCode value="SHALL"/>
 </extension>
 </supportedProfile>
-<documentation value="If the server supports the Device resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Device resource."/>
+<documentation value="If the client supports the Device resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Device resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -6911,7 +6907,7 @@
 </extension>
 <type value="DiagnosticReport"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticreport"/>
-<documentation value="If the server supports the DiagnosticReport resource, the server **SHALL** support the AU Core profile and the conformance expectations for the DiagnosticReport resource."/>
+<documentation value="If the client supports the DiagnosticReport resource, the server **SHALL** support the AU Core profile and the conformance expectations for the DiagnosticReport resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -6944,7 +6940,7 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-identifier"/>
@@ -7101,7 +7097,7 @@
 </extension>
 <type value="DocumentReference"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
-<documentation value="If the server supports the DocumentReference resource, the server **SHALL** support the AU Core profile and the conformance expectations for the DocumentReference resource."/>
+<documentation value="If the client supports the DocumentReference resource, the server **SHALL** support the AU Core profile and the conformance expectations for the DocumentReference resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -7134,7 +7130,7 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-identifier"/>
@@ -7269,7 +7265,7 @@
 </extension>
 <type value="Encounter"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-<documentation value="If the server supports the Encounter resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Encounter resource."/>
+<documentation value="If the client supports the Encounter resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Encounter resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -7372,7 +7368,7 @@
 </extension>
 <type value="HealthcareService"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
-<documentation value="If the server supports the HealthcareService resource, the server **SHALL** support the AU Core profile and the conformance expectations for the HealthcareService resource."/>
+<documentation value="If the client supports the HealthcareService resource, the server **SHALL** support the AU Core profile and the conformance expectations for the HealthcareService resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -7507,7 +7503,7 @@
 </extension>
 <type value="Immunization"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
-<documentation value="If the server supports the Immunization resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Immunization resource."/>
+<documentation value="If the client supports the Immunization resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Immunization resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -7574,7 +7570,7 @@
 </extension>
 <type value="Location"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
-<documentation value="If the server supports the Location resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Location resource."/>
+<documentation value="If the client supports the Location resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Location resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -7654,7 +7650,7 @@
 </extension>
 <type value="Medication"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
-<documentation value="MedicationAdministration, MedicationDispense, MedicationRequest, and MedicationStatement resources can represent a medication, using an external reference to a Medication resource.&#xA;&#xA;If the server supports the Medication resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Medication resource."/>
+<documentation value="MedicationAdministration, MedicationDispense, MedicationRequest, and MedicationStatement resources can represent a medication, using an external reference to a Medication resource.&#xA;&#xA;If the client supports the Medication resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Medication resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -7716,7 +7712,7 @@
 </extension>
 <type value="MedicationAdministration"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationadministration"/>
-<documentation value="If the server supports the MedicationAdministration resource, the server **SHALL** support the AU Core profile and the conformance expectations for the MedicationAdministration resource."/>
+<documentation value="If the client supports the MedicationAdministration resource, the server **SHALL** support the AU Core profile and the conformance expectations for the MedicationAdministration resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -7797,7 +7793,7 @@
 </extension>
 <type value="MedicationDispense"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
-<documentation value="If the server supports the MedicationDispense resource, the server **SHALL** support the AU Core profile and the conformance expectations for the MedicationDispense resource."/>
+<documentation value="If the client supports the MedicationDispense resource, the server **SHALL** support the AU Core profile and the conformance expectations for the MedicationDispense resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -7895,7 +7891,7 @@
 </extension>
 <type value="MedicationRequest"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
-<documentation value="If the server supports the MedicationRequest resource, the server **SHALL** support the AU Core profile and the conformance expectations for the MedicationRequest resource."/>
+<documentation value="If the client supports the MedicationRequest resource, the server **SHALL** support the AU Core profile and the conformance expectations for the MedicationRequest resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -8020,7 +8016,7 @@
 </extension>
 <type value="MedicationStatement"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
-<documentation value="Clients SHALL query for both MedicationStatement and MedicationRequest when fetching patient Medication information.&#xA;&#xA;The MedicationRequest resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The server application **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the server **SHALL** support the `_include` parameter for searching this element. The client application **SHALL** support all methods. If the server supports the MedicationStatement resource, the server **SHALL** support the AU Core profile and the conformance expectations for the MedicationStatement resource."/>
+<documentation value="Clients SHALL query for both MedicationStatement and MedicationRequest when fetching patient Medication information.&#xA;&#xA;The MedicationRequest resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The server application **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the server **SHALL** support the `_include` parameter for searching this element. The client application **SHALL** support all methods. If the client supports the MedicationStatement resource, the server **SHALL** support the AU Core profile and the conformance expectations for the MedicationStatement resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -8283,7 +8279,7 @@
 <valueCode value="SHALL"/>
 </extension>
 </supportedProfile>
-<documentation value="If the server supports the Observation resource, the server **SHALL** support the AU Core profiles and the conformance expectations for the Observation resource."/>
+<documentation value="If the client supports the Observation resource, the server **SHALL** support the AU Core profiles and the conformance expectations for the Observation resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -8359,7 +8355,7 @@
 </extension>
 <type value="Organization"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
-<documentation value="If the server supports the Organization resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Organization resource."/>
+<documentation value="If the client supports the Organization resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Organization resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -8459,7 +8455,7 @@
 </extension>
 <type value="Patient"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
-<documentation value="Servers SHALL support the capability for a client application to access the patient record using any of the following API calls:&#xA;&#xA;```GET [url]/Patient/[id]```&#xA;&#xA;```GET [url]/Patient?_id=[id]```&#xA;&#xA;```GET [url]/Patient?identifier=[identifier]```&#xA;&#xA;Servers are not required to support any additional search parameters, and clients SHOULD not expect servers to do so.&#xA;&#xA;Additional rules and guidance for supporting `Patient.link`: &#xA;- The server:&#xA;    - SHALL have no more than one Patient with a status of active = &quot;true&quot; *from the server being queried* &#xA;    - MAY include inactive patients on the *same server*&#xA;    - MAY include inactive or active patients from a *different server*&#xA;    - When returning a [search Bundle](http://hl7.org/fhir/bundle.html) that contains more than one Patient record for the same patient, the Patient record(s) SHALL use the `Patient.link` attribute to cross-link the Patient resources.&#xA;- The client:&#xA;    - SHALL be able to follow the link(s) to the other Patient resource(s) and understand the direction of the link (in other words, which Patient is linked to which other Patient)&#xA;    - SHALL understand the `Patient.link.type` code which defines the type of link between this Patient resource and another Patient resource&#xA;    - SHALL be aware of the linked Patient `active` flag and that inactive patients may have relevant information"/>
+<documentation value="Clients SHALL support the capability for a client application to access the patient record using any of the following API calls:&#xA;&#xA;```GET [url]/Patient/[id]```&#xA;&#xA;```GET [url]/Patient?_id=[id]```&#xA;&#xA;```GET [url]/Patient?identifier=[identifier]```&#xA;&#xA;Clients are not required to support any additional search parameters, and clients SHOULD not expect servers to do so.&#xA;&#xA;Additional rules and guidance for supporting `Patient.link`: &#xA;- The server:&#xA;    - SHALL have no more than one Patient with a status of active = &quot;true&quot; *from the server being queried* &#xA;    - MAY include inactive patients on the *same server*&#xA;    - MAY include inactive or active patients from a *different server*&#xA;    - When returning a [search Bundle](http://hl7.org/fhir/bundle.html) that contains more than one Patient record for the same patient, the Patient record(s) SHALL use the `Patient.link` attribute to cross-link the Patient resources.&#xA;- The client:&#xA;    - SHALL be able to follow the link(s) to the other Patient resource(s) and understand the direction of the link (in other words, which Patient is linked to which other Patient)&#xA;    - SHALL understand the `Patient.link.type` code which defines the type of link between this Patient resource and another Patient resource&#xA;    - SHALL be aware of the linked Patient `active` flag and that inactive patients may have relevant information"/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -8559,7 +8555,7 @@
 </extension>
 <type value="Practitioner"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-<documentation value="If the server supports the Practitioner resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Practitioner resource."/>
+<documentation value="If the client supports the Practitioner resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Practitioner resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -8610,7 +8606,7 @@
 </extension>
 <type value="PractitionerRole"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-<documentation value="If the server supports the PractitionerRole resource, the server **SHALL** support the AU Core profile and the conformance expectations for the PractitionerRole resource."/>
+<documentation value="If the client supports the PractitionerRole resource, the server **SHALL** support the AU Core profile and the conformance expectations for the PractitionerRole resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -8723,7 +8719,7 @@
 </extension>
 <type value="Procedure"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
-<documentation value="If the server supports the Procedure resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Procedure resource."/>
+<documentation value="If the client supports the Procedure resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Procedure resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -8781,7 +8777,7 @@
 </extension>
 <type value="Provenance"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-provenance"/>
-<documentation value="If the server supports the Provenance resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Provenance resource."/>
+<documentation value="If the client supports the Provenance resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Provenance resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -8818,7 +8814,7 @@
 </extension>
 <type value="RelatedPerson"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
-<documentation value="If the server supports the RelatedPerson resource, the server **SHALL** support the AU Core profile and the conformance expectations for the RelatedPerson resource."/>
+<documentation value="If the client supports the RelatedPerson resource, the server **SHALL** support the AU Core profile and the conformance expectations for the RelatedPerson resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -8958,7 +8954,7 @@
 </extension>
 <type value="ServiceRequest"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
-<documentation value="If the server supports the ServiceRequest resource, the server **SHALL** support the AU Core profile and the conformance expectations for the ServiceRequest resource."/>
+<documentation value="If the client supports the ServiceRequest resource, the server **SHALL** support the AU Core profile and the conformance expectations for the ServiceRequest resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -9052,7 +9048,7 @@
 </extension>
 <type value="Specimen"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-specimen"/>
-<documentation value="If the server supports the Specimen resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Specimen resource."/>
+<documentation value="If the client supports the Specimen resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Specimen resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -9100,7 +9096,7 @@
 </extension>
 <type value="Substance"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-substance"/>
-<documentation value="Substance resources can represent a specific ingredient substance, using an external reference to a Substance resource.&#xA;&#xA;If the server supports the Substance resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Substance resource."/>
+<documentation value="Substance resources can represent a specific ingredient substance, using an external reference to a Substance resource.&#xA;&#xA;If the client supports the Substance resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Substance resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
