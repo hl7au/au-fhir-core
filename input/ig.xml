@@ -62,21 +62,21 @@
 			<reference>
 				<reference value="SearchParameter/au-core-coverage-patient"/>
 			</reference>
-			<name value="AUCoreClinicalPatient"/>
+			<name value="AUCoreCoveragePatient"/>
 			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="SearchParameter/au-core-practitionerrole-practitioner"/>
 			</reference>
-			<name value="AUCoreClinicalPatient"/>
+			<name value="AUCorePractitionerRolePractitioner"/>
 			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="SearchParameter/au-core-relatedperson-patient"/>
 			</reference>
-			<name value="AUCoreClinicalPatient"/>
+			<name value="AUCoreRelatedPersonPatient"/>
 			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
