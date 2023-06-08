@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir">
   <id value="au-core-server"/>
-  <text>
+<text>
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h2 id="title">AU Core Server CapabilityStatement</h2>
@@ -22,8 +22,8 @@
         </p>
         <p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as &quot;SHALL NOT&quot;. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p>
       </blockquote>
-      <h3 id="shallIGs">
-        <strong>SHALL</strong> support the following Implementation Guides</h3>
+      <h3 id="shouldIGs">
+        <strong>SHOULD</strong> support the following Implementation Guides</h3>
       <ul>
         <li>
           <a href="https://hl7.org/fhir/uv/ipa/">International Patient Access</a>
@@ -31,10 +31,6 @@
         <li>
           <a href="http://hl7.org/fhir/smart-app-launch/">SMART Application Launch Framework Implementation Guide</a>
         </li>
-      </ul>
-      <h3 id="shouldIGs">
-        <strong>SHOULD</strong> support the following Implementation Guides</h3>
-      <ul>
         <li>
           <a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Export Implementation Guide</a>
         </li>
@@ -1297,7 +1293,7 @@
 <div class="col-lg-6">
 <span class="lead">Supported System Profiles</span>
 <br/>
-<a href="StructureDefinition-au-core-composition.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-composition</a>
+<a href="StructureDefinition-au-core-documentcomposition.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentcomposition</a>
 </div>
 <div class="col-lg-3">
 <span class="lead">Profile Conformance</span>
@@ -4226,6 +4222,61 @@
 <br/>
 <a href="StructureDefinition-au-core-observation.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation</a>
 </div>
+<div class="col-lg-6">
+<span class="lead">Supported System Profiles</span>
+<br/>
+<a href="StructureDefinition-au-core-waistcircum.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-waistcircum</a>
+<br/>
+<a href="StructureDefinition-au-core-bodyweight.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight</a>
+<br/>
+<a href="StructureDefinition-au-core-bodytemp.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp</a>
+<br/>
+<a href="StructureDefinition-au-core-diagnosticresult.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult</a>
+<br/>
+<a href="StructureDefinition-au-core-diagnosticresult-imag.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-imag</a>
+<br/>
+<a href="StructureDefinition-au-core-diagnosticresult-path.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path</a>
+<br/>
+<a href="StructureDefinition-au-core-heartrate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate</a>
+<br/>
+<a href="StructureDefinition-au-core-headcircum.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-headcircum</a>
+<br/>
+<a href="StructureDefinition-au-core-gravidity.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-gravidity</a>
+<br/>
+<a href="StructureDefinition-au-core-healthprogramparticipation.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthprogramparticipation</a>
+<br/>
+<a href="StructureDefinition-au-core-oxygensat.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-oxygensat</a>
+<br/>
+<a href="StructureDefinition-au-core-sexassignedatbirth.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-sexassignedatbirth</a>
+<br/>
+<a href="StructureDefinition-au-core-alcoholstatus.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-alcoholstatus</a>
+<br/>
+<a href="StructureDefinition-au-core-norelevantfinding.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-norelevantfinding</a>
+<br/>
+<a href="StructureDefinition-au-core-lastmenstrualperiod.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-lastmenstrualperiod</a>
+<br/>
+<a href="StructureDefinition-au-core-parity.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-parity</a>
+<br/>
+<a href="StructureDefinition-au-core-smokingceasedate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingceasedate</a>
+<br/>
+<a href="StructureDefinition-au-core-smokingstartdate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstartdate</a>
+<br/>
+<a href="StructureDefinition-au-core-smokingstatus.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus</a>
+<br/>
+<a href="StructureDefinition-au-core-resprate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-resprate</a>
+<br/>
+<a href="StructureDefinition-au-core-lipid-result.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result</a>
+<br/>
+<a href="StructureDefinition-au-core-gestationalage.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-gestationalage</a>
+<br/>
+<a href="StructureDefinition-au-core-bloodpressure.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure</a>
+<br/>
+<a href="StructureDefinition-au-core-estimateddateofdelivery.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-estimateddateofdelivery</a>
+<br/>
+<a href="StructureDefinition-au-core-vitalspanel.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-vitalspanel</a>
+<br/>
+<a href="StructureDefinition-au-core-bodyheight.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight</a>
+</div>
 <div class="col-lg-3">
 <span class="lead">Profile Conformance</span>
 <br/>
@@ -5306,8 +5357,8 @@
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
-<h4 id="rRelatedPerson1-1" class="panel-title">
-<span style="float: right;">Resource Conformance: SHOULD</span>rRelatedPerson</h4>
+<h4 id="RelatedPerson1-1" class="panel-title">
+<span style="float: right;">Resource Conformance: SHOULD</span>RelatedPerson</h4>
 </div>
 <div class="panel-body">
 <div class="container">
@@ -5346,7 +5397,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the client supports the rRelatedPerson resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the rRelatedPerson resource.</p>
+<p>If the client supports the RelatedPerson resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the RelatedPerson resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5427,8 +5478,8 @@
     <div>
     <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core rRelatedPerson profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core rRelatedPerson profile.</p>
+    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core RelatedPerson profile.</p>
+    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core RelatedPerson profile.</p>
   </div>
   </div>
 </td>
