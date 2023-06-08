@@ -989,7 +989,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the CarePlan resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the CarePlan resource.</p>
+<p>If the server supports the CarePlan resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the CarePlan resource.</p>
 </div>
 </blockquote>
 </div>
@@ -1201,7 +1201,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the CareTeam resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the CareTeam resource.</p>
+<p>If the server supports the CareTeam resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the CareTeam resource.</p>
 </div>
 </blockquote>
 </div>
@@ -1346,7 +1346,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Composition resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Composition resource.</p>
+<p>If the server supports the Composition resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Composition resource.</p>
 </div>
 </blockquote>
 </div>
@@ -1615,7 +1615,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Condition resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Condition resource.</p>
+<p>If the server supports the Condition resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Condition resource.</p>
 </div>
 </blockquote>
 </div>
@@ -1855,7 +1855,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Coverage resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Coverage resource.</p>
+<p>If the server supports the Coverage resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Coverage resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2045,7 +2045,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the DiagnosticReport resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the DiagnosticReport resource.</p>
+<p>If the server supports the DiagnosticReport resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the DiagnosticReport resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2314,7 +2314,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the DocumentReference resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the DocumentReference resource.</p>
+<p>If the server supports the DocumentReference resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the DocumentReference resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2612,7 +2612,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Encounter resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Encounter resource.</p>
+<p>If the server supports the Encounter resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Encounter resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2915,7 +2915,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the HealthcareService resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the HealthcareService resource.</p>
+<p>If the server supports the HealthcareService resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the HealthcareService resource.</p>
 </div>
 </blockquote>
 </div>
@@ -3096,7 +3096,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Immunization resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Immunization resource.</p>
+<p>If the server supports the Immunization resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Immunization resource.</p>
 </div>
 </blockquote>
 </div>
@@ -3298,7 +3298,7 @@
     <span class="lead">Documentation</span>
     <blockquote>
     <div>
-    <p>If the server supports the Location resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Location resource.</p>
+    <p>If the server supports the Location resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Location resource.</p>
     </div>
     </blockquote>
     </div>
@@ -3496,7 +3496,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the MedicationAdministration resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationAdministration resource.</p>
+<p>If the server supports the MedicationAdministration resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationAdministration resource.</p>
 </div>
 </blockquote>
 </div>
@@ -3680,7 +3680,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the MedicationDispense resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationDispense resource.</p>
+<p>If the server supports the MedicationDispense resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationDispense resource.</p>
 </div>
 </blockquote>
 </div>
@@ -3853,7 +3853,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the MedicationRequest resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationRequest resource.</p>
+<p>If the server supports the MedicationRequest resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationRequest resource.</p>
 </div>
 </blockquote>
 </div>
@@ -4100,7 +4100,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the MedicationStatement resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationStatement resource.</p>
+<p>If the server supports the MedicationStatement resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationStatement resource.</p>
 </div>
 </blockquote>
 </div>
@@ -4328,7 +4328,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Observation resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Observation resource.</p>
+<p>If the server supports the Observation resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Observation resource.</p>
 </div>
 </blockquote>
 </div>
@@ -4568,7 +4568,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Organization resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Organization resource.</p>
+<p>If the server supports the Organization resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Organization resource.</p>
 </div>
 </blockquote>
 </div>
@@ -4690,7 +4690,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Patient resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Patient resource.</p>
+<p>If the server supports the Patient resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Patient resource.</p>
 </div>
 </blockquote>
 </div>
@@ -4940,7 +4940,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Practitioner resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Practitioner resource.</p>
+<p>If the server supports the Practitioner resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Practitioner resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5050,7 +5050,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the PractitionerRole resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the PractitionerRole resource.</p>
+<p>If the server supports the PractitionerRole resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the PractitionerRole resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5218,7 +5218,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Procedure resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Procedure resource.</p>
+<p>If the server supports the Procedure resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Procedure resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5422,7 +5422,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Provenance resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Provenance resource.</p>
+<p>If the server supports the Provenance resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Provenance resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5472,7 +5472,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the RelatedPerson resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the RelatedPerson resource.</p>
+<p>If the server supports the RelatedPerson resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the RelatedPerson resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5645,7 +5645,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the ServiceRequest resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the ServiceRequest resource.</p>
+<p>If the server supports the ServiceRequest resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the ServiceRequest resource.</p>
 </div>
 </blockquote>
 </div>
@@ -5914,7 +5914,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Specimen resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Specimen resource.</p>
+<p>If the server supports the Specimen resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Specimen resource.</p>
 </div>
 </blockquote>
 </div>
