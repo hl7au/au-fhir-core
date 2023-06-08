@@ -22,6 +22,13 @@
         </p>
         <p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as &quot;SHALL NOT&quot;. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p>
       </blockquote>
+      <h3 id="shallIGs">
+        <strong>SHALL</strong> support the following Implementation Guides</h3>
+      <ul>
+        <li>
+          <a href="http://hl7.org.au/fhir/">AU Base</a>
+        </li>
+      </ul>
       <h3 id="shouldIGs">
         <strong>SHOULD</strong> support the following Implementation Guides</h3>
       <ul>
@@ -6066,6 +6073,11 @@
 <valueCode value="SHOULD"/>
 </extension>
 </patchFormat>
+<implementationGuide value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base">
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHALL"/>
+</extension>
+</implementationGuide>
 <implementationGuide value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
