@@ -26,11 +26,13 @@ All examples included in this implementation guide are available for download:
 
 The following link to the ImplementationGuide resource defines the technical details of this publication, including dependencies and publishing parameters:
 
-- [AU Core ImplementationGuide Resource](ImplementationGuide-hl7.fhir.au.core.html)
+- [XML](ImplementationGuide-hl7.fhir.au.core.xml) 
+- [JSON](ImplementationGuide-hl7.fhir.au.core.json)
+- [TTL](ImplementationGuide-hl7.fhir.au.core.ttl)
 
 ### OpenAPI (a.k.a., Swagger) Definition Files
 
  The following [OpenAPI](https://www.openapis.org/) files are generated from the AU Core CapabilityStatements:
 
 - [AU Core Server](au-core-server.openapi.json)
-- [AU COre Client](au-core-client.openapi.json)
+- [AU Core Client](au-core-client.openapi.json)

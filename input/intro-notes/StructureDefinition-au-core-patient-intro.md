@@ -27,5 +27,5 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - an Australian address **SHOULD** be represented using the [Australian Address](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-address.html) data type profile
 - When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/) and [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html)
 
-<p class="stu-note">Specific feedback is sought on preferred identifiers to support where an individual is not eligible for an IHI e.g. tourist or other temporary stay in Australia where the individual is not eligible. Passport is proposed for use (see example <a href="Patient-italia-sofia.html">Patient/italia-sofia</a>).</p>
+<p class="stu-note">Specific feedback is sought on preferred identifiers to support where an individual is not eligible for an IHI e.g. tourist or other temporary stay in Australia. Passport is proposed for use (see example <a href="Patient-italia-sofia.html">Patient/italia-sofia</a>).</p>
 
