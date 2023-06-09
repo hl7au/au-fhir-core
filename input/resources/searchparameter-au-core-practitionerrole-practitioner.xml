@@ -5,7 +5,7 @@
     <name value="AUCorePractitionerRolePractitioner"/>
     <derivedFrom value="http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner"/>
     <status value="draft"/>
-    <description value="A practitioner role practitioner **SHOULD** support practitioner.identifier. NOTE: This AU Core SearchParameter extends the usage context of the&#xA;[practitioner parameter](http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
+    <description value="A practitioner role practitioner **SHOULD** support practitioner.identifier. NOTE: This AU Core SearchParameter extends the usage context of the&#xA;PractitionerRole-practitioner parameter&#xA; - multipleAnd&#xA; - multipleOr&#xA; - chain"/>
     <code value="practitioner"/>
     <base value="PractitionerRole"/>
     <type value="reference"/>

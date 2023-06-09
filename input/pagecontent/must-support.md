@@ -12,7 +12,7 @@ A sending system:
       - there is a clinical reason why supplying the information would be unsafe, misleading, or otherwise clinically inappropriate
       - the data is suppressed due to a security or privacy reason 
 
-A receiving system:
+A requesting system:
 - **SHALL** be capable of meaningfully processing all elements labelled MustSupport where the resource has been constructed in accordance with AU Core conformance requirements; depending on local requirements this may mean display, persist, index, or action in an event or request workflow
 - **MAY** choose to reject non-conformant resources 
 - **SHALL** interpret missing data elements within resource instances as data not present in the source system
@@ -77,14 +77,14 @@ The full set of subelements is visible in the "Snapshot Table" which shows the s
 ##### Must support elements of primitive type
 
 - A sending system **SHALL** be capable of providing a meaningful, valid, value in the element
-- A receiving system **SHALL** be capable of meaningfully processing the value in the element
+- A requesting system **SHALL** be capable of meaningfully processing the value in the element
 - A persisting system **SHALL** be capable of persisting the value in the element
  
 
 ##### Must support elements of complex type
 
 - A sending system **SHALL** be capable of providing a meaningful, valid, value in the element
-- A receiving system **SHALL** be capable of meaningfully processing the value in all parts of the complex type (since the receiver cannot anticipate which subelements might be populated)
+- A requesting system **SHALL** be capable of meaningfully processing the value in all parts of the complex type (since the receiver cannot anticipate which subelements might be populated)
 - A persisting system **SHALL** be capable of persisting the value in all parts of the complex type (since the persister cannot anticipate which subelements might be populated)
 
 
@@ -94,19 +94,19 @@ For some complex types a meaningful, valid, value can be populated with only one
 ##### Must support elements of Reference type
 
 - A sending system **SHALL** be capable of populating the element with a valid reference
-- A receiving system **SHALL** be capable of meaningfully processing the element with a valid reference that conforms to the profile
+- A requesting system **SHALL** be capable of meaningfully processing the element with a valid reference that conforms to the profile
 - A persisting system **SHALL** be capable of persisting the element with a valid reference that conforms to the profile
 
 
 ##### Must support elements with a choice of data types or profiles
  
 - A sending system **SHALL** be capable of populating the element with a value that conforms to at least one choice, and **SHOULD** be capable of populating every choice for which the sending system might possess data
-- A receiving system **SHALL** be capable of meaningfully processing all choices (since the receiver cannot anticipate which data type or profile might be populated) 
+- A requesting system **SHALL** be capable of meaningfully processing all choices (since the receiver cannot anticipate which data type or profile might be populated) 
 - A persisting system **SHALL** be capable of persisting all choices (since the persister cannot anticipate which data type or profile might be populated)
 
 A profile may slice an element that has a choice of data types or profiles to constrain the set of choices to be supported. For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) constrains the choices for `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number:
 - A sending system **SHALL** be capable of populating the element with a value that conforms to at least one of those three identifier choices, and **SHOULD** be capable of populating every choice for which the sending system might possess data
-- A receiving system **SHALL** be capable of meaningfully processing all supported identifier choices (since the receiver cannot anticipate which data type or profile might be populated) 
+- A requesting system **SHALL** be capable of meaningfully processing all supported identifier choices (since the receiver cannot anticipate which data type or profile might be populated) 
 - A persisting system **SHALL** be capable of persisting all supported identifier choices (since the persister cannot anticipate which data type or profile might be populated)
 
 
@@ -114,7 +114,7 @@ A profile may slice an element that has a choice of data types or profiles to co
 
 A resource may support two elements that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU Core Encounter](StructureDefinition-au-core-encounter.html). Where both elements are optional and flagged with Must Support in a profile they **SHALL** be treated as a choice of data types:
 - A sending system **SHALL** be capable of populating at least one choice, and **SHOULD** be capable of populating every choice for which the sending system might possess data
-- A receiving system **SHALL** be capable of meaningfully processing all choices (since the receiver cannot anticipate which element might be populated) 
+- A requesting system **SHALL** be capable of meaningfully processing all choices (since the receiver cannot anticipate which element might be populated) 
 - A persisting system **SHALL** be capable of persisting all choices (since the persister cannot anticipate which element might be populated)
 
 
@@ -123,7 +123,7 @@ A resource may support two elements that are used to indicate a reason, e.g. `En
 A profile may slice an element that has a choice of terminology bindings to constrain the set of choices to be supported. For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) constrains the optional terminology choices for `Medication.code` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support AMT and PBS:
 - A sending system that supplies a coded value **SHALL** be capable of populating the element with a value that conforms to at least one of those two terminology choices, and **SHOULD** be capable of populating every choice for which the sending system might possess data
   - In this profile, a coded value is optional, a sending system that does not have the capability to supply a coded value from a terminology may supply a text value 
-- A receiving system **SHALL** be capable of meaningfully processing all supported terminology choices (since the receiver cannot anticipate which data type or profile might be populated) 
+- A requesting system **SHALL** be capable of meaningfully processing all supported terminology choices (since the receiver cannot anticipate which data type or profile might be populated) 
 - A persisting system **SHALL** be capable of persisting all supported terminology choices (since the persister cannot anticipate which data type or profile might be populated)
 
 
