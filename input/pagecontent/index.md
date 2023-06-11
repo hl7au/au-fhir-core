@@ -50,12 +50,14 @@ implementation. This implementation guide will be used as the basis for Australi
 
 The following actors are part of the AU Core IG:
 
-AU Core Requestor
-: An application that initiates a data access request to retrieve patient data. The AU Core Requestor is the client in a client-server interaction. The terms "requester", "client", and "app" are used interchangeably throughout this guide and are not meant to limit this actor to patient and provider apps. Payers and other users can use the same technology. Consider these terms a short-hand notation for a "user application".
+**AU Core Requestor**
+
+An application that initiates a data access request to retrieve patient data. The AU Core Requestor is the client in a client-server interaction. The terms "requester", "client", and "app" are used interchangeably throughout this guide and are not meant to limit this actor to patient and provider apps. Payers and other users can use the same technology. Consider these terms a short-hand notation for a "user application".
 <br/><br/>
 
-AU Core Responder
-: A system that responds to the data access request providing patient data. The AU Core Responder is the server in a client-server interaction. The terms "server", "AU Core FHIR server", "FHIR server" and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. HIEs, care coordination platforms, population health systems, etc., can use the same technology. Consider these terms a short-hand notation for an "interoperable healthcare platform".
+**AU Core Responder**
+
+A system that responds to the data access request providing patient data. The AU Core Responder is the server in a client-server interaction. The terms "server", "AU Core FHIR server", "FHIR server" and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. HIEs, care coordination platforms, population health systems, etc., can use the same technology. Consider these terms a short-hand notation for an "interoperable healthcare platform".
 <br/><br/>
 
 
@@ -75,7 +77,6 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Search Parameters](search-parameters.html): This set of pages lists the search parameters extended for use in this guide for use in AU Core operations.
   - [Terminology](terminology.html): This set of pages lists the value sets and code systems defined in this guide.
   - [Capability Statements](capability-statements.html): This set of pages define the expected FHIR capabilities of AU Core Servers and Clients.
-- [Examples](examples.html): This page lists all the examples used in this guide.
 - [Examples](examples.html): This page lists all the examples used in this guide.
 - [Downloads](downloads.html): This page provides links to downloadable artefacts including the AU Core FHIR NPM package.
 
