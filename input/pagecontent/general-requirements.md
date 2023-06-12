@@ -47,7 +47,7 @@ Servers that implement Profile Only Support declare conformance to each profile 
       "resourceType": "CapabilityStatement",
       ...
       "instantiates": [
-        "http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"
+        "http://hl7.org.au/fhir/core/CapabilityStatement/au-core-server"
       ],
       ...  
       "rest": [
@@ -76,7 +76,7 @@ Servers that implement Profile Only Support declare conformance to each profile 
       "resourceType": "CapabilityStatement",
       ...
       "instantiates": [
-        "http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"
+        "http://hl7.org.au/fhir/core/CapabilityStatement/au-core-server"
       ],
       ...  
       "rest": [
@@ -104,7 +104,7 @@ Servers that implement Profile Only Support declare conformance to each profile 
 Profile Support refers to the support of the AU Core profiles, such that the system exposes FHIR resources that adhere to the AU Core profiles' content model. Interaction Support refers to a system that supports the AU Core RESTful interactions.
 
 Servers that implement AU Core Profile + Interaction Support:
-- **SHALL** declare conformance with the AU Core Server Capability Statement by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa-server`
+- **SHALL** declare conformance with the AU Core Server Capability Statement by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org.au/fhir/core/CapabilityStatement/au-core-server`
 - **SHALL** specify the full capability details from the AU Core CapabilityStatement it claims to implement, including declaring support for the AU Core profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
 - **SHALL** be able to populate all profile elements that are mandatory and/or labelled *Must Support* as defined by that profile's StructureDefinition.
 - **SHALL** implement the RESTful behavior according to the FHIR specification, including *read* and *search* behavior and required search parameters as defined in the [AU Core CapabilityStatement](CapabilityStatement-au-core-server.html#resourcesSummary1).
