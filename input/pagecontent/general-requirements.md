@@ -1,4 +1,11 @@
-[FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html) apply, and define the use of terms in this guide including the conformance verbs - SHALL, SHALL NOT, SHOULD, SHOULD NOT, MAY.
+The requirements of the FHIR standard and [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html) apply, and define the use of terms in this guide including the conformance verbs - SHALL, SHALL NOT, SHOULD, SHOULD NOT, MAY.
+
+Implementers are advised to be familiar with the requirements of the FHIR standard when implementing AU Core, in particular:
+- [FHIR Terminology requirements](http://hl7.org/fhir/R4/terminologies.html)
+- [FHIR RESTful API](http://hl7.org/fhir/R4/http.html) 
+- [FHIR Search](http://hl7.org/fhir/R4/search.html)
+- [FHIR Resource formats](http://hl7.org/fhir/R4/resource.html)
+- [FHIR Data Types](http://hl7.org/fhir/R4/datatypes.html)
 
 
 ### Conformance Artifacts
@@ -21,10 +28,10 @@ Systems may deploy, and support, one or more AU Core profiles (i.e. the profiles
 
 A system **SHOULD** support all AU Core profiles unless the system does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialised role in clinical or information workflows. For example, a pathology laboratory may support [AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html), but may not support [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html).
 
-Profile elements consist of both Mandatory and Must Support elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support]({{site.data.fhir.path}}profiling.html#mustsupport) guidance requires specifications to define the support expected for profile elements labeled Must Support. AU Core defines server and client requirements for profile elements labeled as *Must Support* on the [Must Support](must-support.html) page.
+Profile elements consist of both Mandatory and *Must Support* elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support]({{site.data.fhir.path}}profiling.html#mustsupport) guidance requires specifications to define the support expected for profile elements labelled Must Support. AU Core defines server and client requirements for profile elements labelled as *Must Support* on the [Must Support](must-support.html) page.
 
 Servers that implement AU Core Profile Only Support:
-- **SHALL** be able to populate all profile elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.
+- **SHALL** be able to populate all profile elements that are mandatory and/or labelled *Must Support* as defined by that profile's StructureDefinition.
 - **SHALL** specify the full capability details from the AU Core CapabilityStatement it claims to implement, including declaring support for an AU Core profile by including its canonical URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
 
 
@@ -99,7 +106,7 @@ Profile Support refers to the support of the AU Core profiles, such that the sys
 Servers that implement AU Core Profile + Interaction Support:
 - **SHALL** declare conformance with the AU Core Server Capability Statement by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa-server`
 - **SHALL** specify the full capability details from the AU Core CapabilityStatement it claims to implement, including declaring support for the AU Core profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
-- **SHALL** be able to populate all profile elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.
+- **SHALL** be able to populate all profile elements that are mandatory and/or labelled *Must Support* as defined by that profile's StructureDefinition.
 - **SHALL** implement the RESTful behavior according to the FHIR specification, including *read* and *search* behavior and required search parameters as defined in the [AU Core CapabilityStatement](CapabilityStatement-au-core-server.html#resourcesSummary1).
 - **SHALL** specify the full capability details from the AU Core CapabilityStatement it claims to implement, including declaring support for the AU Core Profile's FHIR RESTful transactions.
 
@@ -132,7 +139,7 @@ There are situations when information for a particular data element is missing a
 
 If the source system does not have data for an element with a minimum cardinality = 0 (including elements labelled *Must Support*), the data element **SHALL** be omitted from the resource.  
 
-If the data element is a *Mandatory* element (in other words, where the minimum cardinality is > 0), the element **SHALL** be present *even if* the source system does not have data. The core specification provides guidance for what to do in this situation, which is summarised below.
+If the data element is a *Mandatory* element (in other words, where the minimum cardinality is > 0), the element **SHALL** be present *even if* the source system does not have data or know the reason for the absence of data. The core specification provides guidance for what to do in this situation, which is summarised below.
 
 1.  For *non-coded* data elements including type [Reference](http://hl7.org/fhir/R4/references.html#Reference), 
   - use the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) in the data type if the AU Core profile for that resource does not require a child element
@@ -210,10 +217,9 @@ If the data element is a *Mandatory* element (in other words, where the minimum 
 ### Suppressed Data
 In some circumstances, specific pieces of data may hidden due to security or privacy reasons. 
 
-Elements with a minimum cardinality = 0 (including elements labelled Must Support), the element **SHALL** be omitted from the resource if they are suppressed.
+Elements with a minimum cardinality = 0 (including elements labelled *Must Support*), the element **SHALL** be omitted from the resource if they are suppressed.
 
 For mandatory elements (minimum cardinality is > 0), the element **SHALL** be populated but it may exceed the data requester's access rights to know that the data is suppressed:
 - where a requester does not have access rights to know that data is suppressed use the code `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
 - where a requester may know that the data is suppressed use the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
-
 

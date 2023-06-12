@@ -6,8 +6,9 @@ If referencing a contained resource, both the contained resource and the referen
 In AU Core profiles:
 - Systems constructing a resource that represent medication or body structure information are encouraged to make use of contained resources. 
   - Operations on Medication resources are expected to be within the context of a referencing resource query such as an MedicationAdministration, MedicationDispense, MedicationRequest or MedicationStatement.
-  - Operations on BodyStructure resources are expected to be within the context of a referencing resource query such as a Consent, DiagnosticReport, Observation, or ServiceRequest.
+  - Operations on BodyStructure resources are expected to be within the context of a referencing resource query such as a DiagnosticReport, Observation, or ServiceRequest.
 - Otherwise, when responding to a query, servers should not use inline contained resources to represent the returned data.
+
 
 ### Extensibility – “additional” elements
 A server may send "additional" elements beyond those flagged with Must Support in an AU Core profile. Additional elements allow local requirements to be reflected including technical and workflow context for the resource, and extending the health information supported in exchanges. For this reason extensibility is generally allowed in AU Core profiles, only in some use case profiles are the rules tightened to limit the nature of additional information that can be sent.

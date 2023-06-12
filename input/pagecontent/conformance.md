@@ -1,7 +1,5 @@
-- [General Requirements]
-- [Must Support]
-
-{% include link-list.md %}
+- [General Requirements](general-requirements.html)
+- [Must Support](must-support.html)
 
 
 

@@ -1,35 +1,46 @@
-### Must support requirements
-Labelling an element [MustSupport]( https://www.hl7.org/fhir/conformance-rules.html#mustSupport) means that implementations that produce or consume resources **SHALL** provide "support" for the element in some meaningful way. AU Core profiles impose a core set of must support obligations on classes of implementations based on roles and data services. Some implementation contexts require additional support, e.g. ePrescribing. The publications and/or profiles that define a particular implementation context **SHOULD** make clear the required "support" for that context. 
+Labelling an element *[Must Support]( https://www.hl7.org/fhir/conformance-rules.html#mustSupport)* means that systems that request, or respond to requests, for patient data **SHALL** provide support for the element in some meaningful way. Must Support elements are treated differently between AU Core Responders and requestors. 
 
-A sending system:
-- when making a request to an endpoint **SHALL** conform to the Conformance/CapabilityStatement for that endpoint and conform to all applicable AU Core conformance requirements 
-- when responding to a request - TBD
-- when constructing a resource:
-   - **SHALL** ensure the resource conforms to the applicable AU Core profile
-   - **SHALL** implement the guidance on extensibility if including “additional” elements according to section on [Extensibility – “additional” elements](general-guidance.html#extensibility--additional-elements)
-   - **SHALL** implement the guidance on missing data if asserting a mandatory element is missing according to the section on [Missing Data](general-guidance.html#missing-data)
-   - **SHALL** populate all elements labelled MustSupport where the sending system has that information unless:
-      - there is a clinical reason why supplying the information would be unsafe, misleading, or otherwise clinically inappropriate
-      - the data is suppressed due to a security or privacy reason 
 
-A requesting system:
-- **SHALL** be capable of meaningfully processing all elements labelled MustSupport where the resource has been constructed in accordance with AU Core conformance requirements; depending on local requirements this may mean display, persist, index, or action in an event or request workflow
+### Must Support Requirements
+
+For querying and reading AU Core profiles, *Must Support* on any profile data element **SHALL** be interpreted as follows.
+
+#### AU Core Responder
+An AU Core Responder:
+- **SHALL** be capable of populating all data elements as part of the query results as specified by the [AU Core Server Capability Statement](CapabilityStatement-au-core-server.html).
+- **SHALL** populate all elements labelled *Must Support* unless:
+   - the element is not available for that patient.
+   - a requester does not have access rights to the element (the data is suppressed due to a security or privacy reason), in this case the responder **SHALL** implement the requirements on [Suppressed Data](general-requirements.html#suppressed-data).
+- **SHALL** implement the requirements on [Missing data](general-requirements.html#missing-data) when an element is not available for a patient.
+  - **SHALL NOT** include an element in the resource instance returned as part of query results when the element is optional.
+  - **SHALL** include an element in the resource instance returned as part of query results when the element is mandatory by following the instructions in the section on [Missing data](general-requirements.html#missing-data).
+
+
+#### AU Core Requester
+An AU Core Requester:
+- **SHALL** be capable of meaningfully processing resources with must support elements
+   - **SHALL** be able to process resource instances containing elements with missing or suppressed information.
 - **MAY** choose to reject non-conformant resources 
-- **SHALL** interpret missing data elements within resource instances as data not present in the source system
-- **SHALL** be able to process resources containing “additional” elements according to section on [Extensibility – “additional” elements](general-guidance.html#extensibility--additional-elements)
+- **SHALL** interpret missing data elements within resource instances as data not present in the source system when querying AU Core Responders
 
-A persisting system:
-- **SHALL** reject any request to create or update a resource that is not supported by the Conformance/CapabilityStatement, contains a modifier extension that is not supported by the Conformance/CapabilityStatement, or is a supported type but does not conform to the Conformance/CapabilityStatement resource for that endpoint.  
-- in circumstances other than those specified above (request to create or update a resource) **MAY** choose to reject non-conformant resources but is not required to do so
-- **SHALL** be able to persist resources containing data elements asserting missing information according to the section on [Missing Data](general-guidance.html#missing-data)
-- **SHALL** be able to persist resources containing "additional" elements according to section on [Extensibility – “additional” elements](general-guidance.html#extensibility--additional-elements)
+Processing, depending on local requirements, may mean display, persist, index, or action in an event or request workflow. Processing may differ based on the element’s value. For example, one possible value of the [ServiceRequest.status](https://hl7.org/fhir/r4/servicerequest-definitions.html#ServiceRequest.status) element is `entered-in-error`. This element is marked as Must Support; requestors must be capable of processing this value to handle the resource’s clinical data appropriately.
 
 
-#### Presentation of elements labelled MustSupport in profile views
+### Presentation of elements labelled Must Support in profiles
 
-When viewing the raw JSON of a profile, elements labelled *MustSupport* are flagged with a boolean element `mustSupport` set to "true". 
+#### Presentation of elements labelled Must Support in table views
 
-Example: AU Core AllergyIntolerance profile showing clinicalStatus and verificationStatus labelled MustSupport
+When rendered in an implementation guide each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table".
+
+The elements labelled *Must Support* in these views are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Implementers should refer to the "Key Elements Table" to see the full set of elements that are Mandatory or Must Support, and the full set of terminology requirements.
+
+Implementers should take note that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile. 
+
+#### Presentation of elements labelled *Must Support* in raw representations
+
+When viewing the raw representation (e.g. XML or JSON) of a profile, elements labelled *Must Support* are flagged as `mustSupport` set to "true". 
+
+Example: AU Core AllergyIntolerance profile showing clinicalStatus and verificationStatus labelled *Must Support*
 ~~~
 {
     "resourceType" : "StructureDefinition",
@@ -53,84 +64,82 @@ Example: AU Core AllergyIntolerance profile showing clinicalStatus and verificat
 }
 ~~~
 
-When rendered in an implementation publication each profile is presented in different formal views in a tree format under tabs labelled "Differential Table" and "Snapshot Table".
 
-The elements labelled *MustSupport* in the "Differential Table" and "Snapshot Table" view are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. To see the full set of elements that must be supported a reader needs to view the "Snapshot Table". 
-The "Snapshot Table" presents the elements labelled MustSupport in this profile (shown in the "Differential Table") and the elements labelled MustSupport inherited from a base profile (e.g. [AU Core Body Height](StructureDefinition-au-core-bodyheight.html) based on core [FHIR Body Height Profile](http://hl7.org/fhir/R4/bodyheight.html)). 
+### Interpreting profile elements labelled Must Support
 
-Implementers should take note that the full set of constraints (i.e. invariants) defined in a profile are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile. The "Differential Table" only presents constraints introduced in this profile in addition to the constraints present in the base profile and base resource. The "Snapshot Table" only presents the constraints visible in the "Differential Table" and additionally presents those constraints set in slices in the base profile.
+Profiles defined in this implementation publication flag *Must Support* on elements and not part subelements of a data type. 
+The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element.
 
-#### Interpreting profile elements labelled Must Support
-
-Profiles defined in this publication flag MustSupport on elements, there are no flags applied to parts of a data type. 
-The explanation on how to interpret MustSupport for an element does not address rules defined in each profile - in implementation the rules defined in the profile must be applied and may limit or extend what is allowed for each element.
-
-The allowed subelements for each supported element in a profile are defined by a combination of the data type from the core specification and any additional rules included in the profile. 
-A profile may include rules that:
+The subelements for each supported element in a profile are defined by a combination of the data type from the core specification and any additional rules included in the profile. A profile may include rules that:
 - limit what is considered 'valid'
 - extend the potential subelements by including an extension
 
-Typically AU Core profiles will extend the potential subelements by inheriting from a HL7 AU Base profile, e.g. the element `Medication.code` in profile [AU Core Medication](StructureDefinition-au-core-medication.html) is of type CodeableConcept and is extended by inheriting a medicine specific subelement `Medication.code.coding.extension` [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) from [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html). 
-The full set of subelements is visible in the "Snapshot Table" which shows the subelements defined in this profile (shown in the "Differential Table") and the subelements inherited from a base profile.
+For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) limits what is considered valid for the element `Patient.name` with the invariant "**au-core-pat-02:** At least one patient name shall have a family name".
+
+Typically AU Core profiles will inherit extended subelements from a HL7 AU Base profile, e.g. the element `Medication.code` in profile [AU Core Medication](StructureDefinition-au-core-medication.html) is of type CodeableConcept and is extended by inheriting a medicine specific subelement `Medication.code.coding.extension` [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) from [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html). 
+
+The full set of subelements is visible in the "Key Elements Table" or "Snapshot Table" which shows the subelements defined in this profile (shown in the "Differential Table") and the subelements inherited from a base profile.
 
 
-##### Must support elements of primitive type
 
-- A sending system **SHALL** be capable of providing a meaningful, valid, value in the element
-- A requesting system **SHALL** be capable of meaningfully processing the value in the element
-- A persisting system **SHALL** be capable of persisting the value in the element
+#### Must Support for elements of primitive type
+
+- An AU Core Responder **SHALL** be capable of populating the element
+  - providing a valid value in the element if the data is available
+  - asserting missing or suppressed data if the data is not available
+- An AU Core Requester **SHALL** be capable of meaningfully processing the element with
+  - a valid value
+  - missing or suppressed data
+
+
+#### Must Support for elements of complex type
+
+- An AU Core Responder **SHALL** be capable of populating the element
+  - providing a valid value in the element if the data is available
+  - asserting missing or suppressed data if the data is not available
+- An AU Core Requester **SHALL** be capable of meaningfully processing the element with
+  - a valid value in any or all parts of the complex type (since the requester cannot anticipate which subelements might be populated) 
+  - missing or suppressed data
+
+
+For some complex types a valid value can be populated with only one subelement, but usually more than one subelement is needed.
+
+
+#### Must Support for elements of Reference type
+
+- An AU Core Responder **SHALL** be capable of populating the element
+  - providing a valid reference to a resource conforming to at least one of the referenced resource types in the profile if the data is available, and **SHOULD** be capable of populating every choice for which the system might possess data
+  - asserting missing or suppressed data if the data is not available
+- An AU Core Requester **SHALL** be capable of meaningfully processing the element with 
+  - a valid reference to all resource types defined in the profile (since the requester cannot anticipate which resource types might be referenced)
+  - missing or suppressed data
+
+
+#### Must Support for elements with a choice of data types or profiles
  
+- An AU Core Responder **SHALL** be capable of populating the element
+  - providing a value that conforms to at least one choice in the profile if the data is available, and **SHOULD** be capable of populating every choice for which the system might possess data
+  - asserting missing or suppressed data if the data is not available
+- An AU Core Requester **SHALL** be capable of meaningfully processing the element with
+  - a valid value supporting all data types and profiles in the profile (since the requester cannot anticipate which data type or profile might be populated) 
+  - missing or suppressed data
 
-##### Must support elements of complex type
-
-- A sending system **SHALL** be capable of providing a meaningful, valid, value in the element
-- A requesting system **SHALL** be capable of meaningfully processing the value in all parts of the complex type (since the receiver cannot anticipate which subelements might be populated)
-- A persisting system **SHALL** be capable of persisting the value in all parts of the complex type (since the persister cannot anticipate which subelements might be populated)
-
-
-For some complex types a meaningful, valid, value can be populated with only one subelement, but usually more than one subelement is needed.
-
-
-##### Must support elements of Reference type
-
-- A sending system **SHALL** be capable of populating the element with a valid reference
-- A requesting system **SHALL** be capable of meaningfully processing the element with a valid reference that conforms to the profile
-- A persisting system **SHALL** be capable of persisting the element with a valid reference that conforms to the profile
-
-
-##### Must support elements with a choice of data types or profiles
- 
-- A sending system **SHALL** be capable of populating the element with a value that conforms to at least one choice, and **SHOULD** be capable of populating every choice for which the sending system might possess data
-- A requesting system **SHALL** be capable of meaningfully processing all choices (since the receiver cannot anticipate which data type or profile might be populated) 
-- A persisting system **SHALL** be capable of persisting all choices (since the persister cannot anticipate which data type or profile might be populated)
 
 A profile may slice an element that has a choice of data types or profiles to constrain the set of choices to be supported. For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) constrains the choices for `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number:
-- A sending system **SHALL** be capable of populating the element with a value that conforms to at least one of those three identifier choices, and **SHOULD** be capable of populating every choice for which the sending system might possess data
-- A requesting system **SHALL** be capable of meaningfully processing all supported identifier choices (since the receiver cannot anticipate which data type or profile might be populated) 
-- A persisting system **SHALL** be capable of persisting all supported identifier choices (since the persister cannot anticipate which data type or profile might be populated)
+- An AU Core Responder **SHALL** be capable of populating the element with a value that conforms to at least one of those three identifier choices, and **SHOULD** be capable of populating every choice for which the sending system might possess data
+- An AU Core Requester **SHALL** be capable of meaningfully processing all supported identifier choices (since the receiver cannot anticipate which data type or profile might be populated) 
 
 
-##### Must support between two elements that are a choice between CodeableConcept and Reference
+#### Must Support where there is a choice between an element of type CodeableConcept and type Reference
 
-A resource may support two elements that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU Core Encounter](StructureDefinition-au-core-encounter.html). Where both elements are optional and flagged with Must Support in a profile they **SHALL** be treated as a choice of data types:
-- A sending system **SHALL** be capable of populating at least one choice, and **SHOULD** be capable of populating every choice for which the sending system might possess data
-- A requesting system **SHALL** be capable of meaningfully processing all choices (since the receiver cannot anticipate which element might be populated) 
-- A persisting system **SHALL** be capable of persisting all choices (since the persister cannot anticipate which element might be populated)
+A resource may support two elements that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU Core Encounter](StructureDefinition-au-core-encounter.html). Where both elements are optional and labelled *Must Support* in a profile they **SHALL** be treated as a choice of data types:
+- An AU Core Responder **SHALL** be capable of populating at least one choice, and **SHOULD** be capable of populating every choice for which the sending system might possess data
+- An AU Core Requester **SHALL** be capable of meaningfully processing all choices (since the receiver cannot anticipate which element might be populated) 
 
 
-##### Must support elements with a choice of terminology bindings
+#### Must Support for elements with a choice of terminology bindings
 
 A profile may slice an element that has a choice of terminology bindings to constrain the set of choices to be supported. For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) constrains the optional terminology choices for `Medication.code` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support AMT and PBS:
-- A sending system that supplies a coded value **SHALL** be capable of populating the element with a value that conforms to at least one of those two terminology choices, and **SHOULD** be capable of populating every choice for which the sending system might possess data
+- An AU Core Responder that supplies a coded value **SHALL** be capable of populating the element with a value that conforms to at least one of those two terminology choices, and **SHOULD** be capable of populating every choice for which the sending system might possess data
   - In this profile, a coded value is optional, a sending system that does not have the capability to supply a coded value from a terminology may supply a text value 
-- A requesting system **SHALL** be capable of meaningfully processing all supported terminology choices (since the receiver cannot anticipate which data type or profile might be populated) 
-- A persisting system **SHALL** be capable of persisting all supported terminology choices (since the persister cannot anticipate which data type or profile might be populated)
-
-
-
-
-
-
-
-
-
+- An AU Core Requester **SHALL** be capable of meaningfully processing all supported terminology choices (since the receiver cannot anticipate which data type or profile might be populated) 

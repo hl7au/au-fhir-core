@@ -78,7 +78,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Terminology](terminology.html): This set of pages lists the value sets and code systems defined in this guide.
   - [Capability Statements](capability-statements.html): This set of pages define the expected FHIR capabilities of AU Core Servers and Clients.
 - [Examples](examples.html): This page lists all the examples used in this guide.
-- [Downloads](downloads.html): This page provides links to downloadable artefacts including the AU Core FHIR NPM package.
+- [Downloads](downloads.html): This page provides links to downloadable artefacts that developers can use to help them implement this guide.
 
 
 ### Collaboration
