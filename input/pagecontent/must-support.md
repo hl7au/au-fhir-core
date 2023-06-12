@@ -102,7 +102,7 @@ The full set of subelements is visible in the "Key Elements Table" or "Snapshot 
   - missing or suppressed data
 
 
-For some complex types a valid value can be populated with only one subelement, but usually more than one subelement is needed.
+For some complex types a valid value can be constructed by populating only one subelement, but usually more than one subelement is needed.
 
 
 #### Must Support for elements of Reference type
@@ -125,21 +125,63 @@ For some complex types a valid value can be populated with only one subelement, 
   - missing or suppressed data
 
 
-A profile may slice an element that has a choice of data types or profiles to constrain the set of choices to be supported. For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) constrains the choices for `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number:
-- An AU Core Responder **SHALL** be capable of populating the element with a value that conforms to at least one of those three identifier choices, and **SHOULD** be capable of populating every choice for which the sending system might possess data
-- An AU Core Requester **SHALL** be capable of meaningfully processing all supported identifier choices (since the receiver cannot anticipate which data type or profile might be populated) 
+A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing must support on each identifier slice. For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) constrains the choices for `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number:
+- An AU Core Responder **SHALL** be capable of populating the element 
+  - with a value that conforms to at least one of those three identifier choices if the data is available, and **SHOULD** be capable of populating every choice for which the sending system might possess data
+  - asserting missing or suppressed data if the data is not available
+- An AU Core Requester **SHALL** be capable of meaningfully processing the element with
+  - any supported identifier choice (since the requester cannot anticipate which data type or profile might be populated) \
+  - missing or suppressed data
 
+
+The table below lists the applicable profiles and supported identifier types in AU Core.
+
+AU Core Profile |Must Support Choice Elements
+---|---|---
+AU Core System Device|Device.identifier|PAI-D
+AU Core HealthcareService|HealthcareService.identifier|HPI-O
+AU Core Organization|Organization.identifier|HPI-O, Australian Business Number
+AU Core Patient|Patient.identifier|IHI, Medicare Card Number, DVA Number
+AU Core Practitioner|Practitioner.identifier|HPI-I
+AU Core PractitionerRole|PractitionerRole.identifier|HPI-I, Medicare Provider Number
+AU Core RelatedPerson|RelatedPerson.identifier|IHI, Medicare Card Number, DVA Number
+{:.grid}
 
 #### Must Support where there is a choice between an element of type CodeableConcept and type Reference
 
 A resource may support two elements that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU Core Encounter](StructureDefinition-au-core-encounter.html). Where both elements are optional and labelled *Must Support* in a profile they **SHALL** be treated as a choice of data types:
-- An AU Core Responder **SHALL** be capable of populating at least one choice, and **SHOULD** be capable of populating every choice for which the sending system might possess data
-- An AU Core Requester **SHALL** be capable of meaningfully processing all choices (since the receiver cannot anticipate which element might be populated) 
+- An AU Core Responder **SHALL** be capable of populating at a resource with
+  - at least one element of choice if the data is available, and **SHOULD** be capable of populating every choice for which the system might possess data
+  - asserting missing or suppressed data if the data is not available
+- An AU Core Requester **SHALL** be capable of meaningfully processing the resource with
+  - either element with a valid value (since the requester cannot anticipate which element might be populated) 
+  - either element containing missing or suppressed data
+
+The table below lists the applicable profiles and elements in AU Core.
+
+AU Core Profile |Must Support Choice Elements
+---|---
+AU Core DiagnosticReport|DiagnosticReport.conclusion, DiagnosticReport.conclusionCode
+AU Core Encounter|Encounter.reasonCode, Encounter.reasonReference[x]
+AU Core MedicationAdministration|MedicationAdministration.reasonCode, MedicationAdministration.reasonReference
+AU Core Procedure|Procedure.reasonCode, Procedure.reasonReference[x]
+AU Core ServiceRequest |ServiceRequest.reasonCode, ServiceRequest.reasonReference
+AU Core ServiceRequest |ServiceRequest.performerType, ServiceRequest.performer
+{:.grid}
 
 
-#### Must Support for elements with a choice of terminology bindings
+#### Must Support for elements with a terminology bindings
 
-A profile may slice an element that has a choice of terminology bindings to constrain the set of choices to be supported. For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) constrains the optional terminology choices for `Medication.code` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support AMT and PBS:
-- An AU Core Responder that supplies a coded value **SHALL** be capable of populating the element with a value that conforms to at least one of those two terminology choices, and **SHOULD** be capable of populating every choice for which the sending system might possess data
-  - In this profile, a coded value is optional, a sending system that does not have the capability to supply a coded value from a terminology may supply a text value 
-- An AU Core Requester **SHALL** be capable of meaningfully processing all supported terminology choices (since the receiver cannot anticipate which data type or profile might be populated) 
+A profile element that supports only one terminology will include that terminology by binding the element in the profile with a strength of [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible) or [required](http://hl7.org/fhir/R4/terminologies.html#required).
+
+A profile element that supports more than one terminology will include the supported terminologies in a profile by slicing the element and placing must support on each terminology slice. For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) constrains the terminology choices for `Medication.code` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support only AMT and PBS.
+
+In the example, a coded value is optional, a system that does not have the capability to supply a coded value from a terminology may supply a text value.
+
+When supplying a coded value:
+- An AU Core Responder **SHALL** be capable of populating the element
+  - with a value that conforms to at least one of the supported terminologies if the data is available, and **SHOULD** be capable of populating every choice for which the system might possess data
+  - asserting missing or suppressed data if the data is not available
+- An AU Core Requester **SHALL** be capable of meaningfully processing the element with
+  - any supported terminology (since the requester cannot anticipate which data type or profile might be populated) 
+  - asserting missing or suppressed data if the data is not available
