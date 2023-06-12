@@ -52,7 +52,7 @@
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/procedure.html#search)** search parameter:
-    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
     `GET [base]/RelatedPerson?patient={Type/}[id]` or optionally`GET [base]/RelatedPerson?patient.identifier=[system|][code]`
@@ -70,7 +70,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support fetching a RelatedPerson using the **[`_id`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
-    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/RelatedPerson/[id]` or `GET [base]/RelatedPerson?_id=[id]`
 
@@ -83,7 +83,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a single RelatedPerson. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHOULD** support searching for a related person by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
-    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/RelatedPerson?identifier={system|}[code]`
 
@@ -96,7 +96,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle containing any RelatedPerson resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching for a related person based on text name using the **[`name`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
-    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/RelatedPerson?name=[string]`
 
@@ -107,7 +107,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle of all RelatedPerson resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/observation.html#search)** and **[`relationship`](https://hl7.org/fhir/R4/observation.html#search)** search parameters:
-    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `relationship` (e.g.`relationship={system|}[code],{system|}[code],...`)
 
     `GET [base]/RelatedPerson?patient={Type/}[id]&relationship={system|}[code]{,{system|}[code],...}`

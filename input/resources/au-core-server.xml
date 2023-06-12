@@ -1869,7 +1869,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -2059,7 +2059,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -2172,7 +2172,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -2350,7 +2350,7 @@
 <tbody>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">category</a>
@@ -2361,7 +2361,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">status</a>
@@ -2441,7 +2441,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -2557,23 +2557,6 @@
   <b>MAY</b>
 </td>
 <td>
-  <a href="http://hl7.org/fhir/R4/documentreference.html#search">code</a>
-</td>
-<td>
-  <code>token</code>
-</td>
-<td>
-  <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-  </div>
-</td>
-</tr>
-<tr>
-<td>
-  <b>MAY</b>
-</td>
-<td>
   <a href="http://hl7.org/fhir/R4/documentreference.html#search">contenttype</a>
 </td>
 <td>
@@ -2620,6 +2603,23 @@
   </div>
 </td>
 </tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">type</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -2636,7 +2636,7 @@
 <tbody>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/documentreference.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">category</a>
@@ -2647,7 +2647,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/documentreference.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">status</a>
@@ -2672,7 +2672,7 @@
   <b>SHOULD</b>
 </td>
 <td>
-  <a href="http://hl7.org/fhir/R4/documentreference.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">code</a>
+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">type</a>
 </td>
 <td>
   <code>reference</code>+  <code>token</code>
@@ -2683,7 +2683,7 @@
   <b>SHOULD</b>
 </td>
 <td>
-  <a href="http://hl7.org/fhir/R4/documentreference.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">code</a>+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">date</a>
+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">type</a>+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">date</a>
 </td>
 <td>
   <code>reference</code>+  <code>token</code>+  <code>date</code>
@@ -2695,6 +2695,17 @@
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/documentreference.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">contenttype</a>
+</td>
+<td>
+  <code>reference</code>+  <code>token</code>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/documentreference.html#search">status</a>
 </td>
 <td>
   <code>reference</code>+  <code>token</code>
@@ -2739,7 +2750,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -3042,7 +3053,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -3097,6 +3108,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The client <strong>SHOULD</strong> support search using HPI-O identifier as defined in the profile.</p>
+    <p>The server <strong>SHOULD</strong> support search using HPI-O identifier as defined in the profile.</p>
   </div>
 </td>
 </tr>
@@ -3223,7 +3236,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -3425,7 +3438,7 @@
     <br/>
     <ul>
     <li>
-    <strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+    <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
     </li>
     </ul>
     </div>
@@ -3542,7 +3555,7 @@
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 id="Medication1-1" class="panel-title">
-<span style="float: right;">Resource Conformance: MAY</span>Medication</h4>
+<span style="float: right;">Resource Conformance: SHOULD</span>Medication</h4>
 </div>
 <div class="panel-body">
 <div class="container">
@@ -3623,7 +3636,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -3760,7 +3773,7 @@
 </tr>
 <tr>
 <td>
-  <b>MAY</b>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">status</a>+  <a href="http://hl7.org/fhir/R4/medicationadministration.html#search">effective-time</a>
@@ -3807,7 +3820,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -3980,7 +3993,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -4011,7 +4024,7 @@
 <tbody>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/resource.html#search">_id</a>
@@ -4227,7 +4240,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -4455,7 +4468,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -4695,7 +4708,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -4817,7 +4830,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -5067,7 +5080,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -5177,7 +5190,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -5345,7 +5358,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -5546,10 +5559,10 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 <li>
-<strong>MAY</strong> support <code>search-code</code>.
+<strong>MAY</strong> support <code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -5599,7 +5612,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -5772,7 +5785,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -6041,7 +6054,7 @@
 <br/>
 <ul>
 <li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
 </ul>
 </div>
@@ -7180,17 +7193,6 @@
 <valueString value="patient"/>
 </extension>
 <extension url="required">
-<valueString value="contenttype"/>
-</extension>
-</extension>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<extension url="required">
-<valueString value="patient"/>
-</extension>
-<extension url="required">
 <valueString value="status"/>
 </extension>
 </extension>
@@ -7217,20 +7219,6 @@
 </extension>
 <extension url="required">
 <valueString value="date"/>
-</extension>
-</extension>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<extension url="required">
-<valueString value="patient"/>
-</extension>
-<extension url="required">
-<valueString value="type"/>
-</extension>
-<extension url="required">
-<valueString value="period"/>
 </extension>
 </extension>
 <type value="DocumentReference"/>
@@ -7464,7 +7452,7 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="MAY"/>
 </extension>
 <name value="location"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Encounter-location"/>
@@ -7536,15 +7524,6 @@
 <name value="name"/>
 <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-name"/>
 <type value="string"/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<name value="date"/>
-<definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
-<type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -8055,7 +8034,7 @@
 </searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="SHALL"/>
 </extension>
 <name value="_id"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
@@ -8063,7 +8042,7 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="SHALL"/>
 </extension>
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-identifier"/>
@@ -8072,19 +8051,10 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="MAY"/>
 </extension>
 <name value="category"/>
 <definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-category"/>
-<type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<name value="code"/>
-<definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
 <type value="token"/>
 <documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
 </searchParam>
@@ -8132,7 +8102,7 @@
 </extension>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="SHALL"/>
 </extension>
 <extension url="required">
 <valueString value="patient"/>
@@ -8478,7 +8448,7 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
+<valueCode value="SHALL"/>
 </extension>
 <name value="patient"/>
 <definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
@@ -9194,7 +9164,7 @@
 </interaction>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
+<valueCode value="SHALL"/>
 </extension>
 <code value="search-type"/>
 </interaction>

@@ -53,7 +53,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/medicationdispense.html#search)** search parameter:
     - **SHOULD** support these `_include` parameters: `MedicationDispense:medication`
-    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
     `GET [base]/MedicationDispense?patient={Type/}[id]` or optionally`GET [base]/MedicationDispense?patient.identifier=[system|][code]`
@@ -68,7 +68,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationdispense.html#search)** and **[`status`](https://hl7.org/fhir/R4/medicationdispense.html#search)** search parameters:
     - **SHOULD** support these `_include` parameters: `MedicationDispense:medication`
-    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
@@ -88,7 +88,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationdispense.html#search)** and **[`whenhandedover`](https://hl7.org/fhir/R4/medicationdispense.html#search)** search parameters:
     - **SHOULD** support these `_include` parameters: `MedicationDispense:medication`
-    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHALL** support these `whenhandedover` comparators: `gt,lt,ge,le`
     - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `whenhandedover` (e.g.`whenhandedover=[date]&whenhandedover=[date]]&...`)

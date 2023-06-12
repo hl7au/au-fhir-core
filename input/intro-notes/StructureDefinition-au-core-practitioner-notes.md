@@ -32,6 +32,7 @@
 The following search parameters **SHALL** be supported:
 
 1. **SHALL** support searching a practitioner by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/practitioner.html#search)** search parameter:
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
 
     `GET [base]/Practitioner?identifier={system|}[code]`
 
@@ -47,6 +48,7 @@ The following search parameters **SHALL** be supported:
 The following search parameters **SHOULD** be supported:
 
 1. **SHOULD** support fetching a Practitioner using the **[`_id`](https://hl7.org/fhir/R4/practitioner.html#search)** search parameter:
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
 
     `GET [base]/Practitioner/[id]` or `GET [base]/Practitioner?_id=[id]`
 
@@ -58,6 +60,7 @@ The following search parameters **SHOULD** be supported:
     *Implementation Notes:* Returns a single Practitioner resource. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHOULD** support searching for a practitioner based on text name using the **[`name`](https://hl7.org/fhir/R4/practitioner.html#search)** search parameter:
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
 
     `GET [base]/Practitioner?name=[string]`
 

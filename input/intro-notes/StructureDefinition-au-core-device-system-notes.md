@@ -38,7 +38,7 @@ No mandatory search parameters for this profile.
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support fetching a Device using the **[`_id`](https://hl7.org/fhir/R4/device.html#search)** search parameter:
-    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Device/[id]` or `GET [base]/Device?_id=[id]`
 
@@ -50,7 +50,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a single Device. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHOULD** support searching for a device by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/device.html#search)** search parameter:
-    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Device?identifier={system|}[code]`
 

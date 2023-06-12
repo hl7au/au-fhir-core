@@ -34,7 +34,7 @@
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/specimen.html#search)** search parameter:
-    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`
 
     `GET [base]/Specimen?patient={Type/}[id]` or optionally`GET [base]/Specimen?patient.identifier=[system|][code]`
@@ -53,7 +53,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support fetching a Specimen using the **[`_id`](https://hl7.org/fhir/R4/specimen.html#search)** search parameter:
-    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     `GET [base]/Specimen/[id]` or `GET [base]/Specimen?_id=[id]`
 
     Example:
