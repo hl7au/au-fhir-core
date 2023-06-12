@@ -1,4 +1,16 @@
-
+<div class="bg-warning">
+<p>NOTE: The following profiles are candidates for AU Core but not yet available:<ul>
+        <li>AU Core Consent</li>
+        <li>AU Core ImagingStudy</li>
+        <li>AU Core Implantable or Wearable Device</li>
+        <li>AU Core FamilyMemberHistory</li>
+        <li>AU Core Goal</li>
+        <li>AU Core List</li>
+        <li>AU Core Allergies List</li>
+        <li>AU Core Medicines List</li>
+        <li>AU Core Problems List</li>
+      </ul></p>
+</div>
 
 ### Profiles
 
