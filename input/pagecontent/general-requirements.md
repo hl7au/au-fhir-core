@@ -32,7 +32,7 @@ Profile elements consist of both Mandatory and *Must Support* elements. Mandator
 
 Servers that implement AU Core Profile Only Support:
 - **SHALL** be able to populate all profile elements that are mandatory and/or labelled *Must Support* as defined by that profile's StructureDefinition.
-- **SHALL** specify the full capability details from the AU Core CapabilityStatement it claims to implement, including declaring support for an AU Core profile by including its canonical URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
+- **SHALL** specify the full capability details from the AU Core CapabilityStatement it claims to implement, including declaring support for an AU Core profile by including its canonical URL in the server's `CapabilityStatement.rest.resource.profile` or `CapabilityStatement.rest.resource.supportedProfile` element
 
 
 **Declaring Conformance**
@@ -58,7 +58,7 @@ Servers that implement Profile Only Support declare conformance to each profile 
               ...
               {
                 "type": "Patient",
-                "supportedProfile": [
+                "profile": [
                   "http://hl7.org/fhir/us/core/StructureDefinition/au-core-patient"
                 ],
                 ...
