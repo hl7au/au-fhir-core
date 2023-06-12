@@ -294,7 +294,7 @@
 <td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
-<td>category, clinical-status, code, onset-date, patient, patient.identifier, patient+category, patient+category+clinical-status, patient+clinical-status, patient+category+clinical-status, patient+code, patient+code, patient+onset-date</td>
+<td>category, clinical-status, code, onset-date, patient, patient.identifier, patient+category, patient+category+clinical-status, patient+clinical-status, patient+code, patient+onset-date</td>
 <td/>
 <td>
 <code>Provenance:target</code>
@@ -348,7 +348,7 @@
 <td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
-<td>_id, category, code, date, identifier, patient, patient.identifier, patient+category, patient+category+date, patient+code, patient+code+date, patient+status, status</td>
+<td>_id, category, code, date, identifier, patient, patient.identifier, patient+category, patient+category+date, patient+category+status, patient+code, patient+code+date, patient+status, status</td>
 <td/>
 <td>
 <code>Provenance:target</code>
@@ -366,7 +366,7 @@
 <td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
-<td>_id, category, contenttype, date, identifier, patient, patient.identifier, patient+category, patient+category+date, patient+contenttype, patient+status, patient+type, patient+type+date, status, type</td>
+<td>_id, category, contenttype, date, identifier, patient, patient.identifier, patient+category, patient+category+date, patient+category+status, patient+contenttype, patient+status, patient+type, patient+type+date, status, type</td>
 <td/>
 <td>
 <code>Provenance:target</code>
@@ -709,7 +709,7 @@
 <td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
-<td>_id, name, patient, patient.identifier, patient+relationship</td>
+<td>_id, name, identifier, patient, patient.identifier, patient+relationship</td>
 <td></td>
 <td>
 <code>Provenance:target</code>
@@ -1132,7 +1132,7 @@
 <tbody>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/careplan.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/careplan.html#search">category</a>
@@ -1310,7 +1310,7 @@
 <tbody>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/careteam.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/careteam.html#search">status</a>
@@ -1400,7 +1400,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHALL</b>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/composition.html#search">patient</a>
@@ -1535,7 +1535,7 @@
 <tbody>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/composition.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/composition.html#search">category</a>
@@ -1546,7 +1546,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/composition.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/composition.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/composition.html#search">status</a>
@@ -1775,7 +1775,7 @@
 <tbody>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/condition.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/condition.html#search">clinical-status</a>
@@ -1786,7 +1786,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/condition.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/condition.html#search">category</a>
@@ -1998,7 +1998,7 @@
 <tbody>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/coverage.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/coverage.html#search">type</a>
@@ -2200,7 +2200,7 @@
 <tbody>
 <tr>
 <td>
-  <b>SHALL</b>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/resource.html#search">_id</a>
@@ -6782,15 +6782,6 @@
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
 </extension>
-<name value="verification-status"/>
-<definition value="http://hl7.org/fhir/SearchParameter/Condition-verification-status"/>
-<type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
 <name value="code"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
 <type value="token"/>
@@ -6869,7 +6860,7 @@
 </searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-identifier"/>

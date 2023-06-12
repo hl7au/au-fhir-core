@@ -8,6 +8,12 @@
     <th>Requirements (when used alone or in combination)</th>
   </tr>
   <tr>
+        <td>_id</td>
+        <td><b>SHALL</b></td>
+        <td><code>token</code></td>
+        <td></td>
+  </tr>
+  <tr>
         <td>patient</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code></td>
@@ -23,12 +29,6 @@
         <td>patient+category+date</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>token</code>+<code>date</code></td>
-        <td></td>
-  </tr>
-  <tr>
-        <td>_id</td>
-        <td><b>SHOULD</b></td>
-        <td><code>token</code></td>
         <td></td>
   </tr>
   <tr>
@@ -111,6 +111,18 @@
 
 The following search parameters and search parameter combinations **SHALL** be supported:
 
+1. **SHALL** support fetching a DocumentReference using the **[`_id`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameter:
+    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+    
+    `GET [base]/DocumentReference/[id]` or `GET [base]/DocumentReference?_id=[id]`
+
+    Example:
+    
+      1. GET [base]/DocumentReference/2169591
+      1. GET [base]/DocumentReference?_id=2169591
+
+    *Implementation Notes:* Fetches a single DocumentReference. The document itself is represented as a base64 encoded binary data element or retrieved using the link provided by the resource. If the document is a relative link to a [Binary] resource like a resource reference, it can be subsequently retrieved using: `GET [base]/Binary/[id]`. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameter:
     - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
@@ -156,18 +168,6 @@ The following search parameters and search parameter combinations **SHALL** be s
 #### Optional Search Parameters:
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
-
-1. **SHOULD** support fetching a DocumentReference using the **[`_id`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameter:
-    - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
-    
-    `GET [base]/DocumentReference/[id]` or `GET [base]/DocumentReference?_id=[id]`
-
-    Example:
-    
-      1. GET [base]/DocumentReference/2169591
-      1. GET [base]/DocumentReference?_id=2169591
-
-    *Implementation Notes:* Fetches a single DocumentReference. The document itself is represented as a base64 encoded binary data element or retrieved using the link provided by the resource. If the document is a relative link to a [Binary] resource like a resource reference, it can be subsequently retrieved using: `GET [base]/Binary/[id]`. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHOULD** support searching using the **[`identifier`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameter:
      - **SHOULD** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
