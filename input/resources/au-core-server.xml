@@ -324,6 +324,24 @@
 </tr>
 <tr>
 <td>
+<a href="#Device1-1">Device</a>
+</td>
+<td>
+<a href="StructureDefinition-au-core-device-system.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-device-system</a>
+</td>
+<td>y</td>
+<td class="text-center">y</td>
+<td class="text-center"></td>
+<td class="text-center"></td>
+<td>_id, identifier, type</td>
+<td/>
+<td>
+<code>Provenance:target</code>
+</td>
+<td/>
+</tr>
+<tr>
+<td>
 <a href="#DiagnosticReport1-1">DiagnosticReport</a>
 </td>
 <td>
@@ -2001,6 +2019,119 @@
 </td>
 <td>
   <code>reference</code>+  <code>token</code>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 id="Device1-1" class="panel-title">
+<span style="float: right;">Resource Conformance: SHOULD</span>Device</h4>
+</div>
+<div class="panel-body">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Supported System Profile</span>
+<br/>
+<a href="StructureDefinition-au-core-device-system.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-device-system</a>
+</div>
+<div class="col-lg-3">
+<span class="lead">Profile Conformance</span>
+<br/>
+<b>SHALL</b>
+</div>
+<div class="col-lg-3">
+<span class="lead">Reference Policy</span>
+<br/>
+<code>resolves</code>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Interaction summary</span>
+<br/>
+<ul>
+<li>
+<strong>SHALL</strong> support <code>read</code>,<code>search-code</code>.
+</li>
+</ul>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-12">
+<span class="lead">Documentation</span>
+<blockquote>
+<div>
+<p>If the server supports the Device resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Device resource.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-7">
+<span class="lead">Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>Conformance</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/resource.html#search">_id</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/device.html#search">identifier</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/device.html#search">type</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
+  </div>
 </td>
 </tr>
 </tbody>
@@ -8635,7 +8766,6 @@
 </extension>
 <code value="search-type"/>
 </interaction>
-<searchInclude value="PractitionerRole:endpoint"/>
 <searchInclude value="PractitionerRole:practitioner"/>
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
