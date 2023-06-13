@@ -19,8 +19,8 @@ AU Core defines the following conformance artifacts:
 ### Declaring Conformance
 
 There are two different ways to implement AU Core:
-- only the resources as profiled by AU Core to represent digital health information (Profile Only Support)
-- the resources as profiled by AU Core to represent digital health information (Profile Support) and [the RESTful FHIR API](http://hl7.org/fhir/R4/http.html) interactions defined for it (Interaction Support)
+1. only the resources as profiled by AU Core to represent digital health information (Profile Only Support)
+1. the resources as profiled by AU Core to represent digital health information (Profile Support) and [the RESTful FHIR API](http://hl7.org/fhir/R4/http.html) interactions defined for it (Interaction Support)
 
 #### Profile Only Support
 
