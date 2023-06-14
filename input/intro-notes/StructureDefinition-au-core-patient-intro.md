@@ -29,3 +29,5 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 <p class="stu-note">Specific feedback is sought on preferred identifiers to support where an individual is not eligible for an IHI e.g. tourist or other temporary stay in Australia. Passport is proposed for use (see example <a href="Patient-italia-sofia.html">Patient/italia-sofia</a>).</p>
 
+<p class="stu-note">Specific feedback is sought on whether MRN is to be a supported identifier for patients.</p>
+

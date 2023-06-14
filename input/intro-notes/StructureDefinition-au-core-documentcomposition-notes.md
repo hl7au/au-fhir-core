@@ -24,7 +24,7 @@
         <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>token</code></td>
         <td></td>
-  </tr>
+  </tr>  
   <tr>
         <td>patient+category+date</td>
         <td><b>SHALL</b></td>
@@ -37,9 +37,9 @@
         <td><code>token</code></td>
         <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
   </tr>
-  <tr>
+   <tr>
         <td>patient+category+status</td>
-        <td><b>SHOULD</b></td>
+        <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>token</code>+<code>token</code></td>
         <td></td>
   </tr>
