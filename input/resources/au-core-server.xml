@@ -1116,6 +1116,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -1502,6 +1504,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -1770,6 +1774,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -2325,6 +2331,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -2605,6 +2613,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -2868,6 +2878,8 @@
     <div>
       <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
       <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+      <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
     </div>
   </td>
 </tr>
@@ -3337,6 +3349,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -3737,6 +3751,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -3938,6 +3954,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -4123,6 +4141,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -4341,6 +4361,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -4607,6 +4629,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -4956,6 +4980,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the day offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the day offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -5480,6 +5506,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -5953,6 +5981,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -6473,7 +6503,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -6694,7 +6724,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -6837,7 +6867,7 @@
 <name value="onset-date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Condition-onset-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -7149,7 +7179,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -7331,7 +7361,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -7473,7 +7503,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -7693,7 +7723,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -7912,7 +7942,7 @@
 <name value="effective-time"/>
 <definition value="http://hl7.org/fhir/SearchParameter/MedicationAdministration-effective-time"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -7993,7 +8023,7 @@
 <name value="whenhandedover"/>
 <definition value="http://hl7.org/fhir/SearchParameter/MedicationDispense-whenhandedover"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -8108,7 +8138,7 @@
 <name value="authoredon"/>
 <definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-authoredon"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -8198,7 +8228,7 @@
 <name value="effective"/>
 <definition value="http://hl7.org/fhir/SearchParameter/MedicationStatement-effective"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -8478,7 +8508,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -8916,7 +8946,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -9187,7 +9217,7 @@
 <name value="authored"/>
 <definition value="http://hl7.org/fhir/SearchParameter/ServiceRequest-authored"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*."/>
+<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
