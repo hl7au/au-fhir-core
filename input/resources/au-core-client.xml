@@ -1337,7 +1337,7 @@
 <div class="container">
 <div class="row">
 <div class="col-lg-6">
-<span class="lead">Supported System Profiles</span>
+<span class="lead">Supported Profiles</span>
 <br/>
 <a href="StructureDefinition-au-core-documentcomposition.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentcomposition</a>
 </div>
@@ -4436,8 +4436,20 @@
 <br/>
 <a href="StructureDefinition-au-core-observation.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation</a>
 </div>
+<div class="col-lg-3">
+<span class="lead">Profile Conformance</span>
+<br/>
+<b>SHALL</b>
+</div>
+<div class="col-lg-3">
+<span class="lead">Reference Policy</span>
+<br/>
+<code>resolves</code>
+</div>
+</div>
+<p/>
 <div class="col-lg-6">
-<span class="lead">Supported System Profiles</span>
+<span class="lead">Supported Profiles</span>
 <br/>
 <a href="StructureDefinition-au-core-bmi.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bmi</a>
 <br/>
@@ -4495,18 +4507,6 @@
 <br/>
 <a href="StructureDefinition-au-core-bodyheight.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight</a>
 </div>
-<div class="col-lg-3">
-<span class="lead">Profile Conformance</span>
-<br/>
-<b>SHALL</b>
-</div>
-<div class="col-lg-3">
-<span class="lead">Reference Policy</span>
-<br/>
-<code>resolves</code>
-</div>
-</div>
-<p/>
 <div class="row">
 <div class="col-lg-6">
 <span class="lead">Interaction summary</span>
