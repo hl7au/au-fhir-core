@@ -6011,7 +6011,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/servicerequest.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/servicerequest.html#search">authored</a>
@@ -8037,7 +8037,7 @@
 </extension>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="SHALL"/>
 </extension>
 <extension url="required">
 <valueString value="patient"/>
@@ -8262,7 +8262,7 @@
 </extension>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="SHALL"/>
 </extension>
 <extension url="required">
 <valueString value="patient"/>
