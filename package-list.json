@@ -21,6 +21,15 @@
       "fhirversion": "4.0.1",
       "status": "draft",
       "sequence": "AU Core R4"
+    },
+    {
+      "version": "0.2.0-preview",
+      "date": "2023-06-19",
+      "desc": "June 2023 Community Engagement Draft",
+      "path": "http://hl7.org.au/fhir/core/0.2.0-preview",
+      "fhirversion": "4.0.1",
+      "status": "draft",
+      "sequence": "AU Core R4"
     }
   ]
 }

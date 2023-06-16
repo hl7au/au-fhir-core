@@ -1435,6 +1435,29 @@ Observation.subject.reference, Observation.status is                    <code>fi
             <td width="93" valign="top">
                 <p>
                     <a
+                        href="StructureDefinition-au-core-list.html"
+                    >
+                        AU Core List
+                    </a>
+                </p>
+            </td>
+            <td width="81" valign="top">
+            </td>
+            <td width="111" valign="top">
+            </td>
+            <td width="68" valign="top">
+            </td>
+            <td width="130" valign="top">
+            </td>
+            <td width="78" valign="top">
+            </td>
+            <td width="137" valign="top">
+            </td>
+        </tr>
+        <tr>
+            <td width="93" valign="top">
+                <p>
+                    <a
                         href="StructureDefinition-au-core-location.html"
                     >
                         AU Core Location
