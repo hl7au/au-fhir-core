@@ -4561,6 +4561,8 @@
 <blockquote>
 <div>
 <p>If the server supports the MedicationStatement resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationStatement resource.</p>
+<p>Clients <strong>MAY</strong> query for both MedicationStatement and MedicationRequest when fetching patient Medication information.</p>
+<p>The MedicationStatement resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be <a href="http://hl7.org/fhir/R4/references.html#contained">contained</a> or an external resource. The server <strong>MAY</strong> choose any one way or more than one method, but if an external reference to Medication is used, the server <strong>SHALL</strong> support the <code>_include</code> parameter for searching this element. The client application <strong>SHALL</strong> support all methods.
 </div>
 </blockquote>
 </div>
@@ -5158,7 +5160,18 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the server supports the Patient resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Patient resource.</p>
+<p>The server <strong>SHALL</strong> support the Patient resource, the AU Core profile, and the conformance expectations for the Patient resource.</p>
+<p>Servers <strong>SHALL</strong> support the capability for a client application to access the patient record using any of the following API calls:</p>
+<p>
+<code>GET [url]/Patient/[id]</code>
+</p>
+<p>
+<code>GET [url]/Patient?_id=[id]</code>
+</p>
+<p>
+<code>GET [url]/Patient?identifier=[identifier]</code>
+</p>
+<p>Servers are not required to support any additional search parameters, and clients <strong>SHOULD NOT</strong> expect servers to do so.</p>
 </div>
 </blockquote>
 </div>
@@ -8596,7 +8609,7 @@
 </extension>
 <type value="MedicationStatement"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
-<documentation value="The MedicationRequest resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The server application **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the server **SHALL** support the `_include` parameter for searching this element. The client application **SHALL** support all methods. If the server supports the MedicationStatement resource, the server **SHALL** support the AU Core profile and the conformance expectations for the MedicationStatement resource."/>
+<documentation value="The MedicationStatement resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The server **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the server **SHALL** support the `_include` parameter for searching this element. The client application **SHALL** support all methods. If the server supports the MedicationStatement resource, the server **SHALL** support the AU Core profile and the conformance expectations for the MedicationStatement resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
