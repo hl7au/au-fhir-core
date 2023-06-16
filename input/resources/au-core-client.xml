@@ -4118,6 +4118,7 @@
 <blockquote>
 <div>
 <p>If the client supports the MedicationDispense resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationDispense resource.</p>
+<p>The MedicationDispense resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be <a href="http://hl7.org/fhir/R4/references.html#contained">contained</a> or an external resource. The server <strong>MAY</strong> choose any one way or more than one method, but if an external reference to Medication is used, the server <strong>SHALL</strong> support the <code>_include</code> parameter for searching this element. The client application <strong>SHALL</strong> support all methods.</p>
 </div>
 </blockquote>
 </div>
