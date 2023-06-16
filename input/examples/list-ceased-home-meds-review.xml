@@ -2,6 +2,7 @@
     <id value="ceased-home-meds-review"/>
     <meta>
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medlist"/>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-list"/>
     </meta>
     <language value="en-AU"/>
     <status value="current"/>

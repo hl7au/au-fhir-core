@@ -13,6 +13,7 @@ AU Core Provenance **SHALL** be supported for the following resource types that 
 <li>Encounter</li>
 <li>HealthcareService</li>
 <li>Immunization</li>
+<li>List</li>
 <li>MedicationAdministration</li>
 <li>MedicationDispense</li>
 <li>MedicationRequest</li>

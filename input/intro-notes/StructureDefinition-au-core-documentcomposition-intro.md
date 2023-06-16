@@ -27,7 +27,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 ### Profile specific implementation guidance
 
-<p class="stu-note">Composition, DocumentReference, and DiagnosticReport resources support support the exchange of clinical notes. Specific feedback is sought on resource selection to form agreement on the clinical notes that SHOULD be exposed via Composition.</p>
+<p class="stu-note">Composition, DocumentReference, DiagnosticReport, and List resources support support the exchange of clinical notes. Specific feedback is sought on resource selection to form agreement on the clinical notes that SHOULD be exposed via Composition.</p>
 
 <p class="stu-note">Specific feedback is sought on the set of clinical notes and associated codes to be supported in Australia.</p>
 
