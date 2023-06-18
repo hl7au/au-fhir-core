@@ -31,8 +31,8 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - A client application **SHALL** support both elements
 - Source system identifiers that identify the business process (order ids) **SHOULD** be included as [AU Local Order Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localorderidentifier.html) in addition to reporting identifiers (e.g. accession, lab number) to support workflow.
   - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
-  - When constructing a pathology report see the [AU Base Pathology Report](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medlist.html) profile in AU Base.
-  - When constructing a pathology report see the [AU Base Diagnostic Imaging Report](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-imagingreport.html) profile in AU Base.
+- When constructing a pathology report see the [AU Base Pathology Report](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medlist.html) profile in AU Base.
+- When constructing a pathology report see the [AU Base Diagnostic Imaging Report](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-imagingreport.html) profile in AU Base.
 
   <p class="stu-note">Composition, DocumentReference, and DiagnosticReport resources support support the exchange of clinical notes. Specific feedback is sought on resource selection.</p>
 

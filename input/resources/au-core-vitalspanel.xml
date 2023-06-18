@@ -21,6 +21,10 @@
       <path value="Observation.status" />
       <fixedCode value="final" />
     </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <min value="1" />
+    </element>
     <element id="Observation.code.coding:VitalsPanelCode">
       <path value="Observation.code.coding" />
       <sliceName value="VitalsPanelCode" />
