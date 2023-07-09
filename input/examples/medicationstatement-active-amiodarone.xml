@@ -48,6 +48,9 @@
     <context>
         <reference value="Encounter/home-meds-review"/>
     </context>
+    <effectivePeriod>
+        <start value="2022-06-25"/>
+    </effectivePeriod>
     <dateAsserted value="2019-02-05"/>
     <dosage>
         <text value="1 in the morning"/>

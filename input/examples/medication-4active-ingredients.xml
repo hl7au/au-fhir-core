@@ -52,10 +52,14 @@
             <numerator>
                 <value value="300"/>
                 <unit value="mg"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="mg"/>
             </numerator>
             <denominator>
                 <value value="1"/>
-                <unit value="unit"/>
+                <unit value="tablet"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="{tablet}"/>
             </denominator>
         </strength>
     </ingredient>
@@ -79,10 +83,14 @@
             <numerator>
                 <value value="200"/>
                 <unit value="mg"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="mg"/>
             </numerator>
             <denominator>
                 <value value="1"/>
-                <unit value="unit"/>
+                <unit value="tablet"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="{tablet}"/>
             </denominator>
         </strength>
     </ingredient>
@@ -106,10 +114,14 @@
             <numerator>
                 <value value="150"/>
                 <unit value="mg"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="mg"/>
             </numerator>
             <denominator>
                 <value value="1"/>
-                <unit value="unit"/>
+                <unit value="tablet"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="{tablet}"/>
             </denominator>
         </strength>
     </ingredient>
@@ -133,10 +145,14 @@
             <numerator>
                 <value value="150"/>
                 <unit value="mg"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="mg"/>
             </numerator>
             <denominator>
                 <value value="1"/>
-                <unit value="unit"/>
+                <unit value="tablet"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="{tablet}"/>
             </denominator>
         </strength>
     </ingredient>

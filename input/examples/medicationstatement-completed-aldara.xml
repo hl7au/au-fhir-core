@@ -30,5 +30,6 @@
     <context>
         <reference value="Encounter/home-meds-review"/>
     </context>
+    <effectiveDateTime value="2021-04-21"/>
     <dateAsserted value="2019-02-05"/>
 </MedicationStatement>

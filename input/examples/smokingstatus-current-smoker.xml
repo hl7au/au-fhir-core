@@ -18,6 +18,10 @@
       <system value="http://snomed.info/sct"/>
       <code value="266918002" />
     </coding>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="72166-2" />
+    </coding>
     <text value="Smoking status"/>
   </code>
   <subject>
@@ -47,6 +51,10 @@
       <system value="http://snomed.info/sct"/>
       <code value="77176002"/>
       <display value="Current smoker"/>
+    </coding>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA18979-7"/>
     </coding>
     <text value="Smoker"/>
   </valueCodeableConcept>
