@@ -136,8 +136,9 @@ A profile may support one or more than one identifier type and will include the 
 
 The table below lists the applicable profiles and supported identifier types in AU Core.
 
-AU Core Profile |Must Support Choice Elements
+AU Core Profile |Must Support Choice Elements| Supported Identifiers
 ---|---|---
+AU Core Coverage|Coverage.identifier|Medicare Card Number, DVA Number, Insurance Member Number
 AU Core System Device|Device.identifier|PAI-D
 AU Core HealthcareService|HealthcareService.identifier|HPI-O
 AU Core Organization|Organization.identifier|HPI-O, Australian Business Number
