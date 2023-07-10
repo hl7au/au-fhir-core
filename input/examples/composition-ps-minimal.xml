@@ -58,6 +58,9 @@
         <display value="Problem list Reported"/>
       </coding>
     </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li><div><b>Condition Name</b>: Acute myocardial infarction of anterior wall</div><div><b>Status</b>: <span>Active</span></div><div><b>Onset</b>: <span>2014</span></div><div><b>Asserter</b>: <span>Bob Bobrester</span></div></li></ul></div>
+    </text>
     <entry>
       <reference value="Condition/aci"/>
     </entry>
@@ -71,6 +74,9 @@
         <display value="History of Medication use Narrative"/>
       </coding>
     </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li><div><b>Medication Name</b>: Simvastatin 40 MG Disintegrating Oral Tablet</div><div><b>Status</b>: <span>Active, started 2014</span></div><div>Dosage: 40 mg/day</div></li></ul></div>
+    </text>
     <entry>
       <reference value="MedicationStatement/simvastatin"/>
     </entry>
@@ -84,6 +90,9 @@
         <display value="Allergies and adverse reactions Document"/>
       </coding>
     </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li><div><b>Allergy Name</b>: No known allergy</div><div><b>Asserter</b>: Mr. Li Wang</div></li></ul></div>
+    </text>
     <entry>
       <reference value="AllergyIntolerance/noneknown"/>
     </entry>
