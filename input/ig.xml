@@ -14,17 +14,10 @@
 	<status value="draft"/>
 	<publisher value="HL7 Australia"/>
 	<contact>
+		<name value="HL7 Australia FHIR Work Group"/>
 		<telecom>
-			<system value="url" />
-			<value value="http://hl7.com.au" />
-			<use value="work" />
-		</telecom>
-	</contact>
-	<contact>
-		<name value="HL7 Australia FHIR Working Group"/>
-		<telecom>
-			<system value="email"/>
-			<value value="fhirwg@hl7.com.au"/>
+			<system value="url"/>
+			<value value="https://confluence.hl7.org/display/HAFWG"/>
 			<use value="work"/>
 		</telecom>
 	</contact>
