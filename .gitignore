@@ -10,6 +10,8 @@ temp/**
 template/**
 txCache/
 *.swp
+output01
+output02
 
 # Temporary folders # (at any level)
 #####################
