@@ -32,15 +32,15 @@ AU Core is in currently in development.
 
 ### 1. Join the AU Core Technical Design Group
 
-Email aucorelist@hl7.com.au to join the Technical Design Group. Visit the [HL7 Australia - AU Core Technical Design Group Home](https://confluence.hl7.org/display/HAFWG/HL7+Australia+-+AU+Core+Technical+Design+Group+Home)
+See [How to Register - Participant Information](https://confluence.csiro.au/display/FHIR/How+to+Register+-+Participant+Information) for information on how to participate in the AU Core Technical Design Group and Clinical Design Group as part of Sparked, the Australian FHIR Accelerator. Visit the [HL7 Australia - AU Core Technical Design Group Home](https://confluence.hl7.org/display/HAFWG/HL7+Australia+-+AU+Core+Technical+Design+Group+Home)
 
 ### 2. Discuss an issue in chat.fhir.org
 
 If you have a question, feature request, or proposed change, the best place to start is Zulip e.g. the https://chat.fhir.org/#narrow/stream/179166-implementers stream. If what you want to discuss is specific to Australia you can post in the Australia stream https://chat.fhir.org/#narrow/stream/179173-australia.
 
-### 3. Log a GitHub issue to provide feedback and raise discussion points
+### 3. Identify future work or raise discussion points
 
-If you have a question, feature request, or proposed change, the best place to start is by logging an [AU Core GitHub issue](https://github.com/hl7au/au-fhir-core/issues). 
+To identify future work or raise discussion points, you can visit [AU Core Discussions](https://github.com/hl7au/au-fhir-core/discussions) and get started with saying [hi to the community](https://github.com/hl7au/au-fhir-core/discussions/4). 
 
 ### 4. Discuss with the team
 
