@@ -30,21 +30,17 @@ If you're unable to find an open bug addressing the problem, please create a bug
 
 AU Core is in currently in development.
 
-### 1. Join the HL7 AU FHIR Working Group
+### 1. Join the AU Core Technical Design Group
 
-Email fhirwglist@hl7.com.au to join the HL7 AU FHIR working group.
-
-#### Join the AU Core Technical Design Group
-
-Coming soon.
+See [How to Register - Participant Information](https://confluence.csiro.au/display/FHIR/How+to+Register+-+Participant+Information) for information on how to participate in the AU Core Technical Design Group and Clinical Design Group as part of Sparked, the Australian FHIR Accelerator. Visit the [HL7 Australia - AU Core Technical Design Group Home](https://confluence.hl7.org/display/HAFWG/HL7+Australia+-+AU+Core+Technical+Design+Group+Home)
 
 ### 2. Discuss an issue in chat.fhir.org
 
 If you have a question, feature request, or proposed change, the best place to start is Zulip e.g. the https://chat.fhir.org/#narrow/stream/179166-implementers stream. If what you want to discuss is specific to Australia you can post in the Australia stream https://chat.fhir.org/#narrow/stream/179173-australia.
 
-### 3. Log a HL7 Jira issue
+### 3. Identify future work or raise discussion points
 
-If you have a question, feature request, or proposed change, the best place to start is by logging a [FHIR IG Jira issue](https://jira.hl7australia.com/projects/FHIRIG/issues) on the HL7 AU Jira site directly or use the ![Propose-a-change](https://github.com/hl7au/au-fhir-core/assets/116611317/642b45cb-c82e-4fb5-a24c-37b263289fac) option at the bottom of each page of the IG to submit a JIRA issue.
+To identify future work or raise discussion points, you can visit [AU Core Discussions](https://github.com/hl7au/au-fhir-core/discussions) and get started with saying [hi to the community](https://github.com/hl7au/au-fhir-core/discussions/4). 
 
 ### 4. Discuss with the team
 
