@@ -174,14 +174,3 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/Patient?family=Wang&amp;gender=female
 
     *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified family and gender ([how to search by string](http://hl7.org/fhir/R4/search.html#string) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
-
-1. **SHOULD** support searching using the combination of the **[`gender`](https://hl7.org/fhir/R4/patient.html#search)** and **[`name`](https://hl7.org/fhir/R4/patient.html#search)** search parameters:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
-    
-    `GET [base]/Patient?gender={system|}[code]&name=[string]`
-
-    Example:
-    
-      1. GET [base]/Patient?gender=female&amp;name=Wang
-
-    *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified gender and name ([how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by string](http://hl7.org/fhir/R4/search.html#string))
