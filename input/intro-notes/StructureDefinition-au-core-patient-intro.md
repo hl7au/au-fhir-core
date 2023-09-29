@@ -13,7 +13,7 @@ The following are supported usage scenarios for this profile:
 
 A resource conforming to this profile is conformant to:
 - [IPA-Patient](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-patient.html)
-- [Patient (IPS)](http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/Patient-uv-ips)
+- [Patient (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Patient-uv-ips.html)
 - [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient)
 
 Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa), [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips), or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
