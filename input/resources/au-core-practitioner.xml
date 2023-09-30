@@ -66,8 +66,6 @@
     </element>
     <element id="Practitioner.address">
       <path value="Practitioner.address"/>
-      <definition
-        value="Address(es) of the practitioner that are not role specific (typically home address). Work addresses are not typically entered in this property as they are usually role dependent."/>
       <mustSupport value="true"/>
     </element>
     <element id="Practitioner.qualification">
