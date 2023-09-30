@@ -26,7 +26,6 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="PractitionerRole.identifier:medicareProvider">
