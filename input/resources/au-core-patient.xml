@@ -99,10 +99,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="Patient.active">
-      <path value="Patient.active"/>
-      <fixedBoolean value="true"/>
-    </element>
     <element id="Patient.name">
       <path value="Patient.name"/>
       <min value="1"/>
