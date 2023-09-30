@@ -55,10 +55,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="Organization.active">
-      <path value="Organization.active"/>
-      <fixedBoolean value="true"/>
-    </element>
     <element id="Organization.type">
       <path value="Organization.type"/>
       <mustSupport value="true"/>
