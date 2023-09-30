@@ -50,12 +50,6 @@
       <sliceName value="interpreterRequired"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Patient.extension:dateOfArrival">
-      <path value="Patient.extension"/>
-      <sliceName value="dateOfArrival"/>
-      <short value="Year of Arrival"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier"/>
       <slicing>
