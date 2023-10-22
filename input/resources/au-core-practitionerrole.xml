@@ -38,10 +38,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="PractitionerRole.active">
-      <path value="PractitionerRole.active"/>
-      <fixedBoolean value="true"/>
-    </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner"/>
       <min value="1"/>
