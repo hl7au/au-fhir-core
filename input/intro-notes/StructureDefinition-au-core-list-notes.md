@@ -137,7 +137,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     
       1. GET [base]/List?patient=5678&amp;code=http://loinc.org\|10160-0,http://loinc.org\|11369-6
 
-    *Implementation Notes:* Fetches a bundle of all List resources for the specified patient and diagnostic report code(s). The List `code` parameter searches `List.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all List resources for the specified patient and list code(s). The List `code` parameter searches `List.code` only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/list.html#search)** and **[`code`](https://hl7.org/fhir/R4/list.html#search)** and **[`date`](https://hl7.org/fhir/R4/list.html#search)** search parameters:
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`

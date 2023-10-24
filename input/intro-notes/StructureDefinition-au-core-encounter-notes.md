@@ -173,5 +173,5 @@ The following search parameters and search parameter combinations **SHOULD** be 
     
       1. GET [base]/Encounter?patient=5678&amp;location=Location/vic-hospital
 
-    *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and location ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference)
+    *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and location ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference))
 

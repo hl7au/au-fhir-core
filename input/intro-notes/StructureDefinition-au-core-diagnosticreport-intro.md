@@ -2,7 +2,7 @@
 
 The following are supported usage scenarios for this profile:
 
-- Query for a specific diagnostic report such as an electrocardiogram (ECG) or full blood count (FBC).
+- Query for a specific diagnostic report such as an electrocardiogram (ECG) or full blood count (FBC)
 - Query for category of diagnostic report (e.g. all cardiology reports)
 - Record or update a diagnostic report for a patient
 
