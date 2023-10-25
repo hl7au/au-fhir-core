@@ -10,7 +10,7 @@ The following are supported usage scenarios for this profile:
 ### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
-- [Organization (IPS)](http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/Organization-uv-ips)
+- [Organization (IPS)](http://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Organization-uv-ips.html)
 - and **MAY** be conformant to [US Core Organization](http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization) if Organization.active is supplied
 
 No equivalent International Patient Access profile.

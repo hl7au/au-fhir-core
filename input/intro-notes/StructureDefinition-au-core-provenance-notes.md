@@ -6,7 +6,7 @@
 
 The following search parameter combinations **SHALL** be supported:
 
-1. **SHALL** support searching for all resources (that are one of the [resource types listed above](#prov-white-list)) for a patient and all the Provenance records for those resources using a combination of the **[`patient`](https://hl7.org/fhir/R4/observation.html#search)** and **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** search parameters:
+1. **SHALL** support searching for all resources (that are one of the [resource types listed above](#prov-white-list)) for a patient and all the Provenance records for those resources using a combination of the **[`patient`](https://hl7.org/fhir/R4/provenance.html#search)** and **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** search parameters:
 
     `GET [base]/[Resource]?patient=[id]&_revinclude=Provenance:target`
 
@@ -16,7 +16,7 @@ The following search parameter combinations **SHALL** be supported:
 
     *Implementation Notes:* Fetches a bundle of all resources of a particular type for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference)) and any corresponding Provenance resources.
 
-1. **SHALL** support searching for a particular resource (that are one of the [resource types listed above](#prov-white-list)) and all its Provenance resources using combination of the **[`_id`](https://hl7.org/fhir/R4/diagnosticreport.html#search)** and the **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** search parameters:
+1. **SHALL** support searching for a particular resource (that are one of the [resource types listed above](#prov-white-list)) and all its Provenance resources using combination of the **[`_id`](https://hl7.org/fhir/R4/provenance.html#search)** and the **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** search parameters:
 
     `GET [base]/[Resource]?_id=[id]&_revinclude=Provenance:target`
 
