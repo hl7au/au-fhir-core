@@ -18,7 +18,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core
 
 ### Profile specific implementation guidance
 - An individual's IHI **SHOULD** be used in `RelatedPerson.identifier` if available, in preference to Medicare or DVA numbers
-- See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
+- See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base
 - See the [Representing communication preferences](general-guidance.html#representing-communication-preferences) section for guidance
 - When constructing an address
   - an international address can be represented using the core [Address](http://hl7.org/fhir/R4/datatypes.html#Address) data type

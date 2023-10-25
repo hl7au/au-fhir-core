@@ -50,7 +50,7 @@ The following search parameters **SHALL** be supported:
     
       1. GET [base]/Organization?address=QLD
 
-    *Implementation Notes:* Fetches a bundle of all Organization resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
+    *Implementation Notes:* Fetches a bundle of all Organization resources matching the address ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 1. **SHALL** support searching an organisation by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
@@ -81,7 +81,7 @@ The following search parameters **SHALL** be supported:
 
 The following search parameters **SHOULD** be supported:
 
-1. **SHOULD** support fetching a Organization using the **[`_id`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
+1. **SHOULD** support fetching an Organization using the **[`_id`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Organization/[id]` or `GET [base]/Organization?_id=[id]`
@@ -91,4 +91,4 @@ The following search parameters **SHOULD** be supported:
       1. GET [base]/Organization/5678
       1. GET [base]/Organization?_id=5678
 
-    *Implementation Notes:*  ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Fetches a single Organization ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)

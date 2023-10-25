@@ -44,13 +44,13 @@
         <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both. <br/><br/> The client <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The server <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
   </tr>
    <tr>
-        <td>patient+intent+authoredOn</td>
+        <td>patient+intent+authoredon</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>token</code>+<code>date</code></td>
          <td></td>
   </tr>
   <tr>
-        <td>authoredOn</td>
+        <td>authoredon</td>
         <td><b>MAY</b></td>
         <td><code>date</code></td>
         <td>A client <b>SHALL</b> provide a value precise to the second + time offset. A server <b>SHALL</b> support a value precise to the second + time offset.</td>
@@ -161,18 +161,18 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
       *Implementation Notes:* Fetches a bundle containing any MedicationRequest resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`intent`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`authoredOn`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`intent`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`authoredon`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameters:
     - **SHOULD** support these `_include` parameters: `MedicationRequest:medication`
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
-    - **SHALL** support these `authoredOn` comparators: `gt,lt,ge,le`
-    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `authoredOn` (e.g.`authoredOn=[date]&authoredOn=[date]]&...`)
+    - **SHALL** support these `authoredon` comparators: `gt,lt,ge,le`
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `authoredon` (e.g.`authoredon=[date]&authoredon=[date]]&...`)
 
 
-    `GET [base]/MedicationRequest?patient={Type/}[id]&intent={system|}[code]&authoredOn={gt|lt|ge|le}[date]{&authoredOn={gt|lt|ge|le}[date]&...}`
+    `GET [base]/MedicationRequest?patient={Type/}[id]&intent={system|}[code]&authoredon={gt|lt|ge|le}[date]{&authoredon={gt|lt|ge|le}[date]&...}`
 
     Example:
     
-      1. GET [base]/MedicationRequest?patient=5678&amp;intent=order&amp;authoredOn=ge2020-01-01T00:00:00Z
+      1. GET [base]/MedicationRequest?patient=5678&amp;intent=order&amp;authoredon=ge2020-01-01T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all MedicationRequest resources for the specified patient and intent and date. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
