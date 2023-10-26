@@ -9,7 +9,7 @@ The following are supported usage scenarios for this profile:
 ### Comparison with other national and international specifications
 
 A resource conforming to this profile is conformant to:
-- [US Core CareTeam](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-careteam.html)
+- [US Core CareTeam](http://hl7.org/fhir/us/core/StructureDefinition-us-core-careteam.html)
 
 No equivalent International Patient Access or International Patient Summary profile.
 

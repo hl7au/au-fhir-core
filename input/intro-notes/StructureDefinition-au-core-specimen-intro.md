@@ -19,7 +19,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 
 ### Profile specific implementation guidance
-- a collected specimen **SHALL** included the relevant collected time in `Specimen.collection.collectedDateTime` or `Specimen.collection.collectedPeriod`. 
+- A collected specimen **SHALL** included the relevant collected time in `Specimen.collection.collectedDateTime` or `Specimen.collection.collectedPeriod`. 
 
 
 

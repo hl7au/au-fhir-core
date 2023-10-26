@@ -92,7 +92,7 @@ The following search parameters and search parameter combinations **SHALL** be s
       1. GET [base]/List/98767
       1. GET [base]/List?_id=98767
 
-    *Implementation Notes:* Fetches a single List. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Fetches a single List ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
     
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/list.html#search)** search parameter:
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
@@ -153,7 +153,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/List?patient=5678&amp;code=http://loinc.org\|10160-0,http://loinc.org\|11369-6&amp;date=ge2020-01-01T00:00:00Z
       1. GET [base]/List?patient.identifier=http://example.org/fhir/mrn\|12345&amp;code=http://loinc.org\|10160-0,http://loinc.org\|11369-6&amp;date=ge2020-01-01T00:00:00Z
 
-    *Implementation Notes:* Fetches a bundle of all List resources for the specified patient and date and report code(s). ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
+    *Implementation Notes:* Fetches a bundle of all List resources for the specified patient and date and report code(s) ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/list.html#search)** and **[`status`](https://hl7.org/fhir/R4/list.html#search)** search parameters:
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`

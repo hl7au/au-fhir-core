@@ -82,7 +82,7 @@
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameter:
-    - **SHOULD** support these `_include` parameters: `MedicationRequest:medication`
+    - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
@@ -100,7 +100,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     *Implementation Notes:* Fetches a bundle of all MedicationRequest resources for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`intent`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameters:
-    - **SHOULD** support these `_include` parameters: `MedicationRequest:medication`
+    - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
@@ -114,7 +114,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     *Implementation Notes:* Fetches a bundle of all MedicationRequest resources for the specified patient and intent ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`intent`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`status`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameters:
-    - **SHOULD** support these `_include` parameters: `MedicationRequest:medication`
+    - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
@@ -136,7 +136,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support fetching a MedicationRequest using the **[`_id`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameter:
-    - **SHOULD** support these `_include` parameters: `MedicationRequest:medication`
+    - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
 
  
@@ -148,7 +148,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/MedicationRequest?_id=2169591
       1. GET [base]/MedicationRequest?_id=2169591&amp;_include=MedicationRequest:medication
 
-    *Implementation Notes:* Fetches a single MedicationRequest. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Fetches a single MedicationRequest ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHOULD** support searching using the **[`identifier`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameter:
 
@@ -162,7 +162,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
       *Implementation Notes:* Fetches a bundle containing any MedicationRequest resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`intent`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`authoredon`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameters:
-    - **SHOULD** support these `_include` parameters: `MedicationRequest:medication`
+    - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHALL** support these `authoredon` comparators: `gt,lt,ge,le`
@@ -175,4 +175,4 @@ The following search parameters and search parameter combinations **SHOULD** be 
     
       1. GET [base]/MedicationRequest?patient=5678&amp;intent=order&amp;authoredon=ge2020-01-01T00:00:00Z
 
-    *Implementation Notes:* Fetches a bundle of all MedicationRequest resources for the specified patient and intent and date. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
+    *Implementation Notes:* Fetches a bundle of all MedicationRequest resources for the specified patient and intent and date ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))

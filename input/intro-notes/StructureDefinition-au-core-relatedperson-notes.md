@@ -80,7 +80,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/RelatedPerson?_id=2169591
       1. GET [base]/RelatedPerson?_id=2169591&amp;_revinclude=Provenance:target
 
-    *Implementation Notes:* Fetches a single RelatedPerson. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Fetches a single RelatedPerson ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHOULD** support searching for a related person by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
@@ -116,4 +116,4 @@ The following search parameters and search parameter combinations **SHOULD** be 
     
       1. GET [base]/RelatedPerson?patient=5678&amp;relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode\|MTH,http://snomed.info/sct\|133932002
 
-    *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient and relationship code(s).  **SHOULD** support search by multiple codes. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient and relationship code(s) **SHOULD** support search by multiple codes. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))

@@ -47,7 +47,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/Device/2169591
       1. GET [base]/Device?_id=2169591
 
-    *Implementation Notes:* Fetches a single Device. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Fetches a single Device ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHOULD** support searching for a device by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/device.html#search)** search parameter:
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`

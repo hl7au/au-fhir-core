@@ -62,4 +62,4 @@ The following search parameter combinations **SHOULD** be supported:
       1. GET [base]/Specimen?_id=2169591
       1. GET [base]/Specimen?_id=2169591_revinclude=Provenance:target
 
-    *Implementation Notes:* Fetches a single Specimen. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Fetches a single Specimen ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)

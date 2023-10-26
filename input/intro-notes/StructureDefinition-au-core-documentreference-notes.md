@@ -205,7 +205,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     
       1. GET [base]/DocumentReference?patient=5678&amp;type=http://loinc.org\|60591-5,http://loinc.org\|34133-9,http://loinc.org\|18842-5
 
-    *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and diagnostic report code(s). The DocumentReference `type` parameter searches `DocumentReference.code only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and diagnostic report code(s). The DocumentReference `type` parameter searches `DocumentReference.code` only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`type`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`date`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameters:
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
@@ -221,7 +221,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/DocumentReference?patient=5678&amp;type=http://loinc.org\|60591-5,http://loinc.org\|34133-9,http://loinc.org\|18842-5&amp;date=ge2020-01-01T00:00:00Z
       1. GET [base]/DocumentReference?patient.identifier=http://example.org/fhir/mrn\|12345&amp;type=type=http://loinc.org\|60591-5,http://loinc.org\|34133-9,http://loinc.org\|18842-5&amp;date=ge2020-01-01T00:00:00Z
 
-    *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and date and report code(s). ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
+    *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and date and report code(s) ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`contenttype`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameters:
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`

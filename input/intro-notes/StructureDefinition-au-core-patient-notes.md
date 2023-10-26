@@ -95,7 +95,7 @@
       1. GET [base]/Patient/5678
       1. GET [base]/Patient?_id=5678
 
-    *Implementation Notes:* Returns a single Patient resource. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Returns a single Patient resource ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
 1. **SHALL** support searching a patient by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
@@ -109,9 +109,6 @@
       1. GET [base]/Patient?identifier=http://example.org/fhir/mrn\|12345
 
     *Implementation Notes:* Fetches a bundle containing any Patient resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
-
-
-    *Implementation Notes:* Fetches a bundle of all Patient resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 
 #### Optional Search Parameters:
