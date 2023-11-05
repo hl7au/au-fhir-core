@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="vkc"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <code value="encounter-diagnosis"/>
+      <display value="Encounter Diagnosis"/>
+    </coding>
+  </category>
+    <severity>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="6736007"/>
+      <display value="Moderate"/>
+    </coding>
+  </severity>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="317349009"/>
+      <display value="Vernal keratoconjunctivitis"/>
+    </coding>
+  </code>
+  <bodySite>
+     <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="368601006"/>
+      <display value="Entire conjunctiva of left eye"/>
+    </coding> 
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="245949008"/>
+      <display value="Entire skin of lower eyelid"/>
+    </coding> 
+  </bodySite>
+  <subject>
+    <reference value="Patient/italia-sofia"/>
+  </subject>
+  <onsetDateTime value="2023-10-01"/>
+  <recordedDate value="2023-10-02"/>
+    <recorder>
+    <reference value="PractitionerRole/bobrester-bob-gp"/>
+  </recorder>
+  <asserter>
+    <reference value="PractitionerRole/bobrester-bob-gp"/>
+  </asserter>
+      <note>
+        <text
+            value="Itchy and burning eye, no discharge."
+        />
+    </note>
+</Condition>
