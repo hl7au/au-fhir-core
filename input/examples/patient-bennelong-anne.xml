@@ -23,18 +23,6 @@
         <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
         <value value="6951449677"/>
     </identifier>
-    <identifier>
-        <type>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                <code value="NI"/>
-                <display value="National unique individual identifier"/>
-            </coding>
-            <text value="IHI"/>
-        </type>
-        <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-        <value value="8003608833357361"/>
-    </identifier>
     <name>
         <use value="official"/>
         <text value="Mrs. Anne Bennelong"/>
