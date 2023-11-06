@@ -25,8 +25,8 @@
   <code>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="10633311000119108"/>
-      <display value="Cellulitis of right knee"/>
+      <code value="402486005"/>
+      <display value="Zinc depletion syndrome"/>
     </coding>
   </code>
   <subject>
