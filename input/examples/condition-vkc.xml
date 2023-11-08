@@ -21,8 +21,8 @@
     <severity>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="6736007"/>
-      <display value="Moderate"/>
+      <code value="24484000"/>
+      <display value="Severe"/>
     </coding>
   </severity>
   <code>
@@ -38,11 +38,6 @@
       <code value="368601006"/>
       <display value="Entire conjunctiva of left eye"/>
     </coding> 
-    <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="245949008"/>
-      <display value="Entire skin of lower eyelid"/>
-    </coding> 
   </bodySite>
   <subject>
     <reference value="Patient/italia-sofia"/>
@@ -57,7 +52,7 @@
   </asserter>
       <note>
         <text
-            value="Itchy and burning eye, no discharge."
+            value="Itchy and burning eye, foreign body sensation. Mucoid discharge."
         />
     </note>
 </Condition>

@@ -12,6 +12,10 @@
     </coding>
   </clinicalStatus>
   <category>
+  <coding> 
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/> 
+      <code value="problem-list-item"/> 
+    </coding>
     <coding>
       <system value="http://loinc.org"/>
       <code value="75326-9"/>
