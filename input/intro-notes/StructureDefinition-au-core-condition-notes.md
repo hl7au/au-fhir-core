@@ -115,7 +115,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     Example:
     
-      1. GET [base]/Condition?patient=5678&amp;clinical-status=http://terminology.hl7.org/CodeSystem/observation-clinical-status\|encounter-diagnosis
+      1. GET [base]/Condition?patient=5678&amp;clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical\|active
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and a clinical status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
