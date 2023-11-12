@@ -20,7 +20,7 @@
                 <key value="au-core-lipid-01" />
                 <severity value="error"/>
                 <human value="A lipid result value shall have unit, system and code if the test is not Cholesterol/HDL Cholesterol ratio"/>
-                <expression value="(code.coding.code!='32309-7' and valueQuantity.value.exists()) implies (valueQuantity.unit.exists() and valueQuantity.code.exists())"/>
+                <expression value="(code.coding.code!='32309-7' and value.value.exists()) implies (value.unit.exists() and value.code.exists())"/>
                 <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
             </constraint>
         </element>
