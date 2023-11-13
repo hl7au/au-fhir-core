@@ -435,6 +435,30 @@
 			<description value="Penicillin (medication) allergy&#xa;&#xa;Patient: Harry DAN"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="AllergyIntolerance/dust"/>
+			</reference>
+			<name value="AllergyIntolerance - Dust allergy"/>
+			<description value="Dust (environment) allergy&#xa;&#xa;Patient: Emma SMITH"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="AllergyIntolerance/wasp"/>
+			</reference>
+			<name value="AllergyIntolerance - Wasp venom allergy"/>
+			<description value="Wasp venom (environment) allergy&#xa;&#xa;Patient: Harry DAN"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="AllergyIntolerance/egg"/>
+			</reference>
+			<name value="AllergyIntolerance - Egg allergy"/>
+			<description value="Eggs (food) allergy&#xa;&#xa;Patient: Harry DAN"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
+		</resource>
 		<!--BODYSTRUCTURE EXAMPLES-->
 		<resource>
 			<reference>
