@@ -526,7 +526,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
             <td width="78" valign="top">
                 <p>
                     <a
-                        href="http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-careplan.html"
+                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
                     >
                         US Core CarePlan
                     </a>
@@ -560,7 +560,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
             <td width="78" valign="top">
                 <p>
                     <a
-                        href="http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-careteam.html"
+                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
                     >
                         US Core CareTeam
                     </a>
@@ -1288,7 +1288,7 @@ Observation.subject.reference and Observation.status is                    <code
             <td width="68" valign="top">
                 <p>
                     <a
-                        href="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
+                        href="http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
                     >
                         Immunization (IPS)
                     </a>
@@ -1297,13 +1297,13 @@ Observation.subject.reference and Observation.status is                    <code
             <td width="130" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
-                    AllergyIntolerance.patient.reference
+                    Immunization.patient.reference
                 </p>
             </td>
             <td width="78" valign="top">
                 <p>
                     <a
-                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
+                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
                     >
                         US Core Immunization
                     </a>
@@ -1680,10 +1680,6 @@ Observation.subject.reference, Observation.status is                    <code>fi
                 </p>
             </td>
             <td width="68" valign="top">
-            </td>
-            <td width="130" valign="top">
-            </td>
-            <td width="78" valign="top">
                 <p>
                     <a
                         href="http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
@@ -1692,12 +1688,14 @@ Observation.subject.reference, Observation.status is                    <code>fi
                     </a>
                 </p>
             </td>
-            <td width="137" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if MedicationStatement.effective[x] is included and
-                    patient is supported as
-                    MedicationStatement.subject.reference
+            <td width="130" valign="top">
+            <p>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if MedicationStatement.effective[x] is included and patient is supported as MedicationStatement.subject.reference
                 </p>
+            </td>
+            <td width="78" valign="top">
+            </td>
+            <td width="137" valign="top">
             </td>
         </tr>
         <tr>
@@ -1744,23 +1742,13 @@ Observation.subject.reference, Observation.status is                    <code>fi
                 </p>
             </td>
             <td width="81" valign="top">
-                <p>
-                    <a
-                        href="http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/Organization-uv-ips"
-                    >
-                        Organization (IPS)
-                    </a>
-                </p>
             </td>
             <td width="111" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
             </td>
             <td width="68" valign="top">
                 <p>
                     <a
-                        href="http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/Organization-uv-ips"
+                        href="http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
                     >
                         Organization (IPS)
                     </a>
@@ -1774,9 +1762,9 @@ Observation.subject.reference, Observation.status is                    <code>fi
             <td width="78" valign="top">
                 <p>
                     <a
-                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
                     >
-                        US Core Simple Observation
+                        US Core Organization
                     </a>
                 </p>
             </td>
@@ -1972,7 +1960,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
             <td width="68" valign="top">
                 <p>
                     <a
-                        href="http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/Patient-uv-ips"
+                        href="http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
                     >
                         Patient (IPS)
                     </a>
@@ -2025,7 +2013,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
             <td width="68" valign="top">
                 <p>
                     <a
-                        href="http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/Practitioner-uv-ips"
+                        href="http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
                     >
                         Practitioner (IPS)
                     </a>
@@ -2078,7 +2066,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
             <td width="68" valign="top">
                 <p>
                     <a
-                        href="http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/PractitionerRole-uv-ips"
+                        href="http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips"
                     >
                         PractitionerRole (IPS)
                     </a>
