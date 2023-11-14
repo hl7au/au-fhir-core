@@ -25,3 +25,5 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - Although both are marked as must support, servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
   - A client application **SHALL** support both elements
 - A procedure including an implantable device should use `Procedure.focalDevice` with a reference to a Device resource
+
+<p class="stu-note">Specific feedback is sought on how Procedure.code and Procedure.bodySite work together i.e bodySite is redundant as body site pre-coordinated in Procedure.code or qualifies Procedure.code as body site is not defined in code.</p>

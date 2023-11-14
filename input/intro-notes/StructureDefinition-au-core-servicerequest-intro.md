@@ -32,3 +32,5 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core
   - See guidance on the construction of identifiers in each Identifier profile and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
   - Source system identifiers that identify the business process (order ids) **SHOULD** be included as [AU Local Order Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localorderidentifier.html) to support workflow and deduplication of ServiceRequest resources.
     - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
+
+<p class="stu-note">Specific feedback is sought on how ServiceRequest.code and ServiceRequest.bodySite work together i.e bodySite is redundant as body site pre-coordinated in ServiceRequest.code or qualifies ServiceRequest.code as body site is not defined in code.</p>
