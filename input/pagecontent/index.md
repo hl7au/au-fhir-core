@@ -25,11 +25,7 @@ For a detailed description of these different usages of AU Core, see the [Confor
 
 ### Dependencies
 
-AU Core is dependent on:
-- [FHIR R4](http://hl7.org/fhir/R4/)
-- [HL7 Terminology](https://terminology.hl7.org/5.0.0/)
-- [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/)
-- terminology published in Australia's [National Clinical Terminology Service](https://www.healthterminologies.gov.au/access-clinical-terminology/access-fhir-terminology-resources/)
+{% include dependency-table.xhtml %}
 
 In addition, the following FHIR implementation guides are referenced:
 - [Bulk Data Export](https://hl7.org/fhir/uv/bulkdata)
