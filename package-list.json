@@ -16,10 +16,10 @@
     {
       "version": "0.2.2-preview",
       "date": "2023-11-15",
-      "desc": "November 2023 Connectathon",
+      "desc": "This qa-preview snapshot is published for November 2023 Connectathon.",
       "path": "http://hl7.org.au/fhir/core/0.2.2-preview",
       "fhirversion": "4.0.1",
-      "status": "draft",
+      "status": "qa-preview",
       "sequence": "AU Core R4"
     },
     {
