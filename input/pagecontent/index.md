@@ -1,4 +1,14 @@
 
+<div class="stu-note">
+<p> This version of the AU Core Implementation Guide is published to support the HL7 Australia Connectathon November 2023. </p>
+<p>The primary items for review for this event are:
+<ol>
+<li><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></li>
+<li><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></li>
+<li><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></li>
+</ol></p>
+<p> Other informative  material is also provided as the basis of ongoing work.</p>
+</div>
 
 ### Introduction
 AU Core is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context. It sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
