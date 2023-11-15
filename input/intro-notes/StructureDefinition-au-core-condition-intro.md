@@ -26,6 +26,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - To represent that a patient does not have a condition or history of condition, an appropriate negation code is used in `Condition.code`
 - Refutation is not expected to be handled except as above - an appropriate negation code in `Condition.code` and `Condition.verificationStatus` of "confirmed" or "unconfirmed"
 
+<p class="stu-note">Specific feedback is how to do 'free text' medical history i.e. are these always Condition?</p>
 
-
+<p class="stu-note">Specific feedback is sought on how Condition.code and Condition.bodySite work together i.e bodySite is redundant as body site pre-coordinated in Condition.code or qualifies Condition.code as body site is not defined in code.</p>
 
