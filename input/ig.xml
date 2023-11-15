@@ -35,7 +35,7 @@
 	<dependsOn id="aubaser4">
 		<uri value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"/>
 		<packageId value="hl7.fhir.au.base"/>
-		<version value="current"/>
+		<version value="4.1.2-preview"/>
 	</dependsOn>
 	<definition>
 	<resource>
