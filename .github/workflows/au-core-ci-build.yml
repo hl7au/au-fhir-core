@@ -8,14 +8,26 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    # use ig publisher base image
-
+    container: hl7fhir/ig-publisher-base    # use ig publisher base image
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout AU Core Repository
+      uses: actions/checkout@v4
 
-    ## checkout template
-    ## load template into publisher.jar with ig param -ci-build
-    ## save output as artifact
-    ## ftp artifact to server
+    # - name: Run JAR File
+    #   run: java -jar input-cache/publisher.jar -ig ig.ini  
+
+    - name: Build IG 
+      run: |
+        _updatePublisher.sh -f -y
+        _genonce.sh
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ig-output
+        path: output/
+
+    # - name: FTP to Server
+    #   run: |
+    #     ftp-upload-command --host ${{build.fhir.org.au}} --user ${{ secrets.FTP_USER }} --password ${{ secrets.FTP_PASSWORD }} output/
