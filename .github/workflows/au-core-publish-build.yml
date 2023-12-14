@@ -23,7 +23,7 @@ jobs:
     #     _genonce.sh
 
     - name: Run Complex Publisher build
-      run: java -jar input-cache/publisher.jar -ig ig.ini -publish / -go-publish
+      run: java -jar input-cache/publisher.jar -ig ig.ini -publish # might require -nested since publisher.java has self.targetOutputNested = CliParams.getNamedParam(args, "-nested");
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v3

@@ -18,12 +18,12 @@ jobs:
       run: |
         _updatePublisher.sh -f -y
 
-    # - name: Basic Publisher build
-    #   run: |
-    #     _genonce.sh
+    - name: Basic Publisher build
+      run: |
+        _genonce.sh
 
-    - name: Run Complex Publisher build
-      run: java -jar input-cache/publisher.jar -ig ig.ini -publish / -go-publish
+    # - name: Run Complex Publisher build
+    #   run: java -jar input-cache/publisher.jar -ig ig.ini <WITH> -auto-ig-build / -publish / -go-publish
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
