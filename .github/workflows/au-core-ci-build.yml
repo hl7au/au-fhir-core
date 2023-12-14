@@ -1,0 +1,21 @@
+name: AU Core fhir.org.au IG Publisher CI Build
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    # use ig publisher base image
+
+    steps:
+    - uses: actions/checkout@v3
+
+    ## checkout template
+    ## load template into publisher.jar with ig param -ci-build
+    ## save output as artifact
+    ## ftp artifact to server
