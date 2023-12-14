@@ -1,10 +1,11 @@
-name: AU Core fhir.org.au IG Publisher Gen Once Build
+name: AuCore IG genonce
 
 on:
   push:
     branches: [ "feature/cicd" ]
   pull_request:
-    branches: [ "feature/cicd" ]
+    branches:
+      - '*'
 
 jobs:
   build:

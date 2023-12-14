@@ -1,10 +1,11 @@
-name: AU Core fhir.org.au IG Publisher Publish Build
+name: AuCore IG publish
 
 on:
   push:
     branches: [ "feature/cicd" ]
   pull_request:
-    branches: [ "feature/cicd" ]
+    branches:
+      - '*'
 
 jobs:
   build:

@@ -1,10 +1,11 @@
-name: AU Core fhir.org.au IG Publisher Go Publish Build
+name: AuCore IG go-publish
 
 on:
   push:
     branches: [ "feature/cicd" ]
   pull_request:
-    branches: [ "feature/cicd" ]
+    branches:
+      - '*'
 
 jobs:
   build:
@@ -23,7 +24,7 @@ jobs:
     #     _genonce.sh
 
     - name: Run Complex Publisher build
-      run:  java -jar input-cache/publisher.jar -go-publish -ig ig.ini # -source . # -web (full path to webroot) -registry (full path to fhir-ig-list.json) -history (full path to ig-history) -templates (full path to templates)
+      run:  java -jar input-cache/publisher.jar -go-publish -ig ig.ini -source . # -web (full path to webroot) -registry (full path to fhir-ig-list.json) -history (full path to ig-history) -templates (full path to templates)
       ## information on proper use in confluence but not in github https://confluence.hl7.org/pages/viewpage.action?pageId=104580055 might be outdated? https://github.com/HL7/fhir-ig-publisher/commit/6b77ac64637ee485a4984cf2e1d7a7a999a27c80
 
     - name: Upload Artifact
