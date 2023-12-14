@@ -2,9 +2,9 @@ name: AU Core fhir.org.au IG Publisher CI Build
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "feature/cicd" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "feature/cicd" ]
 
 jobs:
   build:
