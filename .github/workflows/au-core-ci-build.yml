@@ -23,7 +23,8 @@ jobs:
     #     _genonce.sh
 
     - name: Run Complex Publisher build
-      run: java -jar input-cache/publisher.jar -ig ig.ini -publish / -go-publish
+      run: java -jar input-cache/publisher.jar -ig ig.ini -auto-ig-build -target https://build.fhir.org.au/ig/hl7au/au-fhir-core/branches/example
+       #https://build.fhir.org.au/ig/hl7au/au-fhir-core/branches/{{ github.ref }}/
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v3

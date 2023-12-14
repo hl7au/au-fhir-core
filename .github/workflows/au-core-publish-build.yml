@@ -1,4 +1,4 @@
-name: AU Core fhir.org.au IG Publisher CI Build
+name: AU Core fhir.org.au IG Publisher Publish Build
 
 on:
   push:
@@ -23,7 +23,9 @@ jobs:
     #     _genonce.sh
 
     - name: Run Complex Publisher build
-      run: java -jar input-cache/publisher.jar -ig ig.ini -publish # might require -nested since publisher.java has self.targetOutputNested = CliParams.getNamedParam(args, "-nested");
+      run: java -jar input-cache/publisher.jar -ig ig.ini -publish -target https://build.fhir.org.au/ig/hl7au/au-fhir-core/branches/example
+# java.lang.NullPointerException: Cannot invoke "String.startsWith(String)" because the return value of "org.hl7.fhir.igtools.publisher.Publisher.targetUrl()" is null
+      # might require -nested since publisher.java has self.targetOutputNested = CliParams.getNamedParam(args, "-nested");
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v3

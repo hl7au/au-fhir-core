@@ -1,4 +1,4 @@
-name: AU Core fhir.org.au IG Publisher CI Build
+name: AU Core fhir.org.au IG Publisher Gen Once Build
 
 on:
   push:
