@@ -39,5 +39,5 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: output/
-        server-dir: /ig/hl7au/au-fhir-core/branches/${{ github.ref }}/genonce
+        server-dir: /ig/hl7au/au-fhir-core/branches/${{ github.ref }}/genonce/
         # dry-run: true
