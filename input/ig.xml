@@ -8,7 +8,7 @@
 		<valueInteger value="0"/>
 	</extension>
 	<url value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
-	<version value="0.2.3"/>
+	<version value="0.3.0"/>
 	<name value="AUCoreImplementationGuide"/>
 	<title value="AU Core Implementation Guide"/>
 	<status value="draft"/>
