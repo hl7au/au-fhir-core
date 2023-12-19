@@ -17,10 +17,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 <!-- ================================================ -->
 
 **Value sets published in the NCTS**
-- [Alcohol Intake Status](https://healthterminologies.gov.au/fhir/ValueSet/alcohol-intake-status-1)
 - [Biological Sex](https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1)
-- [Estimated Date Of Delivery](https://healthterminologies.gov.au/fhir/ValueSet/estimated-date-of-delivery-1)
-- [Estimated Date Of Delivery LOINC](https://healthterminologies.gov.au/fhir/ValueSet/estimated-date-of-delivery-LOINC-1)
 - [Metric Body Length Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-length-units-1)
 - [Metric Body Temperature Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-temperature-units-1)
 - [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1)
