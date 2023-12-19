@@ -921,30 +921,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Observation/edd-1"/>
-			</reference>
-			<name value="Observation - Estimated Date of Delivery"/>
-			<description value="Estimated Date of Delivery (EDD)&#xa;&#xa;Patient: Ms. Emma SMITH"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-estimateddateofdelivery"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/gestationalage-1"/>
-			</reference>
-			<name value="Observation - Gestational age"/>
-			<description value="Gestational age&#xa;&#xa;Patient: Ms. Emma SMITH"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-gestationalage"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/gravidity-1"/>
-			</reference>
-			<name value="Observation - Gravidity"/>
-			<description value="Gravidity&#xa;&#xa;Patient: Ms. Emma SMITH"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-gravidity"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Observation/headcircum-1"/>
 			</reference>
 			<name value="Observation - Head circumference"/>
@@ -967,22 +943,6 @@
 			<name value="Observation - Heart rate"/>
 			<description value="Heart rate recorded by GP&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/lastmenstrualperiod-1"/>
-			</reference>
-			<name value="Observation - Last menstrual period"/>
-			<description value="Last menstrual period 2021-12-01&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lastmenstrualperiod"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/lastmenstrualperiod-data-absent"/>
-			</reference>
-			<name value="Observation - Last menstrual period (data absent)"/>
-			<description value="Last menstrual period - data absent as not applicable&#xa;&#xa;Patient: Mr. Harry Dan"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lastmenstrualperiod"/>
 		</resource>
 		<resource>
 			<reference>
@@ -1039,14 +999,6 @@
 			<name value="Observation - Oxygen saturation"/>
 			<description value="Oxygen saturation&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-oxygensat"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/parity-1"/>
-			</reference>
-			<name value="Observation - Parity"/>
-			<description value="Parity&#xa;&#xa;Patient: Ms. Emma SMITH"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-parity"/>
 		</resource>
 		<resource>
 			<reference>
