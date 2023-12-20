@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CarePlan xmlns="http://hl7.org/fhir">
+  <!--  Example adapted from MCC eCare Plan Implementation Guide MCCCarePlan  -->
+  <id value="mcc"/>
+  <meta>
+    <versionId value="5"/>
+    <lastUpdated value="2022-11-16T23:03:27.124+00:00"/>
+    <source value="#lh8xM5mIbbHVNz84"/>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-careplan"/>
+  </meta>
+  <status value="active"/>
+  <intent value="plan"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="734163000"/>
+      <display value="Care Plan"/>
+    </coding>
+    <!-- US Core specific content is commented in HL7 AU examples - US Core content does
+    validate against the AU Core CarePlan profile if a server supports both AU Core & US Core
+    <coding>
+      <system value="http://hl7.org/fhir/us/core/CodeSystem/careplan-category"/>
+      <code value="assess-plan"/>
+    </coding> -->
+  </category>
+  <subject>
+    <reference value="Patient/dan-harry"/>
+  </subject>
+  <period>
+    <start value="2018-05-01"/>
+  </period>
+  <created value="2019-01-01"/>
+  <author>
+    <reference value="PractitionerRole/np-nurse-nancy"/>
+    <display value="Nancy Nurse RN"/>
+  </author>
+  <contributor>
+    <reference value="PractitionerRole/nephrologist-levin-henry"/>
+    <display value="Henry Levin VII MD Nephrologist"/>
+  </contributor>
+  <contributor>
+    <reference value="PractitionerRole/np-nurse-nancy"/>
+    <display value="Nancy Nurse RN"/>
+  </contributor>
+  <contributor>
+    <reference value="PractitionerRole/gp-primary-peter"/>
+    <display value="Peter Primary MD Primary Provider"/>
+  </contributor>
+  <careTeam>
+    <reference value="CareTeam/mcc"/>
+    <display value="Longitudinal care-coordination focused care team"/>
+  </careTeam>
+  <addresses>
+    <reference value="Condition/ckd"/>
+    <display value="Chronic Kidney Disease"/>
+  </addresses>
+  <supportingInfo>
+    <reference value="Procedure/dialysis"/>
+    <display value="Chronic Pain"/>
+  </supportingInfo>
+  <supportingInfo>
+    <reference value="Observation/bun-mcc"/>
+    <display value="BUN 24 mL/min/{1.73_m2}"/>
+  </supportingInfo>
+  <goal>
+    <reference value="Goal/wgt-loss"/>
+    <display value="Lose weight, decrease chronic pain with less use of pain medication and improved lab results"/>
+  </goal>
+  <activity>
+    <outcomeReference>
+      <reference value="Procedure/dialysis"/>
+      <display value="Dialysis"/>
+    </outcomeReference>
+    <progress>
+      <time value="2019-01-10"/>
+      <text value="Harry Dan is measuring weight daily"/>
+    </progress>
+    <reference>
+      <reference value="http://example.org/Task/123"/>
+      <display value="Harry Dan or caregiver to perform daily weights"/>
+    </reference>
+  </activity>
+  <activity>
+    <outcomeReference>
+      <reference value="http://example.org/Encounter/123"/>
+      <display value="PreOp Encounter For Creation of external arteriovenous shunt (procedure)"/>
+    </outcomeReference>
+    <outcomeReference>
+      <reference value="http://example.org/Procedure/upperlimbveinUS"/>
+      <display value="Fluoroscopic venography of bilateral upper limbs Performed. Results: Normal"/>
+    </outcomeReference>
+    <progress>
+      <time value="2019-01-10"/>
+      <text value="Harry Dan Completed prep for an AV Shunt. Harry needs the shunt due to the need for dialysis related to the goal to improve Harry's health related to CKD"/>
+    </progress>
+    <reference>
+      <reference value="http://example.org/Appointment/AVShunt"/>
+      <display value="PreOp Encounter Request For Creation of external arteriovenous shunt (procedure). Relates to overall health improvement goal and encounter requestActivity"/>
+    </reference>
+  </activity>
+</CarePlan>

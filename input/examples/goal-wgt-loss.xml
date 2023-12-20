@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Goal xmlns="http://hl7.org/fhir">
+  <!--  Example adapted from MCC eCare Plan Implementation Guide WGT-loss  -->
+  <id value="wgt-loss"/>
+  <meta>
+    <versionId value="9"/>
+    <lastUpdated value="2022-08-02T18:25:27.359+00:00"/>
+    <source value="#Co3eBzwkPfsp7Smu"/>
+  </meta>
+  <lifecycleStatus value="active"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/goal-category"/>
+      <code value="dietary"/>
+    </coding>
+  </category>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+      <code value="high-priority"/>
+      <display value="High Priority"/>
+    </coding>
+    <text value="high"/>
+  </priority>
+  <description>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="43664005"/>
+      <display value="Normal weight"/>
+    </coding>
+    <text value="Target weight is 150 to 155 lbs."/>
+  </description>
+  <subject>
+    <reference value="Patient/dan-harry"/>
+  </subject>
+  <startDate value="2019-10-14"/>
+  <statusDate value="2019-10-14"/>
+  <expressedBy>
+    <reference value="Patient/dan-harry"/>
+  </expressedBy>
+</Goal>

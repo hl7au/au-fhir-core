@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Goal xmlns="http://hl7.org/fhir">
+  <!--  Example adapted from MCC eCare Plan Implementation Guide HPT-WNL  -->
+  <id value="hpt-wnl"/>
+  <meta>
+    <versionId value="5"/>
+    <lastUpdated value="2022-06-02T23:34:46.692+00:00"/>
+    <source value="#2FWI9BsC94EqeXTg"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/goal-acceptance">
+    <extension url="individual">
+      <valueReference>
+        <reference value="Patient/dan-harry"/>
+      </valueReference>
+    </extension>
+    <extension url="status">
+      <valueCode value="agree"/>
+    </extension>
+    <extension url="priority">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+          <code value="high-priority"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/goal-acceptance">
+    <extension url="individual">
+      <valueReference>
+        <reference value="Practitioner/primary-peter"/>
+      </valueReference>
+    </extension>
+    <extension url="status">
+      <valueCode value="agree"/>
+    </extension>
+    <extension url="priority">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+          <code value="high-priority"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/goal-relationship">
+    <extension url="type">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/goal-relationship-type"/>
+          <code value="other"/>
+        </coding>
+        <text value="This goal relates to the Weight loss goal"/>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="target">
+      <valueReference>
+        <reference value="Goal/wgt-loss"/>
+      </valueReference>
+    </extension>
+  </extension>
+  <lifecycleStatus value="active"/>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+      <code value="high-priority"/>
+      <display value="High Priority"/>
+    </coding>
+    <text value="high"/>
+  </priority>
+  <description>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="271651005"/>
+      <display value="Stable blood pressure"/>
+    </coding>
+    <text value="Target Systolic Blood pressure between 110 and 140 mmHg."/>
+  </description>
+  <subject>
+    <reference value="Patient/dan-harry"/>
+  </subject>
+  <startDate value="2019-10-14"/>
+  <target>
+    <measure>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="8480-6"/>
+        <display value="Systolic blood pressure"/>
+      </coding>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="271649006"/>
+      </coding>
+    </measure>
+    <detailRange>
+      <low>
+        <value value="110"/>
+        <unit value="mmHg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mm[Hg]"/>
+      </low>
+      <high>
+        <value value="140"/>
+        <unit value="mmHg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mm[Hg]"/>
+      </high>
+    </detailRange>
+    <dueDate value="2020-04-05"/>
+  </target>
+  <statusDate value="2019-10-14"/>
+  <statusReason value="Patient knows that normal blood pressure is important for CKD, Hypertension and diabetes control."/>
+  <expressedBy>
+    <reference value="Patient/dan-harry"/>
+  </expressedBy>
+  <addresses>
+    <reference value="Condition/ckd"/>
+    <display value="chronic kidney disease condition"/>
+  </addresses>
+  <outcomeReference>
+    <reference value="Observation/bodyweight-mcc"/>
+    <display value="Body Weight Measured - 74.84 Kg"/>
+  </outcomeReference>
+</Goal>

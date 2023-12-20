@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BodyStructure xmlns="http://hl7.org/fhir">
+    <!--  Example adapted from FHIR R4 tumor  -->
+    <id value="tumour-spleen"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodystructure"/>
+    </meta>
+    <identifier>
+        <system value="http://example.org/bodystructure/identifiers"/>
+        <value value="12345"/>
+    </identifier>
+    <morphology>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="4147007"/>
+            <display value="Mass (morphologic abnormality)"/>
+        </coding>
+        <text value="Splenic mass"/>
+    </morphology>
+    <location>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="78961009"/>
+        </coding>
+        <text value="Spleen"/>
+    </location>
+    <description value="7 cm maximum diameter"/>
+    <image>
+        <!--  WADO example using a fictitious url     -->
+        <contentType value="application/dicom"/>
+        <url value="http://imaging.acme.com/wado/server?requestType=WADO&amp;amp;wado_details"/>
+    </image>
+    <patient>
+        <reference value="Patient/wang-li"/>
+    </patient>
+</BodyStructure>
