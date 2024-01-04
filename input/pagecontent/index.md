@@ -28,7 +28,7 @@ For a detailed description of these different usages of AU Core, see the [Confor
 {% include dependency-table.xhtml %}
 
 In addition, the following FHIR implementation guides are referenced:
-- [Bulk Data Export](https://hl7.org/fhir/uv/bulkdata)
+- [Bulk Data Access](https://hl7.org/fhir/uv/bulkdata)
 - [International Patient Access](https://hl7.org/fhir/uv/ipa)
 - [SMART Application Launch Framework](http://www.hl7.org/fhir/smart-app-launch)
 - [Structured Data Capture](https://hl7.org/fhir/uv/sdc)
