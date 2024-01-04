@@ -4375,7 +4375,7 @@
 </extension>
 </implementationGuide>
 <rest>
-<mode value="server"/>
+<mode value="client"/>
 <documentation value="The AU Core Client **SHALL**:&#xA;1. Support the AU Core Patient resource profile.&#xA;1. Support at least one additional resource profile from the list of AU Core Profiles.&#xA;1. Implement the RESTful behavior according to the FHIR specification.&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support JSON source formats for all AU Core interactions.&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;The AU Core Client **SHOULD**:&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support XML source formats for all AU Core interactions."/>
 <security>
 <description value="TBD requirements and recommendations."/>
