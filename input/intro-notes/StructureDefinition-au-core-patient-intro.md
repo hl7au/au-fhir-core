@@ -27,18 +27,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - an Australian address **SHOULD** be represented using the [Australian Address](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-address.html) data type profile
 - When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/) and [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html)
 
-<div class="stu-note"><p>AU Core TDG held a discussion on preferred identifiers to support where an individual is ineligible for an IHI, e.g. tourist or other temporary stay in Australia. Passport was proposed for use (see example <a href="Patient-italia-sofia.html">Patient/italia-sofia</a>).</p><p>AU Core TDG decided this is not a priority for AU Core and will not be addressed in AU Core release 1.</p></div>
-
-<div class="stu-note"><p>AU Core TDG discussed whether MRN is to be a supported identifier for patients.</p><p>AU Core TDG decided that MRN will not be added to the profile as a supported identifier, noting that MRN is still permitted.</p></div>
-
-<div class="stu-note">
-<p>AU Core Patient currently supports <a href="https://www.hl7.org/fhir/R4/patient.html#gender">Administrative Gender</a> as Patient.gender.</p>
-<p>Specific feedback is sought on the case for inclusion of specific gender and sex use-data elements in AU Core Patient in release 1:
-<ol>
-<li><a href="https://hl7.org/xprod/ig/uv/gender-harmony/model.html#gender-identity-gi">Gender Identity</a></li>
-<li><a href="https://hl7.org/xprod/ig/uv/gender-harmony/model.html#sex-parameter-for-clinical-use-spcu">Sex Parameter for Clinical Use (SPCU)</a></li>
-<li><a href="https://hl7.org/xprod/ig/uv/gender-harmony/model.html#recorded-sex-or-gender-rsg">Recorder Sex or Gender (RSG)</a></li>
-</ol></p>
-<p>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/66">au-fhir-core/issues/66</a>.</p>
-</div>
 

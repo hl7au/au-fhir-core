@@ -73,13 +73,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="SearchParameter/au-core-relatedperson-patient"/>
-			</reference>
-			<name value="AUCoreRelatedPersonPatient"/>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="SearchParameter/au-core-specimen-patient"/>
 			</reference>
 			<name value="AUCoreSpecimenPatient"/>
