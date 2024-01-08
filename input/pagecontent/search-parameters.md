@@ -15,10 +15,6 @@ The [registry of standard search parameters]({{site.data.fhir.path}}searchparame
 
 - [practitionerrole-practitioner](SearchParameter-au-core-practitionerrole-practitioner.html)
 
-### RelatedPerson search parameters
-
-- [relatedperson-patient](SearchParameter-au-core-relatedperson-patient.html)
-
 ### Specimen search parameters
 
 - [specimen-patient](SearchParameter-au-core-specimen-patient.html)

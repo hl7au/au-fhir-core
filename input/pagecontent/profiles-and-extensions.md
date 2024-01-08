@@ -1,16 +1,3 @@
-<div class="bg-warning">
-<p>NOTE: The following profiles are candidates for AU Core but not yet available:<ul>
-        <li>AU Core Consent</li>
-        <li>AU Core ImagingStudy</li>
-        <li>AU Core Implantable or Wearable Device</li>
-        <li>AU Core FamilyMemberHistory</li>
-        <li>AU Core Goal</li>
-        <li>AU Core Questionnaire (or declare support for SDC Base Questionnaire Profile)</li>
-        <li>AU Core QuestionnaireResponse</li>
-        <li>Specific List profiles: AU Core Allergies List, AU Core Medicines List, AU Core Problems List</li>
-      </ul></p>
-</div>
-
 ### Profiles
 
 The following profiles and have been defined for this implementation guide.
