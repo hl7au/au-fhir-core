@@ -200,11 +200,6 @@ These data elements may be supported as coded, or text, and systems are likely t
     ~~~
 
 
-### Lists
-
-*TBD: Insert guidance.*
-
-
 ### Representing communication preferences
 
 **Patient**
