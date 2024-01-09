@@ -27,4 +27,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - an Australian address **SHOULD** be represented using the [Australian Address](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-address.html) data type profile
 - When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/) and [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html)
 
-
+<div class="stu-note">Specific feedback is sought on proposal to implement support for Gender Harmony Name to Use (NtU) concept in AU Core by making name.use a Must Support element in AU Core Patient.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/86">au-fhir-core/issues/86</a>.</div>

@@ -26,4 +26,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - A client application **SHALL** support both elements
 - A procedure including an implantable device should use `Procedure.focalDevice` with a reference to a Device resource
 
-<div class="stu-note"><p>Specific feedback is sought on whether the bodySite element should be removed from this profile and AU Core only supports information being sent in Procedure.code i.e bodySite is redundant as body site pre-coordinated in Procedure.code or qualifies Procedure.code as body site is not defined in code.</p><p>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/64">au-fhir-core/issues/64</a>.</p></div>
+<div class="stu-note">Specific feedback is sought on whether the bodySite element should be removed from this profile and AU Core only supports information being sent in Procedure.code i.e bodySite is redundant as body site pre-coordinated in Procedure.code or qualifies Procedure.code as body site is not defined in code.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/64">au-fhir-core/issues/64</a>.</div>
