@@ -48,7 +48,8 @@ We have updated the AU Core current build to reflect the current <a href="https:
 <li>Estimated Date of Delivery LOINC</li></ul>
 </li>
 <li>Removed Search Parameters:<ul>
-<li>relatedperson-patient</li></ul>
+<li>relatedperson-patient</li>
+<li>specimen-patient</li></ul>
 </li>
 </ul>
 </li>
