@@ -218,42 +218,6 @@
 </tr>
 <tr>
 <td>
-<a href="#CarePlan1-1">CarePlan</a>
-</td>
-<td>
-<a href="StructureDefinition-au-core-careplan.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-careplan</a>
-</td>
-<td>y</td>
-<td class="text-center">y</td>
-<td class="text-center"></td>
-<td class="text-center"></td>
-<td>category, date, patient, patient.identifier, patient+category, patient+category+date, patient+category+status, patient+category+status+date, status</td>
-<td/>
-<td>
-<code>Provenance:target</code>
-</td>
-<td/>
-</tr>
-<tr>
-<td>
-<a href="#CareTeam1-1">CareTeam</a>
-</td>
-<td>
-<a href="StructureDefinition-au-core-careteam.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-careteam</a>
-</td>
-<td>y</td>
-<td class="text-center">y</td>
-<td class="text-center"></td>
-<td class="text-center"></td>
-<td>patient, patient.identifier, patient+status, status</td>
-<td/>
-<td>
-<code>Provenance:target</code>
-</td>
-<td/>
-</tr>
-<tr>
-<td>
 <a href="#Condition1-1">Condition</a>
 </td>
 <td>
