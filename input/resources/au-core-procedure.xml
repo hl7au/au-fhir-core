@@ -1,7 +1,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-core-procedure"/>
   <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
-  <name value="AUCoreProcedureCore"/>
+  <name value="AUCoreProcedure"/>
   <title value="AU Core Procedure"/>
   <status value="draft"/>
   <description value="This profile sets minimum expectations for a Procedure resource to record, search, and fetch procedures associated with a patient. It is based on the [AU Base Procedure](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-procedure.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Procedure resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
