@@ -2,7 +2,7 @@ A resource may be conformant to multiple implementation guides. In addition to t
 
 The table provides a high-level comparison, indicating if a resource conformant to a particular AU Core profile also satisfies (i.e. is conformant to) a profile from [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa), [International Patient Summary](https://build.fhir.org/ig/HL7/fhir-ips), or [US Core](http://build.fhir.org/ig/HL7/US-Core).
 
-Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa), [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips), or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
+Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa), [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips), or [US Core](http://build.fhir.org/ig/HL7/US-Core) **MAY NOT** conform to AU Core.
 
 <table border="1" cellspacing="0" cellpadding="0">
     <tbody>
@@ -765,12 +765,32 @@ Observation.subject.reference and Observation.status is                    <code
                 </p>
             </td>
             <td width="68" valign="top">
+                <p>
+                    <a
+                        href="https://hl7.org/fhir/R4/observation-headcircum.html"
+                    >
+                        observation-headcircum
+                    </a>
+                </p>
             </td>
             <td width="130" valign="top">
+                <p>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                </p>            
             </td>
             <td width="78" valign="top">
+                <p>
+                    <a
+                        href="https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-head-circumference.html"
+                    >
+                        US Core Head Circumference Profile
+                    </a>
+                </p>
             </td>
             <td width="137" valign="top">
+                <p>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                </p>
             </td>
         </tr>
         <tr>
@@ -1194,8 +1214,18 @@ Observation.subject.reference, Observation.status is                    <code>fi
             <td width="130" valign="top">
             </td>
             <td width="78" valign="top">
+                <p>
+                    <a
+                        href="https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-simple-observation.html"
+                    >
+                        US Core Simple Observation
+                    </a>
+                </p>            
             </td>
             <td width="137" valign="top">
+                <p>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                </p>
             </td>
         </tr>
         <tr>
@@ -1237,7 +1267,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
             <td width="137" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if Organization.active is supplied
                 </p>
             </td>
         </tr>
@@ -1279,10 +1309,15 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
             <td width="78" valign="top">
                 <p>
-                    TBD
+                    <a href="https://hl7.org/fhir/us/core/StructureDefinition-us-core-pulse-oximetry.html">
+                        US Core Pulse Oximetry
+                    </a>
                 </p>
             </td>
             <td width="137" valign="top">
+                <p>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if additional LOINC coding is supplied in Observation.code
+                </p>            
             </td>
         </tr>
         <tr>
@@ -1459,7 +1494,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
             <td width="137" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if Practitioner.identifier is supplied
                 </p>
             </td>
         </tr>
@@ -1558,8 +1593,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
             <td width="137" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
-                    Procedure.subject.reference
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> 
                 </p>
             </td>
         </tr>
@@ -1592,7 +1626,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
             <td width="137" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if all instances of Provenance.agent.onBehalfOf are supplied as Organization
                 </p>
             </td>
         </tr>
