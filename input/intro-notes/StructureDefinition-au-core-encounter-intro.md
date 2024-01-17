@@ -23,7 +23,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core
   - Although both are marked as must support, servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
   - A client application **SHALL** support both elements
 
-<p class="stu-note"><p>Specific feedback is sought on the proposal to make Encounter.period optional in AU Core. <br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/85">au-fhir-core/issues/85</a>.</p></p>
+<p class="stu-note">Specific feedback is sought on the proposal to make Encounter.period optional in AU Core. <br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/85">au-fhir-core/issues/85</a>.</p>
 
 
 
