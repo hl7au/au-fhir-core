@@ -1,0 +1,73 @@
+id: hl7.fhir.au.core
+canonical: http://hl7.org.au/fhir/core
+version: 2.3.0
+name: AUCoreImplementationGuide
+title: AU Core Implementation Guide
+status: draft
+publisher:
+  name: HL7 Australia / HL7 Australia FHIR Work Group 
+  url: 'https://confluence.hl7.org/display/HAFWG'
+jurisdiction: 'urn:iso:std:iso:3166#AU'
+copyright: >-
+  Used by permission of HL7 International, all rights reserved Creative Commons License. HL7 Australia© 2022+; Licensed Under Creative Commons No Rights Reserved.
+description: >-
+  This implementation guide is provided to support the use of FHIR®© in an Australian context, and defines the minimum set of constraints on the FHIR resources to create the AU Core profiles. This implementation guide forms the foundation to build future AU Realm FHIR implementation guides and its content will continue to grow to meet the needs of AU implementers.
+license: CC0-1.0
+fhirVersion: 4.0.1
+copyrightyear: 2022+
+releaselabel: CI Build
+dependencies:
+  hl7.fhir.au.base:
+    uri: http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base
+    version: current
+    id: aubaser4
+pages:
+  index.md:
+    title: Home
+  conformance.md:
+    general-requirements.md:
+    must-support.md:
+  guidance.md:
+    general-guidance.md:
+    comparison.md:
+  profiles-and-extensions.md:
+  search-parameters.md:
+  terminology.md:
+  capability-statements.md:
+  examples.md:
+  downloads.md:
+#  ImplementationGuide-hl7.fhir.au.core.md:
+#    title: AU Core ImplementationGuide 
+parameters:
+#  path-resource:
+  #  - input/resources
+  #  - input/fsh/resources
+  path-pages:
+    - input/pagecontent
+    - input/intro-notes
+    - input/includes
+  path-expansion-params: '../../input/_resources/exp-params.json'
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-publisher: true
+  apply-version: true
+  show-inherited-invariants: true
+  usage-stats-opt-out: true
+  tabbed-snapshots: false
+  copyrightyear: 2022+
+  releaselabel: CI Build
+menu:
+  Home: index.html
+  Conformance:
+    General Requirements: general-requirements.html
+    Must Support: must-support.html
+  Guidance: #guidance.html
+    General Guidance: general-guidance.html
+    Comparison with other national and international specifications: comparison.html
+  FHIR Artefacts: #artefact.html
+    Profiles and Extensions: profiles-and-extensions.html
+    Search Parameters: search-parameters.html
+    Terminology: terminology.html
+    Capability Statements: capability-statements.html
+  Examples: examples.html
+  Downloads: downloads.html
