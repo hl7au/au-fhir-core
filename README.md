@@ -21,10 +21,10 @@ In this regard it is similar in nature to other international FHIR specification
 For a detailed description of these different usages of AU Core, see the [Conformance Requirements](http://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html) and [Must Support](http://build.fhir.org/ig/hl7au/au-fhir-core/must-support.html) pages.
 
 ## Did you find an error?
-Search the Issues list in [GitHub](https://github.com/hl7au/au-fhir-core/issues?q=is%3Aissue) to ensure the error was not already reported.
+Search the Issues list in [Jira issue tracker](https://jira.hl7.org/browse/FHIR-43719?filter=21312) to ensure the error was not already reported.
 
-If you're unable to find an open bug addressing the problem, please create a bug report or issue in this repository. You can use the ![Propose-a-change](https://github.com/hl7au/au-fhir-core/assets/116611317/642b45cb-c82e-4fb5-a24c-37b263289fac)
- option at the bottom of each page of the IG to trigger the creation of a GitHub issue.
+If you're unable to find an open bug addressing the problem, please create a bug report or issue in this project. You can use the ![Propose-a-change](https://github.com/hl7au/au-fhir-core/assets/116611317/642b45cb-c82e-4fb5-a24c-37b263289fac)
+ option at the bottom of each page of the IG to trigger the creation of a Jira issue.
 
 ## Contributing to AU Core Development
 
