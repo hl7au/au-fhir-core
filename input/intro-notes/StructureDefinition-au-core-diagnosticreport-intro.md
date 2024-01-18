@@ -34,6 +34,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - When constructing a pathology report see the [AU Base Pathology Report](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medlist.html) profile in AU Base.
 - When constructing a pathology report see the [AU Base Diagnostic Imaging Report](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-imagingreport.html) profile in AU Base.
 
-  <p class="stu-note">Composition, DocumentReference, and DiagnosticReport resources support support the exchange of clinical notes. Specific feedback is sought on resource selection.</p>
+  <p class="request-for-feedback">Composition, DocumentReference, and DiagnosticReport resources support support the exchange of clinical notes. Specific feedback is sought on resource selection.</p>
 
 

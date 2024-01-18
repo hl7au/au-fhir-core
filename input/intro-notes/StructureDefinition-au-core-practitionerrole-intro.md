@@ -19,4 +19,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 ### Profile specific implementation guidance
 - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
 
-<p class="stu-note">Specific feedback is sought on whether the location element should be removed from this profile.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/78">au-fhir-core/issues/78</a>.</p>
+<p class="request-for-feedback">Specific feedback is sought on the proposal to remove the mandatory requirement to support _revinclude of Provenance.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/70">au-fhir-core/issues/70</a>.</p>
+
+<p class="request-for-feedback">Specific feedback is sought on whether the location element should be removed from this profile.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/78">au-fhir-core/issues/78</a>.</p>

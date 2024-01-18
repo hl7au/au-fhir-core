@@ -1,4 +1,4 @@
-<div class="stu-note" markdown="1">
+<div class="request-for-feedback" markdown="1">
 
 #### AU Core R1 Scope 
 We have updated the AU Core current build to reflect the current <a href="https://confluence.hl7.org/display/HAFWG/AU+Core+R1+Scope">AU Core R1 Scope</a>: 
