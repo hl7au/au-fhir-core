@@ -34,7 +34,7 @@
       <coding>
         <system value="http://snomed.info/sct"/>
         <code value="57054005"/>
-        <display value="Acute Myocardial Infarction"/>
+        <display value="Acute myocardial infarction"/>
       </coding>
       <text value="Sudden Heart Attack"/>
     </code>
