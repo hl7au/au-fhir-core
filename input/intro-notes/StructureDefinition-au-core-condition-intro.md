@@ -26,9 +26,9 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - To represent that a patient does not have a condition or history of condition, an appropriate negation code is used in `Condition.code`
 - Refutation is not expected to be handled except as above - an appropriate negation code in `Condition.code` and `Condition.verificationStatus` of "confirmed" or "unconfirmed"
 
-<p class="request-for-feedback">Specific feedback is sought on how to do 'free text' medical history i.e. are these always Condition?<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/65">au-fhir-core/issues/65</a>.</p>
+<p class="request-for-feedback">Specific feedback is sought on how to do 'free text' medical history i.e. are these always Condition?<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43846">FHIR-43846</a>.</p>
 
 <p class="request-for-feedback">Specific feedback is sought on whether the bodySite element should be removed from this profile and AU Core only supports information being sent in Condition.code i.e bodySite is redundant as body site pre-coordinated in Condition.code or qualifies Condition.code as body site is not defined in code.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/64">au-fhir-core/issues/64</a>.</p>
 
-<p class="request-for-feedback">Specific feedback is sought on how a diagnosis type (e.g. Comorbidity, Complication) would be represented in AU Core Condition.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/68">au-fhir-core/issues/68</a>.</p>
+<p class="request-for-feedback">Specific feedback is sought on how a diagnosis type (e.g. Comorbidity, Complication) would be represented in AU Core Condition.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43847">FHIR-43847</a>.</p>
 
