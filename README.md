@@ -2,7 +2,7 @@
 
 [AU Core](http://build.fhir.org/ig/hl7au/au-fhir-core/) is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context. It sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
 
-AU Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information associated with a patient. Applications that conform to AU Core can access the following information about the patient:
+AU Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. Applications that conform to AU Core can access the following information about the patient:
 - Basic patient details
 - Problems / Conditions
 - Medication orders, dispense, administration and usage
@@ -21,14 +21,14 @@ In this regard it is similar in nature to other international FHIR specification
 For a detailed description of these different usages of AU Core, see the [Conformance Requirements](http://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html) and [Must Support](http://build.fhir.org/ig/hl7au/au-fhir-core/must-support.html) pages.
 
 ## Did you find an error?
-Search the Issues list in [Jira issue tracker](https://jira.hl7.org/browse/FHIR-43719?filter=21312) to ensure the error was not already reported.
-
-If you're unable to find an open bug addressing the problem, please create a bug report or issue in this project. You can use the ![Propose-a-change](https://github.com/hl7au/au-fhir-core/assets/116611317/642b45cb-c82e-4fb5-a24c-37b263289fac)
+If it's a specification error please search the issues list in [Jira issue tracker](https://jira.hl7.org/issues/?filter=21312) to ensure the error was not already reported. You can use the ![Propose-a-change](https://github.com/hl7au/au-fhir-core/assets/116611317/642b45cb-c82e-4fb5-a24c-37b263289fac)
  option at the bottom of each page of the IG to trigger the creation of a Jira issue.
+
+If you've found an issue with this repository or it's contents then you please [raise a GitHub issue](https://github.com/hl7au/au-fhir-core/issues/new).
 
 ## Contributing to AU Core Development
 
-AU Core is in currently in development.
+AU Core R1 is in currently in development. Ballot for Comment is scheduled for March 2023.
 
 ### 1. Join the AU Core Technical Design Group
 
@@ -40,7 +40,7 @@ If you have a question, feature request, or proposed change, the best place to s
 
 ### 3. Identify future work or raise discussion points
 
-To identify future work or raise discussion points, you can visit [AU Core Discussions](https://github.com/hl7au/au-fhir-core/discussions) and get started with saying [hi to the community](https://github.com/hl7au/au-fhir-core/discussions/4). 
+To identify future work or raise discussion points, you can post in the Australia stream https://chat.fhir.org/#narrow/stream/179173-australia or raise [specification feedback](https://confluence.hl7.org/display/HL7/Specification+Feedback) through a [Jira issue tracker](https://jira.hl7.org/issues/?filter=21312).
 
 ### 4. Discuss with the team
 
