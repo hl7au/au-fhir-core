@@ -26,6 +26,18 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
+      <condition value="au-core-prarol-02"/>
+      <constraint>
+          <key value="au-core-prarol-02"/>
+          <severity value="warning"/>
+          <human
+              value="HPI-I should be an attribute of Practitioner"/>
+          <expression
+              value="(PractitionerRole.identifier.type.coding.code contains 'NPI').not()"/>
+          <source
+              value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"
+          />
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="PractitionerRole.identifier:medicareProvider">
