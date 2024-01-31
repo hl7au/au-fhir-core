@@ -15,11 +15,6 @@
     <element id="Encounter">
       <path value="Encounter"/>
     </element>
-    <element id="Encounter.extension:encounterDescription">
-      <path value="Encounter.extension"/>
-      <sliceName value="encounterDescription"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier"/>
       <mustSupport value="true"/>
