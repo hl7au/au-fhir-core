@@ -72,7 +72,6 @@
     </element>
     <element id="Encounter.period">
       <path value="Encounter.period"/>
-      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Encounter.reasonCode">
