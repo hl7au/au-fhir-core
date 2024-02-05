@@ -27,4 +27,8 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - an Australian address **SHOULD** be represented using the [Australian Address](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-address.html) data type profile
 - When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/) and [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html)
 
-<p class="request-for-feedback">Specific feedback is sought on proposal to implement support for Gender Harmony Name to Use (NtU) concept in AU Core by making name.use a Must Support element in AU Core Patient.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-43833">Jira issue #FHIR-43833</a>.</p>
+
+### Gender Identity and related concepts
+
+<b>Name to use (NtU)​</b>
+By making `name.use` a Must Support data element, this profile explicitly supports representation and exchange of the Name to Use (NtU) data element (as defined in the [Gender Harmony - Sex and Gender Representation, Edition 1 Implementation Guide from HL7 International](https://hl7.org/xprod/ig/uv/gender-harmony/index.html)). Name to Use is represented using ‘usual’ in `name.use`. It should be noted that, `name.period` is not a Must Support data element in this version of the profile.

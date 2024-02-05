@@ -112,6 +112,10 @@
       </constraint>
       <mustSupport value="true"/>
     </element>
+    <element id="Patient.name.use">
+      <path value="Patient.name.use"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="Patient.telecom">
       <path value="Patient.telecom"/>
       <mustSupport value="true"/>
