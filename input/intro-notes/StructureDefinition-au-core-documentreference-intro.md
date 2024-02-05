@@ -9,9 +9,10 @@ The following are supported usage scenarios for this profile:
 
 ### Comparison with other national and international specifications
 
-A resource conforming to this profile is conformant to:
-- [IPA-DocumentReference](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference)
-- and **MAY** be conformant to [US Core DocumentReference](http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference) if DocumentReference.code is supplied with a value from the US Core DocumentReference Type value set
+A resource conforming to this profile:
+- **MAY** be conformant to:
+  - [IPA-DocumentReference](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference) if author is supplied as a reference to a PractitionerRole or a Patient resource
+  - [US Core DocumentReference](http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference) if DocumentReference.code is supplied with a value from the US Core DocumentReference Type value set
 
 No equivalent International Patient Summary profile.
 

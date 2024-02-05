@@ -684,7 +684,7 @@ Observation.subject.reference and Observation.status is                    <code
             </td>
             <td width="111" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if author is supplied as a reference to a PractitionerRole or a Patient resource
                 </p>
             </td>
             <td width="68" valign="top">
@@ -1108,7 +1108,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
             <td width="111" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if requester is supplied as a reference to Practitioner, PractitionerRole or Patient resource
                 </p>
             </td>
             <td width="68" valign="top">
