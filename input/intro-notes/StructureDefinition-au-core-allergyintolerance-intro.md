@@ -23,6 +23,10 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - Refutation is not expected to be handled except as above - an appropriate negation code in `AllergyIntolerance.code` and `AllergyIntolerance.verificationStatus` of "confirmed" or "unconfirmed"
 - Where only substance is known (e.g. 111088007 \|Latex\|) and not a statement of allergy or intolerance (e.g. 300916003 \|Allergy to latex\|), the substance will be sent in `AllergyIntolerance.code` and optionally in `AllergyIntolerance.reaction.substance`
 
+<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from AllergyIntolerance.type, given that its inclusion in AU Core may be premature considering that some systems do not have the type explicitly entered by the user. The distinction between allergy and intolerance can also be difficult to derive or is subjective. <br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44589">FHIR-44589</a>.</p>
 
+<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from AllergyIntolerance.category. Inclusion of category in AU Core may be premature considering that some systems do not have this data explicitly entered by the user. Deriving the category solely from the item selected by the user may be challenging, potentially leading to classification of allergies related to food, environment, or biologics as non-drug related only. <br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44589">FHIR-44589</a>.</p>
+
+<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from AllergyIntolerance.manifestation.substance, as their inclusion in AU Core may be premature without clear support from existing systems.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44590">FHIR-44590</a>.</p>
 
 

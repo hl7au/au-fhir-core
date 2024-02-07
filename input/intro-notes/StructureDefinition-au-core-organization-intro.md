@@ -23,3 +23,13 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - When constructing an address
   - an international address can be represented using the core [Address](http://hl7.org/fhir/R4/datatypes.html#Address) data type
   - an Australian address **SHOULD** be represented using the [Australian Address](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-address.html) data type profile
+
+<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Organization.alias, as its inclusion in AU Core may be premature without clear support from existing systems.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44585">FHIR-44585</a>.</p>
+
+<p class="request-for-feedback">Specific feedback is sought on supporting search on Organization.address vs Organization.contact.address. The core FHIR search parameter `address` searches in Organization.contact.address. There is no core FHIR search parameter that searches Organization.adress.</p>
+
+<p class="request-for-feedback">Specific feedback is sought on the mandatory search parameter for address, and could it pose challenges in primary care or hospital systems.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43837">FHIR-43837</a>.</p>
+
+<p class="request-for-feedback">Specific feedback is sought on the purpose of searching by ABN in a primary care system, especially when there is likely to be only one ABN.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43837">FHIR-43837</a>.</p>
+
+<p class="request-for-feedback">Specific feedback is sought on the proposal to remove the mandatory requirement to support _revinclude of Provenance.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43837">FHIR-43837</a>.</p>

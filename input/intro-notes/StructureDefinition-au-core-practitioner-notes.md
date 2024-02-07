@@ -26,8 +26,6 @@
  </tbody>
 </table>
 
-<p class="request-for-feedback">Specific feedback is sought on the proposal to remove the mandatory requirement to support _revinclude of Provenance.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-43850">Jira issue #FHIR-43850</a>.</p>
-
 #### Mandatory Search Parameters
 
 The following search parameters **SHALL** be supported:
