@@ -46,11 +46,6 @@
   </tr>
  </tbody>
 </table>
-<p class="request-for-feedback">Specific feedback is sought on supporting search for practitioner by reference vs chained searching using practitioner.identifier.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/80">au-fhir-core/issues/80</a>.</p>
-<p class="request-for-feedback">Specific feedback is sought on supporting search for organization by reference vs chained searching using organization.identifier.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/80">au-fhir-core/issues/80</a></p>
-<p class="request-for-feedback">Specific feedback is sought on proposal to remove support for searching using HPI-I identifier, as it is not supported by AU Core PractitionerRole.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/80">au-fhir-core/issues/80</a></p>
-<p class="request-for-feedback">Specific feedback is sought on the use of code-only in an identifier search parameter, along with a recommendation to explicitly specify a single type of identifier (or an explicit list) for greater quality.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/80">au-fhir-core/issues/80</a></p>
-<p class="request-for-feedback">Specific feedback is sought on the proposal to remove the mandatory requirement to support _revinclude of Provenance.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/70">au-fhir-core/issues/70</a>.</p>
 
 #### Mandatory Search Parameters
 
