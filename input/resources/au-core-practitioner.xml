@@ -16,6 +16,16 @@
       <path value="Practitioner"/>
       <short value="A person with a formal responsibility in the provisioning of services"/>
     </element>
+    <element id="Practitioner.extension:genderIdentity">
+      <path value="Practitioner.extension" />
+      <sliceName value="genderIdentity" />
+      <mustSupport value="true"/>
+    </element>
+    <element id="Practitioner.extension:individualPronouns">
+      <path value="Practitioner.extension"/>
+      <sliceName value="individualPronouns"/>
+        <mustSupport value="true"/>
+    </element>
     <element id="Practitioner.identifier">
       <path value="Practitioner.identifier"/>
       <definition value="An identifier that applies to this person in this role."/>
