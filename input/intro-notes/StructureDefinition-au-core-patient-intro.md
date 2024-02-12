@@ -21,7 +21,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 ### Gender Identity and related concepts
 <b>Name to Use (NtU)​</b>
 
-By making `name.use` a Must Support data element, this profile explicitly supports representation and exchange of the Name to Use (NtU) data element (as defined in the [Gender Harmony - Sex and Gender Representation, Edition 1 Implementation Guide from HL7 International](https://hl7.org/xprod/ig/uv/gender-harmony/index.html)). Name to use is represented using ‘usual’ in `name.use`. It should be noted that, `name.period` is not a Must Support data element in this version of the profile.
+By making `name.use` a Must Support data element, this profile explicitly supports representation and exchange of the Name to Use data element (as defined in the [Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/index.html)). Name to Use is represented using ‘usual’ in `name.use`. It should be noted that, `name.period` is not a Must Support data element in this version of the profile.
 
 ### Profile specific implementation guidance
 - An individual's IHI **SHOULD** be used in `Patient.identifier` if available, in preference to Medicare or DVA numbers
