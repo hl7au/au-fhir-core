@@ -12,6 +12,29 @@
             <display value="Neither Aboriginal nor Torres Strait Islander origin"/>
         </valueCoding>
     </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+        <extension url="value">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="248152002"/>
+                </coding>
+                <text value="Female"/>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="type">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="1515311000168102"/>
+                </coding>
+                <text value="Sex at Birth"/>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="acquisitionDate">
+            <valueDateTime value="2021-06-06"/>
+        </extension>
+    </extension>
     <identifier>
         <type>
             <coding>

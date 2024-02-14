@@ -50,6 +50,16 @@
       <sliceName value="interpreterRequired"/>
       <mustSupport value="true"/>
     </element>
+    <element id="Patient.extension:recordedSexOrGender/sab">
+      <path value="Patient.extension"/>
+      <sliceName value="recordedSexOrGender/sab"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sab"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier"/>
       <slicing>

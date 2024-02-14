@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-core-rsg-sab"/>
+  <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sab"/>
+  <name value="AU CoreSexAssignedAtBirth(RSG)"/>
+  <title value="AU Core Sex Assigned At Birth (RSG)"/>
+  <status value="draft"/>
+  <description value="This profile defines the minimum expectations for a Recorded Sex or Gender extension when representing Sex Assigned at Birth." />
+  <kind value="comp;ex-type"/>
+  <abstract value="false"/>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Sex Assigned at Birth"/>
+    </element>
+    <element id="Extension.extension:value">
+      <path value="Extension.extension"/>
+      <sliceName value="value"/>
+      <min value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Extension.extension:value.value[x]">
+      <path value="Extension.extension.value[x]"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1"/>
+      </binding>
+    </element>
+    <element id="Extension.extension:type">
+      <path value="Extension.extension"/>
+      <sliceName value="type"/>
+      <short value="Type of recorded sex or gender."/>
+      <definition value="The type or category of sex or gender that is recorded."/>
+      <comment value="Because the recorded sex or gender concept exists primarily as means to exchange sex and gender data concepts that are known NOT to represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, the type is used to identify what type of concept the recorded sex or gender concept is."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Extension.extension:type.value[x]">
+      <path value="Extension.extension.value[x]"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="1515311000168102"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Extension.extension:acquisitionDate">
+      <path value="Extension.extension"/>
+      <sliceName value="acquisitionDate"/>
+      <short value="When the sex or gender value was recorded."/>
+      <definition value="The date/time when the sex or gender value was first recorded in the system."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    </differential>
+</StructureDefinition>
