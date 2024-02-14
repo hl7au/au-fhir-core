@@ -6,7 +6,7 @@
   <title value="AU Core Sex Assigned At Birth (RSG)"/>
   <status value="draft"/>
   <description value="This profile defines the minimum expectations for a Recorded Sex or Gender extension when representing Sex Assigned at Birth." />
-  <kind value="comp;ex-type"/>
+  <kind value="complex-type"/>
   <abstract value="false"/>
   <type value="Extension"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"/>
