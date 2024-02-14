@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-core-rsg-sab"/>
   <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sab"/>
-  <name value="AU CoreSexAssignedAtBirth(RSG)"/>
+  <name value="AUCoreSexAssignedAtBirth(RSG)"/>
   <title value="AU Core Sex Assigned At Birth (RSG)"/>
   <status value="draft"/>
   <description value="This profile defines the minimum expectations for a Recorded Sex or Gender extension when representing Sex Assigned at Birth." />

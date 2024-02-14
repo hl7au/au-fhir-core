@@ -73,6 +73,12 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/au-core-rsg-sab"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-core-allergyintolerance"/>
 			</reference>
 			<exampleBoolean value="false"/>
