@@ -1,7 +1,7 @@
 
-This page lists all ValueSets and CodeSystems defined as part of this specification. 
+This page lists all ValueSets and CodeSystems supported as part of AU Core. 
 
-As well as these included definitions this specification typically references [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html) and [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/integration/R4/fhir) terminology resources. 
+As well as terminology defined in AU Core or FHIR, this specification supports terminology defined in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html) or [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/integration/R4/fhir) terminology resources. 
 
 ### Value Sets
 
@@ -16,6 +16,10 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 
 <!-- ================================================ -->
 
+**Value sets published in AU Base**
+- []()
+- []()
+
 **Value sets published in the NCTS**
 - [Biological Sex](https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1)
 - [Metric Body Length Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-length-units-1)
@@ -23,7 +27,16 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 - [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1)
 - [ObservationStatus Result Available](https://healthterminologies.gov.au/fhir/ValueSet/observationstatus-result-available-1)
 - [Smoking Status](https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1)
+- [Indicator of Hypersensitivity or Intolerance to Substance](https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2)
+- [Adverse Reaction Agent](https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1)
+- [Clinical Finding](https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1)
 
+**Value sets published in FHIR**
+- [AllergyIntoleranceClinicalStatusCodes](https://hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html)
+- [AllergyIntoleranceVerificationStatusCodes](http://hl7.org/fhir/R4/valueset-allergyintolerance-verification.html)
+- [AllergyIntoleranceCategory](http://hl7.org/fhir/R4/valueset-allergy-intolerance-category.html)
+- [AllergyIntoleranceCategory](http://hl7.org/fhir/R4/valueset-allergy-intolerance-category.html)
+- [AllergyIntoleranceSeverity](http://hl7.org/fhir/R4/valueset-reaction-event-severity.html)
 
 ### Code systems
 
