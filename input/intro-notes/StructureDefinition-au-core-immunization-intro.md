@@ -19,9 +19,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 ### Profile specific implementation guidance
 - Use the status code: `not-done` to represent that an immunization was *not* given.
 
-
-<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Immunization.extension(vaccine-serial-number). The element is relevant in registry reporting, especially for COVID vaccines but does not form part of the minimum requirements across use cases in the ecosystem. For example, this element is not used in the immunisation certificate use case in Australia. <br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44655">FHIR-44655</a>.</p>
-
 <p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Immunization.identifier. The use cases and needs for are not clear yet; it is possibly an internal business identifier but it should not form part of the minimum requirements across use cases in the ecosystem.
 For example this element is not used in the immunisation certificate use case in Australia or immunisation history.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44657">FHIR-44657</a>.</p>
 
