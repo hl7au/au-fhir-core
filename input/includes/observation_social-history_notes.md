@@ -12,7 +12,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     Example:
     
-      1. GET [base]/Observation?patient=5678
+      1. GET [base]/Observation?patient=5678&amp;_revinclude=Provenance:target
       1. GET [base]/Observation?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952
       1. GET [base]/Observation?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361 
 
@@ -27,7 +27,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     Example:
     
       1. GET [base]/Observation?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|social-history
-      1. GET [base]/Observation?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|social-history&amp;_revinclude=Provenance:target
+      1. GET [base]/Observation?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|social-history
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and category ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
