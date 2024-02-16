@@ -48,7 +48,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     Example:
     
-      1. GET [base]/AllergyIntolerance?patient=5678
+      1. GET [base]/AllergyIntolerance?patient=5678_revinclude=Provenance:target
       1. GET [base]/AllergyIntolerance?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952
       1. GET [base]/AllergyIntolerance?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361 
 
@@ -59,7 +59,6 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/allergyintolerance.html#search)** and **[`clinical-status`](https://hl7.org/fhir/R4/allergyintolerance.html#search)** search parameters:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
 
@@ -68,6 +67,5 @@ The following search parameters and search parameter combinations **SHOULD** be 
     Example:
     
       1. GET [base]/AllergyIntolerance?patient=5678&amp;clinical-status=http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|active
-      1. GET [base]/AllergyIntolerance?patient=5678&amp;clinical-status=http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|active&amp;_revinclude=Provenance:target
 
     *Implementation Notes:* Fetches a bundle of all AllergyIntolerance resources for the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
