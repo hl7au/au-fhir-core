@@ -120,7 +120,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     Example:
     
       1. GET [base]/HealthcareService?specialty=http://snomed.info/sct\|394579002
-      1. GET [base]/HealthcareService?specialty=http://snomed.info/sct\|394579002&amp;_revinclude=Provenance:target
+      1. GET [base]/HealthcareService?specialty=http://snomed.info/sct\|394579002
 
     *Implementation Notes:* Fetches a bundle of all HealthcareService resources for the specified specialty ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 

@@ -121,7 +121,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     Example:
     
-      1. GET [base]/DiagnosticReport?patient=5678
+      1. GET [base]/DiagnosticReport?patient=5678_revinclude=Provenance:target
       1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952
       1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361 
 

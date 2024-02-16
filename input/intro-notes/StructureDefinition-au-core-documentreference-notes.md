@@ -118,7 +118,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     Example:
     
-      1. GET [base]/DocumentReference/2169591
+      1. GET [base]/DocumentReference/2169591_revinclude=Provenance:target
       1. GET [base]/DocumentReference?_id=2169591
 
     *Implementation Notes:* Fetches a single DocumentReference. The document itself is represented as a base64 encoded binary data element or retrieved using the link provided by the resource. If the document is a relative link to a [Binary] resource like a resource reference, it can be subsequently retrieved using: `GET [base]/Binary/[id]`. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
