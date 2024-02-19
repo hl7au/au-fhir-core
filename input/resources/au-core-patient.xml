@@ -50,13 +50,13 @@
       <sliceName value="interpreterRequired"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Patient.extension:recordedSexOrGender/sab">
+    <element id="Patient.extension:recordedSexOrGender/sexAssignedAB">
       <path value="Patient.extension"/>
-      <sliceName value="recordedSexOrGender/sab"/>
+      <sliceName value="recordedSexOrGender/sexAssignedAB"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sab"/>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sexassignedab"/>
       </type>
       <mustSupport value="true"/>
     </element>
