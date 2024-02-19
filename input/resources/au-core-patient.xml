@@ -53,7 +53,6 @@
     <element id="Patient.extension:recordedSexOrGender/sexAssignedAB">
       <path value="Patient.extension"/>
       <sliceName value="recordedSexOrGender/sexAssignedAB"/>
-      <max value="1"/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sexassignedab"/>
