@@ -28,7 +28,9 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 <p class="request-for-feedback">Specific feedback is sought on how to do 'free text' medical history i.e. are these always Condition?<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43846">FHIR-43846</a>.</p>
 
-<p class="request-for-feedback">Specific feedback is sought on whether the bodySite element should be removed from this profile and AU Core only supports information being sent in Condition.code i.e bodySite is redundant as body site pre-coordinated in Condition.code or qualifies Condition.code as body site is not defined in code.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/64">au-fhir-core/issues/64</a>.</p>
+<p class="request-for-feedback">Specific feedback is sought on whether the bodySite element should be removed from this profile and AU Core only supports information being sent in Condition.code i.e bodySite is redundant as body site pre-coordinated in Condition.code or qualifies Condition.code as body site is not defined in code.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-44712">FHIR-44712</a>.</p>
 
 <p class="request-for-feedback">Specific feedback is sought on how a diagnosis type (e.g. Comorbidity, Complication) would be represented in AU Core Condition.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43847">FHIR-43847</a>.</p>
+
+<p class="request-for-feedback">Specific feedback is sought on the need for a more specific value set for Condition.code in AU Core Condition.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43849">FHIR-43849</a>.</p>
 

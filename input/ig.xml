@@ -621,22 +621,6 @@
 		<!--IMMUNIZATION EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="Immunization/air-covid-1"/>
-			</reference>
-			<name value="Immunization - Australian Immunisaton Register Record of COVID Dose 1"/>
-			<description value="Australian Immunisaton Register Record for Mrs. Anne Bennelong - COVID Dose 1"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Immunization/air-covid-2"/>
-			</reference>
-			<name value="Immunization - Australian Immunisation Register Record of COVID Dose 2"/>
-			<description value="Australian Immunisation Register Record for Mrs. Anne Bennelong - COVID Dose 1"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Immunization/covid-1"/>
 			</reference>
 			<name value="Immunization - COVID Dose 1"/>
