@@ -1,7 +1,9 @@
 
 ### Downloadable copy of entire specification
 
-A downloadable version of the entire implementation guide is available so it can be hosted locally. To start exploring the guide, extract the files and open the index.html file in a web browser. This will provide access to the table of contents, introduction, and navigation links to different sections of the implementation guide.
+A downloadable version of the entire implementation guide as a website is available so it can be hosted locally.
+
+It is not recommended to view locally without hosting, but you can extract the files and open the index.html file in a web browser. This will provide access to the table of contents, introduction, and navigation links to different sections of the implementation guide.
 
 - [Downloadable Copy](full-ig.zip)
 
