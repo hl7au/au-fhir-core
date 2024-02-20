@@ -23,6 +23,8 @@ In this regard it is similar in nature to other international FHIR specification
 
 For a detailed description of these different usages of AU Core, see the [Conformance Requirements](general-requirements.html) and [Must Support](must-support.html) pages.
 
+### Project background
+
 ### Dependencies
 
 {% include dependency-table.xhtml %}
@@ -72,8 +74,11 @@ This guide is divided into several pages which are listed at the top of each pag
   - [General Requirements](general-requirements.html): This page defines requirements common to all actors and profiles used in this guide including how CapabilityStatements are used to claim conformance.
   - [Must Support](must-support.html): This page defines the expectations for mandatory and must support elements in AU Core Profiles.
 - [Guidance](guidance.html): This set of pages lists the guidance for this guide.
-  - [General Guidance](general-guidance.html):  This page provides guidance on using the profiles defined in this guide.
+  - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide.
+  - [AUCDI in AU Core R1](aucdi.html): 
+  - [Relationship with other AU standards](relationship.html): 
   - [Comparison with other national and international specifications](comparison.html): This page provides comparison between AU Core profiles and other national, or international implementation guides.
+  - [Future of AU Core](future.html): 
 - [FHIR Artefacts](artifacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This set of pages describes the profiles and extensions that are defined in this guide to exchange quality data. Each profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.
   - [Search Parameters](search-parameters.html): This set of pages lists the search parameters extended for use in this guide for use in AU Core operations.

@@ -1543,10 +1543,25 @@
 					<generation value="markdown"/>
 				</page>
 				<page>
+					<nameUrl value="aucdi.html"/>
+					<title value="AUCDI"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="relationship.html"/>
+					<title value="Relationship with other AU standards"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
 					<nameUrl value="comparison.html"/>
 					<title value="Comparison with other national and international specifications"/>
 					<generation value="markdown"/>
 				</page>
+				<page>
+					<nameUrl value="future.html"/>
+					<title value="Future of AU Core"/>
+					<generation value="markdown"/>
+				</page>				
 			</page>
 			<page>
 				<nameUrl value="profiles-and-extensions.html"/>
