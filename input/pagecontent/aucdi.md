@@ -2,7 +2,7 @@
 
 TBD
 
-#### AUCDI mappings into AU Core
+AUCDI mappings into AU Core
 
 <table border=1>
 <thead>
