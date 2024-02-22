@@ -108,7 +108,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Must Support](must-support.html): This page defines the expectations for mandatory and must support elements in AU Core Profiles.
 - [Guidance](guidance.html): This set of pages lists the guidance for this guide.
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide.
-  - [AUCDI](aucdi.html): This is a placeholder for when content becomes available.
+  - [AUCDI](aucdi.html): This page maps the AU Core resources and elements to AUCDI data classes and data elements.
   - [Relationship with other HL7 AU FHIR IGs](relationship.html): This is a placeholder for when content becomes available.
   - [Comparison with other national and international specifications](comparison.html): This page provides comparison between AU Core profiles and other national, or international implementation guides.
   - [Future of AU Core](future.html): This is a placeholder for when content becomes available.
