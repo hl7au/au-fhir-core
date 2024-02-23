@@ -19,11 +19,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 ### Profile specific implementation guidance
 - Use the status code: `not-done` to represent that an immunization was *not* given.
 
-<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Immunization.identifier. The use cases and needs for are not clear yet; it is possibly an internal business identifier but it should not form part of the minimum requirements across use cases in the ecosystem.
-For example this element is not used in the immunisation certificate use case in Australia or immunisation history.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44657">FHIR-44657</a>.</p>
-
-<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Immunization.statusReason. This element is use case specific and does not form part of the minimum requirements across use cases in the ecosystem. For example this element is not used in the immunization certificate use case in Australia or immunization history.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44658">FHIR-44658</a>.</p>
-
 <p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Immunization.performer and its children. The performer is likely to only be known when it is being reported as part of the administration but it may not be relevant for other use cases.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44653">FHIR-44653</a>.</p>
 
 <p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Immunization.note. The notes for a vaccine may be taken as part of the administration but it may not be relevant for other use cases. <br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44672">FHIR-44672</a>.</p>
