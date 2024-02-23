@@ -32,13 +32,6 @@
             <display value="Nail wound of sole of foot"/>
         </coding>
     </code>
-    <bodySite>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="57999000"/>
-            <display value="Structure of sole of foot"/>
-        </coding>
-    </bodySite>
     <subject>
         <reference value="Patient/wang-li"/>
     </subject>

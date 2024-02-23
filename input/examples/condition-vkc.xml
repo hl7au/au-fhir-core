@@ -32,13 +32,6 @@
       <display value="Vernal keratoconjunctivitis"/>
     </coding>
   </code>
-  <bodySite>
-     <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="368601006"/>
-      <display value="Entire conjunctiva of left eye"/>
-    </coding> 
-  </bodySite>
   <subject>
     <reference value="Patient/italia-sofia"/>
   </subject>
