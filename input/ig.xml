@@ -1287,6 +1287,14 @@
 			<description value="Naso swab specimen for COVID test&#xa;&#xa;Patient: Mr Li Wang"/>
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="DocumentReference/acp"/>
+			</reference>
+			<name value="DocumentReference - Advance Care Plan, referenced by Provenance/signature example"/>
+			<description value="Mr. Li Wang's Advance Care Plan&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+		</resource>
 		<!--PAGES-->
 		<page>
 			<nameUrl value="toc.html"/>
