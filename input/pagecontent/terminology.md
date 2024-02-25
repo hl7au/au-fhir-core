@@ -17,6 +17,12 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 <!-- ================================================ -->
 
 **Value sets published in AU Base**
+- [ActEncounterCode - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ActEncounterCode-extended.html)
+- [hl7VS-providerRole - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v2-0443-extended.html)
+- []()
+- []()
+- []()
+- []()
 - []()
 - []()
 
@@ -30,6 +36,12 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 - [Indicator of Hypersensitivity or Intolerance to Substance](https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2)
 - [Adverse Reaction Agent](https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1)
 - [Clinical Finding](https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1)
+- [Clinical Condition](https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1)
+- [Body Site](https://healthterminologies.gov.au/fhir/ValueSet/body-site-1)
+- [Separation Mode](https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1)
+- []()
+- []()
+- []()
 
 **Value sets published in FHIR**
 - [AllergyIntoleranceClinicalStatusCodes](https://hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html)
@@ -37,6 +49,19 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 - [AllergyIntoleranceCategory](http://hl7.org/fhir/R4/valueset-allergy-intolerance-category.html)
 - [AllergyIntoleranceCategory](http://hl7.org/fhir/R4/valueset-allergy-intolerance-category.html)
 - [AllergyIntoleranceSeverity](http://hl7.org/fhir/R4/valueset-reaction-event-severity.html)
+- [ConditionClinicalStatusCodes](https://hl7.org/fhir/R4/valueset-condition-clinical.html)
+- [ConditionVerificationStatus](https://hl7.org/fhir/R4/valueset-condition-ver-status.html)
+- [ConditionCategoryCodes](https://hl7.org/fhir/R4/valueset-condition-category.html)
+- [Condition/Diagnosis Severity](https://hl7.org/fhir/R4/valueset-condition-severity.html)
+- [EncounterStatus](https://hl7.org/fhir/R4/valueset-encounter-status.html)
+- [Participant type](https://hl7.org/fhir/R4/valueset-encounter-participant-type.html)
+- [Immunization Status Codes](https://hl7.org/fhir/R4/valueset-immunization-status.html)
+- []()
+- []()
+- []()
+- []()
+- []()
+
 
 ### Code systems
 
