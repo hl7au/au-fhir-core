@@ -99,52 +99,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
             <td width="93" valign="top">
                 <p>
                     <a
-                        href="StructureDefinition-au-core-sexassignedatbirth.html"
-                    >
-                        AU Core Biological Sex Assigned at Birth
-                    </a>
-                </p>
-            </td>
-            <td width="81" valign="top">
-                <p>
-                    <a
-                        href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
-                    >
-                        IPA-Observation
-                    </a>
-                </p>
-            </td>
-            <td width="111" valign="top">
-                <p align="center">
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-            <td width="68" valign="top">
-            </td>
-            <td width="130" valign="top">
-                <p>
-                    <strong></strong>
-                </p>
-            </td>
-            <td width="78" valign="top">
-                <p>
-                    <a
-                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
-                    >
-                        US Core Simple Observation
-                    </a>
-                </p>
-            </td>
-            <td width="137" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="93" valign="top">
-                <p>
-                    <a
                         href="StructureDefinition-au-core-bloodpressure.html"
                     >
                         AU Core Blood Pressure
@@ -183,57 +137,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
                         href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
                     >
                         US Core Blood Pressure
-                    </a>
-                </p>
-            </td>
-            <td width="137" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="93" valign="top">
-                <p>
-                    <a
-                        href="StructureDefinition-au-core-bmi.html"
-                    >
-                        AU Core BMI
-                    </a>
-                </p>
-            </td>
-            <td width="81" valign="top">
-                <p>
-                    <a
-                        href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
-                    >
-                        IPA-Observation
-                    </a>
-                </p>
-            </td>
-            <td width="111" valign="top">
-                <p align="center">
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-            <td width="68" valign="top">
-                <p>
-                    <a href="http://hl7.org/fhir/R4/observation-bmi.html">
-                        observation-bmi
-                    </a>
-                </p>
-            </td>
-            <td width="130" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-            <td width="78" valign="top">
-                <p>
-                    <a
-                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi"
-                    >
-                        US Core BMI
                     </a>
                 </p>
             </td>
@@ -488,63 +391,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
             <td width="93" valign="top">
                 <p>
                     <a
-                        href="StructureDefinition-au-core-diagnosticresult-imag.html"
-                    >
-                        AU Core Diagnostic Imaging Result Observation
-                    </a>
-                </p>
-            </td>
-            <td width="81" valign="top">
-                <p>
-                    <a
-                        href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
-                    >
-                        IPA-Observation
-                    </a>
-                </p>
-            </td>
-            <td width="111" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-            <td width="68" valign="top">
-                <p>
-                    <a
-                        href="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"
-                    >
-                        Observation Results: radiology (IPS)
-                    </a>
-                </p>
-            </td>
-            <td width="130" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
-Observation.subject.reference, Observation.status is                    <code>final</code>, and Observation.performer is supplied,
-                    noting that IPS extensibly binds Observation.code to LOINC
-                </p>
-            </td>
-            <td width="78" valign="top">
-                <p>
-                    <a
-                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-                    >
-                        US Core Observation Clinical Result
-                    </a>
-                </p>
-            </td>
-            <td width="137" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> noting that US Core extensibly binds Observation.code
-                    to LOINC and restricts Observation.quantity[x] to UCUM for
-                    coded quantity units
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="93" valign="top">
-                <p>
-                    <a
                         href="StructureDefinition-au-core-diagnosticresult.html"
                     >
                         AU Core Diagnostic Result Observation
@@ -594,116 +440,6 @@ Observation.subject.reference and Observation.status is                    <code
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> noting that US Core extensibly binds Observation.code
                     to LOINC and restricts Observation.quantity[x] to UCUM for
                     coded quantity units
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="93" rowspan="2" valign="top">
-                <p>
-                    <a
-                        href="StructureDefinition-au-core-diagnosticreport.html"
-                    >
-                        AU Core DiagnosticReport
-                    </a>
-                </p>
-            </td>
-            <td width="81" rowspan="2" valign="top">
-            </td>
-            <td width="111" rowspan="2" valign="top">
-            </td>
-            <td width="68" rowspan="2" valign="top">
-                <p>
-                    <a
-                        href="http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
-                    >
-                        DiagnosticReport (IPS)
-                    </a>
-                </p>
-            </td>
-            <td width="130" rowspan="2" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if patient is supported as
-                    DiagnosticReport.subject.reference and
-                    DiagnosticReport.status is <code>final</code>
-                </p>
-            </td>
-            <td width="78" valign="top">
-                <p>
-                    <a
-                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
-                    >
-                        US Core DiagnosticReport Profile for Report and Note
-                        Exchange
-                    </a>
-                </p>
-            </td>
-            <td width="137" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> noting that US Core extensibly binds Observation.code
-                    to a subset of LOINC
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="78" valign="top">
-                <p>
-                    <a
-                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
-                    >
-                        US Core DiagnosticReport Profile for Laboratory Results
-                        Reporting
-                    </a>
-                </p>
-            </td>
-            <td width="137" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if Observation.category is <code>LAB</code>, noting
-                    that US Core extensibly binds Observation.code to a subset
-                    of LOINC
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="93" valign="top">
-                <p>
-                    <a
-                        href="StructureDefinition-au-core-documentreference.html"
-                    >
-                        AU Core DocumentReference
-                    </a>
-                </p>
-            </td>
-            <td width="81" valign="top">
-                <p>
-                    <a
-                        href="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference"
-                    >
-                        IPA-DocumentReference
-                    </a>
-                </p>
-            </td>
-            <td width="111" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if author is supplied as a reference to a PractitionerRole or a Patient resource
-                </p>
-            </td>
-            <td width="68" valign="top">
-            </td>
-            <td width="130" valign="top">
-            </td>
-            <td width="78" valign="top">
-                <p>
-                    <a
-                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
-                    >
-                        US Core DocumentReference
-                    </a>
-                </p>
-            </td>
-            <td width="137" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if DocumentReference.code is supplied with a value
-                    from the US Core DocumentReference Type value set
                 </p>
             </td>
         </tr>
@@ -791,29 +527,6 @@ Observation.subject.reference and Observation.status is                    <code
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="93" valign="top">
-                <p>
-                    <a
-                        href="StructureDefinition-au-core-healthcareservice.html"
-                    >
-                        AU Core HealthcareService
-                    </a>
-                </p>
-            </td>
-            <td width="81" valign="top">
-            </td>
-            <td width="111" valign="top">
-            </td>
-            <td width="68" valign="top">
-            </td>
-            <td width="130" valign="top">
-            </td>
-            <td width="78" valign="top">
-            </td>
-            <td width="137" valign="top">
             </td>
         </tr>
         <tr>
@@ -1189,49 +902,6 @@ Observation.subject.reference, Observation.status is                    <code>fi
             <td width="93" valign="top">
                 <p>
                     <a
-                        href="StructureDefinition-au-core-observation.html"
-                    >
-                        AU Core Observation
-                    </a>
-                </p>
-            </td>
-            <td width="81" valign="top">
-                <p>
-                    <a
-                        href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
-                    >
-                        IPA-Observation
-                    </a>
-                </p>
-            </td>
-            <td width="111" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-            <td width="68" valign="top">
-            </td>
-            <td width="130" valign="top">
-            </td>
-            <td width="78" valign="top">
-                <p>
-                    <a
-                        href="https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-simple-observation.html"
-                    >
-                        US Core Simple Observation
-                    </a>
-                </p>            
-            </td>
-            <td width="137" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="93" valign="top">
-                <p>
-                    <a
                         href="StructureDefinition-au-core-organization.html"
                     >
                         AU Core Organization
@@ -1269,55 +939,6 @@ Observation.subject.reference, Observation.status is                    <code>fi
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if Organization.active is supplied
                 </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="93" valign="top">
-                <p>
-                    <a
-                        href="StructureDefinition-au-core-oxygensat.html"
-                    >
-                        AU Core Oxygen Saturation
-                    </a>
-                </p>
-            </td>
-            <td width="81" valign="top">
-                <p>
-                    <a
-                        href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
-                    >
-                        IPA-Observation
-                    </a>
-                </p>
-            </td>
-            <td width="111" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-            <td width="68" valign="top">
-                <p>
-                    <a href="http://hl7.org/fhir/R4/observation-oxygensat.html">
-                        observation-oxygensat
-                    </a>
-                </p>
-            </td>
-            <td width="130" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-            <td width="78" valign="top">
-                <p>
-                    <a href="https://hl7.org/fhir/us/core/StructureDefinition-us-core-pulse-oximetry.html">
-                        US Core Pulse Oximetry
-                    </a>
-                </p>
-            </td>
-            <td width="137" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if additional LOINC coding is supplied in Observation.code
-                </p>            
             </td>
         </tr>
         <tr>
@@ -1687,39 +1308,6 @@ Observation.subject.reference, Observation.status is                    <code>fi
             <td width="93" valign="top">
                 <p>
                     <a
-                        href="StructureDefinition-au-core-servicerequest.html"
-                    >
-                        AU Core ServiceRequest
-                    </a>
-                </p>
-            </td>
-            <td width="81" valign="top">
-            </td>
-            <td width="111" valign="top">
-            </td>
-            <td width="68" valign="top">
-            </td>
-            <td width="130" valign="top">
-            </td>
-            <td width="78" valign="top">
-                <p>
-                    <a
-                        href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
-                    >
-                        US Core ServiceRequest
-                    </a>
-                </p>
-            </td>
-            <td width="137" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="93" valign="top">
-                <p>
-                    <a
                         href="StructureDefinition-au-core-smokingstatus.html"
                     >
                         AU Core Smoking Status
@@ -1769,47 +1357,6 @@ Observation.subject.reference, Observation.status is                    <code>fi
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="93" valign="top">
-                <p>
-                    <a
-                        href="StructureDefinition-au-core-vitalspanel.html"
-                    >
-                        AU Core Vitals Panel
-                    </a>
-                </p>
-            </td>
-            <td width="81" valign="top">
-                <p>
-                    <a
-                        href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
-                    >
-                        IPA-Observation
-                    </a>
-                </p>
-            </td>
-            <td width="111" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-            <td width="68" valign="top">
-                <p>
-                    <a href="http://hl7.org/fhir/R4/vitalspanel.html">
-                        observation-vitalspanel
-                    </a>
-                </p>
-            </td>
-            <td width="130" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-            <td width="78" valign="top">
-            </td>
-            <td width="137" valign="top">
             </td>
         </tr>
         <tr>

@@ -17,7 +17,6 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 <!-- ================================================ -->
 
 **Value sets published in the NCTS**
-- [Biological Sex](https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1)
 - [Metric Body Length Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-length-units-1)
 - [Metric Body Temperature Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-temperature-units-1)
 - [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1)
