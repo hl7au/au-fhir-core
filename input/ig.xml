@@ -59,13 +59,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="SearchParameter/au-core-coverage-patient"/>
-			</reference>
-			<name value="AUCoreCoveragePatient"/>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="SearchParameter/au-core-practitionerrole-practitioner"/>
 			</reference>
 			<name value="AUCorePractitionerRolePractitioner"/>
@@ -92,12 +85,6 @@
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-immunization"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="StructureDefinition/au-core-lipid-result"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
@@ -215,13 +202,6 @@
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-smokingstatus"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<!--TERMINOLOGY-->
-		<resource>
-			<reference>
-				<reference value="ValueSet/lipid-result-reporting"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
@@ -869,7 +849,7 @@
 			</reference>
 			<name value="Observation - Cholesterol"/>
 			<description value="Cholesterol results&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
 			<reference>
@@ -877,7 +857,7 @@
 			</reference>
 			<name value="Observation - HDL"/>
 			<description value="HDL result&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
 			<reference>
@@ -885,7 +865,7 @@
 			</reference>
 			<name value="Observation - LDL"/>
 			<description value="LDL result&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
 			<reference>
@@ -893,7 +873,7 @@
 			</reference>
 			<name value="Observation - Non HDL Cholesterol"/>
 			<description value="Non HDL Cholesterol result&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
 			<reference>
@@ -901,7 +881,7 @@
 			</reference>
 			<name value="Observation - Total Cholesterol/HDL ratio"/>
 			<description value="Total Cholesterol/HDL ratio result&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
 			<reference>
@@ -909,7 +889,7 @@
 			</reference>
 			<name value="Observation - Triglyceride"/>
 			<description value="Triglyceride result&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
 			<reference>
@@ -1260,23 +1240,6 @@
 			<name value="Provenance - Signature for advance care plan"/>
 			<description value="Provenance of verification with signature for advance care plan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-provenance"/>
-		</resource>
-		<!--RELATEDPERSON EXAMPLES-->
-		<resource>
-			<reference>
-				<reference value="RelatedPerson/smith-emma-john"/>
-			</reference>
-			<name value="RelatedPerson - Mother of John Smith"/>
-			<description value="RelatedPerson: Ms. Emma SMITH&#xa;&#xa;Relationship to Patient: Mother of John Smith"/>
-			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="RelatedPerson/rabbit-peter"/>
-			</reference>
-			<name value="RelatedPerson - Friend of Mr Li Wang"/>
-			<description value="RelatedPerson: Mr. Peter Rabbit&#xa;&#xa;Relationship to Patient: Emergency Contact and Unrelated Friend of Mr Li Wang"/>
-			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
 		</resource>
 		<!--SPECIMEN EXAMPLES-->
 		<resource>

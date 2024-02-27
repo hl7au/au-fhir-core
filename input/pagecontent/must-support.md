@@ -138,14 +138,10 @@ The table below lists the applicable profiles and supported identifier types in 
 
 AU Core Profile |Must Support Choice Elements| Supported Identifiers
 ---|---|---
-AU Core Coverage|Coverage.identifier|Medicare Card Number, DVA Number, Insurance Member Number
-AU Core System Device|Device.identifier|PAI-D
-AU Core HealthcareService|HealthcareService.identifier|HPI-O
 AU Core Organization|Organization.identifier|HPI-O, Australian Business Number
 AU Core Patient|Patient.identifier|IHI, Medicare Card Number, DVA Number
 AU Core Practitioner|Practitioner.identifier|HPI-I
 AU Core PractitionerRole|PractitionerRole.identifier|HPI-I, Medicare Provider Number
-AU Core RelatedPerson|RelatedPerson.identifier|IHI, Medicare Card Number, DVA Number
 {:.grid}
 
 #### Must Support where there is a choice between an element of type CodeableConcept and type Reference
@@ -162,12 +158,9 @@ The table below lists the applicable profiles and elements in AU Core.
 
 AU Core Profile |Must Support Choice Elements
 ---|---
-AU Core DiagnosticReport|DiagnosticReport.conclusion, DiagnosticReport.conclusionCode
 AU Core Encounter|Encounter.reasonCode, Encounter.reasonReference[x]
 AU Core MedicationAdministration|MedicationAdministration.reasonCode, MedicationAdministration.reasonReference
 AU Core Procedure|Procedure.reasonCode, Procedure.reasonReference[x]
-AU Core ServiceRequest |ServiceRequest.reasonCode, ServiceRequest.reasonReference
-AU Core ServiceRequest |ServiceRequest.performerType, ServiceRequest.performer
 {:.grid}
 
 

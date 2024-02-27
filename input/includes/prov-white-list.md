@@ -3,7 +3,6 @@ AU Core Provenance **SHALL** be supported for the following resource types that 
 <ul id="prov-white-list">
 <li>AllergyIntolerance</li>
 <li>Condition</li>
-<li>DiagnosticReport</li>
 <li>Encounter</li>
 <li>Immunization</li>
 <li>MedicationRequest</li>
@@ -14,5 +13,4 @@ AU Core Provenance **SHALL** be supported for the following resource types that 
 <li>Practitioner</li>
 <li>PractitionerRole</li>
 <li>Procedure</li>
-<li>RelatedPerson</li>
 </ul>
