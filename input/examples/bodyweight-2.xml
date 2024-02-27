@@ -30,19 +30,7 @@
   </subject>
   <effectiveDateTime value="2023-03-14"/>
   <performer>
-    <reference value="RelatedPerson/smith-emma-john"/>
-    <identifier>
-      <type>
-        <coding>
-          <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-          <code value="MC"/>
-          <display value="Patient's Medicare Number"/>
-        </coding>
-        <text value="Medicare Number"/>
-      </type>
-      <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
-      <value value="1234567892"/>
-    </identifier>
+    <reference value="PractitionerRole/bobrester-bob-gp"/>
   </performer>
   <valueQuantity>
     <value value="7.9"/>
