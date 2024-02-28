@@ -1,9 +1,12 @@
 
+### Relationship to HL7 AU Base
+
 This guide is built on top of the FHIR standard and [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/).
 
   <div> 
-    <img src="relationship.png" alt="Relationship with HL7 AU FHIR specifications" style="width:75%"/>
+    <img src="relationship.png" alt="Relationship with HL7 AU Base" style="width:70%"/>
   </div>
+*Figure 1: Relationship with HL7 AU Base*
 <br/>
 
 **AU Base:**
@@ -20,8 +23,9 @@ This guide is built on top of the FHIR standard and [AU Base](https://build.fhir
 
 The context of AU Core within the set of HL7 AU standards is shown in the figure below.
   <div> 
-    <img src="architecture.png" alt="Context of AU Core within the set of HL7 AU standards" style="width:75%"/>
+    <img src="architecture.png" alt="Context of AU Core within the set of HL7 AU standards" style="width:70%"/>
   </div>
+*Figure 2: Context of AU Core within the set of HL7 AU standards*
 <br/>
 
 ### Relationship to AUCDI and other IGs
@@ -32,25 +36,28 @@ implemented as required for specific use cases.
 AUCDI Release 1 (R1) is focused on an agreement of “the core of the core” common data elements; minimum data required to support standardised clinical information capture at the point of care as well as enable the safe and meaningful exchange of information to other care providers. AUCDI is not intended to be 
 
 AU Core is intended to provide an implementable standard for FHIR based interfaces for provider and patient information systems in Australia​ providing:
-- an exchange standard for AUCDI (underpinning clinical data model)
+- an exchange standard for AUCDI (the underpinning clinical data model)
 - Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information​
-- Useful in many interactions, easy to implement, supports use case specialisation for clinical workflows without requiring redevelopment of the core​
+- be built on top of for standards development for specific use cases
 
 With AUCDI defining clinical data requirements and FHIR AU Core providing detailed FHIR-based profiles for meeting clinical data requirements and administrative data requirements, an interpretation of AUCDI is necessary which is undertaken through the community.
 
-Updates to AU Core depend upon community input and we encourage our audience to submit questions and feedback to AU Core specifications by clicking on the Propose a change link in the footer of every page. In addition, we encourage our audience to request any necessary clarifications to AUCDI through the <a href="https://confluence.csiro.au/display/FHIR/AUCDI+Release+1">AUCDI process</a> that helps inform future updates to FHIR AU Core.
+Updates to AU Core depend upon community input and we encourage our audience to submit questions and feedback to AU Core specifications by clicking on the Propose a change link in the footer of every page. In addition, we encourage requesting any necessary clarifications to AUCDI through the <a href="https://confluence.csiro.au/display/FHIR/AUCDI+Release+1">AUCDI process</a> that helps inform future updates to FHIR AU Core.
 
 See [AUCDI](aucdi.html) for the relationship between the AUCDI Data Groups and Elements and AU Core profiles.
 
-AU Core aligns to, and leverages, international standards and other national standards.Corresponding profiles included in relevant FHIR implementation guides were reviewed and considered during the development process to ensure alignment and to facilitate adoption of this standard. These implementation guides include the:
+AU Core aligns to, and leverages, international standards and other national standards. Corresponding profiles included in relevant FHIR implementation guides were reviewed and considered during the development process to ensure alignment and to facilitate adoption of this standard. These implementation guides include:
 - [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)
 - [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/)
 - [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/)
 - [US Core Implementation Guide 7.0.0-ballot](https://hl7.org/fhir/us/core/2024Jan/)
 
+The relationship of AU Core to AUCDI and other implementation guides is shown in the figure below.
+
  <div> 
-    <img src="context-colour.png" alt="Relationship to AUCDI and Other IGs" style="width:75%"/>
+    <img src="context-colour.png" alt="Relationship to AUCDI and Other IGs" style="width:70%"/>
   </div>
+*Figure 3: Relationship to AUCDI and Other IGs*
 <br/>
 
 Implementation Guide |Relationship
@@ -62,6 +69,4 @@ Implementation Guide |Relationship
 [US Core Implementation Guide](https://hl7.org/fhir/us/core/2024Jan/)|This IG is the foundation for US Realm FHIR implementation guides. It defines the minimum constraints on the FHIR resources to create the US Core Profiles. The elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each US Core Profiles to access patient data. The REST API and profiles in this IG were reviewed and considered during development of AU Core. AU Core is compatible where possible.
 {:.grid}
 
-See [Comparison with other national and international specifications](comparison.html) for a comparison between AU Core profiles and other national, or international implementation guides.
-
-
+See [Comparison with other national and international specifications](comparison.html) for a comparison between AU Core profiles and other profiles in other implementation guides.
