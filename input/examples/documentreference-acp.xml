@@ -1,8 +1,5 @@
 <DocumentReference xmlns="http://hl7.org/fhir">
     <id value="acp"/>
-    <meta>
-        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
-    </meta>
     <masterIdentifier>
         <system value="urn:ietf:rfc:3986" />
         <value value="urn:uuid:1421b2d5-7e43-4414-93c5-d1db160e5513" />

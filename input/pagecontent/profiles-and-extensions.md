@@ -1,9 +1,3 @@
-<div class="bg-warning">
-<p>NOTE: The following profiles are candidates for AU Core but not yet available:<ul>
-        <li>AU Core Consent</li>
-      </ul></p>
-</div>
-
 ### Profiles
 
 The following profiles and have been defined for this implementation guide.

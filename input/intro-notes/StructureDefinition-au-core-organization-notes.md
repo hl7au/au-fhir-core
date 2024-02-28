@@ -39,7 +39,6 @@
 The following search parameters **SHALL** be supported:
 
 1. **SHALL** support searching for an organisation based on text address using the **[`address`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Organization?address=[string]`
 
@@ -50,7 +49,6 @@ The following search parameters **SHALL** be supported:
     *Implementation Notes:* Fetches a bundle of all Organization resources matching the address ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 1. **SHALL** support searching an organisation by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Organization?identifier={system|}[code]`
 
@@ -62,14 +60,13 @@ The following search parameters **SHALL** be supported:
     *Implementation Notes:* Fetches a bundle containing any Organization resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching for an organisation based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Organization?name=[string]`
 
     Example:
     
       1. GET [base]/Organization?name=Hospital
-      1. GET [base]/Organization?name=Hospital&amp;_revinclude=Provenance:target
+      1. GET [base]/Organization?name=Hospital
 
     *Implementation Notes:* Fetches a bundle of all Organization resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
@@ -86,6 +83,6 @@ The following search parameters **SHOULD** be supported:
     Example:
     
       1. GET [base]/Organization/5678
-      1. GET [base]/Organization?_id=5678
+      1. GET [base]/Organization?_id=5678&amp;_revinclude=Provenance:target
 
     *Implementation Notes:* Fetches a single Organization ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
