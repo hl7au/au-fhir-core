@@ -2,7 +2,6 @@
   <id value="bloodpressure-2"/>
   <meta>
     <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
-    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
   </meta>
   <status value="final"/>
   <category>

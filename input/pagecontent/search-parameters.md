@@ -7,10 +7,6 @@ The [registry of standard search parameters]({{site.data.fhir.path}}searchparame
 
 - [clinical-patient](SearchParameter-au-core-clinical-patient.html)
 
-### Coverage search parameters
-
-- [coverage-patient](SearchParameter-au-core-coverage-patient.html)
-
 ### PractitionerRole search parameters
 
 - [practitionerrole-practitioner](SearchParameter-au-core-practitionerrole-practitioner.html)
