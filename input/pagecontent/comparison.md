@@ -480,59 +480,6 @@ Observation.subject.reference and Observation.status is                    <code
             <td width="93" valign="top">
                 <p>
                     <a
-                        href="StructureDefinition-au-core-headcircum.html"
-                    >
-                        AU Core Head Circumference
-                    </a>
-                </p>
-            </td>
-            <td width="81" valign="top">
-                <p>
-                    <a
-                        href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html"
-                    >
-                        IPA-Observation
-                    </a>
-                </p>
-            </td>
-            <td width="111" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-            <td width="68" valign="top">
-                <p>
-                    <a
-                        href="https://hl7.org/fhir/R4/observation-headcircum.html"
-                    >
-                        observation-headcircum
-                    </a>
-                </p>
-            </td>
-            <td width="130" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>            
-            </td>
-            <td width="78" valign="top">
-                <p>
-                    <a
-                        href="https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-head-circumference.html"
-                    >
-                        US Core Head Circumference Profile
-                    </a>
-                </p>
-            </td>
-            <td width="137" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="93" valign="top">
-                <p>
-                    <a
                         href="StructureDefinition-au-core-heartrate.html"
                     >
                         AU Core Heart Rate

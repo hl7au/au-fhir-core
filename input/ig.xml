@@ -182,12 +182,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="StructureDefinition/au-core-headcircum"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="StructureDefinition/au-core-heartrate"/>
 			</reference>
 			<exampleBoolean value="false"/>
@@ -818,15 +812,6 @@
 			<description value="Urea nitrogen [Mass/volume] in Serum or Plasma 24 mg/dL (part of multiple chronic condition care plan).&#xa;&#xa;Patient: Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/headcircum-1"/>
-			</reference>
-			<name value="Observation - Head circumference"/>
-			<description value="Head circumference recorded by GP at 6 months&#xa;&#xa;Patient: John Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-headcircum"/>
-		</resource>
-
 		<resource>
 			<reference>
 				<reference value="Observation/hearing-threshold-1"/>

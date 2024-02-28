@@ -1637,7 +1637,7 @@
   <b>SHALL</b>
 </td>
 <td>
-  <a href="http://hl7.org/fhir/R4/composition.html#search">identifier</a>
+  <a href="http://hl7.org/fhir/R4/medicationrequest.html#search">identifier</a>
 </td>
 <td>
   <code>token</code>
