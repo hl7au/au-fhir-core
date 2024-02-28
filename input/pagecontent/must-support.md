@@ -23,7 +23,7 @@ An AU Core Requester:
 - **MAY** choose to reject non-conformant resources 
 - **SHALL** interpret missing data elements within resource instances as data not present in the source system when querying AU Core Responders
 
-Processing, depending on local requirements, may mean display, persist, index, or action in an event or request workflow. Processing may differ based on the element’s value. For example, one possible value of the [ServiceRequest.status](https://hl7.org/fhir/r4/servicerequest-definitions.html#ServiceRequest.status) element is `entered-in-error`. This element is marked as Must Support; requestors must be capable of processing this value to handle the resource’s clinical data appropriately.
+Processing, depending on local requirements, may mean display, persist, index, or action in an event or request workflow. Processing may differ based on the element’s value. For example, one possible value of the [Immunization.status](https://hl7.org/fhir/r4/immunization-definitions.html#Immunization.status) element is `entered-in-error`. This element is marked as Must Support; requestors must be capable of processing this value to handle the resource’s clinical data appropriately.
 
 
 ### Presentation of elements labelled Must Support in profiles
@@ -138,14 +138,10 @@ The table below lists the applicable profiles and supported identifier types in 
 
 AU Core Profile |Must Support Choice Elements| Supported Identifiers
 ---|---|---
-AU Core Coverage|Coverage.identifier|Medicare Card Number, DVA Number, Insurance Member Number
-AU Core System Device|Device.identifier|PAI-D
-AU Core HealthcareService|HealthcareService.identifier|HPI-O
 AU Core Organization|Organization.identifier|HPI-O, Australian Business Number
 AU Core Patient|Patient.identifier|IHI, Medicare Card Number, DVA Number
 AU Core Practitioner|Practitioner.identifier|HPI-I
 AU Core PractitionerRole|PractitionerRole.identifier|HPI-I, Medicare Provider Number
-AU Core RelatedPerson|RelatedPerson.identifier|IHI, Medicare Card Number, DVA Number
 {:.grid}
 
 #### Must Support where there is a choice between an element of type CodeableConcept and type Reference
@@ -162,12 +158,9 @@ The table below lists the applicable profiles and elements in AU Core.
 
 AU Core Profile |Must Support Choice Elements
 ---|---
-AU Core DiagnosticReport|DiagnosticReport.conclusion, DiagnosticReport.conclusionCode
 AU Core Encounter|Encounter.reasonCode, Encounter.reasonReference[x]
 AU Core MedicationAdministration|MedicationAdministration.reasonCode, MedicationAdministration.reasonReference
 AU Core Procedure|Procedure.reasonCode, Procedure.reasonReference[x]
-AU Core ServiceRequest |ServiceRequest.reasonCode, ServiceRequest.reasonReference
-AU Core ServiceRequest |ServiceRequest.performerType, ServiceRequest.performer
 {:.grid}
 
 
