@@ -7,7 +7,6 @@
     <lastUpdated value="2022-05-18T23:37:12.617+00:00"/>
     <source value="#qAUGMmCEAqCZRmKl"/>
     <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
   </meta>
   <status value="final"/>
   <category>

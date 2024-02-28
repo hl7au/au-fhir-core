@@ -59,13 +59,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="SearchParameter/au-core-coverage-patient"/>
-			</reference>
-			<name value="AUCoreCoveragePatient"/>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="SearchParameter/au-core-practitionerrole-practitioner"/>
 			</reference>
 			<name value="AUCorePractitionerRolePractitioner"/>
@@ -85,37 +78,13 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="StructureDefinition/au-core-diagnosticreport"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="StructureDefinition/au-core-documentreference"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="StructureDefinition/au-core-encounter"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
-				<reference value="StructureDefinition/au-core-healthcareservice"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="StructureDefinition/au-core-immunization"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="StructureDefinition/au-core-lipid-result"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
@@ -143,12 +112,7 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
-		<resource>
-			<reference>
-				<reference value="StructureDefinition/au-core-observation"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
+
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-organization"/>
@@ -206,24 +170,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="StructureDefinition/au-core-vitalspanel"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="StructureDefinition/au-core-oxygensat"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="StructureDefinition/au-core-bmi"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="StructureDefinition/au-core-bodytemp"/>
 			</reference>
 			<exampleBoolean value="false"/>
@@ -231,12 +177,6 @@
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-resprate"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="StructureDefinition/au-core-headcircum"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
@@ -256,13 +196,6 @@
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-smokingstatus"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<!--TERMINOLOGY-->
-		<resource>
-			<reference>
-				<reference value="ValueSet/lipid-result-reporting"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
@@ -462,32 +395,6 @@
 			<description value="Vernal keratoconjunctivitis&#xa;&#xa;Patient: Sofia Italia"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
-		<!--DIAGNOSTICREPORT EXAMPLES-->
-		<resource>
-			<reference>
-				<reference value="DiagnosticReport/lipid-panel"/>
-			</reference>
-			<name value="DiagnosticReport - Lipid Panel"/>
-			<description value="Lipid Panel diagnostic report&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticreport"/>
-		</resource>
-		<!--DOCUMENTREFERENCE EXAMPLES-->
-		<resource>
-			<reference>
-				<reference value="DocumentReference/acp"/>
-			</reference>
-			<name value="DocumentReference - Advance Care Plan"/>
-			<description value="Mr. Li Wang's Advance Care Plan&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="DocumentReference/mental-health-crisis-plan"/>
-			</reference>
-			<name value="DocumentReference - Mental health crisis plan"/>
-			<description value="Mental health crisis plan&#xa;&#xa;Patient: Ms. Emma SMITH)"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
-		</resource>
 		<!--ENCOUNTER EXAMPLES-->
 		<resource>
 			<reference>
@@ -594,23 +501,6 @@
 			<name value="Goal - Weight loss (part of multiple chronic condition care plan)"/>
 			<description value="High priority goal of weight loss (part of multiple chronic condition care plan)&#xa;&#xa;Patient: Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Goal"/>
-		</resource>
-		<!--HEALTHCARESERVICE EXAMPLES-->
-		<resource>
-			<reference>
-				<reference value="HealthcareService/bobrester-medical-center"/>
-			</reference>
-			<name value="HealthcareService - Bobrester Medical Centre"/>
-			<description value="Bobrester Medical Centre"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="HealthcareService/lge-priv-xray"/>
-			</reference>
-			<name value="HealthcareService - Private X-Ray"/>
-			<description value="Large Private X-Ray"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
 		</resource>
 		<!--IMMUNIZATION EXAMPLES-->
 		<resource>
@@ -836,14 +726,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Observation/bmi-1"/>
-			</reference>
-			<name value="Observation - BMI 1"/>
-			<description value="BMI recorded by GP&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bmi"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Observation/bodyheight-1"/>
 			</reference>
 			<name value="Observation - Height 1"/>
@@ -924,37 +806,12 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Observation/bonedensity-simple-precon"/>
-			</reference>
-			<name value="Observation - Bone Density of Left Femur (pre-coordinated body site code)"/>
-			<description value="Bone Density of Left Femur 0.887 g/cm² showing pre-coordinated body site code&#xa;&#xa;Patient: Mr. Harry Dan"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-imag"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/bonedensity-simple-contained"/>
-			</reference>
-			<name value="Observation - Bone Density of Left Femur (contained BodyStructure)"/>
-			<description value="Bone Density of Left Femur 0.887 g/cm² showing contained BodyStructure&#xa;&#xa;Patient: Mr. Harry Dan"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-imag"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Observation/bun-mcc"/>
 			</reference>
 			<name value="Observation - Urea nitrogen [Mass/volume] in Serum or Plasma (part of multiple chronic condition care plan)"/>
 			<description value="Urea nitrogen [Mass/volume] in Serum or Plasma 24 mg/dL (part of multiple chronic condition care plan).&#xa;&#xa;Patient: Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/headcircum-1"/>
-			</reference>
-			<name value="Observation - Head circumference"/>
-			<description value="Head circumference recorded by GP at 6 months&#xa;&#xa;Patient: John Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-headcircum"/>
-		</resource>
-
 		<resource>
 			<reference>
 				<reference value="Observation/hearing-threshold-1"/>
@@ -977,7 +834,7 @@
 			</reference>
 			<name value="Observation - Cholesterol"/>
 			<description value="Cholesterol results&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
 			<reference>
@@ -985,7 +842,7 @@
 			</reference>
 			<name value="Observation - HDL"/>
 			<description value="HDL result&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
 			<reference>
@@ -993,7 +850,7 @@
 			</reference>
 			<name value="Observation - LDL"/>
 			<description value="LDL result&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
 			<reference>
@@ -1001,7 +858,7 @@
 			</reference>
 			<name value="Observation - Non HDL Cholesterol"/>
 			<description value="Non HDL Cholesterol result&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
 			<reference>
@@ -1009,7 +866,7 @@
 			</reference>
 			<name value="Observation - Total Cholesterol/HDL ratio"/>
 			<description value="Total Cholesterol/HDL ratio result&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
 			<reference>
@@ -1017,15 +874,7 @@
 			</reference>
 			<name value="Observation - Triglyceride"/>
 			<description value="Triglyceride result&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/oxygensat-1"/>
-			</reference>
-			<name value="Observation - Oxygen saturation"/>
-			<description value="Oxygen saturation&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-oxygensat"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
 			<reference>
@@ -1045,43 +894,11 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Observation/sex-at-birth-intersex"/>
-			</reference>
-			<name value="Observation - Intersex at birth"/>
-			<description value="Biological sex assigned at birth - Intersex&#xa;&#xa;Patient: IHI 8003608833357361"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-sexassignedatbirth"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/sex-at-birth-female"/>
-			</reference>
-			<name value="Observation - Female at birth"/>
-			<description value="Biological sex assigned at birth - Female&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-sexassignedatbirth"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/sex-at-birth-male"/>
-			</reference>
-			<name value="Observation - Male at birth"/>
-			<description value="Biological sex assigned at birth - Male&#xa;&#xa;Patient: John Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-sexassignedatbirth"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Observation/smokingstatus-current-smoker"/>
 			</reference>
 			<name value="Observation - Current smoker"/>
 			<description value="Observation of smoking status of current smoker&#xa;&#xa;Patient: Mr. Li Wang&#xa;&#xa;Performer: Dr. Bob Bobrester, GP"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/vitalspanel-1"/>
-			</reference>
-			<name value="Observation - Vital signs panel"/>
-			<description value="Vital signs panel for Mrs. Anne Bennelong"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-vitalspanel"/>
 		</resource>
 		<resource>
 			<reference>
@@ -1409,96 +1226,6 @@
 			<description value="Provenance of verification with signature for advance care plan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-provenance"/>
 		</resource>
-		<!--RELATEDPERSON EXAMPLES-->
-		<resource>
-			<reference>
-				<reference value="RelatedPerson/smith-emma-john"/>
-			</reference>
-			<name value="RelatedPerson - Mother of John Smith"/>
-			<description value="RelatedPerson: Ms. Emma SMITH&#xa;&#xa;Relationship to Patient: Mother of John Smith"/>
-			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="RelatedPerson/rabbit-peter"/>
-			</reference>
-			<name value="RelatedPerson - Friend of Mr Li Wang"/>
-			<description value="RelatedPerson: Mr. Peter Rabbit&#xa;&#xa;Relationship to Patient: Emergency Contact and Unrelated Friend of Mr Li Wang"/>
-			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-		</resource>
-		<!--SERVICEREQUEST EXAMPLES-->
-		<resource>
-			<reference>
-				<reference value="ServiceRequest/order-chestct"/>
-			</reference>
-			<name value="ServiceRequest - Chest CT order"/>
-			<description value="Order for Chest CT&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="ServiceRequest/order-chestxray"/>
-			</reference>
-			<name value="ServiceRequest - Chest X-ray  order"/>
-			<description value="Order for Chest X-ray&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="ServiceRequest/order-ct-abpelcontrast"/>
-			</reference>
-			<name value="ServiceRequest - CT of abdomen and pelvis with contrast order"/>
-			<description value="Order for CT of abdomen and pelvis with contrast&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="ServiceRequest/order-covid"/>
-			</reference>
-			<name value="ServiceRequest - 2019-Novel Coronavirus PCR order"/>
-			<description value="Order for 2019-Novel Coronavirus PCR&#xa;&#xa;Patient: Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="ServiceRequest/order-lipid"/>
-			</reference>
-			<name value="ServiceRequest - Lipid Panel order"/>
-			<description value="Order for Lipid Panel (part of DiagnosticReport-lipid-panel)&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="ServiceRequest/order-lk-ctcontrast"/>
-			</reference>
-			<name value="ServiceRequest - Left Knee CT with contrast order"/>
-			<description value="Order for Left Knee CT with contrast&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="ServiceRequest/order-lkxray"/>
-			</reference>
-			<name value="ServiceRequest - Left Knee X-ray order"/>
-			<description value="Order for Left Knee X-ray&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="ServiceRequest/order-rk-ctcontrast"/>
-			</reference>
-			<name value="ServiceRequest - Right Knee CT with contrast order"/>
-			<description value="Order for Right Knee CT with contrast&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="ServiceRequest/order-rkxray"/>
-			</reference>
-			<name value="ServiceRequest - Right Knee X-ray order"/>
-			<description value="Order for Right Knee X-ray&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest"/>
-		</resource>
 		<!--SPECIMEN EXAMPLES-->
 		<resource>
 			<reference>
@@ -1507,6 +1234,14 @@
 			<name value="Specimen - Naso swab (COVID test)"/>
 			<description value="Naso swab specimen for COVID test&#xa;&#xa;Patient: Mr Li Wang"/>
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="DocumentReference/acp"/>
+			</reference>
+			<name value="DocumentReference - Advance Care Plan, referenced by Provenance/signature example"/>
+			<description value="Mr. Li Wang's Advance Care Plan&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
 		</resource>
 		<!--PAGES-->
 		<page>
