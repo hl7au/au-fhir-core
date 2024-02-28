@@ -1284,7 +1284,7 @@
 				</page>
 				<page>
 					<nameUrl value="relationship.html"/>
-					<title value="Relationship with other HL7 AU FHIR IGs"/>
+					<title value="Relationship with other IGs"/>
 					<generation value="markdown"/>
 				</page>
 				<page>
