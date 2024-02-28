@@ -333,7 +333,6 @@
 <a href="StructureDefinition-au-core-bodytemp.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp</a>,
 <a href="StructureDefinition-au-core-diagnosticresult.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult</a>,
 <a href="StructureDefinition-au-core-heartrate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate</a>,
-<a href="StructureDefinition-au-core-headcircum.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-headcircum</a>,
 <a href="StructureDefinition-au-core-resprate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-resprate</a>,
 <a href="StructureDefinition-au-core-diagnosticresult-path.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path</a>,
 <a href="StructureDefinition-au-core-smokingstatus.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus</a>,
@@ -2005,8 +2004,6 @@
 <a href="StructureDefinition-au-core-diagnosticresult-path.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path</a>
 <br/>
 <a href="StructureDefinition-au-core-heartrate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate</a>
-<br/>
-<a href="StructureDefinition-au-core-headcircum.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-headcircum</a>
 <br/>
 <a href="StructureDefinition-au-core-smokingstatus.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus</a>
 <br/>
@@ -4092,11 +4089,6 @@
 </extension>
 </supportedProfile>
 <supportedProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</supportedProfile>
-<supportedProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-headcircum">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
 </extension>
