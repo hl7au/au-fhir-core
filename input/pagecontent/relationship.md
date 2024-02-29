@@ -13,7 +13,7 @@ This guide is built on top of the FHIR standard and [AU Base](https://build.fhir
 - defines Australian realm concepts (e.g. Medicare card number) as an additional set of options to what is available in the FHIR standard including extensions and terminology.
 - provides ‘Base’ profiles to inform a reader of which added concepts are considered relevant to a particular resource type. 
 - does not apply cardinality constraints or required binding strengths that enforce conformance to those concepts except in rare circumstances. Must support flags are not utilised in AU base profiles.
-- does not recommend or mandate any particular resource, element, or interactions .
+- does not recommend or mandate any particular resource, element, or interactions.
 
 
 **AU Core:**
@@ -33,7 +33,7 @@ The primary intent of the <a href="https://confluence.csiro.au/display/FHIR/AUCD
 role fulfilled by the FHIR standard. AUCDI is not required to be implemented as a whole single product. Parts can be
 implemented as required for specific use cases.
 
-AUCDI Release 1 (R1) is focused on an agreement of “the core of the core” common data elements; minimum data required to support standardised clinical information capture at the point of care as well as enable the safe and meaningful exchange of information to other care providers. AUCDI is not intended to be 
+AUCDI Release 1 (R1) is focused on an agreement of “the core of the core” common data elements; minimum data required to support standardised clinical information capture at the point of care as well as enable the safe and meaningful exchange of information to other care providers. 
 
 AU Core is intended to provide an implementable standard for FHIR based interfaces for provider and patient information systems in Australia​ providing:
 - an exchange standard for AUCDI (the underpinning clinical data model)
