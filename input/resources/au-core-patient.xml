@@ -50,16 +50,6 @@
       <sliceName value="interpreterRequired"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Patient.extension:genderIdentity">
-      <path value="Patient.extension" />
-      <sliceName value="genderIdentity" />
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.extension:individualPronouns">
-      <path value="Patient.extension"/>
-      <sliceName value="individualPronouns"/>
-        <mustSupport value="true"/>
-    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier"/>
       <slicing>
@@ -168,5 +158,3 @@
     </element>
   </differential>
 </StructureDefinition>
-
-
