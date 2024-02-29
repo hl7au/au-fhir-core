@@ -909,7 +909,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
             <td width="111" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> noting that US Core Patient includes US Gore Gender Identity extension that is not required to be supported
                 </p>
             </td>
             <td width="68" valign="top">
