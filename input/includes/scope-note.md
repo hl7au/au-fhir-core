@@ -1,8 +1,6 @@
 <div class="note-to-contributors" markdown="1">
 
-#### AU Core R1 Scope
-
-We have updated the AU Core current build to include scope changes since the last snapshot. A summary of these changes is provided below. 
+A summary of AU Core changes since the [last snapshot](https://hl7.org.au/fhir/core/0.2.2-preview/) is provided below. 
 
 <li>Removed profiles:
 <table border="0"> 
