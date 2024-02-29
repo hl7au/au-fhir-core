@@ -533,7 +533,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
@@ -678,7 +678,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
@@ -921,7 +921,7 @@
   </td>
   <td>
     <div>
-      <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+      <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
       <p>The server <strong>SHALL</strong> support both.</p>
     </div>
   </td>
@@ -1226,7 +1226,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
@@ -1658,7 +1658,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
@@ -1879,7 +1879,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
@@ -2072,7 +2072,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
@@ -2188,7 +2188,7 @@
   <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">category</a>
 </td>
 <td>
-  <code>reference</code>+  <code>token</code>
+  <code>reference</code>+ <code>token</code>
 </td>
 </tr>
 <tr>
@@ -2196,7 +2196,7 @@
   <b>SHALL</b>
 </td>
 <td>
-  <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">date</a>
+  <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>+ <a href="http://hl7.org/fhir/R4/observation.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">date</a>
 </td>
 <td>
   <code>reference</code>+  <code>token</code>+  <code>date</code>
@@ -2204,7 +2204,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHALL</b>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">status</a>
@@ -2692,7 +2692,7 @@
 <tbody>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/practitioner.html#search">identifier</a>
@@ -2980,7 +2980,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
