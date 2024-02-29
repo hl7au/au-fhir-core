@@ -31,6 +31,7 @@ A summary of AU Core changes since the [last snapshot](https://hl7.org.au/fhir/c
                 <li>AU Core Health Program Participation Summary</li>
                 <li>AU Core HealthcareService</li>
                 <li>AU Core Last Menstrual Period</li>
+                <li>AU Core Lipid Result</li>
                 <li>AU Core List</li>
                 <li>AU Core MedicationAdministration</li>
                 <li>AU Core MedicationDispense</li>
@@ -56,7 +57,6 @@ A summary of AU Core changes since the [last snapshot](https://hl7.org.au/fhir/c
     </tr>
 </table>
 </li>
-
 <li>The following profiles now reference core FHIR resources, moving away from previously removed AU Core profiles:
     <table border="0"> 
         <tr>
@@ -131,8 +131,6 @@ A summary of AU Core changes since the [last snapshot](https://hl7.org.au/fhir/c
 <li>Estimated Date of Delivery value set has been removed</li>
 <li>Estimated Date of Delivery LOINC value set has been removed</li>
 <li>Lipid Result Reporting value set has been removed</li>
-<li>Examples for the removed profiles have been removed</li>
-<li>coverage-patient search parameter has been removed</li>
 <li>relatedperson-patient search parameter has been removed</li>
 <li>specimen-patient search parameter has been removed</li>
 </ul>
@@ -141,8 +139,6 @@ A summary of AU Core changes since the [last snapshot](https://hl7.org.au/fhir/c
     <ul>
         <li>Revised AU Core Client and AU Core Server CapabilityStatements to align with updated scope</li>
         <li>Updated conformance and guidance pages to reflect the removal of profiles and their references</li>
-        <li>Pruned terminology resources associated with removed profiles from the Terminology page</li>
-        <li>Updated the list of resources supporting the Provenance resource</li>
         <li>Removed examples  the list of resources supporting the Provenance resource</li>
     </ul>
 </li>
