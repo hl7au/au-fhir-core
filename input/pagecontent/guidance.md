@@ -1,5 +1,5 @@
 - [General Guidance](general-guidance.html)
 - [AUCDI](aucdi.html)
-- [Relationship with other HL7 AU FHIR IGs](relationship.html)
+- [Relationship with other IGs](relationship.html)
 - [Comparison with other national and international specifications](comparison.html)
 - [Future of AU Core](future.html)
