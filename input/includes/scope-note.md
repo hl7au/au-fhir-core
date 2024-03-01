@@ -57,29 +57,22 @@ A summary of AU Core changes since the [last snapshot](https://hl7.org.au/fhir/c
     </tr>
 </table>
 </li>
-<li>The following profiles now reference core FHIR resources, moving away from previously removed AU Core profiles:
-    <table border="0"> 
-        <tr>
-        <td width="30%"> 
-                <ul>
-                    <li>AU Core AllergyIntolerance</li>
-                    <li>AU Core Condition</li>
-                </ul>
-        </td>
-        <td width="30%"> 
-                <ul>
-                    <li>AU Core Encounter</li>
-                    <li>AU Core MedicationRequest</li>                                   
-                </ul>
-        </td>
-        <td width="30%"> 
-                <ul>
-                    <li>AU Core Procedure</li>  
-                    <li>Observation profiles</li>                            
-                </ul>
-        </td>
-        </tr>
-    </table>
+
+<li>Changes applied to the profiles: 
+    <ul>
+        <li>Changes to AU Core AllergyIntolerance to:
+            <ul>
+                <li>remove Must Support from AllergyIntolerance.type, AllergyIntolerance.category, and AllergyIntolerance.reaction.substance</li>
+                <li>reference core FHIR resources in place of previously removed AU Core profiles</li>
+            </ul>
+        </li>
+        <li>Changes to AU Core Patient to add Must Support to Individual Gender Identity and Individual Pronouns elements.</li>
+        <li>AU Core Condition now references core FHIR resources in place of previously removed AU Core profiles.</li>
+        <li>AU Core Encounter now references core FHIR resources in place of previously removed AU Core profiles.</li>
+        <li>AU Core MedicationRequest now references core FHIR resources in place of previously removed AU Core profiles.</li>
+        <li>AU Core Procedure now references core FHIR resources in place of previously removed AU Core profiles.</li>
+        <li>AU Core Observation profiles now references core FHIR resources in place of previously removed AU Core profiles.</li>
+    </ul>    
 </li>
 
 <li>The following value sets have been removed:
@@ -126,15 +119,6 @@ A summary of AU Core changes since the [last snapshot](https://hl7.org.au/fhir/c
         </tr>
     </table>
 </li>
-<!-- <li>Additional removal:<ul>
-<li>Alcohol Intake Status value set has been removed</li>
-<li>Estimated Date of Delivery value set has been removed</li>
-<li>Estimated Date of Delivery LOINC value set has been removed</li>
-<li>Lipid Result Reporting value set has been removed</li>
-<li>relatedperson-patient search parameter has been removed</li>
-<li>specimen-patient search parameter has been removed</li>
-</ul>
-</li> -->
 <li>Other changes:
     <ul>
         <li>Revised AU Core Client and AU Core Server CapabilityStatements to align with updated scope</li>
