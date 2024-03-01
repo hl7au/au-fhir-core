@@ -19,8 +19,8 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 **Value sets published in AU Base**
 - [ActEncounterCode - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ActEncounterCode-extended.html)
 - [hl7VS-providerRole - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v2-0443-extended.html)
-- []()
-- []()
+- [ServiceDeliveryLocationRoleType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)
+- [Location Type (Physical) - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-location-physical-type-extended.html)
 - []()
 - []()
 - []()
@@ -55,11 +55,24 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 - [EncounterStatus](https://hl7.org/fhir/R4/valueset-encounter-status.html)
 - [Participant type](https://hl7.org/fhir/R4/valueset-encounter-participant-type.html)
 - [Immunization Status Codes](https://hl7.org/fhir/R4/valueset-immunization-status.html)
+- [LocationStatus](https://hl7.org/fhir/R4/valueset-location-status.html)
+- [LocationMode](https://hl7.org/fhir/R4/valueset-location-mode.html)
+- [Medication status codes](https://hl7.org/fhir/R4/valueset-medication-status.html)
+- [Medicationrequest status](https://hl7.org/fhir/R4/valueset-medicationrequest-status.html)
+- [Medication request intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html)
+- [Medication request category codes](https://hl7.org/fhir/R4/valueset-medicationrequest-category.html)
+- [Medication status codes](https://hl7.org/fhir/R4/valueset-medication-statement-status.html)
+- [Observation Category Codes](https://hl7.org/fhir/R4/valueset-observation-category.html)
 - []()
 - []()
 - []()
 - []()
 - []()
+- []()
+- []()
+- []()
+- []()
+
 
 
 ### Code systems
