@@ -909,7 +909,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
             <td width="111" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> noting that US Core Patient includes US Gore Gender Identity extension that is not required to be supported
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
             <td width="68" valign="top">
@@ -937,7 +937,7 @@ Observation.subject.reference, Observation.status is                    <code>fi
             </td>
             <td width="137" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if gender identity is not exchanged. US Core includes the US Gore Gender Identity extension; AU Core requires support of the international Gender Identity extension
                 </p>
             </td>
         </tr>

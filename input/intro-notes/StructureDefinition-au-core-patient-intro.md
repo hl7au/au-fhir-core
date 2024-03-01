@@ -14,7 +14,7 @@ The following are supported usage scenarios for this profile:
 A resource conforming to this profile is conformant to:
 - [IPA-Patient](http://hl7.org/fhir/uv/ipa/StructureDefinition-ipa-patient.html)
 - [Patient (IPS)](http://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Patient-uv-ips.html)
-- [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) noting that US Core Patient includes US Gore Gender Identity extension that is not required to be supported
+- [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) if gender identity is not exchanged. US Core includes the US Gore Gender Identity extension; AU Core requires support of the international Gender Identity extension
 
 Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa), [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips), or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
 
