@@ -49,11 +49,11 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 id="mode1" class="panel-title">Mode: <code>server</code>
-          </h3>
+         </h3>
         </div>
         <div class="panel-body">
           <div>
-            <p>The AU Core Server <strong>SHALL</strong>:                                    
+            <p>The AU Core Server <strong>SHALL</strong>:
             </p>
             <ol>
               <li>
@@ -69,16 +69,16 @@
                 <p>Return the following response classes:</p>
                 <ul>
                   <li>
-                    <p>(Status 400): invalid parameter</p>
+                    <p>(Status 400): Bad Request</p>
                   </li>
                   <li>
-                    <p>(Status 401/4xx): unauthorized request</p>
+                    <p>(Status 401): Not Authorized</p>
                   </li>
                   <li>
-                    <p>(Status 403): insufficient scope</p>
+                    <p>(Status 403): Forbidden</p>
                   </li>
                   <li>
-                    <p>(Status 404): unknown resource</p>
+                    <p>(Status 404): Not Found</p>
                   </li>
                 </ul>
               </li>
@@ -89,7 +89,7 @@
                 <p>Declare a CapabilityStatement identifying the list of profiles, operations, and search parameters supported.</p>
               </li>
             </ol>
-            <p>The AU Core Server <strong>SHOULD</strong>:                                    
+            <p>The AU Core Server <strong>SHOULD</strong>:
             </p>
             <ol>
               <li>Support XML source formats for all AU Core interactions.</li>
@@ -100,9 +100,11 @@
           </div>
           <blockquote>
             <div>
+
               <ol>
-                <li>TBD.</li>
-              </ol>
+                <li>A server <strong>SHALL</strong> reject any unauthorized requests by returning an HTTP 401 "Unauthorized", HTTP 403 "Forbidden", or HTTP 404 "Not Found"</li>
+                <li>For Authentication and Authorization, Systems <strong>SHOULD</strong> support any SMART App Launch and SMART Backend Service Authorization. When this is not avalable, Basic Authentication <strong>MAY</strong> be used. </li>
+             </ol>
             </div>
           </blockquote>
           <div class="lead">
