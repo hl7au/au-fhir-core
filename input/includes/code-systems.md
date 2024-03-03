@@ -69,7 +69,7 @@
   </tr>
   <tr>
     <td><a href="https://hl7.org/fhir/R4/codesystem-administrative-gender.html">AdministrativeGender</a></td>
-    <td>StructureDefinition/au-core-patient, StructureDefinition/au-core-practitioner</td>
+    <td><a href="https://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a></td>
     <td>HL7</td>
   </tr>
   <tr>
