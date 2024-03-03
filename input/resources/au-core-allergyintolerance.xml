@@ -23,14 +23,6 @@
       <path value="AllergyIntolerance.verificationStatus"/>
       <mustSupport value="true"/>
     </element>
-    <element id="AllergyIntolerance.type">
-      <path value="AllergyIntolerance.type"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="AllergyIntolerance.category">
-      <path value="AllergyIntolerance.category"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="AllergyIntolerance.code">
       <path value="AllergyIntolerance.code"/>
       <min value="1"/>
@@ -98,10 +90,6 @@
     </element>
     <element id="AllergyIntolerance.reaction">
       <path value="AllergyIntolerance.reaction"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="AllergyIntolerance.reaction.substance">
-      <path value="AllergyIntolerance.reaction.substance"/>
       <mustSupport value="true"/>
     </element>
     <element id="AllergyIntolerance.reaction.manifestation">
