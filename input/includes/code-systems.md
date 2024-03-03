@@ -9,7 +9,7 @@
 <tbody>
   <tr>
     <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v3-ActCode.html">ActCodeAU</a></td>
-    <td>ActEncounterCode - AU Extended, Encounter Type (preferred)</td>
+    <td>ActEncounterCode - AU Extended, Encounter Type</td>
     <td>HL7 AU</td>
   </tr>
   <tr>
@@ -40,7 +40,7 @@
   <tr>
     <td><a href="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats">Australian ;Immunisation Register Vaccine</a></td>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1">Australian Immunisation Register Vaccine</a></td>
-    <td>Services Australia (preferred)</td>
+    <td>Services Australia</td>
   </tr>
   <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1">Australian Indigenous Status</a></td>
@@ -175,7 +175,7 @@
   <tr>
     <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-mims-external.html">Monthly Index of Medical Specialties (MIMS)</a></td>
     <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-mims.html">MIMS</a></td>
-    <td>DoH (preferred)</td>
+    <td>DoH</td>
   </tr>
   <tr>
     <td><a href="https://hl7.org/fhir/R4/codesystem-name-use.html">NameUse</a></td>
@@ -200,7 +200,7 @@
   <tr>
     <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-pbs-item-external.html">PBS Item Codes</a></td>
     <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html">PBS Item Codes</a></td>
-    <td>DoH (preferred)</td>
+    <td>DoH</td>
   </tr>
   <tr>
     <td><a href="https://terminology.hl7.org/5.3.0/CodeSystem-v2-0443.html">providerRole</a></td>
