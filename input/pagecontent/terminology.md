@@ -19,67 +19,79 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 **Value sets published in AU Base**
 - [ActEncounterCode - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ActEncounterCode-extended.html)
 - [hl7VS-providerRole - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v2-0443-extended.html)
-- [ServiceDeliveryLocationRoleType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)
 - [Location Type (Physical) - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-location-physical-type-extended.html)
-- []()
-- []()
-- []()
-- []()
+- [ServiceDeliveryLocationRoleType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)
+
 
 **Value sets published in the NCTS**
+- [Adverse Reaction Agent](https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1)
+- [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1)
+- [Body Site](https://healthterminologies.gov.au/fhir/ValueSet/body-site-1)
+- [Clinical Condition](https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1)
+- [Clinical Finding](https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1)
+- [Common Languages in Australia](https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2)
+- [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1)
+- [Indicator of Hypersensitivity or Intolerance to Substance](https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2)
 - [Metric Body Length Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-length-units-1)
+- [Metric Body Length Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-length-units-1)
+- [Metric Body Length Units](https://tx.ontoserver.csiro.au/fhir/ValueSet/metric-body-length-units-1)
 - [Metric Body Temperature Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-temperature-units-1)
 - [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1)
+- [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1)
 - [ObservationStatus Result Available](https://healthterminologies.gov.au/fhir/ValueSet/observationstatus-result-available-1)
-- [Smoking Status](https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1)
-- [Indicator of Hypersensitivity or Intolerance to Substance](https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2)
-- [Adverse Reaction Agent](https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1)
-- [Clinical Finding](https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1)
-- [Clinical Condition](https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1)
-- [Body Site](https://healthterminologies.gov.au/fhir/ValueSet/body-site-1)
+- [ObservationStatus Result Available](https://healthterminologies.gov.au/fhir/ValueSet/observationstatus-result-available-1)
+- [Pathology Diagnostic Service Category](https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1)
+- [Procedure ](https://tx.ontoserver.csiro.au/fhir/ValueSet/procedure-1)
+- [RCPA SPIA Pathology Reporting](https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1)
 - [Separation Mode](https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1)
-- []()
-- []()
-- []()
+- [Smoking Status](https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1)
+- [Smoking Status](https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1)
+
 
 **Value sets published in FHIR**
+- [AdministrativeGender](https://hl7.org/fhir/R4/valueset-administrative-gender.html)
 - [AllergyIntoleranceClinicalStatusCodes](https://hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html)
-- [AllergyIntoleranceVerificationStatusCodes](http://hl7.org/fhir/R4/valueset-allergyintolerance-verification.html)
-- [AllergyIntoleranceCategory](http://hl7.org/fhir/R4/valueset-allergy-intolerance-category.html)
-- [AllergyIntoleranceCategory](http://hl7.org/fhir/R4/valueset-allergy-intolerance-category.html)
 - [AllergyIntoleranceSeverity](http://hl7.org/fhir/R4/valueset-reaction-event-severity.html)
+- [AllergyIntoleranceVerificationStatusCodes](http://hl7.org/fhir/R4/valueset-allergyintolerance-verification.html)
+- [Australian Indigenous Status](https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1)
+- [Australian Veteran Status](https://healthterminologies.gov.au/fhir/ValueSet/australian-veteran-status-1)
+- [Condition/Diagnosis Severity](https://hl7.org/fhir/R4/valueset-condition-severity.html)
+- [ConditionCategoryCodes](https://hl7.org/fhir/R4/valueset-condition-category.html)
 - [ConditionClinicalStatusCodes](https://hl7.org/fhir/R4/valueset-condition-clinical.html)
 - [ConditionVerificationStatus](https://hl7.org/fhir/R4/valueset-condition-ver-status.html)
-- [ConditionCategoryCodes](https://hl7.org/fhir/R4/valueset-condition-category.html)
-- [Condition/Diagnosis Severity](https://hl7.org/fhir/R4/valueset-condition-severity.html)
+- [DataAbsentReason](https://hl7.org/fhir/R4/valueset-data-absent-reason.html)
 - [EncounterStatus](https://hl7.org/fhir/R4/valueset-encounter-status.html)
-- [Participant type](https://hl7.org/fhir/R4/valueset-encounter-participant-type.html)
+- [EventStatus](https://hl7.org/fhir/R4/valueset-event-status.html)
 - [Immunization Status Codes](https://hl7.org/fhir/R4/valueset-immunization-status.html)
-- [LocationStatus](https://hl7.org/fhir/R4/valueset-location-status.html)
+- [LinkType](https://hl7.org/fhir/R4/valueset-link-type.html)
 - [LocationMode](https://hl7.org/fhir/R4/valueset-location-mode.html)
+- [LocationStatus](https://hl7.org/fhir/R4/valueset-location-status.html)
+- [Medication request category codes](https://hl7.org/fhir/R4/valueset-medicationrequest-category.html)
+- [Medication request intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html)
+- [Medication status codes](https://hl7.org/fhir/R4/valueset-medication-statement-status.html)
 - [Medication status codes](https://hl7.org/fhir/R4/valueset-medication-status.html)
 - [Medicationrequest status](https://hl7.org/fhir/R4/valueset-medicationrequest-status.html)
-- [Medication request intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html)
-- [Medication request category codes](https://hl7.org/fhir/R4/valueset-medicationrequest-category.html)
-- [Medication status codes](https://hl7.org/fhir/R4/valueset-medication-statement-status.html)
+- [NameUse](https://hl7.org/fhir/R4/valueset-name-use.html)
 - [Observation Category Codes](https://hl7.org/fhir/R4/valueset-observation-category.html)
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+- [Observation Interpretation Codes](https://hl7.org/fhir/R4/valueset-observation-interpretation.html)
+- [Participant type](https://hl7.org/fhir/R4/valueset-encounter-participant-type.html)
+- [Provenance activity type](https://hl7.org/fhir/R4/valueset-provenance-activity-type.html)
+- [QuantityComparator](https://hl7.org/fhir/R4/valueset-quantity-comparator.html)
+- [Vital Signs Units](https://hl7.org/fhir/R4/valueset-ucum-vitals-common.html)
+- [VitalSigns](https://hl7.org/fhir/R4/valueset-observation-vitalsignresult.html)
 
-
+***** TEST *****
+{% include value-sets.md -%}
 
 ### Code systems
 
 See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR.  All code systems used in this guide are defined in the base FHIR specification or [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html). 
 
 No code systems have been defined for this implementation guide.
+
+***** TEST *****
+{% include code-systems.md -%}
+
 
 ### Concept Maps
 
