@@ -27,7 +27,11 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - To represent that a patient does not have a condition or history of condition, an appropriate negation code is used in `Condition.code`
 - Refutation is not expected to be handled except as above - an appropriate negation code in `Condition.code` and `Condition.verificationStatus` of "confirmed" or "unconfirmed"
 
-<p class="request-for-feedback">Specific feedback is sought on how to do 'free text' medical history i.e. are these always Condition?<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43846">FHIR-43846</a>.</p>
-
-<p class="request-for-feedback">Specific feedback is sought on how a diagnosis type (e.g. Comorbidity, Complication) would be represented in AU Core Condition.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43847">FHIR-43847</a>.</p>
-
+<div class="request-for-feedback">
+    <p>We seek specific feedback on the following proposals regarding the Condition resource. Please provide your comments on the corresponding HL7 Jira items:
+        <ul>
+            <li>How to do 'free text' medical history i.e. are these always Condition: <a href="https://jira.hl7.org/browse/FHIR-43846">FHIR-43846</a></li>
+            <li>How a diagnosis type (e.g. Comorbidity, Complication) would be represented in AU Core Condition: <a href="https://jira.hl7.org/browse/FHIR-43847">FHIR-43847</a></li>
+        </ul>
+    </p>
+</div>

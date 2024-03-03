@@ -24,9 +24,11 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
 
 
-
-<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Practitioner.qualification.period and Practitioner.qualification.issuer, as their inclusion in AU Core may be premature without clear support from existing systems.  Additionally, issuer can be derived from the AHPRA identifier assigner. <br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44587">FHIR-44587</a>.</p>
-
-<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Practitioner.communication, as its inclusion in AU Core may be premature without clear support from existing systems.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44588">FHIR-44588</a>.</p>
-
-<p class="request-for-feedback">Specific feedback is sought on the proposal to remove the mandatory requirement to support _revinclude of Provenance.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-43850">Jira issue #FHIR-43850</a>.</p>
+<div class="request-for-feedback">
+    <p>We seek specific feedback on the following proposals regarding the Practitioner resource. Please provide your comments on the corresponding HL7 Jira items:</p>
+    <ul>
+        <li>Removal of Must Support from <code>Practitioner.qualification.period</code> and <code>Practitioner.qualification.issuer</code>, as their inclusion in AU Core may be premature without clear support from existing systems. Additionally, issuer can be derived from the AHPRA identifier assigner: <a href="https://jira.hl7.org/browse/FHIR-44587">FHIR-44587</a></li>
+        <li>Removal of Must Support from <code>Practitioner.communication</code> as its inclusion in AU Core may be premature without clear support from existing systems: <a href="https://jira.hl7.org/browse/FHIR-44588">FHIR-44588</a></li>
+        <li>Removal of the mandatory requirement to support <code>_revinclude</code> of Provenance: <a href="https://jira.hl7.org/browse/FHIR-43850">FHIR-43850</a></li>
+    </ul>    
+</div>
