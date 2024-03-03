@@ -98,7 +98,7 @@
     <td>HL7</td>
   </tr>
   <tr>
-    <td><a href="https://hl7.org/fhir/R4/codesystem-medicationrequest-category.html">Medication request category codes</a></td>c
+    <td><a href="https://hl7.org/fhir/R4/codesystem-medicationrequest-category.html">Medication request category codes</a></td>
     <td><a href="https://hl7.org/fhir/R4/valueset-medicationrequest-category.html">Medication request category codes</a></td>
     <td>HL7</td>
   </tr>
