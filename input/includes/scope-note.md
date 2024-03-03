@@ -74,7 +74,6 @@ A summary of AU Core changes since the [last snapshot](https://hl7.org.au/fhir/c
         <li>AU Core Observation profiles now references core FHIR resources in place of previously removed AU Core profiles.</li>
     </ul>    
 </li>
-
 <li>The following value sets have been removed:
     <table border="0"> 
         <tr>
