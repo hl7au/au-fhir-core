@@ -20,8 +20,6 @@
         </coding>
         <text value="Confirmed"/> 
     </verificationStatus>
-    <type value="allergy"/>
-    <category value="food"/>
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
@@ -42,14 +40,6 @@
         <reference value="PractitionerRole/bobrester-bob-gp"/>
      </asserter>
     <reaction>
-    <substance>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="102263004"/>
-            <display value="Eggs (edible)"/>
-        </coding>
-        <text value="Egg"/>
-    </substance>
     <manifestation>
       <coding> 
         <system value="http://snomed.info/sct"/> 

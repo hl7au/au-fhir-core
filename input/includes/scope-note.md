@@ -57,10 +57,16 @@ A summary of AU Core changes since the [last snapshot](https://hl7.org.au/fhir/c
     </tr>
 </table>
 </li>
+
 <li>Changes applied to the profiles: 
     <ul>
-        <li>In AU Core Patient, added Must Support flag to Individual Gender Identity and Individual Pronouns elements.</li>
-        <li>AU Core AllergyIntolerance now references core FHIR resources in place of previously removed AU Core profiles.</li>
+        <li>Changes to AU Core AllergyIntolerance to:
+            <ul>
+                <li>remove Must Support from AllergyIntolerance.type, AllergyIntolerance.category, and AllergyIntolerance.reaction.substance</li>
+                <li>reference core FHIR resources in place of previously removed AU Core profiles</li>
+            </ul>
+        </li>
+        <li>Changes to AU Core Patient to add Must Support to Individual Gender Identity and Individual Pronouns elements.</li>
         <li>AU Core Condition now references core FHIR resources in place of previously removed AU Core profiles.</li>
         <li>AU Core Encounter now references core FHIR resources in place of previously removed AU Core profiles.</li>
         <li>AU Core MedicationRequest now references core FHIR resources in place of previously removed AU Core profiles.</li>
