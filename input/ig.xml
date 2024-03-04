@@ -38,13 +38,13 @@
 		<version value="current"/>
 	</dependsOn>
 	<definition>
-	<resource>
+		<resource>
 			<reference>
 				<reference value="CapabilityStatement/au-core-server"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
-			<resource>
+		<resource>
 			<reference>
 				<reference value="CapabilityStatement/au-core-client"/>
 			</reference>
@@ -334,14 +334,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Encounter/covid-admin-2"/>
-			</reference>
-			<name value="Encounter - COVID 19 Vaccine Administration 2"/>
-			<description value="COVID 19 Vaccine Administration for Immunization-covid-2&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Encounter/delivery"/>
 			</reference>
 			<name value="Encounter - Delivery"/>
@@ -401,7 +393,7 @@
 		<resource>
 			<reference>
 				<reference value="Goal/hpt-wnl"/>
-			</reference>			
+			</reference>
 			<name value="Goal - Systolic blood pressure (part of multiple chronic condition care plan)"/>
 			<description value="High priority goal of systolic blood pressure between 110 and 140 mmHg (part of multiple chronic condition care plan)&#xa;&#xa;Patient: Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Goal"/>
@@ -420,14 +412,6 @@
 				<reference value="Immunization/covid-1"/>
 			</reference>
 			<name value="Immunization - COVID Dose 1"/>
-			<description value="Mrs. Anne Bennelong - COVID Dose 1"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Immunization/covid-2"/>
-			</reference>
-			<name value="Immunization - COVID Dose 2"/>
 			<description value="Mrs. Anne Bennelong - COVID Dose 1"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
 		</resource>
@@ -675,22 +659,6 @@
 			<name value="Observation - Temperature"/>
 			<description value="Temperature&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/bodytemp-fever"/>
-			</reference>
-			<name value="Observation - Temperature (fever)"/>
-			<description value="Temperature of 39.4&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/bodyweight-1"/>
-			</reference>
-			<name value="Observation - Body weight 1"/>
-			<description value="Body weight recorded by Mother at 6 months&#xa;&#xa;Patient: John Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight"/>
 		</resource>
 		<resource>
 			<reference>
@@ -1208,7 +1176,7 @@
 					<nameUrl value="future.html"/>
 					<title value="Future of AU Core"/>
 					<generation value="markdown"/>
-				</page>				
+				</page>
 			</page>
 			<page>
 				<nameUrl value="profiles-and-extensions.html"/>
