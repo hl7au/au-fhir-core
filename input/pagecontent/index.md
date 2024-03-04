@@ -111,7 +111,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [AUCDI](aucdi.html): This page maps the AU Core resources and elements to AUCDI data classes and data elements.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Core and other implementation guides.
   - [Comparison with other national and international specifications](comparison.html): This page provides comparison between AU Core profiles and other national, or international implementation guides.
-  - [Future of AU Core](future.html): This is a placeholder for when content becomes available.
+  - [Future of AU Core](future.html): This page outlines the approach to developing AU Core and yearly update cycle.
 - [FHIR Artefacts](artifacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This set of pages describes the profiles and extensions that are defined in this guide to exchange quality data. Each profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.
   - [Search Parameters](search-parameters.html): This set of pages lists the search parameters extended for use in this guide for use in AU Core operations.
