@@ -4,7 +4,7 @@ As well as terminology defined in FHIR, this specification supports terminology 
 
 ### Value Sets
 
-See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on value sets and a list of value set names used in FHIR.  Most value sets used in this guide are defined in the base FHIR specification or [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html). 
+This implementation guide does not define any unique value sets. The value sets used in this guide are defined in the base FHIR specification, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), or [NCTS](https://www.healthterminologies.gov.au/integration/R4/fhir/metadata).  
 
 No value sets have been defined for this implementation guide.
 
@@ -40,8 +40,6 @@ No value sets have been defined for this implementation guide.
 - [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1)
 - [Healthcare Organisation Role Type](https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1)
 - [Indicator of Hypersensitivity or Intolerance to Substance](https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2)
-- [Individual Healthcare Identifier Record Status](https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1)
-- [Individual Healthcare Identifier Status](https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1)
 - [Medication Form](https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1)
 - [Medication Reason Taken](https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1)
 - [Metric Body Length Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-length-units-1)
@@ -59,8 +57,6 @@ No value sets have been defined for this implementation guide.
 - [Vaccination Target Disease](https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1) 
 
 **Value sets published in FHIR**
-- [AddressType](https://hl7.org/fhir/R4/valueset-address-type.html)
-- [AddressUse](https://hl7.org/fhir/R4/valueset-address-use.html)
 - [AdministrativeGender](https://hl7.org/fhir/R4/valueset-administrative-gender.html)
 - [AllergyIntolerance Clinical Status Codes](https://hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html)
 - [AllergyIntolerance Verification Status Codes](http://hl7.org/fhir/R4/valueset-allergyintolerance-verification.html)
@@ -96,17 +92,14 @@ No value sets have been defined for this implementation guide.
 
 ### Code systems
 
-See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR. All code systems used in this guide are defined in the base FHIR specification or [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html). 
+This implementation guide does not define any unique code systems. The code systems used in this guide are defined in the base FHIR specification, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), or [NCTS](https://www.healthterminologies.gov.au/integration/R4/fhir/metadata).  
 
-No code systems have been defined for this implementation guide.
-
+The list below shows the code systems used in a value set that is bound to a supported element or element slice.
 
 **Code systems published in AU Base**
 - [ActCodeAU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v3-ActCode.html)
 - [DegreeLicenseCertificate AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v2-0360.html)
 - [IdentifierType AU](https://build.fhir.org/ig/hl7au/au-fhir-base//CodeSystem-au-v2-0203.html)
-- [Individual Healthcare Identifier Record Status](https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1)
-- [Individual Healthcare Identifier Status](https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1)
 - [Location Type (Physical) AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-physical-type.html)
 - [Location Type AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-type.html)
 - [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-pbs-item-external.html)
@@ -116,10 +109,9 @@ No code systems have been defined for this implementation guide.
 - [Australian Immunisation Register Vaccine](https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats)
 - [Australian Indigenous Status](https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1)
 - [Australian States and Territories](https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1)
+- [SNOMED CT (SNOMED CT AU (Australian Medicines Terminology))](https://developer.digitalhealth.gov.au/resources/services/national-clinical-terminology-service-ncts)
 
 **Code systems published in FHIR**
-- [AddressType](https://hl7.org/fhir/R4/codesystem-address-type.html)
-- [AddressUse](https://hl7.org/fhir/R4/codesystem-address-use.html)
 - [AdministrativeGender](https://hl7.org/fhir/R4/codesystem-administrative-gender.html)
 - [AllergyIntolerance Clinical Status Codes](https://hl7.org/fhir/R4/codesystem-allergyintolerance-clinical.html)
 - [AllergyIntoleranceSeverity](https://hl7.org/fhir/R4/codesystem-reaction-event-severity.html)
@@ -147,6 +139,9 @@ No code systems have been defined for this implementation guide.
 - [providerRole](https://terminology.hl7.org/5.3.0/CodeSystem-v2-0443.html)
 - [v3 Code System ObservationInterpretation](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html)
 
+*Other code systems**
+- [LOINC](https://loinc.org/)
+- [Tags for the Identification of Languages](urn:ietf:bcp:47)
 
 
 ### Concept Maps
