@@ -26,11 +26,5 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - A client application **SHALL** support both elements
 - A procedure including an implantable device should use `Procedure.focalDevice` with a reference to a Device resource
 
-<div class="request-for-feedback">
-  <p>We seek specific feedback on the following proposals regarding the Procedure resource. Please provide your comments on the corresponding HL7 Jira items:
-  <ul>
-    <li>Removal of the mandatory requirement to support <code>_revinclude</code> of Provenance: <a href="https://github.com/hl7au/au-fhir-core/issues/70">au-fhir-core/issues/70</a></li>
-    <li>Should the <code>bodySite</code> be removed from this profile and AU Core only supports information being sent in <code>Procedure.code</code> i.e bodySite is redundant as body is pre-coordinated in Procedure.code or qualifies Procedure.code as body site is not defined in code: <a href="https://github.com/hl7au/au-fhir-core/issues/64">au-fhir-core/issues/64</a></li>
-  </ul>
-  </p>
-</div>
+<p class="request-for-feedback">Specific feedback is sought on the proposal to remove the mandatory requirement to support _revinclude of Provenance.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/70">au-fhir-core/issues/70</a>.</p>
+<p class="request-for-feedback">Specific feedback is sought on whether the bodySite element should be removed from this profile and AU Core only supports information being sent in Procedure.code i.e bodySite is redundant as body site pre-coordinated in Procedure.code or qualifies Procedure.code as body site is not defined in code.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/64">au-fhir-core/issues/64</a>.</p>

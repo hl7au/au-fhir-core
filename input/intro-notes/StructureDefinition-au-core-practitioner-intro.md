@@ -25,10 +25,10 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 
 <div class="request-for-feedback">
-    <p>We seek specific feedback on the following proposals regarding the Practitioner resource. Please provide your comments on the corresponding HL7 Jira items:</p>
+    <p>Specific feedback is sought on the following proposals regarding the Practitioner resource. Please provide your comments on the corresponding HL7 Jira items.</p>
     <ul>
-        <li>Removal of Must Support from <code>Practitioner.qualification.period</code> and <code>Practitioner.qualification.issuer</code>, as their inclusion in AU Core may be premature without clear support from existing systems. Additionally, issuer can be derived from the AHPRA identifier assigner: <a href="https://jira.hl7.org/browse/FHIR-44587">FHIR-44587</a></li>
-        <li>Removal of Must Support from <code>Practitioner.communication</code> as its inclusion in AU Core may be premature without clear support from existing systems: <a href="https://jira.hl7.org/browse/FHIR-44588">FHIR-44588</a></li>
-        <li>Removal of the mandatory requirement to support <code>_revinclude</code> of Provenance: <a href="https://jira.hl7.org/browse/FHIR-43850">FHIR-43850</a></li>
+        <li>Removal of Must Support from Practitioner.qualification.period and Practitioner.qualification.issuer, as their inclusion in AU Core may be premature without clear support from existing systems. Additionally, issuer can be derived from the AHPRA identifier assigner: <a href="https://jira.hl7.org/browse/FHIR-44587">FHIR-44587</a></li>
+        <li>Removal of Must Support from Practitioner.communication as its inclusion in AU Core may be premature without clear support from existing systems: <a href="https://jira.hl7.org/browse/FHIR-44588">FHIR-44588</a></li>
+        <li>Removal of the mandatory requirement to support _revinclude of Provenance: <a href="https://jira.hl7.org/browse/FHIR-43850">FHIR-43850</a></li>
     </ul>    
 </div>
