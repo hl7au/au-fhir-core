@@ -24,10 +24,11 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core
   - A client application **SHALL** support both elements
 
 <div class="request-for-feedback">
-  <p>Specific feedback is sought on the following proposals regarding the Encounter resource. Please provide your comments on the corresponding HL7 Jira items.<ul>
-    <li>Removal of Must Support from Encounter.type, as its inclusion in AU Core may be premature without clear overall support from existing systems. Furthermore, the associated preferred binding is unlikely to be supported by existing systems, suggesting that support for free text or local codes may be the most feasible approach at this point: <a href="https://jira.hl7.org/browse/FHIR-44580">FHIR-44580</a></li>
-    <li>Removal of Must Support from Encounter.serviceType, as its inclusion in AU Core may be premature without clear overall support from existing systems. Furthermore, the associated preferred binding is unlikely to be supported by existing systems, suggesting that support for free text or local codes may be the most feasible approach at this point: <a href="https://jira.hl7.org/browse/FHIR-44581">FHIR-44581</a></li>
-    <li>Removal of Must Support from Encounter.reasonReference, as its inclusion in AU Core may be premature without clear overall support from existing systems: <a href="https://jira.hl7.org/browse/FHIR-44582">FHIR-44582</a></li>
-  </ul>
-  </p>
+    <p>Specific feedback is sought on a series of proposals to remove Must Support from the following elements:
+    <ul>
+        <li>Encounter.type, as its inclusion in AU Core may be premature without clear overall support from existing systems. Furthermore, the associated preferred binding is unlikely to be supported by existing systems, suggesting that support for free text or local codes may be the most feasible approach at this point.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-44580">FHIR-44580</a>.</li>
+        <li>Encounter.serviceType, as its inclusion in AU Core may be premature without clear overall support from existing systems. Furthermore, the associated preferred binding is unlikely to be supported by existing systems, suggesting that support for free text or local codes may be the most feasible approach at this point.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-44581">FHIR-44581</a>.</li>
+        <li>Encounter.reasonReference, as its inclusion in AU Core may be premature without clear overall support from existing systems.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-44582">FHIR-44582</a>.</li>
+    </ul>
+    </p>
 </div>

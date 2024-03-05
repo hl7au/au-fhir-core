@@ -19,15 +19,17 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 ### Profile specific implementation guidance
 - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
 
+<p class="request-for-feedback">Specific feedback is sought on whether the location element should be removed from this profile.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43841">FHIR-43841</a>.</p>
+
 <div class="request-for-feedback">
-    <p>Specific feedback is sought on the following proposals regarding the PractitionerRole resource. Please provide your comments on the corresponding HL7 Jira items:</p>
+    <p>Specific feedback is sought on following enhancements to search parameters:
     <ul>
-        <li>Removal of Must Support from PractitionerRole.location: <a href="https://jira.hl7.org/browse/FHIR-43841">FHIR-43841</a></li>
-        <li>Proposal to remove the mandatory requirement to support _revinclude of Provenance: <a href="https://jira.hl7.org/browse/FHIR-43850">FHIR-43850</a></li>
-        <li>Supporting search for practitioner by reference vs chained searching using practitioner.identifier: <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a></li>
-        <li>Supporting search for organization by reference vs chained searching using organization.identifier: <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a></li>
-        <li>Removal of support for searching using HPI-I identifier, as it is not supported by AU Core PractitionerRole: <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a></li>
-        <li>Use of code-only in an identifier search parameter, along with a recommendation to explicitly specify a single type of identifier (or an explicit list) for greater quality: <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a></li>
-        <li>Removal of the mandatory requirement to support _revinclude of Provenance: <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a></li>
-    </ul>    
+        <li>Support for searching for a practitioner by reference versus chained searching using practitioner.identifier.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a>.</li>
+        <li>Support for searching for an organization by reference versus chained searching using organization.identifier.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a>.</li>
+        <li>Removal of support for searching using HPI-I identifier, as it is not supported by AU Core PractitionerRole.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a>.</li>
+        <li>The use of code-only in an identifier search parameter, with a recommendation to specify a single type of identifier or an explicit list for greater quality.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a>.</li>
+        <li>Removal of the mandatory requirement to support _revinclude of Provenance.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-43850">FHIR-43850</a> and on <a href="https://github.com/hl7au/au-fhir-core/issues/70">au-fhir-core/issues/70</a>.</li>
+    </ul>
+    </p>
 </div>
+
