@@ -48,21 +48,7 @@ By making Individual Gender Identity a Must Support data element, this profile e
   - Where the workflow does not support obtaining a gender identity value, it may be represented by sending the code "not-asked"
 - When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/) and [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html)
 
-<div class="request-for-feedback"><p>Specific feedback is sought on adding Must Support to specific parts of the HumanName in the AU Core Patient profile. Following the TDG agreement on making Patient.name.use a Must Support element, this proposal extends Must Support to:<ul>
-  <li>Patient.name.text</li>
-  <li>Patient.name.family</li>
-  <li>Patient.name.given</li></ul>
-Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44818">FHIR-44818</a>.
- </p>
-</div>
+<p class="request-for-feedback">Following the TDG agreement to set Must Support on parts of HumanName in AU Core Patient (noting the existing Must Support on Patient.name.use), specific feedback is sought on other parts of HumanName that should be supported.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44818">FHIR-44818</a>.</p>
 
-<div class="request-for-feedback"><p>Request for feedback on introducing a specific AU Core profile for the individual-recordedSexOrGender FHIR extension to represent Sex Assigned at Birth values. This proposal aims to:<ul>
-  <li>Define the minimum expectations for a Recorded Sex or Gender FHIR extension when representing a Sex Assigned at Birth value</li>
-  <li>Enable Sex Assigned at Birth to be a Must Support element in AU Core Patient</li>
-  <li>Ensure conformance testing of Must Support Sex Assigned at Birth values while accommodating additional RSG values </li>
-  </ul>
-Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44856">FHIR-44856</a>.
- </p>
-</div>
+<p class="request-for-feedback">Specific feedback is sought on adding Sex Assigned at Birth as a Must Support element in AU Core Patient.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44856">FHIR-44856</a> and on <a href="https://jira.hl7.org/browse/FHIR-44857">FHIR-44857</a>.</p>
 
-<p class="request-for-feedback">Specific feedback is sought on adding Must Support to Sex Assigned at Birth element, subject to <a href="https://jira.hl7.org/browse/FHIR-44856">FHIR-44856</a> being accepted as persuasive, please see above. <br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44857">FHIR-44857</a>.</p>
