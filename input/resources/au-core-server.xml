@@ -514,6 +514,9 @@
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
+</li>
 </ul>
 </div>
 </div>
@@ -658,6 +661,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -901,6 +907,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -1207,6 +1216,9 @@
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
+</li>
 </ul>
 </div>
 </div>
@@ -1394,6 +1406,9 @@
     <li>
     <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
     </li>
+    <li>
+    <strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
+    </li>
     </ul>
     </div>
     </div>
@@ -1540,7 +1555,7 @@
 <strong>SHALL</strong> support <code>read</code>.
 </li>
 <li>
-<strong>MAY</strong> support <code>search-type</code>.
+<strong>MAY</strong> support <code>search-type</code>,<code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -1591,6 +1606,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -1841,6 +1859,9 @@
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
+</li>
 </ul>
 </div>
 </div>
@@ -2034,6 +2055,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -2277,6 +2301,9 @@
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
+</li>
 </ul>
 </div>
 </div>
@@ -2398,6 +2425,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -2662,6 +2692,9 @@
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
+</li>
 </ul>
 </div>
 </div>
@@ -2771,6 +2804,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -2939,6 +2975,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -3144,7 +3183,7 @@
 <strong>SHALL</strong> support <code>read</code>.
 </li>
 <li>
-<strong>MAY</strong> support <code>search-type</code>.
+<strong>MAY</strong> support <code>search-type</code>,<code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
