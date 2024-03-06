@@ -6,7 +6,7 @@ As well as terminology defined in FHIR, this specification supports terminology 
 
 This implementation guide does not define any unique value sets. The value sets used in this guide are defined in the base FHIR specification, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), or [NCTS](https://www.healthterminologies.gov.au/integration/R4/fhir/metadata).  
 
-No value sets have been defined for this implementation guide.
+The list below shows the value sets bound to a supported element or element slice.
 
 {% include res-list-generator.md type="ValueSet" %}
 
@@ -30,7 +30,6 @@ No value sets have been defined for this implementation guide.
 - [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) 
 - [Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1)
 - [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1)
-- [Australian States and Territories](https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2)
 - [Body Site](https://healthterminologies.gov.au/fhir/ValueSet/body-site-1)
 - [Clinical Condition](https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1)
 - [Clinical Finding](https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1)
@@ -108,12 +107,14 @@ The list below shows the code systems used in a value set that is bound to a sup
 **Code systems published in the NCTS**
 - [Australian Immunisation Register Vaccine](https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats)
 - [Australian Indigenous Status](https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1)
-- [Australian States and Territories](https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1)
-- [SNOMED CT (SNOMED CT AU (Australian Medicines Terminology))](https://developer.digitalhealth.gov.au/resources/services/national-clinical-terminology-service-ncts)
+- [SNOMED CT (SNOMED CT AU (Australian Medicines Terminology))](https://www.healthterminologies.gov.au/access-clinical-terminology/access-fhir-terminology-resources/code-systems/?ui:filter=snomed)
+ - [LOINC](https://www.healthterminologies.gov.au/access-clinical-terminology/access-fhir-terminology-resources/code-systems/?ui:filter=loinc)
 
 **Code systems published in FHIR**
+- [ActCode](https://terminology.hl7.org/5.3.0/CodeSystem-v3-ActCode.html)
 - [AdministrativeGender](https://hl7.org/fhir/R4/codesystem-administrative-gender.html)
 - [AllergyIntolerance Clinical Status Codes](https://hl7.org/fhir/R4/codesystem-allergyintolerance-clinical.html)
+- [AllergyIntolerance Verification Status Codes](http://hl7.org/fhir/R4/codesystem-allergyintolerance-verification.html)
 - [AllergyIntoleranceSeverity](https://hl7.org/fhir/R4/codesystem-reaction-event-severity.html)
 - [Condition Category Codes](https://hl7.org/fhir/R4/codesystem-condition-category.html)
 - [Condition Clinical Status Codes](https://hl7.org/fhir/R4/codesystem-condition-clinical.html)
@@ -122,26 +123,23 @@ The list below shows the code systems used in a value set that is bound to a sup
 - [EncounterStatus](https://hl7.org/fhir/R4/codesystem-encounter-status.html)
 - [EventStatus](https://hl7.org/fhir/R4/codesystem-event-status.htm)
 - [HL7 Version 2 Table 0074](http://terminology.hl7.org/CodeSystem/v2-0074)
-- [Separation Mode](https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1)
-- [Medication usage category codes](https://hl7.org/fhir/R4/codesystem-medication-statement-category.html)
-- [v3 Code System ParticipationType](https://hl7.org/fhir/R4/v3/ParticipationType/cs.html)
 - [identifierType](https://terminology.hl7.org/5.3.0/CodeSystem-v2-0203.html)
 - [Location Mode](https://hl7.org/fhir/R4/codesystem-location-mode.html)
 - [LocationStatus](https://hl7.org/fhir/R4/codesystem-location-status.html)
 - [Medication request category codes](https://hl7.org/fhir/R4/codesystem-medicationrequest-category.html)
 - [Medication request intent](https://hl7.org/fhir/R4/codesystem-medicationrequest-intent.html)
 - [Medication status code](https://hl7.org/fhir/R4/codesystem-medication-statement-status.html)
+- [Medication usage category codes](https://hl7.org/fhir/R4/codesystem-medication-statement-category.html)
 - [Medicationrequest status](https://hl7.org/fhir/R4/codesystem-medicationrequest-status.html)
 - [NameUse](https://hl7.org/fhir/R4/codesystem-name-use.html)
 - [Observation Category Codes](https://hl7.org/fhir/R4/codesystem-observation-category.html)
 - [Observation Reference Range Meaning Codes](https://hl7.org/fhir/R4/codesystem-referencerange-meaning.html)
 - [ObservationStatus](http://hl7.org/fhir/observation-status)
 - [providerRole](https://terminology.hl7.org/5.3.0/CodeSystem-v2-0443.html)
+- [Separation Mode](https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1)
+- [Tags for the Identification of Languages](https://terminology.hl7.org/CodeSystem-v3-ietf3066.html)
 - [v3 Code System ObservationInterpretation](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html)
-
-*Other code systems**
-- [LOINC](https://loinc.org/)
-- [Tags for the Identification of Languages](urn:ietf:bcp:47)
+- [v3 Code System ParticipationType](https://hl7.org/fhir/R4/v3/ParticipationType/cs.html)
 
 
 ### Concept Maps
