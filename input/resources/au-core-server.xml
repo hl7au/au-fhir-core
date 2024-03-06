@@ -102,8 +102,8 @@
             <div>
 
               <ol>
-                <li>A server <strong>SHALL</strong> reject any unauthorized requests by returning an HTTP 401 "Unauthorized", HTTP 403 "Forbidden", or HTTP 404 "Not Found"</li>
-                <li>For Authentication and Authorization, Systems <strong>SHOULD</strong> support any SMART App Launch and SMART Backend Service Authorization. When this is not avalable, Basic Authentication <strong>MAY</strong> be used. </li>
+                <li>A server <strong>MAY</strong> reject any unauthorized requests by returning an HTTP 401 "Unauthorized", HTTP 403 "Forbidden", or HTTP 404 "Not Found"</li>
+                <li>For Authentication and authorisation, Systems <strong>MAY</strong> support any SMART App Launch and SMART Backend Service Authorization. When this is not avalable, Basic Authentication <strong>MAY</strong> be used. </li>
              </ol>
             </div>
           </blockquote>
