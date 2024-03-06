@@ -21,4 +21,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - See the [Medicine information](general-guidance.html#medicine-information) section for guidance on constructing a resource and the use of medicines terminology
 - Manufacturer information will commonly be exchanged as a PBS code, this information can be represented as an external resource of by using `Medication.manufacturer.identifier` to carry the PBS code and `Medication.manufacturer.display` to carry the name of the manufacturer 
 
-<p class="request-for-feedback">Specific feedback is sought on supporting ingredient information in Medication. Identification of a specific ingredient can be support by use of <code>Medication.itemCodeableConcept</code> or <code>Medication.itemReference</code> which refers to an external Medication or Substance resource.</p>
+<p class="request-for-feedback">Specific feedback is sought on supporting ingredient information in Medication. Identification of a specific ingredient can be support by use of Medication.itemCodeableConcept or Medication.itemReference which refers to an external Medication or Substance resource.</p>

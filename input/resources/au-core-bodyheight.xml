@@ -262,7 +262,6 @@
       </extension>
       <path value="Observation.dataAbsentReason"/>
       <condition value="au-core-obs-02"/>
-      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>
