@@ -30,4 +30,3 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 <p class="request-for-feedback">Specific feedback is sought on how to do 'free text' medical history i.e. are these always Condition?<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43846">FHIR-43846</a>.</p>
 
 <p class="request-for-feedback">Specific feedback is sought on how a diagnosis type (e.g. Comorbidity, Complication) would be represented in AU Core Condition.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43847">FHIR-43847</a>.</p>
-
