@@ -25,10 +25,5 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 <p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from AllergyIntolerance.asserter element. It's expected that many systems might choose not to use this field,  opting to derive its value from the Recorder entity. There's some uncertainty about how widespread this approach is across different systems' information recording processes.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44699">FHIR-44699</a>.</p>
 
-<div class="request-for-feedback"><p>Specific feedback is sought on the AllergyIntolerance.code refined subset binding proposal, based on the feedback received by vendors. This proposal recommends to:<ul>
-    <li>Align AllergyIntolerance.code with vendor systems by supporting  Substance Foundation (SF), Medicinal Product (MP), Trade Product (TP), Medicinal Product Unit of Use (MPUU), and Trade Product Unit of Use (TPUU)</li>
-    <li>Remove reference sets not used by vendors which include: Medicinal product pack reference set (MPP), Containered trade product pack reference set (CTPP), Adverse reaction agent reference set (ARA)</li>
-    <li>Create new value set that is a refined subset of the <a href="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2">Indicator of Hypersensitivity or Intolerance to Substance</a> and aligns with the systems use</li>
-    <li>Change AllergyIntolerance.code binding strength to extensible for the Indicator of Hypersensitivity or Intolerance to Substance, and add the new value set binding as an additional binding with the status of candidate</li>
-</ul>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44713">FHIR-44713</a>.</p>
-</div>
+<p class="request-for-feedback"><p>Specific feedback is sought on the AllergyIntolerance.code refined subset binding proposal, based on the feedback received by vendors.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44713">FHIR-44713</a>.</p>
+

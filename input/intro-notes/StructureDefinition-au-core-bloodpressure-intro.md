@@ -23,5 +23,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - `Observation.value[x]` element **SHOULD** be omitted
   - an Observation without a systolic or diastolic result value, **SHOULD** include a reason why the data is absent in `Observation.component.dataAbsentReason`
 
-<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Observation.performer element. This element is not flagged as must support in similar profiles in other implementation guides, such as US Core and IPS, and it lacks a counterpart in AUCDI R1 with no inclusion planned for the R2 roadmap. Given that the current guidance and description are quite general, it is proposed future revisions should focus on utilising feedback from distinct use cases (such as patient-reported versus provider-reported observations) to provide more specific guidance.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44588">FHIR-44588</a>.</p>
-
+<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Observation.performer element across all AU Core Vital Signs and Measurements profiles.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44786">FHIR-44786</a>.</p>
