@@ -170,6 +170,22 @@
       </binding> 
     </element> 
     <element id="Observation.dataAbsentReason">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
       <path value="Observation.dataAbsentReason"/>
       <condition value="au-core-obs-02"/>
       <mustSupport value="true"/>
