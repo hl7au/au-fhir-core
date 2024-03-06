@@ -263,6 +263,25 @@
       <sliceName value="SystolicBP" />
       <short value="Systolic Blood Pressure"/>
     </element>
+    <element id="Observation.component:SystolicBP.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
+      <path value="Observation.component.code" />
+    </element>
     <element id="Observation.component:SystolicBP.code.coding:snomedSBP">
       <path value="Observation.component.code.coding" />
       <sliceName value="snomedSBP" />
@@ -320,6 +339,25 @@
       <path value="Observation.component" />
       <sliceName value="DiastolicBP" />
       <short value="Diastolic Blood Pressure"/>
+    </element>
+    <element id="Observation.component:DiastolicBP.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
+      <path value="Observation.component.code" />
     </element>
     <element id="Observation.component:DiastolicBP.code.coding:snomedDBP">
       <path value="Observation.component.code.coding" />
