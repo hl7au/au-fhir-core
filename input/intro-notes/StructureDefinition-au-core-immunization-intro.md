@@ -1,4 +1,4 @@
-### Usage scenarios, 
+### Usage scenarios
 
 The following are supported usage scenarios for this profile:
 
