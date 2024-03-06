@@ -1,14 +1,12 @@
 ### Contained Resources
-In some circumstances, the content referred to in the resource reference does not have an independent existence apart from the resource that contains it - it cannot be identified independently, and nor can it have its own independent transaction scope. For example, use of a Medication resource to represent medicinal product identification within the context of a MedicationRequest. In these circumstances the resource should be [contained](http://hl7.org/fhir/R4/references.html#contained). 
-
-If referencing a contained resource, both the contained resource and the referencing resource **SHALL** conform to an AU Core profile. Further guidance about the general use case for [contained resources](http://hl7.org/fhir/R4/references.html#contained) can be found in the base FHIR specification.
+In some circumstances, the content referred to in the resource reference does not have an independent existence apart from the resource that contains it - it cannot be identified independently, and nor can it have its own independent transaction scope. For example, use of a Medication resource to represent medicinal product identification within the context of a MedicationRequest. In these circumstances the resource can be [contained](http://hl7.org/fhir/R4/references.html#contained). 
 
 In AU Core profiles:
-- Systems constructing a resource that represent medication or body structure information are encouraged to make use of contained resources. 
-  - Operations on Medication resources are expected to be within the context of a referencing resource query such as an MedicationAdministration, MedicationDispense, MedicationRequest or MedicationStatement.
-  - Operations on BodyStructure resources are expected to be within the context of a referencing resource query such as a DiagnosticReport, Observation, or ServiceRequest.
+- Systems constructing a resource that represent medication information are encouraged to make use of contained resources within the context of a FHIR transaction. Operations on Medication resources are expected to be within the context of a referencing resource query such as an MedicationAdministration, MedicationDispense, MedicationRequest or MedicationStatement.
+- If referencing a contained resource, both the contained resource and the referencing resource **SHALL** conform to the applicable AU Core profile.
 - Otherwise, when responding to a query, servers should not use inline contained resources to represent the returned data.
 
+ Further guidance about the general use case for [contained resources](http://hl7.org/fhir/R4/references.html#contained) can be found in the base FHIR specification.
 
 ### Extensibility – “additional” elements
 A server may send "additional" elements beyond those flagged with Must Support in an AU Core profile. Additional elements allow local requirements to be reflected including technical and workflow context for the resource, and extending the health information supported in exchanges. For this reason extensibility is generally allowed in AU Core profiles, only in some use case profiles are the rules tightened to limit the nature of additional information that can be sent.
@@ -25,11 +23,14 @@ The FHIR standard defines the following resources for exchanging medicine inform
 - [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html)
 - [MedicationStatement](http://hl7.org/fhir/R4/medicationstatement.html)
 
-[AU Core Medication](StructureDefinition-au-core-medication.html) is profiled to support medicinal product identification in an Australian healthcare context.
-AU Core profiles of MedicationStatement (with AU Core Medication) are used to support summary statements of medicine use. 
-AU Core profiles of MedicationAdministration (with AU Core Medication) are used to support medication chart and other administration use cases.
-AU Core profiles of MedicationDispense (with AU Core Medication) are used to support dispense records and ePrescribing use cases.
-AU Core profiles of MedicationRequest (with AU Core Medication) are used to support prescription, ordering, and ePrescribing use cases.
+AU Core defines the profiles:
+- [AU Core Medication](StructureDefinition-au-core-medication.html) is profiled to support medicinal product identification in an Australian healthcare context.
+- [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html) (with AU Core Medication) to support summary statements of medicine use. 
+- [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html) (with AU Core Medication) to support prescription, ordering, and ePrescribing use cases.
+
+It is anticipated that future releases of AU Core will define AU Core profiles of:
+- MedicationAdministration (with AU Core Medication) are used to support medication chart and other administration use cases.
+- MedicationDispense (with AU Core Medication) are used to support dispense records and ePrescribing use cases.
 
 **Medicinal Product Identification**
 
@@ -40,8 +41,6 @@ For non-extemporaneous medications, the medication code (or set of codes) is the
 Australian Medicines Terminology (AMT) is the national terminology for identification and naming of medicines in clinical systems for Australia. 
 The AMT is published monthly to include new items on the Australian Register of Therapeutic Goods from the TGA, as well as items listed on the Pharmaceutical Benefits Scheme. 
 The AMT is published as part of SNOMED CT-AU (Australian edition of SNOMED CT) and can be downloaded in a variety of formats from the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).
-
-*TBD: Insert PBS.*
 
 In addition to the medication code, the majority of use cases support exchange of structured medicine information as separate data elements covering brand name, generic name, item form and strength, and manufacturer.
 
@@ -296,46 +295,3 @@ Example: Patient resource with interpreter required and language is known
   ]
 }
 ~~~
-
-
-**RelatedPerson**
-
-The table below provides guidance on representing communication preferences for a related person. Blank cells in the indicate that the given element is absent from the resource.
-
-<table class="list" style="width:100%">
-    <colgroup>
-       <col span="1" style="width: 20%;"/>
-       <col span="1" style="width: 18%;"/>
-       <col span="1" style="width: 18%;"/>
-       <col span="1" style="width: 20%;"/>
-       <col span="1" style="width: 24%;"/>
-    </colgroup>
-	<tbody>
-      <tr>
-        <th>Scenario</th>
-        <th>communication.language</th>
-        <th>communication.preferred</th>
-		<th>Notes</th>
-      </tr>
-      <tr>
-        <td>Preferred language is English</td>
-        <td></td>
-        <td></td>
-        <td>No element sent, as per the guidance in the <a href="http://hl7.org/fhir/relatedperson-definitions.html#RelatedPerson.communication">Comments</a> of RelatedPerson.communication</td>
-      </tr>
-      <tr>
-        <td>Preferred language is other than English</td>
-        <td>language.coding</td>
-        <td>'true'</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Communicates with multiple languages</td>
-        <td>language.coding</td>
-        <td></td>
-        <td>Each language instantiated in separate communication nodes; communication.preferred may be sent as needed.</td>
-      </tr>
-    </tbody>
-</table>
-
-Blank cells in the above table indicate that the given element is absent from the resource.

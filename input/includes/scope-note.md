@@ -1,70 +1,128 @@
-<div class="request-for-feedback" markdown="1">
+<div class="note-to-contributors" markdown="1">
 
-#### AU Core R1 Scope 
-We have updated the AU Core current build to reflect the current <a href="https://confluence.hl7.org/display/HAFWG/AU+Core+R1+Scope">AU Core R1 Scope</a>: 
-<ul>
-<li>Profiles not in scope of R1 or not under consideration for R1 have been removed:
+A summary of AU Core changes since the [last snapshot](https://hl7.org.au/fhir/core/0.2.2-preview/) is provided below. 
 
-<table border="1">
-<thead>
-  <tr>
-    <th>AU Core R1 Profile</th>
-    <th>Profile under consideration for AU Core R1</th>
-    <th>AU Core R2+ Profile (removed from IG)</th>
-  </tr> 
-</thead>
-<tbody>
-  <tr>
-    <td>AU Core AllergyIntolerance<br/>AU Core Blood Pressure<br/>AU Core Body Height<br/>AU Core Body Temperature<br/>AU Core Body Weight<br/>AU Core Condition<br/>AU Core Encounter<br/>AU Core Heart Rate<br/>AU Core Immunization<br/>AU Core Location<br/>AU Core Medication<br/>AU Core Organization<br/>AU Core Patient<br/>AU Core Practitioner<br/>AU Core PractitionerRole<br/>AU Core Respiration Rate<br/>AU Core Smoking Status</td>
-    <td>AU Core Biological Sex Assigned at Birth<br/>AU Core BMI<br/>AU Core Consent<br/>AU Core Diagnostic Imaging Result Observation<br/>AU Core Diagnostic Result Observation<br/>AU Core DiagnosticReport<br/>AU Core DocumentReference<br/>AU Core Head Circumference<br/>AU Core HealthcareService<br/>AU Core Lipid Result<br/>AU Core Medication Request<br/>AU Core MedicationStatement<br/>AU Core Observation<br/>AU Core Oxygen Saturation<br/>AU Core Pathology Result Observation<br/>AU Core Procedure<br/>AU Core Provenance<br/>AU Core ServiceRequest<br/>AU Core Vitals Panel<br/>AU Core Waist Circumference</td>
-    <td>AU Core AdverseEvent<br/>AU Core Alcohol Status<br/>AU Core Assertion of No Relevant Finding<br/>AU Core BodyStructure<br/>AU Core CarePlan<br/>AU Core CareTeam<br/>AU Core Coverage<br/>AU Core Document Composition<br/>AU Core EpisodeOfCare<br/>AU Core Estimated Date of Delivery<br/>AU Core Gestational Age<br/>AU Core Gravidity<br/>AU Core Health Program Participation Summary<br/>AU Core Last Menstrual Period<br/>AU Core List<br/>AU Core MedicationAdministration<br/>AU Core MedicationDispense<br/>AU Core Parity<br/>AU Core Pregnancy Status<br/>AU Core RelatedPerson<br/>AU Core Smoking Cease Date<br/>AU Core Smoking Start Date<br/>AU Core Specimen<br/>AU Core Substance<br/>AU Core System Device<br/>AU Core Task</td>
-  </tr>
-</tbody>
+<li>Removed profiles:
+<table border="0"> 
+    <tr>
+        <td width="30%"> 
+            <ul>
+                <li>AU Core AdverseEvent</li>
+                <li>AU Core Alcohol Status</li>
+                <li>AU Core Assertion of No Relevant Finding</li>
+                <li>AU Core BMI</li>
+                <li>AU Core BodyStructure</li>
+                <li>AU Core CarePlan</li>
+                <li>AU Core CareTeam</li>
+                <li>AU Core Coverage</li>
+                <li>AU Core Diagnostic Imaging Result Observation</li>
+                <li>AU Core DiagnosticReport</li>
+                <li>AU Core Document Composition</li>
+                <li>AU Core DocumentReference</li>
+            </ul>
+        </td>
+        <td width="30%"> 
+            <ul>
+                <li>AU Core EpisodeOfCare</li>
+                <li>AU Core Estimated Date of Delivery</li>
+                <li>AU Core Gestational Age</li>
+                <li>AU Core Gravidity</li>
+                <li>AU Core Head Circumference</li>
+                <li>AU Core Health Program Participation Summary</li>
+                <li>AU Core HealthcareService</li>
+                <li>AU Core Last Menstrual Period</li>
+                <li>AU Core Lipid Result</li>
+                <li>AU Core List</li>
+                <li>AU Core MedicationAdministration</li>
+                <li>AU Core MedicationDispense</li>
+                <li>AU Core Observation</li>
+            </ul>
+        </td>    
+        <td width="30%"> 
+            <ul>
+                <li>AU Core Oxygen Saturation</li> 
+                <li>AU Core Parity</li> 
+                <li>AU Core Pregnancy Status</li> 
+                <li>AU Core RelatedPerson</li> 
+                <li>AU Core ServiceRequest</li> 
+                <li>AU Core Smoking Cease Date</li> 
+                <li>AU Core Smoking Start Date</li> 
+                <li>AU Core Specimen</li> 
+                <li>AU Core Substance</li> 
+                <li>AU Core System Device</li> 
+                <li>AU Core Task</li> 
+                <li>AU Core Vitals Panel</li>                               
+            </ul>
+        </td>
+    </tr>
 </table>
 </li>
-<li>Other changes:<ul>
-<li>Changed AllergyIntolerance.recorder and AllergyIntolerance.asserter to remove type restriction to AU Core RelatedPerson.</li>
-<li>Changed Condition.asserter to remove type restriction to AU Core RelatedPerson.</li>
-<li>Changed Condition.recorder to remove type restriction to AU Core RelatedPerson.</li>
-<li>Changed DocumentReference.author to remove type restriction to AU Core RelatedPerson.</li>
-<li>Changed DocumentReference.author to remove type restriction to AU Core System Device.</li>
-<li>Changed Encounter.participant.individual to remove type restriction to AU Core RelatedPerson.</li>
-<li>Changed MedicationRequest.requester to remove type restriction to AU Core RelatedPerson.</li>
-<li>Changed MedicationStatement.basedOn to remove type restriction to AU Core CarePlan.</li>
-<li>Changed MedicationStatement.informationSource to remove type restriction to AU Core RelatedPerson.</li>
-<li>Changed Observation.performer to remove type restriction to AU Core CareTeam.</li>
-<li>Changed Observation.performer to remove type restriction to AU Core RelatedPerson.</li>
-<li>Changed Observation.specimen to remove type restriction to AU Core Specimen.</li>
-<li>Changed Procedure.asserter to remove type restriction to AU Core RelatedPerson.</li>
-<li>Changed Procedure.recorder to remove type restriction to AU Core RelatedPerson.</li>
-<li>Changed Provenance.agent.onBehalfOf  to remove type restriction to AU Core RelatedPerson.</li>
-<li>Changed Provenance.agent.who to remove type restriction to AU Core RelatedPerson.</li>
-<li>Changed ServiceRequest.performer to remove type restrictions to AU Core RelatedPerson and AU Core CareTeam.</li>
-<li>Updated CapabilityStatement remove purged profiles.</li>
-<li>Removed ValueSets:<ul>
-<li>Pregnancy Status</li>
-<li>Alcohol Intake Status</li>
-<li>Estimated Date of Delivery</li>
-<li>Estimated Date of Delivery LOINC</li></ul>
+
+<li>Changes applied to the profiles: 
+    <ul>
+        <li>Changes to AU Core AllergyIntolerance to:
+            <ul>
+                <li>remove Must Support from AllergyIntolerance.type, AllergyIntolerance.category, and AllergyIntolerance.reaction.substance</li>
+                <li>reference core FHIR resources in place of previously removed AU Core profiles</li>
+            </ul>
+        </li>
+        <li>Changes to AU Core Patient to add Must Support to Individual Gender Identity and Individual Pronouns elements.</li>
+        <li>AU Core Condition now references core FHIR resources in place of previously removed AU Core profiles.</li>
+        <li>AU Core Encounter now references core FHIR resources in place of previously removed AU Core profiles.</li>
+        <li>AU Core MedicationRequest now references core FHIR resources in place of previously removed AU Core profiles.</li>
+        <li>AU Core Procedure now references core FHIR resources in place of previously removed AU Core profiles.</li>
+        <li>AU Core Observation profiles now references core FHIR resources in place of previously removed AU Core profiles.</li>
+    </ul>    
 </li>
-<li>Removed Search Parameters:<ul>
-<li>relatedperson-patient</li>
-<li>specimen-patient</li></ul>
+<li>The following value sets have been removed:
+    <table border="0"> 
+        <tr>
+        <td width="30%"> 
+            <ul>
+                <li>Alcohol Intake Status</li>
+                <li>Estimated Date of Delivery</li>
+            </ul>
+        </td>
+        <td width="30%"> 
+            <ul>
+               <li>Estimated Date of Delivery LOINC</li>
+            </ul>
+        </td>
+        <td width="30%"> 
+            <ul>
+               <li>Lipid Result Reporting</li>
+            </ul>
+        </td>
+        </tr>
+    </table>
 </li>
-</ul>
+
+<li>The following search parameters have been removed:
+    <table border="0"> 
+        <tr>
+            <td width="30%"> 
+                <ul>
+                    <li>coverage-patient</li>
+                </ul>
+            </td>
+            <td width="30%"> 
+                <ul>
+                   <li>relatedperson-patient </li>
+                </ul>
+            </td>
+            <td width="30%"> 
+                <ul>
+                    <li>specimen-patient</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
 </li>
-</ul>
-
-
-#### Feedback on AU Core R1 scope
-We are seeking feedback on proposed scope on Confluence page <a href="https://confluence.hl7.org/display/HAFWG/AU+Core+R1+Scope">AU Core R1 Scope</a>.
-
-Feedback on scope should be provided through a comment on the Confluence page <a href="https://confluence.hl7.org/display/HAFWG/AU+Core+R1+Scope">AU Core R1 Scope</a>. Questions and discussions can be raised in <a href="https://chat.fhir.org/#narrow/stream/179173-australia">https://chat.fhir.org/#narrow/stream/179173-australia</a>.
-
-#### Feedback on AUCDI mappings
-We are seeking feedback on proposed mappings on Confluence page <a href="https://confluence.hl7.org/display/HAFWG/AUCDI+in+AU+Core+R1">AUCDI in AU Core R1</a>. 
-
-Feedback on mappings should be provided through a comment on the Confluence page <a href="https://confluence.hl7.org/display/HAFWG/AUCDI+in+AU+Core+R1">AUCDI in AU Core R1</a>. Questions and discussions can be raised in chat.fhir.org <a href="https://chat.fhir.org/#narrow/stream/179173-australia/topic/Implementing.20AUCDI.20R1.20into.20AU.20Core.20R1">https://chat.fhir.org/#narrow/stream/179173-australia/topic/Implementing.20AUCDI.20R1.20into.20AU.20Core.20R1</a>. We are targeting end of February for a baseline agreement to then refine.
-  
+<li>Other changes:
+    <ul>
+        <li>Revised AU Core Client and AU Core Server CapabilityStatements to align with updated scope</li>
+        <li>Updated conformance and guidance pages to reflect the removal of profiles and their references</li>
+        <li>Removed examples  the list of resources supporting the Provenance resource</li>
+    </ul>
+</li>
 </div>
-

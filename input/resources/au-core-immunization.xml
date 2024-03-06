@@ -15,16 +15,8 @@
     <element id="Immunization">
       <path value="Immunization"/>
     </element>
-    <element id="Immunization.identifier">
-      <path value="Immunization.identifier"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Immunization.status">
       <path value="Immunization.status"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Immunization.statusReason">
-      <path value="Immunization.statusReason"/>
       <mustSupport value="true"/>
     </element>
     <element id="Immunization.vaccineCode">
