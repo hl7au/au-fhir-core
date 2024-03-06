@@ -34,6 +34,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 <p class="request-for-feedback">Specific feedback is sought on the proposal to remove the mandatory requirement to support _revinclude of Provenance.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-43850">Jira issue #FHIR-43850</a>.</p>
 
-<p class="request-for-feedback">Specific feedback is sought on the inclusion of addresses and telecom in the Practitioner's profile.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-43860">Jira issue #FHIR-43860</a>.</p>
+<p class="request-for-feedback">Specific feedback is sought on removing Must Support from Practitioner.addresses and Practitioner.telecom.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-43860">Jira issue #FHIR-43860</a>.</p>
 
-<p class="request-for-feedback">Following the TDG agreement to set Must Support on parts of HumanName in AU Core Practitioner, specific feedback is sought on which parts should be supported.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44819">FHIR-44819</a>.</p>
+<p class="request-for-feedback">Specific feedback is sought on the proposal on Practitioner.name that proposes to put Must Support on parts of Practitioner.name and make Practitioner.name.family mandatory.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44819">FHIR-44819</a>.</p>

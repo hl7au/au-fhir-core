@@ -24,4 +24,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 <p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Observation.performer element across all AU Core Vital Signs profiles.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44786">FHIR-44786</a>.</p>
 
-<p class="request-for-feedback">Specific feedback is sought on the proposal to remove the required binding on the Observation.valueQuantity.code element, to allow for the base FHIR profile binding that accommodates both metric and imperial measurements.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44787">FHIR-44787</a>.</p>
+<p class="request-for-feedback">Specific feedback is sought on the proposal to remove the binding to metric units and allow for metric or imperial measurements.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44787">FHIR-44787</a>.</p>

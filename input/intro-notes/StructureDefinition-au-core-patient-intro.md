@@ -48,7 +48,7 @@ By making Individual Gender Identity a Must Support data element, this profile e
   - Where the workflow does not support obtaining a gender identity value, it may be represented by sending the code "not-asked"
 - When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/) and [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html)
 
-<p class="request-for-feedback">Following the TDG agreement to set Must Support on parts of HumanName in AU Core Patient (noting the existing Must Support on Patient.name.use), specific feedback is sought on other parts of HumanName that should be supported.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44818">FHIR-44818</a>.</p>
+<p class="request-for-feedback">Specific feedback is sought on the proposal to add Must Support to parts of Patient.name in addition to Patient.name.use.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44818">FHIR-44818</a>.</p>
 
-<p class="request-for-feedback">Specific feedback is sought on adding Sex Assigned at Birth as a Must Support element in AU Core Patient.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44856">FHIR-44856</a> and on <a href="https://jira.hl7.org/browse/FHIR-44857">FHIR-44857</a>.</p>
+<p class="request-for-feedback">Specific feedback is sought on adding an AU Core Sex Assigned at Birth profile of the Person Recorded Sex Or Gender extension (<a href="https://jira.hl7.org/browse/FHIR-44856">FHIR-44856</a>) and making that extension a Must Support element in AU Core Patient (<a href="https://jira.hl7.org/browse/FHIR-44857">FHIR-44857</a>). Please comment in JIRA.</p>
 
