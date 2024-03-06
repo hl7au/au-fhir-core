@@ -20,8 +20,62 @@
       <comment value="Blood pressure (BP) observation using a LOINC code, a SNOMED CT code and UCUM unit of measure. It has no value in Observation.valueQuantity but contains two components, one for systolic BP and the other for diastolic BP."/>
     </element>
     <element id="Observation.status">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
       <path value="Observation.status" />
       <fixedCode value="final" />
+    </element>
+    <element id="Observation.category">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
+      <path value="Observation.category" />
+    </element>
+    <element id="Observation.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
+      <path value="Observation.code" />
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
@@ -45,6 +99,22 @@
       <fixedCode value="75367002" />
     </element>
     <element id="Observation.subject">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
       <path value="Observation.subject" />
       <type>
         <code value="Reference" />
@@ -52,6 +122,22 @@
       </type>
     </element>
     <element id="Observation.encounter">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
       <path value="Observation.encounter"/>
       <type>
         <code value="Reference" />
@@ -60,6 +146,22 @@
       <mustSupport value="true"/>
     </element>
     <element id="Observation.effective[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
       <path value="Observation.effective[x]" />
       <short value="Date, and optionally time, the observation was performed" />
       <definition value="Date, and optionally time, the observation was performed." />
@@ -77,6 +179,22 @@
       </constraint>
     </element>
     <element id="Observation.performer">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
       <path value="Observation.performer"/>
       <type>
         <code value="Reference"/>
@@ -89,6 +207,22 @@
       <mustSupport value="true"/>
     </element>
     <element id="Observation.dataAbsentReason">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
       <path value="Observation.dataAbsentReason"/>
       <mustSupport value="true"/>
     </element>
@@ -109,6 +243,22 @@
       </binding>
     </element>
     <element id="Observation.component:SystolicBP">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
       <path value="Observation.component" />
       <sliceName value="SystolicBP" />
       <short value="Systolic Blood Pressure"/>
@@ -131,10 +281,42 @@
       <fixedCode value="271649006" />
     </element>
     <element id="Observation.component:SystolicBP.dataAbsentReason">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
       <path value="Observation.component.dataAbsentReason" />
       <mustSupport value="true"/>
     </element>
     <element id="Observation.component:DiastolicBP">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
       <path value="Observation.component" />
       <sliceName value="DiastolicBP" />
       <short value="Diastolic Blood Pressure"/>
@@ -157,6 +339,22 @@
       <fixedCode value="271650006" />
     </element>
     <element id="Observation.component:DiastolicBP.dataAbsentReason">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:will-send"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+        </extension>
+      </extension>
       <path value="Observation.component.dataAbsentReason" />
       <mustSupport value="true"/>
     </element>
