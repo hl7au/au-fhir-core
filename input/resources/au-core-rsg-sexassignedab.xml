@@ -62,17 +62,5 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Extension.extension:acquisitionDate">
-      <path value="Extension.extension"/>
-      <sliceName value="acquisitionDate"/>
-      <short value="When the sex or gender value was recorded."/>
-      <definition value="The date/time when the sex or gender value was first recorded in the system."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
     </differential>
 </StructureDefinition>
