@@ -38,7 +38,19 @@
 		<version value="current"/>
 	</dependsOn>
 	<definition>
-	<resource>
+		<resource>
+			<reference>
+				<reference value="ActorDefinition/au-core-actor-server"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+			<resource>
+			<reference>
+				<reference value="ActorDefinition/au-core-actor-client"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
 			<reference>
 				<reference value="CapabilityStatement/au-core-server"/>
 			</reference>
