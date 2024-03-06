@@ -24,10 +24,10 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
 
 <div class="request-for-feedback">
-    <p>Specific feedback is sought on a series of proposals to remove Must Support from the following elements:
+    <p>Specific feedback is sought on the proposals to remove Must Support from the following elements:
     <ul>
         <li>Practitioner.qualification.period and Practitioner.qualification.issuer, as their inclusion in AU Core may be premature without clear support from existing systems. Additionally, issuer can be derived from the AHPRA identifier assigner.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44587">FHIR-44587</a>.</li>
-        <li>Specific feedback is sought on the proposal to remove Must Support from Practitioner.communication, as its inclusion in AU Core may be premature without clear support from existing systems.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44588">FHIR-44588</a>.</li>
+        <li>Practitioner.communication, as its inclusion in AU Core may be premature without clear support from existing systems.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44588">FHIR-44588</a>.</li>
     </ul>
     </p>
 </div>
