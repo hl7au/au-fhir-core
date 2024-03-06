@@ -29,7 +29,7 @@
         <text value="Cholesterol" />
     </code>
     <subject>
-        <reference value="Patient/smith-emma" />
+        <reference value="Patient/wang-li" />
     </subject>
     <effectiveDateTime value="2023-01-17" />
     <valueQuantity>

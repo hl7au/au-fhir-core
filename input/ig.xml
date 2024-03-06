@@ -211,14 +211,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="AllergyIntolerance/nkda"/>
-			</reference>
-			<name value="AllergyIntolerance - No known drug allergy"/>
-			<description value="No Known Drug Allergy&#xa;&#xa;Patient: John SMITH"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="AllergyIntolerance/noneknown"/>
 			</reference>
 			<name value="AllergyIntolerance - No known allergy"/>
@@ -240,14 +232,6 @@
 			</reference>
 			<name value="BodyStructure - Right Knee"/>
 			<description value="Right Knee&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/BodyStructure"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="BodyStructure/left-knee"/>
-			</reference>
-			<name value="BodyStructure - Left Knee"/>
-			<description value="Left Knee&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/BodyStructure"/>
 		</resource>
 		<resource>
@@ -285,22 +269,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Condition/fever"/>
-			</reference>
-			<name value="Condition - Fever"/>
-			<description value="Moderate fever&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Condition/nailwound"/>
-			</reference>
-			<name value="Condition - Nail wound"/>
-			<description value="Nail wound on sole of foot&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Condition/uti"/>
 			</reference>
 			<name value="Condition - Urinary tract infection"/>
@@ -310,34 +278,10 @@
 		<!--ENCOUNTER EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="Encounter/annualvisit-1"/>
-			</reference>
-			<name value="Encounter - Annual check up 1"/>
-			<description value="Annual check encounter for Observation-healthprogramparticipation-1&#xa;&#xa;Patient: Ms. Emma SMITH"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Encounter/annualvisit-2"/>
-			</reference>
-			<name value="Encounter - Annual check up 2"/>
-			<description value="Annual check encounter for vitals panel obs&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Encounter/covid-admin-1"/>
 			</reference>
 			<name value="Encounter - COVID 19 Vaccine Administration 1"/>
 			<description value="COVID 19 Vaccine Administration for Immunization-covid-1&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Encounter/delivery"/>
-			</reference>
-			<name value="Encounter - Delivery"/>
-			<description value="Inpatient delivery at AU Hospital&#xa;&#xa;Patient: Ms. Emma SMITH"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
 		</resource>
 		<resource>
@@ -358,53 +302,11 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Encounter/home-meds-review"/>
-			</reference>
-			<name value="Encounter - Home Medicines Review"/>
-			<description value="Home medicines review by Pharmacist&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Encounter/nailwound"/>
-			</reference>
-			<name value="Encounter - presentation at GP for nail wound"/>
-			<description value="presentation at GP for nail wound on sole of foot&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Encounter/telehealth"/>
 			</reference>
 			<name value="Encounter - telehealth"/>
 			<description value="Telehealth encounter&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-		</resource>
-		<!--FAMILYMEMBERHISTORY EXAMPLES-->
-		<resource>
-			<reference>
-				<reference value="FamilyMemberHistory/father"/>
-			</reference>
-			<name value="FamilyMemberHistory - Father (part of multiple chronic condition care plan)"/>
-			<description value="Family history of father sudden heart attack contributing to death (part of multiple chronic condition care plan)&#xa;&#xa;Patient: Mr. Harry Dan"/>
-			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"/>
-		</resource>
-		<!--GOAL EXAMPLES-->
-		<resource>
-			<reference>
-				<reference value="Goal/hpt-wnl"/>
-			</reference>
-			<name value="Goal - Systolic blood pressure (part of multiple chronic condition care plan)"/>
-			<description value="High priority goal of systolic blood pressure between 110 and 140 mmHg (part of multiple chronic condition care plan)&#xa;&#xa;Patient: Mr. Harry Dan"/>
-			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Goal"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Goal/wgt-loss"/>
-			</reference>
-			<name value="Goal - Weight loss (part of multiple chronic condition care plan)"/>
-			<description value="High priority goal of weight loss (part of multiple chronic condition care plan)&#xa;&#xa;Patient: Mr. Harry Dan"/>
-			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Goal"/>
 		</resource>
 		<!--IMMUNIZATION EXAMPLES-->
 		<resource>
@@ -456,14 +358,14 @@
 			<description value="Second floor, South Wing, Physiotherapy Offices - part of AU Hospital Site"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
 		</resource>
-		<resource>
+<!-- 		<resource>
 			<reference>
 				<reference value="Location/au-jurisdiction"/>
 			</reference>
 			<name value="Location - Jurisdiction of Australia"/>
 			<description value="Jurisdiction of Australia as kind of location."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
-		</resource>
+		</resource> -->
 		<resource>
 			<reference>
 				<reference value="Location/bobrester-medical-center"/>
@@ -480,14 +382,6 @@
 			<description value="Patient home as kind of location (not a specific patient's location)."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
 		</resource>
-		<resource>
-			<reference>
-				<reference value="Location/pharmacy"/>
-			</reference>
-			<name value="Location - Pharmacy building"/>
-			<description value="Pharmacy at 6 Macquarie St."/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
-		</resource>
 		<!--MEDICATION EXAMPLES-->
 		<resource>
 			<reference>
@@ -495,30 +389,6 @@
 			</reference>
 			<name value="Medication - Branded pack with one active ingredient"/>
 			<description value="Branded pack with one active ingredient."/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Medication/2active-ingredients"/>
-			</reference>
-			<name value="Medication - Product with two active ingredients"/>
-			<description value="Product with two active ingredients."/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Medication/4active-ingredients"/>
-			</reference>
-			<name value="Medication - Product with four active ingredients"/>
-			<description value="Product with four active ingredients."/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Medication/simvastatin"/>
-			</reference>
-			<name value="Medication - Simvastatin 40 MG Disintegrating Oral Tablet"/>
-			<description value="Simvastatin 40 MG Disintegrating Oral Tablet."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
 		</resource>
 		<!--MEDICATIONREQUEST EXAMPLES-->
@@ -541,34 +411,10 @@
 		<!--MEDICATIONSTATEMENT EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="MedicationStatement/active-bisoprolol"/>
-			</reference>
-			<name value="MedicationStatement - practitioner records active use of Bisoprolol 2.5mg"/>
-			<description value="Practitioner records active use of Bisoprolol 2.5mg."/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="MedicationStatement/active-amiodarone"/>
 			</reference>
 			<name value="MedicationStatement - practitioner records active use of Amiodarone 200mg"/>
 			<description value="Practitioner records active use of Amiodarone 200mg."/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="MedicationStatement/completed-aldara"/>
-			</reference>
-			<name value="MedicationStatement - practitioner records completed use of Aldara 5% cream"/>
-			<description value="Practitioner records completed use of Aldara 5% cream."/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="MedicationStatement/completed-chloramphenicol"/>
-			</reference>
-			<name value="MedicationStatement - practitioner records completed use of Chloramphenicol 1% eye ointment"/>
-			<description value="Practitioner records completed use of Chloramphenicol 1% eye ointment."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
 		</resource>
 		<resource>
@@ -587,14 +433,6 @@
 			<description value="Practitioner reports patient has taken Diflucan in the past but is not taking it any more."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
 		</resource>
-		<resource>
-			<reference>
-				<reference value="MedicationStatement/simvastatin"/>
-			</reference>
-			<name value="MedicationStatement - current use of Simvastatin"/>
-			<description value="Current use of Simvastatin 40 MG Disintegrating Oral Tablet."/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
-		</resource>
 		<!--OBSERVATION EXAMPLES-->
 		<resource>
 			<reference>
@@ -602,14 +440,6 @@
 			</reference>
 			<name value="Observation - Blood Pressure 1"/>
 			<description value="Blood Pressure - isolated diastolic hypertension&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/bloodpressure-2"/>
-			</reference>
-			<name value="Observation - Blood Pressure 2"/>
-			<description value="Blood Pressure - systemic hypertension, with interpretation, bodySite, method and referenceRange&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
 		</resource>
 		<resource>
@@ -638,22 +468,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Observation/bodyheight-3"/>
-			</reference>
-			<name value="Observation - Length 3"/>
-			<description value="Length recorded by GP at 6 months&#xa;&#xa;Patient: John Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/bodyheight-4"/>
-			</reference>
-			<name value="Observation - Height 4"/>
-			<description value="Height&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Observation/bodytemp-1"/>
 			</reference>
 			<name value="Observation - Temperature"/>
@@ -670,26 +484,10 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Observation/bodyweight-3"/>
-			</reference>
-			<name value="Observation - Body weight 3"/>
-			<description value="Body weight&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/bodyweight-mcc"/>
-			</reference>
-			<name value="Observation - Body weight (part of multiple chronic condition care plan)"/>
-			<description value="Body weight observation related to care plan (part of multiple chronic condition care plan).&#xa;&#xa;Patient: Mr. Harry Dan"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Observation/bun-mcc"/>
 			</reference>
-			<name value="Observation - Urea nitrogen [Mass/volume] in Serum or Plasma (part of multiple chronic condition care plan)"/>
-			<description value="Urea nitrogen [Mass/volume] in Serum or Plasma 24 mg/dL (part of multiple chronic condition care plan).&#xa;&#xa;Patient: Mr. Harry Dan"/>
+			<name value="Observation - Urea nitrogen [Mass/volume] in Serum or Plasma"/>
+			<description value="Urea nitrogen [Mass/volume] in Serum or Plasma 24 mg/dL&#xa;&#xa;Patient: Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -791,42 +589,10 @@
 		<!--ORGANIZATION EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="Organization/aaaaaia-insurer"/>
-			</reference>
-			<name value="Organization - AAAAAIA HI PTY LTD"/>
-			<description value="AAAAAIA HI PTY LTD (Private Health Insurer)"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Organization/adv-hearing-care"/>
-			</reference>
-			<name value="Organization - Audiology Advanced Hearing Care"/>
-			<description value="Audiology Advanced Hearing Care"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Organization/bobrester-medical-center"/>
 			</reference>
 			<name value="Organization - Bobrester Medical Centre"/>
 			<description value="Bobrester Medical Centre"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Organization/dva-au"/>
-			</reference>
-			<name value="Organization - Department of Veterans' Affairs"/>
-			<description value="Australian Government Department of Veterans' Affairs"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Organization/health-au"/>
-			</reference>
-			<name value="Organization - Department of Health and Aged Care"/>
-			<description value="Australian Government Department of Health and Aged Care"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<resource>
@@ -843,22 +609,6 @@
 			</reference>
 			<name value="Organization - Hospitals International"/>
 			<description value="Hospitals International"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Organization/pharmacy"/>
-			</reference>
-			<name value="Organization - Retail Pharmacy"/>
-			<description value="A Chain Retail Pharmacy"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Organization/services-au"/>
-			</reference>
-			<name value="Organization - Services Australia"/>
-			<description value="Services Australia (Australian Government)"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<!--PATIENT EXAMPLES-->
@@ -894,14 +644,7 @@
 			<description value="Ms. Sofia Italia (foreign tourist)"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
-		<resource>
-			<reference>
-				<reference value="Patient/smith-emma"/>
-			</reference>
-			<name value="Patient - Ms. Emma SMITH"/>
-			<description value="Ms. Emma SMITH"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
-		</resource>
+
 		<resource>
 			<reference>
 				<reference value="Patient/wang-li"/>
@@ -921,14 +664,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Practitioner/bradley-jill"/>
-			</reference>
-			<name value="Practitioner - Jill Bradley"/>
-			<description value="Jill Bradley"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Practitioner/cardy-igist"/>
 			</reference>
 			<name value="Practitioner - Dr. Igist Cardy"/>
@@ -939,32 +674,8 @@
 			<reference>
 				<reference value="Practitioner/levin-henry"/>
 			</reference>
-			<name value="Practitioner - Dr Henry Levin VII (part of multiple chronic condition care plan)"/>
-			<description value="Dr Henry Levin VII (part of multiple chronic condition care plan)"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Practitioner/nurse-nancy"/>
-			</reference>
-			<name value="Practitioner - RNP Nancy Nurse (part of multiple chronic condition care plan)"/>
-			<description value="RNP Nancy Nurse (part of multiple chronic condition care plan)"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Practitioner/pharmacist"/>
-			</reference>
-			<name value="Practitioner - Mr Representative Pharmacist"/>
-			<description value="Mr Representative Pharmacist"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Practitioner/primary-peter"/>
-			</reference>
-			<name value="Practitioner - Dr Peter Primary (part of multiple chronic condition care plan)"/>
-			<description value="Dr Peter Primary (part of multiple chronic condition care plan)"/>
+			<name value="Practitioner - Dr Henry Levin VII "/>
+			<description value="Dr Henry Levin VII "/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
@@ -986,14 +697,6 @@
 		<!--PRACTITIONERROLE EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="PractitionerRole/audiologist-bradley-jill"/>
-			</reference>
-			<name value="PractitionerRole - Audiologist"/>
-			<description value="Jill Bradley, Audiologist, at Audiology Advanced Hearing Care"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="PractitionerRole/bobrester-bob-gp"/>
 			</reference>
 			<name value="PractitionerRole - General practitioner"/>
@@ -1006,54 +709,6 @@
 			</reference>
 			<name value="PractitionerRole - Cardiologist"/>
 			<description value="Dr. Igist Cardy, GP, at Hospital Australia"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="PractitionerRole/dietician-tan-patricia"/>
-			</reference>
-			<name value="PractitionerRole - Dietician"/>
-			<description value="Ms. Patricia Tan, Dietician, at Dieticians Australia"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="PractitionerRole/gp-primary-peter"/>
-			</reference>
-			<name value="PractitionerRole - General Practitioner (part of multiple chronic condition care plan)"/>
-			<description value="Dr Peter Primary, General Practitioner, at Some Organisation (part of multiple chronic condition care plan)"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="PractitionerRole/nephrologist-levin-henry"/>
-			</reference>
-			<name value="PractitionerRole - Nephrologist (part of multiple chronic condition care plan)"/>
-			<description value="Dr Henry Levin VII, Nephrologist, at Some Organisation (part of multiple chronic condition care plan)"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="PractitionerRole/np-nurse-nancy"/>
-			</reference>
-			<name value="PractitionerRole - Registered nurse (part of multiple chronic condition care plan)"/>
-			<description value="Nurse Nancy, Registered nurse, at Some Organisation (part of multiple chronic condition care plan)"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="PractitionerRole/retail-pharmacist"/>
-			</reference>
-			<name value="PractitionerRole - Retail pharmacist"/>
-			<description value="Mr. Pharmacist, Retail pharmacist, at A Chain Pharmacy"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="PractitionerRole/sandyson-sandy-nurse"/>
-			</reference>
-			<name value="PractitionerRole - Registered nurse"/>
-			<description value="Ms. Sandy Sandyson, Registered nurse, at Hospital Australia"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
@@ -1077,8 +732,8 @@
 			<reference>
 				<reference value="Procedure/dialysis"/>
 			</reference>
-			<name value="Procedure - Dialysis (part of multiple chronic condition care plan)"/>
-			<description value="Dialysis (part of multiple chronic condition care plan)&#xa;&#xa;Patient: Mr. Harry Dan"/>
+			<name value="Procedure - Dialysis"/>
+			<description value="Dialysis &#xa;&#xa;Patient: Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
 		</resource>
 		<resource>

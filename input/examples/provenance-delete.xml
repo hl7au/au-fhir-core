@@ -28,7 +28,7 @@
             </coding>
         </type>
         <who>
-            <reference value="Patient/smith-emma"/>
+            <reference value="Patient/bennelong-anne"/>
         </who>
     </agent>
     <entity>
