@@ -31,9 +31,6 @@
                 <text value="Sex at Birth"/>
             </valueCodeableConcept>
         </extension>
-        <extension url="acquisitionDate">
-            <valueDateTime value="2021-06-06"/>
-        </extension>
     </extension>
     <identifier>
         <type>
