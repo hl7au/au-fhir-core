@@ -30,3 +30,13 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 <p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Practitioner.communication, as its inclusion in AU Core may be premature without clear support from existing systems.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44588">FHIR-44588</a>.</p>
 
 <p class="request-for-feedback">Specific feedback is sought on the proposal to remove the mandatory requirement to support _revinclude of Provenance.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-43850">Jira issue #FHIR-43850</a>.</p>
+
+<p class="request-for-feedback">Specific feedback is sought on the inclusion of addresses and telecom in the Practitioner's profile. Often, these details are more relevant to a practitioner's role or workplace and not to their personal information. There are concerns that practitioners may prefer to keep their private contact details confidential.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-43860">Jira issue #FHIR-43860</a>.</p>
+
+<div class="request-for-feedback"><p>Specific feedback is sought on changes to the AU Core Practitioner profile based on the TDG decision to set Must Support on specific parts of Human Name. The proposed change is to enhance Practitoner.name components, specifically:<ul>
+  <li>Add Must Support to Practitioner.name.family</li>
+  <li>Add Must Support to Practitioner.name.given</li>
+  <li>Replace constraint <strong>au-core-prac-01</strong>: At least text or family name shall be present with making Practitioner.name.family mandatory (1..1).</li></ul>
+Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44819">FHIR-44819</a>.
+</p>
+</div>

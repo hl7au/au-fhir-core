@@ -25,7 +25,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 <p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Immunization.reasonCode.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44654">FHIR-44654</a>.</p>
 
-<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Immunization.protocolApplied.series. Existing systems may not record the name of the vaccine series that an immunisation is being administered for as it is implied in the vaccine. <br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44657">FHIR-44657</a>.</p>
+<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Immunization.protocolApplied.series. Existing systems may not record the name of the vaccine series that an immunisation is being administered for as it is implied in the vaccine. <br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44656">FHIR-44656</a>.</p>
 
 <p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Immunization.protocolApplied.targetDisease. Existing systems may not record the reason or target disease that an immunisation is being administered for as it is implied in the vaccine. <br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44654">FHIR-44654</a>.</p>
 
@@ -34,3 +34,5 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 <p class="request-for-feedback">Specific feedback is sought on the proposal to add Immunization.primarySource as a Must Support element to indicate whether the vaccine was reported by someone other than the person who administered the vaccine. This would support the distinction between definitive administrative records and subjective past historical records.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44659">FHIR-44659</a>.</p>
 
 <p class="request-for-feedback">Specific feedback is sought on the proposal add Immunization.location as a Must Support element. <br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44671">FHIR-44671</a>.</p>
+
+<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Immunization.vaccineCode.coding:amtVaccineCode and Immunization.vaccineCode.coding:airVaccineCode. This is because systems might not need AMT or AIR for their use cases, and a concern that frequent updates to AIR codes could complicate data management.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44794">FHIR-44794</a>.</p>

@@ -23,7 +23,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 <p class="request-for-feedback">Specific feedback is sought on the proposal to remove the mandatory requirement to support _revinclude of Provenance.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43850">FHIR-43850</a>.</p>
 
-<p class="request-for-feedback">Specific feedback is sought on supporting search for practitioner by reference vs chained searching using practitioner.identifier.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a>.</p>
+<p class="request-for-feedback">Specific feedback is sought on supporting the mandatory search parameter to search PractitionerRole using practitioner by reference, and if a search via a chained practitioner.identifier could be a more effective approach.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a>.</p>
 
 <p class="request-for-feedback">Specific feedback is sought on supporting search for organization by reference vs chained searching using organization.identifier.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a>.</p>
 
@@ -31,4 +31,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 <p class="request-for-feedback">Specific feedback is sought on the use of code-only in an identifier search parameter, along with a recommendation to explicitly specify a single type of identifier (or an explicit list) for greater quality.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a>.</p>
 
-<p class="request-for-feedback">Specific feedback is sought on the proposal to remove the mandatory requirement to support _revinclude of Provenance.<br/>Please comment on <a href="https://github.com/hl7au/au-fhir-core/issues/70">au-fhir-core/issues/70</a>.</p>
+<p class="request-for-feedback">Specific feedback is sought on the proposal to remove the mandatory requirement to support _revinclude of Provenance.<br/>Please comment on Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43850">FHIR-43850</a>.</p>
