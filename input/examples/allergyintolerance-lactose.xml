@@ -26,14 +26,9 @@
     </coding>
   </code>
   <patient>
-    <reference value="Patient/baby-smith-john"/>
+    <reference value="Patient/banks-mia-leanne"/>
   </patient>
-  <onsetAge>
-    <value value="1"/>
-    <unit value="year"/>
-    <system value="http://unitsofmeasure.org"/>
-    <code value="a"/>
-  </onsetAge>
+  <onsetDateTime value="2022"/>
   <recordedDate value="2023-03-14"/>
   <recorder>
     <reference value="PractitionerRole/bobrester-bob-gp"/>
@@ -63,5 +58,6 @@
         <display value="Diarrhoea"/>
       </coding>
     </manifestation>
+    <severity value="mild"/>
   </reaction>
 </AllergyIntolerance>

@@ -29,11 +29,11 @@
         <text value="LDL" />
     </code>
     <subject>
-        <reference value="Patient/wang-li" />
+        <reference value="Patient/banks-mia-leanne" />
     </subject>
     <effectiveDateTime value="2023-01-17" />
     <valueQuantity>
-        <value value="3.54" />
+        <value value="4.54" />
         <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
         <code value="mmol/L" />
