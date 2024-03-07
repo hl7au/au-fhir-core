@@ -130,7 +130,7 @@ A profile may support one or more than one identifier type and will include the 
   - with a value that conforms to at least one of those three identifier choices if the data is available, and **SHOULD** be capable of populating every choice for which the sending system might possess data
   - asserting missing or suppressed data if the data is not available
 - An AU Core Requester **SHALL** be capable of meaningfully processing the element with
-  - any supported identifier choice (since the requester cannot anticipate which data type or profile might be populated) \
+  - any supported identifier choice (since the requester cannot anticipate which data type or profile might be populated)
   - missing or suppressed data
 
 
@@ -141,7 +141,7 @@ AU Core Profile |Must Support Choice Elements| Supported Identifiers
 AU Core Organization|Organization.identifier|HPI-O, Australian Business Number
 AU Core Patient|Patient.identifier|IHI, Medicare Card Number, DVA Number
 AU Core Practitioner|Practitioner.identifier|HPI-I
-AU Core PractitionerRole|PractitionerRole.identifier|HPI-I, Medicare Provider Number
+AU Core PractitionerRole|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
 #### Must Support where there is a choice between an element of type CodeableConcept and type Reference
@@ -158,9 +158,8 @@ The table below lists the applicable profiles and elements in AU Core.
 
 AU Core Profile |Must Support Choice Elements
 ---|---
-AU Core Encounter|Encounter.reasonCode, Encounter.reasonReference[x]
-AU Core MedicationAdministration|MedicationAdministration.reasonCode, MedicationAdministration.reasonReference
-AU Core Procedure|Procedure.reasonCode, Procedure.reasonReference[x]
+AU Core Encounter|Encounter.reasonCode, Encounter.reasonReference
+AU Core Procedure|Procedure.reasonCode, Procedure.reasonReference
 {:.grid}
 
 

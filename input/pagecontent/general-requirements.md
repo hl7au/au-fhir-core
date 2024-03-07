@@ -24,15 +24,15 @@ There are two different ways to implement AU Core:
 
 #### Profile Only Support
 
-Systems may deploy, and support, one or more AU Core profiles (i.e. the profiles governed by this guide) to represent digital health information. A system that implements _profile only support_ will use a profile's content model without any expectations to implement AU Core interactions. 
+Systems may deploy, and support, one or more AU Core profiles to represent digital health information. A system that implements _profile only support_ will use a profile's content model without any expectations to implement AU Core interactions and:
+- **SHALL** populate a resource with all profile elements that are mandatory by that profile’s StructureDefinition.
+- **SHALL** populate a resource with all profile elements labelled Must Support unless that element is not available. Where the data is not available the system **SHALL** implement the requirements on [Missing data](general-requirements.html#missing-data).
 
 A system **SHOULD** support all AU Core profiles unless the system does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialised role in clinical or information workflows. For example, a pathology laboratory may support [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), but may not support [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html).
 
-Profile elements consist of both Mandatory and *Must Support* elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support]({{site.data.fhir.path}}profiling.html#mustsupport) guidance requires specifications to define the support expected for profile elements labelled Must Support. AU Core defines server and client requirements for profile elements labelled as *Must Support* on the [Must Support](must-support.html) page.
-
-Servers that implement AU Core Profile Only Support:
+A server with AU Core Profile Only Support:
 - **SHALL** be able to populate all profile elements that are mandatory and/or labelled *Must Support* as defined by that profile's StructureDefinition.
-- **SHALL** specify the full capability details from the AU Core CapabilityStatement it claims to implement, including declaring support for an AU Core profile by including its canonical URL in the server's `CapabilityStatement.rest.resource.profile` or `CapabilityStatement.rest.resource.supportedProfile` element
+- **SHALL** declare support for a AU Core Profile by including its official URL in the server’s `CapabilityStatement.rest.resource.profile` or `CapabilityStatement.rest.resource.supportedProfile` element. An AU Core profile official or “canonical” URL is located on each AU Core profile page.
 
 
 **Declaring Conformance**
