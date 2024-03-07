@@ -631,6 +631,14 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Practitioner/bradley-jill"/>
+			</reference>
+			<name value="Practitioner - Jill Bradley"/>
+			<description value="Jill Bradley"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Practitioner/cardy-igist"/>
 			</reference>
 			<name value="Practitioner - Dr. Igist Cardy"/>
@@ -662,6 +670,14 @@
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<!--PRACTITIONERROLE EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="PractitionerRole/audiologist-bradley-jill"/>
+			</reference>
+			<name value="PractitionerRole - Audiologist"/>
+			<description value="Jill Bradley, Audiologist, at Audiology Advanced Hearing Care"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+		</resource>
 		<resource>
 			<reference>
 				<reference value="PractitionerRole/bobrester-bob-gp"/>
