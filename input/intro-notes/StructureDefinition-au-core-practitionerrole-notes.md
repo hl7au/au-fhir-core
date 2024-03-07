@@ -12,7 +12,7 @@
         <td>identifier</td>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The server <b>SHALL</b> support both. <br/><br/> The client <b>SHOULD</b> support search using HPI-I and Medicare Provider Number identifiers as defined in the profile. The server <b>SHOULD</b> support search using the using HPI-I and Medicare Provider Number identifiers as defined in the profile.</td>
+        <td>The client <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The server <b>SHALL</b> support both. <br/><br/> The client <b>SHOULD</b> support search using a Medicare Provider Number identifier as defined in the profile. The server <b>SHOULD</b> support search using a Medicare Provider Number identifier as defined in the profile.</td>
   </tr>
    <tr>
         <td>practitioner</td>
@@ -58,7 +58,6 @@ The following search parameters **SHALL** be supported:
 
     Example:
     
-      1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/hi/hpii/1.0\|8003619900015717
       1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/hi/hpii/1.0\|8003619900015717&amp;_include=PractitionerRole:practitioner
       1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-prescriber-number\|553255
 

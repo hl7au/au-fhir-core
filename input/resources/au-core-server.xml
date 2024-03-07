@@ -2849,8 +2849,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the profile.</p>
+    <p>The client <strong>SHOULD</strong> support search using a Medicare Provider Number identifier as defined in the profile.</p>
+    <p>The server <strong>SHOULD</strong> support search using a Medicare Provider Number identifier as defined in the profile.</p>
   </div>
 </td>
 </tr>
@@ -4535,7 +4535,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values. The server **SHALL** support both.&#xA;&#xA;The client **SHOULD** support search using HPI-I and Medicare Provider Number identifiers as defined in the profile. The server **SHOULD** support search using the using HPI-I and Medicare Provider Number identifiers as defined in the profile."/>
+<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values. The server **SHALL** support both.&#xA;&#xA;The client **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile. The server **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
