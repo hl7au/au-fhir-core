@@ -148,7 +148,6 @@
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-imag"/>
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
       </type>
       <mustSupport value="true"/>
