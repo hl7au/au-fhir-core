@@ -23,6 +23,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - `Observation.value[x]` element **SHOULD** be omitted
   - an Observation without a systolic or diastolic result value, **SHOULD** include a reason why the data is absent in `Observation.component.dataAbsentReason`
 
-
-
-
+<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from Observation.performer element across all AU Core Vital Signs profiles.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44786">FHIR-44786</a>.</p>
