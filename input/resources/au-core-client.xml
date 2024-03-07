@@ -6,7 +6,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h2 id="title">AU Core Client CapabilityStatement</h2>
       <ul>
-        <li>Implementation Guide Version: TBD</li>
+        <li>Implementation Guide Version: 0.3.0-ci-build</li>
         <li>FHIR Version: 4.0.1</li>
         <li>Supported Formats: <strong>SHALL</strong> support <code>json</code>,          <strong>SHOULD</strong> support <code>xml</code>
         </li>
@@ -81,7 +81,7 @@
           <blockquote>
             <div>
               <ol>
-               <li>For Authentication and Authorization, Systems <strong>SHOULD</strong> support any SMART App Launch and SMART Backend Service Authorization. When this is not avalable, Basic Authentication <strong>MAY</strong> be used. </li>
+               <li>For authentication and authorisation, systems <strong>MAY</strong> support any SMART App Launch and SMART Backend Service Authorization. When this is not avalable, basic authentication <strong>MAY</strong> be used. </li>
               </ol>
             </div>
           </blockquote>
@@ -3205,11 +3205,6 @@
 </extension>
 </implementationGuide>
 <implementationGuide value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-</implementationGuide>
-<implementationGuide value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>

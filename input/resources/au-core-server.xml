@@ -6,7 +6,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h2 id="title">AU Core Server CapabilityStatement</h2>
       <ul>
-        <li>Implementation Guide Version: TBD</li>
+        <li>Implementation Guide Version: 0.3.0-ci-build</li>
         <li>FHIR Version: 4.0.1</li>
         <li>Supported Formats: <strong>SHALL</strong> support <code>json</code>,          <strong>SHOULD</strong> support <code>xml</code>
         </li>
@@ -103,7 +103,7 @@
 
               <ol>
                 <li>A server <strong>MAY</strong> reject any unauthorized requests by returning an HTTP 401 "Unauthorized", HTTP 403 "Forbidden", or HTTP 404 "Not Found"</li>
-                <li>For Authentication and authorisation, Systems <strong>MAY</strong> support any SMART App Launch and SMART Backend Service Authorization. When this is not avalable, Basic Authentication <strong>MAY</strong> be used. </li>
+                <li>For authentication and authorisation, systems <strong>MAY</strong> support any SMART App Launch and SMART Backend Service Authorization. When this is not avalable, basic authentication <strong>MAY</strong> be used. </li>
              </ol>
             </div>
           </blockquote>
@@ -506,6 +506,9 @@
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
+</li>
 </ul>
 </div>
 </div>
@@ -650,6 +653,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -895,6 +901,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -1202,6 +1211,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -1555,7 +1567,7 @@
 <strong>SHALL</strong> support <code>read</code>.
 </li>
 <li>
-<strong>MAY</strong> support <code>search-type</code>.
+<strong>MAY</strong> support <code>search-type</code>,<code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -1606,6 +1618,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -1858,6 +1873,9 @@
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
+</li>
 </ul>
 </div>
 </div>
@@ -2053,6 +2071,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -2298,6 +2319,9 @@
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
+</li>
 </ul>
 </div>
 </div>
@@ -2419,6 +2443,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -2685,6 +2712,9 @@
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
 </li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
+</li>
 </ul>
 </div>
 </div>
@@ -2794,6 +2824,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -2962,6 +2995,9 @@
 <ul>
 <li>
 <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -3169,7 +3205,7 @@
 <strong>SHALL</strong> support <code>read</code>.
 </li>
 <li>
-<strong>MAY</strong> support <code>search-type</code>.
+<strong>MAY</strong> support <code>search-type</code>,<code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
 </li>
 </ul>
 </div>
@@ -3229,11 +3265,6 @@
 </extension>
 </implementationGuide>
 <implementationGuide value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-</implementationGuide>
-<implementationGuide value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
