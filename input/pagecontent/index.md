@@ -17,7 +17,7 @@ AU Core uses AU Base representations as the basis for profiles that define the F
 1.	Systems may support only AU Core Profiles to represent digital health information ([Profile Only Support](general-requirements.html#profile-only-support)).
 1.	Systems may support both AU Core Profiles and the RESTful interactions defined for a resource ([Profile + Interaction Support](general-requirements.html#profile--interaction-support)).
 
-In this regard it is similar in nature to other international FHIR specifications such as US Core FHIR Implementation Guide.
+In this regard it is similar in nature to other national core specifications such as US Core FHIR Implementation Guide and international FHIR specifications such as International Patient Access FHIR Implementation Guide.
 
 For a detailed description of these different usages of AU Core, see the [Conformance Requirements](general-requirements.html) and [Must Support](must-support.html) pages.
 
@@ -122,12 +122,11 @@ This guide is divided into several pages which are listed at the top of each pag
 ### Collaboration
 This guide is the product of collaborative work undertaken with participants from:
 
+* [Sparked HL7 AU Technical Design Group](https://confluence.hl7.org/display/HAFWG/HL7+Australia+-+AU+Core+Technical+Design+Group+Home)
+* [HL7 Australia FHIR Working Group](https://confluence.hl7.org/display/HAFWG/HL7+Australia+FHIR+Work+Group+Home)
 * Australian FHIR Implementers Community
-* HL7 Australia Working Groups
-* Australian Digital Health Agency
-* CSIRO Australian e-Health Research Centre 
-* Secure Messaging Technical Working Group
 
+Primary Editors: Brett Esler, Danielle Tavares-Rixon, Dusica Bojicic.
 
 
 
