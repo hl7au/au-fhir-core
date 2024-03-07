@@ -4928,7 +4928,8 @@
 <definition value="http://hl7.org/fhir/SearchParameter/Practitioner-name"/>
 <type value="string"/>
 </searchParam>
-</resource><!-- PRACTITIONERROLE :: DONE -->
+</resource>
+<!-- PRACTITIONERROLE :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -4947,6 +4948,42 @@
 <valueCode value="SHALL"/>
 </extension>
 <code value="search-type"/>
+</interaction>
+<interaction>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="MAY"/>
+</extension>
+<code value="create"/>
+</interaction>
+<interaction>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="MAY"/>
+</extension>
+<code value="update"/>
+</interaction>
+<interaction>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="MAY"/>
+</extension>
+<code value="delete"/>
+</interaction>
+<interaction>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="MAY"/>
+</extension>
+<code value="vread"/>
+</interaction>
+<interaction>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="MAY"/>
+</extension>
+<code value="patch"/>
+</interaction>
+<interaction>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="MAY"/>
+</extension>
+<code value="history-instance"/>
 </interaction>
 <searchInclude value="PractitionerRole:practitioner"/>
 <referencePolicy value="resolves">
