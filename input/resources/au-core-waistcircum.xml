@@ -172,7 +172,6 @@
     <element id="Observation.dataAbsentReason">
       <path value="Observation.dataAbsentReason"/>
       <condition value="au-core-obs-02"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />

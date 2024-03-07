@@ -84,8 +84,8 @@
       <path value="Procedure.reasonCode"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Procedure.reasonReference[x]">
-      <path value="Procedure.reasonReference[x]"/>
+    <element id="Procedure.reasonReference">
+      <path value="Procedure.reasonReference"/>
       <type>
         <code value="Reference"/>
         <targetProfile

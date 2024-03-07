@@ -22,5 +22,3 @@ A resource conforming to [US Core](http://hl7.org/fhir/us/core) **MAY** conform 
 
 <p class="request-for-feedback">Specific feedback is sought on the need for AU Core to support targeted Provenance. Provenance.target may point at a specific element within the targeted resource using the <a href="http://hl7.org/fhir/extensions/StructureDefinition-targetElement.html">target element extension</a> or <a href="http://hl7.org/fhir/extensions/StructureDefinition-targetPath.html">target path extension</a>. These extensions are only available at this time in R5 but can be supported in R4 AU Core if needed.</p>
 
-
-

@@ -3,17 +3,15 @@
 ### Introduction
 AU Core is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context. It sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
 
-AU Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information associated with a patient. Applications that conform to AU Core can access the following information about the patient:
+AU Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. Applications that conform to AU Core can access the following information:
 - Basic patient details
+- Basic provider details
 - Problems / Conditions
-- Medication orders, dispense, administration and usage
+- Medication usage
 - Immunization history
 - Allergies and intolerances
-- Diagnostic orders, report, and results
+- Diagnostic results
 - Vital signs, and other clinical observations
-- Clinical notes & other patient documents
-
-AU Core provides FHIR profiles to support conformance and implementation in systems. This uses AU Base representations as the basis of typical use for many purposes. 
 
 AU Core uses AU Base representations as the basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each resource type to access patient data. AU Core promotes interoperability and adoption through common implementation and SHOULD be built on top of for standards development for specific use cases. There are two different ways to implement AU Core:
 1.	Systems may support only AU Core Profiles to represent digital health information ([Profile Only Support](general-requirements.html#profile-only-support)).
@@ -111,7 +109,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [AUCDI](aucdi.html): This page maps the AU Core resources and elements to AUCDI data classes and data elements.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Core and other implementation guides.
   - [Comparison with other national and international specifications](comparison.html): This page provides comparison between AU Core profiles and other national, or international implementation guides.
-  - [Future of AU Core](future.html): This is a placeholder for when content becomes available.
+  - [Future of AU Core](future.html): This page outlines the approach to developing AU Core and yearly update cycle.
 - [FHIR Artefacts](artifacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This set of pages describes the profiles and extensions that are defined in this guide to exchange quality data. Each profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.
   - [Search Parameters](search-parameters.html): This set of pages lists the search parameters extended for use in this guide for use in AU Core operations.
