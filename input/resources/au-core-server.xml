@@ -6,7 +6,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h2 id="title">AU Core Server CapabilityStatement</h2>
       <ul>
-        <li>Implementation Guide Version: TBD</li>
+        <li>Implementation Guide Version: 0.3.0-ci-build</li>
         <li>FHIR Version: 4.0.1</li>
         <li>Supported Formats: <strong>SHALL</strong> support <code>json</code>,          <strong>SHOULD</strong> support <code>xml</code>
         </li>
@@ -49,7 +49,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 id="mode1" class="panel-title">Mode: <code>server</code>
-          </h3>
+         </h3>
         </div>
         <div class="panel-body">
           <div>
@@ -69,16 +69,16 @@
                 <p>Return the following response classes:</p>
                 <ul>
                   <li>
-                    <p>(Status 400): invalid parameter</p>
+                    <p>(Status 400): Bad Request</p>
                   </li>
                   <li>
-                    <p>(Status 401/4xx): unauthorized request</p>
+                    <p>(Status 401): Not Authorized</p>
                   </li>
                   <li>
-                    <p>(Status 403): insufficient scope</p>
+                    <p>(Status 403): Forbidden</p>
                   </li>
                   <li>
-                    <p>(Status 404): unknown resource</p>
+                    <p>(Status 404): Not Found</p>
                   </li>
                 </ul>
               </li>
@@ -100,9 +100,11 @@
           </div>
           <blockquote>
             <div>
+
               <ol>
-                <li>TBD.</li>
-              </ol>
+                <li>A server <strong>MAY</strong> reject any unauthorized requests by returning an HTTP 401 "Unauthorized", HTTP 403 "Forbidden", or HTTP 404 "Not Found"</li>
+                <li>For authentication and authorisation, systems <strong>MAY</strong> support any SMART App Launch and SMART Backend Service Authorization. When this is not avalable, basic authentication <strong>MAY</strong> be used. </li>
+             </ol>
             </div>
           </blockquote>
           <div class="lead">
@@ -347,16 +349,7 @@
 <a href="#Observation1-1">Observation</a>
 </td>
 <td>
-<a href="StructureDefinition-au-core-waistcircum.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-waistcircum</a>,
-<a href="StructureDefinition-au-core-bodyweight.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight</a>,
-<a href="StructureDefinition-au-core-bodytemp.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp</a>,
-<a href="StructureDefinition-au-core-diagnosticresult.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult</a>,
-<a href="StructureDefinition-au-core-heartrate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate</a>,
-<a href="StructureDefinition-au-core-resprate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-resprate</a>,
-<a href="StructureDefinition-au-core-diagnosticresult-path.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path</a>,
-<a href="StructureDefinition-au-core-smokingstatus.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus</a>,
-<a href="StructureDefinition-au-core-bloodpressure.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure</a>,
-<a href="StructureDefinition-au-core-bodyheight.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight</a>
+<a href="StructureDefinition-au-core-waistcircum.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-waistcircum</a>,<a href="StructureDefinition-au-core-bodyweight.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight</a>,<a href="StructureDefinition-au-core-bodytemp.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp</a>,<a href="StructureDefinition-au-core-diagnosticresult.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult</a>,<a href="StructureDefinition-au-core-heartrate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate</a>,<a href="StructureDefinition-au-core-resprate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-resprate</a>,<a href="StructureDefinition-au-core-diagnosticresult-path.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path</a>,<a href="StructureDefinition-au-core-smokingstatus.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus</a>,<a href="StructureDefinition-au-core-bloodpressure.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure</a>,<a href="StructureDefinition-au-core-bodyheight.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight</a>
 </td>
 <td>y</td>
 <td class="text-center">y</td>
@@ -555,7 +548,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
@@ -703,7 +696,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
@@ -792,9 +785,9 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
     </p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
     </p>
   </div>
 </td>
@@ -951,7 +944,7 @@
   </td>
   <td>
     <div>
-      <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+      <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
       <p>The server <strong>SHALL</strong> support both.</p>
     </div>
   </td>
@@ -1006,9 +999,9 @@
     <div>
       <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
       <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-      <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,        <code>lt</code>,        <code>ge</code>,        <code>le</code>.
+      <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,        <code>lt</code>,        <code>ge</code>,        <code>le</code>.            
       </p>
-      <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,        <code>lt</code>,        <code>ge</code>,        <code>le</code>.
+      <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,        <code>lt</code>,        <code>ge</code>,        <code>le</code>.            
       </p>
     </div>
   </td>
@@ -1261,7 +1254,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
@@ -1299,10 +1292,27 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.        
     </p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.        
     </p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>MAY</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/immunization.html#search">status</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -1644,7 +1654,7 @@
 <tbody>
 <tr>
 <td>
-  <b>SHALL</b>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/resource.html#search">_id</a>
@@ -1683,7 +1693,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
@@ -1721,9 +1731,9 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
     </p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
     </p>
   </div>
 </td>
@@ -1909,7 +1919,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
@@ -1947,9 +1957,9 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
     </p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
     </p>
   </div>
 </td>
@@ -2107,7 +2117,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
@@ -2179,9 +2189,9 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.        
     </p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.        
     </p>
   </div>
 </td>
@@ -2241,7 +2251,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHALL</b>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">status</a>
@@ -2549,9 +2559,9 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the day offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the day offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
     </p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
     </p>
   </div>
 </td>
@@ -2862,8 +2872,8 @@
   <div>
     <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the profile.</p>
+    <p>The client <strong>SHOULD</strong> support search using a Medicare Provider Number identifier as defined in the profile.</p>
+    <p>The server <strong>SHOULD</strong> support search using a Medicare Provider Number identifier as defined in the profile.</p>
   </div>
 </td>
 </tr>
@@ -3031,7 +3041,7 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
     <p>The server <strong>SHALL</strong> support both.</p>
   </div>
 </td>
@@ -3086,9 +3096,9 @@
   <div>
     <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
     </p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.
+    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
     </p>
   </div>
 </td>
@@ -3258,11 +3268,6 @@
 </extension>
 </implementationGuide>
 <implementationGuide value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-</implementationGuide>
-<implementationGuide value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
@@ -3740,8 +3745,7 @@
 <type value="reference"/>
 <documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both.&#xa;&#xa;The client **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The server **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
 </searchParam>
-</resource>
-<!-- IMMUNIZATION :: DONE -->
+</resource><!-- IMMUNIZATION :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -4970,7 +4974,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values. The server **SHALL** support both.&#xA;&#xA;The client **SHOULD** support search using HPI-I and Medicare Provider Number identifiers as defined in the profile. The server **SHOULD** support search using the using HPI-I and Medicare Provider Number identifiers as defined in the profile."/>
+<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values. The server **SHALL** support both.&#xA;&#xA;The client **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile. The server **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
