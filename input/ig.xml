@@ -271,7 +271,7 @@
 			<reference>
 				<reference value="Encounter/covid-admin-1"/>
 			</reference>
-			<name value="Encounter - COVID 19 Vaccine Administration 1"/>
+			<name value="Encounter - COVID 19 Vaccine Administration Dose 1"/>
 			<description value="COVID 19 Vaccine Administration for Immunization-covid-1&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
 		</resource>
@@ -279,7 +279,7 @@
 			<reference>
 				<reference value="Encounter/discharge-1"/>
 			</reference>
-			<name value="Encounter - Discharge 1"/>
+			<name value="Encounter - Discharge"/>
 			<description value="Emergency encounter with discharge to home from AU Hospital&#xa;&#xa;Patient: Mr. Harry Dan"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
 		</resource>
@@ -397,7 +397,7 @@
 			<reference>
 				<reference value="Observation/bloodpressure-1"/>
 			</reference>
-			<name value="Observation - Blood Pressure 1"/>
+			<name value="Observation - Blood Pressure (systolic and dystolic)"/>
 			<description value="Blood Pressure - isolated diastolic hypertension&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
 		</resource>
@@ -413,7 +413,7 @@
 			<reference>
 				<reference value="Observation/bodyheight-1"/>
 			</reference>
-			<name value="Observation - Height 1"/>
+			<name value="Observation - Height"/>
 			<description value="Height recorded by GP&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
 		</resource>
@@ -429,7 +429,7 @@
 			<reference>
 				<reference value="Observation/bodyweight-2"/>
 			</reference>
-			<name value="Observation - Body weight 2"/>
+			<name value="Observation - Body weight"/>
 			<description value="Body weight recorded by GP at 6 months&#xa;&#xa;Patient: John Smith"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight"/>
 		</resource>
@@ -453,7 +453,7 @@
 			<reference>
 				<reference value="Observation/heartrate-1"/>
 			</reference>
-			<name value="Observation - Heart rate"/>
+			<name value="Observation - Heart rate 1"/>
 			<description value="Heart rate recorded by GP&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate"/>
 		</resource>
@@ -461,7 +461,7 @@
 			<reference>
 				<reference value="Observation/pulserate-1"/>
 			</reference>
-			<name value="Observation - Pulse rate"/>
+			<name value="Observation - Pulse rate 1"/>
 			<description value="Pulse rate recorded by GP&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate"/>
 		</resource>
@@ -525,7 +525,7 @@
 			<reference>
 				<reference value="Observation/waistcircum-1"/>
 			</reference>
-			<name value="Observation - Waist Circumference 1"/>
+			<name value="Observation - Waist Circumference"/>
 			<description value="Waist Circumference&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-waistcircum"/>
 		</resource>
@@ -583,7 +583,7 @@
 			<reference>
 			<reference value="Patient/banks-mia-leanne"/>
 			</reference>
-			<name value="Patient - Mia LEANNE BANKS (HI Vendor Test Data plus gender identity and pronouns) "/>
+			<name value="Patient - Mia LEANNE BANKS"/>
 			<description value="Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
@@ -591,7 +591,7 @@
 			<reference>
 			<reference value="Patient/howe-deangelo"/>
 			</reference>
-			<name value="Patient - Deangelo HOWE (HI Vendor Test Data) "/>
+			<name value="Patient - Deangelo HOWE"/>
 			<description value="Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
