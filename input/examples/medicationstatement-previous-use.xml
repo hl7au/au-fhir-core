@@ -28,8 +28,15 @@
     </effectivePeriod>
     <dateAsserted value="2018-07-10"/>
     <informationSource>
-        <reference value="PractitionerRole/sandyson-sandy-nurse"/>
+        <reference value="PractitionerRole/bobrester-bob-gp"/>
     </informationSource>
+    <reasonCode>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+            <code value="unknown"/>
+            <display value="unknown"/>
+      </coding>
+    </reasonCode>
     <dosage>
         <text value="Every 1-10 days at 10am for 30 minutes"/>
         <timing>

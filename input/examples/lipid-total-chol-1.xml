@@ -29,7 +29,7 @@
         <text value="Total Chol/HDL" />
     </code>
     <subject>
-        <reference value="Patient/smith-emma" />
+        <reference value="Patient/banks-mia-leanne" />
     </subject>
     <effectiveDateTime value="2023-01-17" />
     <valueQuantity>

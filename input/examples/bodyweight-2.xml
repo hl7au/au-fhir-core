@@ -26,14 +26,14 @@
     <text value="weight"/>
   </code>
   <subject>
-    <reference value="Patient/baby-smith-john"/>
+    <reference value="Patient/banks-mia-leanne"/>
   </subject>
   <effectiveDateTime value="2023-03-14"/>
   <performer>
     <reference value="PractitionerRole/bobrester-bob-gp"/>
   </performer>
   <valueQuantity>
-    <value value="7.9"/>
+    <value value="59"/>
     <unit value="kg"/>
     <system value="http://unitsofmeasure.org"/>
     <code value="kg"/>
