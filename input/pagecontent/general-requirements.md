@@ -20,7 +20,7 @@ The [Profiles and Extensions](profiles-and-extensions.html) page lists the AU Co
 
 AU Core profile elements include Mandatory and Must Support requirements. Mandatory elements are required and have a minimum cardinality of 1 (min=1). Must Support elements have defined conformance obligations in AU Core. 
 
-The [Must Support](general-requirements.html#must-support.html) page defines the:
+The [Must Support](general-requirements.html#must-support) page defines the:
 - [profile only expectations](general-requirements.html#profile-only-support) for support of these elements if a system is claiming conformance to a profile
 - [server and client expectations](general-requirements.html#profile--interaction-support) for support of these elements if a system is claiming conformance to a capability statement
 
