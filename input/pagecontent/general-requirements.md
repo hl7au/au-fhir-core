@@ -1,8 +1,8 @@
 ### Conforming to AU Core
 
 There are two different ways to implement AU Core:
-1. Profile Only Support: only the resources as profiled by AU Core to represent digital health information 
-1. Profile Support + Interaction Support: the resources as profiled by AU Core to represent digital health information (Profile Support) and [the RESTful FHIR API](http://hl7.org/fhir/R4/http.html) interactions defined for it (Interaction Support) 
+1. Profile Only Support: systems support only the resources as profiled by AU Core to represent digital health information.
+1. Profile Support + Interaction Support: systems support the resources as profiled by AU Core to represent digital health information (Profile Support) and [the RESTful FHIR API](http://hl7.org/fhir/R4/http.html) interactions defined for it (Interaction Support).
 
 The requirements of the FHIR standard and [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html) apply, and define the use of terms in this guide including the conformance verbs - SHALL, SHALL NOT, SHOULD, SHOULD NOT, MAY.
 

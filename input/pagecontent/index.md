@@ -8,8 +8,8 @@ AU Core defines the Data model and RESTful API interactions that set minimum exp
 AU Core uses AU Base representations as the basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each resource type to access data. AU Core promotes interoperability and adoption through common implementation and SHOULD be built on top of for standards development for specific use cases. 
 
 There are two different ways to implement AU Core:
-1. Profile Only Support: only the resources as profiled by AU Core to represent digital health information 
-1. Profile Support + Interaction Support: the resources as profiled by AU Core to represent digital health information (Profile Support) and [the RESTful FHIR API](http://hl7.org/fhir/R4/http.html) interactions defined for it (Interaction Support) 
+1. Profile Only Support: systems support only the resources as profiled by AU Core to represent digital health information.
+1. Profile Support + Interaction Support: systems support the resources as profiled by AU Core to represent digital health information (Profile Support) and [the RESTful FHIR API](http://hl7.org/fhir/R4/http.html) interactions defined for it (Interaction Support).
 
 In this regard it is similar in nature to other national core specifications such as US Core FHIR Implementation Guide and international FHIR specifications such as International Patient Access FHIR Implementation Guide.
 
