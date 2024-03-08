@@ -31,6 +31,10 @@ By making Individual Pronouns a Must Support data element, this profile explicit
 
 By making Individual Gender Identity a Must Support data element, this profile explicitly supports representation and exchange of the Gender Identity data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)). 
 
+<b>Sex Assigned at Birth</b>
+
+Sex assigned at birth is represented using the [Person Recorded Sex or Gender extension](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-individual-recordedSexOrGender.html) extension as profiled by [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html). It should be noted the [Person Recorded Sex or Gender extension](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-individual-recordedSexOrGender.html) extension is not marked as Must Support in this version of the profile.
+
 
 ### Profile specific implementation guidance
 - An individual's IHI **SHOULD** be used in `Patient.identifier` if available, in preference to Medicare or DVA numbers
