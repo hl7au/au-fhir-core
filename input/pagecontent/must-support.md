@@ -1,4 +1,4 @@
-Labelling an element *[Must Support]( https://www.hl7.org/fhir/conformance-rules.html#mustSupport)* means that systems that request, or respond to requests, for patient data **SHALL** provide support for the element in some meaningful way. Must Support elements are treated differently between AU Core Responders and requestors. 
+Labelling an element *[Must Support]( https://www.hl7.org/fhir/conformance-rules.html#mustSupport)* means that systems that request, or respond to requests, for data **SHALL** provide support for the element in some meaningful way. Must Support elements are treated differently between AU Core Responders and requestors. 
 
 
 ### Must Support Requirements
