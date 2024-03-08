@@ -258,7 +258,7 @@
 			<description value="Urinary tract infection&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
-				<resource>
+		<resource>
 			<reference>
 				<reference value="Condition/cellulitis"/>
 			</reference>
@@ -309,14 +309,6 @@
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
 		</resource>
 		<!--LOCATION EXAMPLES-->
-		<resource>
-			<reference>
-				<reference value="Location/au-hospital"/>
-			</reference>
-			<name value="Location - Hospital Site"/>
-			<description value="AU Hospital Site"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
-		</resource>
 		<resource>
 			<reference>
 				<reference value="Location/au-hospital-pharm-out"/>
@@ -540,18 +532,18 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Organization/hospital-au"/>
+				<reference value="Organization/murrabit-hospital"/>
 			</reference>
-			<name value="Organization - Hospitals Australia"/>
-			<description value="Hospitals Australia is a part of Hospitals International"/>
+			<name value="Organization - Murrabit Public Hospital"/>
+			<description value="Murrabit Public Hospital"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Organization/hospital-int"/>
+				<reference value="Organization/mitchells-hill-audiology"/>
 			</reference>
-			<name value="Organization - Hospitals International"/>
-			<description value="Hospitals International"/>
+			<name value="Organization - Mitchells Hill Audiology"/>
+			<description value="Mitchells Hill Audiology"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<!--PATIENT EXAMPLES-->
@@ -581,7 +573,7 @@
 		</resource>
 		<resource>
 			<reference>
-			<reference value="Patient/banks-mia-leanne"/>
+				<reference value="Patient/banks-mia-leanne"/>
 			</reference>
 			<name value="Patient - Mia LEANNE BANKS"/>
 			<description value="Mr. Li Wang"/>
@@ -589,7 +581,7 @@
 		</resource>
 		<resource>
 			<reference>
-			<reference value="Patient/howe-deangelo"/>
+				<reference value="Patient/howe-deangelo"/>
 			</reference>
 			<name value="Patient - Deangelo HOWE"/>
 			<description value="Mr. Li Wang"/>
@@ -606,53 +598,29 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Practitioner/bradley-jill"/>
+				<reference value="Practitioner/sallie-sutherland"/>
 			</reference>
-			<name value="Practitioner - Jill Bradley"/>
-			<description value="Jill Bradley"/>
+			<name value="Practitioner - Sallie SUTHERLAND"/>
+			<description value="Sallie SUTHERLAND"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Practitioner/cardy-igist"/>
+				<reference value="Practitioner/chau-fryer"/>
 			</reference>
-			<name value="Practitioner - Dr. Igist Cardy"/>
-			<description value="Dr. Igist Cardy"/>
+			<name value="Practitioner - Chau FRYER"/>
+			<description value="Chau FRYER"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Practitioner/levin-henry"/>
+				<reference value="Practitioner/darleen-mackay"/>
 			</reference>
-			<name value="Practitioner - Dr Henry Levin VII "/>
-			<description value="Dr Henry Levin VII "/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Practitioner/sandyson-sandy"/>
-			</reference>
-			<name value="Practitioner - Ms. Sandy Sandyson"/>
-			<description value="Ms. Sandy Sandyson"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Practitioner/surgeon-david"/>
-			</reference>
-			<name value="Practitioner - Dr. David Surgeon"/>
-			<description value="Dr. David Surgeon"/>
+			<name value="Practitioner - Darleen MACKAY"/>
+			<description value="Darleen MACKAY"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<!--PRACTITIONERROLE EXAMPLES-->
-		<resource>
-			<reference>
-				<reference value="PractitionerRole/audiologist-bradley-jill"/>
-			</reference>
-			<name value="PractitionerRole - Audiologist"/>
-			<description value="Jill Bradley, Audiologist, at Audiology Advanced Hearing Care"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-		</resource>
 		<resource>
 			<reference>
 				<reference value="PractitionerRole/bobrester-bob-gp"/>
@@ -663,18 +631,26 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="PractitionerRole/cardiologist-cardy-igist"/>
+				<reference value="PractitionerRole/cardiologist-sallie-sutherland"/>
 			</reference>
 			<name value="PractitionerRole - Cardiologist"/>
-			<description value="Dr. Igist Cardy, GP, at Hospital Australia"/>
+			<description value="Dr. Sallie Sutherland, Murrabit Public Hospital"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
 			<reference>
-				<reference value="PractitionerRole/surgeon-david-surgeon"/>
+				<reference value="PractitionerRole/surgeon-chau-fryer"/>
 			</reference>
 			<name value="PractitionerRole - Surgeon"/>
-			<description value="Dr. David Surgeon, Surgeon, at Hospital Australia"/>
+			<description value="Chau FRYER, Surgeon, at Murrabit Public Hospital"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="PractitionerRole/nephrologist-darleen-mackay"/>
+			</reference>
+			<name value="PractitionerRole - Nephrologist"/>
+			<description value="Darleen MACKAY, Nephrologist"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<!--PROCEDURE EXAMPLES-->

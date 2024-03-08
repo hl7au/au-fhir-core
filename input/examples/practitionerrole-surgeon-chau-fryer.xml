@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PractitionerRole xmlns="http://hl7.org/fhir">
+    <id value="surgeon-chau-fryer"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+    </meta>
+    <practitioner>
+        <reference value="Practitioner/chau-fryer"/>
+    </practitioner>
+    <organization>
+        <reference value="Organization/murrabit-hospital"/>
+    </organization>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="304292004"/>
+        </coding>
+        <coding>
+            <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
+            <code value="253511"/>
+            <display value="Surgeon (General)"/>
+        </coding>
+        <text value="Surgeon"/>
+    </code>
+    <telecom>
+        <system value="phone"/>
+        <value value="(03) 7010 8625"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="chau.fryer@murrabitph.example.com.au"/>
+        <use value="work"/>
+    </telecom>
+    <address>
+        <use value="work"/>
+        <line value="107 West Cr"/>
+        <city value="Murrabit"/>
+        <state value="VIC"/>
+        <postalCode value="3579"/>
+    </address>
+</PractitionerRole>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PractitionerRole xmlns="http://hl7.org/fhir">
-    <id value="cardiologist-cardy-igist"/>
+    <id value="cardiologist-sallie-sutherland"/>
     <meta>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
     </meta>  
@@ -16,10 +16,10 @@
         <value value="1555561A"/>
     </identifier>
     <practitioner>
-        <reference value="Practitioner/cardy-igist"/>
+        <reference value="Practitioner/sallie-sutherland"/>
     </practitioner> 
     <organization>
-        <reference value="Organization/hospital-au"/>
+        <reference value="Organization/murrabit-hospital"/>
     </organization>
     <code>
         <coding>
@@ -29,11 +29,13 @@
         </coding>
         <text value="Cardiologist"/>
     </code>   
-    <location>
-        <reference value="Location/au-hospital"/>
-    </location>
     <telecom>
         <system value="phone"/>
-        <value value="(02) 5550 4444"/>
+        <value value="0370102880"/>
     </telecom>
+      <telecom>
+    <system value="email"/>
+    <value value="sallie.sutherland@murrabitph.example.com.au"/>
+    <use value="work"/>
+  </telecom>
 </PractitionerRole>
