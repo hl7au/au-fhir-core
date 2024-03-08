@@ -1262,11 +1262,11 @@
 					<title value="General Requirements"/>
 					<generation value="markdown"/>
 				</page>
-				<page>
+				<!--<li><page>
 					<nameUrl value="must-support.html"/>
 					<title value="Must Support"/>
 					<generation value="markdown"/>
-				</page>
+				</page>-->
 			</page>
 			<page>
 				<nameUrl value="guidance.html"/>
