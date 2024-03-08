@@ -224,23 +224,6 @@
 			<description value="Penicillin (medication) allergy&#xa;&#xa;Patient: Deangelo HOWE"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
 		</resource>
-		<!--BODYSTRUCTURE EXAMPLES-->
-		<resource>
-			<reference>
-				<reference value="BodyStructure/right-knee"/>
-			</reference>
-			<name value="BodyStructure - Right Knee"/>
-			<description value="Right Knee&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/BodyStructure"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="BodyStructure/tumour-spleen"/>
-			</reference>
-			<name value="BodyStructure - Splenic mass"/>
-			<description value="7 cm maximum diameter splenic mass with image&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/BodyStructure"/>
-		</resource>
 		<!--CONDITION EXAMPLES-->
 		<resource>
 			<reference>
@@ -358,6 +341,22 @@
 			<description value="Branded pack with one active ingredient."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/2active-ingredients"/>
+			</reference>
+			<name value="Medication - Product with two active ingredients"/>
+			<description value="Product with two active ingredients."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/simvastatin"/>
+			</reference>
+			<name value="Medication - Simvastatin 40 MG Disintegrating Oral Tablet"/>
+			<description value="Simvastatin 40 MG Disintegrating Oral Tablet."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
+		</resource>
 		<!--MEDICATIONREQUEST EXAMPLES-->
 		<resource>
 			<reference>
@@ -390,6 +389,14 @@
 			</reference>
 			<name value="MedicationStatement - practitioner reported previous use of Diflucan"/>
 			<description value="Practitioner reports patient has taken Diflucan in the past but is not taking it any more."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationStatement/simvastatin"/>
+			</reference>
+			<name value="MedicationStatement - current use of Simvastatin"/>
+			<description value="Current use of Simvastatin 40 MG Disintegrating Oral Tablet."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
 		</resource>
 		<!--OBSERVATION EXAMPLES-->
@@ -427,7 +434,7 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Observation/bodyweight-2"/>
+				<reference value="Observation/bodyweight-1"/>
 			</reference>
 			<name value="Observation - Body weight"/>
 			<description value="Body weight recorded by GP at 6 months&#xa;&#xa;Patient: John Smith"/>
@@ -703,14 +710,6 @@
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
 		</resource>
 		<!--PROVENANCE EXAMPLES-->
-		<resource>
-			<reference>
-				<reference value="Provenance/delete"/>
-			</reference>
-			<name value="Provenance - delete a specific document reference version"/>
-			<description value="Provenance of a delete a specific document reference version"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-provenance"/>
-		</resource>
 		<resource>
 			<reference>
 				<reference value="Provenance/signature"/>

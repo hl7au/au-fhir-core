@@ -24,12 +24,6 @@
             <code value="716186003"/>
             <display value="No known allergy"/>
         </coding>
-        <coding>
-      <system
-              value="http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips"/>
-      <code value="no-known-allergies"/>
-      <display value="No known allergies"/>
-    </coding>
     </code>
     <patient>
         <reference value="Patient/wang-li"/>
