@@ -28,26 +28,14 @@
 		<text value="Waist Circumference"/>
 	</code>
 	<subject>
-		<reference value="Patient/baby-smith-john"/>
+     <reference value="Patient/banks-mia-leanne" />
 	</subject>
 	<effectiveDateTime value="2023-03-14"/>
 	<performer>
 		<reference value="PractitionerRole/bobrester-bob-gp"/>
-		<identifier>
-			<type>
-				<coding>
-					<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-					<code value="NPI"/>
-					<display value="National provider identifier"/>
-				</coding>
-				<text value="HPI-I"/>
-			</type>
-			<system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
-			<value value="8003614900041243"/>
-		</identifier>
 	</performer>
 	<valueQuantity>
-		<value value="32"/>
+		<value value="78.6"/>
 		<unit value="cm"/>
 		<system value="http://unitsofmeasure.org"/>
 		<code value="cm"/>

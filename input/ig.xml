@@ -244,14 +244,6 @@
 		<!--CONDITION EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="Condition/aci"/>
-			</reference>
-			<name value="Condition - Acute myocardial infarction of anterior wall"/>
-			<description value="Acute myocardial infarction of anterior wall&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Condition/ckd"/>
 			</reference>
 			<name value="Condition - Chronic Kidney Disease"/>
@@ -264,6 +256,14 @@
 			</reference>
 			<name value="Condition - Urinary tract infection"/>
 			<description value="Urinary tract infection&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+		</resource>
+				<resource>
+			<reference>
+				<reference value="Condition/cellulitis"/>
+			</reference>
+			<name value="Condition - Cellulitis of Right Knee"/>
+			<description value="Cellulitis of right knee&#xa;&#xa;Patient: Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
 		<!--ENCOUNTER EXAMPLES-->
@@ -378,14 +378,6 @@
 		<!--MEDICATIONSTATEMENT EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="MedicationStatement/active-amiodarone"/>
-			</reference>
-			<name value="MedicationStatement - practitioner records active use of Amiodarone 200mg"/>
-			<description value="Practitioner records active use of Amiodarone 200mg."/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="MedicationStatement/intended-coq10"/>
 			</reference>
 			<name value="MedicationStatement - practitioner records intended use of CoQ10 150mg"/>
@@ -423,14 +415,6 @@
 			</reference>
 			<name value="Observation - Height 1"/>
 			<description value="Height recorded by GP&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/bodyheight-2"/>
-			</reference>
-			<name value="Observation - Length 2"/>
-			<description value="Length recorded by Mother at 6 months&#xa;&#xa;Patient: John Smith"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight"/>
 		</resource>
 		<resource>
@@ -475,10 +459,18 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Observation/pulserate-1"/>
+			</reference>
+			<name value="Observation - Pulse rate"/>
+			<description value="Pulse rate recorded by GP&#xa;&#xa;Patient: Mr. Li Wang"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Observation/lipid-hdl-1"/>
 			</reference>
 			<name value="Observation - HDL"/>
-			<description value="HDL result&#xa;&#xa;Patient: Ms. Emma Smith"/>
+			<description value="HDL result&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -486,7 +478,7 @@
 				<reference value="Observation/lipid-ldl-1"/>
 			</reference>
 			<name value="Observation - LDL"/>
-			<description value="LDL result&#xa;&#xa;Patient: Ms. Emma Smith"/>
+			<description value="LDL result&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -494,7 +486,7 @@
 				<reference value="Observation/lipid-total-chol-1"/>
 			</reference>
 			<name value="Observation - Total Cholesterol/HDL ratio"/>
-			<description value="Total Cholesterol/HDL ratio result&#xa;&#xa;Patient: Ms. Emma Smith"/>
+			<description value="Total Cholesterol/HDL ratio result&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -502,7 +494,7 @@
 				<reference value="Observation/lipid-triglyceride-1"/>
 			</reference>
 			<name value="Observation - Triglyceride"/>
-			<description value="Triglyceride result&#xa;&#xa;Patient: Ms. Emma Smith"/>
+			<description value="Triglyceride result&#xa;&#xa;Patient: Ms. Mia LEANNE BANKS"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -518,7 +510,7 @@
 				<reference value="Observation/resprate-1"/>
 			</reference>
 			<name value="Observation - Respiration rate"/>
-			<description value="Observation of respiration rate&#xa;&#xa;Patient: Ms. Emma SMITH"/>
+			<description value="Observation of respiration rate&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-resprate"/>
 		</resource>
 		<resource>
@@ -534,7 +526,7 @@
 				<reference value="Observation/waistcircum-1"/>
 			</reference>
 			<name value="Observation - Waist Circumference 1"/>
-			<description value="Waist Circumference of baby John Smith"/>
+			<description value="Waist Circumference&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-waistcircum"/>
 		</resource>
 		<!--ORGANIZATION EXAMPLES-->

@@ -33,7 +33,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/benbanks-mia-leanne"/>
+        <reference value="Patient/banks-mia-leanne"/>
     </subject>
     <onsetDateTime value="2020-05-10"/>
     <abatementDateTime value="2020-05-24"/>
