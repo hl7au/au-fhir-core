@@ -23,9 +23,7 @@ The AU Core project includes:
 - Australian Core Data for Interoperability
 - AU Core FHIR Implementation Guide
 
-The Australian Core Data for Interoperability (AUCDI) aims to standardise the capture, structure, usage, and exchange of health data to counteract the current fragmentation of Australia’s health data systems. The AUCDI forms a basis for clinical data requirements for AU Core.
-
-<p class="request-for-feedback">The Australian Core Data for Interoperability (AUCDI) Release 1 Draft for Comment has been released. Information on how to provide feedback is available from this page: <a href="https://confluence.csiro.au/display/FHIR/AUCDI+Release+1">AUCDI Release 1</a>.</p>
+The [Australian Core Data for Interoperability (AUCDI)](https://confluence.csiro.au/display/FHIR/AUCDI+Release+1) aims to standardise the capture, structure, usage, and exchange of health data to counteract the current fragmentation of Australia’s health data systems. The AUCDI forms a basis for clinical data requirements for AU Core.
 
 #### Contributing to AU Core Development
 AU Core R1 is in currently in development. Ballot for Comment is scheduled for March 2024.

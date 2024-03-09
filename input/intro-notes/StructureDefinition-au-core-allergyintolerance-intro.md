@@ -23,7 +23,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - Refutation is not expected to be handled except as above - an appropriate negation code in `AllergyIntolerance.code` and `AllergyIntolerance.verificationStatus` of "confirmed" or "unconfirmed"
 - Where only substance is known (e.g. 111088007 \|Latex\|) and not a statement of allergy or intolerance (e.g. 300916003 \|Allergy to latex\|), the substance is sent in `AllergyIntolerance.code`
 
-<p class="request-for-feedback">Specific feedback is sought on the proposal to remove Must Support from AllergyIntolerance.asserter element.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44699">FHIR-44699</a>.</p>
+<p class="request-for-feedback">Feedback is requested on the proposal to remove Must Support from AllergyIntolerance.asserter element. Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44699">FHIR-44699</a>.</p>
 
-<p class="request-for-feedback">Specific feedback is sought on the AllergyIntolerance.code refined subset binding proposal, based on the feedback received by vendors.<br/>Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44713">FHIR-44713</a>.</p>
-
+<p class="request-for-feedback">Feedback is requested on proposed terminology binding change for AllergyIntolerance.code. Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44713">FHIR-44713</a>.</p>
