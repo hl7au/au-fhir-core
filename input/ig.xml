@@ -334,8 +334,8 @@
 		<reference>
 				<reference value="Location/mitchells-hill-audiology"/>
 			</reference>
-			<name value="Location - Murrabit Public Hospital"/>
-			<description value="Murrabit Public Hospital"/>
+			<name value="Location - Mitchells Hill Audiology"/>
+			<description value="Mitchells Hill Audiology"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
 		</resource>
 		<!--MEDICATION EXAMPLES-->
