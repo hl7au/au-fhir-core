@@ -12,8 +12,7 @@
             </coding>
             <text value="Local Prescription Number"/>
         </type>
-        <system
-            value="http://example.com/prescriptions"/>
+        <system value="http://example.com/prescriptions"/>
         <value value="5372QQER"/>
         <assigner>
             <display value="A Regional Hospital"/>
@@ -39,7 +38,7 @@
     </subject>
     <authoredOn value="2018-07-15"/>
     <requester>
-        <reference value="PractitionerRole/surgeon-david-surgeon"/>
+        <reference value="PractitionerRole/surgeon-chau-fryer"/>
     </requester>
     <reasonCode>
         <coding>

@@ -27,24 +27,9 @@
   <subject>
     <reference value="Patient/wang-li"/>
   </subject>
-  <encounter>
-    <display value="GP Visit"/>
-  </encounter>
   <effectiveDateTime value="2016-07-02"/>
   <performer>
     <reference value="PractitionerRole/bobrester-bob-gp"/>
-    <identifier>
-      <type>
-        <coding>
-          <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-          <code value="NPI"/>
-          <display value="National provider identifier"/>
-        </coding>
-        <text value="HPI-I"/>
-      </type>
-      <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
-      <value value="8003614900041243"/>
-    </identifier>
   </performer>
   <valueQuantity>
     <value value="175"/>

@@ -33,7 +33,7 @@
     <reference value="Patient/bennelong-anne"/>
     <display value="Anne Bennelong"/>
   </subject>
- <encounter>
-    <display value="GP Visit"/>
+  <encounter>
+    <reference value="Encounter/consultation"/>
   </encounter>
-  </Condition>
+</Condition>
