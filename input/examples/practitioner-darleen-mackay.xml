@@ -20,11 +20,4 @@
         <value value="darleen.mackay@example.com.au"/>
         <use value="work"/>
     </telecom>
-    <address>
-        <use value="work"/>
-        <line value="130 Pine Jnc"/>
-        <city value="Docker River"/>
-        <state value="NT"/>
-        <postalCode value="0872"/>
-    </address>
 </Practitioner>
