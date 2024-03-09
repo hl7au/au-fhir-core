@@ -28,10 +28,7 @@
   </subject>
   <effectiveDateTime value="2020-11-06T10:45:00-05:00"/>
   <performer>
-    <reference value="PractitionerRole/audiologist-bradley-jill"/>
-  </performer>
-  <performer>
-    <reference value="Organization/adv-hearing-care"/>
+    <reference value="Organization/mitchells-hill-audiology"/>
   </performer>
   <valueQuantity>
     <value value="45"/>
