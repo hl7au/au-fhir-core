@@ -5,8 +5,10 @@
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
     </meta>
     <name>
-        <family value="FRYER" />
+        <use value="official"/>
+        <family value="Fryer" />
         <given value="Chau" />
+        <prefix value="Dr"/>
     </name>
     <telecom>
         <system value="phone"/>
