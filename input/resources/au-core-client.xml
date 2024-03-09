@@ -40,9 +40,6 @@
         <li>
           <a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Export Implementation Guide</a>
         </li>
-        <li>
-          <a href="https://hl7.org/fhir/uv/sdc/">Structured Data Capture Implementation Guide</a>
-        </li>
       </ul>
       <h2 id="rest">FHIR RESTful Capabilities</h2>
       <div class="panel panel-default">
