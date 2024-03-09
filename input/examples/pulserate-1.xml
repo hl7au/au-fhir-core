@@ -34,9 +34,6 @@
 	<subject>
 		<reference value="Patient/wang-li"/>
 	</subject>
-	<encounter>
-		<display value="GP Visit"/>
-	</encounter>
 	<effectiveDateTime value="2016-07-02"/>
 	<performer>
 		<reference value="PractitionerRole/bobrester-bob-gp"/>

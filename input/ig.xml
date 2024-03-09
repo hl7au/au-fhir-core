@@ -280,6 +280,14 @@
 			<description value="Telehealth encounter&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
 		</resource>
+				<resource>
+			<reference>
+				<reference value="Encounter/consultation"/>
+			</reference>
+			<name value="Encounter - consultation"/>
+			<description value="Consultation&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+		</resource>
 		<!--IMMUNIZATION EXAMPLES-->
 		<resource>
 			<reference>
@@ -317,6 +325,14 @@
 		<resource>
 			<reference>
 				<reference value="Location/murrabit-hospital"/>
+			</reference>
+			<name value="Location - Murrabit Public Hospital"/>
+			<description value="Murrabit Public Hospital"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
+		</resource>
+		<resource>
+		<reference>
+				<reference value="Location/mitchells-hill-audiology"/>
 			</reference>
 			<name value="Location - Murrabit Public Hospital"/>
 			<description value="Murrabit Public Hospital"/>
