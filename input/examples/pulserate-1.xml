@@ -40,14 +40,6 @@
 	<effectiveDateTime value="2016-07-02"/>
 	<performer>
 		<reference value="PractitionerRole/bobrester-bob-gp"/>
-		<identifier>
-			<type>
-
-				<text value="HPI-I"/>
-			</type>
-			<system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
-			<value value="8003614900041243"/>
-		</identifier>
 	</performer>
 	<valueQuantity>
 		<value value="80"/>
