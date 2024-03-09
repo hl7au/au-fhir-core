@@ -23,11 +23,6 @@
         <system value="phone"/>
         <value value="(03) 7010 8625"/>
     </telecom>
-    <telecom>
-        <system value="email"/>
-        <value value="darleen.mackay@example.com.au"/>
-        <use value="work"/>
-    </telecom>
     <address>
         <use value="work"/>
         <line value="107 West Cr"/>
