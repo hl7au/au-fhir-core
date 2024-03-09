@@ -34,11 +34,4 @@
         <value value="chau.fryer@murrabitph.example.com.au"/>
         <use value="work"/>
     </telecom>
-    <address>
-        <use value="work"/>
-        <line value="107 West Cr"/>
-        <city value="Murrabit"/>
-        <state value="VIC"/>
-        <postalCode value="3579"/>
-    </address>
 </PractitionerRole>

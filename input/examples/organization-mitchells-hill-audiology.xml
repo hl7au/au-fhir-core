@@ -21,11 +21,6 @@
       <code value="8539"/>
       <display value="Other Allied Health Services"/>
     </coding>
-    <coding>
-      <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"/>
-      <code value="8539-3"/>
-      <display value="Audiology Service"/>
-    </coding>
   </type>
   <name value="Mitchells Hill Audiology"/>
   <telecom>
