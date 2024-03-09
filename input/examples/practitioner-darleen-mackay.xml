@@ -7,14 +7,14 @@
         <type>
             <coding>
                 <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                <code value="EN"/>
+                <code value="EI"/>
             </coding>
             <text value="Employee number"/>
         </type>
         <system value="http://nephrologyclinic.org.example.com/employee-id"/>
         <value value="N765009-mackay-darleen"/>
         <assigner>
-            <display value="Bobrester Medical Center"/>
+            <display value="Nephrology Clinic"/>
         </assigner>
     </identifier>
     <name>
