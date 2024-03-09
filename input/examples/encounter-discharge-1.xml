@@ -34,7 +34,7 @@
   </hospitalization>
   <location>
     <location>
-      <reference value="Location/au-hospital"/>
+      <reference value="Location/murrabit-hospital"/>
     </location>
   </location>
   <serviceProvider>

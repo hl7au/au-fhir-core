@@ -22,6 +22,9 @@
         </coding>
         <text value="Surgeon"/>
     </code>
+    <location>
+        <reference value="Location/murrabit-hospital"/>
+    </location>
     <telecom>
         <system value="phone"/>
         <value value="(03) 7010 8625"/>

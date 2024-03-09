@@ -32,7 +32,6 @@
         <value value="reception@murrabitph.example.com.au"/>
     </telecom>
     <address>
-        <text value="54301 Stanley St, South Brisbane QLD 4101" />
         <line value="144 Central Gdns"/>
         <city value="Murrabit"/>
         <state value="VIC"/>

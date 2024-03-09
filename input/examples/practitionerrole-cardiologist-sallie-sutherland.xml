@@ -3,7 +3,7 @@
     <id value="cardiologist-sallie-sutherland"/>
     <meta>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-    </meta>  
+    </meta>
     <identifier>
         <type>
             <coding>
@@ -17,7 +17,7 @@
     </identifier>
     <practitioner>
         <reference value="Practitioner/sallie-sutherland"/>
-    </practitioner> 
+    </practitioner>
     <organization>
         <reference value="Organization/murrabit-hospital"/>
     </organization>
@@ -28,14 +28,17 @@
             <display value="Cardiologist"/>
         </coding>
         <text value="Cardiologist"/>
-    </code>   
+    </code>
+    <location>
+        <reference value="Location/murrabit-hospital"/>
+    </location>
     <telecom>
         <system value="phone"/>
         <value value="0370102880"/>
     </telecom>
-      <telecom>
-    <system value="email"/>
-    <value value="sallie.sutherland@murrabitph.example.com.au"/>
-    <use value="work"/>
-  </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="sallie.sutherland@murrabitph.example.com.au"/>
+        <use value="work"/>
+    </telecom>
 </PractitionerRole>
