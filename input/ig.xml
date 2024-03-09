@@ -466,7 +466,7 @@
 			<reference>
 				<reference value="Observation/heartrate-1"/>
 			</reference>
-			<name value="Observation - Heart rate 1"/>
+			<name value="Observation - Heart rate"/>
 			<description value="Heart rate recorded by GP&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate"/>
 		</resource>
@@ -474,7 +474,7 @@
 			<reference>
 				<reference value="Observation/pulserate-1"/>
 			</reference>
-			<name value="Observation - Pulse rate 1"/>
+			<name value="Observation - Pulse rate"/>
 			<description value="Pulse rate recorded by GP&#xa;&#xa;Patient: Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate"/>
 		</resource>
