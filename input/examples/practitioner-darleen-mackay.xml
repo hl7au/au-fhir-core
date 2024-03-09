@@ -14,7 +14,7 @@
         <system value="http://nephrologyclinic.org.example.com/employee-id"/>
         <value value="N765009-mackay-darleen"/>
         <assigner>
-            <display value="Nephrology Clinic"/>
+            <display value="Docker River Nephrology Clinic"/>
         </assigner>
     </identifier>
     <name>
