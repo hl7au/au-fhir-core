@@ -24,7 +24,7 @@
       <display value="General practice service"/>
     </coding>
   </serviceType>
-  <subject>🔗 
+  <subject> 
     <reference value="Patient/bennelong-anne"/>
   </subject>
   <participant>
@@ -36,14 +36,14 @@
         <display value="primary performer"/>
       </coding>
     </type>
-    <individual>🔗 
+    <individual>
       <reference value="PractitionerRole/bobrester-bob-gp"/>
     </individual>
   </participant>
   <period>
     <end value="2022-02-10"/>
   </period>
-  <serviceProvider>🔗 
+  <serviceProvider>
     <reference value="Organization/bobrester-medical-center"/>
   </serviceProvider>
 </Encounter>
