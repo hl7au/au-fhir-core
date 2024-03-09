@@ -15,7 +15,6 @@
         <li>Published on: TBD</li>
         <li>Published by: HL7 Australia - FHIR Working Group</li>
       </ul>
-      <p class="stu-note">This CapabilityStatement is under development; the list of profiles and search parameters matches the current draft, RESTful operation definition is not yet available.</p>
       <blockquote class="impl-note">
         <p>
           <strong>Note to Implementers: FHIR Capabilities</strong>
