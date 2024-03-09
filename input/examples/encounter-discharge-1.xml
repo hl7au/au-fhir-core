@@ -34,10 +34,10 @@
   </hospitalization>
   <location>
     <location>
-      <reference value="Location/au-hospital"/>
+      <reference value="Location/murrabit-hospital"/>
     </location>
   </location>
   <serviceProvider>
-    <reference value="Organization/hospital-au"/>
+    <reference value="Organization/murrabit-hospital"/>
   </serviceProvider>
 </Encounter>

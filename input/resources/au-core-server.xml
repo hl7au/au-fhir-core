@@ -15,7 +15,6 @@
         <li>Published on: TBD</li>
         <li>Published by: HL7 Australia - FHIR Working Group</li>
       </ul>
-      <p class="stu-note">This CapabilityStatement is under development; the list of profiles and search parameters matches the current draft, RESTful operation definition is not yet available.</p>
       <blockquote class="impl-note">
         <p>
           <strong>Note to Implementers: FHIR Capabilities</strong>
@@ -40,9 +39,6 @@
         </li>
         <li>
           <a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Export Implementation Guide</a>
-        </li>
-        <li>
-          <a href="https://hl7.org/fhir/uv/sdc/">Structured Data Capture Implementation Guide</a>
         </li>
       </ul>
       <h2 id="rest">FHIR RESTful Capabilities</h2>
@@ -5020,7 +5016,7 @@
 <name value="practitioner"/>
 <definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-practitionerrole-practitioner"/>
 <type value="reference"/>
-<documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both.&#xa;&#xa;The client **SHOULD** support chained search practitioner.identifier using HPI-I and Medicare Provider Number identifiers as defined in the AU Core Practitioner profile.&#xa;&#xa;The server **SHOULD** support chained search practitioner.identifier using HPI-I and Medicare Provider Number identifiers as defined in the AU Core Practitioner profile."/>
+<documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both.&#xa;&#xa;The client **SHOULD** support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile.&#xa;&#xa;The server **SHOULD** support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">

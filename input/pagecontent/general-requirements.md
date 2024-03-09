@@ -27,7 +27,7 @@ The [Must Support](general-requirements.html#must-support) page defines the:
 #### AU Core Capability Statements
 The [AU Core Client CapabilityStatement](CapabilityStatement-au-core-client.html) outlines conformance requirements and expectations for an AU Core Client. This CapabilityStatement describes the basic rules for the AU Core Requester actor that initiates a data access request to and retrieves data from an AU Core Responder. In addition, it lists the client conformance expectations for each resource type documented in AU Core. These expectations include supported FHIR profiles, RESTful operations, and search parameters. AU Core clients define their capabilities by choosing from this list based on the resource types they need to access.
 
-The [AU Core Server CapabilityStatement](CapabilityStatement-au-core-server.html) outlines conformance requirements and expectations for the IPA Clients This CapabilityStatement describes the basic rules for the International Patient Access server actor that is responsible for providing responses to queries submitted by International Patient Access requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by International Patient Access servers are defined in this CapabilityStatement.
+The [AU Core Server CapabilityStatement](CapabilityStatement-au-core-server.html) outlines conformance requirements and expectations for an AU Core Server. This CapabilityStatement describes the basic rules for the AU Core Responder actor that is responsible for providing responses to queries submitted by AU Cores Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core servers are defined in this CapabilityStatement.
 
 #### Profile Only Support
 Systems may deploy, and support, one or more AU Core profiles to represent digital health information. A system that implements _profile only support_ will use a profile's content model without any expectations to implement AU Core interactions and:
@@ -257,6 +257,7 @@ An AU Core Requester:
 
 Processing, depending on local requirements, may mean display, persist, index, or action in an event or request workflow. Processing may differ based on the element’s value. For example, one possible value of the [Immunization.status](https://hl7.org/fhir/r4/immunization-definitions.html#Immunization.status) element is `entered-in-error`. This element is marked as Must Support; requestors must be capable of processing this value to handle the resource’s clinical data appropriately.
 
+<p class="stu-note">AU Core provides a narrative description of the obligations associated with profile elements for system actors on this page. We are moving to introduce Obligations on actors for AU Core profiles. Each element labelled Must Support will specify the obligations associated with its use each AU Core system actor by providing one or more obligations using the <a href="https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-obligation.html">Obligation extension</a> and values from the <a href="https://build.fhir.org/ig/HL7/fhir-extensions//CodeSystem-obligation.html">obligation code value set</a>.</p>
 
 #### Presentation of elements labelled Must Support in profiles
 

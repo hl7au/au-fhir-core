@@ -24,11 +24,11 @@
     <performedDateTime value="2021-09-25"/>
     <performer>
         <actor>
-            <display value="Dr. David Surgeon"/>
+            <reference value="PractitionerRole/surgeon-chau-fryer"/>
         </actor>
     </performer>
     <location>
-        <reference value="Location/au-hospital"/>
+        <reference value="Location/murrabit-hospital"/>
     </location>
     <reasonCode>
         <coding>
@@ -38,16 +38,16 @@
         </coding>
         <text value="Occlusion of right coronary artery"/>
     </reasonCode>
-    <focalDevice> 
-        <action> 
-            <coding> 
-                <system value="http://snomed.info/sct"/> 
-                <code value="425362007"/> 
+    <focalDevice>
+        <action>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="425362007"/>
                 <display value="Surgical insertion - action"/>
-            </coding> 
-        </action> 
-        <manipulated> 
-            <display value="coronary stent"/> 
-        </manipulated> 
-  </focalDevice>
+            </coding>
+        </action>
+        <manipulated>
+            <display value="coronary stent"/>
+        </manipulated>
+    </focalDevice>
 </Procedure>

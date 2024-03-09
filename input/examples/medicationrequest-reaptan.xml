@@ -12,10 +12,10 @@
             </coding>
             <text value="Local Prescription Number"/>
         </type>
-        <system value="http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0/8003621566684455"/>
+        <system value="http:murrabitph.example.com.au/prescription"/>
         <value value="53720010"/>
         <assigner>
-            <reference value="Organization/hospital-au"/>
+            <reference value="Organization/murrabit-hospital"/>
         </assigner>
     </identifier>
     <status value="active"/>
@@ -38,7 +38,7 @@
     </subject>
     <authoredOn value="2018-07-15"/>
     <requester>
-        <reference value="PractitionerRole/surgeon-david-surgeon"/>
+        <reference value="PractitionerRole/surgeon-chau-fryer"/>
     </requester>
     <reasonCode>
         <text value="Pain management"/>
