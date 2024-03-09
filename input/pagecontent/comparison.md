@@ -1,8 +1,8 @@
 A resource may be conformant to multiple implementation guides. In addition to the core FHIR specification, a resource conformant to an AU Core profile may be conformant to profiles published project implementation guides, other national, or international implementation guides.
 
-The table provides a high-level comparison, indicating if a resource conformant to a particular AU Core profile also satisfies (i.e. is conformant to) a profile from [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa), [International Patient Summary](https://build.fhir.org/ig/HL7/fhir-ips), or [US Core](http://build.fhir.org/ig/HL7/US-Core).
+The table provides a high-level comparison, indicating if a resource conformant to a particular AU Core profile also satisfies (i.e. is conformant to) a profile from [International Patient Access](https://hl7.org/fhir/uv/ipa/STU1/), [International Patient Summary](https://hl7.org/fhir/uv/ips/STU1.1/), or [US Core](https://hl7.org/fhir/us/core/STU6.1/).
 
-Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa), [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips), or [US Core](http://build.fhir.org/ig/HL7/US-Core) **MAY NOT** conform to AU Core.
+Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://hl7.org/fhir/uv/ipa/STU1/), [International Patient Summary](https://hl7.org/fhir/uv/ips/STU1.1/), or [US Core](https://hl7.org/fhir/us/core/STU6.1/) **MAY NOT** conform to AU Core.
 
 <table border="1" cellspacing="0" cellpadding="0">
     <tbody>
@@ -18,24 +18,24 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
             </td>
             <td width="191" colspan="2" valign="top">
                 <p>
-                    <a href="https://build.fhir.org/ig/HL7/fhir-ipa">
-                        <strong>International Patient Access</strong>
+                    <a href="https://hl7.org/fhir/uv/ipa/STU1/">
+                        <strong>International Patient Access 1.0.0</strong>
                     </a>
                     <strong></strong>
                 </p>
             </td>
             <td width="198" colspan="2" valign="top">
                 <p>
-                    <a href="https://build.fhir.org/ig/HL7/fhir-ips">
-                        <strong>International Patient Summary</strong>
+                    <a href="https://hl7.org/fhir/uv/ips/STU1.1/">
+                        <strong>International Patient Summary 1.1.0</strong>
                     </a>
                     <strong></strong>
                 </p>
             </td>
             <td width="215" colspan="2" valign="top">
                 <p>
-                    <a href="http://build.fhir.org/ig/HL7/US-Core">
-                        <strong>US Core</strong>
+                    <a href="https://hl7.org/fhir/us/core/STU6.1/">
+                        <strong>US Core 6.1.0</strong>
                     </a>
                     <strong></strong>
                 </p>
