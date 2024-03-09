@@ -148,6 +148,12 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-rsg-sexassignedab"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
 		<!--VITAL SIGNS-->
 		<resource>
 			<reference>
@@ -590,7 +596,7 @@
 			<reference>
 			<reference value="Patient/banks-mia-leanne"/>
 			</reference>
-			<name value="Patient - Mia LEANNE BANKS"/>
+			<name value="Patient - Mia Leanne Banks"/>
 			<description value="Mr. Li Wang"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>

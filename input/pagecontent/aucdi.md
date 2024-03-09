@@ -199,7 +199,7 @@ The table below shows the relationship between the AUCDI Data Groups and Element
     <td colspan="2">Sex assigned at birth</td>
     <td>AU Core Patient</td>
     <td>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender')</td>
-    <td></td>
+    <td>The <a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex or Gender extension</a> is profiled by <a href="StructureDefinition-au-core-rsg-sexassignedab.html">AU Core Sex Assigned At Birth (RSG)</a> to represent the concept of Sex assigned at birth.</td>
   </tr>
   <tr>
     <td colspan="2">Gender identity</td>
@@ -209,7 +209,7 @@ The table below shows the relationship between the AUCDI Data Groups and Element
   </tr>
   <tr>
     <td colspan="2">Pronoun/s</td>
-    <td>AU Core Patient </td>
+    <td>AU Core Patient</td>
     <td>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-pronouns')</td>
     <td></td>
   </tr>

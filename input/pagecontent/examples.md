@@ -10,6 +10,12 @@ In addition to the examples defined in this implementation, synthetic (realistic
 {% include example-list-generator.md %}
 <!-- ================================================ -->
 
+### Extensions
+* Sex Assigned at Birth: [Patient - Mia Leanne Banks](Patient-banks-mia-leanne.html)
+* Individual Pronouns: [Patient - Mia Leanne Banks](Patient-banks-mia-leanne.html)
+* Gender Identity: [Patient - Mia Leanne Banks](Patient-banks-mia-leanne.html)
+
+
 
 
 
