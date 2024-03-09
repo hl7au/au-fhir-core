@@ -14,6 +14,9 @@
         </type>
         <system value="http://bobrestermedical.example.com/id/employee-id"/>
         <value value="567845B-1"/>
+        <assigner>
+            <display value="Bobrester Medical Center"/>
+        </assigner>
     </identifier>
     <identifier>
         <type>
