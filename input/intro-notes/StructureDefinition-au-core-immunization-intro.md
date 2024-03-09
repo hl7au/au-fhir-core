@@ -19,23 +19,23 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - Use the status code: `not-done` to represent that an immunization was *not* given.
 
 <div class="request-for-feedback">
-    <p>Specific feedback is sought on the proposals to remove Must Support from the following elements:
+    <p>Feedback is requested on the proposals to remove Must Support from the following elements:
     <ul>
-        <li>Immunization.performer and its children, as it may not be known outside of administration reporting.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-44653">FHIR-44653</a>.</li>
-        <li>Immunization.note, which may be taken during administration but not relevant for other use cases.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-44672">FHIR-44672</a>.</li>
-        <li>Immunization.reasonCode. <a href="https://jira.hl7.org/browse/FHIR-44654">Comment on FHIR-44654</a>.</li>
-        <li>Immunization.protocolApplied.series, as the series name is often implied in the vaccine.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-44657">FHIR-44657</a>.</li>
-        <li>Immunization.protocolApplied.targetDisease, as the target disease is often implied in the vaccine.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-44654">FHIR-44654</a>.</li>
-        <li>Immunization.protocolApplied.doseNumber, due to uncertainty about system support for capturing this information.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-44674">FHIR-44674</a>.</li>
+        <li>Immunization.performer and its children: please comment on <a href="https://jira.hl7.org/browse/FHIR-44653">FHIR-44653</a>.</li>
+        <li>Immunization.note: please comment on HL7 JIRA <a href="https://jira.hl7.org/browse/FHIR-44672">FHIR-44672</a>.</li>
+        <li>Immunization.reasonCode: please comment on HL7 JIRA <a href="https://jira.hl7.org/browse/FHIR-44654">Comment on FHIR-44654</a>.</li>
+        <li>Immunization.protocolApplied.series: please comment on HL7 JIRA <a href="https://jira.hl7.org/browse/FHIR-44657">FHIR-44657</a>.</li>
+        <li>Immunization.protocolApplied.targetDisease: please comment on HL7 JIRA <a href="https://jira.hl7.org/browse/FHIR-44654">FHIR-44654</a>.</li>
+        <li>Immunization.protocolApplied.doseNumber: please comment on HL7 JIRA <a href="https://jira.hl7.org/browse/FHIR-44674">FHIR-44674</a>.</li>
     </ul>
     </p>
 </div>
 
 <div class="request-for-feedback">
-    <p>Specific feedback is sought on the proposals to add Must Support to the following elements:
+    <p>Feedback is requested on the proposals to add Must Support to the following elements:
     <ul>
-        <li>Immunization.primarySource, to distinguish between administrative records and historical reports.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-44659">FHIR-44659</a>.</li>
-        <li>Immunization.location, to support accurate reporting of vaccination sites.<br/>Please comment on <a href="https://jira.hl7.org/browse/FHIR-44671">FHIR-44671</a>.</li>
+        <li>Immunization.primarySource: please comment on HL7 JIRA <a href="https://jira.hl7.org/browse/FHIR-44659">FHIR-44659</a>.</li>
+        <li>Immunization.location: please comment on HL7 JIRA <a href="https://jira.hl7.org/browse/FHIR-44671">FHIR-44671</a>.</li>
     </ul>
     </p>
 </div> 
