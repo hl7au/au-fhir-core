@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Location xmlns="http://hl7.org/fhir">
+    <id value="au-hospital"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
+    </meta>
+    <status value="active"/>
+    <name value="QLD Hospital"/>
+    <alias value="Queensland Hospital"/>
+    <mode value="instance"/>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="HOSP"/>
+            <display value="Hospital"/>
+        </coding>
+        <coding> 
+            <system value="http://snomed.info/sct"/> 
+            <code value="22232009"/> 
+            <display value="Hospital"/> 
+        </coding>
+    </type>
+    <telecom>
+        <system value="phone"/>
+        <value value="(03) 5550 3333"/>
+    </telecom>
+    <address>
+        <text value="54301 Stanley St, South Brisbane QLD 4101" />
+        <line value="54301 Stanley St"/>
+        <city value="South Brisbane"/>
+        <state value="QLD"/>
+        <postalCode value="4101"/>
+        <country value="AU"/>
+    </address>
+    <physicalType>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+            <code value="si"/>
+            <display value="Site"/>
+        </coding>
+    </physicalType>
+    <managingOrganization>
+        <reference value="Organization/hospital-au"/>
+    </managingOrganization>
+</Location>

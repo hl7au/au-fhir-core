@@ -22,14 +22,17 @@
   </subject>
   <performedDateTime value="2012-08-05"/>
   <recorder>
-    <reference value="PractitionerRole/nephrologist-darleen-mackay"/>
+    <reference value="Practitioner/levin-henry"/>
+    <display value="Dr Henry Levin"/>
   </recorder>
   <asserter>
-    <reference value="PractitionerRole/nephrologist-darleen-mackay"/>
+    <reference value="Practitioner/levin-henry"/>
+    <display value="Dr Henry Levin"/>
   </asserter>
   <performer>
     <actor>
-      <reference value="PractitionerRole/nephrologist-darleen-mackay"/>
+      <reference value="Practitioner/levin-henry"/>
+      <display value="Dr Henry Levin"/>
     </actor>
   </performer>
   <reasonReference>

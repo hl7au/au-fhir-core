@@ -10,7 +10,7 @@
                 <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
                 <code value="EI"/>
             </coding>
-            <text value="Employee number"/>
+            <text value="Medicare Provider Number"/>
         </type>
         <system value="http://bobrestermedical.example.com/id/employee-id"/>
         <value value="567845B-1"/>

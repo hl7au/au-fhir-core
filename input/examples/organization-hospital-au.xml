@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="hospital-au"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
+    </meta>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+                <code value="NOI"/>
+            </coding>
+            <text value="HPI-O"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
+        <value value="8003621566684455"/>
+    </identifier>
+    <!--Invalid ABN format that passes profile validation used as the fictitious ABN to avoid introducing ambiguity with real world organisations-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="XX"/>
+            </coding>
+            <text value="ABN"/>
+        </type>
+        <system value="http://hl7.org.au/id/abn"/>
+        <!-- Not a valid ABN. This example uses a fictional
+        ABN that does not conform to ABN format to ensure no conflict with real world values -->
+        <value value="66824753003"/>
+    </identifier>
+    <type>
+        <coding>
+            <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"/>
+            <code value="8401"/>
+        </coding>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="HOSP"/>
+        </coding>
+        <text value="Hospital"/>
+    </type>
+    <name value="Hospital Australia"/>
+    <alias value="AU Hospitals"/>
+    <telecom>
+        <system value="phone"/>
+        <value value="(03) 5550 3333"/>
+    </telecom>
+    <address>
+        <text value="54301 Stanley St, South Brisbane QLD 4101" />
+        <line value="54301 Stanley St"/>
+        <city value="South Brisbane"/>
+        <state value="QLD"/>
+        <postalCode value="4101"/>
+        <country value="AU"/>
+    </address>
+    <partOf>
+        <reference value="Organization/hospital-int"/>
+    </partOf>
+</Organization>
