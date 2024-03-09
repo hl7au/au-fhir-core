@@ -11,6 +11,7 @@
         <prefix value="Dr."/>
     </name>
     <telecom>
+        <use value="work"/>
         <system value="phone"/>
         <value value="(03) 7010 8625"/>
     </telecom>
