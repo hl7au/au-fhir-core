@@ -677,14 +677,6 @@
 		<!--PROCEDURE EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="Procedure/cryotherapy"/>
-			</reference>
-			<name value="Procedure - Cryotherapy"/>
-			<description value="Cryotherapy&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Procedure/dialysis"/>
 			</reference>
 			<name value="Procedure - Dialysis"/>
