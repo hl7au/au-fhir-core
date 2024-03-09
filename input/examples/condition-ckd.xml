@@ -8,11 +8,6 @@
     <source value="#5R98DWXS6a48AGkD"/>
     <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
   </meta>
-  <extension url="http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal">
-    <valueReference>
-      <reference value="Goal/hpt-wnl"/>
-    </valueReference>
-  </extension>
   <clinicalStatus>
     <coding>
       <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
@@ -60,10 +55,6 @@
   </onsetAge>
   <recordedDate value="2018-12-01"/>
   <evidence>
-    <detail>
-      <reference value="FamilyMemberHistory/father"/>
-      <display value="Father had Chronic Kidney disease"/>
-    </detail>
     <detail>
       <reference value="Procedure/dialysis"/>
       <display value="Patient receives regular dialysis"/>

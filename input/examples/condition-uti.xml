@@ -7,8 +7,8 @@
     <clinicalStatus>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
-            <code value="active"/>
-            <display value="Active"/>
+            <code value="resolved"/>
+            <display value="Resolved"/>
         </coding>
     </clinicalStatus>
     <verificationStatus>
@@ -33,9 +33,10 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/smith-emma"/>
+        <reference value="Patient/banks-mia-leanne"/>
     </subject>
     <onsetDateTime value="2020-05-10"/>
+    <abatementDateTime value="2020-05-24"/>
     <recorder>
         <reference value="PractitionerRole/bobrester-bob-gp"/>
     </recorder>

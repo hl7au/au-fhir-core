@@ -12,8 +12,8 @@
 		</coding>
 	</vaccineCode>
 	<patient>
-		<reference value="Patient/dan-harry"/>
-		<display value="Mr. Harry DAN"/>
+		<reference value="Patient/howe-deangelo"/>
+		<display value="Deangelo HOWE"/>
 	</patient>
 	<occurrenceDateTime value="2017-08-15"/>
 	<primarySource value="true"/>

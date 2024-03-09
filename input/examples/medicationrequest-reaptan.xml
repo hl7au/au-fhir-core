@@ -34,7 +34,7 @@
         </coding>
     </medicationCodeableConcept>
     <subject>
-        <reference value="Patient/smith-emma"/>
+        <reference value="Patient/wang-li"/>
     </subject>
     <authoredOn value="2018-07-15"/>
     <requester>

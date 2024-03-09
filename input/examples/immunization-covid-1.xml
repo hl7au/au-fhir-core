@@ -18,18 +18,6 @@
 	</vaccineCode>
 	<patient>
 		<reference value="Patient/bennelong-anne"/>
-		<identifier>
-			<type>
-				<coding>
-					<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-					<code value="NI"/>
-					<display value="National unique individual identifier"/>
-				</coding>
-				<text value="IHI"/>
-			</type>
-			<system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-			<value value="8003608833357361"/>
-		</identifier>
 	</patient>
 	<encounter>
 		<reference value="Encounter/covid-admin-1"/>
@@ -72,18 +60,6 @@
 		</function>
 		<actor>
 			<reference value="PractitionerRole/bobrester-bob-gp"/> 
-			<identifier>
-				<type>
-					<coding>
-						<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-						<code value="NPI"/>
-						<display value="National provider identifier"/>
-					</coding>
-					<text value="HPI-I"/>
-				</type>
-				<system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
-				<value value="8003619900015717"/>
-			</identifier>
 		</actor>
 	</performer>
 	<protocolApplied>

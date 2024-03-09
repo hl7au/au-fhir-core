@@ -30,7 +30,7 @@ AU Core defines the profiles:
 
 It is anticipated that future releases of AU Core will define AU Core profiles of:
 - MedicationAdministration (with AU Core Medication) are used to support medication chart and other administration use cases.
-- MedicationDispense (with AU Core Medication) are used to support dispense records and ePrescribing use cases.
+- MedicationDispense (with AU Core Medication) are used to support dispense records and medication management use cases.
 
 **Medicinal Product Identification**
 

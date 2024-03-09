@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-core-rsg-sexassignedab"/>
+  <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sexassignedab"/>
+  <name value="AUCoreSexAssignedAtBirth"/>
+  <title value="AU Core Sex Assigned At Birth"/>
+  <description value="This profile defines the minimum expectations for a [Person Recorded Sex or Gender extension](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-individual-recordedSexOrGender.html) when representing Sex Assigned at Birth. This profile identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Extension when conforming to this profile." />
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="Patient"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="RelatedPerson"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="Person"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="Practitioner"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Sex Assigned at Birth"/>
+      <definition value="Sex assigned at birth refers to what was determined by biological sex characteristics including genital and chromosome composition observed at birth or infancy. Sex assigned at birth is captured once for a person and is not expected to change within their lifetime."/>
+      <comment value="A person's sex can change over the course of their lifetime. The value in sex assigned at birth may not match a person’s gender or the sex recorded on their birth certificate or values in observations taken later in life that are the result of a specific measurement e.g. gonadal, ductal or phenotypic."/>
+      <alias value="Birth sex"/>
+      <alias value="Natal sex"/>
+    </element>
+    <element id="Extension.extension:value">
+      <path value="Extension.extension"/>
+      <sliceName value="value"/>
+      <min value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Extension.extension:value.value[x]">
+      <path value="Extension.extension.value[x]"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1"/>
+      </binding>
+    </element>
+    <element id="Extension.extension:type">
+      <path value="Extension.extension"/>
+      <sliceName value="type"/>
+      <short value="SNOMED Sex Assigned at Birth"/>
+      <definition value="The type or category of sex or gender that is recorded is sex assigned at birth."/>
+      <comment value="Because the recorded sex or gender concept exists primarily as means to exchange sex and gender data concepts that are known NOT to represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, the type is used to identify what type of concept the recorded sex or gender concept is."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Extension.extension:type.value[x]">
+      <path value="Extension.extension.value[x]"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="1515311000168102"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    </differential>
+</StructureDefinition>

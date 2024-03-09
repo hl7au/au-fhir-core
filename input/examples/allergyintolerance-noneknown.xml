@@ -24,59 +24,17 @@
             <code value="716186003"/>
             <display value="No known allergy"/>
         </coding>
-        <coding>
-      <system
-              value="http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips"/>
-      <code value="no-known-allergies"/>
-      <display value="No known allergies"/>
-    </coding>
     </code>
     <patient>
         <reference value="Patient/wang-li"/>
-        <identifier>
-            <type>
-                <coding>
-                    <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                    <code value="NI"/>
-                    <display value="National unique individual identifier"/>
-                </coding>
-                <text value="IHI"/>
-            </type>
-            <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-            <value value="8003608833357361"/>
-        </identifier>
     </patient>
     <encounter>
         <display value="GP Visit"/>
     </encounter>
     <recorder>
         <reference value="PractitionerRole/bobrester-bob-gp"/>
-        <identifier>
-            <type>
-                <coding>
-                    <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                    <code value="NPI"/>
-                    <display value="National provider identifier"/>
-                </coding>
-                <text value="HPI-I"/>
-            </type>
-            <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
-            <value value="8003614900041243"/>
-        </identifier>
     </recorder>
     <asserter>
         <reference value="Patient/wang-li"/>
-        <identifier>
-            <type>
-                <coding>
-                    <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                    <code value="NI"/>
-                    <display value="National unique individual identifier"/>
-                </coding>
-                <text value="IHI"/>
-            </type>
-            <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-            <value value="8003608833357361"/>
-        </identifier>
     </asserter>
 </AllergyIntolerance>
