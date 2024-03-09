@@ -4,14 +4,24 @@
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
     </meta>
     <identifier>
-        <system value="http://www.acme.org/practitioners"/>
-        <value value="254567"/>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="EN"/>
+            </coding>
+            <text value="Employee number"/>
+        </type>
+        <system value="http://nephrologyclinic.org.example.com/employee-id"/>
+        <value value="N765009-mackay-darleen"/>
+        <assigner>
+            <display value="Bobrester Medical Center"/>
+        </assigner>
     </identifier>
     <name>
         <family value="Darleen"/>
         <given value="MACKAY"/>
     </name>
-        <telecom>
+    <telecom>
         <system value="phone"/>
         <value value="(08) 7010 8018"/>
     </telecom>
