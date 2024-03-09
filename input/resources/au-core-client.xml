@@ -6,13 +6,13 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h2 id="title">AU Core Client CapabilityStatement</h2>
       <ul>
-        <li>Implementation Guide Version: 0.3.0-ci-build</li>
+        <li>Implementation Guide Version: 0.3.0-ballot</li>
         <li>FHIR Version: 4.0.1</li>
         <li>Supported Formats: <strong>SHALL</strong> support <code>json</code>,          <strong>SHOULD</strong> support <code>xml</code>
         </li>
         <li>Supported Patch Formats: <strong>SHOULD</strong> support <code>application/json-patch+json</code>
         </li>
-        <li>Published on: TBD</li>
+        <li>Published on: 2024-03-10</li>
         <li>Published by: HL7 Australia - FHIR Working Group</li>
       </ul>
       <blockquote class="impl-note">
