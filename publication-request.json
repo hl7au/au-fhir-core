@@ -4,10 +4,10 @@
     "path" : "http://hl7.org.au/fhir/core/0.3.0-ballot",
     "mode" : "working",
     "status" : "ballot",
-    "sequence" : "AU Core R4",
-    "desc" : "This preview draft for comment is published for March 2024 Connectathon",
+    "sequence" : "AU Core R1",
+    "desc" : "This snapshot is published for ballot and the March 2024 Connectathon",
     "first" : false,
-	"title" : "AU Core",
+    "title" : "AU Core",
     "ci-build" : "http://build.fhir.org/ig/hl7au/au-fhir-core",
     "category" : "National Base",
     "introduction" : "The AU Core Implementation Guide defines the minimum set of FHIR RESTful interactions for each of the AU Core Profiles to access patient data."
