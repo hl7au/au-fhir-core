@@ -613,16 +613,16 @@
 			<reference>
 				<reference value="Practitioner/sallie-sutherland"/>
 			</reference>
-			<name value="Practitioner - Sallie SUTHERLAND"/>
-			<description value="Sallie SUTHERLAND"/>
+			<name value="Practitioner - Dr. Sallie Sutherland"/>
+			<description value="Dr. Sallie Sutherland"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="Practitioner/chau-fryer"/>
 			</reference>
-			<name value="Practitioner - Chau FRYER"/>
-			<description value="Chau FRYER"/>
+			<name value="Practitioner - Dr. Chau FRYER"/>
+			<description value="Dr. Chau Fryer"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>

@@ -8,7 +8,7 @@
         <use value="official"/>
         <family value="Fryer" />
         <given value="Chau" />
-        <prefix value="Dr"/>
+        <prefix value="Dr."/>
     </name>
     <telecom>
         <system value="phone"/>
