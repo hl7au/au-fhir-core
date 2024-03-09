@@ -14,10 +14,6 @@ Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/Structu
 
 # Slicing information 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication|0.3.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice) 
-This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient|0.3.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner|0.3.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole|0.3.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate|0.3.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus|0.3.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication|0.3.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
