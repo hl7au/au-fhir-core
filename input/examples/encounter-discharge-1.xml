@@ -38,6 +38,6 @@
     </location>
   </location>
   <serviceProvider>
-    <reference value="Organization/murrabit-hospital"/>
+    <reference value="Organization/hospital-au"/>
   </serviceProvider>
 </Encounter>
