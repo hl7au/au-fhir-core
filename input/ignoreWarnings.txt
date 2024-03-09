@@ -1,10 +1,37 @@
 == Suppressed Messages ==
 
-# HL7 core warnings
+# DataType profiles supporting a choice of open types
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ihi, http://hl7.org/fhir/StructureDefinition/Identifier
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-dvanumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-localprescriptionidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicalrecordnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicareprovidernumber, http://hl7.org/fhir/StructureDefinition/Identifier
+
+# Slicing information 
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication|0.3.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice) 
+This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient|0.3.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner|0.3.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole|0.3.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate|0.3.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus|0.3.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication|0.3.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient|0.3.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner|0.3.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole|0.3.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+
+
+Constraint failed: inv-pat-1: 'Individual gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply' (defined in http://hl7.org.au/fhir/StructureDefinition/au-patient)
+Constraint failed: inv-pat-2: 'Individual pronouns shall be a member of the Australian Pronouns value set if any codes within that value set can apply' (defined in http://hl7.org.au/fhir/StructureDefinition/au-patient)
+au-core-org-01: The left side is inherently a collection, and so the expression 'type.coding.code = 'NOI'' may fail or return false if there is more than one item in the content being evaluated
+Best Practice Recommendation: In general, all observations should have a performer
+UCUM Codes that contain human readable annotations like {tablet} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
-An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
-
-# CapabilityStatement warnings
-This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
