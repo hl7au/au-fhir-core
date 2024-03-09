@@ -27,6 +27,26 @@
             </valueCodeableConcept>
         </extension>
     </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+        <extension url="value">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="248152002"/>
+                </coding>
+                <text value="Female"/>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="type">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="1515311000168102"/>
+                </coding>
+                <text value="Sex at Birth"/>
+            </valueCodeableConcept>
+        </extension>
+    </extension>
     <identifier>
         <extension url="http://hl7.org.au/fhir/StructureDefinition/ihi-status">
             <valueCoding>
@@ -53,13 +73,13 @@
     </identifier>
     <name>
         <use value="usual"/>
-        <family value="BANKS"/>
+        <family value="Banks"/>
         <given value="Mia"/>
-        <given value="LEANNE"/>
+        <given value="Leanne"/>
     </name>
     <telecom>
         <system value="phone"/>
-        <value value="270102724"/>
+        <value value="0270102724"/>
         <use value="work"/>
     </telecom>
     <telecom>
@@ -69,7 +89,7 @@
     </telecom>
     <telecom>
         <system value="phone"/>
-        <value value="270107520"/>
+        <value value="0270107520"/>
         <use value="home"/>
     </telecom>
     <telecom>
