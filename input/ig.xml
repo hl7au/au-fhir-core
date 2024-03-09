@@ -589,7 +589,7 @@
 				<reference value="Patient/banks-mia-leanne"/>
 			</reference>
 			<name value="Patient - Mia Leanne Banks"/>
-			<description value="Mr. Li Wang"/>
+			<description value="Mia Leanne Banks"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<resource>
@@ -597,7 +597,7 @@
 				<reference value="Patient/howe-deangelo"/>
 			</reference>
 			<name value="Patient - Deangelo HOWE"/>
-			<description value="Mr. Li Wang"/>
+			<description value="Deangelo Howe"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<!--PRACTITIONER EXAMPLES-->
