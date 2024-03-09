@@ -17,11 +17,13 @@
         <td>_id</td>
         <td><b>SHOULD</b></td>
         <td><code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>name</td>
         <td><b>SHOULD</b></td>
         <td><code>string</code></td>
+        <td></td>
   </tr>
  </tbody>
 </table>
@@ -37,7 +39,6 @@ The following search parameters **SHALL** be supported:
     Example:
     
       1. GET [base]/Practitioner?identifier=http://ns.electronichealth.net.au/id/hi/hpii/1.0\|8003619900015717
-      1. GET [base]/Practitioner?identifier=http://ns.electronichealth.net.au/id/medicare-prescriber-number\|553255
 
     *Implementation Notes:* Fetches a bundle containing any Practitioner resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
