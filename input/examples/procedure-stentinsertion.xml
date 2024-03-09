@@ -23,7 +23,9 @@
     </subject>
     <performedDateTime value="2021-09-25"/>
     <performer>
-        <reference value="PractitionerRole/surgeon-chau-fryer"/>
+        <actor>
+            <reference value="PractitionerRole/surgeon-chau-fryer"/>
+        </actor>
     </performer>
     <location>
         <reference value="Location/murrabit-hospital"/>
