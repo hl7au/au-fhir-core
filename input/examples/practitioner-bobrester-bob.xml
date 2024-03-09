@@ -39,38 +39,4 @@
         <system value="email"/>
         <value value="drbob@bobrestermedical.example.com"/>
     </telecom>
-    <qualification>
-        <extension url="http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details">
-            <extension url="ahpraProfession">
-                <valueCodeableConcept>
-                    <text value="Medical Practitioner"/>
-                </valueCodeableConcept>
-            </extension>
-        </extension>
-        <identifier>
-            <type>
-                <coding>
-                    <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
-                    <code value="AHPRA"/>
-                    <display value="Australian Health Practitioner Regulation Agency Registration Number"/>
-                </coding>
-                <text value="Ahpra Registration Number"/>
-            </type>
-            <system value="http://hl7.org.au/id/ahpra-registration-number"/>
-            <value value="MED0002137855"/>
-        </identifier>
-        <code>
-            <coding>
-                <system value="http://terminology.hl7.org.au/CodeSystem/v2-0360"/>
-                <code value="AUAHPRAProfession"/>
-            </coding>
-            <text value="Medical Practitioner"/>
-        </code>
-        <period>
-            <start value="1996-02-08"/>
-        </period>
-        <issuer>
-            <display value="Australian Health Practitioner Regulation Agency"/>
-        </issuer>
-    </qualification>
-</Practitioner>
+    </Practitioner>
