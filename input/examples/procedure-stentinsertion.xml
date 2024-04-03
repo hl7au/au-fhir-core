@@ -5,17 +5,11 @@
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
     </meta>
     <status value="completed"/>
-    <category>
+    <code>
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="36969009"/>
             <display value="Placement of stent in coronary artery"/>
-        </coding>
-    </category>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="387713003"/>
         </coding>
     </code>
     <subject>

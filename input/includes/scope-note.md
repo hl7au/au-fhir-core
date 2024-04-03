@@ -70,7 +70,12 @@ A summary of AU Core changes since the [last snapshot](https://hl7.org.au/fhir/c
         <li>AU Core Condition now references core FHIR resources in place of previously removed AU Core profiles.</li>
         <li>AU Core Encounter now references core FHIR resources in place of previously removed AU Core profiles.</li>
         <li>AU Core MedicationRequest now references core FHIR resources in place of previously removed AU Core profiles.</li>
-        <li>AU Core Procedure now references core FHIR resources in place of previously removed AU Core profiles.</li>
+        <li>Changes to AU Core Procedure to:
+            <ul>
+                <li>remove Must Support from Procedure.statusReason, Procedure.category, Procedure.recorder, Procedure.asserter, and Procedure.bodySite</li>
+                <li>reference core FHIR resources in place of previously removed AU Core profiles</li>
+            </ul>
+            </li>
         <li>AU Core Observation profiles now references core FHIR resources in place of previously removed AU Core profiles.</li>
     </ul>    
 </li>
