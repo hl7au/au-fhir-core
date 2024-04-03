@@ -295,3 +295,286 @@ Example: Patient resource with interpreter required and language is known
   ]
 }
 ~~~
+
+
+### Representing body site and laterality
+Some AU Core profiles contain the capability to record details on the relevant body site and laterality thereof associated with a record using CodeableConcept elements, notably:
+*  [AU Core Condition](StructureDefinition-au-core-condition.html) - with primary finding code `Condition.code` and `Condition.bodySite`
+*  [AU Core Procedure](StructureDefinition-au-core-procedure.html) - with primary procedure code `Procedure.code` and `Procedure.bodySite`
+
+The body site content may also optionally indicate the laterality of the body site. Depending on the specific system approach to supporting body site related content this can lead to various scenarios needing to be represented with AU Core:
+* Body site with laterality is defined in a pre-coordinated primary finding/procedure code.
+* Body site without laterality is defined in a primary finding/procedure code AND coded laterality qualifier is separate.
+* Body site with laterality is defned separately from a primary finding/procedure code.
+* Body site witout laterality AND coded laterality qualifier are defned separately from a primary finding/procedure code.
+
+
+To support consistent representation the following is recommended for each of these cases, this can be applied to either Condition or Procedure profiles:
+
+
+1. Primary `code` only (pre-coordinated body site including laterality)
+* For systems that have pre-coordinated coding describing a concept fully.
+* Only the `code` element is used and contains information on body site with laterality.
+
+Example Condition - Cellulitis of right knee
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><a href=\"Patient-bennelong-anne.html\">Patient/bennelong-anne: Anne Bennelong</a> " BENNELONG"</p></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code" : "active"
+      }
+    ]
+  },
+  "verificationStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code" : "confirmed"
+      }
+    ]
+  },
+  "category" : [
+    {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis",
+          "display" : "Encounter Diagnosis"
+        }
+      ]
+    }
+  ],
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "10633311000119108",
+        "display" : "Cellulitis of right knee"
+      }
+    ]
+  },
+  "subject" : {
+    "reference" : "Patient/bennelong-anne",
+    "display" : "Anne Bennelong"
+  }
+}
+~~~
+
+2. Primary `code` only (precoordinated body site without laterality and separate laterality qualifier)
+* For systems that have 
+  * Pre-coordinated coding describing a concept including body site without laterality
+  * Laterality qualifier recorded separately e.g. left, right
+* The `code` element is used
+  * Contains `coding` for primary concept (no body site information)
+  * Use `text` to describe concept fully, this can include information on recorded laterality e.g. ', Right'
+* NOTE: in this case laterality is NOT expressed in coded form 
+
+Example Condition - Cellulitis of knee, laterality as text only
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><a href=\"Patient-bennelong-anne.html\">Patient/bennelong-anne: Anne Bennelong</a> " BENNELONG"</p></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code" : "active"
+      }
+    ]
+  },
+  "verificationStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code" : "confirmed"
+      }
+    ]
+  },
+  "category" : [
+    {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis",
+          "display" : "Encounter Diagnosis"
+        }
+      ]
+    }
+  ],
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "13301002",
+        "display" : "Cellulitis of knee"
+      },
+      "text" : "Cellulitis of knee, Right"
+    ]
+  },
+  "subject" : {
+    "reference" : "Patient/bennelong-anne",
+    "display" : "Anne Bennelong"
+  }
+}
+~~~
+
+3. Primary `code` and `bodySite` with laterality coded seperately.
+* For systems that have 
+  * Pre-coordinated coding describing primary concept WITHOUT body site.
+  * Body site with laterality is recorded as coded value.
+* The `code` element is used:
+  * Contains `coding` for primary concept including body site without laterality.
+  * Use `text` to describe concept fully, this can include information on recorded body site and laterality as text.
+* MAY record coded `bodySite`, optional when this element is not `Must Support` in AU Core profiles.
+
+Example Condition - Cellulitis, body site Right Knee
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><a href=\"Patient-bennelong-anne.html\">Patient/bennelong-anne: Anne Bennelong</a> " BENNELONG"</p></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code" : "active"
+      }
+    ]
+  },
+  "verificationStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code" : "confirmed"
+      }
+    ]
+  },
+  "category" : [
+    {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis",
+          "display" : "Encounter Diagnosis"
+        }
+      ]
+    }
+  ],
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "128045006",
+        "display" : "Cellulitis"
+      },
+      "text" : "Cellulitus, Right Knee"
+    ]
+  },
+  "bodySite" : [
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "6757004",
+        "display" : "Structure of right knee region"
+      }],
+      "text" : "Right Knee"
+    }
+  ],
+  "subject" : {
+    "reference" : "Patient/bennelong-anne",
+    "display" : "Anne Bennelong"
+  }
+}
+~~~
+
+
+4. Primary `code` and `bodySite` without laterality coded seperately and also separate laterality qualifier.
+* For systems that have 
+  * Pre-coordinated coding describing primary concept WITHOUT body site.
+  * Body site WITHOUT laterality is recorded as coded value.
+  * Laterality qualifier recorded separately e.g. left, right
+* The `code` element is used:
+  * Contains `coding` for primary concept alone (no body site or laterality).
+  * Use `text` to describe concept fully, this can include information on recorded body site and laterality as text.
+* MAY record coded `bodySite`, optional when this element is not `Must Support` in AU Core profiles.
+  * Contains `coding` for body site without laterality
+  * Use  `text` to describe body site concept fully, this can include information on recorded laterality as text e.g. ', Right'
+
+Example Condition - Cellulitis, body site Knee, laterality as text only
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><a href=\"Patient-bennelong-anne.html\">Patient/bennelong-anne: Anne Bennelong</a> " BENNELONG"</p></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code" : "active"
+      }
+    ]
+  },
+  "verificationStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code" : "confirmed"
+      }
+    ]
+  },
+  "category" : [
+    {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis",
+          "display" : "Encounter Diagnosis"
+        }
+      ]
+    }
+  ],
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "128045006",
+        "display" : "Cellulitis"
+      },
+      "text" : "Cellulitis, Knee, Right"
+    ]
+  },
+  "bodySite" : [
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "72696002",
+        "display" : "Knee region structure"
+      }],
+      "text" : "Knee, Right"
+    }
+  ],
+  "subject" : {
+    "reference" : "Patient/bennelong-anne",
+    "display" : "Anne Bennelong"
+  }
+}
+~~~
+
