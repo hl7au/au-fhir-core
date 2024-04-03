@@ -30,3 +30,8 @@ The approach to develop and mature AU Core is outlined below making reference to
   </div>
 *Figure 3: Maturing the AU Core baseline*
 <br/>
+
+### Future Scope Changes
+
+#### AU Core MedicationStatement profile development
+The MedicationStatement profile is under development for inclusion in future AU Core releases. This profile will set minimum expectations for a MedicationStatement resource to record, search, and fetch summary statements of medication use associated with a patient. Following a TDG motion, the MedicationRequest profile has been prioritised for AU Core Release 1, with plans to focus on MedicationStatement in later updates.

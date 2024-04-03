@@ -35,11 +35,13 @@ A summary of AU Core changes since the [last snapshot](https://hl7.org.au/fhir/c
                 <li>AU Core List</li>
                 <li>AU Core MedicationAdministration</li>
                 <li>AU Core MedicationDispense</li>
-                <li>AU Core Observation</li>
+                <li>AU Core MedicationStatement</li>
+
             </ul>
         </td>    
         <td width="30%"> 
             <ul>
+                <li>AU Core Observation</li>
                 <li>AU Core Oxygen Saturation</li> 
                 <li>AU Core Parity</li> 
                 <li>AU Core Pregnancy Status</li> 
