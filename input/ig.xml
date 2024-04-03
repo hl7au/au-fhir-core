@@ -804,7 +804,7 @@
 			</page>
 			<page>
 				<nameUrl value="changes.html"/>
-				<title value="Change log"/>
+				<title value="Change Log"/>
 				<generation value="markdown"/>
 			</page>	
 		</page>
