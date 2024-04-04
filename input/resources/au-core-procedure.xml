@@ -50,26 +50,6 @@
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Procedure.recorder">
-      <path value="Procedure.recorder"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
-       <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-      </type>
-    </element>
-    <element id="Procedure.asserter">
-      <path value="Procedure.asserter"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-      </type>
-    </element>
     <element id="Procedure.reasonCode">
       <path value="Procedure.reasonCode"/>
       <mustSupport value="true"/>
