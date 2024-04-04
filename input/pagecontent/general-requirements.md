@@ -354,8 +354,6 @@ AU Core Diagnostic Result Observation|Observation.performer|AU Core Practitioner
 AU Core Diagnostic Result Observation|Observation.hasMember|AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
 AU Core Heart Rate|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
 AU Core Pathology Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
-AU Core Procedure|Procedure.recorder|AU Core Practitioner, AU Core PractitionerRole, AU Core Patient, RelatedPerson
-AU Core Procedure|Procedure.asserter|AU Core Practitioner, AU Core PractitionerRole, AU Core Patient, RelatedPerson
 AU Core Procedure|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
 AU Core Provenance|Procedure.agent.who|AU Core Practitioner, AU Core PractitionerRole, RelatedPerson, AU Core Patient, Device, AU Core Organization
 AU Core Provenance|Procedure.agent.onBehalfOf|AU Core Practitioner, AU Core PractitionerRole, RelatedPerson, AU Core Patient, Device, AU Core Organization

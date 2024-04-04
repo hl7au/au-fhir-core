@@ -30,7 +30,6 @@ The list below shows the value sets bound to a supported element or element slic
 - [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) 
 - [Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1)
 - [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1)
-- [Body Site](https://healthterminologies.gov.au/fhir/ValueSet/body-site-1)
 - [Clinical Condition](https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1)
 - [Clinical Finding](https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1)
 - [Clinical Specialty](https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1)
