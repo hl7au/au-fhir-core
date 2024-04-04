@@ -298,16 +298,19 @@ Example: Patient resource with interpreter required and language is known
 
 
 ### Representing body site and laterality
-Some AU Core profiles contain the capability to record details on the relevant body site and laterality thereof associated with a record using CodeableConcept elements, notably:
+Use of some AU Core profiles may include the desire to represent relevant body site and laterality information associated with a record using CodeableConcept elements, notably:
 *  [AU Core Condition](StructureDefinition-au-core-condition.html) - with primary finding code `Condition.code` and `Condition.bodySite`
 *  [AU Core Procedure](StructureDefinition-au-core-procedure.html) - with primary procedure code `Procedure.code` and `Procedure.bodySite`
 
-The body site content may also optionally indicate the laterality of the body site. Depending on the specific system approach to supporting body site related content this can lead to various scenarios needing to be represented with AU Core:
+The body site content may also optionally indicate the laterality of the body site. Depending on the specific system approach to supporting body site related content this can lead to various scenarios needing to be represented with using AU Core profiles:
 * Body site with laterality is defined in a pre-coordinated primary finding/procedure code.
 * Body site without laterality is defined in a primary finding/procedure code AND coded laterality qualifier is separate.
 * Body site with laterality is defned separately from a primary finding/procedure code.
 * Body site witout laterality AND coded laterality qualifier are defned separately from a primary finding/procedure code.
 
+When recommending approaches to this, considerations include:
+* The `bodySite` element in NOT `Must Support` in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
+* The `CodeableConcept.text` element is system populated and may reflect more specific detail than the `CodeableConcept.coding` concepts provided.
 
 To support consistent representation the following is recommended for each of these cases, this can be applied to either Condition or Procedure profiles:
 
