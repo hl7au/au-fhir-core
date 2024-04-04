@@ -302,20 +302,19 @@ Use of some AU Core profiles may include the desire to represent relevant body s
 *  [AU Core Condition](StructureDefinition-au-core-condition.html) - with primary finding code `Condition.code` and `Condition.bodySite`
 *  [AU Core Procedure](StructureDefinition-au-core-procedure.html) - with primary procedure code `Procedure.code` and `Procedure.bodySite`
 
-The body site content may also optionally indicate the laterality of the body site. Depending on the specific system approach to supporting body site related content this can lead to various scenarios needing to be represented with using AU Core profiles:
-* Body site with laterality is defined in a pre-coordinated primary finding/procedure code.
-* Body site without laterality is defined in a primary finding/procedure code AND coded laterality qualifier is separate.
-* Body site with laterality is defned separately from a primary finding/procedure code.
-* Body site witout laterality AND coded laterality qualifier are defned separately from a primary finding/procedure code.
-
 When recommending approaches to this, considerations include:
 * The `bodySite` element in NOT `Must Support` in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
 * The `CodeableConcept.text` element is system populated and may reflect more specific detail than the `CodeableConcept.coding` concepts provided.
 
-To support consistent representation the following is recommended for each of these cases, this can be applied to either Condition or Procedure profiles:
+The body site content may also optionally indicate the laterality of the body site. Depending on the specific system approach to supporting body site related content this can lead to various scenarios needing to be represented with using AU Core profiles:
+a) Body site with laterality is defined in a pre-coordinated primary finding/procedure code.
+b) Body site without laterality is defined in a primary finding/procedure code AND coded laterality qualifier is separate.
+c) Body site with laterality is defned separately from a primary finding/procedure code.
+d) Body site witout laterality AND coded laterality qualifier are defned separately from a primary finding/procedure code.
 
+To support consistent representation the following is recommended for each of these cases, this approach can be applied to either Condition or Procedure profiles:
 
-1. Primary `code` only (pre-coordinated body site including laterality)
+a) Primary `code` only (pre-coordinated body site including laterality)
 * For systems that have pre-coordinated coding describing a concept fully.
 * Only the `code` element is used and contains information on body site with laterality.
 
@@ -371,7 +370,7 @@ Example Condition - Cellulitis of right knee
 }
 ~~~
 
-2. Primary `code` only (precoordinated body site without laterality and separate laterality qualifier)
+b) Primary `code` only (precoordinated body site without laterality and separate laterality qualifier)
 * For systems that have 
   * Pre-coordinated coding describing a concept including body site without laterality
   * Laterality qualifier recorded separately e.g. left, right
@@ -433,7 +432,7 @@ Example Condition - Cellulitis of knee, laterality as text only
 }
 ~~~
 
-3. Primary `code` and `bodySite` with laterality coded seperately.
+c) Primary `code` and `bodySite` with laterality coded seperately.
 * For systems that have 
   * Pre-coordinated coding describing primary concept WITHOUT body site.
   * Body site with laterality is recorded as coded value.
@@ -506,7 +505,7 @@ Example Condition - Cellulitis, body site Right Knee
 ~~~
 
 
-4. Primary `code` and `bodySite` without laterality coded seperately and also separate laterality qualifier.
+d) Primary `code` and `bodySite` without laterality coded seperately and also separate laterality qualifier.
 * For systems that have 
   * Pre-coordinated coding describing primary concept WITHOUT body site.
   * Body site WITHOUT laterality is recorded as coded value.
