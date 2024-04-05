@@ -314,7 +314,7 @@ b) Body site without laterality is defined in a primary finding/procedure code A
 
 c) Body site with laterality is defned separately from a primary finding/procedure code.
 
-d) Body site witout laterality AND coded laterality qualifier are defned separately from a primary finding/procedure code.
+d) Body site without laterality AND coded laterality qualifier are defned separately from a primary finding/procedure code.
 
 
 To support consistent representation the following is recommended for each of these cases, this approach can be applied to either Condition or Procedure profiles:
