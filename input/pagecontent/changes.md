@@ -12,4 +12,4 @@ This change log documents the significant updates and resolutions implemented fr
   - Procedure.category [FHIR-45014](https://jira.hl7.org/browse/FHIR-45014)
   - Procedure.recorder [FHIR-45015](https://jira.hl7.org/browse/FHIR-45015)
   - Procedure.asserter [FHIR-45016](https://jira.hl7.org/browse/FHIR-45016)
-  - Procedure.bodySite [FHIR-45017](https://jira.hl7.org/browse/FHIR-45017). Additionally, we've added profile-specific implementation guidance on including body site information.
+  - Procedure.bodySite and added profile-specific implementation guidance on including body site information [FHIR-45017](https://jira.hl7.org/browse/FHIR-45017).
