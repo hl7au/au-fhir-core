@@ -1,5 +1,3 @@
-{% include scope-note.md -%}
-
 ### Introduction
 AU Core is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context. It sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
 
@@ -107,7 +105,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Capability Statements](capability-statements.html): This set of pages define the expected FHIR capabilities of AU Core Servers and Clients.
 - [Examples](examples.html): This page lists all the examples used in this guide.
 - [Downloads](downloads.html): This page provides links to downloadable artefacts that developers can use to help them implement this guide.
-
+- [Change Log](changes.html): This page documents the changes across versions of this guide.
 
 ### Collaboration
 This guide is the product of collaborative work undertaken with participants from:
