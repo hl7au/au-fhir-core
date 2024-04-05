@@ -138,7 +138,7 @@ The table below shows the relationship between the AUCDI Data Groups and Element
     <td colspan="2">Medication name</td>
     <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
     <td>MedicationStatement.medication[x] | MedicationRequest.medication[x] | Medication.code</td>
-    <td>Feedback is requested on the appropriateness of using either the MedicationStatement resource or MedicationRequest resource (or both) to represent a medication use statement. See the discussion in chat.fhir.org: <a href="https://chat.fhir.org/#narrow/stream/179173-australia/topic/MedicationRequest.20or.20MedicationStatement">https://chat.fhir.org/#narrow/stream/179173-australia/topic/MedicationRequest.20or.20MedicationStatement</a>.</td>
+    <td>Feedback is requested on the appropriateness of using either the MedicationStatement resource or MedicationRequest resource (or both) to represent a medication use statement. See the discussion in chat.fhir.org: <a href="https://chat.fhir.org/#narrow/stream/179173-australia/topic/MedicationRequest.20or.20MedicationStatement">https://chat.fhir.org/#narrow/stream/179173-australia/topic/MedicationRequest.20or.20MedicationStatement</a>. Development and testing of AU Core MedicationStatement profile is planned for AU Core R2.</td>
   </tr>
   <tr>
     <td colspan="2">Clinical indication</td>

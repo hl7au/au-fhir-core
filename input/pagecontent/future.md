@@ -31,7 +31,8 @@ The approach to develop and mature AU Core is outlined below making reference to
 *Figure 3: Maturing the AU Core baseline*
 <br/>
 
-### AU Core Profiles Roadmap 
+### Future Candidate Requirements Under Consideration
+The following items are under consideration to add to AU Core.
 
 #### AU Core MedicationStatement 
-The development of the AU Core MedicationStatement profile is planned for the AU Core R2 scope, following the TDG's strategic decision to prioritise the AU Core MedicationRequest profile for R1. Should time allow, the TDG plans to work on the AU Core MedicationStatement within R1 as well.
+Development and testing of AU Core MedicationStatement profile to support AUCDI Medication Use Statement is planned for the AU Core R2 scope.
