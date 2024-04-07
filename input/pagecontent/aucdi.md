@@ -136,8 +136,8 @@ The table below shows the relationship between the AUCDI Data Groups and Element
   <tr>
     <td rowspan="10">Medication use statement</td>
     <td colspan="2">Medication name</td>
-    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
-    <td>MedicationStatement.medication[x]</td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
+    <td>MedicationStatement.medication[x] | Medication.code</td>
     <td></td>
   </tr>
   <tr>
@@ -148,14 +148,14 @@ The table below shows the relationship between the AUCDI Data Groups and Element
   </tr>
   <tr>
     <td colspan="2">Strength</td>
-    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
-    <td>MedicationStatement.medication[x]</td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
+    <td>MedicationStatement.medication[x] | Medication.code | Medication.ingredient</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Form</td>
-    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
-    <td>MedicationStatement.medication[x]</td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
+    <td>MedicationStatement.medication[x] | Medication.code | Medication.form</td>
     <td></td>
   </tr>
   <tr>
