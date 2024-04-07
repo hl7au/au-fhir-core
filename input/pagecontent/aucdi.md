@@ -136,62 +136,62 @@ The table below shows the relationship between the AUCDI Data Groups and Element
   <tr>
     <td rowspan="10">Medication use statement</td>
     <td colspan="2">Medication name</td>
-    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.medication[x] | MedicationRequest.medication[x] | Medication.code</td>
-    <td>Feedback is requested on the appropriateness of using either the MedicationStatement resource or MedicationRequest resource (or both) to represent a medication use statement. See the discussion in chat.fhir.org: <a href="https://chat.fhir.org/#narrow/stream/179173-australia/topic/MedicationRequest.20or.20MedicationStatement">https://chat.fhir.org/#narrow/stream/179173-australia/topic/MedicationRequest.20or.20MedicationStatement</a>.</td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+    <td>MedicationStatement.medication[x]</td>
+    <td></td>
   </tr>
   <tr>
     <td colspan="2">Clinical indication</td>
-    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.reasonCode | MedicationStatement.reasonReference | MedicationRequest.reasonCode | MedicationRequest.reasonReference</td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+    <td>MedicationStatement.reasonCode | MedicationStatement.reasonReference</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Strength</td>
-    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.medication[x] | MedicationRequest.medication[x] | Medication.code | Medication.ingredient</td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+    <td>MedicationStatement.medication[x]</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Form</td>
-    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.medication[x] | MedicationRequest.medication[x]<br>Medication.code | Medication.form</td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+    <td>MedicationStatement.medication[x]</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Dose amount</td>
-    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.dosage.doseAndRate | MedicationRequest.dosageInstruction.doseAndRate</td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+    <td>MedicationStatement.dosage.doseAndRate</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Route of administration</td>
-    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.dosage.route | MedicationRequest.dosageInstruction.route</td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+    <td>MedicationStatement.dosage.route</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Dose timing</td>
-    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.dosage.timing | MedicationRequest.dosageInstruction.timing</td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+    <td>MedicationStatement.dosage.timing</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Endpoint</td>
-    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.effectivePeriod.end | MedicationRequest.validityPeriod.end</td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+    <td>MedicationStatement.effectivePeriod.end</td>
     <td></td>
   </tr>
    <tr>
     <td colspan="2">Last administration</td>
-    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
     <td></td>
     <td>Feedback is requested on the potential mapping for this AUCDI element.</td>
   </tr>
   <tr>
     <td colspan="2">Comment</td>
-    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.note | MedicationRequest.note</td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+    <td>MedicationStatement.note</td>
     <td></td>
   </tr>
   <tr>
