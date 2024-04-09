@@ -767,6 +767,11 @@
 					<generation value="markdown"/>
 				</page>
 				<page>
+					<nameUrl value="variance.html"/>
+					<title value="Variance statement"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
 					<nameUrl value="future.html"/>
 					<title value="Future of AU Core"/>
 					<generation value="markdown"/>
