@@ -734,49 +734,6 @@ Observation.subject.reference and Observation.status is                    <code
             <td width="93" valign="top">
                 <p>
                     <a
-                        href="StructureDefinition-au-core-medicationstatement.html"
-                    >
-                        AU Core MedicationStatement
-                    </a>
-                </p>
-            </td>
-            <td width="81" valign="top">
-                <p>
-                    <a
-                        href="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement"
-                    >
-                        IPA-MedicationStatement
-                    </a>
-                </p>
-            </td>
-            <td width="111" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-            <td width="68" valign="top">
-                <p>
-                    <a
-                        href="http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
-                    >
-                        Medication Statement (IPS)
-                    </a>
-                </p>
-            </td>
-            <td width="130" valign="top">
-            <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/> if MedicationStatement.effective[x] is included and patient is supported as MedicationStatement.subject.reference
-                </p>
-            </td>
-            <td width="78" valign="top">
-            </td>
-            <td width="137" valign="top">
-            </td>
-        </tr>
-        <tr>
-            <td width="93" valign="top">
-                <p>
-                    <a
                         href="StructureDefinition-au-core-organization.html"
                     >
                         AU Core Organization

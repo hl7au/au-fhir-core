@@ -327,9 +327,9 @@ Complex elements are composed of primitive and/or other complex elements. Elemen
 
 For any complex element labeled as *Must Support*, an AU Core Responder **SHALL** be capable of providing at least one of the sub-element values. For some complex types a valid value can be constructed by populating only one sub-element, but usually more than one sub-element is needed. An AU Core Requestor **SHALL** be capable of processing the resource with all sub-elements.
 
-For example, the AU Core MedicationStatement Profile `note` element is labeled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
-- AU Core Responders **SHALL** be capable of providing a value in a `MedicationStatement.note` sub-element e.g. `MedicationStatement.note.text`.
-- AU Core Requestors **SHALL** be capable of processing the MedicationStatement resource with a value in `MedicationStatement.note`.
+For example, the AU Core MedicationRequest Profile `note` element is labeled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
+- AU Core Responders **SHALL** be capable of providing a value in a `MedicationRequest.note` sub-element e.g. `MedicationRequest.note.text`.
+- AU Core Requestors **SHALL** be capable of processing the MedicationRequest resource with a value in `MedicationRequest.note`.
 
 If any sub-element is labeled as *Must Support*, an AU Core Responder **SHALL** be capable of providing all sub-elements. 
 
@@ -378,8 +378,6 @@ AU Core Immunization|Immunization.doseNumber[x]|positiveInt, string
 AU Core Medication|Medication.ingredient.item[x]|CodeableConcept, Reference
 AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
 AU Core MedicationRequest|MedicationRequest.substitution.allowed[x]|boolean, CodeableConcept
-AU Core MedicationStatement|MedicationStatement.medication[x]|CodeableConcept, Reference
-AU Core MedicationStatement|MedicationStatement.effective[x]|dateTime, Period
 AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
 AU Core Provenance|Provenance.occurred[x]|Period, dateTime
 {:.grid}
@@ -425,7 +423,6 @@ AU Core Profile |Must Support Sub-Element|Terminology Choices
 AU Core Immunization|Immunization.code.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
 AU Core Medication|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 AU Core MedicationRequest|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
-AU Core MedicationStatement|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 {:.grid}
 
 For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) constrains the terminology choices for `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging Must Support on those two terminology slices.
