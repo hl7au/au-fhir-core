@@ -13,3 +13,4 @@ This change log documents the significant updates and resolutions implemented fr
   - Procedure.recorder [FHIR-45015](https://jira.hl7.org/browse/FHIR-45015)
   - Procedure.asserter [FHIR-45016](https://jira.hl7.org/browse/FHIR-45016)
   - Procedure.bodySite and added profile-specific implementation guidance on including body site information [FHIR-45017](https://jira.hl7.org/browse/FHIR-45017).
+- Removed AU Core MedicationStatement and added to Future of AU Core that AU Core MedicationStatement is planned for AU Core R2 [FHIR-45052](https://jira.hl7.org/browse/FHIR-45052)
