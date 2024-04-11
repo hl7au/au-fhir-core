@@ -80,32 +80,32 @@ The table below shows the relationship between the AUCDI Data Groups and Element
   <tr>
     <td rowspan="5">Procedure completed event</td>
     <td colspan="2">Procedure name</td>
-    <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a> | <a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-    <td>Procedure.code | Condition.code</td>
-    <td>For Medical History items, it is difficult to distinguish between history of a procedure and a problem/diagnosis. Feedback is requested on the appropriateness of using either the Condition resource or Procedure resource (or both) to represent a procedure completed event. See the discussion in chat.fhir.org: <a href="https://chat.fhir.org/#narrow/stream/179173-australia/topic/Medical.20History.20as.20Condition.20and.2For.20Procedure">https://chat.fhir.org/#narrow/stream/179173-australia/topic/Medical.20History.20as.20Condition.20and.2For.20Procedure</a>.</td>
+    <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
+    <td>Procedure.code</td>
+    <td></td>
   </tr>
   <tr>
     <td colspan="2">Body site</td>
-    <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a> | <a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-    <td>Procedure.code | Condition.code</td>
+    <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
+    <td>Procedure.code</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Clinical indication</td>
-    <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a> | <a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
+    <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
     <td>Procedure.reasonCode | Procedure.reasonReference[x]</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Date performed</td>
-    <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a> | <a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-    <td>Procedure.performed[x] | Procedure.performedDateTime<br>Condition.onsetDateTime</td>
+    <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
+    <td>Procedure.performed[x] | Procedure.performedDateTime</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Comment</td>
-    <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a> | <a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-    <td>Procedure.note | Condition.note</td>
+    <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
+    <td>Procedure.note</td>
     <td></td>
   </tr>
   <tr>
