@@ -414,7 +414,7 @@ AU Core Procedure|Procedure.reasonCode, Procedure.reasonReference
 
 ##### Must Support - Choice of Terminology
 
-In AU Core elements that define support for more than one terminology only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supply only a text value. In such cases, the AU Core Responders **SHALL** be able to populate from at least one supported terminology, and AU Core Requesters **SHALL** support processing resources with all supported terminologies. 
+In AU Core elements that define support for more than one terminology only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases, the AU Core Responders **SHALL** be able to populate from at least one supported terminology, and AU Core Requesters **SHALL** support processing resources with all supported terminologies. 
 
 The table below lists the applicable profiles and elements in AU Core.
 
