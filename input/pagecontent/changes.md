@@ -16,3 +16,4 @@ This change log documents the significant updates and resolutions implemented fr
 - Removed AU Core MedicationStatement and added to Future of AU Core that AU Core MedicationStatement is planned for AU Core R2 [FHIR-45052](https://jira.hl7.org/browse/FHIR-45052).
 - Updated mapping of AUCDI Procedure Completed Event to be represented by Procedure only [au-fhir-core #147](https://github.com/hl7au/au-fhir-core/issues/147).
 - Updated mapping of AUCDI Medication Use Statement to be represented by MedicationStatement only [au-fhir-core #145](https://github.com/hl7au/au-fhir-core/issues/145).
+- Removed Must Support from Condition.asserter in AU Core Condition [FHIR-45127](https://jira.hl7.org/browse/FHIR-45127).
