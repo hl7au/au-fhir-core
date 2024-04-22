@@ -325,20 +325,20 @@ For example, the AU Core Organization Profile `name` element is a primitive stri
 ##### Must Support - Complex Elements
 Complex elements are composed of primitive and/or other complex elements. Elements may have additional rules defined in the profile that also apply, e.g. terminology binding, or invariants. 
 
-For any complex element labeled as *Must Support*, an AU Core Responder **SHALL** be capable of providing at least one of the sub-element values. For some complex types a valid value can be constructed by populating only one sub-element, but usually more than one sub-element is needed. An AU Core Requestor **SHALL** be capable of processing the resource with all sub-elements.
+For any complex element labelled as *Must Support*, an AU Core Responder **SHALL** be capable of providing at least one of the sub-element values. For some complex types a valid value can be constructed by populating only one sub-element, but usually more than one sub-element is needed. An AU Core Requestor **SHALL** be capable of processing the resource with all sub-elements.
 
-For example, the AU Core MedicationRequest Profile `note` element is labeled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
+For example, the AU Core MedicationRequest Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
 - AU Core Responders **SHALL** be capable of providing a value in a `MedicationRequest.note` sub-element e.g. `MedicationRequest.note.text`.
 - AU Core Requestors **SHALL** be capable of processing the MedicationRequest resource with a value in `MedicationRequest.note`.
 
-If any sub-element is labeled as *Must Support*, an AU Core Responder **SHALL** be capable of providing all sub-elements. 
+If any sub-element is labelled as *Must Support*, an AU Core Responder **SHALL** be capable of providing all sub-elements. 
 
-For example, if AU Core Patient Profile name element is labeled *Must Support* and has *Must Support* sub-elements "family” and “given”. When claiming conformance to this profile:
+For example, if AU Core Patient Profile name element is labelled *Must Support* and has *Must Support* sub-elements "family” and “given”. When claiming conformance to this profile:
 - AU Core Responders **SHALL** be capable of providing a value in `Patient.name.family` and `Patient.name.given`.
 - AU Core Requestors **SHALL** be capable of processing a Patient resource with a value in `Patient.name.family` and `Patient.name.given`.
 
 ##### Must Support - Resource References
-Some elements labeled as *Must Support* reference multiple resource types or profiles (e.g., Observation.performer). AU Core Responders **SHALL** support at least one referenced resource or profile data type for each element listed in the table below. AU Core Requesters **SHALL** support all referenced resources or profiles listed in the table below.
+Some elements labelled as *Must Support* reference multiple resource types or profiles (e.g., Observation.performer). AU Core Responders **SHALL** support at least one referenced resource or profile data type for each element listed in the table below. AU Core Requesters **SHALL** support all referenced resources or profiles listed in the table below.
 
 AU Core Profile |Must Support Element|Reference
 ---|---|---
@@ -364,7 +364,7 @@ AU Core Waist Circumference|Observation.performer|AU Core Practitioner, AU Core 
 
 
 ##### Must Support - Choice of Data Types
-Some elements labeled as *Must Support* allow different data types (e.g., Observation.effective[x]) for their content. AU Core Responders **SHALL** support at least one data type for each element listed in the table below. AU Core Requesters **SHALL** support all data types listed in the table below.
+Some elements labelled as *Must Support* allow different data types (e.g., Observation.effective[x]) for their content. AU Core Responders **SHALL** support at least one data type for each element listed in the table below. AU Core Requesters **SHALL** support all data types listed in the table below.
 
 AU Core Profile |Must Support Element|Data Types
 ---|---|---
