@@ -93,7 +93,7 @@ Servers that implement Profile Only Support declare conformance to each profile 
             "resource": [
               ...
               {
-                "type": "Patient",
+                "type": "Observation",
                 "supportedProfile": [
                   "http://hl7.org.au/fhir/core/StructureDefinition/au-core-waistcircum"
                 ],
