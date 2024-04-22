@@ -34,12 +34,12 @@ jobs:
         name: ig-output
         path: output/full-ig.zip # full ig zip is 1/10 the size but has all relevant content?
 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{secrets.BUILD_SERVER}} # change to be env variable to support multiple environments later on
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: output/
-        server-dir: /ig/hl7au/au-fhir-core/branches/${{ github.ref }}/publish/
+    # - name: 📂 Sync files
+    #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    #   with:
+    #     server: ${{secrets.BUILD_SERVER}} # change to be env variable to support multiple environments later on
+    #     username: ${{ secrets.FTP_USER }}
+    #     password: ${{ secrets.FTP_PASSWORD }}
+    #     local-dir: output/
+    #     server-dir: /ig/hl7au/au-fhir-core/branches/${{ github.ref }}/publish/
         # dry-run: true
