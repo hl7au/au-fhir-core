@@ -4,9 +4,9 @@ In some circumstances, the content referred to in the resource reference does no
 In AU Core profiles:
 - Systems constructing a resource that represent medication information are encouraged to make use of contained resources within the context of a FHIR transaction. Operations on Medication resources are expected to be within the context of a referencing resource query such as an MedicationAdministration, MedicationDispense, MedicationRequest or MedicationStatement.
 - If referencing a contained resource, both the contained resource and the referencing resource **SHALL** conform to the applicable AU Core profile.
-- Otherwise, when responding to a query, servers should not use inline contained resources to represent the returned data.
+- Otherwise, when responding to a query, it is recommended that servers avoid using inline contained resources to represent the returned data.
 
- Further guidance about the general use case for [contained resources](http://hl7.org/fhir/R4/references.html#contained) can be found in the base FHIR specification.
+Further guidance about the general use case for [contained resources](http://hl7.org/fhir/R4/references.html#contained) can be found in the base FHIR specification.
 
 ### Extensibility – “additional” elements
 A server may send "additional" elements beyond those flagged with Must Support in an AU Core profile. Additional elements are often required by other profiles the system may conform to, allowing local requirements, including technical and workflow context for the resource, to be reflected and extending the health information supported in exchanges. For this reason, extensibility is generally encouraged and expected in AU Core profiles. Only in some exceptionally rare use case profiles are rules tightened to limit the nature of additional information that can be sent. Specification authors should strive to enable greater interoperability and software re-use by not reducing an element's cardinality.
