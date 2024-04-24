@@ -171,3 +171,36 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and location ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference))
 
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`discharge-disposition`](http://build.fhir.org/ig/hl7au/au-fhir-base/SearchParameter-encounter-discharge-disposition.html)** search parameters:
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
+
+    `GET [base]/Encounter?patient={Type/}[id]&discharge-disposition={system|}[code]`
+
+    Example:
+    
+      1. GET [base]/Encounter?patient=5678&amp;discharge-disposition=9
+      1. GET [base]/Encounter?patient=5678&amp;discharge-disposition=9&amp;
+
+    *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient and discharge disposition ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`status`](https://hl7.org/fhir/R4/encounter.html#search)** search parameters:
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
+
+    `GET [base]/Encounter?patient={Type/}[id]&status={system|}[code]`
+
+    Example:
+    
+      1. GET [base]/Encounter?patient=5678&amp;status=finished
+
+    *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference)) and [how to search by token](http://hl7.org/fhir/R4/search.html#token)).
+
+1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`type`](https://hl7.org/fhir/R4/encounter.html#search)** search parameters:
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
+
+    `GET [base]/Encounter?patient={Type/}[id]&type={system|}[code]`
+
+    Example:
+    
+      1. GET [base]/Encounter?patient=5678&amp;type=http://snomed.info/sct|11429006
+
+    *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and type ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token)).
