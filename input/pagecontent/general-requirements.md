@@ -320,7 +320,7 @@ Primitive elements are single elements with a primitive value. If they are marke
 For example, the AU Core Organization Profile `name` element is a primitive string datatype. Therefore, when claiming conformance to this profile:
 
 - AU Core Responders **SHALL** be capable of providing a value in `Organization.name`.
-- AU Core Requestors **SHALL** be capable of an Organization resource with a value in `Organization.name`.
+- AU Core Requestors **SHALL** be capable of processing an Organization resource with a value in `Organization.name`.
 
 ##### Must Support - Complex Elements
 Complex elements are composed of primitive and/or other complex elements. Elements may have additional rules defined in the profile that also apply, e.g. terminology binding, or invariants. 
