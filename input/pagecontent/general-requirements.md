@@ -34,7 +34,7 @@ Systems may deploy, and support, one or more AU Core profiles to represent digit
 - **SHALL** populate a resource with all profile elements that are mandatory by that profile’s StructureDefinition.
 - **SHALL** populate a resource with all profile elements labelled Must Support unless that element is not available. Where the data is not available the system **SHALL** implement the requirements on [Missing data](general-requirements.html#missing-data).
 
-A system **SHOULD** support all AU Core profiles unless the system does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialised role in clinical or information workflows. For example, a pathology laboratory may support [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), but may not support [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html).
+A system **SHOULD** support all AU Core profiles required by the system for the supply or consumption of data within their clinical or information flows. For example, a pathology laboratory may support [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), but may not support [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html).
 
 ##### Profile Only Support for a Server
 A server with AU Core Profile Only Support:
