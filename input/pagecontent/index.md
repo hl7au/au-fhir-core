@@ -63,7 +63,7 @@ AU Core is particularly useful in defining:
 - Assumed support by client applications
 - As the basis of downstream implementation guides
 
-Assuming capabilities defined in AU Core are implemented allow specifications, applications and business logic to be developed generally with confidence that systems can readily supply this capability.
+Implementation of capabilities defined in AU Core enables specifications, applications and business logic to be developed with confidence.
 
 This document is a working specification that may be directly implemented by FHIR<sup>&reg;&copy;</sup> system producers.
 
