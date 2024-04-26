@@ -22,4 +22,3 @@ This change log documents the significant updates and resolutions implemented fr
 - Removed Must Support from the following elements in AU Core AllergyIntolerance:
   - AllergyIntolerance.asserter [FHIR-44699](https://jira.hl7.org/browse/FHIR-44699), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - AllergyIntolerance.recorder [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082), [FHIR-45066](https://jira.hl7.org/browse/FHIR-45066)
-
