@@ -23,3 +23,4 @@ This change log documents the significant updates and resolutions implemented fr
   - AllergyIntolerance.asserter [FHIR-44699](https://jira.hl7.org/browse/FHIR-44699), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - AllergyIntolerance.recorder [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082), [FHIR-45066](https://jira.hl7.org/browse/FHIR-45066)
 - Removed Must Support flag from Observation.encounter in AU Core Smoking Status [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222).
+- Removed Must Support flag from Immunization.encounter in AU Core Immunization [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218).
