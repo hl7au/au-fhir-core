@@ -342,14 +342,10 @@ Some elements labelled as *Must Support* reference multiple resource types or pr
 
 AU Core Profile |Must Support Element|Reference
 ---|---|---
-AU Core AllergyIntolerance|AllergyIntolerance.recorder|AU Core Practitioner, AU Core Patient, RelatedPerson, AU Core PractitionerRole
-AU Core AllergyIntolerance|AllergyIntolerance.asserter|AU Core Patient, RelatedPerson, AU Core Practitioner, AU Core PractitionerRole
 AU Core Blood Pressure|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
 AU Core Body Height|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
 AU Core Body Temperature|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
 AU Core Body Weight|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
-AU Core Condition|Condition.recorder|AU Core Practitioner, AU Core PractitionerRole, AU Core Patient, RelatedPerson
-AU Core Condition|Condition.asserter|AU Core Practitioner, AU Core PractitionerRole, AU Core Patient, RelatedPerson
 AU Core Diagnostic Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
 AU Core Diagnostic Result Observation|Observation.hasMember|AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
 AU Core Heart Rate|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
