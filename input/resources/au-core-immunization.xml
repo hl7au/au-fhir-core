@@ -64,24 +64,6 @@
       <path value="Immunization.occurrence[x]"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Immunization.performer">
-      <path value="Immunization.performer"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Immunization.performer.function">
-      <path value="Immunization.performer.function"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Immunization.performer.actor">
-      <path value="Immunization.performer.actor"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
     <element id="Immunization.note">
       <path value="Immunization.note"/>
       <mustSupport value="true"/>
