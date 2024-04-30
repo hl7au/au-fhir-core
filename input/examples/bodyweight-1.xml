@@ -29,9 +29,6 @@
     <reference value="Patient/banks-mia-leanne"/>
   </subject>
   <effectiveDateTime value="2023-03-14"/>
-  <performer>
-    <reference value="PractitionerRole/bobrester-bob-gp"/>
-  </performer>
   <valueQuantity>
     <value value="59"/>
     <unit value="kg"/>
