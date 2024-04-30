@@ -19,6 +19,9 @@
 	<patient>
 		<reference value="Patient/bennelong-anne"/>
 	</patient>
+	<encounter>
+		<reference value="Encounter/covid-admin-1"/>
+	</encounter>
 	<occurrenceDateTime value="2021-06-17"/>
 	<recorded value="2021-06-17"/>
 	<primarySource value="true"/>

@@ -27,6 +27,9 @@
   <subject>
     <reference value="Patient/dan-harry"/>
   </subject>
+  <encounter>
+    <reference value="Encounter/discharge-1"/>
+  </encounter>
   <effectiveDateTime value="2023-02-20T06:20:00+10:00"/>
   <component>
     <code>
