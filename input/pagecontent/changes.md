@@ -27,3 +27,11 @@ This change log documents the significant updates and resolutions implemented fr
   - Immunization.performer [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
   - Immunization.performer.function [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
   - Immunization.performer.actor [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
+- Removed Must Support flag from Observation.performer in the following AU Core vital signs profiles:
+  - AU Core Blood Pressure [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
+  - AU Core Body Height [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
+  - AU Core Body Temperature [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)  
+  - AU Core Body Weight [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
+  - AU Core Heart Rate [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
+  - AU Core Respiration Rate [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
+  - AU Core Waist Circumference [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
