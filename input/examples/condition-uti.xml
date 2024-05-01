@@ -37,10 +37,4 @@
     </subject>
     <onsetDateTime value="2020-05-10"/>
     <abatementDateTime value="2020-05-24"/>
-    <recorder>
-        <reference value="PractitionerRole/bobrester-bob-gp"/>
-    </recorder>
-    <asserter>
-        <reference value="PractitionerRole/bobrester-bob-gp"/>
-    </asserter>
 </Condition>
