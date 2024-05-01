@@ -18,7 +18,7 @@
     <element id="AllergyIntolerance.clinicalStatus">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:will-send"/>
+          <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
@@ -38,7 +38,7 @@
     <element id="AllergyIntolerance.verificationStatus">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:will-send"/>
+          <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
@@ -58,7 +58,7 @@
     <element id="AllergyIntolerance.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:will-send"/>
+          <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
@@ -79,7 +79,7 @@
     <element id="AllergyIntolerance.patient">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:will-send"/>
+          <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
@@ -104,7 +104,7 @@
     <element id="AllergyIntolerance.onset[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:will-send"/>
+          <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
@@ -136,7 +136,7 @@
     <element id="AllergyIntolerance.note">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:will-send"/>
+          <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
@@ -156,7 +156,7 @@
     <element id="AllergyIntolerance.reaction">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:will-send"/>
+          <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
@@ -176,7 +176,7 @@
     <element id="AllergyIntolerance.reaction.manifestation">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:will-send"/>
+          <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
@@ -196,7 +196,7 @@
     <element id="AllergyIntolerance.reaction.severity">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:will-send"/>
+          <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
