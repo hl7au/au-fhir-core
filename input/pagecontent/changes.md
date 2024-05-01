@@ -19,6 +19,18 @@ This change log documents the significant updates and resolutions implemented fr
 - Removed Must Support from the following elements in AU Core Condition:
   - Condition.asserter [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45127](https://jira.hl7.org/browse/FHIR-45127), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - Condition.recorder [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082)
+  - Condition.encounter [FHIR-45189](https://jira.hl7.org/browse/FHIR-45189)
 - Removed Must Support from the following elements in AU Core AllergyIntolerance:
   - AllergyIntolerance.asserter [FHIR-44699](https://jira.hl7.org/browse/FHIR-44699), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - AllergyIntolerance.recorder [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082), [FHIR-45066](https://jira.hl7.org/browse/FHIR-45066)
+  - AllergyIntolerance.encounter [FHIR-45123](https://jira.hl7.org/browse/FHIR-45123)
+- Removed Must Support flag from Observation.encounter in AU Core Smoking Status [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222).
+- Removed Must Support flag from Immunization.encounter in AU Core Immunization [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218).
+- Removed Must Support flag from Observation.encounter in the following AU Core vital signs profiles:
+  - AU Core Blood Pressure [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - AU Core Body Height [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - AU Core Body Temperature [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)  
+  - AU Core Body Weight [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - AU Core Heart Rate [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - AU Core Respiration Rate [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - AU Core Waist Circumference [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)

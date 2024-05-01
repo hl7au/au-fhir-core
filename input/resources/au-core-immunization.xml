@@ -52,14 +52,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="Immunization.encounter">
-      <path value="Immunization.encounter"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
     <element id="Immunization.occurrence[x]">
       <path value="Immunization.occurrence[x]"/>
       <mustSupport value="true"/>

@@ -28,7 +28,4 @@
     <patient>
         <reference value="Patient/wang-li"/>
     </patient>
-    <encounter>
-        <display value="GP Visit"/>
-    </encounter>
 </AllergyIntolerance>
