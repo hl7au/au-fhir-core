@@ -21,7 +21,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -29,7 +29,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.identifier"/>
@@ -41,7 +41,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -49,7 +49,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.status"/>
@@ -61,7 +61,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -69,7 +69,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.class"/>
@@ -81,7 +81,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -89,7 +89,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.type"/>
@@ -105,7 +105,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -113,7 +113,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.serviceType"/>
@@ -129,7 +129,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -137,7 +137,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.subject"/>
@@ -154,7 +154,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -162,7 +162,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.participant"/>
@@ -174,7 +174,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -182,7 +182,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.participant.type"/>
@@ -194,7 +194,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -202,7 +202,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.participant.individual"/>
@@ -220,7 +220,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -228,7 +228,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.period"/>
@@ -240,7 +240,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -248,7 +248,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.reasonCode"/>
@@ -270,7 +270,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -278,7 +278,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.hospitalization"/>
@@ -290,7 +290,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -298,7 +298,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.hospitalization.dischargeDisposition"/>
@@ -310,7 +310,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -318,7 +318,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.location"/>
@@ -330,7 +330,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -338,7 +338,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.location.location"/>
@@ -354,7 +354,7 @@
           <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-server"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -362,7 +362,7 @@
           <valueCode value="SHALL:no-error"/>
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-client"/>
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
       <path value="Encounter.serviceProvider"/>

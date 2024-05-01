@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActorDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-core-actor-requester"/>
+  <url value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester" />
+  <name value="AUCoreRequester"/> 
+  <title value="AU Core Requester"/> 
+  <description value="AU Core Requester"/> 
+  <type value="system"/> 
+ <documentation value="An AU Core Client, also known as AU Core Requester:&#xa;&#xa;
+- **SHALL** accept resources containing any valid value for Must Support elements without error
+- **SHALL** accept resources containing Must Support elements with [Missing data](general-requirements.html#missing-data) or [Suppressed Data](general-requirements.html#suppressed-data) without error
+How the requester processes the resource depends on local requirements. These could align with obligations such as reject invalid, handle, persist, display, or ignore.&#xa;&#xa;
+When a profile requires a more tightly stated obligation of a Must Support element, an obligation extension is specified."/>
+</ActorDefinition>
