@@ -18,7 +18,7 @@
     <element id="MedicationRequest.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -38,7 +38,7 @@
     <element id="MedicationRequest.status">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -58,7 +58,7 @@
     <element id="MedicationRequest.intent">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -78,7 +78,7 @@
     <element id="MedicationRequest.category">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -102,7 +102,7 @@
     <element id="MedicationRequest.medication[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -156,7 +156,7 @@
     <element id="MedicationRequest.medication[x]:medicationReference">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -180,7 +180,7 @@
     <element id="MedicationRequest.subject">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -204,7 +204,7 @@
     <element id="MedicationRequest.encounter">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -228,7 +228,7 @@
     <element id="MedicationRequest.authoredOn">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -258,7 +258,7 @@
     <element id="MedicationRequest.requester">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -287,7 +287,7 @@
     <element id="MedicationRequest.reasonCode">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -307,7 +307,7 @@
     <element id="MedicationRequest.note">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -327,7 +327,7 @@
     <element id="MedicationRequest.dosageInstruction">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -347,7 +347,7 @@
     <element id="MedicationRequest.dispenseRequest">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -367,7 +367,7 @@
     <element id="MedicationRequest.dispenseRequest.validityPeriod">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -387,7 +387,7 @@
     <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -407,7 +407,7 @@
     <element id="MedicationRequest.dispenseRequest.quantity">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -427,7 +427,7 @@
     <element id="MedicationRequest.substitution">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -447,7 +447,7 @@
     <element id="MedicationRequest.substitution.allowed[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>

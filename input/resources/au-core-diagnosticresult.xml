@@ -26,7 +26,7 @@
     <element id="Observation.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -46,7 +46,7 @@
     <element id="Observation.status">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -73,7 +73,7 @@
     <element id="Observation.category">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -94,7 +94,7 @@
     <element id="Observation.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -114,7 +114,7 @@
     <element id="Observation.subject">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -140,7 +140,7 @@
     <element id="Observation.effective[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -170,7 +170,7 @@
     <element id="Observation.performer">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -198,7 +198,7 @@
     <element id="Observation.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -219,7 +219,7 @@
     <element id="Observation.dataAbsentReason">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -240,7 +240,7 @@
     <element id="Observation.interpretation">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -260,7 +260,7 @@
     <element id="Observation.note">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -280,7 +280,7 @@
     <element id="Observation.bodySite">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -313,7 +313,7 @@
     <element id="Observation.method">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -333,7 +333,7 @@
     <element id="Observation.referenceRange">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -353,7 +353,7 @@
     <element id="Observation.referenceRange.low">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -373,7 +373,7 @@
     <element id="Observation.referenceRange.high">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -393,7 +393,7 @@
     <element id="Observation.referenceRange.type">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -413,7 +413,7 @@
     <element id="Observation.referenceRange.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -433,7 +433,7 @@
     <element id="Observation.hasMember">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -459,7 +459,7 @@
     <element id="Observation.hasMember.reference">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -479,7 +479,7 @@
     <element id="Observation.component">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -506,7 +506,7 @@
     <element id="Observation.component.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -526,7 +526,7 @@
     <element id="Observation.component.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
@@ -547,7 +547,7 @@
     <element id="Observation.component.dataAbsentReason">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate"/>
+          <valueCode value="SHALL:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>

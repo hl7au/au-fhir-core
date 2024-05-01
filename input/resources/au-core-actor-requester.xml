@@ -7,8 +7,8 @@
   <description value="AU Core Requester"/> 
   <type value="system"/> 
  <documentation value="An AU Core Client, also known as AU Core Requester:&#xa;&#xa;
-- **SHALL** accept resources containing any valid value for Must Support elements without error
-- **SHALL** accept resources containing Must Support elements with [Missing data](general-requirements.html#missing-data) or [Suppressed Data](general-requirements.html#suppressed-data) without error
+- **SHALL** accept resources containing any valid value for Must Support elements without error&#xa;&#xa;
+- **SHALL** accept resources containing Must Support elements with [Missing data](general-requirements.html#missing-data) or [Suppressed Data](general-requirements.html#suppressed-data) without error&#xa;&#xa;
 How the requester processes the resource depends on local requirements. These could align with obligations such as reject invalid, handle, persist, display, or ignore.&#xa;&#xa;
 When a profile requires a more tightly stated obligation of a Must Support element, an obligation extension is specified."/>
 </ActorDefinition>
