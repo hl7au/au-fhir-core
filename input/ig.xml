@@ -56,13 +56,13 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="CapabilityStatement/au-core-server"/>
+				<reference value="CapabilityStatement/au-core-responder"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
-				<reference value="CapabilityStatement/au-core-client"/>
+				<reference value="CapabilityStatement/au-core-requester"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
