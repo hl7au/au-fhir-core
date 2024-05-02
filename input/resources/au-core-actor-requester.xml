@@ -7,7 +7,7 @@
   <status value="draft"/>
   <description value="AU Core Requester"/> 
   <type value="system"/> 
-   <documentation value="An AU Core Client, also known as AU Core Requester:&#xa;&#xa;
+  <documentation value="An AU Core Client, also known as AU Core Requester:&#xa;&#xa;
 - **SHALL** accept resources containing any valid value for *Must Support* elements without error&#xa;&#xa;
 - **SHALL** accept resources containing *Must Support* elements with [Missing data](general-requirements.html#missing-data) or [Suppressed Data](general-requirements.html#suppressed-data) without error&#xa;&#xa;
 How the system processes the resource depends on local requirements that could align with obligation terms such [reject invalid](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-reject-invalid), [correctly handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-handle), [persist](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-persist), [display](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-display), or [ignore](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-ignore).&#xa;&#xa;
