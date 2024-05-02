@@ -3007,7 +3007,7 @@
 <title value="AU Core Requester CapabilityStatement"/>
 <status value="draft"/>
 <date value="2023-05-15"/>
-<description value="This CapabilityStatement describes the basic rules for the AU Core Responder actor that is responsible for providing responses to queries submitted by AU Core Requesters. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core servers are defined in this CapabilityStatement."/>
+<description value="This CapabilityStatement describes the basic rules for the [AU Core Requester actor](ActorDefinition-au-core-actor-requester.html) is responsible for creating and initiating the queries for information. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core Requesters are defined in this CapabilityStatement."/>
 <kind value="requirements"/>
 <fhirVersion value="4.0.1"/>
 <format value="json">
