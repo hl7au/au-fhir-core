@@ -149,7 +149,7 @@ Must Support elements are treated differently between [AU Core Responder actors]
 
 #### AU Core Responder
 An AU Core Responder:
-- **SHALL** correctly populate all _Must Support_ elements if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element.
+- **SHALL** correctly populate all _Must Support_ elements if they know a value for the element.
 - **SHALL** implement the requirements on [Suppressed Data](general-requirements.html#suppressed-data) when an element is NOT allowed to be shared.
 - **SHALL** implement the requirements on [Missing data](general-requirements.html#missing-data) when an element is not known.
 
