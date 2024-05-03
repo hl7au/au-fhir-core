@@ -143,7 +143,7 @@ In AU Core, the meaning of Must Support is specified in terms of [Obligation Cod
 Actor | Code | Display | Definition | Notes
 --- | --- | --- | --- | ---
 [AU Core Responder actor](ActorDefinition-au-core-actor-responder.html) | populate-if-known | populate if known | Conformant applications producing resources SHALL/SHOULD correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance.
-[AU Core Requester actors](ActorDefinition-au-core-actor-requester.html) | no-error | not error if present | Conformant applications SHALL/SHOULD accept resources containing any valid value for the element without error. | Applications are still able to inform the user that a value cannot be processed correctly and may ignore the data, but applications aren't able to reject an instance merely because the element is present (which would be allowed for elements that do not have this obligation). A system MAY raise an error if the value provided is not valid or violates specific business rules. This obligation also applies to elements that only contain an extension in place of a value where (or equivalent), should either of these be allowed on the consumer obligations
+[AU Core Requester actor](ActorDefinition-au-core-actor-requester.html) | no-error | not error if present | Conformant applications SHALL/SHOULD accept resources containing any valid value for the element without error. | Applications are still able to inform the user that a value cannot be processed correctly and may ignore the data, but applications aren't able to reject an instance merely because the element is present (which would be allowed for elements that do not have this obligation). A system MAY raise an error if the value provided is not valid or violates specific business rules. This obligation also applies to elements that only contain an extension in place of a value where (or equivalent), should either of these be allowed on the consumer obligations
 
 Must Support elements are treated differently between [AU Core Responder actors](ActorDefinition-au-core-actor-responder.html) and [AU Core Requester actors](ActorDefinition-au-core-actor-requester.html), *Must Support* on a profile element **SHALL** be interpreted as follows.
 
@@ -406,7 +406,13 @@ The core specification provides guidance for what to do in this situation, which
   - when the AU Core profile mandates a sub-element, such as a valid Identifier or Reference data type, then the resource must contain the sub-element otherwise the resource will not be conformant,
 
 1. For *coded* data elements:
-   - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept, or Coding datatypes):
+    - *required* binding strength (CodeableConcept or code datatypes):
+      - the appropriate "unknown" concept code **SHALL** be populated if available.
+      - For AU Core profiles, the following *mandatory* or *conditionally mandatory* status elements with required binding have no appropriate "unknown" concept code:
+        - `AllergyIntolerance.clinicalStatus`
+        - `Condition.clinicalStatus`
+        - `Immunization.status`
+    - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept, or Coding datatypes):
       - when the system has text but no coded value, only the text sub-element is populated.
       - when there is neither text or coded value:
         - the appropriate "unknown" concept code **SHALL** be populated if available when the binding strength is *extensible*
@@ -432,15 +438,6 @@ The core specification provides guidance for what to do in this situation, which
         ]
         ...
         ~~~
-
-   - *required* binding strength (CodeableConcept or code datatypes):
-      - the appropriate "unknown" concept code **SHALL** be populated if available.
-
-
-      - For AU Core profiles, the following *mandatory* or *conditionally mandatory* status elements with required binding have no appropriate "unknown" concept code:
-        - `AllergyIntolerance.clinicalStatus`
-        - `Condition.clinicalStatus`
-        - `Immunization.status`
 
 
 ### Suppressed Data
