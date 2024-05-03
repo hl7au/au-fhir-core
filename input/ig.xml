@@ -721,6 +721,11 @@
 					<title value="General Requirements"/>
 					<generation value="markdown"/>
 				</page>
+				<page>
+					<nameUrl value="declaring-conformance.html"/>
+					<title value="Declaring Conformance"/>
+					<generation value="markdown"/>
+				</page>
 			</page>
 			<page>
 				<nameUrl value="guidance.html"/>
