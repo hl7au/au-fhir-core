@@ -25,9 +25,9 @@ Systems may declare conformance to AU Core profiles based on one of the followin
 - [Profile and Interaction Support](#profile--interaction-support) for a system declaring conformance to one of the [AU Core Capability Statements](#au-core-capability-statements)
 
 #### AU Core Capability Statements
-The [AU Core Client CapabilityStatement](CapabilityStatement-au-core-client.html) outlines conformance requirements and expectations for an AU Core CLient. This CapabilityStatement describes the basic rules for the AU Core Requester actor that initiates a data access request to from an AU Core Responder and retrieves data as a response. In addition, it lists the client conformance expectations for each resource type documented in AU Core. These expectations include supported FHIR profiles, REST API interactions, and search parameters. AU Core clients define their capabilities by choosing from this list based on the resource types they need to access.
+This CapabilityStatement describes the basic rules for the [AU Core Requester actor](ActorDefinition-au-core-actor-requester.html) that is responsible for creating and initiating the queries for information. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core Requesters are defined in this CapabilityStatement. AU Core Responders define their capabilities by choosing from this list based on the resource types they need to access.
 
-The [AU Core Server CapabilityStatement](CapabilityStatement-au-core-server.html) outlines conformance requirements and expectations for an AU Core Server. This CapabilityStatement describes the basic rules for the AU Core Responder actor that is responsible for providing responses to requests from AU Core Requesters. The complete list of FHIR profiles, REST API interactions, and search parameters supported by AU Core servers are defined in this CapabilityStatement.
+The [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html) outlines conformance requirements and expectations for the [AU Core Responder actor](ActorDefinition-au-core-actor-responder.html) that is responsible for providing responses to queries submitted by AU Core Requester actors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core Responders are defined in this CapabilityStatement.
 
 #### Profile Only Support
 A system that represent digital health information using the content models of AU Core profiles without the expectation to implement any AU Core interactions can declare _Profile Only Support_ to one or more AU Core profiles. 
@@ -99,16 +99,16 @@ Example: CapabilityStatement resource for a server supporting the AU Core Waist 
 _Profile + Interaction Support_ refers to a system that represents digital health information using the content models of AU Core profiles AND implement the REST API interactions defined by the applicable AU Core capability statement.
 
 An AU Core Responder that declares 'Profile + Interaction Support' conformance:
-- **SHALL** declare conformance to the 'AU Core Server Capability Statement' in the server's CapabilityStatement.
+- **SHALL** declare conformance to the 'AU Core Responder Capability Statement' in the server's CapabilityStatement.
 - **SHALL** specify the implemented resource types, associated AU Core profiles, REST API interactions and search parameters in the server's CapabilityStatement
 - **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support) requirements for the elements defined as such in the implemented AU Core profiles
-- **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Server Capability Statement](CapabilityStatement-au-core-server.html#resourcesSummary1).
+- **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html#resourcesSummary1).
 
 An AU Core Requester that declares 'Profile + Interaction Support' conformance:
 - ~~**SHOULD** declare conformance to the 'AU Core Client Capability Statement' in the clients's CapabilityStatement.~~
 - ~~**SHOULD** specify the implemented resource types, associated AU Core profiles, REST API interactions and search parameters in the client's CapabilityStatement~~
 - **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support) requirements for the elements defined as such in the implemented AU Core profiles
-- **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core CLient Capability Statement](CapabilityStatement-au-core-client.html#resourcesSummary1).
+- **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Requester Capability Statement](CapabilityStatement-au-core-requester.html#resourcesSummary1).
 
 
 **Declaring Conformance**
@@ -147,7 +147,7 @@ Code | Display | Definition | Notes
 populate-if-known | populate if known | Conformant applications producing resources SHALL/SHOULD correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance.
 no-error | not error if present | Conformant applications SHALL/SHOULD accept resources containing any valid value for the element without error. | Applications are still able to inform the user that a value cannot be processed correctly and may ignore the data, but applications aren't able to reject an instance merely because the element is present (which would be allowed for elements that do not have this obligation). A system MAY raise an error if the value provided is not valid or violates specific business rules. This obligation also applies to elements that only contain an extension in place of a value where (or equivalent), should either of these be allowed on the consumer obligations
 
-Must Support elements are treated differently between AU Core Responder and AU Core Requester actors, *Must Support* on a profile element **SHALL** be interpreted as follows.
+Must Support elements are treated differently between [AU Core Responder actors](ActorDefinition-au-core-actor-responder.html) and [AU Core Requester actors](ActorDefinition-au-core-actor-requester.html), *Must Support* on a profile element **SHALL** be interpreted as follows.
 
 #### AU Core Responder
 An AU Core Responder:
