@@ -141,7 +141,15 @@
       <path value="Procedure.performed[x]"/>
       <min value="1"/>
       <type>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support">
+        <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support">
           <valueBoolean value="true"/>
         </extension>
         <code value="dateTime"/>
