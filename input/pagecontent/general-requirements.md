@@ -32,7 +32,7 @@ The [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responde
 #### Profile Only Support
 A system that represent digital health information using the content models of AU Core profiles without the expectation to implement any AU Core interactions can declare _Profile Only Support_ to one or more AU Core profiles. 
 
-A system that declares _Profile Only Support_ conformance to an AU Core profile:
+A system that [declares conformance](declaring-conformance.html#profile-only-support) as _Profile Only Support_ to an AU Core profile:
 - **SHALL** correctly populate a resource with all mandatory elements specified in the profile’s definition.
 - **SHALL** correctly populate a resource with all _Must Support_ elements if a value is known for the element. 
 - **SHALL** implement the requirements on [Missing data](general-requirements.html#missing-data) when an element value is not known.
@@ -43,13 +43,13 @@ A system is not required to declare _Profile Only Support_ to all AU Core profil
 
 _Profile + Interaction Support_ refers to a system that represents digital health information using the content models of AU Core profiles AND implement the REST API interactions defined by the applicable AU Core capability statement.
 
-An AU Core Responder that declares 'Profile + Interaction Support' conformance:
-- **SHALL** declare conformance to the 'AU Core Responder Capability Statement' in the server's CapabilityStatement.
+An [AU Core Responder](ActorDefinition-au-core-actor-responder.html) that declares 'Profile + Interaction Support' conformance:
+- **SHALL** [declare conformance](declaring-conformance.html#profile--interaction-support) to the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html) in the server's CapabilityStatement.
 - **SHALL** specify the implemented resource types, associated AU Core profiles, REST API interactions and search parameters in the server's CapabilityStatement
 - **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support) requirements for the elements defined as such in the implemented AU Core profiles
 - **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html#resourcesSummary1).
 
-An AU Core Requester that declares 'Profile + Interaction Support' conformance:
+An [AU Core Requester](ActorDefinition-au-core-actor-requester.html) that declares 'Profile + Interaction Support' conformance:
 - **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support) requirements for the elements defined as such in the implemented AU Core profiles
 - **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Requester Capability Statement](CapabilityStatement-au-core-requester.html#resourcesSummary1).
 
