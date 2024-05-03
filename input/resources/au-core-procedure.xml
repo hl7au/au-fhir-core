@@ -140,6 +140,24 @@
       </extension>
       <path value="Procedure.performed[x]"/>
       <min value="1"/>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support">
+          <valueBoolean value="true"/>
+        </extension>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <type>
+        <code value="string"/>
+      </type>
+      <type>
+        <code value="Age"/>
+      </type>
+      <type>
+        <code value="Range"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="Procedure.reasonCode">

@@ -35,27 +35,6 @@
         />
       </constraint>
     </element>
-    <element id="Patient.extension:birthPlace">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-      </extension>
-      <path value="Patient.extension"/>
-      <sliceName value="birthPlace"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Patient.extension:indigenousStatus">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -75,27 +54,6 @@
       </extension>
       <path value="Patient.extension"/>
       <sliceName value="indigenousStatus"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.extension:interpreterRequired">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-      </extension>
-      <path value="Patient.extension"/>
-      <sliceName value="interpreterRequired"/>
       <mustSupport value="true"/>
     </element>
     <element id="Patient.extension:genderIdentity">
@@ -366,48 +324,6 @@
       </extension>
       <path value="Patient.birthDate"/>
       <min value="1"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.birthDate.extension:accuracyIndicator">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-      </extension>
-      <path value="Patient.birthDate.extension"/>
-      <sliceName value="accuracyIndicator"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.birthDate.extension:birthTime">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-      </extension>
-      <path value="Patient.birthDate.extension"/>
-      <sliceName value="birthTime"/>
       <mustSupport value="true"/>
     </element>
     <element id="Patient.address">
