@@ -105,8 +105,6 @@ An AU Core Responder that declares 'Profile + Interaction Support' conformance:
 - **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html#resourcesSummary1).
 
 An AU Core Requester that declares 'Profile + Interaction Support' conformance:
-- ~~**SHOULD** declare conformance to the 'AU Core Client Capability Statement' in the clients's CapabilityStatement.~~
-- ~~**SHOULD** specify the implemented resource types, associated AU Core profiles, REST API interactions and search parameters in the client's CapabilityStatement~~
 - **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support) requirements for the elements defined as such in the implemented AU Core profiles
 - **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Requester Capability Statement](CapabilityStatement-au-core-requester.html#resourcesSummary1).
 
@@ -142,10 +140,10 @@ Because AU Core is a foundational standard, *Must Support* needs to be defined a
 
 In AU Core, the meaning of Must Support is specified in terms of [Obligation Codes](https://hl7.org/fhir/extensions/CodeSystem-obligation.html). The obligation codes used to define the minimum obligations of Must Support elements in this implementation guide are reiterated below.
 
-Code | Display | Definition | Notes
---- | --- | --- | ---
-populate-if-known | populate if known | Conformant applications producing resources SHALL/SHOULD correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance.
-no-error | not error if present | Conformant applications SHALL/SHOULD accept resources containing any valid value for the element without error. | Applications are still able to inform the user that a value cannot be processed correctly and may ignore the data, but applications aren't able to reject an instance merely because the element is present (which would be allowed for elements that do not have this obligation). A system MAY raise an error if the value provided is not valid or violates specific business rules. This obligation also applies to elements that only contain an extension in place of a value where (or equivalent), should either of these be allowed on the consumer obligations
+Actor | Code | Display | Definition | Notes
+--- | --- | --- | --- | ---
+[AU Core Responder actor](ActorDefinition-au-core-actor-responder.html) | populate-if-known | populate if known | Conformant applications producing resources SHALL/SHOULD correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance.
+[AU Core Requester actors](ActorDefinition-au-core-actor-requester.html) | no-error | not error if present | Conformant applications SHALL/SHOULD accept resources containing any valid value for the element without error. | Applications are still able to inform the user that a value cannot be processed correctly and may ignore the data, but applications aren't able to reject an instance merely because the element is present (which would be allowed for elements that do not have this obligation). A system MAY raise an error if the value provided is not valid or violates specific business rules. This obligation also applies to elements that only contain an extension in place of a value where (or equivalent), should either of these be allowed on the consumer obligations
 
 Must Support elements are treated differently between [AU Core Responder actors](ActorDefinition-au-core-actor-responder.html) and [AU Core Requester actors](ActorDefinition-au-core-actor-requester.html), *Must Support* on a profile element **SHALL** be interpreted as follows.
 
@@ -154,8 +152,6 @@ An AU Core Responder:
 - **SHALL** correctly populate all _Must Support_ elements if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element.
 - **SHALL** implement the requirements on [Suppressed Data](general-requirements.html#suppressed-data) when an element is NOT allowed to be shared.
 - **SHALL** implement the requirements on [Missing data](general-requirements.html#missing-data) when an element is not known.
-  - ~~**SHALL NOT** populate the element when the element is optional.~~
-  - ~~**SHALL** correctly populate the element when the element is mandatory by following the instructions in the section on [Missing data](general-requirements.html#missing-data).~~
 
 When a _Must Support_ element requires a more tightly stated obligation, this obligation is specified in the AU Core Responder [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition.
 
