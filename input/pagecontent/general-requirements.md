@@ -34,7 +34,7 @@ A system that represent digital health information using the content models of A
 
 A system that declares _Profile Only Support_ conformance to an AU Core profile:
 - **SHALL** correctly populate a resource with all mandatory elements specified in the profile’s definition.
-- **SHALL** correctly populate a resource with all _Must Support_ elements if they know a value for the element. 
+- **SHALL** correctly populate a resource with all _Must Support_ elements if a value is known for the element. 
 - **SHALL** implement the requirements on [Missing data](general-requirements.html#missing-data) when an element value is not known.
 
 A system is not required to declare _Profile Only Support_ to all AU Core profiles. For example, a pathology laboratory system that implements the [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html) profile, is not required to produce a MedicationRequest resource. 
