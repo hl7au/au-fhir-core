@@ -138,7 +138,7 @@ Labelling an element *[Must Support](https://www.hl7.org/fhir/conformance-rules.
 
 Because AU Core is a foundational standard, *Must Support* needs to be defined a way that does not impede or prescribe what a system does with the data, so as not to impede each implementation’s ability to tighten and define expectations for use under their own business rules, regulations, policies, etc. There is also a the challenge that comes from inheritance of must support flags into implementation guides that have strict definitions for must support (e.g., must be able to display this value to an end user), AU Core will only apply the *Must Support* flag on the elements that are necessary to support _minimum_ requirements and are expected to be flagged as *Must Support* across the majority of Australian FHIR implementation guides.
 
-In AU Core, the meaning of Must Support is specified in terms of [Obligation Codes](https://hl7.org/fhir/extensions/CodeSystem-obligation.html). The obligation codes used to define the minimum obligations of Must Support elements in this implementation guide are reiterated below.
+In AU Core, the meaning of Must Support is specified in terms of [Obligation Codes](https://hl7.org/fhir/extensions/CodeSystem-obligation.html) in [obligation extensions](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition. The obligation codes used to define the minimum obligations of Must Support elements in this implementation guide are reiterated below.
 
 Actor | Code | Display | Definition | Notes
 --- | --- | --- | --- | ---
@@ -408,7 +408,6 @@ The core specification provides guidance for what to do in this situation, which
 1. For *coded* data elements:
    - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept, or Coding datatypes):
       - when the system has text but no coded value, only the text sub-element is populated.
-          - ~~for Coding datatypes, the text only data is represented as a `display` element.~~
       - when there is neither text or coded value:
         - the appropriate "unknown" concept code **SHALL** be populated if available when the binding strength is *extensible*
         - when the value set does not have an appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason).
@@ -436,15 +435,12 @@ The core specification provides guidance for what to do in this situation, which
 
    - *required* binding strength (CodeableConcept or code datatypes):
       - the appropriate "unknown" concept code **SHALL** be populated if available.
-      - ~~if the value set does not have an appropriate "unknown" concept code, use a concept from the value set otherwise the instance will not be conformant.~~
+
 
       - For AU Core profiles, the following *mandatory* or *conditionally mandatory* status elements with required binding have no appropriate "unknown" concept code:
         - `AllergyIntolerance.clinicalStatus`
         - `Condition.clinicalStatus`
         - `Immunization.status`
-
-
-        - ~~The clinicalStatus element is *conditionally mandatory* based on resource specific constraints. ~~
 
 
 ### Suppressed Data
