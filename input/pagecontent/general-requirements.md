@@ -43,7 +43,7 @@ A system is not required to declare _Profile Only Support_ to all AU Core profil
 
 Servers that implement _Profile Only Support_ to AU Core profiles declare conformance to each profile by hosting a [CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html) resource at [server-base-url]/metadata that is available to both authenticated and unauthenticated clients. The capability statement declares _Profile Only Support_ for a resource as either a base profile using [CapabilityStatement.rest.resource.profile](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.rest.resource.profile) or supported profile using [CapabilityStatement.rest.resource.supportedProfile](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.rest.resource.supportedProfile).
 
-Example: CapabilityStatement resource for a server supporting the AU Core Patient profile as a system-wide profile that is applied across all instances of the Patient resource:
+Example: CapabilityStatement resource for a responder supporting the AU Core Patient profile as a system-wide profile that is applied across all instances of the Patient resource:
 
     ```
     {
@@ -68,7 +68,7 @@ Example: CapabilityStatement resource for a server supporting the AU Core Patien
     }
     ```
 
-Example: CapabilityStatement resource for a server supporting the AU Core Waist Circumference profile as a profile for supported use cases provided by the server:
+Example: CapabilityStatement resource for a responder supporting the AU Core Waist Circumference profile as a profile for supported use cases provided by the responder:
 
     ```
     {
@@ -113,14 +113,14 @@ An AU Core Requester that declares 'Profile + Interaction Support' conformance:
 
 **Declaring Conformance**
 
-Servers that implement _Profile + Interaction Support_ declares conformance by hosting a [CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html) at [server-base-url]/metadata, available to both authenticated and unauthenticated clients. The server's [CapabilityStatement instantiates](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.instantiates) element references the [AU Core Server Capability Statement](CapabilityStatement-au-core-server.html#resourcesSummary1), as shown in the following fragment:
+Servers that implement _Profile + Interaction Support_ declares conformance by hosting a [CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html) at [server-base-url]/metadata, available to both authenticated and unauthenticated clients. The server's [CapabilityStatement instantiates](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.instantiates) element references the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html#resourcesSummary1), as shown in the following fragment:
 
     ```
     {
       "resourceType": "CapabilityStatement",
       ...
       "instantiates": [
-        "http://hl7.org.au/fhir/core/CapabilityStatement/au-core-server"
+        "http://hl7.org.au/fhir/core/CapabilityStatement/au-core-responder"
       ],
       ...  
       "rest": [
@@ -138,7 +138,7 @@ Mandatory elements are elements with a minimum cardinality of 1 (min=1). When an
 ### Must Support
 Labelling an element *[Must Support](https://www.hl7.org/fhir/conformance-rules.html#mustSupport)* means that systems that produce or consume resources **SHALL** provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile **SHALL** make clear exactly what kind of support is required when an element is labelled as Must Support.
 
-Because AU Core is a foundational standard, *Must Support* needs to be defined a way that does not impede or prescribe what a client or server does with the data, so as not to impede each implementation’s ability to tighten and define expectations for use under their own business rules, regulations, policies, etc. There is also a the challenge that comes from inheritance of must support flags into implementation guides that have strict definitions for must support (e.g., must be able to display this value to an end user), AU Core will only apply the *Must Support* flag on the elements that are necessary to support _minimum_ requirements and are expected to be flagged as *Must Support* across the majority of Australian FHIR implementation guides.
+Because AU Core is a foundational standard, *Must Support* needs to be defined a way that does not impede or prescribe what a system does with the data, so as not to impede each implementation’s ability to tighten and define expectations for use under their own business rules, regulations, policies, etc. There is also a the challenge that comes from inheritance of must support flags into implementation guides that have strict definitions for must support (e.g., must be able to display this value to an end user), AU Core will only apply the *Must Support* flag on the elements that are necessary to support _minimum_ requirements and are expected to be flagged as *Must Support* across the majority of Australian FHIR implementation guides.
 
 In AU Core, the meaning of Must Support is specified in terms of [Obligation Codes](https://hl7.org/fhir/extensions/CodeSystem-obligation.html). The obligation codes used to define the minimum obligations of Must Support elements in this implementation guide are reiterated below.
 
