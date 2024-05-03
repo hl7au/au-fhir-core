@@ -2,7 +2,7 @@
 
 There are two different ways to implement AU Core:
 1. [Profile Only Support](#profile-only-support): system that represent digital health information using AU Core profiles without the expectation to implement any FHIR specified interactions.
-1. [Profile Support + Interaction Support](#profile--interaction-support): system that represents digital health information using AU Core profiles (Profile Support) AND implement the [FHIR REST API](http://hl7.org/fhir/R4/http.html) interactions defined by an AU Core Capability Statement](#au-core-capability-statements) (Interaction Support).
+1. [Profile Support + Interaction Support](#profile--interaction-support): system that represents digital health information using AU Core profiles (Profile Support) AND implement the [FHIR REST API](http://hl7.org/fhir/R4/http.html) interactions defined by an [AU Core Capability Statement](#au-core-capability-statements) (Interaction Support).
 
 The requirements of the FHIR standard and [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html) apply, and define the use of terms in this guide including the conformance verbs - SHALL, SHALL NOT, SHOULD, SHOULD NOT, MAY.
 
@@ -22,12 +22,12 @@ AU Core profile elements include Mandatory and Must Support requirements. [Manda
 
 Systems may declare conformance to AU Core profiles based on one of the following two conformance tiers: 
 - [Profile Only Support](#profile-only-support) for a system declaring conformance to an AU Core profile
-- [Profile and Interaction Support](#profile--interaction-support) for a system declaring conformance to one of the [AU Core Capability Statements](#au-core-capability-statements)
+- [Profile + Interaction Support](#profile--interaction-support) for a system declaring conformance to one of the [AU Core Capability Statements](#au-core-capability-statements)
 
 #### AU Core Capability Statements
-This CapabilityStatement describes the basic rules for the [AU Core Requester actor](ActorDefinition-au-core-actor-requester.html) that is responsible for creating and initiating the queries for information. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core Requesters are defined in this CapabilityStatement. AU Core Responders define their capabilities by choosing from this list based on the resource types they need to access.
+The [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) defines the conformance requirements and expectations of a [AU Core Requester](ActorDefinition-au-core-actor-requester.html) actor responsible for initiating queries for information from an [AU Core Responder](ActorDefinition-au-core-actor-responder.html). The complete list of FHIR profiles, REST API interactions, and search parameters that can be implemented by an AU Core Requester are defined in this capability statement. 
 
-The [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html) outlines conformance requirements and expectations for the [AU Core Responder actor](ActorDefinition-au-core-actor-responder.html) that is responsible for providing responses to queries submitted by AU Core Requester actors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core Responders are defined in this CapabilityStatement.
+The [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html) defines the conformance requirements and expectations of a [AU Core Responder](ActorDefinition-au-core-actor-responder.html) actor responsible for providing responses to queries submitted by an [AU Core Requester](ActorDefinition-au-core-actor-requester.html). The complete list of FHIR profiles, REST API interactions, and search parameters that can be implemented by an AU Core Responder are defined in this capability statement. An AU Core Responder declares conformance to this list of capbilities based on the resource types and intergations it implement.
 
 #### Profile Only Support
 A system that represent digital health information using the content models of AU Core profiles without the expectation to implement any AU Core interactions can declare _Profile Only Support_ to one or more AU Core profiles. 
@@ -65,11 +65,10 @@ In AU Core, the meaning of Must Support is specified in terms of [Obligation Cod
 
 Actor | Code | Display | Definition | Notes
 --- | --- | --- | --- | ---
-[AU Core Responder](ActorDefinition-au-core-actor-responder.html) | [populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-populate-if-known) | populate if known | Conformant applications producing resources SHALL/SHOULD correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance.
-[AU Core Responder](ActorDefinition-au-core-actor-responder.html) | [able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-able-to-populate) | be able to populate | Conformant applications producing resources SHALL/SHOULD/MAY be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.) This obligation does not impose expectations on the circumstances in which the element will be sent, only that it can be in at least some situations.
-[AU Core Requester](ActorDefinition-au-core-actor-requester.html) | [no-error](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-no-error) | not error if present | Conformant applications SHALL/SHOULD accept resources containing any valid value for the element without error. | Applications are still able to inform the user that a value cannot be processed correctly and may ignore the data, but applications aren't able to reject an instance merely because the element is present (which would be allowed for elements that do not have this obligation). A system MAY raise an error if the value provided is not valid or violates specific business rules. This obligation also applies to elements that only contain an extension in place of a value where (or equivalent), should either of these be allowed on the consumer obligations
+[AU Core Responder](ActorDefinition-au-core-actor-responder.html) | [SHALL:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-populate-if-known) | SHALL populate if known | Conformant applications producing resources SHALL correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance.
+[AU Core Requester](ActorDefinition-au-core-actor-requester.html) | [SHALL:no-error](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-no-error) | SHALL not error if present | Conformant applications SHALL accept resources containing any valid value for the element without error. | Applications are still able to inform the user that a value cannot be processed correctly and may ignore the data, but applications aren't able to reject an instance merely because the element is present (which would be allowed for elements that do not have this obligation). A system MAY raise an error if the value provided is not valid or violates specific business rules. This obligation also applies to elements that only contain an extension in place of a value where (or equivalent), should either of these be allowed on the consumer obligations
 
-Must Support elements are treated differently between [AU Core Responder actors](ActorDefinition-au-core-actor-responder.html) and [AU Core Requester actors](ActorDefinition-au-core-actor-requester.html), *Must Support* on a profile element **SHALL** be interpreted as follows.
+Must Support elements are treated differently between [AU Core Responder](ActorDefinition-au-core-actor-responder.html) and [AU Core Requester](ActorDefinition-au-core-actor-requester.html) actors, *Must Support* on a profile element **SHALL** be interpreted as follows.
 
 #### AU Core Responder
 An AU Core Responder:
@@ -220,13 +219,6 @@ AU Core MedicationRequest|MedicationRequest.substitution.allowed[x]|boolean, Cod
 AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
 AU Core Provenance|Provenance.occurred[x]|Period, dateTime
 {:.grid}
-
-If any data type is labelled as *Must Support*, an: 
-- AU Core Responder **SHALL** be able to correctly populate the element with at least one data type labelled as _Must Support_. 
-- AU Core Requester **SHALL** accept resource without error if the element is present and containing any valid data type allowed by the element definition. 
-
-Note: The AU Core Requester is still required to accept any data types allowed by the element definition to support the case when an AU Core Responder populates a data type other than one labelled as _Must Support_ due to a value not known for the _Must SUpport_ types.
-
 
 ##### Must Support - Choice of Identifiers
 A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing must support on each identifier slice. 
