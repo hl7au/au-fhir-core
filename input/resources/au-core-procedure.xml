@@ -22,9 +22,6 @@
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
-        <extension url="documentation">
-          <valueMarkdown value="**SHALL** populate the element if a value is known and allowed to be shared&#xa;&#xa;**SHALL** populate the element with 'unknown' if a value is not known or not allowed to be shared"/>
-        </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -32,9 +29,6 @@
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-        <extension url="documentation">
-          <valueMarkdown value="**SHALL** accept resource without error if element present and containing any valid value"/>
         </extension>
       </extension>
       <path value="Procedure.status"/>
@@ -48,9 +42,6 @@
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
         </extension>
-        <extension url="documentation">
-          <valueMarkdown value="**SHALL** populate the element with at least one of the sub-element values if known and allowed to be shared"/>
-        </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -58,9 +49,6 @@
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-        <extension url="documentation">
-          <valueMarkdown value="**SHALL** accept resource without error if element is present and containing any combination of sub-elements with valid values"/>
         </extension>
       </extension>
       <path value="Procedure.code"/>
