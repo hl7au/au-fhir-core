@@ -35,19 +35,9 @@
         />
       </constraint>
     </element>
-    <element id="Patient.extension:birthPlace">
-      <path value="Patient.extension"/>
-      <sliceName value="birthPlace"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Patient.extension:indigenousStatus">
       <path value="Patient.extension"/>
       <sliceName value="indigenousStatus"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.extension:interpreterRequired">
-      <path value="Patient.extension"/>
-      <sliceName value="interpreterRequired"/>
       <mustSupport value="true"/>
     </element>
     <element id="Patient.extension:genderIdentity">
@@ -154,16 +144,6 @@
     <element id="Patient.birthDate">
       <path value="Patient.birthDate"/>
       <min value="1"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.birthDate.extension:accuracyIndicator">
-      <path value="Patient.birthDate.extension"/>
-      <sliceName value="accuracyIndicator"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.birthDate.extension:birthTime">
-      <path value="Patient.birthDate.extension"/>
-      <sliceName value="birthTime"/>
       <mustSupport value="true"/>
     </element>
     <element id="Patient.address">

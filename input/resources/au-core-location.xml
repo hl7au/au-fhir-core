@@ -35,10 +35,6 @@
       <path value="Location.name"/>
       <mustSupport value="true" />
     </element>
-    <element id="Location.description">
-      <path value="Location.description"/>
-      <mustSupport value="true" />
-    </element>
     <element id="Location.mode">
       <path value="Location.mode"/>
       <mustSupport value="true" />

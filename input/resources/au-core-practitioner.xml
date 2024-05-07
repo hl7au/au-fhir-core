@@ -52,29 +52,5 @@
       <path value="Practitioner.name.given"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Practitioner.qualification">
-      <path value="Practitioner.qualification"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Practitioner.qualification.identifier">
-      <path value="Practitioner.qualification.identifier"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Practitioner.qualification.code">
-      <path value="Practitioner.qualification.code"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Practitioner.qualification.period">
-      <path value="Practitioner.qualification.period"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Practitioner.qualification.issuer">
-      <path value="Practitioner.qualification.issuer"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Practitioner.communication">
-      <path value="Practitioner.communication"/>
-      <mustSupport value="true"/>
-    </element>
   </differential>
 </StructureDefinition>
