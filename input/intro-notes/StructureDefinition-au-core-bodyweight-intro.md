@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update an observation of body weight associated with a patient
 
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile is conformant to:
 - [observation-bodyweight](http://hl7.org/fhir/R4/observation-bodyweight.html)

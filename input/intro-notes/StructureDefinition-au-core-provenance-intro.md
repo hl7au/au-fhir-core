@@ -5,7 +5,7 @@ The following are supported usage scenarios for this profile:
 - Query for Provenance records associated with a specific FHIR resource
 - Query for Provenance records associated with all FHIR resources of a specific type
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile:
 - **MAY** be conformant to [US Core Provenance](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-provenance.html) if all instances of Provenance.agent.onBehalfOf are supplied as Organization

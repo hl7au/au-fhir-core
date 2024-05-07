@@ -5,7 +5,7 @@ The following are supported usage scenarios for this profile:
 - Query for a patient's immunisations
 - Record or update an immunisation record for a patient
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile is conformant to:
 - [IPA-Immunization](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization)

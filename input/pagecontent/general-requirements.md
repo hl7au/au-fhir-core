@@ -331,8 +331,6 @@ For example, the AU Core MedicationRequest Profile `note` element is labelled *M
 - AU Core Responders **SHALL** be capable of providing a value in a `MedicationRequest.note` sub-element e.g. `MedicationRequest.note.text`.
 - AU Core Requestors **SHALL** be capable of processing the MedicationRequest resource with a value in `MedicationRequest.note`.
 
-If any sub-element is labelled as *Must Support*, an AU Core Responder **SHALL** be capable of providing all sub-elements. 
-
 For example, if AU Core Patient Profile name element is labelled *Must Support* and has *Must Support* sub-elements "family” and “given”. When claiming conformance to this profile:
 - AU Core Responders **SHALL** be capable of providing a value in `Patient.name.family` and `Patient.name.given`.
 - AU Core Requestors **SHALL** be capable of processing a Patient resource with a value in `Patient.name.family` and `Patient.name.given`.
