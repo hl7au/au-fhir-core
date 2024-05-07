@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update a record of a procedure performed on a patient
 
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile is conformant to:
 - [US Core Procedure](http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure)

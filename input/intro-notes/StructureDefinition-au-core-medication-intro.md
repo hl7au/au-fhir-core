@@ -7,7 +7,7 @@ The following are supported usage scenarios for this profile:
 - Read medications associated with a patient referenced by another resource
 
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile is conformant to:
 - [IPA-Medication](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication)

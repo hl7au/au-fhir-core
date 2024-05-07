@@ -229,7 +229,7 @@
       <path value="Patient.name"/>
       <min value="1"/>
       <comment value="A patient may have multiple names with different uses or applicable periods. At least one name SHOULD be the name the patient is considered to have for administrative and record keeping purposes - family name is used to enable matching against patient records."/>
-      <condition value="inv-au-core-pat-02"/>
+      <condition value="au-core-pat-02"/>
       <constraint>
         <key value="au-core-pat-04"/>
         <severity value="error"/>
@@ -262,6 +262,18 @@
         </extension>
       </extension>
       <path value="Patient.name.use"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Patient.name.text">
+      <path value="Patient.name.text"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given"/>
       <mustSupport value="true"/>
     </element>
     <element id="Patient.telecom">
