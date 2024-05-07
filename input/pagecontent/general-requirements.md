@@ -180,20 +180,12 @@ The table below provides a list of AU Core profile elements that allow multiple 
 
 AU Core Profile |Must Support Element|Reference
 ---|---|---
-AU Core Blood Pressure|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
-AU Core Body Height|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
-AU Core Body Temperature|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
-AU Core Body Weight|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
 AU Core Diagnostic Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
 AU Core Diagnostic Result Observation|Observation.hasMember|AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
-AU Core Heart Rate|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
 AU Core Pathology Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
 AU Core Procedure|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
 AU Core Provenance|Procedure.agent.who|AU Core Practitioner, AU Core PractitionerRole, RelatedPerson, AU Core Patient, Device, AU Core Organization
 AU Core Provenance|Procedure.agent.onBehalfOf|AU Core Practitioner, AU Core PractitionerRole, RelatedPerson, AU Core Patient, Device, AU Core Organization
-AU Core Respiration Rate|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
-AU Core Smoking Status|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
-AU Core Waist Circumference|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
 {:.grid}
 
 

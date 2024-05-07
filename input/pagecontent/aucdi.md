@@ -258,7 +258,7 @@ The table below shows the relationship between the AUCDI Data Groups and Element
     <td>Pulse rate</td>
     <td><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
     <td>Observation</td>
-    <td>Feedback is requested on the proposal to clarify how to exchange pulse rate. Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44861">FHIR-44861</a>.</td>
+    <td></td>
   </tr>
   <tr>
     <td>Body temperature</td>

@@ -49,19 +49,6 @@
 		</coding>
 		<text value="Intramuscular"/>
 	</route>
-	<performer>
-		<function>
-			<coding>
-				<system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
-				<code value="AP"/>
-				<display value="Administering Provider"/>
-			</coding>
-			<text value="Administering Provider"/>
-		</function>
-		<actor>
-			<reference value="PractitionerRole/bobrester-bob-gp"/> 
-		</actor>
-	</performer>
 	<protocolApplied>
 		<series value="primary vaccination course 2-dose"/>
 		<targetDisease>
