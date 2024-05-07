@@ -21,7 +21,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 <div class="request-for-feedback">
     <p>Feedback is requested on the proposals to remove Must Support from the following elements:
     <ul>
-        <li>Immunization.performer and its children: please comment on <a href="https://jira.hl7.org/browse/FHIR-44653">FHIR-44653</a>.</li>
         <li>Immunization.note: please comment on HL7 JIRA <a href="https://jira.hl7.org/browse/FHIR-44672">FHIR-44672</a>.</li>
         <li>Immunization.reasonCode: please comment on HL7 JIRA <a href="https://jira.hl7.org/browse/FHIR-44654">Comment on FHIR-44654</a>.</li>
         <li>Immunization.protocolApplied.series: please comment on HL7 JIRA <a href="https://jira.hl7.org/browse/FHIR-44656">FHIR-44656</a>.</li>
