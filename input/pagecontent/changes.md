@@ -17,6 +17,7 @@ This change log documents the significant updates and resolutions implemented fr
 - Removed Must Support from the following elements in AU Core Practitioner:
   - Practitioner.communication [FHIR-44588](https://jira.hl7.org/browse/FHIR-44588)
   - Practitioner.qualification, Practitioner.qualification.identifier, Practitioner.qualification.code, Practitioner.qualification.period, Practitioner.qualification.issuer: [FHIR-45118](https://jira.hl7.org/browse/FHIR-45118), [FHIR-44587](https://jira.hl7.org/browse/FHIR-44587), [FHIR-44588](https://jira.hl7.org/browse/FHIR-44588)
+- Removed Must Support from PractitionerRole.location in AU Core PractitionerRole [FHIR-43841](https://jira.hl7.org/browse/FHIR-43841).
 - Removed Must Support from the following elements in AU Core Procedure:
   - Procedure.statusReason [FHIR-45013](https://jira.hl7.org/browse/FHIR-45013)
   - Procedure.category [FHIR-45014](https://jira.hl7.org/browse/FHIR-45014)
