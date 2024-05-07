@@ -3,7 +3,7 @@ AU Core is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&cop
 
 AU Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. 
 
-AU Core uses AU Base representations as the basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each resource type to access data. AU Core promotes interoperability and adoption through common implementation and SHOULD be built on top of for standards development for specific use cases. 
+AU Core uses AU Base representations, where available, as the basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each resource type to access data. AU Core promotes interoperability and adoption through common implementation and SHOULD be the basis of further implementation guide development for specific use cases. 
 
 There are two different ways to implement AU Core:
 1. Profile Only Support: systems support only the resources as profiled by AU Core to represent digital health information.
@@ -63,7 +63,7 @@ AU Core is particularly useful in defining:
 - Assumed support by client applications
 - As the basis of downstream implementation guides
 
-Assuming capabilities defined in AU Core are implemented allow specifications, applications and business logic to be developed generally with confidence that systems can readily supply this capability.
+Implementation of capabilities defined in AU Core enables specifications, applications and business logic to be developed with confidence.
 
 This document is a working specification that may be directly implemented by FHIR<sup>&reg;&copy;</sup> system producers.
 
@@ -76,12 +76,12 @@ The following actors are part of the AU Core IG:
 
 **AU Core Requestor**
 
-An application that initiates a data access request to retrieve patient data. The AU Core Requestor is the client in a client-server interaction. The terms "requester", "client", and "app" are used interchangeably throughout this guide and are not meant to limit this actor to patient and provider apps. Payers and other users can use the same technology. Consider these terms a short-hand notation for a "user application".
+An application that initiates a data access request to retrieve core digital health and administrative information. The AU Core Requestor is the client in a client-server interaction. The terms "requester", "client", and "app" are used interchangeably throughout this guide and are not meant to limit this actor to patient and provider apps. Payers and other users can use the same technology. Consider these terms a short-hand notation for a "user application".
 <br/><br/>
 
 **AU Core Responder**
 
-A system that responds to the data access request providing patient data. The AU Core Responder is the server in a client-server interaction. The terms "server", "AU Core FHIR server", "FHIR server" and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. HIEs, care coordination platforms, population health systems, etc., can use the same technology. Consider these terms a short-hand notation for an "interoperable healthcare platform".
+A system that responds to the data access request providing core digital health and administrative information. The AU Core Responder is the server in a client-server interaction. The terms "server", "AU Core FHIR server", "FHIR server" and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. HIEs, care coordination platforms, population health systems, etc., can use the same technology. Consider these terms a short-hand notation for an "interoperable healthcare platform".
 <br/><br/>
 
 
