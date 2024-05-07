@@ -51,4 +51,10 @@ Sex assigned at birth is represented using the [Person Recorded Sex or Gender ex
   - *Not stated or inadequately described* may be represented by the code "unknown"
   - Where the workflow does not support obtaining a gender identity value, it may be represented by sending the code "not-asked"
 - When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/) and [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html)
+- Patient names can be provided as a text representation in `name.text` and/or parts such as `name.family` and `name.given`. 
+  - `name.text` specifies the entire name as it should be displayed and this may be provided instead of, or as well as, the specific parts. It is important to note that the presence of parts of a name, e.g. `name.family` and `name.given`, do not imply that `name.text` is known or must be supplied. 
+  - In this profile, the following sub-elements of `name` are marked as _Must Support_: `name.use`, `name.text`, `name.family`, and `name.given`
+    - servers are required to support at least one of the following sub-elements: `name.text`, `name.family`, and `name.given`
+    - clients are required to all sub-elements marked _Must Support_: `name.use`, `name.text`, `name.family`, and `name.given`
+
 
