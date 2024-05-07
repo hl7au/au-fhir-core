@@ -20,6 +20,3 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 ### Profile specific implementation guidance
 {% include observation_vitalsigns_guidance.md -%}
 
-<p class="request-for-feedback">Feedback is requested on the proposal to remove Must Support from Observation.performer element across AU Core Vital Signs profiles. Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44786">FHIR-44786</a>.</p>
-
-
