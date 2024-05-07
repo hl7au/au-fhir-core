@@ -340,7 +340,7 @@
 </tr>
 <tr>
 <td>
-<a href="#Patient1-1">Organization</a>
+<a href="#Organization1-1">Organization</a>
 </td>
 <td>
 <a href="StructureDefinition-au-core-organization.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization</a>
@@ -367,7 +367,7 @@
 <td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
-<td>_id, birthdate, birthdate+family, birthdate+name, family, family+gender, gender, gender+name, identifier, indigenous-status, name, patient-gender-identity</td>
+<td>_id, birthdate, birthdate+family, birthdate+name, family, family+gender, gender, gender+name, identifier, indigenous-status, name, gender-identity</td>
 <td/>
 <td>
 <code>Provenance:target</code>
@@ -2152,18 +2152,6 @@
   <b>SHALL</b>
 </td>
 <td>
-  <a href="http://hl7.org/fhir/R4/organization.html#search">address</a>
-</td>
-<td>
-  <code>string</code>
-</td>
-<td></td>
-</tr>
-<tr>
-<td>
-  <b>SHALL</b>
-</td>
-<td>
   <a href="http://hl7.org/fhir/R4/organization.html#search">identifier</a>
 </td>
 <td>
@@ -2180,7 +2168,19 @@
 </tr>
 <tr>
 <td>
-  <b>SHALL</b>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/organization.html#search">address</a>
+</td>
+<td>
+  <code>string</code>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/organization.html#search">name</a>
@@ -2400,7 +2400,7 @@
   <b>MAY</b>
 </td>
 <td>
-  <a href="http://hl7.org/fhir/R4/patient.html#search">patient-gender-identity</a>
+  <a href="https://build.fhir.org/ig/hl7au/au-fhir-base/search-parameters.html#patient">gender-identity</a>
 </td>
 <td>
   <code>token</code>
@@ -4312,7 +4312,7 @@
 </searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="address"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Organization-address"/>
@@ -4329,7 +4329,7 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="name"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Organization-name"/>
@@ -4517,8 +4517,8 @@
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
 </extension>
-<name value="patient-gender-identity"/>
-<definition value="http://hl7.org.au/fhir/SearchParameter/patient-gender-identity"/>
+<name value="gender-identity"/>
+<definition value="http://hl7.org.au/fhir/SearchParameter/gender-identity"/>
 <type value="token"/>
 <documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xa;&#xa;The server **SHALL** support both."/>
 </searchParam>

@@ -64,3 +64,7 @@ This change log documents the significant updates and resolutions implemented fr
 - Removed Must Support from the following elements in AU Core Waist Circumference: 
   - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)  
+- Corrected the search parameter for gender identity to be `gender-identity` not `patient-gender-identity` [FHIR-45057](https://jira.hl7.org/browse/FHIR-45057).
+- Changed the following Organization search parameters:
+  - address search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
+  - name search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
