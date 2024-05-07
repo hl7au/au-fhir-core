@@ -35,13 +35,32 @@ This change log documents the significant updates and resolutions implemented fr
   - AllergyIntolerance.asserter [FHIR-44699](https://jira.hl7.org/browse/FHIR-44699), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - AllergyIntolerance.recorder [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082), [FHIR-45066](https://jira.hl7.org/browse/FHIR-45066)
   - AllergyIntolerance.encounter [FHIR-45123](https://jira.hl7.org/browse/FHIR-45123)
-- Removed Must Support flag from Observation.encounter in AU Core Smoking Status [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222).
-- Removed Must Support flag from Immunization.encounter in AU Core Immunization [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218).
-- Removed Must Support flag from Observation.encounter in the following AU Core vital signs profiles:
-  - AU Core Blood Pressure [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
-  - AU Core Body Height [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
-  - AU Core Body Temperature [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)  
-  - AU Core Body Weight [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
-  - AU Core Heart Rate [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
-  - AU Core Respiration Rate [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
-  - AU Core Waist Circumference [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+- Removed Must Support from the following elements in AU Core Smoking Status: 
+  - Observation.encounter [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222)
+  - Observation.performer [FHIR-45223](https://jira.hl7.org/browse/FHIR-45223)
+- Removed Must Support from the following elements in AU Core Immunization:
+  - Immunization.encounter [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
+  - Immunization.performer [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
+  - Immunization.performer.function [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
+  - Immunization.performer.actor [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
+- Removed Must Support from the following elements in AU Core Blood Pressure: 
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
+- Removed Must Support from the following elements in AU Core Body Height:
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
+- Removed Must Support from the following elements in AU Core Body Temperature: 
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786) 
+- Removed Must Support from the following elements in AU Core Body Weight: 
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786) 
+- Removed Must Support from the following elements in AU Core Heart Rate: 
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786) 
+- Removed Must Support from the following elements in AU Core Respiration Rate: 
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
+- Removed Must Support from the following elements in AU Core Waist Circumference: 
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)  

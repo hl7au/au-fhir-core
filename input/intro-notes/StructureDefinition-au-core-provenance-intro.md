@@ -18,7 +18,5 @@ A resource conforming to [US Core](http://hl7.org/fhir/us/core) **MAY** conform 
 ### Profile specific implementation guidance
 - see guidance in the core FHIR specification on [using the provenance resource](http://hl7.org/fhir/R4/provenance.html#using)
 
-<p class="request-for-feedback">Feedback is requested on the proposal to remove support for _revinclude parameter: Provenance:target across the set of resources in AU Core. Please comment on <a href="https://jira.hl7.org/browse/FHIR-43850">FHIR-43850</a>.</p>
-
 <p class="request-for-feedback">Input is requested on the need for AU Core to support targeted Provenance. Provenance.target may point at a specific element within the targeted resource using the <a href="http://hl7.org/fhir/extensions/StructureDefinition-targetElement.html">target element extension</a> or <a href="http://hl7.org/fhir/extensions/StructureDefinition-targetPath.html">target path extension</a>. These extensions are only available at this time in R5 but can be supported in R4 AU Core if needed.</p>
 

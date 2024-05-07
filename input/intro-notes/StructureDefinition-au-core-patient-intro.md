@@ -52,7 +52,3 @@ Sex assigned at birth is represented using the [Person Recorded Sex or Gender ex
   - Where the workflow does not support obtaining a gender identity value, it may be represented by sending the code "not-asked"
 - When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/) and [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html)
 
-<p class="request-for-feedback">Feedback is requested on the proposal to add Must Support to parts of Patient.name in addition to Patient.name.use. Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44818">FHIR-44818</a>.</p>
-
-<p class="request-for-feedback">Feedback is requested on making Sex Assiged at Birth a Must Support element in AU Core Patient. Please comment on HL7 JIRA <a href="https://jira.hl7.org/browse/FHIR-44857">FHIR-44857</a>.</p>
-
