@@ -11,6 +11,12 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support on Patient.name.text [FHIR-44818](https://jira.hl7.org/browse/FHIR-44818)
   - added Must Support on Patient.name.family [FHIR-44818](https://jira.hl7.org/browse/FHIR-44818)
   - added Must Support on Patient.name.given [FHIR-44818](https://jira.hl7.org/browse/FHIR-44818)
+- Made the following changes to AU Core Practitioner:
+  - removed Must Support from Practitioner.address [FHIR-43860](https://jira.hl7.org/browse/FHIR-43860)
+  - removed Must Support from Practitioner.telecom [FHIR-43860](https://jira.hl7.org/browse/FHIR-438608)
+  - added Must Support on Practitioner.name.family [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
+  - added Must Support on Practitioner.name.given [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
+  - replaced constraint _au-core-prac-01: At least text or family name shall be present_ with making Practitioner.name.family mandatory (1..1) [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
 - Removed Must Support from the following elements in AU Core Procedure:
   - Procedure.statusReason [FHIR-45013](https://jira.hl7.org/browse/FHIR-45013)
   - Procedure.category [FHIR-45014](https://jira.hl7.org/browse/FHIR-45014)
