@@ -156,7 +156,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     Example:
     
       1. GET [base]/Encounter?patient=5678&amp;discharge-disposition=9
-      1. GET [base]/Encounter?patient=5678&amp;discharge-disposition=9&amp;
+      1. GET [base]/Encounter?patient=5678&amp;discharge-disposition=https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1\|9
 
     *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient and discharge disposition ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
@@ -179,14 +179,15 @@ The following search parameters and search parameter combinations **SHOULD** be 
     Example:
     
       1. GET [base]/Encounter?patient=5678&amp;discharge-disposition=9
-      1. GET [base]/Encounter?patient=5678&amp;discharge-disposition=9&amp;
+      1. GET [base]/Encounter?patient=5678&amp;discharge-disposition=https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1\|9
 
-    *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient and discharge disposition ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient and discharge disposition ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token)).
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`status`](https://hl7.org/fhir/R4/encounter.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
+    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
-    `GET [base]/Encounter?patient={Type/}[id]&status={system|}[code]`
+    `GET [base]/Encounter?patient={Type/}[id]&&status={system|}[code]{,{system|}[code],...}`
 
     Example:
     
