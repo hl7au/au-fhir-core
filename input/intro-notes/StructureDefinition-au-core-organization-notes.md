@@ -71,7 +71,6 @@ The following search parameters **SHOULD** be supported:
     Example:
     
       1. GET [base]/Organization?name=Hospital
-      1. GET [base]/Organization?name=Hospital
 
     *Implementation Notes:* Fetches a bundle of all Organization resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
     
