@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update a patient's allergies/adverse reactions
 
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile is conformant to:
 - [IPA-AllergyIntolerance](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance)

@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update an observation of waist circumference associated with a patient
 
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile is conformant to:
 - [IPA-Observation](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-observation.html)
