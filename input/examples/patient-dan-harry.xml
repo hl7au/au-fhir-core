@@ -27,6 +27,10 @@
   <name>
     <text value="Mr. Harry Dan"/>
   </name>
+  <name>
+        <use value="old"/>
+        <family value="Danielo"/>
+    </name>
   <telecom>
     <system value="email"/>
     <value value="hdan@amail.example.com"/>
