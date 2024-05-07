@@ -1,7 +1,7 @@
 
 ### Relationship to HL7 AU Base
 
-This guide is built on top of the FHIR standard and [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/).
+This guide is built on top of the FHIR standard and, where available, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/).
 
   <div> 
     <img src="relationship.png" alt="Relationship with HL7 AU Base" style="width:70%"/>
