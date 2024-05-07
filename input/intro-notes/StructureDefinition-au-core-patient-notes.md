@@ -74,7 +74,7 @@
         <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
   </tr>
   <tr>
-        <td>patient-gender-identity</td>
+        <td>gender-identity</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
         <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
