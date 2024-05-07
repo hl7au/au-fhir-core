@@ -25,9 +25,7 @@
     <value value="NBUR9080"/>
   </identifier>
   <name>
-    <family value="Dan"/>
-    <given value="Harry"/>
-    <prefix value="Mr."/>
+    <text value="Mr. Harry Dan"/>
   </name>
   <telecom>
     <system value="email"/>

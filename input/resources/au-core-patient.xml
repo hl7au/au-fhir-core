@@ -120,6 +120,18 @@
       <path value="Patient.name.use"/>
       <mustSupport value="true"/>
     </element>
+    <element id="Patient.name.text">
+      <path value="Patient.name.text"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="Patient.telecom">
       <path value="Patient.telecom"/>
       <mustSupport value="true"/>

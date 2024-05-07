@@ -10,14 +10,4 @@
         <given value="Chau" />
         <prefix value="Dr."/>
     </name>
-    <telecom>
-        <system value="phone"/>
-        <value value="0491572665"/>
-        <use value="mobile"/>
-    </telecom>
-    <telecom>
-        <system value="email"/>
-        <value value="chau.fryer@murrabitph.example.com.au"/>
-        <use value="work"/>
-    </telecom>
 </Practitioner>
