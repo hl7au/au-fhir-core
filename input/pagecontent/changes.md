@@ -7,6 +7,12 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 
+- Removed Must Support from Location.description in AU Core Location [FHIR-45029](https://jira.hl7.org/browse/FHIR-45029).
+- Removed Must Support from the following elements in AU Core Patient:
+  - Patient.extension:birthPlace [FHIR-45018](https://jira.hl7.org/browse/FHIR-45018)
+  - Patient.extension:interpreterRequired [FHIR-45186](https://jira.hl7.org/browse/FHIR-45186)
+  - Patient.birthDate.extension:birthTime [FHIR-45028](https://jira.hl7.org/browse/FHIR-45028)
+  - Patient.birthDate.extension:accuracyIndicator [FHIR-45028](https://jira.hl7.org/browse/FHIR-45028)
 - Removed Must Support from the following elements in AU Core Procedure:
   - Procedure.statusReason [FHIR-45013](https://jira.hl7.org/browse/FHIR-45013)
   - Procedure.category [FHIR-45014](https://jira.hl7.org/browse/FHIR-45014)
