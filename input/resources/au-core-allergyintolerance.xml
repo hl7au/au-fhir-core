@@ -37,15 +37,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="AllergyIntolerance.encounter">
-      <path value="AllergyIntolerance.encounter"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
     <element id="AllergyIntolerance.onset[x]">
       <path value="AllergyIntolerance.onset[x]"/>
       <type>

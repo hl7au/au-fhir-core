@@ -78,15 +78,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="Condition.encounter">
-      <path value="Condition.encounter"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
     <element id="Condition.onset[x]">
       <path value="Condition.onset[x]"/>
       <type>
