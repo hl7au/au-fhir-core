@@ -1,5 +1,5 @@
 
-A resource may be conformant to multiple implementation guides. In addition to an AU Core profile, a FHIR resource may be conformant to profiles published project implementation guides, other national implementation guides, or international implementation guides.
+A resource may be conformant to multiple implementation guides. In addition to AU Core profiles, a FHIR resource may be conformant to profiles published in project implementation guides, other national implementation guides, or international implementation guides.
 
 The table below provides a high-level comparison, indicating if a resource conformant to a particular AU Core profile also satisfies (i.e. is conformant to) a profile from [International Patient Access](https://hl7.org/fhir/uv/ipa/STU1/), [International Patient Summary](https://hl7.org/fhir/uv/ips/STU1.1/), or [US Core](https://hl7.org/fhir/us/core/STU6.1/). See [Relationship to AUCDI and other IGs](https://build.fhir.org/ig/hl7au/au-fhir-core/branches/ft_blockvote-1/relationship.html#relationship-to-aucdi-and-other-igsl) for more information on the relationship of AU Core to these implementation guides.
 
