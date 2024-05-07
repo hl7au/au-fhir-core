@@ -56,14 +56,6 @@
       </constraint>
       <mustSupport value="true"/>
     </element>
-    <element id="Practitioner.telecom">
-      <path value="Practitioner.telecom"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Practitioner.address">
-      <path value="Practitioner.address"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Practitioner.qualification">
       <path value="Practitioner.qualification"/>
       <mustSupport value="true"/>

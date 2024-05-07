@@ -9,23 +9,5 @@
         <family value="Sutherland"/>
         <given value="Sallie"/>
         <prefix value="Dr."/>
-
     </name>
-    <telecom>
-        <system value="phone"/>
-        <value value="0491570158"/>
-        <use value="mobile"/>
-    </telecom>
-    <telecom>
-        <system value="email"/>
-        <value value="sallie.sutherland@murrabitph.example.com.au"/>
-        <use value="work"/>
-    </telecom>
-    <address>
-        <use value="work"/>
-        <line value="112 Law Ct"/>
-        <city value="Murrabit"/>
-        <state value="VIC"/>
-        <postalCode value="3579"/>
-    </address>
 </Practitioner>

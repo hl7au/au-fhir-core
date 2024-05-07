@@ -7,6 +7,9 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 
+- Removed Must Support from the following elements in AU Core Practitioner:
+  - Practitioner.address [FHIR-43860](https://jira.hl7.org/browse/FHIR-43860)
+  - Practitioner.telecom [FHIR-43860](https://jira.hl7.org/browse/FHIR-438608)
 - Removed Must Support from the following elements in AU Core Procedure:
   - Procedure.statusReason [FHIR-45013](https://jira.hl7.org/browse/FHIR-45013)
   - Procedure.category [FHIR-45014](https://jira.hl7.org/browse/FHIR-45014)

@@ -21,13 +21,4 @@
         <family value="Darleen"/>
         <given value="MACKAY"/>
     </name>
-    <telecom>
-        <system value="phone"/>
-        <value value="(08) 7010 8018"/>
-    </telecom>
-    <telecom>
-        <system value="email"/>
-        <value value="darleen.mackay@example.com.au"/>
-        <use value="work"/>
-    </telecom>
 </Practitioner>
