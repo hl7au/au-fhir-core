@@ -8,20 +8,20 @@
     <th>Requirements (when used alone or in combination)</th>
   </tr>
   <tr>
-        <td>address</td>
-        <td><b>SHALL</b></td>
-        <td><code>string</code></td>
-        <td></td>
-  </tr>
-  <tr>
         <td>identifier</td>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
         <td>The client <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The server <b>SHALL</b> support both. <br/><br/> The client <b>SHOULD</b> support search using HPI-O and ABN identifiers as defined in the profile. The server <b>SHOULD</b> support search using the using HPI-O and ABN identifiers as defined in the profile.</td>
   </tr>
   <tr>
+        <td>address</td>
+        <td><b>SHOULD</b></td>
+        <td><code>string</code></td>
+        <td></td>
+  </tr>
+  <tr>
         <td>name</td>
-        <td><b>SHALL</b></td>
+        <td><b>SHOULD</b></td>
         <td><code>string</code></td>
         <td></td>
   </tr>
@@ -38,16 +38,6 @@
 
 The following search parameters **SHALL** be supported:
 
-1. **SHALL** support searching for an organisation based on text address using the **[`address`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
-    
-    `GET [base]/Organization?address=[string]`
-
-    Example:
-    
-      1. GET [base]/Organization?address=QLD
-
-    *Implementation Notes:* Fetches a bundle of all Organization resources matching the address ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
-
 1. **SHALL** support searching an organisation by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
     
     `GET [base]/Organization?identifier={system|}[code]`
@@ -59,7 +49,22 @@ The following search parameters **SHALL** be supported:
 
     *Implementation Notes:* Fetches a bundle containing any Organization resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHALL** support searching for an organisation based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
+
+#### Optional Search Parameters:
+
+The following search parameters **SHOULD** be supported:
+
+1. **SHOULD** support searching for an organisation based on text address using the **[`address`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
+    
+    `GET [base]/Organization?address=[string]`
+
+    Example:
+    
+      1. GET [base]/Organization?address=QLD
+
+    *Implementation Notes:* Fetches a bundle of all Organization resources matching the address ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
+    
+1. **SHOULD** support searching for an organisation based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
     
     `GET [base]/Organization?name=[string]`
 
@@ -69,12 +74,7 @@ The following search parameters **SHALL** be supported:
       1. GET [base]/Organization?name=Hospital
 
     *Implementation Notes:* Fetches a bundle of all Organization resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
-
-
-#### Optional Search Parameters:
-
-The following search parameters **SHOULD** be supported:
-
+    
 1. **SHOULD** support fetching an Organization using the **[`_id`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
     - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
@@ -86,3 +86,4 @@ The following search parameters **SHOULD** be supported:
       1. GET [base]/Organization?_id=5678&amp;_revinclude=Provenance:target
 
     *Implementation Notes:* Fetches a single Organization ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+
