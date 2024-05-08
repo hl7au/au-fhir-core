@@ -15,10 +15,6 @@
     <element id="Encounter">
       <path value="Encounter"/>
     </element>
-    <element id="Encounter.identifier">
-      <path value="Encounter.identifier"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Encounter.status">
       <path value="Encounter.status"/>
       <mustSupport value="true"/>
