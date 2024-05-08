@@ -10,7 +10,7 @@ FHIR Servers that implement AU Core declare conformance to one of these tiers as
 
 Servers that implement _Profile Only Support_ to AU Core profiles declare conformance to each profile by hosting a [CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html) resource at [server-base-url]/metadata that is available to both authenticated and unauthenticated clients. The capability statement declares _Profile Only Support_ for a resource as either a base profile using [CapabilityStatement.rest.resource.profile](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.rest.resource.profile) or supported profile using [CapabilityStatement.rest.resource.supportedProfile](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.rest.resource.supportedProfile).
 
-Example: CapabilityStatement resource for a responder supporting the AU Core Patient profile as a system-wide profile that is applied across all instances of the Patient resource:
+Example: CapabilityStatement resource for a server supporting the AU Core Patient profile as a system-wide profile that is applied across all instances of the Patient resource:
 
     ```
     {
@@ -35,7 +35,7 @@ Example: CapabilityStatement resource for a responder supporting the AU Core Pat
     }
     ```
 
-Example: CapabilityStatement resource for a responder supporting the AU Core Waist Circumference profile as a profile for supported use cases provided by the responder:
+Example: CapabilityStatement resource for a server supporting the AU Core Waist Circumference profile as a profile for supported use cases provided by the server:
 
     ```
     {
@@ -63,7 +63,7 @@ Example: CapabilityStatement resource for a responder supporting the AU Core Wai
 
 #### Profile + Interaction Support
 
-Servers that implement _Profile + Interaction Support_ declares conformance by hosting a [CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html) at [server-base-url]/metadata, available to both authenticated and unauthenticated clients. The server's [CapabilityStatement instantiates](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.instantiates) element references the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html#resourcesSummary1), as shown in the following fragment:
+Servers that implement _Profile + Interaction Support_ declare conformance by hosting a [CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html) at [server-base-url]/metadata, available to both authenticated and unauthenticated clients. The server's [CapabilityStatement instantiates](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.instantiates) element references the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html#resourcesSummary1), as shown in the following fragment:
 
     ```
     {
