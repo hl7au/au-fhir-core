@@ -24,7 +24,7 @@ The following search parameter combinations **SHALL** be supported:
 
       1. GET [base]/AllergyIntolerance?_id=2425&_revinclude=Provenance:target
 
-    *Implementation Notes:* Fetches a bundle of a resource of a particular type (within the clients authorization scope) and any corresponding Provenance resources. ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of a resource of a particular type (within the requesters authorization scope) and any corresponding Provenance resources. ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 #### Optional Search Parameters
 
