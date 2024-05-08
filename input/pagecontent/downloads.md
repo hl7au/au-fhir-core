@@ -43,5 +43,5 @@ The following link to the ImplementationGuide resource defines the technical det
 
  The following [OpenAPI](https://www.openapis.org/) files are generated from the AU Core CapabilityStatements:
 
-- [AU Core Server](au-core-server.openapi.json)
-- [AU Core Client](au-core-client.openapi.json)
+- [AU Core Responder](au-core-responder.openapi.json)
+- [AU Core Requester](au-core-requester.openapi.json)
