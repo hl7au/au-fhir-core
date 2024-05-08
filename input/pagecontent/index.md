@@ -72,16 +72,16 @@ implementation. This implementation guide will be used as the basis for Australi
 
 ### AU Core Actors
 
-The following actors are part of the AU Core IG:
+The following actors are part of AU Core:
 
 **AU Core Requestor**
 
-An application that initiates a data access request to retrieve core ditial health and administrative information. The AU Core Requestor is the client in a client-server interaction. The terms "requester", "client", and "app" are used interchangeably throughout this guide and are not meant to limit this actor to patient or provider apps. 
+A system that creates and initiates a data access request to retrieve core digital health and administrative information. The AU Core Requestor is the client in a client-server interaction.  
 <br/><br/>
 
 **AU Core Responder**
 
-A system that responds to the data access request providing core ditial health and administrative information. The AU Core Responder is the server in a client-server interaction. The terms "server", "AU Core FHIR server", "FHIR server" and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. HIEs, care coordination platforms, population health systems, apps, etc., can use the same technology. 
+A system that responds to the data access request submitted by requesters, providing responses to requests for core digital health and administrative information. The AU Core Responder is the server in a client-server interaction.  
 <br/><br/>
 
 

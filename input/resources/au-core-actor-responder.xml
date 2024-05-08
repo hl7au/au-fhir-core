@@ -5,7 +5,7 @@
   <name value="AUCoreResponder"/> 
   <title value="AU Core Responder"/> 
   <status value="draft"/>
-  <description value="The AU Core Responder is responsible for providing responses to queries submitted by AU Core Requesters."/> 
+  <description value="The AU Core Responder is a system responsible for providing responses to queries submitted by AU Core Requesters."/> 
   <type value="system"/> 
   <documentation value="An AU Core Responder, also known as AU Core Server:&#xa;&#xa;
 - **SHALL** all *Must Support* elements if they know a value for the element&#xa;&#xa;

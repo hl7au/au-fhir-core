@@ -5,7 +5,7 @@
   <name value="AUCoreRequester"/> 
   <title value="AU Core Requester"/> 
   <status value="draft"/>
-  <description value="The AU Core Requester is responsible for creating and initiating the queries for information."/> 
+  <description value="The AU Core Requester is a system that responds to the data access request submitted by requesters, providing responses to requests for core digital health and administrative information."/> 
   <type value="system"/> 
   <documentation value="An AU Core Client, also known as AU Core Requester:&#xa;&#xa;
 - **SHALL** accept resources containing any valid value for *Must Support* elements without error&#xa;&#xa;
