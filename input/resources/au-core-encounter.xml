@@ -84,14 +84,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="Encounter.hospitalization">
-      <path value="Encounter.hospitalization"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.hospitalization.dischargeDisposition">
-      <path value="Encounter.hospitalization.dischargeDisposition"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Encounter.location">
       <path value="Encounter.location"/>
       <mustSupport value="true"/>
