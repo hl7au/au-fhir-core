@@ -42,7 +42,7 @@
                 <code value="Reference" />
                 <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
                 <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+                <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
                 <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
                 <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
@@ -55,7 +55,7 @@
                 <code value="Reference" />
                 <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
                 <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+                <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
                 <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
                 <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
