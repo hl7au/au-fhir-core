@@ -298,7 +298,7 @@ Example: Patient resource with interpreter required and language is known
 
 ### Read/Search Syntax
 
-Searching resources is defined by the [FHIR RESTful API](https://hl7.org/fhir/R4/http.html) and included here for informative purposes. The AU Core CapabilityStatements(capability-statements.html) document the server and client rules for the RESTful interactions described in this guide.
+Searching resources is defined by the [FHIR RESTful API](https://hl7.org/fhir/R4/http.html) and included here for informative purposes. The [AU Core CapabilityStatements](capability-statements.html) document the server and client rules for the RESTful interactions described in this guide.
 
 All the search interactions in this guide use the `GET` command with the following syntax:
 
@@ -324,9 +324,5 @@ In the simplest case, a search is executed by performing a GET operation in the 
 
 `GET [base]/[Resource-type]?name=value&...`
 
-For this RESTful search, the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource has the name "code" for searching on the LOINC code.  For more information, see the [FHIR RESTful Search API](https://hl7.org/fhir/R4/http.html#search).
-
-Note that when the patient is *implicit* in the context of some implementations (e.g., using SMART), the patient parameter can be omitted:
-
-`GET [base]/[Resource-type]{?other-parameters}`
+For this RESTful search, the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource has the name "code" for searching on the LOINC or SNOMED CT-AU code.  For more information, see the [FHIR RESTful Search API](https://hl7.org/fhir/R4/http.html#search).
 
