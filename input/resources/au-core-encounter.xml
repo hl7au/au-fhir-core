@@ -23,14 +23,6 @@
       <path value="Encounter.class"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Encounter.type">
-      <path value="Encounter.type"/>
-      <mustSupport value="true"/>
-      <binding>
-        <strength value="preferred"/>
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1"/>
-      </binding>
-    </element>
     <element id="Encounter.serviceType">
       <path value="Encounter.serviceType"/>
       <mustSupport value="true"/>
