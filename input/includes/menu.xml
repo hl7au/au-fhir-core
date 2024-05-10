@@ -35,6 +35,9 @@
       </li>
     </ul>
   </li>
+  <li>
+    <a href="security.html">Security and Privacy</a>
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
       <b class="caret"></b>

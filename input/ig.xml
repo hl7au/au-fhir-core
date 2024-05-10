@@ -773,6 +773,11 @@
 				<generation value="markdown"/>
 			</page>
 			<page>
+				<nameUrl value="security.html"/>
+				<title value="Security and Privacy"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
 				<nameUrl value="capability-statements.html"/>
 				<title value="Capability Statements"/>
 				<generation value="markdown"/>
