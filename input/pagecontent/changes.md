@@ -7,6 +7,7 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 
+- Added Security and Privacy page [FHIR-45067](https://jira.hl7.org/browse/FHIR-45067).
 - Removed Must Support from Location.description in AU Core Location [FHIR-45029](https://jira.hl7.org/browse/FHIR-45029).
 - Made the following changes to AU Core Medication:
   - removed Must Support from Medication.form [FHIR-45221](https://jira.hl7.org/browse/FHIR-45221)
