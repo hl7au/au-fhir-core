@@ -76,4 +76,3 @@ This change log documents the significant updates and resolutions implemented fr
 - Changed the following Organization search parameters:
   - address search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
   - name search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
-- Added FHIR RESTful interactions [FHIR-45084](https://jira.hl7.org/browse/FHIR-45084).
