@@ -64,10 +64,6 @@
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Organization.alias">
-      <path value="Organization.alias"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Organization.telecom">
       <path value="Organization.telecom"/>
       <mustSupport value="true"/>

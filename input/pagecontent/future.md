@@ -30,3 +30,9 @@ The approach to develop and mature AU Core is outlined below making reference to
   </div>
 *Figure 3: Maturing the AU Core baseline*
 <br/>
+
+### Future Candidate Requirements Under Consideration
+The following items are under consideration to add to AU Core.
+
+#### AU Core MedicationStatement 
+Development and testing of AU Core MedicationStatement profile to support AUCDI Medication Use Statement is planned for the AU Core R2 scope.

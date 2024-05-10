@@ -39,7 +39,6 @@ The list below shows the value sets bound to a supported element or element slic
 - [Healthcare Organisation Role Type](https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1)
 - [Indicator of Hypersensitivity or Intolerance to Substance](https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2)
 - [Medication Form](https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1)
-- [Medication Reason Taken](https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1)
 - [Metric Body Length Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-length-units-1)
 - [Metric Body Temperature Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-temperature-units-1)
 - [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1)
@@ -73,8 +72,6 @@ The list below shows the value sets bound to a supported element or element slic
 - [LocationStatus](https://hl7.org/fhir/R4/valueset-location-status.html)
 - [Medication request category codes](https://hl7.org/fhir/R4/valueset-medicationrequest-category.html)
 - [Medication request intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html)
-- [Medication status codes](https://hl7.org/fhir/R4/valueset-medication-statement-status.html)
-- [Medication usage category codes](https://hl7.org/fhir/R4/valueset-medication-statement-category.html)
 - [Medicationrequest status](https://hl7.org/fhir/R4/valueset-medicationrequest-status.html)
 - [NameUse](https://hl7.org/fhir/R4/valueset-name-use.html)
 - [Observation Category Codes](https://hl7.org/fhir/R4/valueset-observation-category.html)
@@ -127,8 +124,6 @@ The list below shows the code systems used in a value set that is bound to a sup
 - [LocationStatus](https://hl7.org/fhir/R4/codesystem-location-status.html)
 - [Medication request category codes](https://hl7.org/fhir/R4/codesystem-medicationrequest-category.html)
 - [Medication request intent](https://hl7.org/fhir/R4/codesystem-medicationrequest-intent.html)
-- [Medication status code](https://hl7.org/fhir/R4/codesystem-medication-statement-status.html)
-- [Medication usage category codes](https://hl7.org/fhir/R4/codesystem-medication-statement-category.html)
 - [Medicationrequest status](https://hl7.org/fhir/R4/codesystem-medicationrequest-status.html)
 - [NameUse](https://hl7.org/fhir/R4/codesystem-name-use.html)
 - [Observation Category Codes](https://hl7.org/fhir/R4/codesystem-observation-category.html)
@@ -137,8 +132,10 @@ The list below shows the code systems used in a value set that is bound to a sup
 - [providerRole](https://terminology.hl7.org/5.3.0/CodeSystem-v2-0443.html)
 - [Separation Mode](https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1)
 - [Tags for the Identification of Languages](https://terminology.hl7.org/CodeSystem-v3-ietf3066.html)
+- [Unified Code for Units of Measure (UCUM)](https://terminology.hl7.org/CodeSystem-v3-ucum.html) 
 - [v3 Code System ObservationInterpretation](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html)
 - [v3 Code System ParticipationType](https://hl7.org/fhir/R4/v3/ParticipationType/cs.html)
+
 
 
 ### Concept Maps

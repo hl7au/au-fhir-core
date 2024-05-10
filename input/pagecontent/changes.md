@@ -7,9 +7,72 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 
+- Removed Must Support from Location.description in AU Core Location [FHIR-45029](https://jira.hl7.org/browse/FHIR-45029).
+- Removed Must Support from Organization.alias in AU Core Organization [FHIR-44585](https://jira.hl7.org/browse/FHIR-44585).
+- Made the following changes to AU Core Patient:
+  - removed Must Support from Patient.extension:birthPlace [FHIR-45018](https://jira.hl7.org/browse/FHIR-45018)
+  - removed Must Support from Patient.extension:interpreterRequired [FHIR-45186](https://jira.hl7.org/browse/FHIR-45186)
+  - removed Must Support from Patient.birthDate.extension:birthTime [FHIR-45028](https://jira.hl7.org/browse/FHIR-45028)
+  - removed Must Support from Patient.birthDate.extension:accuracyIndicator [FHIR-45028](https://jira.hl7.org/browse/FHIR-45028)
+  - added Must Support on Patient.name.text [FHIR-44818](https://jira.hl7.org/browse/FHIR-44818)
+  - added Must Support on Patient.name.family [FHIR-44818](https://jira.hl7.org/browse/FHIR-44818)
+  - added Must Support on Patient.name.given [FHIR-44818](https://jira.hl7.org/browse/FHIR-44818)
+- Made the following changes to AU Core Practitioner:
+  - removed Must Support from Practitioner.communication [FHIR-44588](https://jira.hl7.org/browse/FHIR-44588)
+  - removed Must Support from Practitioner.qualification, Practitioner.qualification.identifier, Practitioner.qualification.code, Practitioner.qualification.period, Practitioner.qualification.issuer: [FHIR-45118](https://jira.hl7.org/browse/FHIR-45118), [FHIR-44587](https://jira.hl7.org/browse/FHIR-44587)
+  - removed Must Support from Practitioner.address [FHIR-43860](https://jira.hl7.org/browse/FHIR-43860)
+  - removed Must Support from Practitioner.telecom [FHIR-43860](https://jira.hl7.org/browse/FHIR-438608)
+  - added Must Support on Practitioner.name.family [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
+  - added Must Support on Practitioner.name.given [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
+  - replaced constraint _au-core-prac-01: At least text or family name shall be present_ with making Practitioner.name.family mandatory (1..1) [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
+- Removed Must Support from PractitionerRole.location in AU Core PractitionerRole [FHIR-43841](https://jira.hl7.org/browse/FHIR-43841).
 - Removed Must Support from the following elements in AU Core Procedure:
   - Procedure.statusReason [FHIR-45013](https://jira.hl7.org/browse/FHIR-45013)
   - Procedure.category [FHIR-45014](https://jira.hl7.org/browse/FHIR-45014)
-  - Procedure.recorder [FHIR-45015](https://jira.hl7.org/browse/FHIR-45015)
-  - Procedure.asserter [FHIR-45016](https://jira.hl7.org/browse/FHIR-45016)
+  - Procedure.recorder [FHIR-45015](https://jira.hl7.org/browse/FHIR-45015), [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082)
+  - Procedure.asserter [FHIR-45016](https://jira.hl7.org/browse/FHIR-45016), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - Procedure.bodySite and added profile-specific implementation guidance on including body site information [FHIR-45017](https://jira.hl7.org/browse/FHIR-45017).
+- Removed AU Core MedicationStatement and added to Future of AU Core that AU Core MedicationStatement is planned for AU Core R2 [FHIR-45052](https://jira.hl7.org/browse/FHIR-45052).
+- Updated mapping of AUCDI Procedure Completed Event to be represented by Procedure only [au-fhir-core #147](https://github.com/hl7au/au-fhir-core/issues/147).
+- Updated mapping of AUCDI Medication Use Statement to be represented by MedicationStatement only [au-fhir-core #145](https://github.com/hl7au/au-fhir-core/issues/145).
+- Removed Must Support from the following elements in AU Core Condition:
+  - Condition.asserter [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45127](https://jira.hl7.org/browse/FHIR-45127), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
+  - Condition.recorder [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082)
+  - Condition.encounter [FHIR-45189](https://jira.hl7.org/browse/FHIR-45189)
+- Removed Must Support from the following elements in AU Core AllergyIntolerance:
+  - AllergyIntolerance.asserter [FHIR-44699](https://jira.hl7.org/browse/FHIR-44699), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
+  - AllergyIntolerance.recorder [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082), [FHIR-45066](https://jira.hl7.org/browse/FHIR-45066)
+  - AllergyIntolerance.encounter [FHIR-45123](https://jira.hl7.org/browse/FHIR-45123)
+- Removed Must Support from the following elements in AU Core Smoking Status: 
+  - Observation.encounter [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222)
+  - Observation.performer [FHIR-45223](https://jira.hl7.org/browse/FHIR-45223)
+- Removed Must Support from the following elements in AU Core Immunization:
+  - Immunization.encounter [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
+  - Immunization.performer [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
+  - Immunization.performer.function [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
+  - Immunization.performer.actor [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
+- Removed Must Support from the following elements in AU Core Blood Pressure: 
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
+- Removed Must Support from the following elements in AU Core Body Height:
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
+- Removed Must Support from the following elements in AU Core Body Temperature: 
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786) 
+- Removed Must Support from the following elements in AU Core Body Weight: 
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786) 
+- Removed Must Support from the following elements in AU Core Heart Rate: 
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786) 
+- Removed Must Support from the following elements in AU Core Respiration Rate: 
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
+- Removed Must Support from the following elements in AU Core Waist Circumference: 
+  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)  
+- Corrected the search parameter for gender identity to be `gender-identity` not `patient-gender-identity` [FHIR-45057](https://jira.hl7.org/browse/FHIR-45057).
+- Changed the following Organization search parameters:
+  - address search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
+  - name search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)

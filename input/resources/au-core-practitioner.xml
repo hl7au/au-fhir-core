@@ -41,51 +41,15 @@
     <element id="Practitioner.name">
       <path value="Practitioner.name"/>
       <min value="1"/>
-      <condition value="au-core-prac-01"/>
-      <constraint>
-        <key value="au-core-prac-01"/>
-        <severity value="error"/>
-        <human
-          value="At least text or family name shall be present"/>
-        <expression
-          value="text.exists() or family.exists()"/>
-        <xpath value="exists(f:text) or exists(f:family)"/>
-        <source
-          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"
-        />
-      </constraint>
       <mustSupport value="true"/>
     </element>
-    <element id="Practitioner.telecom">
-      <path value="Practitioner.telecom"/>
+    <element id="Practitioner.name.family">
+      <path value="Practitioner.name.family"/>
+      <min value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Practitioner.address">
-      <path value="Practitioner.address"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Practitioner.qualification">
-      <path value="Practitioner.qualification"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Practitioner.qualification.identifier">
-      <path value="Practitioner.qualification.identifier"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Practitioner.qualification.code">
-      <path value="Practitioner.qualification.code"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Practitioner.qualification.period">
-      <path value="Practitioner.qualification.period"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Practitioner.qualification.issuer">
-      <path value="Practitioner.qualification.issuer"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Practitioner.communication">
-      <path value="Practitioner.communication"/>
+    <element id="Practitioner.name.given">
+      <path value="Practitioner.name.given"/>
       <mustSupport value="true"/>
     </element>
   </differential>

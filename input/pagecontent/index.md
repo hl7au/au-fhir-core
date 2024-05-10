@@ -3,7 +3,7 @@ AU Core is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&cop
 
 AU Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. 
 
-AU Core uses AU Base representations as the basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each resource type to access data. AU Core promotes interoperability and adoption through common implementation and SHOULD be built on top of for standards development for specific use cases. 
+AU Core uses AU Base representations, where available, as the basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each resource type to access data. AU Core promotes interoperability and adoption through common implementation and SHOULD be the basis of further implementation guide development for specific use cases. 
 
 There are two different ways to implement AU Core:
 1. Profile Only Support: systems support only the resources as profiled by AU Core to represent digital health information.
@@ -63,7 +63,7 @@ AU Core is particularly useful in defining:
 - Assumed support by client applications
 - As the basis of downstream implementation guides
 
-Assuming capabilities defined in AU Core are implemented allow specifications, applications and business logic to be developed generally with confidence that systems can readily supply this capability.
+Implementation of capabilities defined in AU Core enables specifications, applications and business logic to be developed with confidence.
 
 This document is a working specification that may be directly implemented by FHIR<sup>&reg;&copy;</sup> system producers.
 
@@ -76,12 +76,12 @@ The following actors are part of the AU Core IG:
 
 **AU Core Requestor**
 
-An application that initiates a data access request to retrieve patient data. The AU Core Requestor is the client in a client-server interaction. The terms "requester", "client", and "app" are used interchangeably throughout this guide and are not meant to limit this actor to patient and provider apps. Payers and other users can use the same technology. Consider these terms a short-hand notation for a "user application".
+An application that initiates a data access request to retrieve core digital health and administrative information. The AU Core Requestor is the client in a client-server interaction. The terms "requester", "client", and "app" are used interchangeably throughout this guide and are not meant to limit this actor to patient and provider apps. Payers and other users can use the same technology. Consider these terms a short-hand notation for a "user application".
 <br/><br/>
 
 **AU Core Responder**
 
-A system that responds to the data access request providing patient data. The AU Core Responder is the server in a client-server interaction. The terms "server", "AU Core FHIR server", "FHIR server" and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. HIEs, care coordination platforms, population health systems, etc., can use the same technology. Consider these terms a short-hand notation for an "interoperable healthcare platform".
+A system that responds to the data access request providing core digital health and administrative information. The AU Core Responder is the server in a client-server interaction. The terms "server", "AU Core FHIR server", "FHIR server" and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. HIEs, care coordination platforms, population health systems, etc., can use the same technology. Consider these terms a short-hand notation for an "interoperable healthcare platform".
 <br/><br/>
 
 ### AU Core FHIR RESTful interactions
@@ -120,7 +120,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide.
   - [AUCDI](aucdi.html): This page maps the AU Core resources and elements to AUCDI data classes and data elements.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Core and other implementation guides.
-  - [Comparison with other national and international specifications](comparison.html): This page provides comparison between AU Core profiles and other national, or international implementation guides.
+  - [Comparison with other national and international IGs](comparison.html): This page provides comparison between AU Core profiles and other national, or international implementation guides.
   - [Future of AU Core](future.html): This page outlines the approach to developing AU Core and yearly update cycle.
 - [FHIR Artefacts](artifacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This set of pages describes the profiles and extensions that are defined in this guide to exchange quality data. Each profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.

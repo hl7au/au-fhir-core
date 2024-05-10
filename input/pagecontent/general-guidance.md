@@ -4,12 +4,12 @@ In some circumstances, the content referred to in the resource reference does no
 In AU Core profiles:
 - Systems constructing a resource that represent medication information are encouraged to make use of contained resources within the context of a FHIR transaction. Operations on Medication resources are expected to be within the context of a referencing resource query such as an MedicationAdministration, MedicationDispense, MedicationRequest or MedicationStatement.
 - If referencing a contained resource, both the contained resource and the referencing resource **SHALL** conform to the applicable AU Core profile.
-- Otherwise, when responding to a query, servers should not use inline contained resources to represent the returned data.
+- Otherwise, when responding to a query, it is recommended that servers avoid using inline contained resources to represent the returned data.
 
- Further guidance about the general use case for [contained resources](http://hl7.org/fhir/R4/references.html#contained) can be found in the base FHIR specification.
+Further guidance about the general use case for [contained resources](http://hl7.org/fhir/R4/references.html#contained) can be found in the base FHIR specification.
 
 ### Extensibility – “additional” elements
-A server may send "additional" elements beyond those flagged with Must Support in an AU Core profile. Additional elements allow local requirements to be reflected including technical and workflow context for the resource, and extending the health information supported in exchanges. For this reason extensibility is generally allowed in AU Core profiles, only in some use case profiles are the rules tightened to limit the nature of additional information that can be sent.
+A server may send "additional" elements beyond those flagged with Must Support in an AU Core profile. Additional elements are often required by other profiles the system may conform to, allowing local requirements, including technical and workflow context for the resource, to be reflected and extending the health information supported in exchanges. For this reason, extensibility is generally encouraged and expected in AU Core profiles. Only in some exceptionally rare use case profiles are rules tightened to limit the nature of additional information that can be sent. Specification authors should strive to enable greater interoperability and software re-use by not reducing an element's cardinality.
 
 Depending on local requirements, a client application may ignore these "additional" elements, may treat the data as for rendering only, or be capable of recognising and using the element. 
 
@@ -25,16 +25,16 @@ The FHIR standard defines the following resources for exchanging medicine inform
 
 AU Core defines the profiles:
 - [AU Core Medication](StructureDefinition-au-core-medication.html) is profiled to support medicinal product identification in an Australian healthcare context.
-- [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html) (with AU Core Medication) to support summary statements of medicine use. 
 - [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html) (with AU Core Medication) to support prescription, ordering, and ePrescribing use cases.
 
 It is anticipated that future releases of AU Core will define AU Core profiles of:
 - MedicationAdministration (with AU Core Medication) are used to support medication chart and other administration use cases.
 - MedicationDispense (with AU Core Medication) are used to support dispense records and medication management use cases.
+- MedicationStatement (with AU Core Medication) are used to support summary statements of medicine use.
 
 **Medicinal Product Identification**
 
-For extemporaneous medications, the medication code is the mandatory primary mechanism to identify a medicine but contain only a text list of ingredients or it may be a code from a medicines terminology.
+For extemporaneous medications, it is expected the medication code is the primary mechanism to identify a medicine. In this case, a text only list of ingredients may be supplied or may be coded using a medicines terminology.
 
 For non-extemporaneous medications, the medication code (or set of codes) is the mandatory primary mechanism to identify a medicine and its defining attributes (by terminology lookup) including form and strength. 
 

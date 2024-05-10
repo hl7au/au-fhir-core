@@ -36,9 +36,6 @@
         </coding>
         <text value="General Practitioner"/>
     </code>
-    <location>
-        <reference value="Location/bobrester-medical-center"/>
-    </location>
     <telecom>
         <system value="phone"/>
         <value value="0491579760"/>

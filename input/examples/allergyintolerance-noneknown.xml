@@ -28,13 +28,4 @@
     <patient>
         <reference value="Patient/wang-li"/>
     </patient>
-    <encounter>
-        <display value="GP Visit"/>
-    </encounter>
-    <recorder>
-        <reference value="PractitionerRole/bobrester-bob-gp"/>
-    </recorder>
-    <asserter>
-        <reference value="Patient/wang-li"/>
-    </asserter>
 </AllergyIntolerance>
