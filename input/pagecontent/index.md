@@ -84,6 +84,30 @@ An application that initiates a data access request to retrieve patient data. Th
 A system that responds to the data access request providing patient data. The AU Core Responder is the server in a client-server interaction. The terms "server", "AU Core FHIR server", "FHIR server" and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. HIEs, care coordination platforms, population health systems, etc., can use the same technology. Consider these terms a short-hand notation for an "interoperable healthcare platform".
 <br/><br/>
 
+### AU Core FHIR RESTful interactions
+
+For systems that support AU Core FHIR RESTful interactions ([Profile + Interaction Support](general-requirements.html#profile--interaction-support)), the interaction requirements, such as read and search operations, are detailed in the AU Core Requester and AU Core Responder [CapabilityStatements](capability-statements.html).
+
+The following are simple examples of AU Core FHIR RESTful interactions between AU Core Requester and AU Core Responder actors:
+
+**Example of a FHIR RESTful read interaction**
+
+<div> 
+  <img src="au-core-read-interaction-example.svg" alt="FHIR RESTful read interaction example" style="width:60%"/>
+</div>
+<br/>
+*Figure 1: Read a Patient using the logical id*
+<br/>
+<br/>
+
+**Example of a FHIR RESTful search interaction**
+
+<div> 
+  <img src="au-core-search-interaction-example.svg" alt="FHIR RESTful search interaction example" style="width:60%"/>
+</div>
+<br/>
+*Figure 2: Search for patients that match a family name*
+<br/>
 
 ### How to read this guide
 

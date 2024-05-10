@@ -1,0 +1,38 @@
+<mxfile host="app.diagrams.net" modified="2024-05-10T01:01:24.575Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="6IUm5KismHN4dmCF5lOH" version="24.3.1" type="device">
+  <diagram name="Page-1" id="grIwWKawbb6MMWu9V0uH">
+    <mxGraphModel dx="1434" dy="1949" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="z0QF0X5Cw4nb4B-8aS_0-1" value="&lt;div&gt;AU Core Requester&amp;nbsp;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="20" y="-1140" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z0QF0X5Cw4nb4B-8aS_0-2" value="&lt;div&gt;&lt;font color=&quot;#ffffff&quot;&gt;AU Core Responder&amp;nbsp;&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="360" y="-1140" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z0QF0X5Cw4nb4B-8aS_0-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="z0QF0X5Cw4nb4B-8aS_0-1" target="z0QF0X5Cw4nb4B-8aS_0-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="-1010" as="sourcePoint" />
+            <mxPoint x="390" y="-1060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z0QF0X5Cw4nb4B-8aS_0-4" value="&lt;div&gt;GET Patient/5678&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fillOpacity=100;labelBackgroundColor=none;" parent="z0QF0X5Cw4nb4B-8aS_0-3" vertex="1" connectable="0">
+          <mxGeometry x="-0.0667" relative="1" as="geometry">
+            <mxPoint x="-8" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z0QF0X5Cw4nb4B-8aS_0-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="z0QF0X5Cw4nb4B-8aS_0-2" target="z0QF0X5Cw4nb4B-8aS_0-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="-1000" as="sourcePoint" />
+            <mxPoint x="250" y="-1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z0QF0X5Cw4nb4B-8aS_0-8" value="&lt;div&gt;Returns a single Patient resource&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fillOpacity=100;labelBackgroundColor=none;" parent="z0QF0X5Cw4nb4B-8aS_0-7" vertex="1" connectable="0">
+          <mxGeometry x="0.1111" y="-1" relative="1" as="geometry">
+            <mxPoint x="17" y="16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
