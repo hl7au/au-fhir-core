@@ -75,14 +75,12 @@ The following search parameters **SHOULD** be supported:
     *Implementation Notes:* Fetches a bundle of all Organization resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
     
 1. **SHOULD** support fetching an Organization using the **[`_id`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Organization/[id]` or `GET [base]/Organization?_id=[id]`
 
     Example:
     
-      1. GET [base]/Organization/5678
-      1. GET [base]/Organization?_id=5678&amp;_revinclude=Provenance:target
+      1. GET [base]/Organization?_id=5678
 
     *Implementation Notes:* Fetches a single Organization ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
