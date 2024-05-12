@@ -64,7 +64,6 @@
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/procedure.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
     `GET [base]/Procedure?patient={Type/}[id]` or optionally`GET [base]/Procedure?patient.identifier=[system|][code]`
@@ -119,7 +118,6 @@ The following search parameters and search parameter combinations **SHOULD** be 
     Example:
     
       1. GET [base]/Procedure?patient=5678&amp;status=completed
-      1. GET [base]/Procedure?patient=5678&amp;status=completed&amp;_revinclude=Provenance:target
 
     *Implementation Notes:* Fetches a bundle of all Procedure resources for the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
