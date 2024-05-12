@@ -83,7 +83,6 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameter:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
  
@@ -92,7 +91,6 @@ The following search parameters and search parameter combinations **SHALL** be s
     Example:
     
       1. GET [base]/MedicationRequest?patient=5678
-      1. GET [base]/MedicationRequest?patient=5678&amp;_revinclude=Provenance:target
       1. GET [base]/MedicationRequest?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952
       1. GET [base]/MedicationRequest?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952&amp;_include=MedicationRequest:medication
       1. GET [base]/MedicationRequest?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361 
