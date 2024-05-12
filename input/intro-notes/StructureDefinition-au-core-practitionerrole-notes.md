@@ -82,15 +82,13 @@ The following search parameters **SHALL** be supported:
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support fetching a PractitionerRole using the **[`_id`](https://hl7.org/fhir/R4/practitionerrole.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `PractitionerRole:practitioner`
 
     `GET [base]/PractitionerRole/[id]` or `GET [base]/PractitionerRole?_id=[id]`
 
     Example:
     
-      1. GET [base]/PractitionerRole/5678_revinclude=Provenance:target
-      1. GET [base]/PractitionerRole?_id=5678
+      1. GET [base]/PractitionerRole/5678
       1. GET [base]/PractitionerRole?_id=5678&amp;_include=PractitionerRole:practitioner
 
     *Implementation Notes:* Returns a single PractitionerRole resource. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)

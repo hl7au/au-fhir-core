@@ -86,14 +86,13 @@
 #### Mandatory Search Parameters
 
 1. **SHALL** support fetching a Patient using the **[`_id`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Patient/[id]` or `GET [base]/Patient?_id=[id]`
 
     Example:
     
       1. GET [base]/Patient/5678
-      1. GET [base]/Patient?_id=5678&amp;_revinclude=Provenance:target
+      1. GET [base]/Patient?_id=5678
 
     *Implementation Notes:* Returns a single Patient resource ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 

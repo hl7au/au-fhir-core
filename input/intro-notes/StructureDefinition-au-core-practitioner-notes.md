@@ -47,14 +47,13 @@ The following search parameters **SHALL** be supported:
 The following search parameters **SHOULD** be supported:
 
 1. **SHOULD** support fetching a Practitioner using the **[`_id`](https://hl7.org/fhir/R4/practitioner.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
 
     `GET [base]/Practitioner/[id]` or `GET [base]/Practitioner?_id=[id]`
 
     Example:
     
       1. GET [base]/Practitioner/5678
-      1. GET [base]/Practitioner?_id=5678_revinclude=Provenance:target
+      1. GET [base]/Practitioner?_id=5678
 
     *Implementation Notes:* Returns a single Practitioner resource ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 

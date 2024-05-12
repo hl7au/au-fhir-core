@@ -184,8 +184,6 @@ AU Core Diagnostic Result Observation|Observation.performer|AU Core Practitioner
 AU Core Diagnostic Result Observation|Observation.hasMember|AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
 AU Core Pathology Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, RelatedPerson
 AU Core Procedure|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
-AU Core Provenance|Procedure.agent.who|AU Core Practitioner, AU Core PractitionerRole, RelatedPerson, AU Core Patient, Device, AU Core Organization
-AU Core Provenance|Procedure.agent.onBehalfOf|AU Core Practitioner, AU Core PractitionerRole, RelatedPerson, AU Core Patient, Device, AU Core Organization
 {:.grid}
 
 
@@ -209,7 +207,6 @@ AU Core Medication|Medication.ingredient.item[x]|CodeableConcept, Reference
 AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
 AU Core MedicationRequest|MedicationRequest.substitution.allowed[x]|boolean, CodeableConcept
 AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
-AU Core Provenance|Provenance.occurred[x]|Period, dateTime
 {:.grid}
 
 ##### Must Support - Choice of Identifiers
