@@ -315,10 +315,10 @@ All the search interactions in this guide use the `GET` command with the followi
        - When searching using the `token` type SearchParameter [(how to search by token)](https://hl7.org/fhir/R4/search.html#token), the syntax `{system|}[code]` means that the system value is optional *for the client* to supply.:
        - When searching using the `reference` type SearchParameter [(how to search by reference)](https://hl7.org/fhir/R4/search.html#reference), the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply:
        - When searching using the `date` type SearchParameter [(how to search by date)](https://hl7.org/fhir/R4/search.html#date), the syntax `{gt|lt|ge|le}[date]` means the date comparators "gt", "lt", "ge", and "le" are optional.   Date type searches without a comparator prefix are equivalent to searches with the "eq" comparator *even if* a server does not support the comparator.
-    - \{:m1ampersand#124;m2ampersand#124;...}: The list of supported search parameter modifiers
-    - {c1ampersand#124;c2ampersand#124;...}: The list of supported search parameter comparators
+    - \{:m1&#124;m2&#124;...}: The list of supported search parameter modifiers
+    - {c1&#124;c2&#124;...}: The list of supported search parameter comparators
     - {,value2,...}: Optional multiple 'OR' Values
-    - {&parameter2={:m1ampersand#124;m2ampersand#124;...}={c1|c2ampersand#124;...}[value1{,value2,...}&...}: Optional multiple 'AND' search parameters
+    - {&parameter2={:m1&#124;m2&#124;...}={c1|c2&#124;...}[value1{,value2,...}&...}: Optional multiple 'AND' search parameters
 
 
 In the simplest case, a search is executed by performing a GET operation in the RESTful framework:
