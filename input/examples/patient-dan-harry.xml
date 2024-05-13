@@ -28,16 +28,20 @@
     <text value="Mr. Harry Dan"/>
   </name>
   <name>
-        <use value="old"/>
-        <family value="Danielo"/>
-    </name>
+    <use value="old"/>
+    <family value="Danielo"/>
+  </name>
   <telecom>
     <system value="email"/>
     <value value="hdan@amail.example.com"/>
     <use value="home"/>
   </telecom>
   <gender value="male"/>
-  <birthDate value="1939-08-25"/>
+  <birthDate>
+  <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+      <valueCode value="unknown"/>
+    </extension>
+   </birthDate>
   <address>
     <use value="home"/>
     <line value="29 Gadsby Street"/>

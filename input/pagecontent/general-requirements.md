@@ -144,7 +144,11 @@ Servers that implement Profile + Interaction Support declare conformance to the 
 
 There are situations when information for a particular data element is missing and the source system does not know reason for the absence of data. 
 
+#### Missing Must Support and Optional Data
+
 If the source system does not have data for an element with a minimum cardinality = 0 (including elements labelled *Must Support*), the data element **SHALL** be omitted from the resource.  
+
+#### Missing Must Support and Mandatory Data
 
 If the data element is a *Mandatory* element (in other words, where the minimum cardinality is > 0), the element **SHALL** be present *even if* the source system does not have data or know the reason for the absence of data. The core specification provides guidance for what to do in this situation, which is summarised below.
 
@@ -156,23 +160,19 @@ If the data element is a *Mandatory* element (in other words, where the minimum 
     Example: ExplanationOfBenefit resource where the patient's insurance coverage is not available.
     ~~~
     {
-      "resourceType" : "ExplanationOfBenefit",
+      "resourceType" : "Patient",
            ...
-           "outcome" : "complete",
-             "insurance" : [
+           "_birthDate" : [
                {
-                 "focal" : true,
-                 "coverage" : {
-                   "extension" : [
-                     {
-                       "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                       "valueCode" : "unknown"
-                     }
-                   ]
-                 }
-               }
-             ],
-             ...
+                "extension" : [
+                  {
+                    "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "valueCode" : "unknown"
+                  }
+                ]
+              }
+           ],
+          ...
          }
     ~~~
 
@@ -228,7 +228,7 @@ For mandatory elements (minimum cardinality is > 0), the element **SHALL** be po
 - where a requester may know that the data is suppressed use the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
 
 ### Mandatory Elements
-Mandatory elements are elements with a minimum cardinality of 1 (min=1). When an element is Mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements in [Missing Data](#missing-data) **SHALL** be applied.
+Mandatory elements are elements with a minimum cardinality of 1 (min=1). When an element is Mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements in [Missing Data](#missing-data) **SHALL** be applied. An element can be both _Must Support_ and mandatory, in which case the requirements for mandatory's Missing data requirements apply as described in [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data).
 
 ### Must Support
 Labelling an element *[Must Support](https://www.hl7.org/fhir/conformance-rules.html#mustSupport)* means that systems that request, or respond to requests, for data **SHALL** provide support for the element in some meaningful way. 

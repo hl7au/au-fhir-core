@@ -17,11 +17,11 @@ For a detailed description of the different ways to implement AU Core see the [C
 
 This implementation guide is under development through the AU Core project as part of the [Sparked AU FHIR Accelerator](https://confluence.hl7.org/display/HA/Sparked+FHIR+Accelerator). The Sparked AU FHIR Accelerator is a community comprising government, technology vendors, provider organisations, peak bodies, practitioners, and domain experts, to accelerate the creation and use of national FHIR standards in health care information exchange.
 
-The AU Core project includes:
-- Australian Core Data for Interoperability
-- AU Core FHIR Implementation Guide
+The AU Core Sparked project includes:
+- Australian Core Data for Interoperability - clinician focussed data requirements project.
+- AU Core FHIR Implementation Guide - HL7 Australia technical data access and exchange specification.
 
-The [Australian Core Data for Interoperability (AUCDI)](https://confluence.csiro.au/display/FHIR/AUCDI+Release+1) aims to standardise the capture, structure, usage, and exchange of health data to counteract the current fragmentation of Australia’s health data systems. The AUCDI forms a basis for clinical data requirements for AU Core.
+The [Australian Core Data for Interoperability (AUCDI)](https://confluence.csiro.au/display/FHIR/AUCDI+Release+1)  aims to define requirements underlying the standardisation of the capture, structure, usage, and exchange of health data to counteract the current fragmentation of Australia’s health data systems. The AUCDI forms a basis for clinical data requirements for AU Core.
 
 #### Contributing to AU Core Development
 AU Core R1 is in currently in development. Ballot for Comment is scheduled for March 2024.
