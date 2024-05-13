@@ -318,7 +318,7 @@ All the search interactions in this guide use the `GET` command with the followi
     - \{:m1&#124;m2&#124;...}: The list of supported search parameter modifiers
     - {c1&#124;c2&#124;...}: The list of supported search parameter comparators
     - {,value2,...}: Optional multiple 'OR' Values
-    - {&parameter2={:m1&#124;m2&#124;...}={c1|c2&#124;...}[value1{,value2,...}&...}: Optional multiple 'AND' search parameters
+    - {&parameter2={:m1&#124;m2&#124;...}={c1&#124;c2&#124;...}[value1{,value2,...}&...}: Optional multiple 'AND' search parameters
 
 
 In the simplest case, a search is executed by performing a GET operation in the RESTful framework:
