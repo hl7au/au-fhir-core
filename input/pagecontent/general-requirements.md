@@ -359,7 +359,6 @@ AU Core Diagnostic Result Observation|Observation.value[x]|Quantity, CodeableCon
 AU Core Diagnostic Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
 AU Core Immunization|Immunization.occurrence[x]|dateTime, string
 AU Core Immunization|Immunization.doseNumber[x]|positiveInt, string
-AU Core Medication|Medication.ingredient.item[x]|CodeableConcept, Reference
 AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
 AU Core MedicationRequest|MedicationRequest.substitution.allowed[x]|boolean, CodeableConcept
 AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range

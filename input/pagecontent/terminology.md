@@ -14,7 +14,6 @@ The list below shows the value sets bound to a supported element or element slic
 
 **Value sets published in AU Base**
 - [ActEncounterCode - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ActEncounterCode-extended.html)
-- [AMT Medicinal Product and Substances](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-amt-mp-codes.html)
 - [DVA Entitlement](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-dva-entitlement.html)
 - [hl7VS-degreeLicenseCertificate - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0360-extended.html)
 - [hl7VS-identifierType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v2-0203-extended.html)
@@ -37,7 +36,6 @@ The list below shows the value sets bound to a supported element or element slic
 - [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1)
 - [Healthcare Organisation Role Type](https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1)
 - [Indicator of Hypersensitivity or Intolerance to Substance](https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2)
-- [Medication Form](https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1)
 - [Metric Body Length Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-length-units-1)
 - [Metric Body Temperature Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-temperature-units-1)
 - [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1)
