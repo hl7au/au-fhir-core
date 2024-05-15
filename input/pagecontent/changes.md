@@ -8,7 +8,14 @@ This change log documents the significant updates and resolutions implemented fr
 #### Changes in this version
 
 - Added Security and Privacy page [FHIR-45067](https://jira.hl7.org/browse/FHIR-45067).
+- Made the following changes to AU Core Encounter:
+  - removed Must Support from Encounter.identifier [FHIR-45212](https://jira.hl7.org/browse/FHIR-45212)
+  - removed Must Support from Encounter.type [FHIR-44580](https://jira.hl7.org/browse/FHIR-44580)
+  - removed Must Support from Encounter.hospitalization, Encounter.hospitalization.dischargeDisposition [FHIR-45210](https://jira.hl7.org/browse/FHIR-45210)
+  - in Encounter.participant.individual replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
 - Removed Must Support from Location.description in AU Core Location [FHIR-45029](https://jira.hl7.org/browse/FHIR-45029).
+- Made the following changes to AU Core MedicationRequest:
+  - in MedicationRequest.requester replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
 - Made the following changes to AU Core Medication:
   - removal of Must Support from Medication.manufacturer [FHIR-45130](https://jira.hl7.org/browse/FHIR-45130)
   - removed Must Support from Medication.form [FHIR-45221](https://jira.hl7.org/browse/FHIR-45221)
@@ -86,3 +93,7 @@ This change log documents the significant updates and resolutions implemented fr
 - Changed the following Organization search parameters:
   - address search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
   - name search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
+- Made the following changes to AU Core Diagnostic Result Observation:
+  - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
+- Made the following changes to AU Core Pathology Result Observation:
+  - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
