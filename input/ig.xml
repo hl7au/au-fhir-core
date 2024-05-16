@@ -138,12 +138,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="StructureDefinition/au-core-provenance"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="StructureDefinition/au-core-rsg-sexassignedab"/>
 			</reference>
 			<exampleBoolean value="false"/>
@@ -660,15 +654,6 @@
 			<description value="Placement of stent in coronary artery&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
 		</resource>
-		<!--PROVENANCE EXAMPLES-->
-		<resource>
-			<reference>
-				<reference value="Provenance/signature"/>
-			</reference>
-			<name value="Provenance - Signature for advance care plan"/>
-			<description value="Provenance of verification with signature for advance care plan"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-provenance"/>
-		</resource>
 		<!--SPECIMEN EXAMPLES-->
 		<resource>
 			<reference>
@@ -677,14 +662,6 @@
 			<name value="Specimen - Naso swab (COVID test)"/>
 			<description value="Naso swab specimen for COVID test&#xa;&#xa;Patient: Mr Li Wang"/>
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="DocumentReference/acp"/>
-			</reference>
-			<name value="DocumentReference - Advance Care Plan, referenced by Provenance/signature example"/>
-			<description value="Mr. Li Wang's Advance Care Plan&#xa;&#xa;Patient: Mr. Li Wang"/>
-			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
 		</resource>
 		<!--PAGES-->
 		<page>
@@ -703,11 +680,6 @@
 				<page>
 					<nameUrl value="general-requirements.html"/>
 					<title value="General Requirements"/>
-					<generation value="markdown"/>
-				</page>
-				<page>
-					<nameUrl value="must-support.html"/>
-					<title value="Must Support"/>
 					<generation value="markdown"/>
 				</page>
 			</page>
@@ -732,7 +704,7 @@
 				</page>
 				<page>
 					<nameUrl value="comparison.html"/>
-					<title value="Comparison with other national and international specifications"/>
+					<title value="Comparison with other national and international IGs"/>
 					<generation value="markdown"/>
 				</page>
 				<page>
@@ -754,6 +726,11 @@
 			<page>
 				<nameUrl value="terminology.html"/>
 				<title value="Terminology"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="security.html"/>
+				<title value="Security and Privacy"/>
 				<generation value="markdown"/>
 			</page>
 			<page>

@@ -210,7 +210,6 @@
 <td>clinical-status, patient, patient.identifier, patient+clinical-status</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -228,7 +227,6 @@
 <td>category, clinical-status, code, onset-date, patient, patient.identifier, patient+category, patient+category+clinical-status, patient+clinical-status, patient+code, patient+onset-date</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -246,7 +244,6 @@
 <td>class, date, discharge-disposition, identifier, location, patient, patient.identifier, patient+class, patient+date, patient+discharge-disposition, patient+location, patient+status, patient+type, status, type</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td></td>
 </tr>
@@ -264,7 +261,6 @@
 <td>date, patient, patient.identifier, patient+date, patient+status, patient+vaccine-code, status, vaccine-code</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -316,7 +312,6 @@
 <code>MedicationRequest:medication</code>
 </td>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -334,13 +329,12 @@
 <td>category, code, date, patient, patient.identifier, patient+category, patient+category+date, patient+category+status, patient+code, patient+code+date, status</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
 <tr>
 <td>
-<a href="#Patient1-1">Organization</a>
+<a href="#Organization1-1">Organization</a>
 </td>
 <td>
 <a href="StructureDefinition-au-core-organization.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization</a>
@@ -352,7 +346,6 @@
 <td>_id, address, identifier, name</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -367,10 +360,9 @@
 <td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
-<td>_id, birthdate, birthdate+family, birthdate+name, family, family+gender, gender, gender+name, identifier, indigenous-status, name, patient-gender-identity</td>
+<td>_id, birthdate, birthdate+family, birthdate+name, family, family+gender, gender, gender+name, identifier, indigenous-status, name, gender-identity</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -388,7 +380,6 @@
 <td>_id, identifier, name</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -408,7 +399,6 @@
 <code>PractitionerRole:practitioner</code>
 </td>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -426,24 +416,7 @@
 <td>code, date, patient, patient.identifier, patient+code+date, patient+date, patient+status, status</td>
 <td></td>
 <td>
-<code>Provenance:target</code>
 </td>
-<td/>
-</tr>
-<tr>
-<td>
-<a href="#Provenance1-1">Provenance</a>
-</td>
-<td>
-<a href="StructureDefinition-au-core-procedure.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-provenance</a>
-</td>
-<td>y</td>
-<td class="text-center">y</td>
-<td class="text-center"></td>
-<td class="text-center"></td>
-<td></td>
-<td></td>
-<td></td>
 <td/>
 </tr>
 </tbody>
@@ -2152,18 +2125,6 @@
   <b>SHALL</b>
 </td>
 <td>
-  <a href="http://hl7.org/fhir/R4/organization.html#search">address</a>
-</td>
-<td>
-  <code>string</code>
-</td>
-<td></td>
-</tr>
-<tr>
-<td>
-  <b>SHALL</b>
-</td>
-<td>
   <a href="http://hl7.org/fhir/R4/organization.html#search">identifier</a>
 </td>
 <td>
@@ -2180,7 +2141,19 @@
 </tr>
 <tr>
 <td>
-  <b>SHALL</b>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/organization.html#search">address</a>
+</td>
+<td>
+  <code>string</code>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/organization.html#search">name</a>
@@ -2400,7 +2373,7 @@
   <b>MAY</b>
 </td>
 <td>
-  <a href="http://hl7.org/fhir/R4/patient.html#search">patient-gender-identity</a>
+  <a href="https://build.fhir.org/ig/hl7au/au-fhir-base/search-parameters.html#patient">gender-identity</a>
 </td>
 <td>
   <code>token</code>
@@ -2969,59 +2942,6 @@
 </div>
 </div>
 </div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 id="Provenance1-1" class="panel-title">
-<span style="float: right;">Resource Conformance: SHOULD</span>Provenance</h4>
-</div>
-<div class="panel-body">
-<div class="container">
-<div class="row">
-<div class="col-lg-6">
-<span class="lead">Base System Profile</span>
-<br/>
-<a href="StructureDefinition-au-core-provenance.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-provenance</a>
-</div>
-<div class="col-lg-3">
-<span class="lead">Profile Conformance</span>
-<br/>
-<b>SHALL</b>
-</div>
-<div class="col-lg-3">
-<span class="lead">Reference Policy</span>
-<br/>
-<code>resolves</code>
-</div>
-</div>
-<p/>
-<div class="row">
-<div class="col-lg-6">
-<span class="lead">Interaction summary</span>
-<br/>
-<ul>
-<li>
-<strong>SHALL</strong> support <code>read</code>.
-</li>
-<li>
-<strong>MAY</strong> support <code>search-type</code>,<code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
-</li>
-</ul>
-</div>
-</div>
-<p/>
-<div class="row">
-<div class="col-12">
-<span class="lead">Documentation</span>
-<blockquote>
-<div>
-<p>If the server supports the Provenance resource, the server <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Provenance resource.</p>
-</div>
-</blockquote>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </text>
 <url value="http://hl7.org.au/fhir/core/CapabilityStatement/au-core-server"/>
@@ -3029,7 +2949,7 @@
 <title value="AU Core Server CapabilityStatement"/>
 <status value="draft"/>
 <date value="2023-05-15"/>
-<description value="This CapabilityStatement describes the basic rules for the AU Core server actor that is responsible for providing responses to queries submitted by AU Core clients. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core servers are defined in this CapabilityStatement."/>
+<description value="This CapabilityStatement describes the basic rules for the AU Core server actor that is responsible for providing responses to queries submitted by AU Core servers. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core servers are defined in this CapabilityStatement."/>
 <kind value="requirements"/>
 <fhirVersion value="4.0.1"/>
 <format value="json">
@@ -3144,11 +3064,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
@@ -3286,11 +3201,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
@@ -3463,11 +3373,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
@@ -3634,11 +3539,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
@@ -3736,11 +3636,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -3952,11 +3847,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4194,11 +4084,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
@@ -4305,14 +4190,9 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="address"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Organization-address"/>
@@ -4329,7 +4209,7 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="name"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Organization-name"/>
@@ -4448,11 +4328,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4517,8 +4392,8 @@
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
 </extension>
-<name value="patient-gender-identity"/>
-<definition value="http://hl7.org.au/fhir/SearchParameter/patient-gender-identity"/>
+<name value="gender-identity"/>
+<definition value="http://hl7.org.au/fhir/SearchParameter/gender-identity"/>
 <type value="token"/>
 <documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xa;&#xa;The server **SHALL** support both."/>
 </searchParam>
@@ -4671,11 +4546,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4817,11 +4687,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
@@ -4858,68 +4723,8 @@
 <type value="reference"/>
 <documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both.&#xa;&#xa;The client **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The server **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
 </searchParam>
-</resource><!-- PROVENANCE :: DONE -->
-<resource>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<type value="Provenance"/>
-<profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-provenance"/>
-<documentation value="If the server supports the Provenance resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Provenance resource."/>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-<code value="read"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="search-type"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
-</interaction>
-<referencePolicy value="resolves">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-</referencePolicy>
-</resource><!-- INTERACTIONS -->
+</resource>
+<!-- INTERACTIONS -->
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>

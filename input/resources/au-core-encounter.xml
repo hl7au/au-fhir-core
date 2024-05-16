@@ -15,10 +15,6 @@
     <element id="Encounter">
       <path value="Encounter"/>
     </element>
-    <element id="Encounter.identifier">
-      <path value="Encounter.identifier"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Encounter.status">
       <path value="Encounter.status"/>
       <mustSupport value="true"/>
@@ -26,14 +22,6 @@
     <element id="Encounter.class">
       <path value="Encounter.class"/>
       <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.type">
-      <path value="Encounter.type"/>
-      <mustSupport value="true"/>
-      <binding>
-        <strength value="preferred"/>
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1"/>
-      </binding>
     </element>
     <element id="Encounter.serviceType">
       <path value="Encounter.serviceType"/>
@@ -66,7 +54,7 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -86,14 +74,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
       </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.hospitalization">
-      <path value="Encounter.hospitalization"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.hospitalization.dischargeDisposition">
-      <path value="Encounter.hospitalization.dischargeDisposition"/>
       <mustSupport value="true"/>
     </element>
     <element id="Encounter.location">

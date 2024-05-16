@@ -27,9 +27,6 @@
     <reference value="Patient/wang-li"/>
   </subject>
   <effectiveDateTime value="2016-07-02"/>
-  <performer>
-    <reference value="PractitionerRole/bobrester-bob-gp"/>
-  </performer>
   <valueCodeableConcept>
     <coding>
       <system value="http://snomed.info/sct"/>

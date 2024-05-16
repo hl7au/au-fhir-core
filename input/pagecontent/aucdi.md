@@ -1,4 +1,6 @@
-The primary intent of the <a href="https://confluence.csiro.au/display/FHIR/AUCDI+Release+1">Australian Core Data for Interoperability (AUCDI)</a> is to design and govern a collection of coherent, reusable building blocks known as ‘data groups’. These data groups specify “what” the clinical requirements of the clinical information that should be included for data entry, data use, and sharing of information supporting healthcare delivery. However, it does not specify “how” the data is exchanged; this is the
+[Australian Core Data for Interoperability (AUCDI)](https://sparked.csiro.au/index.php/sparked-products-resources/australian-core-data-for-interoperability/aucdi-release-1/) is the product of a national clinician focussed requirements gathering project operating as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au/).  The AUCDI outputs form a set of data requirements to be considered and referred to as part of the development and definition of AU Core. 
+
+The primary intent of the AUCDI is to design and govern a collection of coherent, reusable building blocks known as ‘data groups’. These data groups specify “what” the clinical requirements of the clinical information that should be included for data entry, data use, and sharing of information supporting healthcare delivery. However, it does not specify “how” the data is exchanged; this is the
 role fulfilled by the FHIR standard. AUCDI is not required to be implemented as a whole single product. Parts can be
 implemented as required for specific use cases.
 
@@ -136,62 +138,62 @@ The table below shows the relationship between the AUCDI Data Groups and Element
   <tr>
     <td rowspan="10">Medication use statement</td>
     <td colspan="2">Medication name</td>
-    <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.medication[x] | MedicationRequest.medication[x] | Medication.code</td>
-    <td>Feedback is requested on the appropriateness of using either the MedicationStatement resource or MedicationRequest resource (or both) to represent a medication use statement. See the discussion in chat.fhir.org: <a href="https://chat.fhir.org/#narrow/stream/179173-australia/topic/MedicationRequest.20or.20MedicationStatement">https://chat.fhir.org/#narrow/stream/179173-australia/topic/MedicationRequest.20or.20MedicationStatement</a>. Development and testing of AU Core MedicationStatement profile is planned for AU Core R2.</td>
+    <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
+    <td>MedicationStatement.medication[x] | Medication.code</td>
+    <td>Development and testing of AU Core MedicationStatement profile is planned for AU Core R2.</td>
   </tr>
   <tr>
     <td colspan="2">Clinical indication</td>
-    <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.reasonCode | MedicationStatement.reasonReference | MedicationRequest.reasonCode | MedicationRequest.reasonReference</td>
+    <td>AU Core MedicationStatement</td>
+    <td>MedicationStatement.reasonCode | MedicationStatement.reasonReference</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Strength</td>
-    <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.medication[x] | MedicationRequest.medication[x] | Medication.code | Medication.ingredient</td>
+    <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
+    <td>MedicationStatement.medication[x] | Medication.code | Medication.ingredient</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Form</td>
-    <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a> | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.medication[x] | MedicationRequest.medication[x]<br>Medication.code | Medication.form</td>
+    <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
+    <td>MedicationStatement.medication[x] | Medication.form</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Dose amount</td>
-    <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.dosage.doseAndRate | MedicationRequest.dosageInstruction.doseAndRate</td>
+    <td>AU Core MedicationStatement</td>
+    <td>MedicationStatement.dosage.doseAndRate</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Route of administration</td>
-    <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.dosage.route | MedicationRequest.dosageInstruction.route</td>
+    <td>AU Core MedicationStatement</td>
+    <td>MedicationStatement.dosage.route</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Dose timing</td>
-    <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.dosage.timing | MedicationRequest.dosageInstruction.timing</td>
+    <td>AU Core MedicationStatement</td>
+    <td>MedicationStatement.dosage.timing</td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Endpoint</td>
-    <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.effectivePeriod.end | MedicationRequest.validityPeriod.end</td>
+    <td>AU Core MedicationStatement</td>
+    <td>MedicationStatement.effectivePeriod.end</td>
     <td></td>
   </tr>
    <tr>
     <td colspan="2">Last administration</td>
-    <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+    <td>AU Core MedicationStatement</td>
     <td></td>
     <td>Feedback is requested on the potential mapping for this AUCDI element.</td>
   </tr>
   <tr>
     <td colspan="2">Comment</td>
-    <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-    <td>MedicationStatement.note | MedicationRequest.note</td>
+    <td>AU Core MedicationStatement</td>
+    <td>MedicationStatement.note</td>
     <td></td>
   </tr>
   <tr>
@@ -258,7 +260,7 @@ The table below shows the relationship between the AUCDI Data Groups and Element
     <td>Pulse rate</td>
     <td><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
     <td>Observation</td>
-    <td>Feedback is requested on the proposal to clarify how to exchange pulse rate. Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44861">FHIR-44861</a>.</td>
+    <td></td>
   </tr>
   <tr>
     <td>Body temperature</td>

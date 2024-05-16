@@ -35,19 +35,9 @@
         />
       </constraint>
     </element>
-    <element id="Patient.extension:birthPlace">
-      <path value="Patient.extension"/>
-      <sliceName value="birthPlace"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Patient.extension:indigenousStatus">
       <path value="Patient.extension"/>
       <sliceName value="indigenousStatus"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.extension:interpreterRequired">
-      <path value="Patient.extension"/>
-      <sliceName value="interpreterRequired"/>
       <mustSupport value="true"/>
     </element>
     <element id="Patient.extension:genderIdentity">
@@ -111,7 +101,7 @@
       <path value="Patient.name"/>
       <min value="1"/>
       <comment value="A patient may have multiple names with different uses or applicable periods. At least one name SHOULD be the name the patient is considered to have for administrative and record keeping purposes - family name is used to enable matching against patient records."/>
-      <condition value="inv-au-core-pat-02"/>
+      <condition value="au-core-pat-02"/>
       <constraint>
         <key value="au-core-pat-04"/>
         <severity value="error"/>
@@ -130,6 +120,18 @@
       <path value="Patient.name.use"/>
       <mustSupport value="true"/>
     </element>
+    <element id="Patient.name.text">
+      <path value="Patient.name.text"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="Patient.telecom">
       <path value="Patient.telecom"/>
       <mustSupport value="true"/>
@@ -142,16 +144,6 @@
     <element id="Patient.birthDate">
       <path value="Patient.birthDate"/>
       <min value="1"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.birthDate.extension:accuracyIndicator">
-      <path value="Patient.birthDate.extension"/>
-      <sliceName value="accuracyIndicator"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.birthDate.extension:birthTime">
-      <path value="Patient.birthDate.extension"/>
-      <sliceName value="birthTime"/>
       <mustSupport value="true"/>
     </element>
     <element id="Patient.address">

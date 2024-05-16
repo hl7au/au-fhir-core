@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update medication orders or prescriptions for a patient
 
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile:
 - **MAY** be conformant to:

@@ -23,8 +23,4 @@
         <given value="Bob" />
         <prefix value="Dr."/>
     </name>
-    <telecom>
-        <system value="email"/>
-        <value value="drbob@bobrestermedical.example.com"/>
-    </telecom>
     </Practitioner>

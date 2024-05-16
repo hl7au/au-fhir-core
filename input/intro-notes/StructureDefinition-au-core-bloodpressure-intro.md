@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update an observation of blood pressure associated with a patient
 
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile is conformant to:
 - [observation-bp](http://hl7.org/fhir/R4/observation-bp.html)
@@ -23,4 +23,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - `Observation.value[x]` element **SHOULD** be omitted
   - an Observation without a systolic or diastolic result value, **SHOULD** include a reason why the data is absent in `Observation.component.dataAbsentReason`
 
-<p class="request-for-feedback">Feedback is requested on the proposal to remove Must Support from Observation.performer element across AU Core Vital Signs profiles. Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44786">FHIR-44786</a>.</p>
+
