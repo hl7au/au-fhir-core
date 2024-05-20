@@ -24,5 +24,3 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - Although both are marked as must support, servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
   - A client application **SHALL** support both elements
   - When referencing a Medication resource, it is preferred the resource is [contained](http://hl7.org/fhir/R4/references.html#contained) but it may be an external resource
-- Source system identifiers **SHOULD** be included as [AU Local Prescription Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localprescriptionidentifier.html) or [AU ETP Prescription Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-etpprescriptionidentifier.html) to support electronic medication management (EMM) workflow and deduplication across medication resources.
-  - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
