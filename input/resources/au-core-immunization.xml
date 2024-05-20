@@ -64,21 +64,5 @@
       <path value="Immunization.reasonCode"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Immunization.protocolApplied">
-      <path value="Immunization.protocolApplied"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Immunization.protocolApplied.series">
-      <path value="Immunization.protocolApplied.series"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Immunization.protocolApplied.targetDisease">
-      <path value="Immunization.protocolApplied.targetDisease"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Immunization.protocolApplied.doseNumber[x]">
-      <path value="Immunization.protocolApplied.doseNumber[x]"/>
-      <mustSupport value="true"/>
-    </element>
   </differential>
 </StructureDefinition>
