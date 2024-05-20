@@ -44,10 +44,8 @@ The list below shows the value sets bound to a supported element or element slic
 - [Procedure](https://tx.ontoserver.csiro.au/fhir/ValueSet/procedure-1)
 - [RCPA SPIA Pathology Reporting](https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1)
 - [Reason for Request](https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1)
-- [Reason Vaccine Administered](https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1)
 - [Service Type](https://healthterminologies.gov.au/fhir/ValueSet/service-type-1)
 - [Smoking Status](https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1)
-- [Vaccination Target Disease](https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1) 
 
 **Value sets published in FHIR**
 - [AdministrativeGender](https://hl7.org/fhir/R4/valueset-administrative-gender.html)
