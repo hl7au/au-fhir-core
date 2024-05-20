@@ -392,6 +392,7 @@ AU Core Profile |Must Support Choice Elements
 ---|---
 AU Core Encounter|Encounter.reasonCode, Encounter.reasonReference
 AU Core Procedure|Procedure.reasonCode, Procedure.reasonReference
+AU Core MedicationRequest|MedicationRequest.reasonCode, MedicationRequest.reasonReference
 {:.grid}
 
 
