@@ -60,9 +60,5 @@
       <path value="Immunization.note"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Immunization.reasonCode">
-      <path value="Immunization.reasonCode"/>
-      <mustSupport value="true"/>
-    </element>
   </differential>
 </StructureDefinition>
