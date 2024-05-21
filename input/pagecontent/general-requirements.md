@@ -27,7 +27,7 @@ Systems may implement AU Core as:
 #### AU Core Capability Statements
 The [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) defines the conformance requirements and expectations of an [AU Core Requester](ActorDefinition-au-core-actor-requester.html) actor responsible for initiating queries for information from an [AU Core Responder](ActorDefinition-au-core-actor-responder.html). The complete list of FHIR profiles, REST API interactions, and search parameters that can be implemented by an AU Core Requester are defined in this capability statement. 
 
-The [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html) defines the conformance requirements and expectations of an [AU Core Responder](ActorDefinition-au-core-actor-responder.html) actor responsible for providing responses to queries submitted by an [AU Core Requester](ActorDefinition-au-core-actor-requester.html). The complete list of FHIR profiles, REST API interactions, and search parameters that can be implemented by an AU Core Responder are defined in this capability statement. An AU Core Responder declares conformance to this list of capbilities based on the resource types and interactions it implement.
+The [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html) defines the conformance requirements and expectations of an [AU Core Responder](ActorDefinition-au-core-actor-responder.html) actor responsible for providing responses to queries submitted by an [AU Core Requester](ActorDefinition-au-core-actor-requester.html). The complete list of FHIR profiles, REST API interactions, and search parameters that can be implemented by an AU Core Responder are defined in this capability statement. An AU Core Responder declares conformance to this list of capabilities based on the resource types and interactions it implement.
 
 #### Profile Only Support
 A system that represent digital health information using the content models of AU Core profiles without the expectation to implement any AU Core interactions can declare Profile Only Support to one or more AU Core profiles. 
@@ -274,13 +274,13 @@ There are situations when information for a particular data element is missing a
 
 #### Missing Must Support and Optional Data
 
-If the source system does not have data for an element with a minimum cardinality = 0 (including elements labelled *Must Support*), the data element **SHALL** be omitted from the resource.  
+If the source system does not know the value for an element with a minimum cardinality = 0 (including elements labelled *Must Support*), the data element **SHALL** be omitted from the resource.  
 
 #### Missing Must Support and Mandatory Data
 
 If the data element is a *Mandatory* element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system does not know the value or the reason the value is absent. The core specification provides guidance for what to do in this situation, which is summarised below.
 
-1.  For *non-coded* data elements including type [Reference](http://hl7.org/fhir/R4/references.html#Reference) when the AU Core profile for the element does not require a sub-element
+1.  For *non-coded* data elements where the applicable AU Core profile does not mandate a sub-element
     - use the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) 
     - use the code `unknown` _The value is expected to exist but is not known_
   
@@ -302,21 +302,23 @@ If the data element is a *Mandatory* element (minimum cardinality is > 0), the e
           ...
          }
     ~~~
-
       
-1. When the AU Core profile mandates a sub-element, such as `Practitioner.name` where `Practitioner.name.family` is mandatory, then the resource must contain the sub-element otherwise the resource will not be conformant.
+2. For *non-coded* data elements where the applicable AU Core profile mandates a sub-element, e.g. in AU Core PractitionerRole, the sub-element `Practitioner.name.family` is mandatory, then the resource must contain the sub-element otherwise the resource will not be conformant.
 
-1. For *coded* data elements:
+3. For *coded* data elements:
     - *required* binding strength (CodeableConcept or code datatypes):
-      - the appropriate "unknown" concept code **SHALL** be populated if available.
-      - For AU Core profiles, the following *mandatory* or *conditionally mandatory* status elements with required binding have no appropriate "unknown" concept code:
-        - `AllergyIntolerance.clinicalStatus`
-        - `Condition.clinicalStatus`
+      - use the appropriate "unknown" concept code from the value set if available.
+      - if the value set does not have the appropriate "unknown" concept code, you must use a concept from the value set anyway. Otherwise, the instance will not be conformant.
+      - For AU Core profiles, the following status elements with required binding have no appropriate "unknown" concept code:
+        - `AllergyIntolerance.clinicalStatus`&#42;
+        - `Condition.clinicalStatus`&#42;
         - `Immunization.status`
+        
+      &#xa;&#xa;&#xa;&#xa;&#42;The clinicalStatus element is conditionally mandatory based on resource-specific constraints.
     - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept, or Coding datatypes):
       - when the system has text but no coded value, only the text sub-element is populated.
       - when there is neither text or coded value:
-        - the appropriate "unknown" concept code **SHALL** be populated if available when the binding strength is *extensible*
+        - use the appropriate "unknown" concept code from the value set if available.
         - when the value set does not have an appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason).
 
         Example: AllergyIntolerance resource where the manifestation is unknown.
@@ -330,7 +332,7 @@ If the data element is a *Mandatory* element (minimum cardinality is > 0), the e
                   {
                     "system" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
                     "code" : "unknown",
-                    "display" : "unknown"
+                    "display" : "Unknown"
                   }
                 ]
               }
