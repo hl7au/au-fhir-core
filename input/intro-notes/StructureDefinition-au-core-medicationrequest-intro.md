@@ -18,7 +18,7 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 
 ### Profile specific implementation guidance
-- See the [Medicine information](general-guidance.html#medicine-information) section for guidance 
+- See the [Medicine Information](medicine-information.html) section for guidance
 - When recording "self-prescribed" medication, `MedicationRequest.requester` references the Patient or RelatedPerson as the prescriber.
 - MedicationRequest resources can represent a medication using either a code with `MedicationRequest.medicationCodeableConcept`, or reference a [Medication](http://hl7.org/fhir/R4/medication.html) resource with `MedicationRequest.medicationReference`.
   - Although both are marked as must support, servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
