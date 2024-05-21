@@ -25,9 +25,9 @@ Systems may implement AU Core as:
 - [Profile Support + Interaction Support](#profile--interaction-support) for a system declaring conformance to one or both of the [AU Core Capability Statements](#au-core-capability-statements)
 
 #### AU Core Capability Statements
-The [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) defines the conformance requirements and expectations of a [AU Core Requester](ActorDefinition-au-core-actor-requester.html) actor responsible for initiating queries for information from an [AU Core Responder](ActorDefinition-au-core-actor-responder.html). The complete list of FHIR profiles, REST API interactions, and search parameters that can be implemented by an AU Core Requester are defined in this capability statement. 
+The [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) defines the conformance requirements and expectations of an [AU Core Requester](ActorDefinition-au-core-actor-requester.html) actor responsible for initiating queries for information from an [AU Core Responder](ActorDefinition-au-core-actor-responder.html). The complete list of FHIR profiles, REST API interactions, and search parameters that can be implemented by an AU Core Requester are defined in this capability statement. 
 
-The [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html) defines the conformance requirements and expectations of a [AU Core Responder](ActorDefinition-au-core-actor-responder.html) actor responsible for providing responses to queries submitted by an [AU Core Requester](ActorDefinition-au-core-actor-requester.html). The complete list of FHIR profiles, REST API interactions, and search parameters that can be implemented by an AU Core Responder are defined in this capability statement. An AU Core Responder declares conformance to this list of capbilities based on the resource types and interactions it implement.
+The [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html) defines the conformance requirements and expectations of an [AU Core Responder](ActorDefinition-au-core-actor-responder.html) actor responsible for providing responses to queries submitted by an [AU Core Requester](ActorDefinition-au-core-actor-requester.html). The complete list of FHIR profiles, REST API interactions, and search parameters that can be implemented by an AU Core Responder are defined in this capability statement. An AU Core Responder declares conformance to this list of capbilities based on the resource types and interactions it implement.
 
 #### Profile Only Support
 A system that represent digital health information using the content models of AU Core profiles without the expectation to implement any AU Core interactions can declare Profile Only Support to one or more AU Core profiles. 
@@ -145,7 +145,7 @@ The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot
 ##### Must Support - Primitive Elements
 Primitive elements are single elements with a primitive value. If the primitive element is labelled as *Must Support*, then the 
 - AU Core Responder **SHALL** correctly populate the element if a value is known. 
-- AU Core Requesters **SHALL** accept resource without error if element present containing any valid value.
+- AU Core Requesters **SHALL** resources containing any valid value for the element without error.
 
 For example, the AU Core Organization Profile `name` element is a primitive string datatype. Therefore, when claiming conformance to this profile:
 
@@ -165,7 +165,7 @@ For example, the AU Core MedicationRequest Profile `note` element is labelled *M
 
 If any sub-element is labelled as *Must Support*, an: 
 - AU Core Responder **SHALL** correctly populate the element with all _Must Support_ sub-elements if a value is known. 
-- AU Core Requester **SHALL** accept resource without error if _Must Support_ sub_elements are present containing any valid value.
+- AU Core Requester **SHALL** accept resource without error if _Must Support_ sub-elements are present containing any valid value.
 
 For example, if AU Core Patient Profile name element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
 - AU Core Responder **SHALL** correctly populate a value in `Patient.name.family` and `Patient.name.given`.
@@ -174,7 +174,7 @@ For example, if AU Core Patient Profile name element is labelled *Must Support* 
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles (e.g., Observation.performer). 
 - AU Core Responder **SHALL** correctly populate the element with at least one referenced resource or profile types allowed. 
-- AU Core Requester **SHALL** accept resource without error if element present and containing any referenced resource or profile types allowed.
+- AU Core Requester **SHALL** accept resources without error if the element is present and containing any valid referenced resource or profiles.
 
 The table below provides a list of AU Core profile elements that allow multiple referenced resource or profile types.
 
@@ -224,15 +224,15 @@ AU Core PractitionerRole|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
 For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) constrains the choices for `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU Core Patient Profile:
-- AU Core Responder **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Care Number, or DVA Number, or any combination of them
-- AU Core Requester **SHALL** accept Patient resource if `Patient.identifier` is present containing any IHI, Medicare Care Number, or DVA Number identifier type.
+- AU Core Responder **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Care Number, or DVA Number, or any combination of them.
+- AU Core Requester **SHALL** accept Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an IHI, Medicare Care Number, or DVA Number identifier, or may be some other allowed identifier.
 
 Systems **MAY** support populating and processing other identifiers, but this is not a requirement of AU Core.
 
 ##### Must Support - Choice of Profile Elements
 
 A resource may support two elements that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU Core Encounter](StructureDefinition-au-core-encounter.html). In such cases, the
-- AU Core Responder **SHALL** correctly populate at least one element allowed by the profile, 
+- AU Core Responder **SHALL** correctly populate at least one element allowed by the profile.
 - AU Core Requester **SHALL** accept resource without error if any element allowed by the profile is present. 
 
 The table below lists the applicable profiles and elements in AU Core.
@@ -248,8 +248,8 @@ AU Core MedicationRequest|MedicationRequest.reasonCode, MedicationRequest.reason
 ##### Must Support - Choice of Terminology
 
 In AU Core elements that define support for more than one code system only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases, the 
-- AU Core Responders **SHALL** correctly populate the element from at least one supported code system
-- AU Core Requesters **SHALL** accept resources without error an element containing any valid code system. 
+- AU Core Responders **SHALL** correctly populate the element from at least one supported code system.
+- AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid value. 
 
 The table below lists the applicable profiles and elements in AU Core that allow multiple code systems.
 
@@ -264,7 +264,7 @@ For example, the profile [AU Core Medication](StructureDefinition-au-core-medica
 
 When claiming conformance to the AU Core Medication profile: 
 - AU Core Responders **SHALL** correctly populate `Medication.code.coding` with either a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, if a coded value is known.
-- AU Core Requesters **SHALL** accept a Medication resource without error if `Medication.code.coding` present with either a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both.
+- AU Core Requesters **SHALL** accept a Medication resource without error if `Medication.code.coding` is present and containing any valid value. A valid value may be text, or may be a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, or some other code.
 
 Systems **MAY** populate and accept other code systems but this is not a requirement of AU Core.
 
@@ -278,37 +278,33 @@ If the source system does not have data for an element with a minimum cardinalit
 
 #### Missing Must Support and Mandatory Data
 
-If the data element is a *Mandatory* element (in other words, where the minimum cardinality is > 0), the element **SHALL** be present *even if* the source system does not have data or know the reason for the absence of data. The core specification provides guidance for what to do in this situation, which is summarised below.
+If the data element is a *Mandatory* element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system does not know the value or the reason the value is absent. The core specification provides guidance for what to do in this situation, which is summarised below.
 
-1.  For *non-coded* data elements including type [Reference](http://hl7.org/fhir/R4/references.html#Reference), 
-  - when the AU Core profile for the element does not require a sub-element
-    - use the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) in the data type 
-    - use the code `unknown` - The value is expected to exist but is not known.
+1.  For *non-coded* data elements including type [Reference](http://hl7.org/fhir/R4/references.html#Reference) when the AU Core profile for the element does not require a sub-element
+    - use the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) 
+    - use the code `unknown` _The value is expected to exist but is not known_
   
-      Example: ExplanationOfBenefit resource where the patient's insurance coverage is not available.
-      ~~~
-      {
-        "resourceType" : "ExplanationOfBenefit",
-            ...
-            "outcome" : "complete",
-              "insurance" : [
-                {
-                  "focal" : true,
-                  "coverage" : {
-                    "extension" : [
-                      {
-                        "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                        "valueCode" : "unknown"
-                      }
-                    ]
+    Example: Patient resource where the patient's birthDate is not available.
+    ~~~
+    {
+      "resourceType" : "Patient",
+           ...
+           "_birthDate" : [
+               {
+                "extension" : [
+                  {
+                    "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "valueCode" : "unknown"
                   }
-                }
-              ],
-              ...
-          }
-      ~~~
+                ]
+              }
+           ],
+          ...
+         }
+    ~~~
+
       
-  - when the AU Core profile mandates a sub-element, such as a valid Identifier or Reference data type, then the resource must contain the sub-element otherwise the resource will not be conformant,
+1. When the AU Core profile mandates a sub-element, such as `Practitioner.name` where `Practitioner.name.family` is mandatory, then the resource must contain the sub-element otherwise the resource will not be conformant.
 
 1. For *coded* data elements:
     - *required* binding strength (CodeableConcept or code datatypes):
