@@ -14,6 +14,7 @@ This change log documents the significant updates and resolutions implemented fr
   - clarified capabilities in AU Core R1 by:
     - renaming AU Core Server to be AU Core Responder [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073), [FHIR-43852](https://jira.hl7.org/browse/FHIR-43852)
     - renaming AU Core Client to be AU Core Requester [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073), [FHIR-43852](https://jira.hl7.org/browse/FHIR-43852)
+  - added Actor Definitions page under FHIR Artefacts [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073).
 - Added Security and Privacy page [FHIR-45067](https://jira.hl7.org/browse/FHIR-45067).
 - Made the following changes to AU Core Immunization:
   - removed Must Support from Immunization.protocolApplied, Immunization.protocolApplied.series, Immunization.protocolApplied.targetDisease, Immunization.protocolApplied.doseNumber[x] [FHIR-44674](https://jira.hl7.org/browse/FHIR-44674), [FHIR-44656](https://jira.hl7.org/browse/FHIR-44656), [FHIR-44654](https://jira.hl7.org/browse/FHIR-44654)
