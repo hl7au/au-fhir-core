@@ -760,6 +760,11 @@
 				<generation value="markdown"/>
 			</page>
 			<page>
+				<nameUrl value="actors.html"/>
+				<title value="Actor Definitions"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
 				<nameUrl value="examples.html"/>
 				<title value="Examples"/>
 				<generation value="markdown"/>
