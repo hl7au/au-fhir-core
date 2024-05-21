@@ -4,7 +4,7 @@ There are two different ways to implement AU Core:
 1. [Profile Only Support](#profile-only-support): system that represent digital health information using AU Core profiles without the expectation to implement any FHIR specified interactions.
 1. [Profile Support + Interaction Support](#profile--interaction-support): system that represents digital health information using AU Core profiles (Profile Support) AND implement the [FHIR REST API](http://hl7.org/fhir/R4/http.html) interactions defined by an [AU Core Capability Statement](#au-core-capability-statements) (Interaction Support).
 
-The requirements of the FHIR standard and [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html) apply, and define the use of terms in this guide including the conformance verbs - SHALL, SHALL NOT, SHOULD, SHOULD NOT, MAY.
+The requirements of the FHIR standard and [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html) apply, and define the use of terms in this guide including the conformance verbs - **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **MAY**.
 
 Implementers are advised to be familiar with the requirements of the FHIR standard when implementing AU Core, in particular:
 - [FHIR Terminology requirements](http://hl7.org/fhir/R4/terminologies.html)
@@ -20,9 +20,9 @@ The [Profiles and Extensions](profiles-and-extensions.html) page lists the AU Co
 
 AU Core profile elements include Mandatory and Must Support requirements. [Mandatory elements](#mandatory-elements) are required and have a minimum cardinality of 1 (min=1). [Must Support](#must-support-and-obligation) elements have defined conformance obligations in AU Core based on actor roles.
 
-Systems may declare conformance to AU Core profiles based on one of the following two conformance tiers: 
-- [Profile Only Support](#profile-only-support) for a system declaring conformance to an AU Core profile
-- [Profile + Interaction Support](#profile--interaction-support) for a system declaring conformance to one of the [AU Core Capability Statements](#au-core-capability-statements)
+Systems may implement AU Core as: 
+- [Profile Only Support](#profile-only-support) for a system declaring conformance to one or more AU Core profiles
+- [Profile Support + Interaction Support](#profile--interaction-support) for a system declaring conformance to one or both of the [AU Core Capability Statements](#au-core-capability-statements)
 
 #### AU Core Capability Statements
 The [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) defines the conformance requirements and expectations of a [AU Core Requester](ActorDefinition-au-core-actor-requester.html) actor responsible for initiating queries for information from an [AU Core Responder](ActorDefinition-au-core-actor-responder.html). The complete list of FHIR profiles, REST API interactions, and search parameters that can be implemented by an AU Core Requester are defined in this capability statement. 
@@ -30,36 +30,36 @@ The [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requeste
 The [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html) defines the conformance requirements and expectations of a [AU Core Responder](ActorDefinition-au-core-actor-responder.html) actor responsible for providing responses to queries submitted by an [AU Core Requester](ActorDefinition-au-core-actor-requester.html). The complete list of FHIR profiles, REST API interactions, and search parameters that can be implemented by an AU Core Responder are defined in this capability statement. An AU Core Responder declares conformance to this list of capbilities based on the resource types and interactions it implement.
 
 #### Profile Only Support
-A system that represent digital health information using the content models of AU Core profiles without the expectation to implement any AU Core interactions can declare _Profile Only Support_ to one or more AU Core profiles. 
+A system that represent digital health information using the content models of AU Core profiles without the expectation to implement any AU Core interactions can declare Profile Only Support to one or more AU Core profiles. 
 
-A system that [declares conformance](declaring-conformance.html#profile-only-support) as _Profile Only Support_ to an AU Core profile:
+A system that [declares conformance](declaring-conformance.html#profile-only-support) as Profile Only Support to an AU Core profile:
 - **SHALL** correctly populate a resource with all mandatory elements specified in the profile’s definition.
 - **SHALL** correctly populate a resource with all _Must Support_ elements if a value is known for the element. 
-- **SHALL** implement the requirements on [Missing data](general-requirements.html#missing-data) when an element value is not known.
+- **SHALL** implement the requirements on [Missing Data](general-requirements.html#missing-data) when an element value is not known.
 
-A system is not required to declare _Profile Only Support_ to all AU Core profiles. For example, a pathology laboratory system that implements the [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html) profile, is not required to produce a MedicationRequest resource. 
+A system is not required to declare Profile Only Support to all AU Core profiles. For example, a pathology laboratory system that implements the [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html) profile, is not required to produce a MedicationRequest resource. 
 
-#### Profile + Interaction Support
+#### Profile Support + Interaction Support
 
-_Profile + Interaction Support_ refers to a system that represents digital health information using the content models of AU Core profiles AND implement the REST API interactions defined by the applicable AU Core capability statement.
+Profile Support + Interaction Support refers to a system that represents digital health information using the content models of AU Core profiles AND implement the REST API interactions defined by the applicable AU Core capability statement.
 
-An [AU Core Responder](ActorDefinition-au-core-actor-responder.html) that declares 'Profile + Interaction Support' conformance:
+An [AU Core Responder](ActorDefinition-au-core-actor-responder.html) that declares Profile Support + Interaction Support conformance:
 - **SHALL** [declare conformance](declaring-conformance.html#profile--interaction-support) to the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html) in the server's CapabilityStatement.
 - **SHALL** specify the implemented resource types, associated AU Core profiles, REST API interactions and search parameters in the server's CapabilityStatement
 - **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support-and-obligation) requirements for the elements defined as such in the implemented AU Core profiles
 - **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html#resourcesSummary1).
 
-An [AU Core Requester](ActorDefinition-au-core-actor-requester.html) that declares 'Profile + Interaction Support' conformance:
+An [AU Core Requester](ActorDefinition-au-core-actor-requester.html) that declares Profile Support + Interaction Support conformance:
 - **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support-and-obligation) requirements for the elements defined as such in the implemented AU Core profiles
 - **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Requester Capability Statement](CapabilityStatement-au-core-requester.html#resourcesSummary1).
 
 ### Mandatory Elements
-Mandatory elements are elements with a minimum cardinality of 1 (min=1). When an element is Mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements in [Missing Data](#missing-data) **SHALL** be applied. An element can be both _Must Support_ and mandatory, in which case the requirements for mandatory's Missing data requirements apply as described in [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data).
+Mandatory elements are elements with a minimum cardinality of 1 (min=1). When an element is Mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements in [Missing Data](#missing-data) **SHALL** be applied. An element can be both _Must Support_ and mandatory, in which case the requirements for mandatory's Missing Data requirements apply as described in [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data).
 
 ### Must Support and Obligation
 Labelling an element *[Must Support](https://www.hl7.org/fhir/conformance-rules.html#mustSupport)* means that systems that produce or consume resources **SHALL** provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile **SHALL** make clear exactly what kind of support is required when an element is labelled as Must Support.
 
-Because AU Core is a foundational standard, *Must Support* needs to be defined a way that does not impede or prescribe what a system does with the data, so as not to impede each implementation’s ability to tighten and define expectations for use under their own business rules, regulations, policies, etc. There is also a the challenge that comes from inheritance of must support flags into implementation guides that have strict definitions for must support (e.g., must be able to display this value to an end user), AU Core will only apply the *Must Support* flag on the elements that are necessary to support _minimum_ requirements and are expected to be flagged as *Must Support* across the majority of Australian FHIR implementation guides.
+Because AU Core is a foundational standard, *Must Support* needs to be defined a way that does not impede or prescribe what a system does with the data, so as not to impede each implementation’s ability to tighten and define expectations for use under their own business rules, regulations, policies, etc. There is also a challenge that comes from inheritance of must support flags into implementation guides that have strict definitions for must support (e.g., must be able to display this value to an end user), AU Core will only apply the *Must Support* flag on the elements that are necessary to support _minimum_ requirements and are expected to be flagged as *Must Support* across the majority of Australian FHIR implementation guides.
 
 In AU Core, the meaning of Must Support is specified in terms of [Obligation Codes](https://hl7.org/fhir/extensions/CodeSystem-obligation.html) in [obligation extensions](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition. The obligation codes used to define the minimum obligations of Must Support elements in this implementation guide are reiterated below.
 
@@ -74,14 +74,14 @@ Must Support elements are treated differently between [AU Core Responder](ActorD
 An AU Core Responder:
 - **SHALL** correctly populate all _Must Support_ elements if a value is known for the element.
 - **SHALL** implement the requirements on [Suppressed Data](general-requirements.html#suppressed-data) when an element is NOT allowed to be shared.
-- **SHALL** implement the requirements on [Missing data](general-requirements.html#missing-data) when an element value is not known.
+- **SHALL** implement the requirements on [Missing Data](general-requirements.html#missing-data) when an element value is not known.
 
 When a _Must Support_ element requires a more tightly stated obligation, this obligation is specified in the AU Core Responder [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition.
 
 #### AU Core Requester
 An AU Core Requester:
 - **SHALL** accept resources containing any valid value for _Must Support_ elements without error.
-- **SHALL** accept resources containing _Must Support_ elements with [Missing data](#missing-data) or [Suppressed data](#suppressed-data) without error.
+- **SHALL** accept resources containing _Must Support_ elements with [Missing Data](#missing-data) or [Suppressed data](#suppressed-data) without error.
 
 How the system processes the resource depends on local requirements that could align with obligation terms such as [reject invalid](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-reject-invalid), [correctly handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-handle), [persist](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-persist), [display](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-display), or [ignore](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-ignore).
 
@@ -149,7 +149,7 @@ Primitive elements are single elements with a primitive value. If the primitive 
 
 For example, the AU Core Organization Profile `name` element is a primitive string datatype. Therefore, when claiming conformance to this profile:
 
-- AU Core Responder **SHALL** correctly populate a value in `Organization.name` if a value is know.
+- AU Core Responder **SHALL** correctly populate a value in `Organization.name` if a value is known.
 - AU Core Requester **SHALL** accept an Organization resource without error if `Organization.name` is present and containing any valid value.
 
 ##### Must Support - Complex Elements
@@ -225,7 +225,7 @@ AU Core PractitionerRole|PractitionerRole.identifier|Medicare Provider Number
 
 For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) constrains the choices for `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU Core Patient Profile:
 - AU Core Responder **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Care Number, or DVA Number, or any combination of them
-- AU Core Requester **SHALL** accept Patient resource resource if `Patient.identifier` is present containing any IHI, Medicare Care Number, or DVA Number identifier type.
+- AU Core Requester **SHALL** accept Patient resource if `Patient.identifier` is present containing any IHI, Medicare Care Number, or DVA Number identifier type.
 
 Systems **MAY** support populating and processing other identifiers, but this is not a requirement of AU Core.
 
