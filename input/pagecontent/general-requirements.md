@@ -59,7 +59,7 @@ Mandatory elements are elements with a minimum cardinality of 1 (min=1). When an
 ### Must Support and Obligation
 Labelling an element *[Must Support](https://www.hl7.org/fhir/conformance-rules.html#mustSupport)* means that systems that produce or consume resources **SHALL** provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile **SHALL** make clear exactly what kind of support is required when an element is labelled as Must Support.
 
-Because AU Core is a foundational standard, *Must Support* needs to be defined a way that does not impede or prescribe what a system does with the data, so as not to impede each implementation’s ability to tighten and define expectations for use under their own business rules, regulations, policies, etc. There is also a challenge that comes from inheritance of must support flags into implementation guides that have strict definitions for must support (e.g., must be able to display this value to an end user), AU Core will only apply the *Must Support* flag on the elements that are necessary to support _minimum_ requirements and are expected to be flagged as *Must Support* across the majority of Australian FHIR implementation guides.
+Because AU Core is a foundational standard, *Must Support* needs to be defined a way that does not impede or prescribe what a system does with the data, so as not to impede each implementation’s ability to tighten and define expectations for use under their own business rules, regulations, policies, etc. There is also a challenge that comes from inheritance of must support flags into implementation guides that have strict definitions for must support (e.g., must be able to display this value to an end user). AU Core will only apply the *Must Support* flag on the elements that are necessary to support _minimum_ requirements and are expected to be flagged as *Must Support* across the majority of Australian FHIR implementation guides.
 
 In AU Core, the meaning of Must Support is specified in terms of [Obligation Codes](https://hl7.org/fhir/extensions/CodeSystem-obligation.html) in [obligation extensions](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition. The obligation codes used to define the minimum obligations of Must Support elements in this implementation guide are reiterated below.
 
@@ -68,7 +68,7 @@ Actor | Code | Display | Definition | Notes
 [AU Core Responder](ActorDefinition-au-core-actor-responder.html) | [SHALL:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate-if-known) | SHALL populate if known | Conformant applications producing resources SHALL correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance.
 [AU Core Requester](ActorDefinition-au-core-actor-requester.html) | [SHALL:no-error](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58no-error) | SHALL not error if present | Conformant applications SHALL accept resources containing any valid value for the element without error. | Applications are still able to inform the user that a value cannot be processed correctly and may ignore the data, but applications aren't able to reject an instance merely because the element is present (which would be allowed for elements that do not have this obligation). A system MAY raise an error if the value provided is not valid or violates specific business rules. This obligation also applies to elements that only contain an extension in place of a value where (or equivalent), should either of these be allowed on the consumer obligations
 
-Must Support elements are treated differently between [AU Core Responder](ActorDefinition-au-core-actor-responder.html) and [AU Core Requester](ActorDefinition-au-core-actor-requester.html) actors, *Must Support* on a profile element **SHALL** be interpreted as follows.
+Must Support elements are treated differently between [AU Core Responder](ActorDefinition-au-core-actor-responder.html) and [AU Core Requester](ActorDefinition-au-core-actor-requester.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
 
 #### AU Core Responder
 An AU Core Responder:
@@ -270,15 +270,15 @@ Systems **MAY** populate and accept other code systems but this is not a require
 
 ### Missing Data
 
-There are situations when information for a  data element is missing and the  system does not know reason for the absence of data. 
+There are situations when information for a particular data element is missing and the source system does not know reason for the absence of data. 
 
-When an element definition is *optional* (minimum cardinality = 0), including elements labelled *Must Support*, an
-- AU Core Responder **SHALL NOT** populate the element in the resource when a value is not known.  
+#### Missing Must Support and Optional Data
 
-When element definition is *Mandatory* (minimum cardinality > 0), 
-- AU Core Responder **SHALL** correctly populate the element *even when* the system does not know a value or the reason a the value is absence. 
+If the source system does not have data for an element with a minimum cardinality = 0 (including elements labelled *Must Support*), the data element **SHALL** be omitted from the resource.  
 
-The core specification provides guidance for what to do in this situation, which is summarised below.
+#### Missing Must Support and Mandatory Data
+
+If the data element is a *Mandatory* element (in other words, where the minimum cardinality is > 0), the element **SHALL** be present *even if* the source system does not have data or know the reason for the absence of data. The core specification provides guidance for what to do in this situation, which is summarised below.
 
 1.  For *non-coded* data elements including type [Reference](http://hl7.org/fhir/R4/references.html#Reference), 
   - when the AU Core profile for the element does not require a sub-element

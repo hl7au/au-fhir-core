@@ -8,9 +8,9 @@
   <description value="The AU Core Responder is a system responsible for providing responses to queries submitted by AU Core Requesters."/> 
   <type value="system"/> 
   <documentation value="An AU Core Responder, also known as AU Core Server:&#xa;&#xa;
-- **SHALL** all *Must Support* elements if they know a value for the element&#xa;&#xa;
+- **SHALL** correctly populate all *Must Support* elements if they know a value for the element&#xa;&#xa;
 - **SHALL** implement the requirements on [Suppressed Data](general-requirements.html#suppressed-data) when an element is NOT allowed to be shared&#xa;&#xa;
-- **SHALL** implement the requirements on [Missing data](general-requirements.html#missing-data) when an element value is NOT known:&#xa;&#xa;
+- **SHALL** implement the requirements on [Missing Data](general-requirements.html#missing-data) when an element value is NOT known&#xa;&#xa;
 When a *Must Support* element requires a more tightly stated obligation, this obligation is specified in the AU Core Responder [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition."/>
   <capabilities value="http://hl7.org.au/fhir/core/CapabilityStatement/au-core-responder"/>
 </ActorDefinition>
