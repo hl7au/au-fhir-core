@@ -30,12 +30,6 @@
     <reference value="Patient/howe-deangelo"/>
   </patient>
   <recordedDate value="1999-08-25"/>
-  <recorder>
-    <reference value="PractitionerRole/bobrester-bob-gp"/>
-  </recorder>
-  <asserter>
-    <reference value="Patient/dan-harry"/>
-  </asserter>
   <reaction>
     <manifestation>
       <coding> 

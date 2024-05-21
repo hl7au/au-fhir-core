@@ -7,7 +7,7 @@ The following are supported usage scenarios for this profile:
 - Read medications associated with a patient referenced by another resource
 
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile is conformant to:
 - [IPA-Medication](http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication)
@@ -19,4 +19,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 ### Profile specific implementation guidance
 - See the [Medicine information](general-guidance.html#medicine-information) section for guidance on constructing a resource and the use of medicines terminology
-- Manufacturer information will commonly be exchanged as a PBS code, this information can be represented as an external resource of by using `Medication.manufacturer.identifier` to carry the PBS code and `Medication.manufacturer.display` to carry the name of the manufacturer 
+

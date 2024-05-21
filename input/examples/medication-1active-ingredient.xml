@@ -24,31 +24,4 @@
       <display value="Chlorsig"/>
     </coding>
   </code>
-  <form>
-    <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="385124005"/>
-      <display value="Eye drops"/>
-    </coding>
-  </form>
-  <ingredient>
-    <itemCodeableConcept>
-      <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="1931011000036105"/>
-        <display value="chloramphenicol"/>
-      </coding>
-    </itemCodeableConcept>
-    <isActive value="true"/>
-    <strength>
-      <numerator>
-        <value value="0.5"/>
-        <unit value="%"/>
-      </numerator>
-      <denominator>
-        <value value="1"/>
-        <unit value="unit"/>
-      </denominator>
-    </strength>
-  </ingredient>
 </Medication>

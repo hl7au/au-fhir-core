@@ -10,13 +10,6 @@
     <code value="AMB"/>
     <display value="ambulatory"/>
   </class>
-  <type>
-    <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="11429006"/>
-      <display value="Consultation"/>
-    </coding>
-  </type>
   <serviceType>
     <coding>
       <system value="http://snomed.info/sct"/>

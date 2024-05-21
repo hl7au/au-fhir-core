@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Read information about a practitioner in a role referenced by another resource
 
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile is conformant to:
 - [IPA-PractitionerRole](http://hl7.org/fhir/uv/ipa/StructureDefinition-ipa-practitionerrole.html)
@@ -19,15 +19,12 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 ### Profile specific implementation guidance
 - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
 
-<p class="request-for-feedback">Feedback is requested to remove Must Support from PractitionerRole.location. Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43841">FHIR-43841</a>.</p>
-
 <div class="request-for-feedback">
     <p>Feedback is requested on following search considerations:
     <ul>
         <li>Proposal that support for chained parameter practitioner.identifier become SHALL instead of SHOULD.</li>
         <li>Proposal that support for chained parameter organization.identifier be added.</li>
         <li>Request feedback on if use of code-only in an identifier search parameter is ambiguous, and alternatives to code-only.</li>
-        <li>Proposal to remove support for _revinclude parameter: Provenance:target.</li>
     </ul>
     Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43839">FHIR-43839</a>.
     </p>

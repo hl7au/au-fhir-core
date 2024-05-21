@@ -9,7 +9,7 @@ The following are supported usage scenarios for this profile:
 - Read information about a patient referenced by another resource
 
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile is conformant to:
 - [IPA-Patient](http://hl7.org/fhir/uv/ipa/StructureDefinition-ipa-patient.html)
@@ -51,8 +51,10 @@ Sex assigned at birth is represented using the [Person Recorded Sex or Gender ex
   - *Not stated or inadequately described* may be represented by the code "unknown"
   - Where the workflow does not support obtaining a gender identity value, it may be represented by sending the code "not-asked"
 - When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/) and [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html)
+- Patient names can be provided as a text representation in `name.text` and/or parts such as `name.family` and `name.given`. 
+  - `name.text` specifies the entire name as it should be displayed and this may be provided instead of, or as well as, the specific parts. It is important to note that the presence of parts of a name, e.g. `name.family` and `name.given`, do not imply that `name.text` is known or must be supplied. 
+  - In this profile, the following sub-elements of `name` are marked as _Must Support_: `name.use`, `name.text`, `name.family`, and `name.given`
+    - servers are required to support at least one of the following sub-elements: `name.text`, `name.family`, and `name.given`
+    - clients are required to all sub-elements marked _Must Support_: `name.use`, `name.text`, `name.family`, and `name.given`
 
-<p class="request-for-feedback">Feedback is requested on the proposal to add Must Support to parts of Patient.name in addition to Patient.name.use. Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44818">FHIR-44818</a>.</p>
-
-<p class="request-for-feedback">Feedback is requested on making Sex Assiged at Birth a Must Support element in AU Core Patient. Please comment on HL7 JIRA <a href="https://jira.hl7.org/browse/FHIR-44857">FHIR-44857</a>.</p>
 
