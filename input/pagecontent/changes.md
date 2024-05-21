@@ -94,9 +94,10 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786) 
   - removed the fixed value constraint on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
-- Removed Must Support from the following elements in AU Core Respiration Rate: 
-  - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
-  - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
+- Made the following changes to AU Core Respiration Rate: 
+  - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
+  - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
+  - removed the fixed value constraint on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
 - Removed Must Support from the following elements in AU Core Waist Circumference: 
   - Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)  
