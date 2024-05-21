@@ -26,6 +26,9 @@ This change log documents the significant updates and resolutions implemented fr
 - Removed Must Support from Location.description in AU Core Location [FHIR-45029](https://jira.hl7.org/browse/FHIR-45029).
 - Made the following changes to AU Core MedicationRequest:
   - in MedicationRequest.requester replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
+  - removed Must Support from MedicationRequest.identifier [FHIR-45208](https://jira.hl7.org/browse/FHIR-45208)
+  - removed Must Support from MedicationRequest.category [FHIR-45207](https://jira.hl7.org/browse/FHIR-45207)
+  - added Must Support to MedicationRequest.reasonReference [FHIR-45090](https://jira.hl7.org/browse/FHIR-45090)
 - Made the following changes to AU Core Medication:
   - removal of Must Support from Medication.manufacturer [FHIR-45130](https://jira.hl7.org/browse/FHIR-45130)
   - removed Must Support from Medication.form [FHIR-45221](https://jira.hl7.org/browse/FHIR-45221)

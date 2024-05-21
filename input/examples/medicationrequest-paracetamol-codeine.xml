@@ -4,28 +4,8 @@
     <meta>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
     </meta>
-    <identifier>
-        <type>
-            <coding>
-                <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
-                <code value="LPN"/>
-            </coding>
-            <text value="Local Prescription Number"/>
-        </type>
-        <system value="http://example.com/prescriptions"/>
-        <value value="5372QQER"/>
-        <assigner>
-            <display value="A Regional Hospital"/>
-        </assigner>
-    </identifier>
     <status value="active"/>
     <intent value="order"/>
-    <category>
-        <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
-            <code value="outpatient"/>
-        </coding>
-    </category>
     <medicationCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct"/>
