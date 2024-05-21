@@ -47,7 +47,6 @@
     </element>
     <element id="Procedure.performed[x]">
       <path value="Procedure.performed[x]"/>
-      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Procedure.reasonCode">
@@ -85,10 +84,6 @@
         <strength value="extensible"/>
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1"/>
       </binding>
-    </element>
-    <element id="Procedure.note">
-      <path value="Procedure.note"/>
-      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>
