@@ -66,9 +66,10 @@ This change log documents the significant updates and resolutions implemented fr
   - AllergyIntolerance.asserter [FHIR-44699](https://jira.hl7.org/browse/FHIR-44699), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - AllergyIntolerance.recorder [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082), [FHIR-45066](https://jira.hl7.org/browse/FHIR-45066)
   - AllergyIntolerance.encounter [FHIR-45123](https://jira.hl7.org/browse/FHIR-45123)
-- Removed Must Support from the following elements in AU Core Smoking Status: 
-  - Observation.encounter [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222)
-  - Observation.performer [FHIR-45223](https://jira.hl7.org/browse/FHIR-45223)
+- Made the following changes to AU Core Smoking Status: 
+  - removed Must Support from Observation.encounter [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222)
+  - removed Must Support from Observation.performer [FHIR-45223](https://jira.hl7.org/browse/FHIR-45223)
+  - removed the fixed value constraint on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
 - Removed Must Support from the following elements in AU Core Immunization:
   - Immunization.encounter [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
   - Immunization.performer [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
