@@ -49,16 +49,4 @@
 		</coding>
 		<text value="Intramuscular"/>
 	</route>
-	<protocolApplied>
-		<series value="primary vaccination course 2-dose"/>
-		<targetDisease>
-			<coding>
-				<system value="http://snomed.info/sct"/>
-				<code value="840539006"/>
-				<display value="COVID-19"/>
-			</coding>
-			<text value="COVID-19"/>
-		</targetDisease>
-		<doseNumberPositiveInt value="1"/>
-	</protocolApplied>
 </Immunization>

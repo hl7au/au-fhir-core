@@ -344,6 +344,7 @@ AU Core Diagnostic Result Observation|Observation.performer|AU Core Practitioner
 AU Core Diagnostic Result Observation|Observation.hasMember|AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
 AU Core Pathology Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Base RelatedPerson
 AU Core Procedure|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
+AU Core MedicationRequest|MedicationRequest.reasonReference|AU Core Condition, Observation
 {:.grid}
 
 
@@ -358,7 +359,6 @@ AU Core Diagnostic Result Observation|Observation.effective[x]|dateTime, Period,
 AU Core Diagnostic Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
 AU Core Diagnostic Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
 AU Core Immunization|Immunization.occurrence[x]|dateTime, string
-AU Core Immunization|Immunization.doseNumber[x]|positiveInt, string
 AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
 AU Core MedicationRequest|MedicationRequest.substitution.allowed[x]|boolean, CodeableConcept
 AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
@@ -391,6 +391,7 @@ AU Core Profile |Must Support Choice Elements
 ---|---
 AU Core Encounter|Encounter.reasonCode, Encounter.reasonReference
 AU Core Procedure|Procedure.reasonCode, Procedure.reasonReference
+AU Core MedicationRequest|MedicationRequest.reasonCode, MedicationRequest.reasonReference
 {:.grid}
 
 

@@ -44,10 +44,8 @@ The list below shows the value sets bound to a supported element or element slic
 - [Procedure](https://tx.ontoserver.csiro.au/fhir/ValueSet/procedure-1)
 - [RCPA SPIA Pathology Reporting](https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1)
 - [Reason for Request](https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1)
-- [Reason Vaccine Administered](https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1)
 - [Service Type](https://healthterminologies.gov.au/fhir/ValueSet/service-type-1)
 - [Smoking Status](https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1)
-- [Vaccination Target Disease](https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1) 
 
 **Value sets published in FHIR**
 - [AdministrativeGender](https://hl7.org/fhir/R4/valueset-administrative-gender.html)
@@ -66,7 +64,6 @@ The list below shows the value sets bound to a supported element or element slic
 - [Immunization Status Codes](https://hl7.org/fhir/R4/valueset-immunization-status.html)
 - [LocationMode](https://hl7.org/fhir/R4/valueset-location-mode.html)
 - [LocationStatus](https://hl7.org/fhir/R4/valueset-location-status.html)
-- [Medication request category codes](https://hl7.org/fhir/R4/valueset-medicationrequest-category.html)
 - [Medication request intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html)
 - [Medicationrequest status](https://hl7.org/fhir/R4/valueset-medicationrequest-status.html)
 - [NameUse](https://hl7.org/fhir/R4/valueset-name-use.html)
@@ -118,7 +115,6 @@ The list below shows the code systems used in a value set that is bound to a sup
 - [identifierType](https://terminology.hl7.org/5.3.0/CodeSystem-v2-0203.html)
 - [Location Mode](https://hl7.org/fhir/R4/codesystem-location-mode.html)
 - [LocationStatus](https://hl7.org/fhir/R4/codesystem-location-status.html)
-- [Medication request category codes](https://hl7.org/fhir/R4/codesystem-medicationrequest-category.html)
 - [Medication request intent](https://hl7.org/fhir/R4/codesystem-medicationrequest-intent.html)
 - [Medicationrequest status](https://hl7.org/fhir/R4/codesystem-medicationrequest-status.html)
 - [NameUse](https://hl7.org/fhir/R4/codesystem-name-use.html)
