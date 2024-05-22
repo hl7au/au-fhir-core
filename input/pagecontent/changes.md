@@ -71,7 +71,7 @@ This change log documents the significant updates and resolutions implemented fr
 - Made the following changes to AU Core Smoking Status: 
   - removed Must Support from Observation.encounter [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222)
   - removed Must Support from Observation.performer [FHIR-45223](https://jira.hl7.org/browse/FHIR-45223)
-  - removed the fixed value constraint on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
+  - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
 - Removed Must Support from the following elements in AU Core Immunization:
   - Immunization.encounter [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
   - Immunization.performer [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
@@ -80,31 +80,31 @@ This change log documents the significant updates and resolutions implemented fr
 - Made the following changes to AU Core Blood Pressure: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
-  - removed the fixed value constraint on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
+  - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
 - Made the following changes to AU Core Body Height:
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
-  - removed the fixed value constraint on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
+  - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
 - Made the following changes to AU Core Body Temperature: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786) 
-  - removed the fixed value constraint on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
+  - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
 - Made the following changes to AU Core Body Weight: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
-  - removed the fixed value constraint on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120) 
+  - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120) 
 - Made the following changes to AU Core Heart Rate: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786) 
-  - removed the fixed value constraint on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
+  - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
 - Made the following changes to AU Core Respiration Rate: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
-  - removed the fixed value constraint on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
+  - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
 - Made the following changes to AU Core Waist Circumference: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)  
-  - removed the fixed value constraint on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
+  - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
 - Corrected the search parameter for gender identity to be `gender-identity` not `patient-gender-identity` [FHIR-45057](https://jira.hl7.org/browse/FHIR-45057).
 - Changed the following Organization search parameters:
   - address search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
