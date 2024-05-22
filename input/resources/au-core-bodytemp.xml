@@ -257,7 +257,7 @@
         </extension>
       </extension>
       <path value="Observation.valueQuantity"/>
-      <short value="Body height"/>
+      <short value="Body temperature"/>
       <condition value="au-core-obs-02"/>
     </element>
     <element id="Observation.valueQuantity.value">
