@@ -34,7 +34,7 @@ A system that represent digital health information using the content models of A
 
 A system that [declares conformance](declaring-conformance.html#profile-only-support) as Profile Only Support to an AU Core profile:
 - **SHALL** correctly populate a resource with all mandatory elements specified in the profile’s definition.
-- **SHALL** correctly populate a resource with all _Must Support_ elements if a value is known for the element. 
+- **SHALL** correctly populate a resource with all _Must Support_ elements for which a value is known. 
 - **SHALL** implement the requirements on [Missing Data](general-requirements.html#missing-data) when an element value is not known.
 
 A system is not required to declare Profile Only Support to all AU Core profiles. For example, a pathology laboratory system that implements the [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html) profile, is not required to produce a MedicationRequest resource. 
@@ -72,7 +72,7 @@ Must Support elements are treated differently between [AU Core Responder](ActorD
 
 #### AU Core Responder
 An AU Core Responder:
-- **SHALL** correctly populate all _Must Support_ elements if a value is known for the element.
+- **SHALL** correctly populate all _Must Support_ elements for which a value is known.
 - **SHALL** implement the requirements on [Suppressed Data](general-requirements.html#suppressed-data) when an element is NOT allowed to be shared.
 - **SHALL** implement the requirements on [Missing Data](general-requirements.html#missing-data) when an element value is not known.
 
@@ -128,7 +128,7 @@ Example: AU Core AllergyIntolerance profile showing clinicalStatus and verificat
 
 #### Interpreting profile elements labelled Must Support
 
-Profiles defined in this implementation publication flag *Must Support* on elements and not part sub-elements of a data type. 
+Profiles defined in this implementation publication flag *Must Support* on elements (e.g. `Patient.name`) and part sub-elements of a data type (e.g. `Patient.name.use`). 
 The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element.
 
 The sub-elements for each supported element in a profile are defined by a combination of the data type from the core specification and any additional rules included in the profile. A profile may include rules that:
@@ -145,35 +145,35 @@ The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot
 ##### Must Support - Primitive Elements
 Primitive elements are single elements with a primitive value. If the primitive element is labelled as *Must Support*, then the 
 - AU Core Responder **SHALL** correctly populate the element if a value is known. 
-- AU Core Requesters **SHALL** resources containing any valid value for the element without error.
+- AU Core Requesters **SHALL** accept resources containing any valid value for the element without error.
 
 For example, the AU Core Organization Profile `name` element is a primitive string datatype. Therefore, when claiming conformance to this profile:
 
 - AU Core Responder **SHALL** correctly populate a value in `Organization.name` if a value is known.
-- AU Core Requester **SHALL** accept an Organization resource without error if `Organization.name` is present and containing any valid value.
+- AU Core Requester **SHALL** accept the Organization resource without error if `Organization.name` is present and containing any valid value.
 
 ##### Must Support - Complex Elements
 Complex elements are composed of primitive and/or other complex elements. Elements may have additional rules defined in the profile that also apply, e.g. terminology binding, or invariants. 
 
 For any complex element labelled as *Must Support*, an:
 - AU Core Responder **SHALL** correctly populate the element with at least one of the sub-element values.
-- AU Core Requester **SHALL** accept resource without error if the element is present and containing any sub-elements.
+- AU Core Requester **SHALL** accept resource without error if the element is present and containing any valid sub-elements.
 
 For example, the AU Core MedicationRequest Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
-- AU Core Responder **SHALL** correctly populate a value in a `MedicationRequest.note` sub-element if a value is known e.g. `MedicationRequest.note.text`.
-- AU Core Requester **SHALL** accept the MedicationRequest resource without error if `MedicationRequest.note` is present and containing any sub-elements.
+- AU Core Responder **SHALL** correctly populate a value in any valid `MedicationRequest.note` sub-element if a value is known e.g. `MedicationRequest.note.text`.
+- AU Core Requester **SHALL** accept the MedicationRequest resource without error if `MedicationRequest.note` is present and containing any valid sub-elements.
 
 If any sub-element is labelled as *Must Support*, an: 
-- AU Core Responder **SHALL** correctly populate the element with all _Must Support_ sub-elements if a value is known. 
+- AU Core Responder **SHALL** correctly populate the element with all _Must Support_ sub-elements for which a value is known. 
 - AU Core Requester **SHALL** accept resource without error if _Must Support_ sub-elements are present containing any valid value.
 
-For example, if AU Core Patient Profile name element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
-- AU Core Responder **SHALL** correctly populate a value in `Patient.name.family` and `Patient.name.given`.
-- AU Core Requester **SHALL** accept a Patient resource without error if `Patient.name` present and containing valid values in `family` and `given` sub-element.
+For example, in the AU Core Patient Profile, the ``name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
+- AU Core Responder **SHALL** correctly populate a value in `Patient.name.family` and `Patient.name.given` if the value for those sub-elements is known.
+- AU Core Requester **SHALL** accept a Patient resource without error if `Patient.name` present and contains valid values in `family` and `given` sub-element.
 
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles (e.g., Observation.performer). 
-- AU Core Responder **SHALL** correctly populate the element with at least one referenced resource or profile types allowed. 
+- AU Core Responder **SHALL** correctly populate the element with at least one referenced resource or allowed profile types if the value is known. 
 - AU Core Requester **SHALL** accept resources without error if the element is present and containing any valid referenced resource or profiles.
 
 The table below provides a list of AU Core profile elements that allow multiple referenced resource or profile types.
@@ -189,8 +189,8 @@ AU Core MedicationRequest|MedicationRequest.reasonReference|AU Core Condition, O
 
 
 ##### Must Support - Choice of Data Types
-Some elements labelled as *Must Support* allow different data types (e.g., Observation.effective[x]) for their content. 
-- AU Core Responder **SHALL** correctly populate the element with at least one data type allowed by the element definition 
+Some elements labelled as *Must Support* allow different data types (e.g., `Observation.effective[x]`) for their content. 
+- AU Core Responder **SHALL** correctly populate the element with at least one data type allowed by the element definition if the value is known
 - AU Core Requester **SHALL** accept resource without error if the element is present and containing any valid data type allowed by the element definition.
 
 The table below provides a list of AU Core profile elements that allow multiple data types.
@@ -247,11 +247,11 @@ AU Core MedicationRequest|MedicationRequest.reasonCode, MedicationRequest.reason
 
 ##### Must Support - Choice of Terminology
 
-In AU Core elements that define support for more than one code system only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases, the 
-- AU Core Responders **SHALL** correctly populate the element from at least one supported code system.
+In AU Core, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases, the 
+- AU Core Responders **SHALL** correctly populate the element with a concept from all supported value sets where the applicable concept is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid value. 
 
-The table below lists the applicable profiles and elements in AU Core that allow multiple code systems.
+The table below lists the applicable profiles and elements in AU Core that support multiple value sets.
 
 AU Core Profile |Must Support Sub-Element|Terminology Choices
 ---|---

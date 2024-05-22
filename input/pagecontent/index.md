@@ -86,7 +86,7 @@ A system that responds to the data access request submitted by requesters, provi
 
 ### AU Core FHIR RESTful interactions
 
-For systems that support AU Core FHIR RESTful interactions ([Profile + Interaction Support](general-requirements.html#profile--interaction-support)), the interaction requirements, such as read and search operations, are detailed in the AU Core Requester and AU Core Responder [CapabilityStatements](capability-statements.html).
+For systems that support AU Core FHIR RESTful interactions ([Profile + Interaction Support](general-requirements.html#profile-support--interaction-support)), the interaction requirements, such as read and search operations, are detailed in the AU Core Requester and AU Core Responder [CapabilityStatements](capability-statements.html).
 
 The following are simple examples of AU Core FHIR RESTful interactions between AU Core Requester and AU Core Responder actors:
 
