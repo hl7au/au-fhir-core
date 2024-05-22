@@ -2,7 +2,7 @@
 
 There are two different ways to implement AU Core:
 1. [Profile Only Support](#profile-only-support): system that represent digital health information using AU Core profiles without the expectation to implement any FHIR specified interactions.
-1. [Profile Support + Interaction Support](#profile--interaction-support): system that represents digital health information using AU Core profiles (Profile Support) AND implement the [FHIR REST API](http://hl7.org/fhir/R4/http.html) interactions defined by an [AU Core Capability Statement](#au-core-capability-statements) (Interaction Support).
+1. [Profile Support + Interaction Support](#profile-support--interaction-support): system that represents digital health information using AU Core profiles (Profile Support) AND implement the [FHIR REST API](http://hl7.org/fhir/R4/http.html) interactions defined by an [AU Core Capability Statement](capability-statements.html) (Interaction Support).
 
 The requirements of the FHIR standard and [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html) apply, and define the use of terms in this guide including the conformance verbs - **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **MAY**.
 
@@ -22,7 +22,7 @@ AU Core profile elements include Mandatory and Must Support requirements. [Manda
 
 Systems may implement AU Core as: 
 - [Profile Only Support](#profile-only-support) for a system declaring conformance to one or more AU Core profiles
-- [Profile Support + Interaction Support](#profile--interaction-support) for a system declaring conformance to one or both of the [AU Core Capability Statements](#au-core-capability-statements)
+- [Profile Support + Interaction Support](#profile-support--interaction-support) for a system declaring conformance to one or both of the [AU Core Capability Statements](capability-statements.html)
 
 #### AU Core Capability Statements
 The [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) defines the conformance requirements and expectations of an [AU Core Requester](ActorDefinition-au-core-actor-requester.html) actor responsible for initiating queries for information from an [AU Core Responder](ActorDefinition-au-core-actor-responder.html). The complete list of FHIR profiles, REST API interactions, and search parameters that can be implemented by an AU Core Requester are defined in this capability statement. 
@@ -44,7 +44,7 @@ A system is not required to declare Profile Only Support to all AU Core profiles
 Profile Support + Interaction Support refers to a system that represents digital health information using the content models of AU Core profiles AND implement the REST API interactions defined by the applicable AU Core capability statement.
 
 An [AU Core Responder](ActorDefinition-au-core-actor-responder.html) that declares Profile Support + Interaction Support conformance:
-- **SHALL** [declare conformance](declaring-conformance.html#profile--interaction-support) to the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html) in the server's CapabilityStatement.
+- **SHALL** [declare conformance](declaring-conformance.html#profile-support--interaction-support) to the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html) in the server's CapabilityStatement.
 - **SHALL** specify the implemented resource types, associated AU Core profiles, REST API interactions and search parameters in the server's CapabilityStatement
 - **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support-and-obligation) requirements for the elements defined as such in the implemented AU Core profiles
 - **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html#resourcesSummary1).

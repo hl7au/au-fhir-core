@@ -2,7 +2,7 @@
 
 Systems may declare conformance to AU Core as: 
 - [Profile Only Support](general-requirements.html#profile-only-support) for a system declaring conformance to one or more AU Core profiles
-- [Profile Support + Interaction Support](general-requirements.html#profile--interaction-support) for a system declaring conformance to one or both of the [AU Core Capability Statements](#au-core-capability-statements)
+- [Profile Support + Interaction Support](general-requirements.html#profile-support--interaction-support) for a system declaring conformance to one or both of the [AU Core Capability Statements](capability-statements.html)
 
 FHIR Servers that implement AU Core declare conformance to one of these approaches as described in the relevant section below.
 
