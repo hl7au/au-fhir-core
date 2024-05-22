@@ -103,3 +103,5 @@ This change log documents the significant updates and resolutions implemented fr
   - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
 - Made the following changes to AU Core Pathology Result Observation:
   - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
+- Made the following changes to the General Requirements page:
+  - corrections to use consistent italicisation and capitalisation when referring to *Must Support* [FHIR-45241](https://jira.hl7.org/browse/FHIR-45241)
