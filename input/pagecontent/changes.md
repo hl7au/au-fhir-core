@@ -8,6 +8,7 @@ This change log documents the significant updates and resolutions implemented fr
 #### Changes in this version
 
 - Added Security and Privacy page [FHIR-45067](https://jira.hl7.org/browse/FHIR-45067).
+- Added a Medicine Information page and moved the relevant information from the General Guidance to this page [FHIR-45165](https://jira.hl7.org/browse/FHIR-45165).
 - Made the following changes to AU Core Immunization:
   - removed Must Support from Immunization.protocolApplied, Immunization.protocolApplied.series, Immunization.protocolApplied.targetDisease, Immunization.protocolApplied.doseNumber[x] [FHIR-44674](https://jira.hl7.org/browse/FHIR-44674), [FHIR-44656](https://jira.hl7.org/browse/FHIR-44656), [FHIR-44654](https://jira.hl7.org/browse/FHIR-44654)
   - removed Must Support from Immunization.reasonCode [FHIR-44654](https://jira.hl7.org/browse/FHIR-44654), [FHIR-45968](https://jira.hl7.org/browse/FHIR-45968)
@@ -48,12 +49,14 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support on Practitioner.name.given [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
   - replaced constraint _au-core-prac-01: At least text or family name shall be present_ with making Practitioner.name.family mandatory (1..1) [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
 - Removed Must Support from PractitionerRole.location in AU Core PractitionerRole [FHIR-43841](https://jira.hl7.org/browse/FHIR-43841).
-- Removed Must Support from the following elements in AU Core Procedure:
-  - Procedure.statusReason [FHIR-45013](https://jira.hl7.org/browse/FHIR-45013)
-  - Procedure.category [FHIR-45014](https://jira.hl7.org/browse/FHIR-45014)
-  - Procedure.recorder [FHIR-45015](https://jira.hl7.org/browse/FHIR-45015), [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082)
-  - Procedure.asserter [FHIR-45016](https://jira.hl7.org/browse/FHIR-45016), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
-  - Procedure.bodySite and added profile-specific implementation guidance on including body site information [FHIR-45017](https://jira.hl7.org/browse/FHIR-45017).
+- Made the following changes to AU Core Procedure:
+  - removed Must Support from Procedure.statusReason [FHIR-45013](https://jira.hl7.org/browse/FHIR-45013)
+  - removed Must Support from Procedure.category [FHIR-45014](https://jira.hl7.org/browse/FHIR-45014)
+  - removed Must Support from Procedure.recorder [FHIR-45015](https://jira.hl7.org/browse/FHIR-45015), [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082)
+  - removed Must Support from Procedure.asserter [FHIR-45016](https://jira.hl7.org/browse/FHIR-45016), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
+  - removed Must Support from Procedure.bodySite and added profile-specific implementation guidance on including body site information [FHIR-45017](https://jira.hl7.org/browse/FHIR-45017), [FHIR-45114](https://jira.hl7.org/browse/FHIR-45114)
+  - removed Must Support from Procedure.note [FHIR-45114](https://jira.hl7.org/browse/FHIR-45114)
+  - removed the cardinality constraint on Procedure.performed[x], changing it from 1..1 to 0..1 [FHIR-45109](https://jira.hl7.org/browse/FHIR-45109)
 - Removed AU Core Provenance [FHIR-45191](https://jira.hl7.org/browse/FHIR-45191).
 - Removed AU Core MedicationStatement and added to Future of AU Core that AU Core MedicationStatement is planned for AU Core R2 [FHIR-45052](https://jira.hl7.org/browse/FHIR-45052).
 - Updated mapping of AUCDI Procedure Completed Event to be represented by Procedure only [au-fhir-core #147](https://github.com/hl7au/au-fhir-core/issues/147).
