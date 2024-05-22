@@ -8,7 +8,7 @@ This change log documents the significant updates and resolutions implemented fr
 #### Changes in this version
 
 - Added Security and Privacy page [FHIR-45067](https://jira.hl7.org/browse/FHIR-45067).
-- Added a Medicine Information page and moved the relevant information from the General Guidance to this new page [FHIR-45165](https://jira.hl7.org/browse/FHIR-45165).
+- Added a Medicine Information page and moved the relevant information from the General Guidance to this page [FHIR-45165](https://jira.hl7.org/browse/FHIR-45165).
 - Made the following changes to AU Core Immunization:
   - removed Must Support from Immunization.protocolApplied, Immunization.protocolApplied.series, Immunization.protocolApplied.targetDisease, Immunization.protocolApplied.doseNumber[x] [FHIR-44674](https://jira.hl7.org/browse/FHIR-44674), [FHIR-44656](https://jira.hl7.org/browse/FHIR-44656), [FHIR-44654](https://jira.hl7.org/browse/FHIR-44654)
   - removed Must Support from Immunization.reasonCode [FHIR-44654](https://jira.hl7.org/browse/FHIR-44654), [FHIR-45968](https://jira.hl7.org/browse/FHIR-45968)
