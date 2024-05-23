@@ -39,7 +39,6 @@ The list below shows the value sets bound to a supported element or element slic
 - [Metric Body Length Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-length-units-1)
 - [Metric Body Temperature Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-temperature-units-1)
 - [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1)
-- [ObservationStatus Result Available](https://healthterminologies.gov.au/fhir/ValueSet/observationstatus-result-available-1)
 - [Practitioner Role](https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1)
 - [Procedure](https://tx.ontoserver.csiro.au/fhir/ValueSet/procedure-1)
 - [RCPA SPIA Pathology Reporting](https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1)
