@@ -45,7 +45,6 @@
         </extension>
       </extension>
       <path value="Observation.status" />
-      <fixedCode value="final" />
     </element>
     <element id="Observation.category">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">

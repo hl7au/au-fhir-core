@@ -44,7 +44,6 @@
         </extension>
       </extension>
       <path value="Observation.status" />
-      <fixedCode value="final" />
       <mustSupport value="true"/>
     </element>
     <element id="Observation.category">
