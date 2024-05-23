@@ -45,12 +45,12 @@ Profile Support + Interaction Support refers to a system that represents digital
 
 An [AU Core Responder](ActorDefinition-au-core-actor-responder.html) that declares Profile Support + Interaction Support conformance:
 - **SHALL** [declare conformance](declaring-conformance.html#profile-support--interaction-support) to the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html) in the server's CapabilityStatement.
-- **SHALL** specify the implemented resource types, associated AU Core profiles, REST API interactions and search parameters in the server's CapabilityStatement
-- **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support-and-obligation) requirements for the elements defined as such in the implemented AU Core profiles
+- **SHALL** specify the implemented resource types, associated AU Core profiles, REST API interactions and search parameters in the server's CapabilityStatement.
+- **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support-and-obligation) requirements for the elements defined as such in the implemented AU Core profiles.
 - **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html#resourcesSummary1).
 
 An [AU Core Requester](ActorDefinition-au-core-actor-requester.html) that declares Profile Support + Interaction Support conformance:
-- **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support-and-obligation) requirements for the elements defined as such in the implemented AU Core profiles
+- **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support-and-obligation) requirements for the elements defined as such in the implemented AU Core profiles.
 - **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Requester Capability Statement](CapabilityStatement-au-core-requester.html#resourcesSummary1).
 
 ### Mandatory Elements
@@ -130,7 +130,7 @@ Example: AU Core AllergyIntolerance profile showing clinicalStatus and verificat
 
 #### Interpreting profile elements labelled Must Support
 
-Profiles defined in this implementation publication flag *Must Support* on elements (e.g. `Patient.name`) and part sub-elements of a data type (e.g. `Patient.name.use`). 
+Profiles defined in this implementation publication flag *Must Support* on elements (e.g. `Patient.name`) and sub-elements of a data type (e.g. `Patient.name.use`). 
 The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element.
 
 The sub-elements for each supported element in a profile are defined by a combination of the data type from the core specification and any additional rules included in the profile. A profile may include rules that:
@@ -168,9 +168,9 @@ If a sub-element is labelled as *Must Support*:
 - AU Core Responders **SHALL** correctly populate the element with all _Must Support_ sub-elements for which a value is known. 
 - AU Core Requesters **SHALL** accept resource without error if _Must Support_ sub-elements are present and containing any valid value.
 
-For example, in the AU Core Patient Profile, the ``name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
-- AU Core Responders **SHALL** correctly populate a value in `Patient.name.family` and `Patient.name.given` if the value for those sub-elements is known.
-- AU Core Requesters **SHALL** accept a Patient resource without error if `Patient.name` present and contains valid values in `family` and `given` sub-element.
+For example, in the AU Core Practitioner Profile, the `name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
+- AU Core Responders **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
+- AU Core Requesters **SHALL** accept a Patient resource without error if `Practitioner.name` is present and contains valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements.
 
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
@@ -307,7 +307,7 @@ If the data element is a *Mandatory* element (minimum cardinality is > 0), the e
 2. For *non-coded* data elements where the applicable AU Core profile mandates a sub-element, e.g. in AU Core PractitionerRole, the sub-element `Practitioner.name.family` is mandatory, then the resource must contain the sub-element otherwise the resource will not be conformant.
 
 3. For *coded* data elements:
-    - *required* binding strength (CodeableConcept or code datatypes):
+    - *required* binding strength:
       - use the appropriate "unknown" concept code from the value set if available.
       - if the value set does not have the appropriate "unknown" concept code, you must use a concept from the value set anyway. Otherwise, the instance will not be conformant.
       - For AU Core profiles, the following status elements with required binding have no appropriate "unknown" concept code:
@@ -316,7 +316,7 @@ If the data element is a *Mandatory* element (minimum cardinality is > 0), the e
         - `Immunization.status`
         
       &#xa;&#xa;&#xa;&#xa;&#42;The clinicalStatus element is conditionally mandatory based on resource-specific constraints.
-    - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept, or Coding datatypes):
+    - *example*, *preferred*, or *extensible* binding strengths:
       - when the system has text but no coded value, only the text sub-element is populated.
       - when there is neither text or coded value:
         - use the appropriate "unknown" concept code from the value set if available.
