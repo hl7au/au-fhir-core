@@ -69,6 +69,7 @@ This change log documents the significant updates and resolutions implemented fr
   - AllergyIntolerance.asserter [FHIR-44699](https://jira.hl7.org/browse/FHIR-44699), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - AllergyIntolerance.recorder [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082), [FHIR-45066](https://jira.hl7.org/browse/FHIR-45066)
   - AllergyIntolerance.encounter [FHIR-45123](https://jira.hl7.org/browse/FHIR-45123)
+  - AllergyIntolerance.note [FHIR-45188](https://jira.hl7.org/browse/FHIR-45188)
 - Made the following changes to AU Core Smoking Status: 
   - removed Must Support from Observation.encounter [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222)
   - removed Must Support from Observation.performer [FHIR-45223](https://jira.hl7.org/browse/FHIR-45223)
@@ -120,3 +121,6 @@ This change log documents the significant updates and resolutions implemented fr
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
 - Made the following changes in AU Core Server CapabilityStatement:
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
+- Made the following changes to the Guidance > AUCDI page:
+  - Renamed 'AUCDI Data Class' to 'AUCDI Data Group' in the AUCDI mappings into AU Core table [FHIR-45167](https://jira.hl7.org/browse/FHIR-45167)
+  - Added column attribute descriptions to explain each column [FHIR-45167](https://jira.hl7.org/browse/FHIR-45167)
