@@ -129,29 +129,5 @@
       <path value="MedicationRequest.dosageInstruction"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MedicationRequest.dispenseRequest">
-      <path value="MedicationRequest.dispenseRequest"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MedicationRequest.dispenseRequest.validityPeriod">
-      <path value="MedicationRequest.dispenseRequest.validityPeriod"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
-      <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MedicationRequest.dispenseRequest.quantity">
-      <path value="MedicationRequest.dispenseRequest.quantity"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MedicationRequest.substitution">
-      <path value="MedicationRequest.substitution"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MedicationRequest.substitution.allowed[x]">
-      <path value="MedicationRequest.substitution.allowed[x]"/>
-      <mustSupport value="true"/>
-    </element>
   </differential>
 </StructureDefinition>

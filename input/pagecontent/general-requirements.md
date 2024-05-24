@@ -327,9 +327,9 @@ Complex elements are composed of primitive and/or other complex elements. Elemen
 
 For any complex element labelled as *Must Support*, an AU Core Responder **SHALL** be capable of providing at least one of the sub-element values. For some complex types a valid value can be constructed by populating only one sub-element, but usually more than one sub-element is needed. An AU Core Requestor **SHALL** be capable of processing the resource with all sub-elements.
 
-For example, the AU Core MedicationRequest Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
-- AU Core Responders **SHALL** be capable of providing a value in a `MedicationRequest.note` sub-element e.g. `MedicationRequest.note.text`.
-- AU Core Requestors **SHALL** be capable of processing the MedicationRequest resource with a value in `MedicationRequest.note`.
+For example, the AU Core Condition Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
+- AU Core Responders **SHALL** be capable of providing a value in a `Condition.note` sub-element e.g. `Condition.note.text`.
+- AU Core Requestors **SHALL** be capable of processing the Condition resource with a value in `Condition.note`.
 
 For example, if AU Core Patient Profile name element is labelled *Must Support* and has *Must Support* sub-elements "family” and “given”. When claiming conformance to this profile:
 - AU Core Responders **SHALL** be capable of providing a value in `Patient.name.family` and `Patient.name.given`.
@@ -360,7 +360,6 @@ AU Core Diagnostic Result Observation|Observation.value[x]|Quantity, CodeableCon
 AU Core Diagnostic Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
 AU Core Immunization|Immunization.occurrence[x]|dateTime, string
 AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
-AU Core MedicationRequest|MedicationRequest.substitution.allowed[x]|boolean, CodeableConcept
 AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
 {:.grid}
 
