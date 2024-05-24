@@ -125,10 +125,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MedicationRequest.note">
-      <path value="MedicationRequest.note"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="MedicationRequest.dosageInstruction">
       <path value="MedicationRequest.dosageInstruction"/>
       <mustSupport value="true"/>

@@ -28,9 +28,6 @@
         </coding>
         <text value="Pain management"/>
     </reasonCode>
-    <note>
-        <text value="Patient requires an administration aid."/>
-    </note>
     <dosageInstruction>
         <text value="1-2 tablets every 4-6 hours as needed for pain"/>
         <timing>
