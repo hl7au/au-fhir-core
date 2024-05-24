@@ -693,6 +693,11 @@
 					<generation value="markdown"/>
 				</page>
 				<page>
+					<nameUrl value="medicine-information.html"/>
+					<title value="Medicine Information"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
 					<nameUrl value="aucdi.html"/>
 					<title value="AUCDI"/>
 					<generation value="markdown"/>
