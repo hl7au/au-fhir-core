@@ -17,9 +17,14 @@ Updates to AU Core depend upon community input and we encourage our audience to 
 
 ### AUCDI mappings into AU Core
 
-The table below shows the relationship between the AUCDI Data Groups and Elements and AU Core profiles.
+The table below shows the relationship between the AUCDI Data Groups and Elements and AU Core profiles.<br/>
+Column attribute descriptions are as follows:
+- <b>AUCDI Data Group</b>: Represents a grouping of one or more AUCDI Data Elements.
+- <b>AUCDI Data Element</b>: Represents a single, discreet clinical concept defined by AUCDI.
+- <b>AU Core Profile(s)</b>: Represents the mapping of AUCDI Data Groups and AUCDI Data Elements to AU Core FHIR artefacts.
+- <b>FHIR Path</b>: The specific path in the FHIR standards for each AUCDI Data Element within, showing where and how to implement these elements in FHIR-based systems. 
 
-<p class="request-for-feedback">Request for feedback on resource selection and profile mapping for the following AUCDI classes:<br/> 
+<p class="request-for-feedback">Request for feedback on resource selection and profile mapping for the following AUCDI groups:<br/> 
 - Medication use statement<br/>
 - Procedure completed event<br/>
 - Biomarkers<br/>.<p>
@@ -27,7 +32,7 @@ The table below shows the relationship between the AUCDI Data Groups and Element
 <table border="1" cellspacing="0" cellpadding="0" width="100%">
 <thead>
   <tr style="background-color: #f2f2f2;">
-    <th>AUCDI Data Class</th>
+    <th>AUCDI Data Group</th>
     <th colspan="2">AUCDI Data Element</th>
     <th>AU Core Profile(s)</th>
     <th>FHIR Path</th>

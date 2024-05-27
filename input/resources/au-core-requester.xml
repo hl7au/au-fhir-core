@@ -37,9 +37,6 @@
         <li>
           <a href="http://hl7.org/fhir/smart-app-launch/">SMART Application Launch Framework Implementation Guide</a>
         </li>
-        <li>
-          <a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Export Implementation Guide</a>
-        </li>
       </ul>
       <h2 id="rest">FHIR RESTful Capabilities</h2>
       <div class="panel panel-default">
@@ -2956,11 +2953,6 @@
 </extension>
 </implementationGuide>
 <implementationGuide value="http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-</implementationGuide>
-<implementationGuide value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>

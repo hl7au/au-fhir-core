@@ -95,11 +95,11 @@ When a _Must Support_ element requires a more tightly stated obligation, this ob
 
 When rendered in an implementation guide each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table".
 
-The elements labelled *Must Support* in these views are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Implementers should refer to the "Key Elements Table" to see the full set of elements that are Mandatory or Must Support, and the full set of terminology requirements.
+The elements labelled *Must Support* in these views are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Implementers should refer to the "Key Elements Table" to see the full set of elements that are Mandatory or *Must Support*, and the full set of terminology requirements.
 
 Implementers should take note that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile. 
 
-##### Presentation of elements labelled *Must Support* in raw representations
+##### Presentation of elements labelled Must Support in raw representations
 
 When viewing the raw representation (e.g. XML or JSON) of a profile, elements labelled *Must Support* are flagged as `mustSupport` set to "true". 
 
@@ -205,7 +205,6 @@ AU Core Diagnostic Result Observation|Observation.value[x]|Quantity, CodeableCon
 AU Core Diagnostic Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
 AU Core Immunization|Immunization.occurrence[x]|dateTime, string
 AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
-AU Core MedicationRequest|MedicationRequest.substitution.allowed[x]|boolean, CodeableConcept
 AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
 {:.grid}
 
@@ -261,7 +260,7 @@ AU Core Medication|Medication.code.coding|[Australian Medication](https://health
 AU Core MedicationRequest|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 {:.grid}
 
-For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) constrains the terminology choices for `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging Must Support on those two terminology slices.
+For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) constrains the terminology choices for `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging *Must Support* on those two terminology slices.
 
 When claiming conformance to the AU Core Medication profile: 
 - AU Core Responders **SHALL** correctly populate `Medication.code.coding` with either a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, if a coded value is known.

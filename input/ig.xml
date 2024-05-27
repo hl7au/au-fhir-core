@@ -259,6 +259,14 @@
 			<description value="Cellulitis of right knee&#xa;&#xa;Patient: Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="Condition/noknown"/>
+			</reference>
+			<name value="Condition - No known condition"/>
+			<description value="No known condition&#xa;&#xa;Patient: Deangelo HOWE"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+		</resource>
 		<!--ENCOUNTER EXAMPLES-->
 		<resource>
 			<reference>

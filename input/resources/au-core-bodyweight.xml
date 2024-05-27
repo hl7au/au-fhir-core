@@ -335,8 +335,16 @@
       </extension>
       <path value="Observation.valueQuantity.code" />
       <binding>
-        <strength value="required" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1" />
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="candidate"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1"/>
+          </extension>
+        </extension>
+        <strength value="required"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/ucum-bodyweight"/>
       </binding>
     </element>
     <element id="Observation.dataAbsentReason">
