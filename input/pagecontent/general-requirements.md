@@ -174,10 +174,10 @@ For example, in the AU Core Practitioner Profile, the `name` element is labelled
 
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
-- AU Core Responders **SHALL** correctly populate the element with at least one referenced resource or allowed profile types if the value is known. 
+- AU Core Responders **SHALL** correctly populate the element with at least one referenced resource or allowed profile if the value is known. 
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid referenced resource or profiles.
 
-The table below provides a list of AU Core profile elements that allow multiple referenced resource or profile types.
+The table below provides a list of AU Core profile elements that allow multiple referenced resource types or profiles.
 
 AU Core Profile |Must Support Element|Reference
 ---|---|---
@@ -201,8 +201,18 @@ AU Core Profile |Must Support Element|Data Types
 AU Core AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
 AU Core Condition|Condition.onset[x]|dateTime, age, Period, Range
 AU Core Diagnostic Result Observation|Observation.effective[x]|dateTime, Period, Timing, instant
+AU Core Pathology Result Observation|Observation.effective[x]|dateTime, Period, Timing, instant
 AU Core Diagnostic Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
+AU Core Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
 AU Core Diagnostic Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
+AU Core Pathology Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
+AU Core Blood Pressure|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
+AU Core Body Height|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
+AU Core Body Temperature|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
+AU Core Body Weight|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
+AU Core Heart Rate|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
+AU Core Respiration Rate|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
+AU Core Waist Circumference|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
 AU Core Immunization|Immunization.occurrence[x]|dateTime, string
 AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
 AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
@@ -303,7 +313,7 @@ If the data element is a *Mandatory* element (minimum cardinality is > 0), the e
          }
     ~~~
       
-2. For *non-coded* data elements where the applicable AU Core profile mandates a sub-element, e.g. in AU Core PractitionerRole, the sub-element `Practitioner.name.family` is mandatory, then the resource must contain the sub-element otherwise the resource will not be conformant.
+2. For *non-coded* data elements where the applicable AU Core profile mandates a sub-element, e.g. in AU Core Practitioner, the sub-element `Practitioner.name.family` is mandatory, then the resource must contain the sub-element otherwise the resource will not be conformant.
 
 3. For *coded* data elements:
     - *required* binding strength:
