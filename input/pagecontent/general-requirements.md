@@ -1,4 +1,4 @@
-### Conforming to AU Core
+### Conformin                                                                                                                                     g to AU Core
 
 There are two different ways to implement AU Core:
 1. [Profile Only Support](#profile-only-support): system that represent digital health information using AU Core profiles without the expectation to implement any FHIR specified interactions.
@@ -200,22 +200,23 @@ AU Core Profile |Must Support Element|Data Types
 ---|---|---
 AU Core AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
 AU Core Condition|Condition.onset[x]|dateTime, age, Period, Range
+AU Core Condition|Condition.abatement[x]|dateTime, age, Period, Range
 AU Core Diagnostic Result Observation|Observation.effective[x]|dateTime, Period, Timing, instant
 AU Core Pathology Result Observation|Observation.effective[x]|dateTime, Period, Timing, instant
-AU Core Diagnostic Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
-AU Core Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
-AU Core Diagnostic Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
-AU Core Pathology Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
-AU Core Blood Pressure|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
-AU Core Body Height|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
-AU Core Body Temperature|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
-AU Core Body Weight|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
-AU Core Heart Rate|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
-AU Core Respiration Rate|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
+AU Core Diagnostic Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU Core Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU Core Diagnostic Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU Core Pathology Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU Core Blood Pressure|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU Core Body Height|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU Core Body Temperature|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU Core Body Weight|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU Core Heart Rate|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU Core Respiration Rate|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU Core Waist Circumference|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
 AU Core Immunization|Immunization.occurrence[x]|dateTime, string
 AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
-AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
+AU Core Procedure|Procedure.performed[x]|datetime, dateTime, Period, string, Age, Range
 {:.grid}
 
 ##### Must Support - Choice of Identifiers
