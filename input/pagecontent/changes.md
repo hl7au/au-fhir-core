@@ -25,6 +25,9 @@ This change log documents the significant updates and resolutions implemented fr
   - in MedicationRequest.requester replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
   - removed Must Support from MedicationRequest.identifier [FHIR-45208](https://jira.hl7.org/browse/FHIR-45208)
   - removed Must Support from MedicationRequest.category [FHIR-45207](https://jira.hl7.org/browse/FHIR-45207)
+  - removed Must Support from MedicationRequest.note [FHIR-45209](https://jira.hl7.org/browse/FHIR-45209)
+  - removed Must Support from MedicationRequest.dispenseRequest, MedicationRequest.dispenseRequest.validityPeriod, MedicationRequest.dispenseRequest.numberOfRepeatsAllowed, MedicationRequest.dispenseRequest.quantity [FHIR-45088](https://jira.hl7.org/browse/FHIR-45088)
+  - removed Must Support from MedicationRequest.substitution, MedicationRequest.substitution.allowed[x] [FHIR-45088](https://jira.hl7.org/browse/FHIR-45088)
   - added Must Support to MedicationRequest.reasonReference [FHIR-45090](https://jira.hl7.org/browse/FHIR-45090)
 - Made the following changes to AU Core Medication:
   - removal of Must Support from Medication.manufacturer [FHIR-45130](https://jira.hl7.org/browse/FHIR-45130)
