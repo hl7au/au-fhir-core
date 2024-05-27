@@ -8,6 +8,7 @@ This change log documents the significant updates and resolutions implemented fr
 #### Changes in this version
 
 - Added Security and Privacy page [FHIR-45067](https://jira.hl7.org/browse/FHIR-45067).
+- Added Variance page [TBD].
 - Moved the Medicine Information section from the General Guidance page to a new Medicine Information page [FHIR-45165](https://jira.hl7.org/browse/FHIR-45165).
 - Made the following changes to AU Core Immunization:
   - removed Must Support from Immunization.encounter [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
@@ -121,8 +122,6 @@ This change log documents the significant updates and resolutions implemented fr
   - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
 - Made the following changes to AU Core Pathology Result Observation:
   - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
-<<<<<<< HEAD
-=======
 - Made the following changes to the General Requirements page:
   - corrections to use consistent italicisation and capitalisation when referring to *Must Support* [FHIR-45241](https://jira.hl7.org/browse/FHIR-45241)
   - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
@@ -131,4 +130,3 @@ This change log documents the significant updates and resolutions implemented fr
 - Made the following changes in AU Core Server CapabilityStatement:
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
 
->>>>>>> master
