@@ -18,7 +18,7 @@ Implementers are advised to be familiar with the requirements of the FHIR standa
 #### AU Core Profiles and Extensions
 The [Profiles and Extensions](profiles-and-extensions.html) page lists the AU Core profiles and AU Core extensions defined for this implementation guide. An AU Core profile [StructureDefinitions](http://hl7.org/fhir/R4/structuredefinition.html) defines the minimum elements, extensions, vocabularies and value sets that **SHALL** be present and constrains the way elements are used when conforming to the profile.
 
-AU Core profile elements include Mandatory and Must Support requirements. Mandatory elements are required and have a minimum cardinality of 1 (min=1). Must Support elements have defined conformance obligations in AU Core. 
+AU Core profile elements include Mandatory and *Must Support* requirements. Mandatory elements are required and have a minimum cardinality of 1 (min=1). *Must Support* elements have defined conformance obligations in AU Core. 
 
 The [Must Support](general-requirements.html#must-support) page defines the:
 - [profile only expectations](general-requirements.html#profile-only-support) for support of these elements if a system is claiming conformance to a profile
@@ -32,7 +32,7 @@ The [AU Core Server CapabilityStatement](CapabilityStatement-au-core-server.html
 #### Profile Only Support
 Systems may deploy, and support, one or more AU Core profiles to represent digital health information. A system that implements _profile only support_ will use a profile's content model without any expectations to implement AU Core interactions and:
 - **SHALL** populate a resource with all profile elements that are mandatory by that profile’s StructureDefinition.
-- **SHALL** populate a resource with all profile elements labelled Must Support unless that element is not available. Where the data is not available the system **SHALL** implement the requirements on [Missing data](general-requirements.html#missing-data).
+- **SHALL** populate a resource with all profile elements labelled *Must Support* unless that element is not available. Where the data is not available the system **SHALL** implement the requirements on [Missing data](general-requirements.html#missing-data).
 
 A system **SHOULD** support all AU Core profiles required by the system for the supply or consumption of data within their clinical or information flows. For example, a pathology laboratory may support [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), but may not support [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html).
 
@@ -228,14 +228,14 @@ For mandatory elements (minimum cardinality is > 0), the element **SHALL** be po
 - where a requester may know that the data is suppressed use the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
 
 ### Mandatory Elements
-Mandatory elements are elements with a minimum cardinality of 1 (min=1). When an element is Mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements in [Missing Data](#missing-data) **SHALL** be applied. An element can be both _Must Support_ and mandatory, in which case the requirements for mandatory's Missing data requirements apply as described in [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data).
+Mandatory elements are elements with a minimum cardinality of 1 (min=1). When an element is Mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements in [Missing Data](#missing-data) **SHALL** be applied. An element can be both *Must Support* and mandatory, in which case the requirements for mandatory's Missing data requirements apply as described in [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data).
 
 ### Must Support
 Labelling an element *[Must Support](https://www.hl7.org/fhir/conformance-rules.html#mustSupport)* means that systems that request, or respond to requests, for data **SHALL** provide support for the element in some meaningful way. 
 
-Because AU Core is a foundational standard, *Must Support* needs to be defined a way that does not impede or prescribe what a client or server does with the data, so as not to impede each implementation’s ability to tighten and define expectations for use under their own business rules, regulations, policies, etc. There is also a the challenge that comes from inheritance of must support flags into implementation guides that have strict definitions for must support (e.g., must be able to display this value to an end user), AU Core will only apply the *Must Support* flag on the elements that are necessary to support _minimum_ requirements and are expected to be flagged as *Must Support* across the majority of Australian FHIR implementation guides.
+Because AU Core is a foundational standard, *Must Support* needs to be defined a way that does not impede or prescribe what a client or server does with the data, so as not to impede each implementation’s ability to tighten and define expectations for use under their own business rules, regulations, policies, etc. There is also the challenge that comes from inheritance of *Must Support* flags into implementation guides that have strict definitions for *Must Support* (e.g., must be able to display this value to an end user); AU Core will only apply the *Must Support* flag on the elements that are necessary to support _minimum_ requirements and are expected to be flagged as *Must Support* across the majority of Australian FHIR implementation guides.
 
-Must Support elements are treated differently between AU Core Responders and Requestors, *Must Support* on a profile element **SHALL** be interpreted as follows.
+*Must Support* elements are treated differently between AU Core Responders and Requestors; *Must Support* on a profile element **SHALL** be interpreted as follows.
 
 #### AU Core Responder
 An AU Core Responder:
@@ -250,14 +250,14 @@ An AU Core Responder:
 
 #### AU Core Requester
 An AU Core Requester:
-- **SHALL** be capable of meaningfully processing resources with must support elements
+- **SHALL** be capable of meaningfully processing resources with *Must Support* elements
    - **SHALL** be able to process resource instances containing elements with missing or suppressed information.
 - **MAY** choose to reject non-conformant resources 
 - **SHALL** interpret missing data elements within resource instances as data not present in the source system when querying AU Core Responders
 
-Processing, depending on local requirements, may mean display, persist, index, or action in an event or request workflow. Processing may differ based on the element’s value. For example, one possible value of the [Immunization.status](https://hl7.org/fhir/r4/immunization-definitions.html#Immunization.status) element is `entered-in-error`. This element is marked as Must Support; requestors must be capable of processing this value to handle the resource’s clinical data appropriately.
+Processing, depending on local requirements, may mean display, persist, index, or action in an event or request workflow. Processing may differ based on the element’s value. For example, one possible value of the [Immunization.status](https://hl7.org/fhir/r4/immunization-definitions.html#Immunization.status) element is `entered-in-error`. This element is marked as *Must Support*; requestors must be capable of processing this value to handle the resource’s clinical data appropriately.
 
-<p class="stu-note">AU Core provides a narrative description of the obligations associated with profile elements for system actors on this page. We are moving to introduce Obligations on actors for AU Core profiles. Each element labelled Must Support will specify the obligations associated with its use for each AU Core system actor by providing one or more obligations using the <a href="https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-obligation.html">Obligation extension</a> and values from the <a href="https://build.fhir.org/ig/HL7/fhir-extensions//CodeSystem-obligation.html">obligation code value set</a>.</p>
+<p class="stu-note">AU Core provides a narrative description of the obligations associated with profile elements for system actors on this page. We are moving to introduce Obligations on actors for AU Core profiles. Each element labelled <i>Must Support</i> will specify the obligations associated with its use for each AU Core system actor by providing one or more obligations using the <a href="https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-obligation.html">Obligation extension</a> and values from the <a href="https://build.fhir.org/ig/HL7/fhir-extensions//CodeSystem-obligation.html">obligation code value set</a>.</p>
 
 #### Presentation of elements labelled Must Support in profiles
 
@@ -265,11 +265,11 @@ Processing, depending on local requirements, may mean display, persist, index, o
 
 When rendered in an implementation guide each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table".
 
-The elements labelled *Must Support* in these views are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Implementers should refer to the "Key Elements Table" to see the full set of elements that are Mandatory or Must Support, and the full set of terminology requirements.
+The elements labelled *Must Support* in these views are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Implementers should refer to the "Key Elements Table" to see the full set of elements that are Mandatory or *Must Support*, and the full set of terminology requirements.
 
 Implementers should take note that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile. 
 
-##### Presentation of elements labelled *Must Support* in raw representations
+##### Presentation of elements labelled Must Support in raw representations
 
 When viewing the raw representation (e.g. XML or JSON) of a profile, elements labelled *Must Support* are flagged as `mustSupport` set to "true". 
 
@@ -327,9 +327,9 @@ Complex elements are composed of primitive and/or other complex elements. Elemen
 
 For any complex element labelled as *Must Support*, an AU Core Responder **SHALL** be capable of providing at least one of the sub-element values. For some complex types a valid value can be constructed by populating only one sub-element, but usually more than one sub-element is needed. An AU Core Requestor **SHALL** be capable of processing the resource with all sub-elements.
 
-For example, the AU Core MedicationRequest Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
-- AU Core Responders **SHALL** be capable of providing a value in a `MedicationRequest.note` sub-element e.g. `MedicationRequest.note.text`.
-- AU Core Requestors **SHALL** be capable of processing the MedicationRequest resource with a value in `MedicationRequest.note`.
+For example, the AU Core Condition Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
+- AU Core Responders **SHALL** be capable of providing a value in a `Condition.note` sub-element e.g. `Condition.note.text`.
+- AU Core Requestors **SHALL** be capable of processing the Condition resource with a value in `Condition.note`.
 
 For example, if AU Core Patient Profile name element is labelled *Must Support* and has *Must Support* sub-elements "family” and “given”. When claiming conformance to this profile:
 - AU Core Responders **SHALL** be capable of providing a value in `Patient.name.family` and `Patient.name.given`.
@@ -360,13 +360,12 @@ AU Core Diagnostic Result Observation|Observation.value[x]|Quantity, CodeableCon
 AU Core Diagnostic Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, Period
 AU Core Immunization|Immunization.occurrence[x]|dateTime, string
 AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
-AU Core MedicationRequest|MedicationRequest.substitution.allowed[x]|boolean, CodeableConcept
 AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
 {:.grid}
 
 
 ##### Must Support - Choice of Identifiers
-A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing must support on each identifier slice. AU Core Responders **SHALL** support at least one identifier for each element listed in the table below. AU Core Requesters **SHALL** support processing resources with all identifiers listed in the table below.
+A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing *Must Support* on each identifier slice. AU Core Responders **SHALL** support at least one identifier for each element listed in the table below. AU Core Requesters **SHALL** support processing resources with all identifiers listed in the table below.
 
 AU Core Profile |Must Support Element|Supported Identifiers
 ---|---|---
@@ -408,7 +407,7 @@ AU Core Medication|Medication.code.coding|[Australian Medication](https://health
 AU Core MedicationRequest|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 {:.grid}
 
-For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) constrains the terminology choices for `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging Must Support on those two terminology slices.
+For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) constrains the terminology choices for `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging *Must Support* on those two terminology slices.
 
 When claiming conformance to the AU Core Medication profile: 
 - AU Core Responders **SHALL** be capable of populating `Medication.code.coding` with a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, if a coded value is available.

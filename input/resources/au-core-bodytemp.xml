@@ -29,7 +29,6 @@
     </element>
     <element id="Observation.status">
       <path value="Observation.status" />
-      <fixedCode value="final" />
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
@@ -85,8 +84,16 @@
     <element id="Observation.value[x]:valueQuantity.code">
       <path value="Observation.value[x].code" />
       <binding>
-        <strength value="required" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/metric-body-temperature-units-1" />
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="candidate"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://healthterminologies.gov.au/fhir/ValueSet/metric-body-temperature-units-1"/>
+          </extension>
+        </extension>
+        <strength value="required"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/ucum-bodytemp"/>
       </binding>
     </element>
     <element id="Observation.dataAbsentReason">

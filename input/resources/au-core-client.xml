@@ -6,7 +6,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h2 id="title">AU Core Client CapabilityStatement</h2>
       <ul>
-        <li>Implementation Guide Version: 0.3.0-ci-build</li>
+        <li>Implementation Guide Version: 0.4.0-ci-build</li>
         <li>FHIR Version: 4.0.1</li>
         <li>Supported Formats: <strong>SHALL</strong> support <code>json</code>,          <strong>SHOULD</strong> support <code>xml</code>
         </li>
@@ -36,9 +36,6 @@
         </li>
         <li>
           <a href="http://hl7.org/fhir/smart-app-launch/">SMART Application Launch Framework Implementation Guide</a>
-        </li>
-        <li>
-          <a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Export Implementation Guide</a>
         </li>
       </ul>
       <h2 id="rest">FHIR RESTful Capabilities</h2>
@@ -2956,11 +2953,6 @@
 </extension>
 </implementationGuide>
 <implementationGuide value="http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-</implementationGuide>
-<implementationGuide value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
