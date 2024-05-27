@@ -21,7 +21,7 @@ The AU Core Sparked project includes:
 - Australian Core Data for Interoperability - clinician focussed data requirements project.
 - AU Core FHIR Implementation Guide - HL7 Australia technical data access and exchange specification.
 
-The [Australian Core Data for Interoperability (AUCDI)](https://confluence.csiro.au/display/FHIR/AUCDI+Release+1)  aims to define requirements underlying the standardisation of the capture, structure, usage, and exchange of health data to counteract the current fragmentation of Australia’s health data systems. The AUCDI forms a basis for clinical data requirements for AU Core.
+The [Australian Core Data for Interoperability (AUCDI)](https://sparked.csiro.au/index.php/sparked-products-resources/australian-core-data-for-interoperability/aucdi-release-1/)  aims to define requirements underlying the standardisation of the capture, structure, usage, and exchange of health data to counteract the current fragmentation of Australia’s health data systems. The AUCDI forms a basis for clinical data requirements for AU Core.
 
 #### Contributing to AU Core Development
 AU Core R1 is in currently in development. Ballot for Comment is scheduled for March 2024.
