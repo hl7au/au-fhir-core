@@ -61,11 +61,12 @@ This change log documents the significant updates and resolutions implemented fr
 - Removed AU Core MedicationStatement and added to Future of AU Core that AU Core MedicationStatement is planned for AU Core R2 [FHIR-45052](https://jira.hl7.org/browse/FHIR-45052).
 - Updated mapping of AUCDI Procedure Completed Event to be represented by Procedure only [au-fhir-core #147](https://github.com/hl7au/au-fhir-core/issues/147).
 - Updated mapping of AUCDI Medication Use Statement to be represented by MedicationStatement only [au-fhir-core #145](https://github.com/hl7au/au-fhir-core/issues/145).
-- Removed Must Support from the following elements in AU Core Condition:
-  - Condition.asserter [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45127](https://jira.hl7.org/browse/FHIR-45127), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
-  - Condition.recorder [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082)
-  - Condition.encounter [FHIR-45189](https://jira.hl7.org/browse/FHIR-45189)
-- Condition [FHIR-45058](https://jira.hl7.org/browse/FHIR-45058) additional narrative with guidance on *no known problem* coding. 
+- Made the following changes to AU Core Condition:
+  - Removed Must Support from the following elements in AU Core Condition:
+    - Condition.asserter [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45127](https://jira.hl7.org/browse/FHIR-45127), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
+    - Condition.recorder [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082)
+    - Condition.encounter [FHIR-45189](https://jira.hl7.org/browse/FHIR-45189)
+  - Condition [FHIR-45058](https://jira.hl7.org/browse/FHIR-45058) additional narrative with guidance on *no known problem* coding. 
 - Removed Must Support from the following elements in AU Core AllergyIntolerance:
   - AllergyIntolerance.asserter [FHIR-44699](https://jira.hl7.org/browse/FHIR-44699), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - AllergyIntolerance.recorder [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082), [FHIR-45066](https://jira.hl7.org/browse/FHIR-45066)
