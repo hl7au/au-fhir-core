@@ -17,7 +17,7 @@ This guide is built on top of the FHIR standard and, where available, [AU Base](
 
 
 **AU Core:**
-- defines a set of conformance requirements that enforce a set of 'minimum requirements' on the Australian localised concepts from AU Base through cardinality constraints, must support flags, required/extensible binding strengths, and capability statements. 
+- defines a set of conformance requirements that enforce a set of 'minimum requirements' on the Australian localised concepts from AU Base through cardinality constraints, *Must Support*  flags, required/extensible binding strengths, and capability statements. 
 - for use by Australian stakeholders when implementing FHIR to provide a common implementation and should be built on top of when creating further Australian profiles and implementation guides.
 - conformance may become tied to regulatory and/or contractual agreements in order to necessitate adoption to this more prescriptive specification.
 

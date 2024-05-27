@@ -23,6 +23,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - `Procedure.code` contains the identification of the procedure which may include body site information. Where a system has information not supported by the coding in `Procedure.code.coding` (e.g. body site, laterality and other qualification of procedure coding terms) that information **SHOULD** be supplied in `Procedure.code.text`
 - In an exchange with the My Health Record system `Procedure.status` is "completed"
 - The Procedure resource can represent a reason as a code with `Procedure.reasonCode`, or a reference with `Procedure.reasonReference` to a Condition or other resource.
-  - Although both are marked as must support, responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
+  - Although both are marked as *Must Support* , responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
   - A requester **SHALL** support both elements
 - A procedure including an implantable device should use `Procedure.focalDevice` with a reference to a Device resource
