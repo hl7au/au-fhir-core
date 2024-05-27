@@ -84,8 +84,16 @@
     <element id="Observation.value[x]:valueQuantity.code">
       <path value="Observation.value[x].code" />
       <binding>
-        <strength value="required" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/metric-body-length-units-1" />
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="candidate"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://healthterminologies.gov.au/fhir/ValueSet/metric-body-length-units-1"/>
+          </extension>
+        </extension>
+        <strength value="required"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/ucum-bodylength"/>
       </binding>
     </element>
     <element id="Observation.dataAbsentReason">
