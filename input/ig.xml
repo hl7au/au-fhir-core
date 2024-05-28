@@ -37,16 +37,32 @@
 		<packageId value="hl7.fhir.au.base"/>
 		<version value="current"/>
 	</dependsOn>
+	<dependsOn>
+		<uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+		<version value="5.1.0-snapshot1"/>
+	</dependsOn>
 	<definition>
 		<resource>
 			<reference>
-				<reference value="CapabilityStatement/au-core-server"/>
+				<reference value="ActorDefinition/au-core-actor-responder"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+			<resource>
+			<reference>
+				<reference value="ActorDefinition/au-core-actor-requester"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
-				<reference value="CapabilityStatement/au-core-client"/>
+				<reference value="CapabilityStatement/au-core-responder"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CapabilityStatement/au-core-requester"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
@@ -690,6 +706,11 @@
 					<title value="General Requirements"/>
 					<generation value="markdown"/>
 				</page>
+				<page>
+					<nameUrl value="declaring-conformance.html"/>
+					<title value="Declaring Conformance"/>
+					<generation value="markdown"/>
+				</page>
 			</page>
 			<page>
 				<nameUrl value="guidance.html"/>
@@ -754,6 +775,11 @@
 			<page>
 				<nameUrl value="capability-statements.html"/>
 				<title value="Capability Statements"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="actors.html"/>
+				<title value="Actor Definitions"/>
 				<generation value="markdown"/>
 			</page>
 			<page>

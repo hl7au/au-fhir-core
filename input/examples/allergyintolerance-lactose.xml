@@ -30,6 +30,12 @@
   </patient>
   <onsetDateTime value="2022"/>
   <recordedDate value="2023-03-14"/>
+  <recorder>
+    <reference value="PractitionerRole/bobrester-bob-gp"/>
+  </recorder>
+  <asserter>
+    <reference value="PractitionerRole/bobrester-bob-gp"/>
+  </asserter>
   <reaction>
     <manifestation>
       <coding>
