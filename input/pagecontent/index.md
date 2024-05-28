@@ -71,21 +71,21 @@ implementation. This implementation guide will be used as the basis for Australi
 
 ### AU Core Actors
 
-The following actors are part of the AU Core IG:
+The following actors are part of AU Core:
 
 **AU Core Requestor**
 
-An application that initiates a data access request to retrieve core digital health and administrative information. The AU Core Requestor is the client in a client-server interaction. The terms "requester", "client", and "app" are used interchangeably throughout this guide and are not meant to limit this actor to patient and provider apps. Payers and other users can use the same technology. Consider these terms a short-hand notation for a "user application".
+A system that creates and initiates a data access request to retrieve core digital health and administrative information. The AU Core Requestor is the client in a client-server interaction.  
 <br/><br/>
 
 **AU Core Responder**
 
-A system that responds to the data access request providing core digital health and administrative information. The AU Core Responder is the server in a client-server interaction. The terms "server", "AU Core FHIR server", "FHIR server" and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. HIEs, care coordination platforms, population health systems, etc., can use the same technology. Consider these terms a short-hand notation for an "interoperable healthcare platform".
+A system that responds to the data access request submitted by requesters, providing responses to requests for core digital health and administrative information. The AU Core Responder is the server in a client-server interaction.  
 <br/><br/>
 
 ### AU Core FHIR RESTful interactions
 
-For systems that support AU Core FHIR RESTful interactions ([Profile + Interaction Support](general-requirements.html#profile--interaction-support)), the interaction requirements, such as read and search operations, are detailed in the AU Core Requester and AU Core Responder [CapabilityStatements](capability-statements.html).
+For systems that support AU Core FHIR RESTful interactions ([Profile Support + Interaction Support](general-requirements.html#profile-support--interaction-support)), the interaction requirements, such as read and search operations, are detailed in the AU Core Requester and AU Core Responder [CapabilityStatements](capability-statements.html).
 
 The following are simple examples of AU Core FHIR RESTful interactions between AU Core Requester and AU Core Responder actors:
 
@@ -113,8 +113,9 @@ The following are simple examples of AU Core FHIR RESTful interactions between A
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home](index.html): This page provides the introduction and scope for this guide.
-- [Conformance](conformance.html): This page describes the set of rules to claim conformance to this guide including the expectations for must support elements in AU Core profiles.
-  - [General Requirements](general-requirements.html): This page defines requirements common to all actors and profiles used in this guide including how CapabilityStatements are used to claim conformance. This page defines the expectations for mandatory and must support elements in AU Core Profiles.
+- [Conformance](conformance.html): This page describes the set of rules to claim conformance to this guide including the expectations for *Must Support*  elements in AU Core profiles.
+  - [General Requirements](general-requirements.html): This page defines requirements common to all actors and profiles used in this guide including how CapabilityStatements are used to claim conformance. This page defines the expectations for mandatory and *Must Support*  elements in AU Core Profiles.
+  - [Declaring Conformance](declaring-conformance.html): This page describes how to declare conformance to AU Core.
 - [Guidance](guidance.html): This set of pages lists the guidance for this guide.
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide.
   - [Medicine Information](medicine-information.html): This page provides guidance on constructing medications related resources.
@@ -126,7 +127,8 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Profiles and Extensions](profiles-and-extensions.html): This set of pages describes the profiles and extensions that are defined in this guide to exchange quality data. Each profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.
   - [Search Parameters](search-parameters.html): This set of pages lists the search parameters extended for use in this guide for use in AU Core operations.
   - [Terminology](terminology.html): This set of pages lists the value sets and code systems defined in this guide.
-  - [Capability Statements](capability-statements.html): This set of pages define the expected FHIR capabilities of AU Core Servers and Clients.
+  - [Capability Statements](capability-statements.html): This set of pages define the expected FHIR capabilities of AU Core Responders and Requesters.
+  - [Actor Definitions](actors.html): This set of pages define the AU Core actors, AU Core Responder and AU Core Requester.
 - [Examples](examples.html): This page lists all the examples used in this guide.
 - [Downloads](downloads.html): This page provides links to downloadable artefacts that developers can use to help them implement this guide.
 - [Change Log](changes.html): This page documents the changes across versions of this guide.

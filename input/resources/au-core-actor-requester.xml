@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActorDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-core-actor-requester"/>
+  <url value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester" />
+  <name value="AUCoreRequester"/> 
+  <title value="AU Core Requester"/> 
+  <status value="draft"/>
+  <description value="The AU Core Requester is a system that creates and initiates a data access request to retrieve core digital health and administrative information."/> 
+  <type value="system"/> 
+  <documentation value="An AU Core Client, also known as AU Core Requester:&#xa;&#xa;
+- **SHALL** accept resources containing any valid value for *Must Support* elements without error&#xa;&#xa;
+- **SHALL** accept resources containing *Must Support* elements with [Missing Data](general-requirements.html#missing-data) or [Suppressed Data](general-requirements.html#suppressed-data) without error&#xa;&#xa;
+How the system processes the resource depends on local requirements that could align with obligation terms such as [reject invalid](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-reject-invalid), [correctly handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-handle), [persist](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-persist), [display](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-display), or [ignore](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-ignore).&#xa;&#xa;
+When a *Must Support* element requires a more tightly stated obligation, this obligation is specified in the AU Core Requester [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition."/>
+  <capabilities value="http://hl7.org.au/fhir/core/CapabilityStatement/au-core-requester"/>
+</ActorDefinition>

@@ -9,6 +9,7 @@
     <ul class="dropdown-menu">
       <li>
         <a href="general-requirements.html">General Requirements</a>
+        <a href="declaring-conformance.html">Declaring Conformance</a>
       </li>
     </ul>
   </li>
@@ -56,6 +57,9 @@
       </li>
       <li>
         <a href="capability-statements.html">Capability Statements</a>
+      </li>
+      <li>
+        <a href="actors.html">Actor Definitions</a>
       </li>
     </ul>
   </li>
