@@ -21,19 +21,19 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 ### Gender Identity and related concepts
 <b>Name to Use (NtU)​</b>
 
-By making `name.use` a Must Support data element, this profile explicitly supports representation and exchange of the Name to Use data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)). Name to Use is represented using ‘usual’ in `name.use`. It should be noted that, `name.period` is not a Must Support data element in this version of the profile.
+By making `name.use` a *Must Support* data element, this profile explicitly supports representation and exchange of the Name to Use data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)). Name to Use is represented using ‘usual’ in `name.use`. It should be noted that, `name.period` is not a *Must Support* data element in this version of the profile.
 
 <b>Pronouns​</b>
 
-By making Individual Pronouns a Must Support data element, this profile explicitly supports representation and exchange of the Pronouns data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)). 
+By making Individual Pronouns a *Must Support* data element, this profile explicitly supports representation and exchange of the Pronouns data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)). 
 
 <b>Gender Identity (GI)</b>
 
-By making Individual Gender Identity a Must Support data element, this profile explicitly supports representation and exchange of the Gender Identity data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)). 
+By making Individual Gender Identity a *Must Support* data element, this profile explicitly supports representation and exchange of the Gender Identity data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)). 
 
 <b>Sex Assigned at Birth</b>
 
-Sex assigned at birth is represented using the [Person Recorded Sex or Gender extension](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-individual-recordedSexOrGender.html) extension as profiled by [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html). It should be noted the [Person Recorded Sex or Gender extension](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-individual-recordedSexOrGender.html) extension is not marked as Must Support in this version of the profile.
+Sex assigned at birth is represented using the [Person Recorded Sex or Gender extension](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-individual-recordedSexOrGender.html) extension as profiled by [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html). It should be noted the [Person Recorded Sex or Gender extension](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-individual-recordedSexOrGender.html) extension is not marked as *Must Support* in this version of the profile.
 
 
 ### Profile specific implementation guidance
@@ -53,8 +53,8 @@ Sex assigned at birth is represented using the [Person Recorded Sex or Gender ex
 - When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/) and [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html)
 - Patient names can be provided as a text representation in `name.text` and/or parts such as `name.family` and `name.given`. 
   - `name.text` specifies the entire name as it should be displayed and this may be provided instead of, or as well as, the specific parts. It is important to note that the presence of parts of a name, e.g. `name.family` and `name.given`, do not imply that `name.text` is known or must be supplied. 
-  - In this profile, the following sub-elements of `name` are marked as _Must Support_: `name.use`, `name.text`, `name.family`, and `name.given`
+  - In this profile, the following sub-elements of `name` are marked as *Must Support*: `name.use`, `name.text`, `name.family`, and `name.given`
     - responders are required to support at least one of the following sub-elements: `name.text`, `name.family`, and `name.given`
-    - requesters are required to all sub-elements marked _Must Support_: `name.use`, `name.text`, `name.family`, and `name.given`
+    - requesters are required to all sub-elements marked *Must Support*: `name.use`, `name.text`, `name.family`, and `name.given`
 
 
