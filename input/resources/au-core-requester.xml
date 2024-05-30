@@ -1539,23 +1539,6 @@
 </tr>
 <tr>
 <td>
-  <b>SHOULD</b>
-</td>
-<td>
-  <a href="http://hl7.org/fhir/R4/medicationrequest.html#search">identifier</a>
-</td>
-<td>
-  <code>token</code>
-</td>
-<td>
-  <div>
-    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The responder <strong>SHALL</strong> support both.</p>
-  </div>
-</td>
-</tr>
-<tr>
-<td>
   <b>SHALL</b>
 </td>
 <td>
@@ -1606,23 +1589,6 @@
     <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
     <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
     <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-  </div>
-</td>
-</tr>
-<tr>
-<td>
-  <b>MAY</b>
-</td>
-<td>
-  <a href="http://hl7.org/fhir/R4/medicationrequest.html#search">category</a>
-</td>
-<td>
-  <code>token</code>
-</td>
-<td>
-  <div>
-    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -3735,24 +3701,6 @@
 <name value="_id"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
 <type value="token"/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<name value="identifier"/>
-<definition value="http://hl7.org/fhir/SearchParameter/clinical-identifier"/>
-<type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<name value="category"/>
-<definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-category"/>
-<type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
