@@ -26,12 +26,6 @@
          <td></td>
   </tr>
   <tr>
-        <td>patient+discharge-disposition</td>
-        <td><b>SHOULD</b></td>
-         <td><code>reference</code>+<code>token</code></td>
-         <td></td>
-  </tr>
-  <tr>
         <td>patient.identifier</td>
         <td><b>SHOULD</b></td>
          <td><code>reference</code>.<code>token</code></td>
@@ -50,12 +44,6 @@
          <td></td>
   </tr>
   <tr>
-        <td>patient+type</td>
-        <td><b>SHOULD</b></td>
-         <td><code>reference</code>+<code>token</code></td>
-         <td></td>
-  </tr>
-  <tr>
         <td>class</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
@@ -66,12 +54,6 @@
         <td><b>MAY</b></td>
         <td><code>date</code></td>
         <td>A requester <b>SHALL</b> provide a value precise to the second + time offset. A responder <b>SHALL</b> support a value precise to the second + time offset.</td>
-  </tr>
-  <tr>
-        <td>discharge-disposition</td>
-        <td><b>MAY</b></td>
-        <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>identifier</td>
@@ -87,12 +69,6 @@
   </tr>
   <tr>
         <td>status</td>
-        <td><b>MAY</b></td>
-        <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
-  </tr>
-  <tr>
-        <td>type</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
         <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
@@ -147,18 +123,6 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient and class ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`discharge-disposition`](http://build.fhir.org/ig/hl7au/au-fhir-base/SearchParameter-encounter-discharge-disposition.html)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
-
-    `GET [base]/Encounter?patient={Type/}[id]&discharge-disposition={system|}[code]`
-
-    Example:
-    
-      1. GET [base]/Encounter?patient=5678&amp;discharge-disposition=9
-      1. GET [base]/Encounter?patient=5678&amp;discharge-disposition=https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1\|9
-
-    *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient and discharge disposition ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
-
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`location`](https://hl7.org/fhir/R4/encounter.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
@@ -169,18 +133,6 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/Encounter?patient=5678&amp;location=Location/vic-hospital
 
     *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and location ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference))
-
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`discharge-disposition`](http://build.fhir.org/ig/hl7au/au-fhir-base/SearchParameter-encounter-discharge-disposition.html)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
-
-    `GET [base]/Encounter?patient={Type/}[id]&discharge-disposition={system|}[code]`
-
-    Example:
-    
-      1. GET [base]/Encounter?patient=5678&amp;discharge-disposition=9
-      1. GET [base]/Encounter?patient=5678&amp;discharge-disposition=https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1\|9
-
-    *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient and discharge disposition ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token)).
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`status`](https://hl7.org/fhir/R4/encounter.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
@@ -193,14 +145,3 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/Encounter?patient=5678&amp;status=finished
 
     *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference)) and [how to search by token](http://hl7.org/fhir/R4/search.html#token)).
-
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`type`](https://hl7.org/fhir/R4/encounter.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
-
-    `GET [base]/Encounter?patient={Type/}[id]&type={system|}[code]`
-
-    Example:
-    
-      1. GET [base]/Encounter?patient=5678&amp;type=http://snomed.info/sct|11429006
-
-    *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and type ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token)).
