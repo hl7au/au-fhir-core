@@ -111,7 +111,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786) 
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
-  - added profile-specific implementation guidance on representing pulse rate observation [FHIR-44861](https://jira.hl7.org/browse/FHIR-44861) 
+  - added profile-specific implementation guidance on representing a specific pulse rate in the heart rate profile [FHIR-44861](https://jira.hl7.org/browse/FHIR-44861) 
 - Made the following changes to AU Core Respiration Rate: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
@@ -130,7 +130,7 @@ This change log documents the significant updates and resolutions implemented fr
 - Made the following changes to AU Core Pathology Result Observation:
   - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
     - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
-- Made the following changes in AU Core Client CapabilityStatement:
+- Made the following changes in AU Core Requester CapabilityStatement:
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
-- Made the following changes in AU Core Server CapabilityStatement:
+- Made the following changes in AU Core Responder CapabilityStatement:
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
