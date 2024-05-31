@@ -107,7 +107,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="266918002" />
+          <code value="1747861000168109" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true"/>

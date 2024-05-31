@@ -18,6 +18,9 @@ This change log documents the significant updates and resolutions implemented fr
 - Added Security and Privacy page [FHIR-45067](https://jira.hl7.org/browse/FHIR-45067).
 - Added Variance Statement page [FHIR-46034](https://jira.hl7.org/browse/FHIR-46034).
 - Moved the Medicine Information section from the General Guidance page to a new Medicine Information page [FHIR-45165](https://jira.hl7.org/browse/FHIR-45165).
+- Removed support for the following search parameters and search parameter combinations:
+  - Encounter: discharge-disposition, type, patient+discharge-disposition, patient+type [FHIR-45954](https://jira.hl7.org/browse/FHIR-45954), [FHIR-45603](https://jira.hl7.org/browse/FHIR-45603)
+  - MedicationRequest: identifier and category [FHIR-45991](https://jira.hl7.org/browse/FHIR-45991)
 - Made the following changes to AU Core Immunization:
   - removed Must Support from Immunization.encounter [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
   - removed Must Support from Immunization.performer, Immunization.performer.function, Immunization.performer.actor [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
@@ -91,6 +94,12 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Observation.encounter [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222)
   - removed Must Support from Observation.performer [FHIR-45223](https://jira.hl7.org/browse/FHIR-45223)
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
+  - replaced Observation.code patternCodeableConcept constraint of 266918002 |Tobacco smoking consumption| with 1747861000168109 |Smoking status| [FHIR-45124](https://jira.hl7.org/browse/FHIR-45124) 
+- Removed Must Support from the following elements in AU Core Immunization:
+  - Immunization.encounter [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
+  - Immunization.performer [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
+  - Immunization.performer.function [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
+  - Immunization.performer.actor [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
 - Made the following changes to AU Core Blood Pressure: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
