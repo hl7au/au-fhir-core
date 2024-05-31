@@ -283,7 +283,7 @@
 <td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
-<td>_id, authoredon, category, identifier, intent, patient, patient.identifier, patient+intent, patient+intent+authoredon, patient+intent+status, status</td>
+<td>_id, authoredon, intent, patient, patient.identifier, patient+intent, patient+intent+authoredon, patient+intent+status, status</td>
 <td>
 <code>MedicationRequest:medication</code>
 </td>
