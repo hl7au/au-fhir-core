@@ -79,6 +79,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Condition.asserter [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45127](https://jira.hl7.org/browse/FHIR-45127), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - removed Must Support from  Condition.recorder [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082)
   - removed Must Support from Condition.encounter [FHIR-45189](https://jira.hl7.org/browse/FHIR-45189)
+  - added profile-specific implementation guidance on representing no known problem [FHIR-45058](https://jira.hl7.org/browse/FHIR-45058)
 - Removed Must Support from the following elements in AU Core AllergyIntolerance:
   - AllergyIntolerance.asserter [FHIR-44699](https://jira.hl7.org/browse/FHIR-44699), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - AllergyIntolerance.recorder [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082), [FHIR-45066](https://jira.hl7.org/browse/FHIR-45066)
@@ -111,7 +112,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786) 
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
-  - added profile-specific implementation guidance on representing a specific pulse rate in the heart rate profile [FHIR-44861](https://jira.hl7.org/browse/FHIR-44861) 
+  - added profile-specific implementation guidance on representing pulse rate observations [FHIR-44861](https://jira.hl7.org/browse/FHIR-44861) 
 - Made the following changes to AU Core Respiration Rate: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
