@@ -342,6 +342,9 @@
           <extension url="valueSet">
             <valueCanonical value="https://healthterminologies.gov.au/fhir/ValueSet/metric-body-temperature-units-1"/>
           </extension>
+          <extension url="documentation">
+            <valueMarkdown value="For when metric units are preferred."/>
+          </extension>          
         </extension>
         <strength value="required"/>
         <valueSet value="http://hl7.org/fhir/ValueSet/ucum-bodytemp"/>
