@@ -303,7 +303,7 @@ When using some AU Core profiles it may be desirable to represent relevant body 
 *  [AU Core Procedure](StructureDefinition-au-core-procedure.html) - with primary procedure code `Procedure.code` and `Procedure.bodySite`
 
 When recommending approaches to this, considerations include:
-* The `bodySite` element in NOT `Must Support` in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
+* The `bodySite` element is NOT `Must Support` in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
 * The `CodeableConcept.text` element is system populated and may reflect more specific detail than the `CodeableConcept.coding` concepts provided.
 
 Body site and associated laterality may be recorded in various ways. Depending on the specific system approach to body site / laterality related content this can lead to a number of scenarios needing to be supported with using AU Core profiles:
@@ -312,9 +312,9 @@ a) Body site with laterality is defined in a pre-coordinated primary finding/pro
 
 b) Body site without laterality is defined in a primary finding/procedure code AND coded laterality qualifier is separate.
 
-c) Body site with laterality is defned separately from a primary finding/procedure code.
+c) Body site with laterality is defined separately from a primary finding/procedure code.
 
-d) Body site without laterality AND coded laterality qualifier are defned separately from a primary finding/procedure code.
+d) Body site without laterality AND coded laterality qualifier are defined separately from a primary finding/procedure code.
 
 
 To support consistent representation the following is recommended for each of these cases, this approach can be applied to either Condition or Procedure profiles:
@@ -365,7 +365,8 @@ Example Condition - Cellulitis of right knee
         "system" : "http://snomed.info/sct",
         "code" : "10633311000119108",
         "display" : "Cellulitis of right knee"
-      }
+      },
+      "text" : "Cellulitis of right knee"
     ]
   },
   "subject" : {
@@ -437,7 +438,7 @@ Example Condition - Cellulitis of knee, laterality as text only
 }
 ~~~
 
-c) Primary `code` and `bodySite` with laterality coded seperately.
+c) Primary `code` and `bodySite` with laterality coded separately.
 * For systems that have 
   * Pre-coordinated coding describing primary concept WITHOUT body site.
   * Body site with laterality is recorded as coded value.
@@ -489,7 +490,7 @@ Example Condition - Cellulitis, body site Right Knee
         "code" : "128045006",
         "display" : "Cellulitis"
       },
-      "text" : "Cellulitus, Right Knee"
+      "text" : "Cellulitis, Right Knee"
     ]
   },
   "bodySite" : [
