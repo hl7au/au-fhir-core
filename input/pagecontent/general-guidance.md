@@ -110,6 +110,295 @@ Example: Patient resource with interpreter required and language is known
 }
 ~~~
 
+### Representing body site and laterality
+When using some AU Core profiles it may be desirable to represent relevant body site and laterality information associated with a record using CodeableConcept elements, notably:
+*  [AU Core Condition](StructureDefinition-au-core-condition.html) - with primary finding code `Condition.code` and `Condition.bodySite`
+*  [AU Core Procedure](StructureDefinition-au-core-procedure.html) - with primary procedure code `Procedure.code` and `Procedure.bodySite`
+
+When recommending approaches to this, considerations include:
+* The `bodySite` element is NOT `Must Support` in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
+* The `CodeableConcept.text` element is system populated and may reflect more specific detail than the `CodeableConcept.coding` concepts provided.
+
+Body site and associated laterality may be recorded in various ways. Depending on the specific system approach to body site / laterality related content this can lead to a number of scenarios needing to be supported with using AU Core profiles:
+
+a) Body site with laterality is defined in a pre-coordinated primary finding/procedure code.
+
+b) Body site without laterality is defined in a primary finding/procedure code AND coded laterality qualifier is separate.
+
+c) Body site with laterality is defined separately from a primary finding/procedure code.
+
+d) Body site without laterality AND coded laterality qualifier are defined separately from a primary finding/procedure code.
+
+
+To support consistent representation the following is recommended for each of these cases, this approach can be applied to either Condition or Procedure profiles:
+
+a) Primary `code` only (pre-coordinated body site including laterality)
+* For systems that have pre-coordinated coding describing a concept fully.
+* Only the `code` element is used and contains information on body site with laterality.
+
+Example Condition - Cellulitis of right knee
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><a href=\"Patient-bennelong-anne.html\">Patient/bennelong-anne: Anne Bennelong</a> " BENNELONG"</p></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code" : "active"
+      }
+    ]
+  },
+  "verificationStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code" : "confirmed"
+      }
+    ]
+  },
+  "category" : [
+    {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis",
+          "display" : "Encounter Diagnosis"
+        }
+      ]
+    }
+  ],
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "10633311000119108",
+        "display" : "Cellulitis of right knee"
+      },
+      "text" : "Cellulitis of right knee"
+    ]
+  },
+  "subject" : {
+    "reference" : "Patient/bennelong-anne",
+    "display" : "Anne Bennelong"
+  }
+}
+~~~
+
+b) Primary `code` only (precoordinated body site without laterality and separate laterality qualifier)
+* For systems that have 
+  * Pre-coordinated coding describing a concept including body site without laterality
+  * Laterality qualifier recorded separately e.g. left, right
+* The `code` element is used
+  * Contains `coding` for primary concept (no body site information)
+  * Use `text` to describe concept fully, this can include information on recorded laterality e.g. ', Right'
+* NOTE: in this case laterality is NOT expressed in coded form 
+
+Example Condition - Cellulitis of knee, laterality as text only
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><a href=\"Patient-bennelong-anne.html\">Patient/bennelong-anne: Anne Bennelong</a> " BENNELONG"</p></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code" : "active"
+      }
+    ]
+  },
+  "verificationStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code" : "confirmed"
+      }
+    ]
+  },
+  "category" : [
+    {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis",
+          "display" : "Encounter Diagnosis"
+        }
+      ]
+    }
+  ],
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "13301002",
+        "display" : "Cellulitis of knee"
+      },
+      "text" : "Cellulitis of knee, Right"
+    ]
+  },
+  "subject" : {
+    "reference" : "Patient/bennelong-anne",
+    "display" : "Anne Bennelong"
+  }
+}
+~~~
+
+c) Primary `code` and `bodySite` with laterality coded separately.
+* For systems that have 
+  * Pre-coordinated coding describing primary concept WITHOUT body site.
+  * Body site with laterality is recorded as coded value.
+* The `code` element is used:
+  * Contains `coding` for primary concept including body site without laterality.
+  * Use `text` to describe concept fully, this can include information on recorded body site and laterality as text.
+* MAY record coded `bodySite`, optional when this element is not `Must Support` in AU Core profiles.
+
+Example Condition - Cellulitis, body site Right Knee
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><a href=\"Patient-bennelong-anne.html\">Patient/bennelong-anne: Anne Bennelong</a> " BENNELONG"</p></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code" : "active"
+      }
+    ]
+  },
+  "verificationStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code" : "confirmed"
+      }
+    ]
+  },
+  "category" : [
+    {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis",
+          "display" : "Encounter Diagnosis"
+        }
+      ]
+    }
+  ],
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "128045006",
+        "display" : "Cellulitis"
+      },
+      "text" : "Cellulitis, Right Knee"
+    ]
+  },
+  "bodySite" : [
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "6757004",
+        "display" : "Structure of right knee region"
+      }],
+      "text" : "Right Knee"
+    }
+  ],
+  "subject" : {
+    "reference" : "Patient/bennelong-anne",
+    "display" : "Anne Bennelong"
+  }
+}
+~~~
+
+
+d) Primary `code` and `bodySite` without laterality coded seperately and also separate laterality qualifier.
+* For systems that have 
+  * Pre-coordinated coding describing primary concept WITHOUT body site.
+  * Body site WITHOUT laterality is recorded as coded value.
+  * Laterality qualifier recorded separately e.g. left, right
+* The `code` element is used:
+  * Contains `coding` for primary concept alone (no body site or laterality).
+  * Use `text` to describe concept fully, this can include information on recorded body site and laterality as text.
+* MAY record coded `bodySite`, optional when this element is not `Must Support` in AU Core profiles.
+  * Contains `coding` for body site without laterality
+  * Use  `text` to describe body site concept fully, this can include information on recorded laterality as text e.g. ', Right'
+
+Example Condition - Cellulitis, body site Knee, laterality as text only
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><a href=\"Patient-bennelong-anne.html\">Patient/bennelong-anne: Anne Bennelong</a> " BENNELONG"</p></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code" : "active"
+      }
+    ]
+  },
+  "verificationStatus" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code" : "confirmed"
+      }
+    ]
+  },
+  "category" : [
+    {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis",
+          "display" : "Encounter Diagnosis"
+        }
+      ]
+    }
+  ],
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "128045006",
+        "display" : "Cellulitis"
+      },
+      "text" : "Cellulitis, Knee, Right"
+    ]
+  },
+  "bodySite" : [
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "72696002",
+        "display" : "Knee region structure"
+      }],
+      "text" : "Knee, Right"
+    }
+  ],
+  "subject" : {
+    "reference" : "Patient/bennelong-anne",
+    "display" : "Anne Bennelong"
+  }
+}
+~~~
+
 ### Read/Search Syntax
 
 Searching resources is defined by the [FHIR RESTful API](https://hl7.org/fhir/R4/http.html) and included here for informative purposes. The [AU Core CapabilityStatements](capability-statements.html) document the server and client rules for the RESTful interactions described in this guide.
@@ -140,4 +429,5 @@ In the simplest case, a search is executed by performing a GET operation in the 
 `GET [base]/[Resource-type]?name=value&...`
 
 For this RESTful search, the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource has the name "code" for searching on the LOINC or SNOMED CT-AU code.  For more information, see the [FHIR RESTful Search API](https://hl7.org/fhir/R4/http.html#search).
+
 
