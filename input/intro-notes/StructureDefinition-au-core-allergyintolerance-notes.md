@@ -11,7 +11,7 @@
         <td>patient</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code></td>
-        <td>The client <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The server <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>patient+clinical-status</td>
@@ -23,13 +23,13 @@
         <td>patient.identifier</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>.<code>token</code></td>
-        <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both. <br/><br/> The client <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The server <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
   </tr>
   <tr>
         <td>clinical-status</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
   </tr>
  </tbody>
 </table>
@@ -40,7 +40,6 @@
 The following search parameters and search parameter combinations **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/allergyintolerance.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
 
@@ -48,7 +47,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     Example:
     
-      1. GET [base]/AllergyIntolerance?patient=5678_revinclude=Provenance:target
+      1. GET [base]/AllergyIntolerance?patient=5678
       1. GET [base]/AllergyIntolerance?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952
       1. GET [base]/AllergyIntolerance?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361 
 

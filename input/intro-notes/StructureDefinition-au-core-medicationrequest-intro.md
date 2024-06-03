@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update medication orders or prescriptions for a patient
 
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile:
 - **MAY** be conformant to:
@@ -18,11 +18,12 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 
 ### Profile specific implementation guidance
-- See the [Medicine information](general-guidance.html#medicine-information) section for guidance 
+- See the [Medicine Information](medicine-information.html) page for guidance
 - When recording "self-prescribed" medication, `MedicationRequest.requester` references the Patient or RelatedPerson as the prescriber.
 - MedicationRequest resources can represent a medication using either a code with `MedicationRequest.medicationCodeableConcept`, or reference a [Medication](http://hl7.org/fhir/R4/medication.html) resource with `MedicationRequest.medicationReference`.
-  - Although both are marked as must support, servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
-  - A client application **SHALL** support both elements
+  - Although both are marked as *Must Support*, responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
+  - A requester **SHALL** support both elements
   - When referencing a Medication resource, it is preferred the resource is [contained](http://hl7.org/fhir/R4/references.html#contained) but it may be an external resource
-- Source system identifiers **SHOULD** be included as [AU Local Prescription Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localprescriptionidentifier.html) or [AU ETP Prescription Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-etpprescriptionidentifier.html) to support electronic medication management (EMM) workflow and deduplication across medication resources.
-  - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
+- The MedicationRequest resource can represent a reason as a code with `MedicationRequest.reasonCode`, or a reference with `MedicationRequest.reasonReference` to a Condition or other resource.
+  - Although both are marked as *Must Support*, responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
+  - A requester **SHALL** support both elements  

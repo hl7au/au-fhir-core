@@ -17,7 +17,7 @@
         <td>identifier</td>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both. <br/><br/> The client <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the profile. The server <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the profile.</td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the profile. The responder <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the profile.</td>
   </tr>
   <tr>
         <td>birthdate+family</td>
@@ -59,25 +59,25 @@
         <td>birthdate</td>
         <td><b>MAY</b></td>
         <td><code>date</code></td>
-        <td>A client <b>SHALL</b> provide a value precise to the day. A server <b>SHALL</b> support a value precise to the day offset.</td>
+        <td>A requester <b>SHALL</b> provide a value precise to the day. A responder <b>SHALL</b> support a value precise to the day offset.</td>
   </tr>
   <tr>
         <td>gender</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>indigenous-status</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
   </tr>
   <tr>
-        <td>patient-gender-identity</td>
+        <td>gender-identity</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
   </tr>
  </tbody>
 </table>
@@ -86,14 +86,13 @@
 #### Mandatory Search Parameters
 
 1. **SHALL** support fetching a Patient using the **[`_id`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     
     `GET [base]/Patient/[id]` or `GET [base]/Patient?_id=[id]`
 
     Example:
     
       1. GET [base]/Patient/5678
-      1. GET [base]/Patient?_id=5678&amp;_revinclude=Provenance:target
+      1. GET [base]/Patient?_id=5678
 
     *Implementation Notes:* Returns a single Patient resource ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 
@@ -114,7 +113,7 @@
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
-1. **SHOULD** support searching for a patient by a server-defined search that matches any of the string fields in the HumanName, including family, given, prefix, suffix, and/or text using the **[`name`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
+1. **SHOULD** support searching for a patient by a responder-defined search that matches any of the string fields in the HumanName, including family, given, prefix, suffix, and/or text using the **[`name`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
     
     `GET [base]/Patient?name=[string]`
 

@@ -11,7 +11,7 @@
         <td>patient</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code></td>
-        <td>The client <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The server <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>patient+intent</td>
@@ -32,16 +32,10 @@
         <td></td>
   </tr>
   <tr>
-        <td>identifier</td>
-        <td><b>SHOULD</b></td>
-        <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
-  </tr>
-  <tr>
         <td>patient.identifier</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>.<code>token</code></td>
-        <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both. <br/><br/> The client <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The server <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
   </tr>
    <tr>
         <td>patient+intent+authoredon</td>
@@ -53,25 +47,19 @@
         <td>authoredon</td>
         <td><b>MAY</b></td>
         <td><code>date</code></td>
-        <td>A client <b>SHALL</b> provide a value precise to the second + time offset. A server <b>SHALL</b> support a value precise to the second + time offset.</td>
-  </tr>
-  <tr>
-        <td>category</td>
-        <td><b>MAY</b></td>
-        <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
+        <td>A requester <b>SHALL</b> provide a value precise to the second + time offset. A responder <b>SHALL</b> support a value precise to the second + time offset.</td>
   </tr>
   <tr>
         <td>intent</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>status</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
   </tr>
  </tbody>
 </table>
@@ -83,7 +71,6 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameter:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
  
@@ -92,7 +79,6 @@ The following search parameters and search parameter combinations **SHALL** be s
     Example:
     
       1. GET [base]/MedicationRequest?patient=5678
-      1. GET [base]/MedicationRequest?patient=5678&amp;_revinclude=Provenance:target
       1. GET [base]/MedicationRequest?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952
       1. GET [base]/MedicationRequest?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952&amp;_include=MedicationRequest:medication
       1. GET [base]/MedicationRequest?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361 
@@ -146,17 +132,6 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/MedicationRequest?_id=2169591&amp;_include=MedicationRequest:medication
 
     *Implementation Notes:* Fetches a single MedicationRequest ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
-
-1. **SHOULD** support searching using the **[`identifier`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameter:
-
- 
-     `GET [base]/MedicationRequest?identifier={system|}[code]`
-
-    Example:
-    
-      1. GET [base]/MedicationRequest?identifier=http://gp.example.org\|1032333
-
-      *Implementation Notes:* Fetches a bundle containing any MedicationRequest resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`intent`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`authoredon`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameters:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`

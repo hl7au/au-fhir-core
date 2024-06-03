@@ -9,10 +9,8 @@
     <ul class="dropdown-menu">
       <li>
         <a href="general-requirements.html">General Requirements</a>
+        <a href="declaring-conformance.html">Declaring Conformance</a>
       </li>
-      <!--<li>
-        <a href="must-support.html">Must Support</a>
-      </li>-->
     </ul>
   </li>
   <li class="dropdown">
@@ -24,18 +22,24 @@
         <a href="general-guidance.html">General Guidance</a>
       </li>
       <li>
+        <a href="medicine-information.html">Medicine Information</a>
+      </li>
+      <li>
         <a href="aucdi.html">AU Core Data for Interoperability</a>
       </li>
       <li>
         <a href="relationship.html">Relationship with other IGs</a>
       </li>
       <li>
-        <a href="comparison.html">Comparison with other national and international specifications</a>
+        <a href="comparison.html">Comparison with other national and international IGs</a>
       </li>
       <li>
         <a href="future.html">Future of AU Core</a>
       </li>
     </ul>
+  </li>
+  <li>
+    <a href="security.html">Security and Privacy</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
@@ -54,6 +58,9 @@
       <li>
         <a href="capability-statements.html">Capability Statements</a>
       </li>
+      <li>
+        <a href="actors.html">Actor Definitions</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -62,7 +69,7 @@
   <li>
     <a href="downloads.html">Downloads</a>
   </li>
-  <!--<li>
+  <li>
     <a href="changes.html">Change Log</a>
-  </li>-->
+  </li>
 </ul>

@@ -28,40 +28,30 @@
   <code>
     <coding>
       <system value="http://loinc.org"/>
-      <code value="3094-0"/>
-      <display value="BUN SerPl-mCnc"/>
+      <code value="22664-7"/>
     </coding>
-    <text value="BUN SerPl-mCnc"/>
   </code>
   <subject>
     <reference value="Patient/dan-harry"/>
   </subject>
   <effectiveDateTime value="2022-05-05"/>
   <valueQuantity>
-    <value value="24"/>
-    <unit value="mg/dL"/>
+    <value value="25.5"/>
+    <unit value="mmol/L"/>
     <system value="http://unitsofmeasure.org"/>
   </valueQuantity>
   <referenceRange>
     <low>
-      <value value="5"/>
-      <unit value="mg/dL"/>
+      <value value="3"/>
+      <unit value="mmol/L"/>
       <system value="http://unitsofmeasure.org"/>
-      <code value="mg/dL"/>
+      <code value="mmol/L"/>
     </low>
     <high>
-      <value value="20"/>
-      <unit value="mg/dL"/>
+      <value value="10"/>
+      <unit value="mmol/L"/>
       <system value="http://unitsofmeasure.org"/>
-      <code value="mg/dL"/>
+      <code value="mmol/L"/>
     </high>
-    <type>
-      <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
-        <code value="treatment"/>
-        <display value="Treatment Range"/>
-      </coding>
-      <text value="Treatment Range"/>
-    </type>
   </referenceRange>
 </Observation>

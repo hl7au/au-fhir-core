@@ -6,7 +6,7 @@ The following are supported usage scenarios for this profile:
 - Record or update an observation of heart rate associated with a patient
 
 
-### Comparison with other national and international specifications
+### Comparison with other national and international IGs
 
 A resource conforming to this profile is conformant to:
 - [observation-heartrate](http://hl7.org/fhir/R4/observation-heartrate.html)
@@ -19,8 +19,4 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 
 ### Profile specific implementation guidance
 {% include observation_vitalsigns_guidance.md -%}
-
-<p class="request-for-feedback">Feedback is requested on the proposal to remove Must Support from Observation.performer element across AU Core Vital Signs profiles. Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-44786">FHIR-44786</a>.</p>
-
-
-
+- Pulse rate and heart rate are different concepts. In FHIR, both concepts are children of the parent Heart Rate concept and conform to the AU Core Heart Rate profile. When representing a pulse rate observation specifically, an *additional* SNOMED CT code 78564009 \|Pulse rate\| **SHALL** be added to `Observation.code`. This allows pulse rate observations to be identified and searched for directly. When populating pulse rate, the body site from which the pulse rate was observed is optional to include.

@@ -21,12 +21,6 @@
     <reference value="Patient/dan-harry"/>
   </subject>
   <performedDateTime value="2012-08-05"/>
-  <recorder>
-    <reference value="PractitionerRole/nephrologist-darleen-mackay"/>
-  </recorder>
-  <asserter>
-    <reference value="PractitionerRole/nephrologist-darleen-mackay"/>
-  </asserter>
   <performer>
     <actor>
       <reference value="PractitionerRole/nephrologist-darleen-mackay"/>

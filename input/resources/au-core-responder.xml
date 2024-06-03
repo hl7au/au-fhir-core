@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir">
-  <id value="au-core-client"/>
-<text>
+  <id value="au-core-responder"/>
+  <text>
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <h2 id="title">AU Core Client CapabilityStatement</h2>
+      <h2 id="title">AU Core Responder CapabilityStatement</h2>
       <ul>
-        <li>Implementation Guide Version: 0.3.0-ci-build</li>
+        <li>Implementation Guide Version: 0.4.0-ci-build</li>
         <li>FHIR Version: 4.0.1</li>
         <li>Supported Formats: <strong>SHALL</strong> support <code>json</code>,          <strong>SHOULD</strong> support <code>xml</code>
         </li>
@@ -37,19 +37,16 @@
         <li>
           <a href="http://hl7.org/fhir/smart-app-launch/">SMART Application Launch Framework Implementation Guide</a>
         </li>
-        <li>
-          <a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Export Implementation Guide</a>
-        </li>
       </ul>
       <h2 id="rest">FHIR RESTful Capabilities</h2>
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 id="mode1" class="panel-title">Mode: <code>client</code>
-          </h3>
+          <h3 id="mode1" class="panel-title">Mode: <code>server</code>
+         </h3>
         </div>
         <div class="panel-body">
           <div>
-            <p>The AU Core Client <strong>SHALL</strong>:
+            <p>The AU Core Responder <strong>SHALL</strong>:            
             </p>
             <ol>
               <li>
@@ -62,10 +59,30 @@
                 <p>Implement the RESTful behavior according to the FHIR specification.</p>
               </li>
               <li>
+                <p>Return the following response classes:</p>
+                <ul>
+                  <li>
+                    <p>(Status 400): Bad Request</p>
+                  </li>
+                  <li>
+                    <p>(Status 401): Not Authorized</p>
+                  </li>
+                  <li>
+                    <p>(Status 403): Forbidden</p>
+                  </li>
+                  <li>
+                    <p>(Status 404): Not Found</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
                 <p>Support JSON source formats for all AU Core interactions.</p>
               </li>
+              <li>
+                <p>Declare a CapabilityStatement identifying the list of profiles, operations, and search parameters supported.</p>
+              </li>
             </ol>
-            <p>The AU Core Client <strong>SHOULD</strong>:
+            <p>The AU Core Responder <strong>SHOULD</strong>:            
             </p>
             <ol>
               <li>Support XML source formats for all AU Core interactions.</li>
@@ -76,9 +93,11 @@
           </div>
           <blockquote>
             <div>
+
               <ol>
-               <li>For authentication and authorisation, systems <strong>MAY</strong> support any SMART App Launch and SMART Backend Service Authorization. When this is not avalable, basic authentication <strong>MAY</strong> be used. </li>
-              </ol>
+                <li>A responder <strong>MAY</strong> reject any unauthorized requests by returning an HTTP 401 "Unauthorized", HTTP 403 "Forbidden", or HTTP 404 "Not Found"</li>
+                <li>For authentication and authorisation, systems <strong>MAY</strong> support any SMART App Launch and SMART Backend Service Authorization. When this is not avalable, basic authentication <strong>MAY</strong> be used. </li>
+             </ol>
             </div>
           </blockquote>
           <div class="lead">
@@ -188,7 +207,6 @@
 <td>clinical-status, patient, patient.identifier, patient+clinical-status</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -206,7 +224,6 @@
 <td>category, clinical-status, code, onset-date, patient, patient.identifier, patient+category, patient+category+clinical-status, patient+clinical-status, patient+code, patient+onset-date</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -221,10 +238,9 @@
 <td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
-<td>class, date, discharge-disposition, identifier, location, patient, patient.identifier, patient+class, patient+date, patient+discharge-disposition, patient+location, patient+status, patient+type, status, type</td>
+<td>class, date, identifier, location, patient, patient.identifier, patient+class, patient+date, patient+location, patient+status, status</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td></td>
 </tr>
@@ -242,7 +258,6 @@
 <td>date, patient, patient.identifier, patient+date, patient+status, patient+vaccine-code, status, vaccine-code</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -259,8 +274,7 @@
 <td class="text-center"></td>
 <td>address, address-city, address-postalcode, address-state, identifier, name</td>
 <td/>
-<td>
-</td>
+<td></td>
 <td/>
 </tr>
 <tr>
@@ -290,32 +304,11 @@
 <td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
-<td>_id, authoredon, category, identifier, intent, patient, patient.identifier, patient+intent, patient+intent+authoredon, patient+intent+status, status</td>
+<td>_id, authoredon, intent, patient, patient.identifier, patient+intent, patient+intent+authoredon, patient+intent+status, status</td>
 <td>
 <code>MedicationRequest:medication</code>
 </td>
 <td>
-<code>Provenance:target</code>
-</td>
-<td/>
-</tr>
-<tr>
-<td>
-<a href="#MedicationStatement1-1">MedicationStatement</a>
-</td>
-<td>
-<a href="StructureDefinition-au-core-medicationstatement.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement</a>
-</td>
-<td>y</td>
-<td class="text-center">y</td>
-<td class="text-center"></td>
-<td class="text-center"></td>
-<td>effective, patient, patient.identifier, patient+effective, patient+status, status</td>
-<td>
-<code>MedicationStatement:medication</code>
-</td>
-<td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -324,16 +317,7 @@
 <a href="#Observation1-1">Observation</a>
 </td>
 <td>
-<a href="StructureDefinition-au-core-waistcircum.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-waistcircum</a>,
-<a href="StructureDefinition-au-core-bodyweight.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight</a>,
-<a href="StructureDefinition-au-core-bodytemp.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp</a>,
-<a href="StructureDefinition-au-core-diagnosticresult.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult</a>,
-<a href="StructureDefinition-au-core-heartrate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate</a>,
-<a href="StructureDefinition-au-core-resprate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-resprate</a>,
-<a href="StructureDefinition-au-core-diagnosticresult-path.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path</a>,
-<a href="StructureDefinition-au-core-smokingstatus.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus</a>,
-<a href="StructureDefinition-au-core-bloodpressure.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure</a>,
-<a href="StructureDefinition-au-core-bodyheight.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight</a>
+<a href="StructureDefinition-au-core-waistcircum.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-waistcircum</a>,<a href="StructureDefinition-au-core-bodyweight.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight</a>,<a href="StructureDefinition-au-core-bodytemp.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp</a>,<a href="StructureDefinition-au-core-diagnosticresult.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult</a>,<a href="StructureDefinition-au-core-heartrate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate</a>,<a href="StructureDefinition-au-core-resprate.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-resprate</a>,<a href="StructureDefinition-au-core-diagnosticresult-path.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path</a>,<a href="StructureDefinition-au-core-smokingstatus.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus</a>,<a href="StructureDefinition-au-core-bloodpressure.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure</a>,<a href="StructureDefinition-au-core-bodyheight.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyheight</a>
 </td>
 <td>y</td>
 <td class="text-center">y</td>
@@ -342,13 +326,12 @@
 <td>category, code, date, patient, patient.identifier, patient+category, patient+category+date, patient+category+status, patient+code, patient+code+date, status</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
 <tr>
 <td>
-<a href="#Patient1-1">Organization</a>
+<a href="#Organization1-1">Organization</a>
 </td>
 <td>
 <a href="StructureDefinition-au-core-organization.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization</a>
@@ -360,7 +343,6 @@
 <td>_id, address, identifier, name</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -375,10 +357,9 @@
 <td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
-<td>_id, birthdate, birthdate+family, birthdate+name, family, family+gender, gender, gender+name, identifier, indigenous-status, name, patient-gender-identity</td>
+<td>_id, birthdate, birthdate+family, birthdate+name, family, family+gender, gender, gender+name, identifier, indigenous-status, name, gender-identity</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -396,7 +377,6 @@
 <td>_id, identifier, name</td>
 <td/>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -416,7 +396,6 @@
 <code>PractitionerRole:practitioner</code>
 </td>
 <td>
-<code>Provenance:target</code>
 </td>
 <td/>
 </tr>
@@ -434,24 +413,7 @@
 <td>code, date, patient, patient.identifier, patient+code+date, patient+date, patient+status, status</td>
 <td></td>
 <td>
-<code>Provenance:target</code>
 </td>
-<td/>
-</tr>
-<tr>
-<td>
-<a href="#Provenance1-1">Provenance</a>
-</td>
-<td>
-<a href="StructureDefinition-au-core-procedure.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-provenance</a>
-</td>
-<td>y</td>
-<td class="text-center">y</td>
-<td class="text-center"></td>
-<td class="text-center"></td>
-<td></td>
-<td></td>
-<td></td>
 <td/>
 </tr>
 </tbody>
@@ -502,7 +464,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the client supports the AllergyIntolerance resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the AllergyIntolerance resource.</p>
+<p>If the responder supports the AllergyIntolerance resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the AllergyIntolerance resource.</p>
 </div>
 </blockquote>
 </div>
@@ -532,8 +494,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -549,10 +511,10 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The requester <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The responder <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
   </div>
 </td>
 </tr>
@@ -568,8 +530,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -650,7 +612,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the client supports the Condition resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Condition resource.</p>
+<p>If the responder supports the Condition resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Condition resource.</p>
 </div>
 </blockquote>
 </div>
@@ -680,8 +642,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -697,10 +659,10 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The requester <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The responder <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
   </div>
 </td>
 </tr>
@@ -716,8 +678,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -733,8 +695,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -750,8 +712,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -767,10 +729,12 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
-    <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The requester <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
+    <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
+    </p>
+    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
+    </p>
   </div>
 </td>
 </tr>
@@ -896,7 +860,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the client supports the Encounter resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Encounter resource.</p>
+<p>If the responder supports the Encounter resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Encounter resource.</p>
 </div>
 </blockquote>
 </div>
@@ -926,8 +890,8 @@
   </td>
   <td>
     <div>
-      <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
-      <p>The server <strong>SHALL</strong> support both.</p>
+      <p>The requester <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
+      <p>The responder <strong>SHALL</strong> support both.</p>
     </div>
   </td>
 </tr>
@@ -943,10 +907,10 @@
   </td>
   <td>
     <div>
-      <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
-      <p>The server <strong>SHALL</strong> support both.</p>
-      <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
-      <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+      <p>The requester <strong>SHALL</strong> provide both the system and code values.</p>
+      <p>The responder <strong>SHALL</strong> support both.</p>
+      <p>The requester <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+      <p>The responder <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
     </div>
   </td>
 </tr>
@@ -962,8 +926,8 @@
   </td>
   <td>
     <div>
-      <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-      <p>The server <strong>SHALL</strong> support both.</p>
+      <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+      <p>The responder <strong>SHALL</strong> support both.</p>
     </div>
   </td>
 </tr>
@@ -979,27 +943,12 @@
   </td>
   <td>
     <div>
-      <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
-      <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-      <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    </div>
-  </td>
-</tr>
-<tr>
-  <td>
-    <b>MAY</b>
-  </td>
-  <td>
-    <a href="http://hl7.org/fhir/R4/encounter.html#search">discharge-disposition</a>
-  </td>
-  <td>
-    <code>token</code>
-  </td>
-  <td>
-    <div>
-      <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-      <p>The server <strong>SHALL</strong> support both.</p>
+      <p>The requester <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
+      <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+      <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>,        <code>lt</code>,        <code>ge</code>,        <code>le</code>.            
+      </p>
+      <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>,        <code>lt</code>,        <code>ge</code>,        <code>le</code>.            
+      </p>
     </div>
   </td>
 </tr>
@@ -1015,8 +964,8 @@
   </td>
   <td>
     <div>
-      <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-      <p>The server <strong>SHALL</strong> support both.</p>
+      <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+      <p>The responder <strong>SHALL</strong> support both.</p>
     </div>
   </td>
 </tr>
@@ -1032,8 +981,8 @@
   </td>
   <td>
     <div>
-      <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
-      <p>The server <strong>SHALL</strong> support both.</p>
+      <p>The requester <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
+      <p>The responder <strong>SHALL</strong> support both.</p>
     </div>
   </td>
 </tr>
@@ -1049,25 +998,8 @@
   </td>
   <td>
     <div>
-      <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-      <p>The server <strong>SHALL</strong> support both.</p>
-    </div>
-  </td>
-</tr>
-<tr>
-  <td>
-    <b>MAY</b>
-  </td>
-  <td>
-    <a href="http://hl7.org/fhir/R4/encounter.html#search">type</a>
-  </td>
-  <td>
-    <code>token</code>
-  </td>
-  <td>
-    <div>
-      <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-      <p>The server <strong>SHALL</strong> support both.</p>
+      <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+      <p>The responder <strong>SHALL</strong> support both.</p>
     </div>
   </td>
 </tr>
@@ -1112,17 +1044,6 @@
     <b>SHOULD</b>
   </td>
   <td>
-    <a href="http://hl7.org/fhir/R4/encounter.html#search">patient</a>+    <a href="http://hl7.org/fhir/R4/encounter.html#search">discharge-disposition</a>
-  </td>
-  <td>
-    <code>reference</code>+    <code>token</code>
-  </td>
-</tr>
-<tr>
-  <td>
-    <b>SHOULD</b>
-  </td>
-  <td>
     <a href="http://hl7.org/fhir/R4/encounter.html#search">patient</a>+    <a href="http://hl7.org/fhir/R4/encounter.html#search">location</a>
   </td>
   <td>
@@ -1135,17 +1056,6 @@
   </td>
   <td>
     <a href="http://hl7.org/fhir/R4/encounter.html#search">patient</a>+    <a href="http://hl7.org/fhir/R4/encounter.html#search">status</a>
-  </td>
-  <td>
-    <code>reference</code>+    <code>token</code>
-  </td>
-</tr>
-<tr>
-  <td>
-    <b>SHOULD</b>
-  </td>
-  <td>
-    <a href="http://hl7.org/fhir/R4/encounter.html#search">patient</a>+    <a href="http://hl7.org/fhir/R4/encounter.html#search">type</a>
   </td>
   <td>
     <code>reference</code>+    <code>token</code>
@@ -1204,7 +1114,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the client supports the Immunization resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Immunization resource.</p>
+<p>If the responder supports the Immunization resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Immunization resource.</p>
 </div>
 </blockquote>
 </div>
@@ -1234,8 +1144,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -1251,10 +1161,10 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The requester <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The responder <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
   </div>
 </td>
 </tr>
@@ -1270,10 +1180,12 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
-    <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The requester <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
+    <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.        
+    </p>
+    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.        
+    </p>
   </div>
 </td>
 </tr>
@@ -1289,8 +1201,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -1306,8 +1218,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -1366,153 +1278,153 @@
 </div>
 </div>
 <div xmlns="http://www.w3.org/1999/xhtml">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-    <h4 id="Location1-1" class="panel-title">
-    <span style="float: right;">Resource Conformance: SHOULD</span>Location</h4>
-    </div>
-    <div class="panel-body">
-    <div class="container">
-    <div class="row">
-    <div class="col-lg-6">
-    <span class="lead">Base System Profile</span>
-    <br/>
-    <a href="StructureDefinition-au-core-location.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-location</a>
-    </div>
-    <div class="col-lg-3">
-    <span class="lead">Profile Conformance</span>
-    <br/>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 id="Location1-1" class="panel-title">
+<span style="float: right;">Resource Conformance: SHOULD</span>Location</h4>
+</div>
+<div class="panel-body">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Base System Profile</span>
+<br/>
+<a href="StructureDefinition-au-core-location.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-location</a>
+</div>
+<div class="col-lg-3">
+<span class="lead">Profile Conformance</span>
+<br/>
+<b>SHALL</b>
+</div>
+<div class="col-lg-3">
+<span class="lead">Reference Policy</span>
+<br/>
+<code>resolves</code>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-lg-6">
+<span class="lead">Interaction summary</span>
+<br/>
+<ul>
+<li>
+<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.    
+</li>
+<li>
+<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.    
+</li>
+</ul>
+</div>
+</div>
+<p/>
+<div class="row">
+<div class="col-12">
+<span class="lead">Documentation</span>
+<blockquote>
+<div>
+<p>If the responder supports the Location resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Location resource.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-7">
+<span class="lead">Search Parameters</span>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+  <th>Conformance</th>
+  <th>Parameter</th>
+  <th>Type</th>
+  <th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>
     <b>SHALL</b>
-    </div>
-    <div class="col-lg-3">
-    <span class="lead">Reference Policy</span>
-    <br/>
-    <code>resolves</code>
-    </div>
-    </div>
-    <p/>
-    <div class="row">
-    <div class="col-lg-6">
-    <span class="lead">Interaction summary</span>
-    <br/>
-    <ul>
-    <li>
-    <strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
-    </li>
-    <li>
-    <strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
-    </li>
-    </ul>
-    </div>
-    </div>
-    <p/>
-    <div class="row">
-    <div class="col-12">
-    <span class="lead">Documentation</span>
-    <blockquote>
+  </td>
+  <td>
+    <a href="http://hl7.org/fhir/R4/location.html#search">address</a>
+  </td>
+  <td>
+    <code>string</code>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td>
+    <b>SHALL</b>
+  </td>
+  <td>
+    <a href="http://hl7.org/fhir/R4/location.html#search">name</a>
+  </td>
+  <td>
+    <code>string</code>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td>
+    <b>SHOULD</b>
+  </td>
+  <td>
+    <a href="http://hl7.org/fhir/R4/location.html#search">address-city</a>
+  </td>
+  <td>
+    <code>string</code>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td>
+    <b>SHOULD</b>
+  </td>
+  <td>
+    <a href="http://hl7.org/fhir/R4/location.html#search">address-state</a>
+  </td>
+  <td>
+    <code>string</code>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td>
+    <b>SHOULD</b>
+  </td>
+  <td>
+    <a href="http://hl7.org/fhir/R4/location.html#search">address-postalcode</a>
+  </td>
+  <td>
+    <code>string</code>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td>
+    <b>MAY</b>
+  </td>
+  <td>
+    <a href="http://hl7.org/fhir/R4/location.html#search">identifier</a>
+  </td>
+  <td>
+    <code>token</code>
+  </td>
+  <td>
     <div>
-    <p>If the client supports the Location resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Location resource.</p>
+      <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>SHOULD</strong> provide both the system and code values.</p>
+      <p>The responder <strong>SHALL</strong> support both.</p>
     </div>
-    </blockquote>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-lg-7">
-    <span class="lead">Search Parameters</span>
-    <table class="table table-condensed table-hover">
-    <thead>
-    <tr>
-    <th>Conformance</th>
-    <th>Parameter</th>
-    <th>Type</th>
-    <th>Documentation</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>
-      <b>SHALL</b>
-    </td>
-    <td>
-      <a href="http://hl7.org/fhir/R4/location.html#search">address</a>
-    </td>
-    <td>
-      <code>string</code>
-    </td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>
-      <b>SHALL</b>
-    </td>
-    <td>
-      <a href="http://hl7.org/fhir/R4/location.html#search">name</a>
-    </td>
-    <td>
-      <code>string</code>
-    </td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>
-      <b>SHOULD</b>
-    </td>
-    <td>
-      <a href="http://hl7.org/fhir/R4/location.html#search">address-city</a>
-    </td>
-    <td>
-      <code>string</code>
-    </td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>
-      <b>SHOULD</b>
-    </td>
-    <td>
-      <a href="http://hl7.org/fhir/R4/location.html#search">address-state</a>
-    </td>
-    <td>
-      <code>string</code>
-    </td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>
-      <b>SHOULD</b>
-    </td>
-    <td>
-      <a href="http://hl7.org/fhir/R4/location.html#search">address-postalcode</a>
-    </td>
-    <td>
-      <code>string</code>
-    </td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>
-      <b>MAY</b>
-    </td>
-    <td>
-      <a href="http://hl7.org/fhir/R4/location.html#search">identifier</a>
-    </td>
-    <td>
-      <code>token</code>
-    </td>
-    <td>
-      <div>
-        <p>The client <strong>SHALL</strong> provide at least a code value and <strong>SHOULD</strong> provide both the system and code values.</p>
-        <p>The server <strong>SHALL</strong> support both.</p>
-      </div>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
+  </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
@@ -1559,7 +1471,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>MedicationAdministration, MedicationDispense, MedicationRequest, and MedicationStatement resources can represent a medication, using an external reference to a Medication resource. If the client supports the Medication resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Medication resource.</p>
+<p>MedicationAdministration, MedicationDispense, MedicationRequest, and MedicationStatement resources can represent a medication, using an external reference to a Medication resource. If the responder supports the Medication resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Medication resource.</p>
 </div>
 </blockquote>
 </div>
@@ -1612,8 +1524,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the client supports the MedicationRequest resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationRequest resource.</p>
-<p>The MedicationRequest resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be <a href="http://hl7.org/fhir/R4/references.html#contained">contained</a> or an external resource. The server <strong>MAY</strong> choose any one way or more than one method, but if an external reference to Medication is used, the server <strong>SHALL</strong> support the <code>_include</code> parameter for searching this element. The client application <strong>SHALL</strong> support all methods.</p>
+<p>If the responder supports the MedicationRequest resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationRequest resource.</p>
 </div>
 </blockquote>
 </div>
@@ -1645,23 +1556,6 @@
 </tr>
 <tr>
 <td>
-  <b>SHOULD</b>
-</td>
-<td>
-  <a href="http://hl7.org/fhir/R4/medicationrequest.html#search">identifier</a>
-</td>
-<td>
-  <code>token</code>
-</td>
-<td>
-  <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-  </div>
-</td>
-</tr>
-<tr>
-<td>
   <b>SHALL</b>
 </td>
 <td>
@@ -1672,8 +1566,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -1689,10 +1583,10 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The requester <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The responder <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
   </div>
 </td>
 </tr>
@@ -1708,27 +1602,12 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
-    <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-  </div>
-</td>
-</tr>
-<tr>
-<td>
-  <b>MAY</b>
-</td>
-<td>
-  <a href="http://hl7.org/fhir/R4/medicationrequest.html#search">category</a>
-</td>
-<td>
-  <code>token</code>
-</td>
-<td>
-  <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
+    <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
+    </p>
+    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
+    </p>
   </div>
 </td>
 </tr>
@@ -1744,8 +1623,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -1761,8 +1640,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -1811,185 +1690,6 @@
 </td>
 <td>
   <code>reference</code>+  <code>token</code>+  <code>token</code>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 id="MedicationStatement1-1" class="panel-title">
-<span style="float: right;">Resource Conformance: SHOULD</span>MedicationStatement</h4>
-</div>
-<div class="panel-body">
-<div class="container">
-<div class="row">
-<div class="col-lg-6">
-<span class="lead">Base System Profile</span>
-<br/>
-<a href="StructureDefinition-au-core-medicationstatement.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement</a>
-</div>
-<div class="col-lg-3">
-<span class="lead">Profile Conformance</span>
-<br/>
-<b>SHALL</b>
-</div>
-<div class="col-lg-3">
-<span class="lead">Reference Policy</span>
-<br/>
-<code>resolves</code>
-</div>
-</div>
-<p/>
-<div class="row">
-<div class="col-lg-6">
-<span class="lead">Interaction summary</span>
-<br/>
-<ul>
-<li>
-<strong>SHALL</strong> support <code>read</code>,<code>search-type</code>.
-</li>
-<li>
-<strong>MAY</strong> support <code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
-</li>
-</ul>
-</div>
-</div>
-<p/>
-<div class="row">
-<div class="col-12">
-<span class="lead">Documentation</span>
-<blockquote>
-<div>
-<p>If the client supports the MedicationStatement resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the MedicationStatement resource.</p>
-<p>The MedicationStatement resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be <a href="http://hl7.org/fhir/R4/references.html#contained">contained</a> or an external resource. The server <strong>MAY</strong> choose any one way or more than one method, but if an external reference to Medication is used, the server <strong>SHALL</strong> support the <code>_include</code> parameter for searching this element. The client application <strong>SHALL</strong> support all methods.</p>
-</div>
-</blockquote>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-7">
-<span class="lead">Search Parameters</span>
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>Conformance</th>
-<th>Parameter</th>
-<th>Type</th>
-<th>Documentation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-  <b>SHALL</b>
-</td>
-<td>
-  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">patient</a>
-</td>
-<td>
-  <code>reference</code>
-</td>
-<td>
-  <div>
-    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-  </div>
-</td>
-</tr>
-<tr>
-<td>
-  <b>SHOULD</b>
-</td>
-<td>
-  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">patient.identifier</a>
-</td>
-<td>
-  <code>reference.token</code>
-</td>
-<td>
-  <div>
-    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
-  </div>
-</td>
-</tr>
-<tr>
-<td>
-  <b>MAY</b>
-</td>
-<td>
-  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">effective</a>
-</td>
-<td>
-  <code>date</code>
-</td>
-<td>
-  <div>
-    <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
-    <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-  </div>
-</td>
-</tr>
-<tr>
-<td>
-  <b>MAY</b>
-</td>
-<td>
-  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">status</a>
-</td>
-<td>
-  <code>token</code>
-</td>
-<td>
-  <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-  </div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="col-lg-5">
-<span class="lead">Combined Search Parameters</span>
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>Conformance</th>
-<th>Parameters</th>
-<th>Types</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-  <b>SHOULD</b>
-</td>
-<td>
-  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">effective</a>
-</td>
-<td>
-  <code>reference</code>+  <code>date</code>
-</td>
-</tr>
-<tr>
-<td>
-  <b>SHALL</b>
-</td>
-<td>
-  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/medicationstatement.html#search">status</a>
-</td>
-<td>
-  <code>reference</code>+  <code>token</code>
 </td>
 </tr>
 </tbody>
@@ -2062,7 +1762,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the client supports the Observation resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Observation resource.</p>
+<p>If the responder supports the Observation resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Observation resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2092,8 +1792,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -2109,10 +1809,10 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The requester <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The responder <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
   </div>
 </td>
 </tr>
@@ -2128,8 +1828,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -2145,8 +1845,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -2162,10 +1862,12 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
-    <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The requester <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
+    <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.        
+    </p>
+    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.        
+    </p>
   </div>
 </td>
 </tr>
@@ -2181,8 +1883,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -2208,7 +1910,7 @@
   <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">category</a>
 </td>
 <td>
-  <code>reference</code>+ <code>token</code>
+  <code>reference</code>+  <code>token</code>
 </td>
 </tr>
 <tr>
@@ -2216,7 +1918,7 @@
   <b>SHALL</b>
 </td>
 <td>
-  <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>+ <a href="http://hl7.org/fhir/R4/observation.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">date</a>
+  <a href="http://hl7.org/fhir/R4/observation.html#search">patient</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">category</a>+  <a href="http://hl7.org/fhir/R4/observation.html#search">date</a>
 </td>
 <td>
   <code>reference</code>+  <code>token</code>+  <code>date</code>
@@ -2307,7 +2009,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the client supports the Organization resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Organization resource.</p>
+<p>If the responder supports the Organization resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Organization resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2330,6 +2032,25 @@
   <b>SHALL</b>
 </td>
 <td>
+  <a href="http://hl7.org/fhir/R4/organization.html#search">identifier</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>SHOULD</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support search using HPI-O and ABN identifiers as defined in the profile.</p>
+    <p>The responder <strong>SHOULD</strong> support search using HPI-O and ABN identifiers as defined in the profile.</p>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
   <a href="http://hl7.org/fhir/R4/organization.html#search">address</a>
 </td>
 <td>
@@ -2339,26 +2060,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHALL</b>
-</td>
-<td>
-  <a href="http://hl7.org/fhir/R4/organization.html#search">identifier</a>
-</td>
-<td>
-  <code>token</code>
-</td>
-<td>
-  <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>SHOULD</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using HPI-O and ABN identifiers as defined in the profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using HPI-O and ABN identifiers as defined in the profile.</p>
-  </div>
-</td>
-</tr>
-<tr>
-<td>
-  <b>SHALL</b>
+  <b>SHOULD</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/organization.html#search">name</a>
@@ -2432,21 +2134,18 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>The client <strong>SHALL</strong> support the Patient resource, the AU Core profile, and the conformance expectations for the Patient resource.</p>
-<p>Clients <strong>SHALL</strong> be able to access the patient record using the following API call:</p>
+<p>The responder <strong>SHALL</strong> support the Patient resource, the AU Core profile, and the conformance expectations for the Patient resource.</p>
+<p>responders <strong>SHALL</strong> support the capability for a requester application to access the patient record using any of the following API calls:</p>
 <p>
 <code>GET [url]/Patient/[id]</code>
 </p>
-<p>Clients <strong>SHOULD</strong> use these search parameters that servers are required to support to access the patient record:</p>
-<ul>
-<li>
-  <code>_id</code>
-</li>
-<li>
-  <code>identifier</code>
-</li>
-</ul>
-<p>Servers are not required to support any additional search parameters, and clients <strong>SHOULD NOT</strong> expect servers to do so.</p>
+<p>
+<code>GET [url]/Patient?_id=[id]</code>
+</p>
+<p>
+<code>GET [url]/Patient?identifier=[identifier]</code>
+</p>
+<p>responders are not required to support any additional search parameters, and requesters <strong>SHOULD NOT</strong> expect responders to do so.</p>
 </div>
 </blockquote>
 </div>
@@ -2489,11 +2188,11 @@
 <td>
   <div>
     <div>
-    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
-  </div>
+      <p>The requester <strong>SHALL</strong> provide both the system and code values.</p>
+      <p>The responder <strong>SHALL</strong> support both.</p>
+      <p>The requester <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+      <p>The responder <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    </div>
   </div>
 </td>
 </tr>
@@ -2533,10 +2232,12 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide a value precise to the day offset.</p>
-    <p>The server <strong>SHALL</strong> support a value precise to the day offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The requester <strong>SHALL</strong> provide a value precise to the day offset.</p>
+    <p>The responder <strong>SHALL</strong> support a value precise to the day offset.</p>
+    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
+    </p>
+    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
+    </p>
   </div>
 </td>
 </tr>
@@ -2552,8 +2253,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -2569,8 +2270,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -2579,15 +2280,15 @@
   <b>MAY</b>
 </td>
 <td>
-  <a href="http://hl7.org/fhir/R4/patient.html#search">patient-gender-identity</a>
+  <a href="https://build.fhir.org/ig/hl7au/au-fhir-base/search-parameters.html#patient">gender-identity</a>
 </td>
 <td>
   <code>token</code>
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -2701,7 +2402,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the client supports the Practitioner resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Practitioner resource.</p>
+<p>If the responder supports the Practitioner resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Practitioner resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2731,10 +2432,10 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the profile.</p>
+    <p>The requester <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the profile.</p>
+    <p>The responder <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the profile.</p>
   </div>
 </td>
 </tr>
@@ -2752,7 +2453,7 @@
 </tr>
 <tr>
 <td>
-  <b>SHOULD</b>
+  <b>SHALL</b>
 </td>
 <td>
   <a href="http://hl7.org/fhir/R4/resource.html#search">_id</a>
@@ -2814,7 +2515,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the client supports the PractitionerRole resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the PractitionerRole resource.</p>
+<p>If the responder supports the PractitionerRole resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the PractitionerRole resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2844,10 +2545,10 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the profile.</p>
+    <p>The requester <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support search using a Medicare Provider Number identifier as defined in the profile.</p>
+    <p>The responder <strong>SHOULD</strong> support search using a Medicare Provider Number identifier as defined in the profile.</p>
   </div>
 </td>
 </tr>
@@ -2863,8 +2564,8 @@
 </td>
 <td>
   <div>
-     <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -2880,10 +2581,10 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>SHOULD</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the AU Core Practitioner profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the AU Core Practitioner profile.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>SHOULD</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the AU Core Practitioner profile.</p>
+    <p>The responder <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the AU Core Practitioner profile.</p>
   </div>
 </td>
 </tr>
@@ -2911,8 +2612,8 @@
 </td>
 <td>
   <div>
-     <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -2928,8 +2629,8 @@
 </td>
 <td>
   <div>
-     <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -2985,7 +2686,7 @@
 <span class="lead">Documentation</span>
 <blockquote>
 <div>
-<p>If the client supports the Procedure resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Procedure resource.</p>
+<p>If the responder supports the Procedure resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Procedure resource.</p>
 </div>
 </blockquote>
 </div>
@@ -3015,8 +2716,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least an id value and <strong>MAY</strong> provide both the Type and id values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -3032,10 +2733,10 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
-    <p>The client <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
-    <p>The server <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The requester <strong>SHALL</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+    <p>The responder <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
   </div>
 </td>
 </tr>
@@ -3051,8 +2752,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -3068,10 +2769,12 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
-    <p>The server <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The client <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    <p>The server <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The requester <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
+    <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
+    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
+    </p>
+    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
+    </p>
   </div>
 </td>
 </tr>
@@ -3087,8 +2790,8 @@
 </td>
 <td>
   <div>
-    <p>The client <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The server <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -3146,67 +2849,14 @@
 </div>
 </div>
 </div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 id="Provenance1-1" class="panel-title">
-<span style="float: right;">Resource Conformance: SHOULD</span>Provenance</h4>
-</div>
-<div class="panel-body">
-<div class="container">
-<div class="row">
-<div class="col-lg-6">
-<span class="lead">Base System Profile</span>
-<br/>
-<a href="StructureDefinition-au-core-provenance.html">http://hl7.org.au/fhir/core/StructureDefinition/au-core-provenance</a>
-</div>
-<div class="col-lg-3">
-<span class="lead">Profile Conformance</span>
-<br/>
-<b>SHALL</b>
-</div>
-<div class="col-lg-3">
-<span class="lead">Reference Policy</span>
-<br/>
-<code>resolves</code>
-</div>
-</div>
-<p/>
-<div class="row">
-<div class="col-lg-6">
-<span class="lead">Interaction summary</span>
-<br/>
-<ul>
-<li>
-<strong>SHALL</strong> support <code>read</code>.
-</li>
-<li>
-<strong>MAY</strong> support <code>search-type</code>,<code>create</code>,<code>update</code>,<code>delete</code>,<code>vread</code>,<code>patch</code>,<code>history-instance</code>.
-</li>
-</ul>
-</div>
-</div>
-<p/>
-<div class="row">
-<div class="col-12">
-<span class="lead">Documentation</span>
-<blockquote>
-<div>
-<p>If the client supports the Provenance resource, the client <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Provenance resource.</p>
-</div>
-</blockquote>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </text>
-<url value="http://hl7.org.au/fhir/core/CapabilityStatement/au-core-client"/>
-<name value="AUCoreClientCapabilityStatement"/>
-<title value="AU Core Client CapabilityStatement"/>
+<url value="http://hl7.org.au/fhir/core/CapabilityStatement/au-core-responder"/>
+<name value="AUCoreResponderCapabilityStatement"/>
+<title value="AU Core Responder CapabilityStatement"/>
 <status value="draft"/>
 <date value="2023-05-15"/>
-<description value="This CapabilityStatement describes the basic rules for the AU Core server actor that is responsible for providing responses to queries submitted by AU Core clients. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core servers are defined in this CapabilityStatement."/>
+<description value="This CapabilityStatement describes the basic rules for the [AU Core Responder actor](ActorDefinition-au-core-actor-responder.html) that is responsible for providing responses to queries submitted by AU Core Requesters. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core Responders are defined in this CapabilityStatement."/>
 <kind value="requirements"/>
 <fhirVersion value="4.0.1"/>
 <format value="json">
@@ -3239,18 +2889,12 @@
 <valueCode value="SHOULD"/>
 </extension>
 </implementationGuide>
-<implementationGuide value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-</implementationGuide>
 <rest>
-<mode value="client"/>
-<documentation value="The AU Core Client **SHALL**:&#xA;1. Support the AU Core Patient resource profile.&#xA;1. Support at least one additional resource profile from the list of AU Core Profiles.&#xA;1. Implement the RESTful behavior according to the FHIR specification.&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support JSON source formats for all AU Core interactions.&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;The AU Core Client **SHOULD**:&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support XML source formats for all AU Core interactions."/>
+<mode value="server"/>
+<documentation value="The AU Core Responder **SHALL**:&#xA;1. Support the AU Core Patient resource profile.&#xA;1. Support at least one additional resource profile from the list of AU Core Profiles.&#xA;1. Implement the RESTful behavior according to the FHIR specification.&#xA;1. Return the following response classes:&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;   - (Status 400): invalid parameter&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;   - (Status 401/4xx): unauthorized request&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;   - (Status 403): insufficient scope&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;   - (Status 404): unknown resource&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support JSON source formats for all AU Core interactions.&#xA;1. Declare a CapabilityStatement identifying the list of profiles, operations, and search parameters supported.&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;The AU Core Responder **SHOULD**:&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support XML source formats for all AU Core interactions."/>
 <security>
 <description value="TBD requirements and recommendations."/>
-</security>
-<!-- ALLERGYINTOLERANCE :: DONE -->
+</security><!-- ALLERGYINTOLERANCE :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -3268,7 +2912,7 @@
 </extension>
 <type value="AllergyIntolerance"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
-<documentation value="If the client supports the AllergyIntolerance resource, the server **SHALL** support the AU Core profile and the conformance expectations for the AllergyIntolerance resource."/>
+<documentation value="If the responder supports the AllergyIntolerance resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the AllergyIntolerance resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -3317,18 +2961,11 @@
 </extension>
 <code value="history-instance"/>
 </interaction>
-
-
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
@@ -3336,7 +2973,7 @@
 <name value="clinical-status"/>
 <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xa;&#xa;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xa;&#xa;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3345,10 +2982,9 @@
 <name value="patient"/>
 <definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
 <type value="reference"/>
-<documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both.&#xa;&#xa;The client **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The server **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
+<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The responder **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
 </searchParam>
-</resource>
-<!-- CONDITION :: DONE -->
+</resource><!-- CONDITION :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -3413,7 +3049,7 @@
 </extension>
 <type value="Condition"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
-<documentation value="If the client supports the Condition resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Condition resource."/>
+<documentation value="If the responder supports the Condition resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the Condition resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -3467,11 +3103,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
@@ -3488,7 +3119,7 @@
 <name value="clinical-status"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Condition-clinical-status"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3497,7 +3128,7 @@
 <name value="code"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3506,7 +3137,7 @@
 <name value="onset-date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Condition-onset-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
+<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3515,10 +3146,9 @@
 <name value="patient"/>
 <definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
 <type value="reference"/>
-<documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both.&#xa;&#xa;The client **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The server **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
+<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The responder **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
 </searchParam>
-</resource>
-<!-- ENCOUNTER :: DONE -->
+</resource><!-- ENCOUNTER :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -3553,17 +3183,6 @@
 <valueString value="patient"/>
 </extension>
 <extension url="required">
-<valueString value="discharge-disposition"/>
-</extension>
-</extension>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<extension url="required">
-<valueString value="patient"/>
-</extension>
-<extension url="required">
 <valueString value="location"/>
 </extension>
 </extension>
@@ -3578,20 +3197,9 @@
 <valueString value="status"/>
 </extension>
 </extension>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<extension url="required">
-<valueString value="patient"/>
-</extension>
-<extension url="required">
-<valueString value="type"/>
-</extension>
-</extension>
 <type value="Encounter"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-<documentation value="If the client supports the Encounter resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Encounter resource."/>
+<documentation value="If the responder supports the Encounter resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the Encounter resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -3645,11 +3253,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
@@ -3657,7 +3260,7 @@
 <name value="class"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Encounter-class"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3666,16 +3269,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<name value="discharge-disposition"/>
-<definition value="http://hl7.org.au/fhir/SearchParameter/encounter-discharge-disposition"/>
-<type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3684,7 +3278,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-identifier"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3693,7 +3287,7 @@
 <name value="location"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Encounter-location"/>
 <type value="reference"/>
-<documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3702,16 +3296,7 @@
 <name value="status"/>
 <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-status"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<name value="type"/>
-<definition value="http://hl7.org/fhir/SearchParameter/clinical-type"/>
-<type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3720,10 +3305,9 @@
 <name value="patient"/>
 <definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
 <type value="reference"/>
-<documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both.&#xa;&#xa;The client **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The server **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
+<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The responder **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
 </searchParam>
-</resource>
-<!-- IMMUNIZATION :: DONE -->
+</resource><!-- IMMUNIZATION :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -3763,7 +3347,7 @@
 </extension>
 <type value="Immunization"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
-<documentation value="If the client supports the Immunization resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Immunization resource."/>
+<documentation value="If the responder supports the Immunization resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the Immunization resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -3817,11 +3401,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
@@ -3829,7 +3408,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
+<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3838,7 +3417,7 @@
 <name value="status"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Immunization-status"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3847,7 +3426,7 @@
 <name value="vaccine-code"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Immunization-status"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3856,17 +3435,16 @@
 <name value="patient"/>
 <definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
 <type value="reference"/>
-<documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both.&#xa;&#xa;The client **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The server **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
+<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The responder **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
 </searchParam>
-</resource>
-<!-- LOCATION :: DONE -->
+</resource><!-- LOCATION :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
 <type value="Location"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
-<documentation value="If the client supports the Location resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Location resource."/>
+<documentation value="If the responder supports the Location resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the Location resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -3920,11 +3498,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -3972,17 +3545,16 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Location-identifier"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
-</resource>
-<!-- MEDICATION :: DONE -->
+</resource><!-- MEDICATION :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
 <type value="Medication"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
-<documentation value="MedicationAdministration, MedicationDispense, MedicationRequest, and MedicationStatement resources can represent a medication, using an external reference to a Medication resource.&#xA;&#xA;If the client supports the Medication resource, the server **SHALL** support the AU Core profile and the conformance expectations for the Medication resource."/>
+<documentation value="MedicationAdministration, MedicationDispense, MedicationRequest, and MedicationStatement resources can represent a medication, using an external reference to a Medication resource.&#xA;&#xA;If the responder supports the Medication resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the Medication resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4036,8 +3608,7 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-</resource>
-<!-- MEDICATIONREQUEST :: DONE -->
+</resource><!-- MEDICATIONREQUEST :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -4069,7 +3640,7 @@
 </extension>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="SHALL"/>
 </extension>
 <extension url="required">
 <valueString value="patient"/>
@@ -4083,7 +3654,7 @@
 </extension>
 <type value="MedicationRequest"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
-<documentation value="MedicationRequest resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The server **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the server **SHALL** support the `_include` parameter for searching this element. The client application **SHALL** support all methods.&#xA;&#xA;If the client supports the MedicationRequest resource, the server **SHALL** support the AU Core profile and the conformance expectations for the MedicationRequest resource."/>
+<documentation value="MedicationRequest resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The responder **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the responder **SHALL** support the `_include` parameter for searching this element. The requester application **SHALL** support all methods.&#xA;&#xA;If the responder supports the MedicationRequest resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the MedicationRequest resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4138,36 +3709,13 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="SHALL"/>
 </extension>
 <name value="_id"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
 <type value="token"/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<name value="identifier"/>
-<definition value="http://hl7.org/fhir/SearchParameter/clinical-identifier"/>
-<type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<name value="category"/>
-<definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-category"/>
-<type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4176,7 +3724,7 @@
 <name value="authoredon"/>
 <definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-authoredon"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
+<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4185,7 +3733,7 @@
 <name value="intent"/>
 <definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-intent"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4194,7 +3742,7 @@
 <name value="status"/>
 <definition value="http://hl7.org/fhir/SearchParameter/medications-status"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4203,124 +3751,7 @@
 <name value="patient"/>
 <definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
 <type value="reference"/>
-<documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both.&#xa;&#xa;The client **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The server **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
-</searchParam>
-</resource>
-<!-- MEDICATIONSTATEMENT :: DONE -->
-<resource>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-<extension url="required">
-<valueString value="patient"/>
-</extension>
-<extension url="required">
-<valueString value="status"/>
-</extension>
-</extension>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<extension url="required">
-<valueString value="patient"/>
-</extension>
-<extension url="required">
-<valueString value="effective"/>
-</extension>
-</extension>
-<type value="MedicationStatement"/>
-<profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
-<documentation value="MedicationStatement resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The server **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the server **SHALL** support the `_include` parameter for searching this element. The client application **SHALL** support all methods.&#xA;&#xA;If the client supports the MedicationStatement resource, the client **SHALL** support the AU Core profile and the conformance expectations for the MedicationStatement resource."/>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-<code value="read"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-<code value="search-type"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
-</interaction>
-<searchInclude value="MedicationStatement:medication"/>
-<referencePolicy value="resolves">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-</referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<name value="effective"/>
-<definition value="http://hl7.org/fhir/SearchParameter/MedicationStatement-effective"/>
-<type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<name value="status"/>
-<definition value="http://hl7.org/fhir/SearchParameter/medications-status"/>
-<type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-<name value="patient"/>
-<definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
-<type value="reference"/>
-<documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both.&#xa;&#xa;The client **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The server **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
+<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The responder **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
 </searchParam>
 </resource>
 <!-- OBSERVATION :: DONE -->
@@ -4443,7 +3874,7 @@
 <valueCode value="SHALL"/>
 </extension>
 </supportedProfile>
-<documentation value="If the client supports the Observation resource, the client **SHALL** support the AU Core profiles and the conformance expectations for the Observation resource."/>
+<documentation value="If the responder supports the Observation resource, the responder **SHALL** support the AU Core profiles and the conformance expectations for the Observation resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4497,11 +3928,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
@@ -4509,7 +3935,7 @@
 <name value="category"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Observation-category"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4518,7 +3944,7 @@
 <name value="code"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4527,7 +3953,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
+<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4536,7 +3962,7 @@
 <name value="status"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Observation-status"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4545,17 +3971,16 @@
 <name value="patient"/>
 <definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
 <type value="reference"/>
-<documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both.&#xa;&#xa;The client **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The server **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
+<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The responder **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
 </searchParam>
-</resource>
-<!-- ORGANIZATION :: DONE -->
+</resource><!-- ORGANIZATION :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
 <type value="Organization"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
-<documentation value="If the client supports the Organization resource, the client **SHALL** support the AU Core profile and the conformance expectations for the Organization resource."/>
+<documentation value="If the responder supports the Organization resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the Organization resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4609,14 +4034,9 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="address"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Organization-address"/>
@@ -4629,11 +4049,11 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Organization-identifier"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **SHOULD** provide both the system and code values. The server **SHALL** support both.&#xA;&#xA;The client **SHOULD** support search using HPI-O and ABN identifiers as defined in the profile. The server **SHOULD** support search using the using HPI-O and ABN identifiers as defined in the profile."/>
+<documentation value="The requester **SHALL** provide at least a code value and **SHOULD** provide both the system and code values. The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using HPI-O and ABN identifiers as defined in the profile. The responder **SHOULD** support search using the using HPI-O and ABN identifiers as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="name"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Organization-name"/>
@@ -4647,8 +4067,7 @@
 <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
 <type value="token"/>
 </searchParam>
-</resource>
-<!-- PATIENT :: DONE -->
+</resource><!-- PATIENT :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4699,7 +4118,7 @@
 </extension>
 <type value="Patient"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
-<documentation value="Clients **SHALL** be able to access the patient record using the following API call:&#xA;&#xA;`GET [url]/Patient/[id]`&#xA;&#xA;Clients **SHOULD** use these search parameters that servers are required to support to access the patient record:&#xA;&#xA; - `_id`&#xA; - `identifier`&#xA;&#xA;Clients are not required to support any additional search parameters, and clients **SHOULD NOT** expect servers to do so.&#xA;&#xA;The client **SHALL** support the AU Core profile and **SHALL** support the conformance expectations for the Patient resource."/>
+<documentation value="responders **SHALL** support the capability for a requester application to access the patient record using any of the following API calls:&#xA;&#xA;```GET [url]/Patient/[id]```&#xA;&#xA;```GET [url]/Patient?_id=[id]```&#xA;&#xA;```GET [url]/Patient?identifier=[identifier]```&#xA;&#xA;responders are not required to support any additional search parameters, and requesters **SHOULD NOT** expect responders to do so.&#xA;&#xA;The responder **SHALL** support the AU Core profile and **SHALL** support the conformance expectations for the Patient resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4753,11 +4172,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4773,7 +4187,7 @@
 <name value="birthdate"/>
 <definition value="http://hl7.org/fhir/SearchParameter/individual-birthdate"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *day*.&#xa;&#xa;A server **SHALL** support a value a value precise to the *day*."/>
+<documentation value="A requester **SHALL** provide a value precise to the *day*.&#xa;&#xa;A responder **SHALL** support a value a value precise to the *day*."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4790,7 +4204,7 @@
 <name value="gender"/>
 <definition value="http://hl7.org/fhir/SearchParameter/individual-gender"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xa;&#xa;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xa;&#xa;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4799,7 +4213,7 @@
 <name value="indigenous-status"/>
 <definition value="http://hl7.org.au/fhir/SearchParameter/indigenous-status"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xa;&#xa;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xa;&#xa;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4808,7 +4222,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Patient-identifier"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide both the system and code values. The server **SHALL NOT** support only code values.&#xa;&#xa;The client **SHOULD** support search using IHI, Medicare Number, and DVA Number identifiers as defined in the profile. The server **SHOULD** support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the profile."/>
+<documentation value="The requester **SHALL** provide both the system and code values. The responder **SHALL NOT** support only code values.&#xa;&#xa;The requester **SHOULD** support search using IHI, Medicare Number, and DVA Number identifiers as defined in the profile. The responder **SHOULD** support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4822,20 +4236,19 @@
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
 </extension>
-<name value="patient-gender-identity"/>
-<definition value="http://hl7.org.au/fhir/SearchParameter/patient-gender-identity"/>
+<name value="gender-identity"/>
+<definition value="http://hl7.org.au/fhir/SearchParameter/gender-identity"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xa;&#xa;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xa;&#xa;The responder **SHALL** support both."/>
 </searchParam>
-</resource>
-<!-- PRACTITIONER :: DONE -->
+</resource><!-- PRACTITIONER :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
 <type value="Practitioner"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-<documentation value="If the client supports the Practitioner resource, the client **SHALL** support the AU Core profile and the conformance expectations for the Practitioner resource."/>
+<documentation value="If the responder supports the Practitioner resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the Practitioner resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4891,7 +4304,7 @@
 </referencePolicy>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="SHALL"/>
 </extension>
 <name value="_id"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
@@ -4899,12 +4312,12 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="SHALL"/>
 </extension>
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Practitioner-identifier"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values. The server **SHALL** support both.&#xA;&#xA;The client **SHOULD** support search using a HPI-I identifier as defined in the profile. The server **SHOULD** support search using a HPI-I identifier as defined in the profile."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values. The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using a HPI-I identifier as defined in the profile. The responder **SHOULD** support search using the using a HPI-I identifier as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4922,7 +4335,7 @@
 </extension>
 <type value="PractitionerRole"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-<documentation value="If the client supports the PractitionerRole resource, the client **SHALL** support the AU Core profile and the conformance expectations for the PractitionerRole resource."/>
+<documentation value="If the responder supports the PractitionerRole resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the PractitionerRole resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4977,14 +4390,9 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="SHALL"/>
 </extension>
 <name value="_id"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
@@ -4992,21 +4400,21 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="SHALL"/>
 </extension>
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values. The server **SHALL** support both.&#xA;&#xA;The client **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile. The server **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values. The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile. The responder **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="SHALL"/>
 </extension>
 <name value="practitioner"/>
 <definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-practitionerrole-practitioner"/>
 <type value="reference"/>
-<documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both.&#xa;&#xa;The client **SHOULD** support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile.&#xa;&#xa;The server **SHOULD** support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile."/>
+<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile.&#xa;&#xa;The responder **SHOULD** support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -5015,7 +4423,7 @@
 <name value="specialty"/>
 <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-specialty"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -5024,10 +4432,9 @@
 <name value="organization"/>
 <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-organization"/>
 <type value="reference"/>
-<documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both."/>
 </searchParam>
-</resource>
-<!-- PROCEDURE :: DONE -->
+</resource><!-- PROCEDURE :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -5070,7 +4477,7 @@
 </extension>
 <type value="Procedure"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
-<documentation value="If the client supports the Procedure resource, the client **SHALL** support the AU Core profile and the conformance expectations for the Procedure resource."/>
+<documentation value="If the responder supports the Procedure resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the Procedure resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -5124,11 +4531,6 @@
 <valueCode value="SHOULD"/>
 </extension>
 </referencePolicy>
-<searchRevInclude value="Provenance:target">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-</searchRevInclude>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
@@ -5136,7 +4538,7 @@
 <name value="code"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -5145,7 +4547,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A client **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A server **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The client **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The server **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
+<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -5154,7 +4556,7 @@
 <name value="status"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Procedure-status"/>
 <type value="token"/>
-<documentation value="The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The server **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -5163,70 +4565,8 @@
 <name value="patient"/>
 <definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
 <type value="reference"/>
-<documentation value="The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The server **SHALL** support both.&#xa;&#xa;The client **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The server **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
+<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The responder **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
 </searchParam>
-</resource>
-<!-- PROVENANCE :: DONE -->
-<resource>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<type value="Provenance"/>
-<profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-provenance"/>
-<documentation value="If the client supports the Provenance resource, the client **SHALL** support the AU Core profile and the conformance expectations for the Provenance resource."/>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-<code value="read"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="search-type"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
-</interaction>
-<referencePolicy value="resolves">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-</referencePolicy>
 </resource>
 <!-- INTERACTIONS -->
 <interaction>

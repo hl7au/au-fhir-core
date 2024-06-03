@@ -11,7 +11,7 @@
         <td>identifier</td>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The server <b>SHALL</b> support both. <br/><br/> The client <b>SHOULD</b> support search using a HPI-I identifier as defined in the profile. The server <b>SHOULD</b> support search using the using a HPI-I identifier as defined in the profile.</td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using a HPI-I identifier as defined in the profile. The responder <b>SHOULD</b> support search using the using a HPI-I identifier as defined in the profile.</td>
   </tr>
   <tr>
         <td>_id</td>
@@ -47,14 +47,13 @@ The following search parameters **SHALL** be supported:
 The following search parameters **SHOULD** be supported:
 
 1. **SHOULD** support fetching a Practitioner using the **[`_id`](https://hl7.org/fhir/R4/practitioner.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
 
     `GET [base]/Practitioner/[id]` or `GET [base]/Practitioner?_id=[id]`
 
     Example:
     
       1. GET [base]/Practitioner/5678
-      1. GET [base]/Practitioner?_id=5678_revinclude=Provenance:target
+      1. GET [base]/Practitioner?_id=5678
 
     *Implementation Notes:* Returns a single Practitioner resource ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
 

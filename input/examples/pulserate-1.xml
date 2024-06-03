@@ -35,9 +35,6 @@
 		<reference value="Patient/wang-li"/>
 	</subject>
 	<effectiveDateTime value="2016-07-02"/>
-	<performer>
-		<reference value="PractitionerRole/bobrester-bob-gp"/>
-	</performer>
 	<valueQuantity>
 		<value value="80"/>
 		<unit value="beats/minute"/>

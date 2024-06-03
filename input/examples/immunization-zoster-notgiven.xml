@@ -17,19 +17,6 @@
 	</patient>
 	<occurrenceDateTime value="2017-08-15"/>
 	<primarySource value="true"/>
-	<performer>
-		<function>
-			<coding>
-				<system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
-				<code value="AP"/>
-				<display value="Administering Provider"/>
-			</coding>
-			<text value="Administering Provider"/>
-		</function>
-		<actor>
-			<reference value="Practitioner/bobrester-bob"/> 
-		</actor>
-	</performer>
 	<note>
 		<text value="Patient refused administration of Zostavax"/>
 	</note>

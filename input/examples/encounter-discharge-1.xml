@@ -17,21 +17,6 @@
     <start value="2023-02-20T06:15:00+10:00"/>
     <end value="2023-02-20T18:19:00+10:00"/>
   </period>
-  <hospitalization>
-    <dischargeDisposition>
-      <coding>
-        <system value="https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1"/>
-        <code value="9"/>
-        <display value="Other/Home"/>
-      </coding>
-      <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition"/>
-        <code value="home"/>
-        <display value="Home"/>
-      </coding>
-      <text value="Discharged to Home"/>
-    </dischargeDisposition>
-  </hospitalization>
   <location>
     <location>
       <reference value="Location/murrabit-hospital"/>
