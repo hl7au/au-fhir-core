@@ -122,13 +122,13 @@ When implementing representations of body site / laterality the following points
 In FHIR, body site and associated laterality can be recorded in various ways. Depending on the specific system approach to body site / laterality information recording this can lead to a number of scenarios needing to be implemented using AU Core profiles:
 
 ~~~
-1\. Primary finding/procedure code with body site and laterality as a pre-coordinated code.
+1. Primary finding/procedure code with body site and laterality as a pre-coordinated code.
 
-2\. Primary finding/procedure code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
+2. Primary finding/procedure code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
 
-3\. Coded body site with laterality and separate primary finding/procedure code.
+3. Coded body site with laterality and separate primary finding/procedure code.
 
-4\. Coded body site without laterality and separate coded laterality qualifier and a primary finding/procedure code.
+4. Coded body site without laterality and separate coded laterality qualifier and a primary finding/procedure code.
 ~~~
 
 To support consistent representation the following is recommended for each of these cases, this approach can be applied to either Condition or Procedure profiles:
