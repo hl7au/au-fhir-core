@@ -116,7 +116,7 @@ When using some AU Core profiles it may be desirable to represent a relevant bod
 *  [AU Core Procedure](StructureDefinition-au-core-procedure.html) - with primary procedure code `Procedure.code` and `Procedure.bodySite`
 
 When implementing representations of body site / laterality the following points can be noted and are considered in providing recommended representations for varied terminology usage in systems:
-* The `bodySite` element is NOT *Must Support* in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
+* The `bodySite` element is not *Must Support* in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
 * The `CodeableConcept.text` element is system populated and may reflect more specific detail than the `CodeableConcept.coding` concepts provided.
 
 In FHIR, body site and associated laterality can be recorded in various ways. Depending on the specific system approach to body site / laterality information recording this can lead to a number of scenarios needing to be implemented using AU Core profiles:
@@ -189,7 +189,7 @@ Example Condition resource cellulitis of right knee
 * The `code` element is used
   * Contains `coding` for primary concept (no body site information)
   * Use `text` to describe concept fully, this can include information on recorded laterality e.g. ', Right'
-* NOTE: in this case laterality is NOT expressed in coded form 
+* Note: in this case laterality is not expressed in coded form 
 
 Example Condition resource cellulitis of knee, laterality as text only
 ~~~
