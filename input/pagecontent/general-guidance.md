@@ -110,25 +110,26 @@ Example: Patient resource with interpreter required and language is known
 }
 ~~~
 
-### Representing body site and laterality
-When using some AU Core profiles it may be desirable to represent relevant body site, which may include laterality, information associated with a record using CodeableConcept elements, notably:
+### Representing body site, which may include laterality
+When using some AU Core profiles it may be desirable to represent a relevant body site, which may include laterality, associated with a record using CodeableConcept elements, notably:
 *  [AU Core Condition](StructureDefinition-au-core-condition.html) - with primary finding code `Condition.code` and `Condition.bodySite`
 *  [AU Core Procedure](StructureDefinition-au-core-procedure.html) - with primary procedure code `Procedure.code` and `Procedure.bodySite`
 
-When recommending approaches to this, considerations include:
-* The `bodySite` element is NOT `Must Support` in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
+When implementing representations of body site / laterality the following points can be noted and are considered in providing recommended representations for varied terminology usage in systems:
+* The `bodySite` element is NOT *Must Support* in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
 * The `CodeableConcept.text` element is system populated and may reflect more specific detail than the `CodeableConcept.coding` concepts provided.
 
-In FHIR, body site and associated laterality can be recorded in various ways. Depending on the specific system approach to body site / laterality information this can lead to a number of scenarios needing to be represented using AU Core profiles:
+In FHIR, body site and associated laterality can be recorded in various ways. Depending on the specific system approach to body site / laterality information recording this can lead to a number of scenarios needing to be implemented using AU Core profiles:
 
-1\. Body site and laterality is defined in a pre-coordinated primary finding/procedure code.
+~~~
+1\. Primary finding/procedure code with body site and laterality as a pre-coordinated code.
 
-2\. Body site without laterality is defined in a primary finding/procedure code AND coded laterality qualifier is separate.
+2\. Primary finding/procedure code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
 
-3\. Body site with laterality is defined separately from a primary finding/procedure code.
+3\. Coded body site with laterality and separate primary finding/procedure code.
 
-4\. Body site without laterality AND coded laterality qualifier are defined separately from a primary finding/procedure code.
-
+4\. Coded body site without laterality and separate coded laterality qualifier and a primary finding/procedure code.
+~~~
 
 To support consistent representation the following is recommended for each of these cases, this approach can be applied to either Condition or Procedure profiles:
 
@@ -136,15 +137,11 @@ To support consistent representation the following is recommended for each of th
 * For systems that have pre-coordinated coding describing a concept fully.
 * Only the `code` element is used and contains information on body site with laterality.
 
-Example Condition - Cellulitis of right knee
+Example Condition resource cellulitis of right knee
 ~~~
 {
   "resourceType" : "Condition",
   "id" : "cellulitis",
-  "text" : {
-    "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><a href=\"Patient-bennelong-anne.html\">Patient/bennelong-anne: Anne Bennelong</a> " BENNELONG"</p></div>"
-  },
   "clinicalStatus" : {
     "coding" : [
       {
@@ -181,15 +178,11 @@ Example Condition - Cellulitis of right knee
       },
       "text" : "Cellulitis of right knee"
     ]
-  },
-  "subject" : {
-    "reference" : "Patient/bennelong-anne",
-    "display" : "Anne Bennelong"
   }
 }
 ~~~
 
-2\. Primary `code` only (precoordinated body site without laterality and separate laterality qualifier)
+2\. Primary `code` only (pre-coordinated body site without laterality and separate laterality qualifier)
 * For systems that have 
   * Pre-coordinated coding describing a concept including body site without laterality
   * Laterality qualifier recorded separately e.g. left, right
@@ -198,15 +191,11 @@ Example Condition - Cellulitis of right knee
   * Use `text` to describe concept fully, this can include information on recorded laterality e.g. ', Right'
 * NOTE: in this case laterality is NOT expressed in coded form 
 
-Example Condition - Cellulitis of knee, laterality as text only
+Example Condition resource cellulitis of knee, laterality as text only
 ~~~
 {
   "resourceType" : "Condition",
   "id" : "cellulitis",
-  "text" : {
-    "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><a href=\"Patient-bennelong-anne.html\">Patient/bennelong-anne: Anne Bennelong</a> " BENNELONG"</p></div>"
-  },
   "clinicalStatus" : {
     "coding" : [
       {
@@ -243,32 +232,24 @@ Example Condition - Cellulitis of knee, laterality as text only
       },
       "text" : "Cellulitis of knee, Right"
     ]
-  },
-  "subject" : {
-    "reference" : "Patient/bennelong-anne",
-    "display" : "Anne Bennelong"
   }
 }
 ~~~
 
 3\. Primary `code` and `bodySite` with laterality coded separately.
 * For systems that have 
-  * Pre-coordinated coding describing primary concept WITHOUT body site.
+  * Pre-coordinated coding describing primary concept without body site.
   * Body site with laterality is recorded as coded value.
 * The `code` element is used:
   * Contains `coding` for primary concept including body site without laterality.
   * Use `text` to describe concept fully, this can include information on recorded body site and laterality as text.
-* MAY record coded `bodySite`, optional when this element is not `Must Support` in AU Core profiles.
+* MAY record coded `bodySite`, optional when this element is not *Must Support* in AU Core profiles.
 
-Example Condition - Cellulitis, body site Right Knee
+Example Condition resource cellulitis, body site right knee
 ~~~
 {
   "resourceType" : "Condition",
   "id" : "cellulitis",
-  "text" : {
-    "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><a href=\"Patient-bennelong-anne.html\">Patient/bennelong-anne: Anne Bennelong</a> " BENNELONG"</p></div>"
-  },
   "clinicalStatus" : {
     "coding" : [
       {
@@ -315,36 +296,29 @@ Example Condition - Cellulitis, body site Right Knee
       }],
       "text" : "Right Knee"
     }
-  ],
-  "subject" : {
-    "reference" : "Patient/bennelong-anne",
-    "display" : "Anne Bennelong"
-  }
+  ]
+
 }
 ~~~
 
 
-4\. Primary `code` and `bodySite` without laterality coded seperately and also separate laterality qualifier.
+4\. Primary `code` and `bodySite` without laterality coded separately and also separate laterality qualifier.
 * For systems that have 
-  * Pre-coordinated coding describing primary concept WITHOUT body site.
-  * Body site WITHOUT laterality is recorded as coded value.
+  * Pre-coordinated coding describing primary concept without body site.
+  * Body site without laterality is recorded as coded value.
   * Laterality qualifier recorded separately e.g. left, right
 * The `code` element is used:
   * Contains `coding` for primary concept alone (no body site or laterality).
   * Use `text` to describe concept fully, this can include information on recorded body site and laterality as text.
-* MAY record coded `bodySite`, optional when this element is not `Must Support` in AU Core profiles.
+* MAY record coded `bodySite`, optional when this element is not *Must Support* in AU Core profiles.
   * Contains `coding` for body site without laterality
   * Use  `text` to describe body site concept fully, this can include information on recorded laterality as text e.g. ', Right'
 
-Example Condition - Cellulitis, body site Knee, laterality as text only
+Example Condition resource cellulitis, body site knee, laterality as text only
 ~~~
 {
   "resourceType" : "Condition",
   "id" : "cellulitis",
-  "text" : {
-    "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><a href=\"Patient-bennelong-anne.html\">Patient/bennelong-anne: Anne Bennelong</a> " BENNELONG"</p></div>"
-  },
   "clinicalStatus" : {
     "coding" : [
       {
@@ -391,11 +365,7 @@ Example Condition - Cellulitis, body site Knee, laterality as text only
       }],
       "text" : "Knee, Right"
     }
-  ],
-  "subject" : {
-    "reference" : "Patient/bennelong-anne",
-    "display" : "Anne Bennelong"
-  }
+  ]
 }
 ~~~
 
