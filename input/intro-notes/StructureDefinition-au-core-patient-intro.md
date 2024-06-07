@@ -33,7 +33,7 @@ By making Individual Gender Identity a *Must Support* data element, this profile
 
 <b>Sex Assigned at Birth</b>
 
-Sex assigned at birth is represented using the [Person Recorded Sex or Gender extension](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-individual-recordedSexOrGender.html) extension as profiled by [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html). It should be noted the [Person Recorded Sex or Gender extension](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-individual-recordedSexOrGender.html) extension is not marked as *Must Support* in this version of the profile.
+Sex assigned at birth is represented using the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) as profiled by [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html). It should be noted the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) is not marked as *Must Support* in this version of the profile.
 
 
 ### Profile specific implementation guidance
