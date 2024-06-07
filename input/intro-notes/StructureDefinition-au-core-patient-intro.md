@@ -25,11 +25,11 @@ By making `name.use` a *Must Support* data element, this profile explicitly supp
 
 <b>Pronouns​</b>
 
-By making Individual Pronouns a *Must Support* data element, this profile explicitly supports representation and exchange of the Pronouns data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)). 
+By making Individual Pronouns extension a *Must Support* data element, this profile explicitly supports representation and exchange of the Pronouns data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)). This extension is further constrained in this profile such that the value of the individual pronoun shall be a member of the [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) value set if any codes within that value set can apply.
 
 <b>Gender Identity (GI)</b>
 
-By making Individual Gender Identity a *Must Support* data element, this profile explicitly supports representation and exchange of the Gender Identity data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)). 
+By making Individual Gender Identity extension a *Must Support* data element, this profile explicitly supports representation and exchange of the Gender Identity data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)). The value element of the [Individual Pronouns extension](http://hl7.org/fhir/StructureDefinition/individual-pronouns) is constrained in this profile to be [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)).
 
 <b>Sex Assigned at Birth</b>
 
@@ -50,6 +50,15 @@ Sex assigned at birth is represented using the [Person Recorded Sex or Gender ex
   - *Prefer not to answer* may be represented by sending the code "asked-declined"
   - *Not stated or inadequately described* may be represented by the code "unknown"
   - Where the workflow does not support obtaining a gender identity value, it may be represented by sending the code "not-asked"
+- This profile supports indvidual pronouns using the [Individual Pronouns extension](http://hl7.org/fhir/StructureDefinition/individual-pronouns) and the [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) value set supplied as the individual pronoun value.
+  - *they/them/their/theirs/themselves* may be represented by sending the LOINC Answer (LA) code LA29520-6
+  - *she/her/her/hers/herself* may be represented by sending the LOINC Answer (LA) code LA29519-8
+  - *he/him/his/his/himself* may be represented by sending the LOINC Answer (LA) code LA29518-0
+  - *Prefer not to answer* may be represented by sending the Data Absent Reason code "asked-declined"
+  - *Asked but not known* may be represented by sending the Data Absent Reason code "asked-unknown"
+  - *Not stated or inadequately described* may be represented by the Data Absent Reason code "unknown"
+  - Where the workflow does not support obtaining a pronoun, it may be represented by sending the Data Absent Reason code "not-asked"
+  - Where a preferred pronoun is provided but is not one of the [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) terms then a text only or alternative  specific coded value can be supplied.
 - When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/) and [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html)
 - Patient names can be provided as a text representation in `name.text` and/or parts such as `name.family` and `name.given`. 
   - `name.text` specifies the entire name as it should be displayed and this may be provided instead of, or as well as, the specific parts. It is important to note that the presence of parts of a name, e.g. `name.family` and `name.given`, do not imply that `name.text` is known or must be supplied. 
