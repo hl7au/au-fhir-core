@@ -41,6 +41,16 @@
 		<uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
 		<version value="5.1.0-snapshot1"/>
 	</dependsOn>
+	<dependsOn>
+		<uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
+		<packageId value="hl7.fhir.uv.smart-app-launch"/>
+		<version value="current"/>
+	</dependsOn>
+	<dependsOn>
+		<uri value="http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa"/>
+		<packageId value="hl7.fhir.uv.ipa"/>
+		<version value="current"/>
+	</dependsOn>
 	<definition>
 		<resource>
 			<reference>
