@@ -8,30 +8,3 @@ The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced
 
 # CapabilityStatement warnings 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
-
-# ================================================================================
-# ===  ERRORS ===
-# ===========================================================-=====================
-
-# ===  These errors are pending an update to the IG publisher for resolution; currently, there is no timeline for their correction. They are related by R4 and R5 value sets having different values, but using an R4 values returns the same error. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20error.20with.20ActorDefinition.20in.20R4.20IG ====
-ERROR: ActorDefinition/au-core-actor-requester: ActorDefinition.type: The value provided ('system') was not found in the value set 'Example Scenario Actor Type' (http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'system' in the ValueSet 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0'; The provided code '#system' was not found in the value set 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0')
-ERROR: ActorDefinition/au-core-actor-responder: ActorDefinition.type: The value provided ('system') was not found in the value set 'Example Scenario Actor Type' (http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'system' in the ValueSet 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0'; The provided code '#system' was not found in the value set 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0')
-
-
-# ===  These errors are pending an update to the IG publisher for resolution; currently, there is no timeline for their correction. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20errors.20with.20reprofiling.20extension.20from.205.2E1.2E0.20pack.20in.20r4 ====
-ERROR: StructureDefinition-au-core-rsg-sexassignedab.html: The reference integer64 could not be resolved
-ERROR: StructureDefinition-au-core-rsg-sexassignedab.html: The reference CodeableReference could not be resolved
-ERROR: StructureDefinition-au-core-rsg-sexassignedab.html: The reference RatioRange could not be resolved
-ERROR: StructureDefinition-au-core-rsg-sexassignedab.html: The reference Availability could not be resolved
-ERROR: StructureDefinition-au-core-rsg-sexassignedab.html: The reference ExtendedContactDetail could not be resolved
-ERROR: c:\work\git\au-fhir-core\output\StructureDefinition-au-core-rsg-sexassignedab-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 499, column 1592: The link 'integer64.html' for "integer64" cannot be resolved
-ERROR: c:\work\git\au-fhir-core\output\StructureDefinition-au-core-rsg-sexassignedab-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 499, column 3102: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
-ERROR: c:\work\git\au-fhir-core\output\StructureDefinition-au-core-rsg-sexassignedab-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 499, column 4424: The link 'RatioRange.html' for "RatioRange" cannot be resolved
-ERROR: c:\work\git\au-fhir-core\output\StructureDefinition-au-core-rsg-sexassignedab-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 499, column 5764: The link 'Availability.html' for "Availability" cannot be resolved
-ERROR: c:\work\git\au-fhir-core\output\StructureDefinition-au-core-rsg-sexassignedab-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 499, column 5810: The link 'ExtendedContactDetail.html' for "ExtendedContactDetail" cannot be resolved
-ERROR: c:\work\git\au-fhir-core\output\StructureDefinition-au-core-rsg-sexassignedab-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 679, column 1088: The link 'integer64.html' for "integer64" cannot be resolved
-ERROR: c:\work\git\au-fhir-core\output\StructureDefinition-au-core-rsg-sexassignedab-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 679, column 2094: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
-ERROR: c:\work\git\au-fhir-core\output\StructureDefinition-au-core-rsg-sexassignedab-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 679, column 2984: The link 'RatioRange.html' for "RatioRange" cannot be resolved
-ERROR: c:\work\git\au-fhir-core\output\StructureDefinition-au-core-rsg-sexassignedab-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 679, column 3928: The link 'Availability.html' for "Availability" cannot be resolved
-ERROR: c:\work\git\au-fhir-core\output\StructureDefinition-au-core-rsg-sexassignedab-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 679, column 3974: The link 'ExtendedContactDetail.html' for "ExtendedContactDetail" cannot be resolved
-
