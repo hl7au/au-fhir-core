@@ -862,5 +862,9 @@
 			<code value="path-expansion-params"/>
 			<value value="../input/_resources/exp-params.json"/>
 		</parameter>
+		<parameter>
+			<code value="fmm-definition"/>
+			<value value="https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#maturity-levels"/>
+		</parameter>	
 	</definition>
 </ImplementationGuide>
