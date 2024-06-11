@@ -32,12 +32,6 @@
         <td></td>
   </tr>
   <tr>
-        <td>identifier</td>
-        <td><b>SHOULD</b></td>
-        <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
-  </tr>
-  <tr>
         <td>patient.identifier</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>.<code>token</code></td>
@@ -54,12 +48,6 @@
         <td><b>MAY</b></td>
         <td><code>date</code></td>
         <td>A requester <b>SHALL</b> provide a value precise to the second + time offset. A responder <b>SHALL</b> support a value precise to the second + time offset.</td>
-  </tr>
-  <tr>
-        <td>category</td>
-        <td><b>MAY</b></td>
-        <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>intent</td>
@@ -144,17 +132,6 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/MedicationRequest?_id=2169591&amp;_include=MedicationRequest:medication
 
     *Implementation Notes:* Fetches a single MedicationRequest ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
-
-1. **SHOULD** support searching using the **[`identifier`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameter:
-
- 
-     `GET [base]/MedicationRequest?identifier={system|}[code]`
-
-    Example:
-    
-      1. GET [base]/MedicationRequest?identifier=http://gp.example.org\|1032333
-
-      *Implementation Notes:* Fetches a bundle containing any MedicationRequest resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`intent`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`authoredon`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameters:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`
