@@ -238,7 +238,7 @@
 <td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
-<td>class, date, discharge-disposition, identifier, location, patient, patient.identifier, patient+class, patient+date, patient+discharge-disposition, patient+location, patient+status, patient+type, status, type</td>
+<td>class, date, identifier, location, patient, patient.identifier, patient+class, patient+date, patient+location, patient+status, status</td>
 <td/>
 <td>
 </td>
@@ -304,7 +304,7 @@
 <td class="text-center">y</td>
 <td class="text-center"></td>
 <td class="text-center"></td>
-<td>_id, authoredon, category, identifier, intent, patient, patient.identifier, patient+intent, patient+intent+authoredon, patient+intent+status, status</td>
+<td>_id, authoredon, intent, patient, patient.identifier, patient+intent, patient+intent+authoredon, patient+intent+status, status</td>
 <td>
 <code>MedicationRequest:medication</code>
 </td>
@@ -957,23 +957,6 @@
     <b>MAY</b>
   </td>
   <td>
-    <a href="http://hl7.org/fhir/R4/encounter.html#search">discharge-disposition</a>
-  </td>
-  <td>
-    <code>token</code>
-  </td>
-  <td>
-    <div>
-      <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-      <p>The responder <strong>SHALL</strong> support both.</p>
-    </div>
-  </td>
-</tr>
-<tr>
-  <td>
-    <b>MAY</b>
-  </td>
-  <td>
     <a href="http://hl7.org/fhir/R4/encounter.html#search">identifier</a>
   </td>
   <td>
@@ -1009,23 +992,6 @@
   </td>
   <td>
     <a href="http://hl7.org/fhir/R4/encounter.html#search">status</a>
-  </td>
-  <td>
-    <code>token</code>
-  </td>
-  <td>
-    <div>
-      <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-      <p>The responder <strong>SHALL</strong> support both.</p>
-    </div>
-  </td>
-</tr>
-<tr>
-  <td>
-    <b>MAY</b>
-  </td>
-  <td>
-    <a href="http://hl7.org/fhir/R4/encounter.html#search">type</a>
   </td>
   <td>
     <code>token</code>
@@ -1078,17 +1044,6 @@
     <b>SHOULD</b>
   </td>
   <td>
-    <a href="http://hl7.org/fhir/R4/encounter.html#search">patient</a>+    <a href="http://hl7.org/fhir/R4/encounter.html#search">discharge-disposition</a>
-  </td>
-  <td>
-    <code>reference</code>+    <code>token</code>
-  </td>
-</tr>
-<tr>
-  <td>
-    <b>SHOULD</b>
-  </td>
-  <td>
     <a href="http://hl7.org/fhir/R4/encounter.html#search">patient</a>+    <a href="http://hl7.org/fhir/R4/encounter.html#search">location</a>
   </td>
   <td>
@@ -1101,17 +1056,6 @@
   </td>
   <td>
     <a href="http://hl7.org/fhir/R4/encounter.html#search">patient</a>+    <a href="http://hl7.org/fhir/R4/encounter.html#search">status</a>
-  </td>
-  <td>
-    <code>reference</code>+    <code>token</code>
-  </td>
-</tr>
-<tr>
-  <td>
-    <b>SHOULD</b>
-  </td>
-  <td>
-    <a href="http://hl7.org/fhir/R4/encounter.html#search">patient</a>+    <a href="http://hl7.org/fhir/R4/encounter.html#search">type</a>
   </td>
   <td>
     <code>reference</code>+    <code>token</code>
@@ -1615,23 +1559,6 @@
   <b>SHALL</b>
 </td>
 <td>
-  <a href="http://hl7.org/fhir/R4/medicationrequest.html#search">identifier</a>
-</td>
-<td>
-  <code>token</code>
-</td>
-<td>
-  <div>
-    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The responder <strong>SHALL</strong> support both.</p>
-  </div>
-</td>
-</tr>
-<tr>
-<td>
-  <b>SHALL</b>
-</td>
-<td>
   <a href="http://hl7.org/fhir/R4/medicationrequest.html#search">patient</a>
 </td>
 <td>
@@ -1681,23 +1608,6 @@
     </p>
     <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
     </p>
-  </div>
-</td>
-</tr>
-<tr>
-<td>
-  <b>MAY</b>
-</td>
-<td>
-  <a href="http://hl7.org/fhir/R4/medicationrequest.html#search">category</a>
-</td>
-<td>
-  <code>token</code>
-</td>
-<td>
-  <div>
-    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
-    <p>The responder <strong>SHALL</strong> support both.</p>
   </div>
 </td>
 </tr>
@@ -3273,17 +3183,6 @@
 <valueString value="patient"/>
 </extension>
 <extension url="required">
-<valueString value="discharge-disposition"/>
-</extension>
-</extension>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<extension url="required">
-<valueString value="patient"/>
-</extension>
-<extension url="required">
 <valueString value="location"/>
 </extension>
 </extension>
@@ -3296,17 +3195,6 @@
 </extension>
 <extension url="required">
 <valueString value="status"/>
-</extension>
-</extension>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<extension url="required">
-<valueString value="patient"/>
-</extension>
-<extension url="required">
-<valueString value="type"/>
 </extension>
 </extension>
 <type value="Encounter"/>
@@ -3387,15 +3275,6 @@
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
 </extension>
-<name value="discharge-disposition"/>
-<definition value="http://hl7.org.au/fhir/SearchParameter/encounter-discharge-disposition"/>
-<type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-identifier"/>
 <type value="token"/>
@@ -3416,15 +3295,6 @@
 </extension>
 <name value="status"/>
 <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-status"/>
-<type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<name value="type"/>
-<definition value="http://hl7.org/fhir/SearchParameter/clinical-type"/>
 <type value="token"/>
 <documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
@@ -3849,24 +3719,6 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-<name value="identifier"/>
-<definition value="http://hl7.org/fhir/SearchParameter/clinical-identifier"/>
-<type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<name value="category"/>
-<definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-category"/>
-<type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
 </extension>
 <name value="authoredon"/>
@@ -3945,7 +3797,7 @@
 </extension>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <extension url="required">
 <valueString value="patient"/>
