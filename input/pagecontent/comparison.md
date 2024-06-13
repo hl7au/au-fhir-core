@@ -1205,12 +1205,12 @@ Observation.subject.reference, Observation.status is                    <code>fi
     </tbody>
 </table>
 
-### Comparison table with updates style - the img is bad, but I think this is just a demo and if this (or similar) look is ok I'd rather crete a styling then have as an image
+#### Comparison table with updates style - the img is bad, but I think this is just a demo and if this (or similar) look is ok I'd rather crete a styling then have as an image
  <div> 
-    <img src="Comparison.png" alt="Comparison with other international IGs" style="width:100%"/>
+    <img src="comp.png" alt="Comparison with other international IGs" style="width:100%"/>
   </div>
 
-### Incomplete table with an attempt in compliance language; had a go at expressing using obligations but not sure I can do that for all 
+#### Incomplete table with an attempt in compliance language; had a go at expressing using obligations but not sure I can do that for all 
   <div> 
-    <img src="Comparison-compliance.png" alt="Comparison with other international IGs" style="width:100%"/>
+    <img src="comp-compliance.png" alt="Comparison with other international IGs" style="width:100%"/>
   </div>
