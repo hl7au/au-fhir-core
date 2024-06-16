@@ -18,7 +18,7 @@ Implementers are advised to be familiar with the requirements of the FHIR standa
 #### AU Core Profiles and Extensions
 The [Profiles and Extensions](profiles-and-extensions.html) page lists the AU Core profiles and AU Core extensions defined for this implementation guide. An AU Core profile [StructureDefinitions](http://hl7.org/fhir/R4/structuredefinition.html) defines the minimum elements, extensions, vocabularies and value sets that **SHALL** be present and constrains the way elements are used when conforming to the profile.
 
-AU Core profile elements include Mandatory and *Must Support* requirements. [Mandatory elements](#mandatory-elements) are required and have a minimum cardinality of 1 (min=1). [Must Support](#must-support-and-obligation) elements have defined conformance obligations in AU Core based on actor roles.
+AU Core profile elements include mandatory and *Must Support* requirements. [Mandatory elements](#mandatory-elements) are required and have a minimum cardinality of 1 (min=1). [Must Support](#must-support-and-obligation) elements have defined conformance obligations in AU Core based on actor roles.
 
 Systems may implement AU Core as: 
 - [Profile Only Support](#profile-only-support) for a system declaring conformance to one or more AU Core profiles
@@ -46,15 +46,15 @@ Profile Support + Interaction Support refers to a system that represents digital
 An [AU Core Responder](ActorDefinition-au-core-actor-responder.html) that declares Profile Support + Interaction Support conformance:
 - **SHALL** [declare conformance](declaring-conformance.html#profile-support--interaction-support) to the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html) in the server's CapabilityStatement.
 - **SHALL** specify the implemented resource types, associated AU Core profiles, REST API interactions and search parameters in the server's CapabilityStatement.
-- **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support-and-obligation) requirements for the elements defined as such in the implemented AU Core profiles.
+- **SHALL** implement the [mandatory](#mandatory-elements) and/or [Must Support](#must-support-and-obligation) requirements for the elements defined as such in the implemented AU Core profiles.
 - **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Responder Capability Statement](CapabilityStatement-au-core-responder.html#resourcesSummary1).
 
 An [AU Core Requester](ActorDefinition-au-core-actor-requester.html) that declares Profile Support + Interaction Support conformance:
-- **SHALL** implement the [Mandatory](#mandatory-elements) and/or [Must Support](#must-support-and-obligation) requirements for the elements defined as such in the implemented AU Core profiles.
+- **SHALL** implement the [mandatory](#mandatory-elements) and/or [Must Support](#must-support-and-obligation) requirements for the elements defined as such in the implemented AU Core profiles.
 - **SHALL** implement the required REST API interactions and search parameters as defined in the [AU Core Requester Capability Statement](CapabilityStatement-au-core-requester.html#resourcesSummary1).
 
 ### Mandatory Elements
-Mandatory elements are elements with minimum cardinality > 0. When an element is Mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements in [Missing Data](#missing-data) **SHALL** be applied. An element can be both *Must Support* and mandatory, in which case the requirements for mandatory's Missing Data requirements apply as described in [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data).
+Mandatory elements are elements with minimum cardinality > 0. When an element is mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements in [Missing Data](#missing-data) **SHALL** be applied. An element can be both *Must Support* and mandatory, in which case the requirements for mandatory's Missing Data requirements apply as described in [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data).
 
 The convention in this guide is to mark all mandatory elements as *Must Support* unless they are nested under an optional element.
 
@@ -95,7 +95,7 @@ When a *Must Support* element requires a more tightly stated obligation, this ob
 
 When rendered in an implementation guide each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table".
 
-The elements labelled *Must Support* in these views are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Implementers should refer to the "Key Elements Table" to see the full set of elements that are Mandatory or *Must Support*, and the full set of terminology requirements.
+The elements labelled *Must Support* in these views are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Implementers should refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support*, and the full set of terminology requirements.
 
 Implementers should take note that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile. 
 
@@ -285,11 +285,11 @@ There are situations when information for a particular data element is missing a
 
 #### Missing Must Support and Optional Data
 
-If the source system does not know the value for an *Optional* element (minimum cardinality = 0), including elements labelled *Must Support*, the data element **SHALL** be omitted from the resource.  
+If the source system does not know the value for an optional element (minimum cardinality = 0), including elements labelled *Must Support*, the data element **SHALL** be omitted from the resource.  
 
 #### Missing Must Support and Mandatory Data
 
-If the data element is a *Mandatory* element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system does not know the value or the reason the value is absent. The core specification provides guidance for what to do in this situation, which is summarised below.
+If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system does not know the value or the reason the value is absent. The core specification provides guidance for what to do in this situation, which is summarised below.
 
 1.  For *non-coded* data elements where the applicable AU Core profile does not mandate a sub-element
     - use the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) 
@@ -357,10 +357,10 @@ If the data element is a *Mandatory* element (minimum cardinality is > 0), the e
 ### Suppressed Data
 In some circumstances, specific pieces of data may be hidden due to security or privacy reasons. 
 
-When an element definition is *optional* (minimum cardinality = 0), including elements labelled *Must Support*, an
+When an element definition is optional (minimum cardinality = 0), including elements labelled *Must Support*, an
 - AU Core Responder **SHALL NOT** populate the element in the resource when a value is suppressed.  
 
-When an element definition is *Mandatory* (minimum cardinality > 0), 
+When an element definition is mandatory (minimum cardinality > 0), 
 - AU Core Responders **SHALL** correctly populate the element but it may exceed the data requester's access rights to know that the data is suppressed:
   - where a requester does not have access rights to know that data is suppressed use the code `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
   - where a requester may know that the data is suppressed use the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
