@@ -50,10 +50,6 @@ Once the issue is logged, you should discuss with the team on [chat.fhir.org in 
 
 {% include dependency-table.xhtml %}
 
-In addition, the following FHIR implementation guides are referenced:
-- [International Patient Access](https://hl7.org/fhir/uv/ipa)
-- [SMART Application Launch Framework](http://www.hl7.org/fhir/smart-app-launch)
-
 ### Usage
 
 AU Core is particularly useful in defining:
