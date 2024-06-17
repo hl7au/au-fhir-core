@@ -16,7 +16,7 @@ This change log documents the significant updates and resolutions implemented fr
     - renaming AU Core Client to be AU Core Requester [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073), [FHIR-43852](https://jira.hl7.org/browse/FHIR-43852)
   - added Actor Definitions page under FHIR Artefacts [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073).
 - Added Security and Privacy page [FHIR-45067](https://jira.hl7.org/browse/FHIR-45067).
-- Added Variance Statement page [FHIR-46034](https://jira.hl7.org/browse/FHIR-46034).
+- Added AU Variance Statement page [FHIR-46034](https://jira.hl7.org/browse/FHIR-46034).
 - Moved the Medicine Information section from the General Guidance page to a new Medicine Information page [FHIR-45165](https://jira.hl7.org/browse/FHIR-45165).
 - Removed support for the following search parameters and search parameter combinations:
   - Encounter: discharge-disposition, type, patient+discharge-disposition, patient+type [FHIR-45954](https://jira.hl7.org/browse/FHIR-45954), [FHIR-45603](https://jira.hl7.org/browse/FHIR-45603)
