@@ -46,7 +46,7 @@
         <key value="au-core-org-01"/>
         <severity value="error"/>
         <human value="A National Organisation Identifier (type=NOI) shall be an HPI-O or PAI-O"/>
-        <expression value="where(type.coding.code = 'NOI').exists() implies (system='http://ns.electronichealth.net.au/id/hi/hpio/1.0') or (system='http://ns.electronichealth.net.au/id/pcehr/paio/1.0')"/>
+        <expression value="type.coding.where(code='NOI').exists() implies ((system='http://ns.electronichealth.net.au/id/hi/hpio/1.0') or (system='http://ns.electronichealth.net.au/id/pcehr/paio/1.0'))"/>
         <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
       </constraint>
       <mustSupport value="true"/>
