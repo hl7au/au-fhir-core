@@ -16,6 +16,7 @@ This change log documents the significant updates and resolutions implemented fr
     - renaming AU Core Client to be AU Core Requester [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073), [FHIR-43852](https://jira.hl7.org/browse/FHIR-43852)
   - added Actor Definitions page under FHIR Artefacts [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073).
 - Added Security and Privacy page [FHIR-45067](https://jira.hl7.org/browse/FHIR-45067).
+- Added AU Variance Statement page [FHIR-46034](https://jira.hl7.org/browse/FHIR-46034).
 - Moved the Medicine Information section from the General Guidance page to a new Medicine Information page [FHIR-45165](https://jira.hl7.org/browse/FHIR-45165).
 - Removed support for the following search parameters and search parameter combinations:
   - Encounter: discharge-disposition, type, patient+discharge-disposition, patient+type [FHIR-45954](https://jira.hl7.org/browse/FHIR-45954), [FHIR-45603](https://jira.hl7.org/browse/FHIR-45603)
@@ -48,7 +49,9 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Medication.ingredient.isActive [FHIR-45220](https://jira.hl7.org/browse/FHIR-45220), [FHIR-45130](https://jira.hl7.org/browse/FHIR-45130), [FHIR-45049](https://jira.hl7.org/browse/FHIR-45049)
   - removed Must Support from Medication.ingredient.strength [FHIR-45220](https://jira.hl7.org/browse/FHIR-45220)
   - removed Must Support from Medication.amount [FHIR-45219](https://jira.hl7.org/browse/FHIR-45219)
-- Removed Must Support from Organization.alias in AU Core Organization [FHIR-44585](https://jira.hl7.org/browse/FHIR-44585).
+- Made the following changes to AU Core Organizaton: 
+  - removed Must Support from Organization.alias [FHIR-44585](https://jira.hl7.org/browse/FHIR-44585)
+  - corrected the invariant au-core-org-01 FHIRPath expression [FHIR-46103](https://jira.hl7.org/browse/FHIR-46103) 
 - Made the following changes to AU Core Patient:
   - removed Must Support from Patient.extension:birthPlace [FHIR-45018](https://jira.hl7.org/browse/FHIR-45018)
   - removed Must Support from Patient.extension:interpreterRequired [FHIR-45186](https://jira.hl7.org/browse/FHIR-45186)
@@ -130,6 +133,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)  
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
+  - removed the required binding to Metric Body Length Units value set from Observation.valueQuantity.code to allow the FHIR standard profile binding, and added the Metric Body Length Units value set as a candidate additional binding [FHIR-44787](https://jira.hl7.org/browse/FHIR-44787)
 - Corrected the search parameter for gender identity to be `gender-identity` not `patient-gender-identity` [FHIR-45057](https://jira.hl7.org/browse/FHIR-45057).
 - Changed the following Organization search parameters:
   - address search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
