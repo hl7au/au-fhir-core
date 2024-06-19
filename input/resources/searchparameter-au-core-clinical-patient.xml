@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SearchParameter xmlns="http://hl7.org/fhir">
     <id value="au-core-clinical-patient"/>
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+        <valueInteger value="1"/> 
+    </extension>
     <url value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
     <name value="AUCoreClinicalPatient"/>
     <derivedFrom value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
-    <status value="draft"/>
+    <status value="active"/>
     <description value="A clinical patient **SHOULD** support patient.identifier. This AU Core SearchParameter extends the usage context of the&#xA;clinical-patient parameter&#xA; - multipleAnd&#xA; - multipleOr&#xA; - chain"/>
     <code value="patient"/>
     <base value="AllergyIntolerance"/>
