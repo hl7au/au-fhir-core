@@ -20,8 +20,8 @@ ERROR: ActorDefinition/au-core-actor-responder: ActorDefinition.type: The value 
 # ===========================================================-=====================
 
 # === This is a best practice recommendation related to AU Core Observation examples. AU Core examples reflect the agreed profiles, as TDG voted to remove Must Support from Observation.performer that element is not included in AU Core examples ===
-WARNING: Observation: Best Practice Recommendation: In general, all observations should have a performer
+Best Practice Recommendation: In general, all observations should have a performer
 
 # === The following warning is understood and accepted. The resources meet critical needs for active use while the broader IG undergoes additional development and review. ===
-WARNING: The resource status 'active' and the standards status 'draft' are not consistent
+The resource status 'active' and the standards status 'draft' are not consistent
 
