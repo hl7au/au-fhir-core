@@ -3,7 +3,7 @@
 - Expected Publication status: Ballot
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version 0.3.0-ballot to the upcoming August ballot.
+This change log documents the significant updates and resolutions implemented from version 0.3.0-ballot to the 0.4.0-preview.
 
 #### Changes in this version
 
