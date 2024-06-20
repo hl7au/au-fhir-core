@@ -817,7 +817,7 @@
 		<!-- releaselabel should be the ballot status for HL7-published IGs. -->
 		<parameter>
 			<code value="releaselabel"/>
-			<value value="R1"/>
+			<value value="preview"/>
 		</parameter>
 		<parameter>
 			<code value="find-other-resources"/>
