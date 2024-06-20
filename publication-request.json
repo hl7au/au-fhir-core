@@ -10,5 +10,5 @@
     "title" : "AU Core",
     "ci-build" : "http://build.fhir.org/ig/hl7au/au-fhir-core",
     "category" : "National Base",
-    "introduction" : "The AU Core Implementation Guide defines the minimum set of FHIR RESTful interactions for each of the AU Core Profiles to access patient data."
+    "introduction" : "This implementation guide is provided to support the use of FHIR®© in an Australian context, and defines the minimum set of constraints on the FHIR resources to create the AU Core profiles. This implementation guide forms the foundation to build future AU Realm FHIR implementation guides and its content will continue to grow to meet the needs of AU implementers."
 }
