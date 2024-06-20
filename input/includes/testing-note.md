@@ -12,7 +12,7 @@ This testing period ends 08 September 2024.
 
 To learn more about testing AU Core or express your interest in participating, see [AU Core FHIR IG Testing](https://confluence.hl7.org/display/HAFWG/AU+Core+FHIR+IG+Testing).
 
-</div><!-- note-to-balloters -->
+</div><!-- stu-note -->
 
 
 
