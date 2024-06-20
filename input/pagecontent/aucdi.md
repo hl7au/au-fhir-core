@@ -92,7 +92,7 @@ Column attribute descriptions are as follows:
     <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
   </tr>
   <tr>
-    <td rowspan="5">Procedure completed</td>
+    <td rowspan="5">Procedure completed event</td>
     <td colspan="2">Procedure name</td>
     <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
     <td>Procedure.code</td>
@@ -216,7 +216,7 @@ Column attribute descriptions are as follows:
     <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
   </tr>
   <tr>
-    <td rowspan="3">Sex and gender summary</td>
+    <td rowspan="4">Sex and gender summary</td>
     <td colspan="2">Sex assigned at birth</td>
     <td><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
     <td>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender')</td>
@@ -235,22 +235,22 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td rowspan="3">Encounter – clinical context</td>
+    <td colspan="2">Last updated</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Encounter – clinical context</td>
     <td colspan="2">Reason for encounter</td>
     <td><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
     <td>Encounter.reasonCode | Encounter.reasonReference</td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Type of encounter</td>
-    <td><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
-    <td>Encounter.class</td>
-    <td></td>
-  </tr>
-  <tr>
     <td colspan="2">Modality</td>
     <td><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
-    <td></td>
+    <td>Encounter.class</td>
     <td></td>
   </tr>
   <tr>
