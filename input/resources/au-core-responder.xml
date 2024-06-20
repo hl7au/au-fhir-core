@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir">
   <id value="au-core-responder"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/> 
+  </extension>
   <text>
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
@@ -2854,7 +2857,7 @@
 <url value="http://hl7.org.au/fhir/core/CapabilityStatement/au-core-responder"/>
 <name value="AUCoreResponderCapabilityStatement"/>
 <title value="AU Core Responder CapabilityStatement"/>
-<status value="draft"/>
+<status value="active"/>
 <date value="2023-05-15"/>
 <description value="This CapabilityStatement describes the basic rules for the [AU Core Responder actor](ActorDefinition-au-core-actor-responder.html) that is responsible for providing responses to queries submitted by AU Core Requesters. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core Responders are defined in this CapabilityStatement."/>
 <kind value="requirements"/>
