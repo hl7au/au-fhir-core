@@ -87,8 +87,8 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td colspan="2">Last updated</td>
-    <td></td>
-    <td></td>
+    <td>TBD</td>
+    <td>TBD</td>
     <td></td>
   </tr>
   <tr>
@@ -156,8 +156,8 @@ Column attribute descriptions are as follows:
   </tr>
     <tr>
     <td colspan="2">Last updated</td>
-    <td></td>
-    <td></td>
+    <td>TBD</td>
+    <td>TBD</td>
     <td></td>
   </tr>
   <tr>
