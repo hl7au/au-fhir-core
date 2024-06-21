@@ -78,6 +78,21 @@
       <path value="AllergyIntolerance.code"/>
       <min value="1"/>
       <mustSupport value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="candidate"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-substances-and-negated-findings-1"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="The Adverse Reaction Substances and Negated Findings value set comprises terms used to identify a predisposition to adverse reactions to substances, as well as negated findings."/>
+          </extension>          
+        </extension>
+        <strength value="extensible" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2"/>
+      </binding>
     </element>
     <element id="AllergyIntolerance.patient">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
