@@ -284,14 +284,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Encounter/discharge-1"/>
-			</reference>
-			<name value="Encounter - Discharge"/>
-			<description value="Emergency encounter with discharge to home from AU Hospital&#xa;&#xa;Patient: Mr. Harry Dan"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Encounter/telehealth"/>
 			</reference>
 			<name value="Encounter - telehealth"/>
@@ -396,6 +388,14 @@
 			</reference>
 			<name value="MedicationRequest - active prescription, Reaptan"/>
 			<description value="Active prescription for Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablet, 10."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationRequest/simvastatin"/>
+			</reference>
+			<name value="MedicationRequest - active prescription, Simvastatin"/>
+			<description value="Active prescription for Simvastatin 40 MG Disintegrating Oral Tablet."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
 		</resource>
 		<!--OBSERVATION EXAMPLES-->
