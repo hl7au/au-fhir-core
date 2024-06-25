@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Adjusted from FHIR Observation/bgpanel example-->
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="blood-group-panel"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+            <code value="laboratory" />
+            <display value="Laboratory" />
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+            <code value="CH" />
+            <display value="Chemistry" />
+        </coding>
+        <text value="Chemistry" />
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="34532-2"/>
+            <display value="Blood type and Indirect antibody screen panel - Blood"/>
+        </coding>
+        <text value="Blood type and Indirect antibody screen panel - Blood"/>
+    </code>
+    <subject>
+        <reference value="Patient/banks-mia-leanne" />
+    </subject>
+    <effectiveDateTime value="2024-05-10" />
+    <hasMember>
+        <reference value="Observation/blood-group"/>
+    </hasMember>
+    <hasMember>
+        <reference value="Observation/rh-status"/>
+    </hasMember>
+</Observation>
