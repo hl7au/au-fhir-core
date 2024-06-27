@@ -1398,7 +1398,7 @@
     </td>
     <td>
       <div>
-        <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>SHOULD</strong> provide both the system and code values.</p>
+        <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
         <p>The responder <strong>SHALL</strong> support both.</p>
       </div>
     </td>
