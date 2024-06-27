@@ -103,16 +103,3 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/Immunization?patient.identifier=http://example.org/fhir/mrn\|12345&amp;date=ge2020-01-01T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all Immunization resources for the specified patient and date ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
-
-1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/immunization.html#search)** and **[`vaccine-code`](https://hl7.org/fhir/R4/immunization.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`
-    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `vaccine-code` (e.g.`vaccine-code={system|}[code],{system|}[code],...`)
-
-    `GET [base]/Immunization?patient={Type/}[id]&vaccine-code={system|}[code]{,{system|}[code],...}`
-
-    Example:
-    
-      1. GET [base]/Immunization?patient=5678&amp;vaccine-code=https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats\|COMIRN,http://snomed.info/sct\|1525011000168107
-      1. GET [base]/Immunization?patient.identifier=http://example.org/fhir/mrn\|12345&amp;vaccine-code=https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats\|COMIRN,http://snomed.info/sct\|1525011000168107
-
-    *Implementation Notes:* Fetches a bundle of all Immunization resources for the specified patient and immunization code(s). **SHOULD** support search by multiple codes. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
