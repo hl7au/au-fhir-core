@@ -93,7 +93,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from AllergyIntolerance.note [FHIR-45188](https://jira.hl7.org/browse/FHIR-45188)
   - changed the AllergyIntolerance.code 
     - changed Indicator of Hypersensitivity or Intolerance to Substance value set binding strength from preferred to extensible [FHIR-44713](https://jira.hl7.org/browse/FHIR-44713) 
-    - added Adverse Reaction Substances and Negated Findings value set as candidate [FHIR-44713](https://jira.hl7.org/browse/FHIR-44713) 
+    - added Additional Binding, Adverse Reaction Substances and Negated Findings value set as candidate [FHIR-44713](https://jira.hl7.org/browse/FHIR-44713) 
 - Made the following changes to AU Core Smoking Status: 
   - removed Must Support from Observation.encounter [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222)
   - removed Must Support from Observation.performer [FHIR-45223](https://jira.hl7.org/browse/FHIR-45223)
