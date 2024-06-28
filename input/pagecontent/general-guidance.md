@@ -115,60 +115,35 @@ When using some AU Core profiles it may be desirable to represent a relevant bod
 *  [AU Core Condition](StructureDefinition-au-core-condition.html) - with primary finding code `Condition.code` and `Condition.bodySite`
 *  [AU Core Procedure](StructureDefinition-au-core-procedure.html) - with primary procedure code `Procedure.code` and `Procedure.bodySite`
 
-When implementing representations of body site / laterality the following points can be noted and are considered in providing recommended representations for varied terminology usage in systems:
+
+When exchanging `Procedure` and `Condition` resources using AU Core profiles there may be a need to represent a relevant body site and associated laterality using `CodeableConcept` elements. In FHIR, body site and associated laterality can be recorded in various ways and implementers are encourage to consider the following points when implementing:
+
 * The `bodySite` element is not *Must Support* in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
-* The `CodeableConcept.text` element is system populated and may reflect more specific detail than the `CodeableConcept.coding` concepts provided.
+* The `CodeableConcept.text` element is system populated and may reflect more specific detail than the `CodeableConcept`.coding concepts provided.
 
-In FHIR, body site and associated laterality can be recorded in various ways. Depending on the specific system approach to body site / laterality information recording this can lead to a number of scenarios needing to be implemented using AU Core profiles:
+AU Core provides the following guidance for what to do in each of the following scenarios:
 
-~~~
-1. Primary finding/procedure code with body site and laterality as a pre-coordinated code.
+1\. Primary finding/procedure code with body site and laterality as a pre-coordinated code.
 
-2. Primary finding/procedure code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
+2\. Primary finding/procedure code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
 
-3. Coded body site with laterality and separate primary finding/procedure code.
+3\. Coded body site with laterality and separate primary finding/procedure code.
 
-4. Coded body site without laterality and separate coded laterality qualifier and a primary finding/procedure code.
-~~~
+4\. Coded body site without laterality and separate coded laterality qualifier and a primary finding/procedure code.
+
 
 To support consistent representation the following is recommended for each of these cases, this approach can be applied to either Condition or Procedure profiles:
 
 1\. Primary `code` only (pre-coordinated body site including laterality)
-* For systems that have pre-coordinated coding describing a concept fully.
-* Only the `code` element is used and contains information on body site with laterality.
+* For systems that have pre-coordinated coding describing a concept fully:
+  * use only the `code` element to contain information on body site with laterality.
 
 Example Condition resource cellulitis of right knee
 ~~~
 {
   "resourceType" : "Condition",
   "id" : "cellulitis",
-  "clinicalStatus" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-        "code" : "active"
-      }
-    ]
-  },
-  "verificationStatus" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-        "code" : "confirmed"
-      }
-    ]
-  },
-  "category" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
-          "code" : "encounter-diagnosis",
-          "display" : "Encounter Diagnosis"
-        }
-      ]
-    }
-  ],
+  ...
   "code" : {
     "coding" : [
       {
@@ -179,50 +154,24 @@ Example Condition resource cellulitis of right knee
       "text" : "Cellulitis of right knee"
     ]
   }
+  ...
 }
 ~~~
 
 2\. Primary `code` only (pre-coordinated body site without laterality and separate laterality qualifier)
-* For systems that have 
-  * Pre-coordinated coding describing a concept including body site without laterality
-  * Laterality qualifier recorded separately e.g. left, right
-* The `code` element is used
-  * Contains `coding` for primary concept (no body site information)
-  * Use `text` to describe concept fully, this can include information on recorded laterality e.g. ', Right'
-* Note: in this case laterality is not expressed in coded form 
+* For systems that have pre-coordinated coding describing a concept including body site without laterality, and have a laterality qualifier recorded separately e.g. left, right:
+  * use the `code` element:
+    * `code.coding` contains the primary concept (no body site information).
+    * `code.text` is used to describe concept fully, this can include information on recorded laterality e.g. ', Right'.
+  * in this case laterality is not expressed in coded form.
+
 
 Example Condition resource cellulitis of knee, laterality as text only
 ~~~
 {
   "resourceType" : "Condition",
   "id" : "cellulitis",
-  "clinicalStatus" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-        "code" : "active"
-      }
-    ]
-  },
-  "verificationStatus" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-        "code" : "confirmed"
-      }
-    ]
-  },
-  "category" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
-          "code" : "encounter-diagnosis",
-          "display" : "Encounter Diagnosis"
-        }
-      ]
-    }
-  ],
+  ...
   "code" : {
     "coding" : [
       {
@@ -233,50 +182,24 @@ Example Condition resource cellulitis of knee, laterality as text only
       "text" : "Cellulitis of knee, Right"
     ]
   }
+  ...
 }
 ~~~
 
 3\. Primary `code` and `bodySite` with laterality coded separately.
-* For systems that have 
-  * Pre-coordinated coding describing primary concept without body site.
-  * Body site with laterality is recorded as coded value.
-* The `code` element is used:
-  * Contains `coding` for primary concept including body site without laterality.
-  * Use `text` to describe concept fully, this can include information on recorded body site and laterality as text.
-* MAY record coded `bodySite`, optional when this element is not *Must Support* in AU Core profiles.
+* For systems that have pre-coordinated coding describing primary concept without body site and separate body site with laterality recorded as coded value:
+  * use the code element:
+    * `code.coding` contains the primary concept including body site without laterality.
+    * `code.text` describes the concept fully, this can include information on recorded body site and laterality as text.
+  * optionally, coded element `bodySite` may be supplied containing the coded body site with laterality.
+
 
 Example Condition resource cellulitis, body site right knee
 ~~~
 {
   "resourceType" : "Condition",
   "id" : "cellulitis",
-  "clinicalStatus" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-        "code" : "active"
-      }
-    ]
-  },
-  "verificationStatus" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-        "code" : "confirmed"
-      }
-    ]
-  },
-  "category" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
-          "code" : "encounter-diagnosis",
-          "display" : "Encounter Diagnosis"
-        }
-      ]
-    }
-  ],
+  ...
   "code" : {
     "coding" : [
       {
@@ -297,55 +220,27 @@ Example Condition resource cellulitis, body site right knee
       "text" : "Right Knee"
     }
   ]
-
+  ...
 }
 ~~~
 
 
 4\. Primary `code` and `bodySite` without laterality coded separately and also separate laterality qualifier.
-* For systems that have 
-  * Pre-coordinated coding describing primary concept without body site.
-  * Body site without laterality is recorded as coded value.
-  * Laterality qualifier recorded separately e.g. left, right
-* The `code` element is used:
-  * Contains `coding` for primary concept alone (no body site or laterality).
-  * Use `text` to describe concept fully, this can include information on recorded body site and laterality as text.
-* MAY record coded `bodySite`, optional when this element is not *Must Support* in AU Core profiles.
-  * Contains `coding` for body site without laterality
-  * Use  `text` to describe body site concept fully, this can include information on recorded laterality as text e.g. ', Right'
+* For systems that have pre-coordinated coding describing primary concept without body site and a body site without laterality is as separate coded value, and laterality qualifier recorded separately e.g. left, right:
+  * use the `code` element:
+    * `code.coding` contains the primary concept alone (no body site or laterality).
+    * `code.text` describes the concept fully, this can include information on recorded body site and laterality as text.
+  * optionally, coded element bodySite may be supplied containing:
+    * `bodySite.coding` contains the coded body site without laterality.
+    * `bodySite.text` describes the body site concept fully, this can include information on recorded laterality as text e.g. ', Right'.
 
-Example Condition resource cellulitis, body site knee, laterality as text only
+
+Example Condition resource with cellulitis, body site knee, laterality as text only
 ~~~
 {
   "resourceType" : "Condition",
   "id" : "cellulitis",
-  "clinicalStatus" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-        "code" : "active"
-      }
-    ]
-  },
-  "verificationStatus" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-        "code" : "confirmed"
-      }
-    ]
-  },
-  "category" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
-          "code" : "encounter-diagnosis",
-          "display" : "Encounter Diagnosis"
-        }
-      ]
-    }
-  ],
+  ...
   "code" : {
     "coding" : [
       {
@@ -366,6 +261,7 @@ Example Condition resource cellulitis, body site knee, laterality as text only
       "text" : "Knee, Right"
     }
   ]
+  ...
 }
 ~~~
 
