@@ -124,11 +124,8 @@ When exchanging `Procedure` and `Condition` resources using AU Core profiles the
 AU Core provides the following guidance for what to do in each of the following scenarios:
 
 1\. Primary finding/procedure code with body site and laterality as a pre-coordinated code.
-
 2\. Primary finding/procedure code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
-
 3\. Coded body site with laterality and separate primary finding/procedure code.
-
 4\. Coded body site without laterality and separate coded laterality qualifier and a primary finding/procedure code.
 
 
