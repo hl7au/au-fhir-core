@@ -29,7 +29,7 @@ The context of AU Core within the set of HL7 AU standards is shown in the figure
 <br/>
 
 ### Relationship to AUCDI and other IGs
-The primary intent of the <a href="https://confluence.csiro.au/display/FHIR/AUCDI+Release+1">Australian Core Data for Interoperability (AUCDI)</a> is to design and govern a collection of coherent, reusable building blocks known as ‘data groups’. These data groups specify “what” the clinical requirements of the clinical information that should be included for data entry, data use, and sharing of information supporting healthcare delivery. However, it does not specify “how” the data is exchanged; this is the
+The primary intent of the [Australian Core Data for Interoperability (AUCDI)](https://sparked.csiro.au/index.php/sparked-products-resources/australian-core-data-for-interoperability/aucdi-release-1/) is to design and govern a collection of coherent, reusable building blocks known as ‘data groups’. These data groups specify “what” the clinical requirements of the clinical information that should be included for data entry, data use, and sharing of information supporting healthcare delivery. However, it does not specify “how” the data is exchanged; this is the
 role fulfilled by the FHIR standard. AUCDI is not required to be implemented as a whole single product. Parts can be
 implemented as required for specific use cases.
 
