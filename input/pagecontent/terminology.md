@@ -95,7 +95,7 @@ The list below shows the code systems used in a value set that is bound to a sup
 |[ConditionVerificationStatus](https://hl7.org/fhir/R4/valueset-allergyintolerance-verification.html)|[ConditionVerificationStatus](https://hl7.org/fhir/R4/valueset-condition-ver-status.html)|FHIR|
 |[DataAbsentReason](https://hl7.org/fhir/R4/valueset-data-absent-reason.html)|[Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1), [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1), [DataAbsentReason](https://hl7.org/fhir/R4/valueset-data-absent-reason.html)|FHIR|
 |[DegreeLicenseCertificate AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v2-0360.html)|[hl7VS-degreeLicenseCertificate - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0360-extended.html)|AU Base|
-|[EncounterStatus](https://hl7.org/fhir/R4/codesystem-encounter-status.html)|[EncounterStatus](https://hl7.org/fhir/R4/codesystem-encounter-status.html)|FHIR|
+|[EncounterStatus](https://hl7.org/fhir/R4/codesystem-encounter-status.html)|[EncounterStatus](https://hl7.org/fhir/R4/valueset-encounter-status.html)|FHIR|
 |[EventStatus](https://hl7.org/fhir/R4/codesystem-event-status.html)|[EventStatus](https://hl7.org/fhir/R4/valueset-event-status.html)|FHIR|
 |[IdentifierType AU](https://build.fhir.org/ig/hl7au/au-fhir-base//CodeSystem-au-v2-0203.html)|[DVA Entitlement](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-dva-entitlement.html), [hl7VS-identifierType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0203-extended.html)|FHIR|
 |[identifierType](htts://terminology.hl7.org/5.3.0/CodeSystem-v2-0203.html)|[hl7VS-identifierType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0203-extended.html)|FHIR|
@@ -109,7 +109,7 @@ The list below shows the code systems used in a value set that is bound to a sup
 |[MedicationRequest status](https://hl7.org/fhir/R4/codesystem-medicationrequest-status.html)|[Medicationrequest status](https://hl7.org/fhir/R4/valueset-medicationrequest-status.html)|FHIR|
 |[NameUse](https://hl7.org/fhir/R4/codesystem-name-use.html)|NameUse|FHIR|
 |[Observation Category Codes](https://hl7.org/fhir/R4/valueset-observation-category.html)|[Observation Category Codes](https://hl7.org/fhir/R4/valueset-observation-category.html)|FHIR|
-|[Observation Reference Range Meaning Codes](https://hl7.org/fhir/R4/codesystem-referencerange-meaning.html)|Observation Reference Range Meaning Codes|FHIR|
+|[Observation Reference Range Meaning Codes](https://hl7.org/fhir/R4/codesystem-referencerange-meaning.html)|[Observation Reference Range Meaning Codes](https://hl7.org/fhir/R4/valueset-referencerange-meaning.html)|FHIR|
 |[ObservationStatus](https://hl7.org/fhir/codesystem-observation-status.html)|[ObservationStatus](http://hl7.org/fhir/R4/valueset-observation-status.html)|FHIR|
 |[ParticipationType](https://hl7.org/fhir/R4/v3/ParticipationType/cs.html)|[Participant type](https://hl7.org/fhir/R4/valueset-encounter-participant-type.html)|FHIR|
 |[PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-pbs-item-external.html)|[PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html)|AU Base|
