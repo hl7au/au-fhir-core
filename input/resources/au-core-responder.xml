@@ -99,7 +99,7 @@
 
               <ol>
                 <li>A responder <strong>MAY</strong> reject any unauthorized requests by returning an HTTP 401 "Unauthorized", HTTP 403 "Forbidden", or HTTP 404 "Not Found"</li>
-                <li>For authentication and authorisation, systems <strong>MAY</strong> support any SMART App Launch and SMART Backend Service Authorization. When this is not avalable, basic authentication <strong>MAY</strong> be used. </li>
+                <li>See the <a href="security.html">Security and Privacy</a> page for AU Core security requirements. </li>
              </ol>
             </div>
           </blockquote>
