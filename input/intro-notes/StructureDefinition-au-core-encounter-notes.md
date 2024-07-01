@@ -56,12 +56,6 @@
         <td>A requester <b>SHALL</b> provide a value precise to the second + time offset. A responder <b>SHALL</b> support a value precise to the second + time offset.</td>
   </tr>
   <tr>
-        <td>identifier</td>
-        <td><b>MAY</b></td>
-        <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
-  </tr>
-  <tr>
         <td>location</td>
         <td><b>MAY</b></td>
         <td><code>reference</code></td>
