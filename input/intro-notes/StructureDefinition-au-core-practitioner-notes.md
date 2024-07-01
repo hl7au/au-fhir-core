@@ -55,7 +55,7 @@ The following search parameters **SHOULD** be supported:
       1. GET [base]/Practitioner/5678
       1. GET [base]/Practitioner?_id=5678
 
-    *Implementation Notes:* Returns a single Practitioner resource ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id) of the resource)
+    *Implementation Notes:* Returns a single Practitioner resource ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
 
 1. **SHOULD** support searching for a practitioner based on text name using the **[`name`](https://hl7.org/fhir/R4/practitioner.html#search)** search parameter:
 
