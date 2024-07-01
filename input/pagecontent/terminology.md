@@ -94,11 +94,11 @@ The list below shows the code systems used in a value set that is bound to a sup
 |[Condition Clinical Status Codes](https://hl7.org/fhir/R4/codesystem-condition-clinical.html)|Condition Clinical Status Codes|FHIR|
 |[ConditionVerificationStatus](https://hl7.org/fhir/R4/valueset-allergyintolerance-verification.html)|ConditionVerificationStatus|FHIR|
 |[DataAbsentReason](https://hl7.org/fhir/R4/valueset-data-absent-reason.html)|Australian Pronouns, Gender Identity Response, DataAbsentReason|FHIR|
-|[DegreeLicenseCertificate AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v2-0360.html)|hl7VS-degreeLicenseCertificate - AU Extended|AU Base|
+|[DegreeLicenseCertificate AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v2-0360.html)|[hl7VS-degreeLicenseCertificate - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0360-extended.html)|AU Base|
 |[EncounterStatus](https://hl7.org/fhir/R4/codesystem-encounter-status.html)|EncounterStatus|FHIR|
 |[EventStatus](https://hl7.org/fhir/R4/codesystem-event-status.html)|FHIR|
-|[IdentifierType AU](https://build.fhir.org/ig/hl7au/au-fhir-base//CodeSystem-au-v2-0203.html)|DVA Entitlement, ValueSet/v2-0203-extended|FHIR|
-|[identifierType](htts://terminology.hl7.org/5.3.0/CodeSystem-v2-0203.html)|IdentifierType,ServiceDeliveryLocationRoleType - AU Extended|FHIR|
+|[IdentifierType AU](https://build.fhir.org/ig/hl7au/au-fhir-base//CodeSystem-au-v2-0203.html)|[DVA Entitlement](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-dva-entitlement.html), [hl7VS-identifierType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0203-extended.html)|FHIR|
+|[identifierType](htts://terminology.hl7.org/5.3.0/CodeSystem-v2-0203.html)|[hl7VS-identifierType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0203-extended.html)|FHIR|
 |[IdentifierUse](https://hl7.org/fhir/R4/valueset-identifier-use.html)|IdentifierUse|FHIR|
 |[Location Type (Physical) AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-physical-type.html)|Location Type (Physical) - AU Extended |AU Base|
 |[Location Type AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-type.html)|ValueSet/au-v3-ServiceDeliveryLocationRoleType-extended|AU Base|
@@ -113,10 +113,10 @@ The list below shows the code systems used in a value set that is bound to a sup
 |[ObservationStatus](https://hl7.org/fhir/codesystem-observation-status.html)|ObservationStatus|FHIR|
 |[Participant type](https://hl7.org/fhir/R4/valueset-encounter-participant-type.html)|ParticipantType|FHIR|
 |[ParticipationType](https://hl7.org/fhir/R4/v3/ParticipationType/cs.html)|ParticipantType|FHIR|
-|[PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-pbs-item-external.html)|PBS Item Codes|AU Base|
-|[providerRole AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v2-0443.html)|hl7VS-providerRole - AU Extended|AU Base|
-|[providerRole](https://terminology.hl7.org/5.3.0/CodeSystem-v2-0443.html)|hl7VS-providerRole - AU Extended|FHIR|
-|[RoleCode](https://terminology.hl7.org/5.5.0/CodeSystem-v3-RoleCode.html)|ServiceDeliveryLocationRoleType - AU Extended|FHIR
+|[PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-pbs-item-external.html)|[PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html)|AU Base|
+|[providerRole AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v2-0443.html)|[hl7VS-providerRole - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0443-extended.html)|AU Base|
+|[providerRole](https://terminology.hl7.org/5.3.0/CodeSystem-v2-0443.html)|[hl7VS-providerRole - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0443-extended.html)|FHIR|
+|[RoleCode](https://terminology.hl7.org/5.5.0/CodeSystem-v3-RoleCode.html)|[ServiceDeliveryLocationRoleType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)|FHIR
 |[SNOMED CT (SNOMED CT AU (Australian Medicines Terminology))](https://www.healthterminologies.gov.au/access-clinical-terminology/access-fhir-terminology-resources/code-systems/?ui:filter=snomed)|Adverse Reaction Agent, Australian Medication, Australian Medicines Terminology (AMT) Vaccine,Clinical Condition, Clinical Finding, Clinical Specialty, Gender Identity Response, Healthcare Organisation Role Type, Indicator of Hypersensitivity or Intolerance to Substance, Practitioner Role, Procedure,Reason for Request, Service Type, Smoking Status, Encounter Reason Codes|NCTS|
 |[Tags for the Identification of Languages](https://terminology.hl7.org/CodeSystem-v3-ietf3066.html)|Common Languages in Australia|FHIR|
 |[Unified Code for Units of Measure (UCUM)](https://terminology.hl7.org/CodeSystem-v3-ucum.html)|Vital Signs Units|FHIR|
