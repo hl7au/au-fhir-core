@@ -178,7 +178,7 @@ Example: Condition resource showing coded condition that includes body site, lat
 }
 ~~~
 
-3\. Primary `code` and `bodySite` with laterality coded separately.
+3\. Coded `body site` with laterality and separate primary finding/procedure `code`.
 * For systems that have pre-coordinated coding describing primary concept without body site and separate body site with laterality recorded as coded value:
   * use the code element:
     * `code.coding` contains the primary concept including body site without laterality.
@@ -217,7 +217,7 @@ Example: Condition resource showing coded condition, coded body site that includ
 ~~~
 
 
-4\. Primary `code` and `bodySite` without laterality coded separately and also separate laterality qualifier.
+4\. Coded `body site` without laterality and separate coded laterality qualifier and a primary finding/procedure `code`.
 * For systems that have pre-coordinated coding describing primary concept without body site and a body site without laterality is as separate coded value, and laterality qualifier recorded separately e.g. left, right:
   * use the `code` element:
     * `code.coding` contains the primary concept alone (no body site or laterality).
@@ -225,9 +225,10 @@ Example: Condition resource showing coded condition, coded body site that includ
   * optionally, coded element bodySite may be supplied containing:
     * `bodySite.coding` contains the coded body site without laterality.
     * `bodySite.text` describes the body site concept fully, this can include information on recorded laterality as text e.g. ', Right'.
+  * coded laterality is supplied as the text in `bodySite.text`   
 
 
-Example Condition resource with coded condition, coded body site, laterality as text only
+Example: Condition resource with coded condition, coded body site, laterality as text only
 ~~~
 {
   "resourceType" : "Condition",
