@@ -130,7 +130,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/MedicationRequest?_id=2169591
       1. GET [base]/MedicationRequest?_id=2169591&amp;_include=MedicationRequest:medication
 
-    *Implementation Notes:* Fetches a single MedicationRequest ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Fetches a single MedicationRequest ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`intent`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`authoredon`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameters:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`

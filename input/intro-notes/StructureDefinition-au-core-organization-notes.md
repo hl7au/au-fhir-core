@@ -82,5 +82,5 @@ The following search parameters **SHOULD** be supported:
     
       1. GET [base]/Organization?_id=5678
 
-    *Implementation Notes:* Fetches a single Organization ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Fetches a single Organization ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
 
