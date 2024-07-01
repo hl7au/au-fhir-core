@@ -91,7 +91,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/PractitionerRole/5678
       1. GET [base]/PractitionerRole?_id=5678&amp;_include=PractitionerRole:practitioner
 
-    *Implementation Notes:* Returns a single PractitionerRole resource. ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Returns a single PractitionerRole resource. ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id) of the resource)
 
 1. **SHOULD** support searching using the **[`specialty`](https://hl7.org/fhir/R4/practitionerrole.html#search)** search parameter:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `PractitionerRole:practitioner`
