@@ -110,6 +110,154 @@ Example: Patient resource with interpreter required and language is known
 }
 ~~~
 
+### Representing body site, which may include laterality
+When exchanging `Procedure` and `Condition` resources using AU Core profiles there may be a need to represent a relevant body site and associated laterality using `CodeableConcept` elements. In FHIR, body site and associated laterality can be recorded in various ways and implementers are encourage to consider the following points when implementing:
+
+* The `bodySite` element is not *Must Support* in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
+* The `CodeableConcept.text` element is system populated and may reflect more specific detail than the `CodeableConcept`.coding concepts provided.
+
+AU Core provides the following guidance for what to do in each of the following scenarios:
+
+1. Primary finding/procedure code with body site and laterality as a pre-coordinated code.
+1. Primary finding/procedure code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
+1. Coded body site with laterality and separate primary finding/procedure code.
+1. Coded body site without laterality and separate coded laterality qualifier and a primary finding/procedure code.
+
+
+To support consistent representation the following is recommended for each of these cases, this approach can be applied to either Condition or Procedure profiles:
+
+1\. Primary finding/procedure `code` only (pre-coordinated code including body site and laterality)
+* For systems that have pre-coordinated coding describing a concept fully:
+  * use only the `code` element to contain information on body site with laterality.
+
+Example: Condition resource cellulitis of right knee
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "10633311000119108",
+        "display" : "Cellulitis of right knee"
+      },
+      "text" : "Cellulitis of right knee"
+    ]
+  }
+  ...
+}
+~~~
+
+2\. Primary finding/procedure `code` only (pre-coordinated code including body site without laterality and separate laterality qualifier)
+* For systems that have pre-coordinated coding describing a concept including body site without laterality, and have a laterality qualifier recorded separately e.g. left, right:
+  * use the `code` element:
+    * `code.coding` contains the primary concept (no body site information).
+    * `code.text` is used to describe concept fully, this can include information on recorded laterality e.g. ', Right'.
+  * in this case laterality is not expressed in coded form.
+
+
+Example: Condition resource showing coded condition that includes body site, laterality as text only
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "13301002",
+        "display" : "Cellulitis of knee"
+      },
+      "text" : "Cellulitis of knee, Right"
+    ]
+  }
+  ...
+}
+~~~
+
+3\. Coded `body site` with laterality and separate primary finding/procedure `code`.
+* For systems that have pre-coordinated coding describing primary concept without body site and separate body site with laterality recorded as coded value:
+  * use the code element:
+    * `code.coding` contains the primary concept including body site without laterality.
+    * `code.text` describes the concept fully, this can include information on recorded body site and laterality as text.
+  * optionally, coded element `bodySite` may be supplied containing the coded body site with laterality.
+
+
+Example: Condition resource showing coded condition, coded body site that includes laterality
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "128045006",
+        "display" : "Cellulitis"
+      },
+      "text" : "Cellulitis, Right Knee"
+    ]
+  },
+  "bodySite" : [
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "6757004",
+        "display" : "Structure of right knee region"
+      }],
+      "text" : "Right Knee"
+    }
+  ]
+  ...
+}
+~~~
+
+
+4\. Coded `body site` without laterality and separate coded laterality qualifier and a primary finding/procedure `code`.
+* For systems that have pre-coordinated coding describing primary concept without body site and a body site without laterality is as separate coded value, and laterality qualifier recorded separately e.g. left, right:
+  * use the `code` element:
+    * `code.coding` contains the primary concept alone (no body site or laterality).
+    * `code.text` describes the concept fully, this can include information on recorded body site and laterality as text.
+  * optionally, coded element bodySite may be supplied containing:
+    * `bodySite.coding` contains the coded body site without laterality.
+    * `bodySite.text` describes the body site concept fully, this can include information on recorded laterality as text e.g. ', Right'.
+  * coded laterality is supplied as the text in `bodySite.text`   
+
+
+Example: Condition resource with coded condition, coded body site, laterality as text only
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "128045006",
+        "display" : "Cellulitis"
+      },
+      "text" : "Cellulitis, Knee, Right"
+    ]
+  },
+  "bodySite" : [
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "72696002",
+        "display" : "Knee region structure"
+      }],
+      "text" : "Knee, Right"
+    }
+  ]
+  ...
+}
+~~~
+
 ### Read/Search Syntax
 
 Searching resources is defined by the [FHIR RESTful API](https://hl7.org/fhir/R4/http.html) and included here for informative purposes. The [AU Core CapabilityStatements](capability-statements.html) document the server and client rules for the RESTful interactions described in this guide.
@@ -140,4 +288,5 @@ In the simplest case, a search is executed by performing a GET operation in the 
 `GET [base]/[Resource-type]?name=value&...`
 
 For this RESTful search, the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource has the name "code" for searching on the LOINC or SNOMED CT-AU code.  For more information, see the [FHIR RESTful Search API](https://hl7.org/fhir/R4/http.html#search).
+
 
