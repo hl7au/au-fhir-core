@@ -22,22 +22,22 @@ The list below shows the value sets bound to a supported element or element slic
 |[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1)|[AU Core Immunization](StructureDefinition-au-core-immunization.html)|NCTS|
 |[Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1)|[AU Core Patient](StructureDefinition-au-core-patient.html)|NCTS|
 |[Australian States and Territories](https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2)|[AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Organization](StructureDefinition-au-core-organization.html), [AU Core Location](StructureDefinition-au-core-location.html)|NCTS|
-|[Body Length Units](http://hl7.org/fhir/ValueSet/ucum-bodylength)|AU Core BodyHeight, AU Core Waist Circumference|FHIR|
-|[Body Temperature Units](http://hl7.org/fhir/ValueSet/ucum-bodytemp)|AU Core BodyTemperature|FHIR|
-|[Body Weight Units](http://hl7.org/fhir/ValueSet/ucum-bodyweight)|AU Core Body Weight|FHIR|
-|[Clinical Condition](https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1)|AU Core Condition|NCTS|
-|[Clinical Finding](https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1)|[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html), AU Core Condition|NCTS|
+|[Body Length Units](http://hl7.org/fhir/ValueSet/ucum-bodylength)|[AU Core BodyHeight](StructureDefinition-au-core-bodyheight.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html)|FHIR|
+|[Body Temperature Units](http://hl7.org/fhir/ValueSet/ucum-bodytemp)|[AU Core BodyTemperature](StructureDefinition-au-core-bodytemp.html)|FHIR|
+|[Body Weight Units](http://hl7.org/fhir/ValueSet/ucum-bodyweight)|[AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)|FHIR|
+|[Clinical Condition](https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1)|[AU Core Condition](StructureDefinition-au-core-condition.html),|NCTS|
+|[Clinical Finding](https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1)|[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html), [AU Core Condition](StructureDefinition-au-core-condition.html),|NCTS|
 |[Clinical Specialty](https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1)|[AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|NCTS|
 |[Common Languages in Australia](https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2)|[AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Practitioner](StructureDefinition-au-core-practitioner.html)|NCTS|
-|[Condition/Diagnosis Severity](https://hl7.org/fhir/R4/valueset-condition-severity.html)|AU Core Condition|FHIR|
-|[ConditionCategoryCodes](https://hl7.org/fhir/R4/valueset-condition-category.html)|AU Core Condition|FHIR|
-|[ConditionClinicalStatusCodes](https://hl7.org/fhir/R4/valueset-condition-clinical.html)|AU Core Condition|FHIR|
-|[ConditionVerificationStatus](https://hl7.org/fhir/R4/valueset-condition-ver-status.html)|AU Core Condition|FHIR|
-|[DataAbsentReason](https://hl7.org/fhir/R4/valueset-data-absent-reason.html)|AU Core Diagnostic Result Observation-path, AU Core Heart Rate, AU Core BodyHeight, AU Core Blood Pressure, AU Core Respiration Rate, AU Core Body Weight, AU Core Waist Circumference, AU Core BodyTemperature, AU Core Diagnostic Result Observation, AU Core Smoking Status|FHIR|
+|[Condition/Diagnosis Severity](https://hl7.org/fhir/R4/valueset-condition-severity.html)|[AU Core Condition](StructureDefinition-au-core-condition.html),|FHIR|
+|[ConditionCategoryCodes](https://hl7.org/fhir/R4/valueset-condition-category.html)|[AU Core Condition](StructureDefinition-au-core-condition.html),|FHIR|
+|[ConditionClinicalStatusCodes](https://hl7.org/fhir/R4/valueset-condition-clinical.html)|[AU Core Condition](StructureDefinition-au-core-condition.html),|FHIR|
+|[ConditionVerificationStatus](https://hl7.org/fhir/R4/valueset-condition-ver-status.html)|[AU Core Condition](StructureDefinition-au-core-condition.html),|FHIR|
+|[DataAbsentReason](https://hl7.org/fhir/R4/valueset-data-absent-reason.html)|[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), AU Core Heart Rate, [AU Core BodyHeight](StructureDefinition-au-core-bodyheight.html), [AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html),, AU Core Respiration Rate, [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html), [AU Core BodyTemperature](StructureDefinition-au-core-bodytemp.html), [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html), [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html)|FHIR|
 |[DVA Entitlement](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-dva-entitlement.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|AU Base|
 |[Encounter Reason Codes](https://hl7.org/fhir/R4/valueset-encounter-reason.html)|[AU Core Encounter](StructureDefinition-au-core-encounter.html)|FHIR|
 |[EncounterStatus](https://hl7.org/fhir/R4/valueset-encounter-status.html)|[AU Core Encounter](StructureDefinition-au-core-encounter.html)|FHIR|
-|[EventStatus](https://hl7.org/fhir/R4/valueset-event-status.html)|AU Core Procedure|FHIR|
+|[EventStatus](https://hl7.org/fhir/R4/valueset-event-status.html)|[AU Core Procedure](StructureDefinition-au-core-procedure.html)|FHIR|
 |[Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1)|[AU Core Patient](StructureDefinition-au-core-patient.html)|NCTS|
 |[Healthcare Organisation Role Type](https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1)|[AU Core Organization](StructureDefinition-au-core-organization.html)|NCTS|
 |[hl7VS-degreeLicenseCertificate - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0360-extended.html)|[AU Core Practitioner](StructureDefinition-au-core-practitioner.html)|AU Base|
@@ -54,21 +54,21 @@ The list below shows the value sets bound to a supported element or element slic
 |[Medication request intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html)|[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|FHIR|
 |[Medicationrequest status](https://hl7.org/fhir/R4/valueset-medicationrequest-status.html)|[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|FHIR|
 |[NameUse](https://hl7.org/fhir/R4/valueset-name-use.html)|[AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Practitioner](StructureDefinition-au-core-practitioner.html)|FHIR|
-|[Observation Category Codes](https://hl7.org/fhir/R4/valueset-observation-category.html)|AU Core Diagnostic Result Observation-path, AU Core Heart Rate, AU Core Body Height, AU Core Blood Pressure, AU Core Respiration Rate, AU Core Body Weight, AU Core Waist Circumference, AU Core BodyTemperature, AU Core Diagnostic Result Observation, AU Core Smoking Status|FHIR|
-|[Observation Interpretation Codes](https://hl7.org/fhir/R4/valueset-observation-interpretation.html)|AU Core Diagnostic Result Observation-path, AU Core Diagnostic Result Observation|FHIR
-|[Observation Reference Range Meaning Codes](https://hl7.org/fhir/R4/valueset-referencerange-meaning.html)|AU Core Diagnostic Result Observation-path, AU Core Diagnostic Result Observation|FHIR
-|[ObservationStatus](http://hl7.org/fhir/R4/valueset-observation-status.html)|AU Core Diagnostic Result Observation-path, AU Core Heart Rate, AU Core Body Height, AU Core Blood Pressure, AU Core Respiration Rate, AU Core Body Weight, AU Core Waist Circumference, AU Core BodyTemperature, AU Core Diagnostic Result Observation, AU Core Smoking Status|FHIR|
+|[Observation Category Codes](https://hl7.org/fhir/R4/valueset-observation-category.html)|[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), AU Core Heart Rate, [AU Core BodyHeight](StructureDefinition-au-core-bodyheight.html), [AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html), AU Core Respiration Rate, [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html), [AU Core BodyTemperature](StructureDefinition-au-core-bodytemp.html), [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html), [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html)|FHIR|
+|[Observation Interpretation Codes](https://hl7.org/fhir/R4/valueset-observation-interpretation.html)|[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|FHIR
+|[Observation Reference Range Meaning Codes](https://hl7.org/fhir/R4/valueset-referencerange-meaning.html)|[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|FHIR
+|[ObservationStatus](http://hl7.org/fhir/R4/valueset-observation-status.html)|[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), AU Core Heart Rate, [AU Core Body Height](StructureDefinition-au-core-bodyheight.html), [AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html),, AU Core Respiration Rate, [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html), [AU Core BodyTemperature](StructureDefinition-au-core-bodytemp.html), [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html), [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html)|FHIR|
 |[Participant type](https://hl7.org/fhir/R4/valueset-encounter-participant-type.html)|[AU Core Encounter](StructureDefinition-au-core-encounter.html)|FHIR|
 |[PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html)|[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html), [AU Core Medication](StructureDefinition-au-core-medication.html)|AU Base|
 |[Practitioner Role](https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1)|[AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|NCTS|
-|[Procedure](https://tx.ontoserver.csiro.au/fhir/ValueSet/procedure-1)|AU Core Procedure|NCTS|
-|[RCPA SPIA Pathology Reporting](https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1)|AU Core Diagnostic Result Observation-path|NCTS|
+|[Procedure](https://tx.ontoserver.csiro.au/fhir/ValueSet/procedure-1)|[AU Core Procedure](StructureDefinition-au-core-procedure.html)|NCTS|
+|[RCPA SPIA Pathology Reporting](https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1)|[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|NCTS|
 |[Reason for Request](https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1)|[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|NCTS|
 |[Service Type](https://healthterminologies.gov.au/fhir/ValueSet/service-type-1)|[AU Core Encounter](StructureDefinition-au-core-encounter.html)|NCTS|
 |[ServiceDeliveryLocationRoleType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)|[AU Core Location](StructureDefinition-au-core-location.html)|AU Base|
-|[Smoking Status](https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1)|AU Core Smoking Status|NCTS|
-|[Vital Signs Units](https://hl7.org/fhir/R4/valueset-ucum-vitals-common.html)|AU Core Heart Rate, AU Core Body Height, AU Core Blood Pressure, AU Core Respiration Rate, AU Core Body Weight, AU Core Waist Circumference, AU Core BodyTemperature|FHIR|
-|[VitalSigns](https://hl7.org/fhir/R4/valueset-observation-vitalsignresult.html)|AU Core Heart Rate, AU Core BodyHeight, AU Core Blood Pressure, AU Core Respiration Rate, AU Core Body Weight, AU Core Waist Circumference, AU Core BodyTemperature|FHIR|
+|[Smoking Status](https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1)|[AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html)|NCTS|
+|[Vital Signs Units](https://hl7.org/fhir/R4/valueset-ucum-vitals-common.html)|AU Core Heart Rate, [AU Core Body Height](StructureDefinition-au-core-bodyheight.html), [AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html),, AU Core Respiration Rate, [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html), [AU Core BodyTemperature](StructureDefinition-au-core-bodytemp.html)|FHIR|
+|[VitalSigns](https://hl7.org/fhir/R4/valueset-observation-vitalsignresult.html)|AU Core Heart Rate, [AU Core Body Height](StructureDefinition-au-core-bodyheight.html), [AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html),, AU Core Respiration Rate, [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html), [AU Core BodyTemperature](StructureDefinition-au-core-bodytemp.html)|FHIR|
 {:.grid}
 
 
@@ -100,8 +100,8 @@ The list below shows the code systems used in a value set that is bound to a sup
 |[IdentifierType AU](https://build.fhir.org/ig/hl7au/au-fhir-base//CodeSystem-au-v2-0203.html)|DVA Entitlement, ValueSet/v2-0203-extended|FHIR|
 |[identifierType](htts://terminology.hl7.org/5.3.0/CodeSystem-v2-0203.html)|IdentifierType,ServiceDeliveryLocationRoleType - AU Extended|FHIR|
 |[IdentifierUse](https://hl7.org/fhir/R4/valueset-identifier-use.html)|IdentifierUse|FHIR|
-|[Location Type (Physical) AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-physical-type.html)|http://terminology.hl7.org.au/CodeSystem/location-physical-type|Location Type (Physical) - AU Extended |AU Base|
-|[Location Type AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-type.html)|http://terminology.hl7.org.au/CodeSystem/location-type|ValueSet/au-v3-ServiceDeliveryLocationRoleType-extended|AU Base|
+|[Location Type (Physical) AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-physical-type.html)|Location Type (Physical) - AU Extended |AU Base|
+|[Location Type AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-type.html)|ValueSet/au-v3-ServiceDeliveryLocationRoleType-extended|AU Base|
 |[LocationMode](https://hl7.org/fhir/R4/codesystem-location-mode.html)|LocationMode|FHIR|
 |[LocationStatus](https://hl7.org/fhir/R4/codesystem-location-status.html)|http://hl7.org/fhir/location-status|LocationStatus|FHIR|
 |[LOINC](https://www.healthterminologies.gov.au/access-clinical-terminology/access-fhir-terminology-resources/code-systems/?ui:filter=loinc)|Australian Pronouns,RCPA SPIA Pathology Reporting,Vital Signs|NCTS|
@@ -109,9 +109,9 @@ The list below shows the code systems used in a value set that is bound to a sup
 |[MedicationRequest status](https://hl7.org/fhir/R4/codesystem-medicationrequest-status.html)|Medicationrequest status|FHIR|
 |[NameUse](https://hl7.org/fhir/R4/codesystem-name-use.html)|http://hl7.org/fhir/name-use|NameUse|FHIR|
 |[Observation Category Codes](https://hl7.org/fhir/R4/valueset-observation-category.html)|Observation Category Codes|FHIR|
-|[Observation Reference Range Meaning Codes](https://hl7.org/fhir/R4/codesystem-referencerange-meaning.html)|http://terminology.hl7.org/CodeSystem/referencerange-meaning|Observation Reference Range Meaning Codes|FHIR|
+|[Observation Reference Range Meaning Codes](https://hl7.org/fhir/R4/codesystem-referencerange-meaning.html)|Observation Reference Range Meaning Codes|FHIR|
 |[ObservationStatus](https://hl7.org/fhir/codesystem-observation-status.html)|ObservationStatus|FHIR|
-|[Participant type](https://hl7.org/fhir/R4/valueset-encounter-participant-type.html)|http://terminology.hl7.org/CodeSystem/participant-type|ParticipantType|FHIR|
+|[Participant type](https://hl7.org/fhir/R4/valueset-encounter-participant-type.html)|ParticipantType|FHIR|
 |[ParticipationType](https://hl7.org/fhir/R4/v3/ParticipationType/cs.html)|ParticipantType|FHIR|
 |[PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-pbs-item-external.html)|PBS Item Codes|AU Base|
 |[providerRole AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v2-0443.html)|hl7VS-providerRole - AU Extended|AU Base|
