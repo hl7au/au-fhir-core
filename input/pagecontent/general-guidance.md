@@ -111,11 +111,6 @@ Example: Patient resource with interpreter required and language is known
 ~~~
 
 ### Representing body site, which may include laterality
-When using some AU Core profiles it may be desirable to represent a relevant body site, which may include laterality, associated with a record using CodeableConcept elements, notably:
-*  [AU Core Condition](StructureDefinition-au-core-condition.html) - with primary finding code `Condition.code` and `Condition.bodySite`
-*  [AU Core Procedure](StructureDefinition-au-core-procedure.html) - with primary procedure code `Procedure.code` and `Procedure.bodySite`
-
-
 When exchanging `Procedure` and `Condition` resources using AU Core profiles there may be a need to represent a relevant body site and associated laterality using `CodeableConcept` elements. In FHIR, body site and associated laterality can be recorded in various ways and implementers are encourage to consider the following points when implementing:
 
 * The `bodySite` element is not *Must Support* in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
@@ -123,19 +118,19 @@ When exchanging `Procedure` and `Condition` resources using AU Core profiles the
 
 AU Core provides the following guidance for what to do in each of the following scenarios:
 
-1\. Primary finding/procedure code with body site and laterality as a pre-coordinated code.
-2\. Primary finding/procedure code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
-3\. Coded body site with laterality and separate primary finding/procedure code.
-4\. Coded body site without laterality and separate coded laterality qualifier and a primary finding/procedure code.
+# Primary finding/procedure code with body site and laterality as a pre-coordinated code.
+# Primary finding/procedure code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
+# Coded body site with laterality and separate primary finding/procedure code.
+# Coded body site without laterality and separate coded laterality qualifier and a primary finding/procedure code.
 
 
 To support consistent representation the following is recommended for each of these cases, this approach can be applied to either Condition or Procedure profiles:
 
-1\. Primary `code` only (pre-coordinated body site including laterality)
+1\. Primary finding/procedure `code` only (pre-coordinated code including body site and laterality)
 * For systems that have pre-coordinated coding describing a concept fully:
   * use only the `code` element to contain information on body site with laterality.
 
-Example Condition resource cellulitis of right knee
+Example: Condition resource cellulitis of right knee
 ~~~
 {
   "resourceType" : "Condition",
@@ -155,7 +150,7 @@ Example Condition resource cellulitis of right knee
 }
 ~~~
 
-2\. Primary `code` only (pre-coordinated body site without laterality and separate laterality qualifier)
+2\. Primary finding/procedure `code` only (pre-coordinated code including body site without laterality and separate laterality qualifier)
 * For systems that have pre-coordinated coding describing a concept including body site without laterality, and have a laterality qualifier recorded separately e.g. left, right:
   * use the `code` element:
     * `code.coding` contains the primary concept (no body site information).
@@ -163,7 +158,7 @@ Example Condition resource cellulitis of right knee
   * in this case laterality is not expressed in coded form.
 
 
-Example Condition resource cellulitis of knee, laterality as text only
+Example: Condition resource showing coded condition that includes body site, laterality as text only
 ~~~
 {
   "resourceType" : "Condition",
@@ -191,7 +186,7 @@ Example Condition resource cellulitis of knee, laterality as text only
   * optionally, coded element `bodySite` may be supplied containing the coded body site with laterality.
 
 
-Example Condition resource cellulitis, body site right knee
+Example: Condition resource showing coded condition, coded body site that includes laterality
 ~~~
 {
   "resourceType" : "Condition",
@@ -232,7 +227,7 @@ Example Condition resource cellulitis, body site right knee
     * `bodySite.text` describes the body site concept fully, this can include information on recorded laterality as text e.g. ', Right'.
 
 
-Example Condition resource with cellulitis, body site knee, laterality as text only
+Example Condition resource with coded condition, coded body site, laterality as text only
 ~~~
 {
   "resourceType" : "Condition",
