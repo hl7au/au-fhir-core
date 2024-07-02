@@ -43,7 +43,6 @@ The list below shows the value sets bound to a supported element or element slic
 |[hl7VS-degreeLicenseCertificate - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0360-extended.html)|[AU Core Practitioner](StructureDefinition-au-core-practitioner.html)|AU Base|
 |[hl7VS-identifierType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v2-0203-extended.html)|[AU Core Organization](StructureDefinition-au-core-organization.html)|AU Base|
 |[hl7VS-providerRole - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v2-0443-extended.html)|[AU Core Immunization](StructureDefinition-au-core-immunization.html)|AU Base|
-|[https://hl7.org/fhir/R4/valueset-identifier-use.html](https://hl7.org/fhir/R4/valueset-identifier-use.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|FHIR|
 |[IdentifierUse](https://hl7.org/fhir/R4/valueset-identifier-use.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|FHIR|
 |[Immunization Status Codes](https://hl7.org/fhir/R4/valueset-immunization-status.html)|[AU Core Immunization](StructureDefinition-au-core-immunization.html)|FHIR|
 |[Indicator of Hypersensitivity or Intolerance to Substance](https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2)|[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)|NCTS
