@@ -213,7 +213,7 @@ Column attribute descriptions are as follows:
     <td colspan="2">Date of assertion</td>
     <td>AU Core MedicationStatement</td>
     <td>TBD</td>
-    <td>Decision on supporting this AUCDI element will be addressed as part of the work on AU Core MedicationStatement profile in AU Core R2.</td>
+    <td>Mapping of this element as part of AU Core MedicationStatement profile is planned for AU Core R2.</td>
   </tr>
   <tr>
     <td rowspan="4">Sex and gender summary</td>
