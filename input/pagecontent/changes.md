@@ -15,11 +15,11 @@ This change log documents the significant updates and resolutions implemented fr
     - renaming AU Core Server to be AU Core Responder [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073), [FHIR-43852](https://jira.hl7.org/browse/FHIR-43852)
     - renaming AU Core Client to be AU Core Requester [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073), [FHIR-43852](https://jira.hl7.org/browse/FHIR-43852)
   - added Actor Definitions page under FHIR Artefacts [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073).
-- Added Security and Privacy page [FHIR-45067](https://jira.hl7.org/browse/FHIR-45067).
+- Added Security and Privacy page [FHIR-45067](https://jira.hl7.org/browse/FHIR-45067), and added requirements on supporting TLS 1.2 and TLS 1.3 [FHIR-46068](https://jira.hl7.org/browse/FHIR-46068).
 - Added AU Variance Statement page [FHIR-46034](https://jira.hl7.org/browse/FHIR-46034).
 - Moved the Medicine Information section from the General Guidance page to a new Medicine Information page [FHIR-45165](https://jira.hl7.org/browse/FHIR-45165).
 - Removed support for the following search parameters and search parameter combinations:
-  - Encounter: discharge-disposition, type, patient+discharge-disposition, patient+type [FHIR-45954](https://jira.hl7.org/browse/FHIR-45954), [FHIR-45603](https://jira.hl7.org/browse/FHIR-45603)
+  - Encounter: discharge-disposition, identifier, type, patient+discharge-disposition, patient+type [FHIR-45954](https://jira.hl7.org/browse/FHIR-45954), [FHIR-45603](https://jira.hl7.org/browse/FHIR-45603), [FHIR-46057](https://jira.hl7.org/browse/FHIR-46057)
   - MedicationRequest: identifier and category [FHIR-45991](https://jira.hl7.org/browse/FHIR-45991)
 - Made the following changes to AU Core Immunization:
   - removed Must Support from Immunization.encounter [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
@@ -49,7 +49,9 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Medication.ingredient.isActive [FHIR-45220](https://jira.hl7.org/browse/FHIR-45220), [FHIR-45130](https://jira.hl7.org/browse/FHIR-45130), [FHIR-45049](https://jira.hl7.org/browse/FHIR-45049)
   - removed Must Support from Medication.ingredient.strength [FHIR-45220](https://jira.hl7.org/browse/FHIR-45220)
   - removed Must Support from Medication.amount [FHIR-45219](https://jira.hl7.org/browse/FHIR-45219)
-- Removed Must Support from Organization.alias in AU Core Organization [FHIR-44585](https://jira.hl7.org/browse/FHIR-44585).
+- Made the following changes to AU Core Organizaton: 
+  - removed Must Support from Organization.alias [FHIR-44585](https://jira.hl7.org/browse/FHIR-44585)
+  - corrected the invariant au-core-org-01 FHIRPath expression [FHIR-46103](https://jira.hl7.org/browse/FHIR-46103) 
 - Made the following changes to AU Core Patient:
   - removed Must Support from Patient.extension:birthPlace [FHIR-45018](https://jira.hl7.org/browse/FHIR-45018)
   - removed Must Support from Patient.extension:interpreterRequired [FHIR-45186](https://jira.hl7.org/browse/FHIR-45186)
@@ -84,11 +86,14 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from  Condition.recorder [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082)
   - removed Must Support from Condition.encounter [FHIR-45189](https://jira.hl7.org/browse/FHIR-45189)
   - added profile-specific implementation guidance on representing no known problems [FHIR-45058](https://jira.hl7.org/browse/FHIR-45058)
-- Removed Must Support from the following elements in AU Core AllergyIntolerance:
-  - AllergyIntolerance.asserter [FHIR-44699](https://jira.hl7.org/browse/FHIR-44699), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
-  - AllergyIntolerance.recorder [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082), [FHIR-45066](https://jira.hl7.org/browse/FHIR-45066)
-  - AllergyIntolerance.encounter [FHIR-45123](https://jira.hl7.org/browse/FHIR-45123)
-  - AllergyIntolerance.note [FHIR-45188](https://jira.hl7.org/browse/FHIR-45188)
+- Made the following changes to AU Core AllergyIntolerance:
+  - removed Must Support from AllergyIntolerance.asserter [FHIR-44699](https://jira.hl7.org/browse/FHIR-44699), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
+  - removed Must Support from AllergyIntolerance.recorder [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082), [FHIR-45066](https://jira.hl7.org/browse/FHIR-45066)
+  - removed Must Support from AllergyIntolerance.encounter [FHIR-45123](https://jira.hl7.org/browse/FHIR-45123)
+  - removed Must Support from AllergyIntolerance.note [FHIR-45188](https://jira.hl7.org/browse/FHIR-45188)
+  - changed the AllergyIntolerance.code 
+    - changed Indicator of Hypersensitivity or Intolerance to Substance value set binding strength from preferred to extensible [FHIR-44713](https://jira.hl7.org/browse/FHIR-44713) 
+    - added Additional Binding, Adverse Reaction Substances and Negated Findings value set as candidate [FHIR-44713](https://jira.hl7.org/browse/FHIR-44713) 
 - Made the following changes to AU Core Smoking Status: 
   - removed Must Support from Observation.encounter [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222)
   - removed Must Support from Observation.performer [FHIR-45223](https://jira.hl7.org/browse/FHIR-45223)
@@ -145,6 +150,11 @@ This change log documents the significant updates and resolutions implemented fr
 - Made the following changes in AU Core Requester CapabilityStatement:
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
   - corrected the Observation combined search parameter 'patient+category+status' from SHALL to SHOULD [FHIR-45390](https://jira.hl7.org/browse/FHIR-45390)
+  - corrected narrative of Location identifier parameter requester requirements on providing both the system and code values from SHOULD to MAY [FHIR-46209](https://jira.hl7.org/browse/FHIR-46209)
+  - replaced security and authorization requirements with pointer to Security and Privacy page [FHIR-46067](https://jira.hl7.org/browse/FHIR-46067)
 - Made the following changes in AU Core Responder CapabilityStatement:
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
   - corrected the Observation combined search parameter 'patient+category+status' from SHALL to SHOULD [FHIR-45390](https://jira.hl7.org/browse/FHIR-45390)
+  - corrected MedicationRequest combined search parameter 'patient+intent+authoredon' from SHALL to SHOULD [FHIR-46167](https://jira.hl7.org/browse/FHIR-46167)
+  - corrected narrative of Location identifier parameter requester requirements on providing both the system and code values from SHOULD to MAY [FHIR-46209](https://jira.hl7.org/browse/FHIR-46209)
+  - replaced security and authorization requirements with pointer to Security and Privacy page [FHIR-46067](https://jira.hl7.org/browse/FHIR-46067)

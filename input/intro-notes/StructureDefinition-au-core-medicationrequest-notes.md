@@ -101,7 +101,6 @@ The following search parameters and search parameter combinations **SHALL** be s
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`intent`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`status`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameters:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
-    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
 
@@ -112,7 +111,7 @@ The following search parameters and search parameter combinations **SHALL** be s
       1. GET [base]/MedicationRequest?patient=5678&amp;intent=order&amp;status=active
       1. GET [base]/MedicationRequest?patient=5678&amp;intent=order&amp;status=active&amp;_include=MedicationRequest:medication
 
-    *Implementation Notes:* Fetches a bundle of all MedicationRequest resources for the specified patient and authored on date and intent ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all MedicationRequest resources for the specified patient and intent and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 
 #### Optional Search Parameters
@@ -131,7 +130,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/MedicationRequest?_id=2169591
       1. GET [base]/MedicationRequest?_id=2169591&amp;_include=MedicationRequest:medication
 
-    *Implementation Notes:* Fetches a single MedicationRequest ([how to search by the logical id](http://hl7.org/fhir/R4/references.html#logical) of the resource)
+    *Implementation Notes:* Fetches a single MedicationRequest ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`intent`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`authoredon`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameters:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`

@@ -13,7 +13,7 @@ AU Core is intended to provide an implementable standard for FHIR based interfac
 
 With AUCDI defining clinical data requirements and FHIR AU Core providing detailed FHIR-based profiles for meeting clinical data requirements and administrative data requirements, an interpretation of AUCDI is necessary which is undertaken through the community.
 
-Updates to AU Core depend upon community input and we encourage our audience to submit questions and feedback to AU Core specifications by clicking on the Propose a change link in the footer of every page. In addition, we encourage requesting any necessary clarifications to AUCDI through the <a href="https://confluence.csiro.au/display/FHIR/AUCDI+Release+1">AUCDI process</a> that helps inform future updates to FHIR AU Core.
+Updates to AU Core depend upon community input and we encourage our audience to submit questions and feedback to AU Core specifications by clicking on the Propose a change link in the footer of every page. In addition, we encourage requesting any necessary clarifications to AUCDI through the AUCDI process that helps inform future updates to FHIR AU Core.
 
 ### AUCDI mappings into AU Core
 
@@ -23,11 +23,6 @@ Column attribute descriptions are as follows:
 - <b>AUCDI Data Element</b>: Represents a single, discreet clinical concept defined by AUCDI.
 - <b>AU Core Profile(s)</b>: Represents the mapping of AUCDI Data Groups and AUCDI Data Elements to AU Core FHIR artefacts.
 - <b>FHIR Path</b>: The specific path in the FHIR standards for each AUCDI Data Element within, showing where and how to implement these elements in FHIR-based systems. 
-
-<p class="request-for-feedback">Request for feedback on resource selection and profile mapping for the following AUCDI groups:<br/> 
-- Medication use statement<br/>
-- Procedure completed event<br/>
-- Biomarkers<br/>.<p>
 
 <table border="1" cellspacing="0" cellpadding="0" width="100%">
 <thead>
@@ -41,7 +36,7 @@ Column attribute descriptions are as follows:
 </thead>
 <tbody>
   <tr>
-    <td rowspan="3">Adverse reaction risk summary</td>
+    <td rowspan="4">Adverse reaction risk summary</td>
     <td colspan="2">Substance name</td>
     <td><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
     <td>AllergyIntolerance.code</td>
@@ -60,14 +55,20 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td rowspan="4">Problem/Diagnosis summary</td>
+    <td colspan="2">Last updated</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
+  <tr>
+    <td rowspan="5">Problem/Diagnosis summary</td>
     <td colspan="2">Problem / Diagnosis name</td>
     <td><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
     <td>Condition.code</td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Body site</td>
+    <td colspan="2">Body site/laterality</td>
     <td><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
     <td>Condition.code</td>
     <td></td>
@@ -85,14 +86,14 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td rowspan="5">Procedure completed event</td>
-    <td colspan="2">Procedure name</td>
-    <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
-    <td>Procedure.code</td>
-    <td></td>
+    <td colspan="2">Last updated</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
   </tr>
   <tr>
-    <td colspan="2">Body site</td>
+    <td rowspan="5">Procedure completed event</td>
+    <td colspan="2">Procedure name</td>
     <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
     <td>Procedure.code</td>
     <td></td>
@@ -101,6 +102,12 @@ Column attribute descriptions are as follows:
     <td colspan="2">Clinical indication</td>
     <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
     <td>Procedure.reasonCode | Procedure.reasonReference[x]</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Body site/laterality</td>
+    <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
+    <td>Procedure.code</td>
     <td></td>
   </tr>
   <tr>
@@ -123,7 +130,7 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Sequence</td>
+    <td colspan="2">Sequence number</td>
     <td><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
     <td>Immunization.protocolApplied.doseNumber[x]</td>
     <td></td>
@@ -140,8 +147,21 @@ Column attribute descriptions are as follows:
     <td>Immunization.note</td>
     <td></td>
   </tr>
+    <tr>
+    <td rowspan="2">Tobacco smoking summary</td>
+    <td colspan="2">Overall status</td>
+    <td><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+    <td>Observation</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td colspan="2">Last updated</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
   <tr>
-    <td rowspan="10">Medication use statement</td>
+    <td rowspan="9">Medication use statement</td>
     <td colspan="2">Medication name</td>
     <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
     <td>MedicationStatement.medication[x] | Medication.code</td>
@@ -184,25 +204,19 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Endpoint</td>
-    <td>AU Core MedicationStatement</td>
-    <td>MedicationStatement.effectivePeriod.end</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td colspan="2">Last administration</td>
-    <td>AU Core MedicationStatement</td>
-    <td></td>
-    <td>Feedback is requested on the potential mapping for this AUCDI element.</td>
-  </tr>
-  <tr>
     <td colspan="2">Comment</td>
     <td>AU Core MedicationStatement</td>
     <td>MedicationStatement.note</td>
     <td></td>
   </tr>
   <tr>
-    <td rowspan="3">Sex and gender</td>
+    <td colspan="2">Date of assertion</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Sex and gender summary</td>
     <td colspan="2">Sex assigned at birth</td>
     <td><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
     <td>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender')</td>
@@ -221,34 +235,27 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td>Tobacco smoking summary</td>
-    <td colspan="2">Overall status</td>
-    <td><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
-    <td>Observation</td>
-    <td></td>
+    <td colspan="2">Last updated</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
   </tr>
   <tr>
-    <td rowspan="3">Encounter – clinical context</td>
+    <td rowspan="2">Encounter – clinical context</td>
     <td colspan="2">Reason for encounter</td>
     <td><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
     <td>Encounter.reasonCode | Encounter.reasonReference</td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Type of encounter</td>
+    <td colspan="2">Modality</td>
     <td><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
     <td>Encounter.class</td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Modality</td>
-    <td><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td rowspan="5">Vital signs</td>
-    <td rowspan="2">Blood pressure</td>
+    <td rowspan="15">Measurements and vital signs</td>
+    <td rowspan="3">Blood pressure</td>
     <td>Systolic pressure</td>
     <td><a href="StructureDefinition-au-core-bloodpressure.html">AU Core Blood Pressure</a></td>
     <td>Observation</td>
@@ -261,94 +268,159 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td>Pulse</td>
-    <td>Pulse rate</td>
+    <td>Date/Time of measurement</td>
+    <td><a href="StructureDefinition-au-core-bloodpressure.html">AU Core Blood Pressure</a></td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Pulse</td>
+    <td>Rate</td>
     <td><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
     <td>Observation</td>
     <td></td>
   </tr>
   <tr>
-    <td>Body temperature</td>
+    <td>Date/Time of observation</td>
+    <td><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
+  <tr>
+    <td  rowspan="2">Body temperature</td>
     <td>Temperature</td>
     <td><a href="StructureDefinition-au-core-bodytemp.html">AU Core Body Temperature</a></td>
     <td>Observation</td>
     <td></td>
   </tr>
   <tr>
-    <td>Respiration</td>
+    <td>Date/Time of measurement</td>
+    <td><a href="StructureDefinition-au-core-bodytemp.html">AU Core Body Temperature</a></td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
+  <tr>
+    <td  rowspan="2">Respiration</td>
     <td>Rate</td>
     <td><a href="StructureDefinition-au-core-resprate.html">AU Core Respiration Rate</a></td>
     <td>Observation</td>
     <td></td>
   </tr>
   <tr>
-    <td rowspan="3">Measurements</td>
-    <td>Body height</td>
+    <td>Date/Time of observation</td>
+    <td><a href="StructureDefinition-au-core-resprate.html">AU Core Respiration Rate</a></td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
+  <tr>
+    <td  rowspan="2">Body height</td>
     <td>Height / Length</td>
     <td><a href="StructureDefinition-au-core-bodyheight.html">AU Core Body Height</a></td>
     <td>Observation</td>
     <td></td>
   </tr>
   <tr>
-    <td>Body weight</td>
+    <td>Date/Time of measurement</td>
+    <td><a href="StructureDefinition-au-core-bodyheight.html">AU Core Body Height</a></td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
+  <tr>
+    <td  rowspan="2">Body weight</td>
     <td>Weight</td>
     <td><a href="StructureDefinition-au-core-bodyweight.html">AU Core Body Weight</a></td>
     <td>Observation</td>
     <td></td>
   </tr>
   <tr>
-    <td>Waist circumference</td>
+    <td>Date/Time of measurement</td>
+    <td><a href="StructureDefinition-au-core-bodyweight.html">AU Core Body Weight</a></td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
+  <tr>
+    <td  rowspan="2">Waist circumference</td>
     <td>Waist circumference</td>
     <td><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
     <td>Observation</td>
     <td></td>
   </tr>
+  <tr>
+    <td>Date/Time of measurement</td>
+    <td><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
 <tr>
-    <td rowspan="7">Biomarkers</td>
-    <td rowspan="4">Lipids</td>
+    <td rowspan="11">Biomarkers</td>
+    <td rowspan="5">Lipids</td>
     <td>HDL cholesterol</td>
-    <td><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a> | <a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a> | AU Core Biomarker</td>
+    <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
     <td>Observation</td>
-    <td>Feedback is requested on the appropriateness of developing a specific AU Core Biomarker profile or to use either AU Core Diagnostic Result or AU Core Pathology Result Observation. Questions or feedback can be posted to See the discussion in chat.fhir.org: <a href="https://chat.fhir.org/#narrow/stream/179173-australia/topic/Implementing.20AUCDI.20R1.20into.20AU.20Core.20R1">https://chat.fhir.org/#narrow/stream/179173-australia/topic/Implementing.20AUCDI.20R1.20into.20AU.20Core.20R1</a></td>
+    <td></td>
   </tr>
   <tr>
     <td>LDL cholesterol</td>
-    <td><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a> | <a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a> | AU Core Biomarker</td>
+    <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
     <td>Observation</td>
     <td></td>
   </tr>
   <tr>
     <td>Total cholesterol</td>
-    <td><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a> | <a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a> | AU Core Biomarker</td>
+    <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
     <td>Observation</td>
     <td></td>
   </tr>
   <tr>
     <td>Triglycerides</td>
-    <td><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a> | <a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a> | AU Core Biomarker</td>
+    <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
     <td>Observation</td>
     <td></td>
   </tr>
   <tr>
-    <td>Haemoglobin A1c (HbA1c)</td>
+    <td>Date/Time of measurement</td>
+    <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Haemoglobin A1c (HbA1c)</td>
     <td>HbA1c</td>
-    <td><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a> | <a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a> | AU Core Biomarker</td>
+    <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
     <td>Observation</td>
     <td></td>
   </tr>
   <tr>
-    <td>Estimated glomerular filtration rate (eGFR)</td>
+    <td>Date/Time of measurement</td>
+    <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Estimated glomerular filtration rate (eGFR)</td>
     <td>eGFR</td>
-    <td><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a> | <a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a> | AU Core Biomarker</td>
+    <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
     <td>Observation</td>
     <td></td>
   </tr>
   <tr>
-    <td>Urine albumin-creatinine ratio (uACR)</td>
+    <td>Date/Time of measurement</td>
+    <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Urine albumin-creatinine ratio (uACR)</td>
     <td>uACR</td>
-    <td><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a> | <a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a> | AU Core Biomarker</td>
+    <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
     <td>Observation</td>
     <td></td>
+  </tr>
+  <tr>
+    <td>Date/Time of measurement</td>
+    <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+    <td>TBD</td>
+    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
   </tr>
 </tbody>
 </table>
