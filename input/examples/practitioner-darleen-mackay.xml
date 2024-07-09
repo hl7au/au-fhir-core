@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Compliant with HI Vendor Test Data -->
 <Practitioner xmlns="http://hl7.org/fhir">
     <id value="darleen-mackay"/>
     <meta>
@@ -16,6 +18,18 @@
         <assigner>
             <display value="Docker River Nephrology Clinic"/>
         </assigner>
+    </identifier>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="NPI"/>
+                <display value="National provider identifier"/>
+            </coding>
+            <text value="HPI-I"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+        <value value="8003613233385129"/>
     </identifier>
     <name>
         <family value="Darleen"/>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Compliant with HI Vendor Test Data -->
 <PractitionerRole xmlns="http://hl7.org/fhir">
     <id value="cardiologist-sallie-sutherland"/>
     <meta>
@@ -13,7 +14,7 @@
             <text value="Medicare Provider Number"/>
         </type>
         <system value="http://ns.electronichealth.net.au/id/medicare-provider-number"/>
-        <value value="1555561A"/>
+        <value value="2449001X"/>
     </identifier>
     <practitioner>
         <reference value="Practitioner/sallie-sutherland"/>
