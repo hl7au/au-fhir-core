@@ -211,9 +211,9 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td colspan="2">Date of assertion</td>
+    <td>AU Core MedicationStatement</td>
     <td>TBD</td>
-    <td>TBD</td>
-    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+    <td>Mapping of this element as part of AU Core MedicationStatement profile is planned for AU Core R2.</td>
   </tr>
   <tr>
     <td rowspan="4">Sex and gender summary</td>
@@ -270,8 +270,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td>Date/Time of measurement</td>
     <td><a href="StructureDefinition-au-core-bloodpressure.html">AU Core Blood Pressure</a></td>
-    <td>TBD</td>
-    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+    <td>Observation.effectiveDateTime</td>
+    <td></td>
   </tr>
   <tr>
     <td rowspan="2">Pulse</td>
@@ -283,8 +283,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td>Date/Time of observation</td>
     <td><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
-    <td>TBD</td>
-    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+    <td>Observation.effectiveDateTime</td>
+    <td></td>
   </tr>
   <tr>
     <td  rowspan="2">Body temperature</td>
@@ -296,8 +296,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td>Date/Time of measurement</td>
     <td><a href="StructureDefinition-au-core-bodytemp.html">AU Core Body Temperature</a></td>
-    <td>TBD</td>
-    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+    <td>Observation.effectiveDateTime</td>
+    <td></td>
   </tr>
   <tr>
     <td  rowspan="2">Respiration</td>
@@ -309,8 +309,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td>Date/Time of observation</td>
     <td><a href="StructureDefinition-au-core-resprate.html">AU Core Respiration Rate</a></td>
-    <td>TBD</td>
-    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+    <td>Observation.effectiveDateTime</td>
+    <td></td>
   </tr>
   <tr>
     <td  rowspan="2">Body height</td>
@@ -322,8 +322,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td>Date/Time of measurement</td>
     <td><a href="StructureDefinition-au-core-bodyheight.html">AU Core Body Height</a></td>
-    <td>TBD</td>
-    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+    <td>Observation.effectiveDateTime</td>
+    <td></td>
   </tr>
   <tr>
     <td  rowspan="2">Body weight</td>
@@ -335,8 +335,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td>Date/Time of measurement</td>
     <td><a href="StructureDefinition-au-core-bodyweight.html">AU Core Body Weight</a></td>
-    <td>TBD</td>
-    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+    <td>Observation.effectiveDateTime</td>
+    <td></td>
   </tr>
   <tr>
     <td  rowspan="2">Waist circumference</td>
@@ -348,8 +348,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td>Date/Time of measurement</td>
     <td><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
-    <td>TBD</td>
-    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+    <td>Observation.effectiveDateTime</td>
+    <td></td>
   </tr>
 <tr>
     <td rowspan="11">Biomarkers</td>
