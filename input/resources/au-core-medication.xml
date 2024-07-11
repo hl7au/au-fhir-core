@@ -69,6 +69,7 @@
       <path value="Medication.code.coding"/>
       <sliceName value="pbs"/>
       <mustSupport value="true"/>
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSet value="http://terminology.hl7.org.au/ValueSet/pbs-item" />
@@ -93,6 +94,7 @@
       </extension>
       <path value="Medication.code.coding"/>
       <sliceName value="amt"/>
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1" />
