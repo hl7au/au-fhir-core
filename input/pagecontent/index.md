@@ -120,7 +120,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base.
   - [Comparison with other national and international IGs](comparison.html): This page provides comparison between AU Core profiles and other national, or international implementation guides.
   - [Future of AU Core](future.html): This page outlines the approach to developing AU Core and yearly update cycle.
-- [Security and Privacy](security.html): This page outlines the security and privacy obligations to consider when implementing AU Core.
+- [Security and Privacy](security.html): This page documents the AU Core general security and privacy requirements and recommendations.
 - [FHIR Artefacts](artifacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This set of pages describes the profiles and extensions that are defined in this guide to exchange quality data. Each profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.
   - [Search Parameters](search-parameters.html): This set of pages lists the search parameters extended for use in this guide for use in AU Core operations.
@@ -128,9 +128,9 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Capability Statements](capability-statements.html): This set of pages define the expected FHIR capabilities of AU Core Responders and Requesters.
   - [Actor Definitions](actors.html): This set of pages define the AU Core actors, AU Core Responder and AU Core Requester.
 - [Examples](examples.html): This page lists all the examples used in this guide.
-- [Support](support.html): These pages provide supporting material for implementation or AU Core.    
-  - [Downloads](downloads.html): This page provides links to downloadable artefacts that developers can use to help them implement this guide.
-  - [License and Legal](license.html): This page outlines license and legal considerations relating to FHIR Implementation Guides.
+- [Support](support.html): These pages provide supporting material for implementation of AU Core.    
+  - [Downloads](downloads.html): This page provides links to downloadable artefacts.
+  - [License and Legal](license.html): This page outlines the license and legal requirements for material in AU Core.
 - [Change Log](changes.html): This page documents the changes across versions of this guide.
 
 ### Collaboration
