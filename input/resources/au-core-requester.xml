@@ -2202,8 +2202,10 @@
   <div>
     <p>The requester <strong>SHALL</strong> provide a value precise to the day offset.</p>
     <p>The responder <strong>SHALL</strong> support a value precise to the day offset.</p>
-    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The requester <strong>SHOULD</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code> and if <code>multipleAnd</code> is supported, the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code> <strong>SHALL</strong> be supported.</p>
+    <p>The responder <strong>SHOULD</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code> and if <code>multipleAnd</code> is supported, the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code> <strong>SHALL</strong> be supported.</p>
   </div>
 </td>
 </tr>

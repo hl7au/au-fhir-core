@@ -136,6 +136,8 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 
 1. **SHOULD** support searching using the combination of the **[`birthdate`](https://hl7.org/fhir/R4/patient.html#search)** and **[`family`](https://hl7.org/fhir/R4/patient.html#search)** search parameters:
+    - **SHOULD** support these `date` comparators: `gt,lt,ge,le`
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`) and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, **SHALL** support date comparators: `gt,lt,ge,le`
     
     `GET [base]/Patient?birthdate=[date]&family=[string]`
 
@@ -146,14 +148,16 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified birthdate and family ([how to search by date](http://hl7.org/fhir/R4/search.html#date) and [how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 1. **SHOULD** support searching using the combination of the **[`birthdate`](https://hl7.org/fhir/R4/patient.html#search)** and **[`name`](https://hl7.org/fhir/R4/patient.html#search)** search parameters:
+    - **SHOULD** support these `date` comparators: `gt,lt,ge,le`
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`) and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, **SHALL** support date comparators: `gt,lt,ge,le`
     
     `GET [base]/Patient?birthdate=[date]&name=[string]`
 
     Example:
     
-      1. GET [base]/Patient?name=Wang&amp;birthdate=2007-03-20
+      1. GET [base]/Patient?name=Wang&amp;birthdate=2007-03-20gt
 
-    *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified birthdate and name ([how to search by date](http://hl7.org/fhir/R4/search.html#date) and [how to search by string](http://hl7.org/fhir/R4/search.html#string))
+    *Implementation Notes:* Fetches a bundle of all Patient resources matching the name and a birthdate greater than that specified ([how to search by date](http://hl7.org/fhir/R4/search.html#date) and [how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 1. **SHOULD** support searching using the combination of the **[`family`](https://hl7.org/fhir/R4/patient.html#search)** and **[`gender`](https://hl7.org/fhir/R4/patient.html#search)** search parameters:
     
