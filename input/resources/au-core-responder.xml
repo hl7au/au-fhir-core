@@ -4164,7 +4164,7 @@
 <name value="birthdate"/>
 <definition value="http://hl7.org/fhir/SearchParameter/individual-birthdate"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *day*.&#xa;&#xa;A responder **SHALL** support a value a value precise to the *day*."/>
+<documentation value="The requester **SHALL** provide a value precise to the *day*.&#xa;&#xa;The responder **SHALL** support a value a value precise to the *day*.&#xa;&#xa;The requester **SHOULD** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd` and if `multipleAnd` is supported, the search comparators `gt`, `lt`, `ge`, `le` **SHALL** be supported."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
