@@ -115,7 +115,7 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Guidance](guidance.html): This set of pages lists the guidance for this guide.
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide.
   - [Medicine Information](medicine-information.html): This page provides guidance on constructing medications related resources.
-  - [AUCDI](aucdi.html): This page maps the AU Core resources and elements to AUCDI data classes and data elements.
+  - [AU Core Data for Interoperability](aucdi.html): This page maps the AU Core resources and elements to AUCDI data classes and data elements.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Core and other implementation guides.
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base.
   - [Comparison with other national and international IGs](comparison.html): This page provides comparison between AU Core profiles and other national, or international implementation guides.
