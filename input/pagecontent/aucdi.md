@@ -380,8 +380,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td>Date/Time of measurement</td>
     <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-    <td>TBD</td>
-    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+    <td>Observation.effectiveDateTime</td>
+    <td></td>
   </tr>
   <tr>
     <td rowspan="2">Haemoglobin A1c (HbA1c)</td>
@@ -393,8 +393,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td>Date/Time of measurement</td>
     <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-    <td>TBD</td>
-    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+    <td>Observation.effectiveDateTime</td>
+    <td></td>
   </tr>
   <tr>
     <td rowspan="2">Estimated glomerular filtration rate (eGFR)</td>
@@ -406,8 +406,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td>Date/Time of measurement</td>
     <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-    <td>TBD</td>
-    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+    <td>Observation.effectiveDateTime</td>
+    <td></td>
   </tr>
   <tr>
     <td rowspan="2">Urine albumin-creatinine ratio (uACR)</td>
@@ -419,8 +419,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td>Date/Time of measurement</td>
     <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-    <td>TBD</td>
-    <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
+    <td>Observation.effectiveDateTime</td>
+    <td></td>
   </tr>
 </tbody>
 </table>
