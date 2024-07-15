@@ -717,6 +717,8 @@
   <div>
     <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
     <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleOr</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleOr</code>.</p>
   </div>
 </td>
 </tr>
@@ -734,10 +736,10 @@
   <div>
     <p>The requester <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
-    </p>
-    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
-    </p>
+    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
   </div>
 </td>
 </tr>
@@ -948,10 +950,10 @@
     <div>
       <p>The requester <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
       <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-      <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>,        <code>lt</code>,        <code>ge</code>,        <code>le</code>.            
-      </p>
-      <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>,        <code>lt</code>,        <code>ge</code>,        <code>le</code>.            
-      </p>
+      <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+      <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+      <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
+      <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
     </div>
   </td>
 </tr>
@@ -986,6 +988,8 @@
     <div>
       <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
       <p>The responder <strong>SHALL</strong> support both.</p>
+      <p>The requester <strong>SHOULD</strong> support <code>multipleOr</code>.</p>
+      <p>The responder <strong>SHOULD</strong> support <code>multipleOr</code>.</p>
     </div>
   </td>
 </tr>
@@ -1172,6 +1176,8 @@
     </p>
     <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.        
     </p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
   </div>
 </td>
 </tr>
@@ -1594,6 +1600,8 @@
     </p>
     <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
     </p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
   </div>
 </td>
 </tr>
@@ -1628,6 +1636,8 @@
   <div>
     <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
     <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleOr</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleOr</code>.</p>
   </div>
 </td>
 </tr>
@@ -2740,6 +2750,8 @@
   <div>
     <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
     <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleOr</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleOr</code>.</p>
   </div>
 </td>
 </tr>
@@ -2757,10 +2769,10 @@
   <div>
     <p>The requester <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
-    </p>
-    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
-    </p>
+    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
   </div>
 </td>
 </tr>
@@ -2778,6 +2790,8 @@
   <div>
     <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
     <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleOr</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleOr</code>.</p>
   </div>
 </td>
 </tr>
