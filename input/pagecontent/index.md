@@ -115,16 +115,16 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Guidance](guidance.html): These pages list the guidance for this guide.
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide.
   - [Medicine Information](medicine-information.html): This page provides guidance on constructing medications related resources.
-  - [AU Core Data for Interoperability](aucdi.html): This page maps the AU Core resources and elements to AUCDI data classes and data elements.
+  - [AU Core Data for Interoperability](aucdi.html): This page maps AUCDI data groups and elements to FHIR artefacts in AU Core.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Core and other implementation guides.
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base.
   - [Comparison with other national and international IGs](comparison.html): This page provides comparison between AU Core profiles and other national, or international implementation guides.
   - [Future of AU Core](future.html): This page outlines the approach to developing AU Core and yearly update cycle.
 - [Security and Privacy](security.html): This page documents the AU Core general security and privacy requirements and recommendations.
 - [FHIR Artefacts](artifacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
-  - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to exchange quality data. Each profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.
+  - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to exchange data. Each profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.
   - [Search Parameters](search-parameters.html): This page lists the search parameters extended for use in this guide for use in AU Core operations.
-  - [Terminology](terminology.html): This page lists the value sets and code systems defined in this guide.
+  - [Terminology](terminology.html): This page lists the value sets and code systems supported in this guide.
   - [Capability Statements](capability-statements.html): This page defines the expected FHIR capabilities of AU Core Responders and Requesters.
   - [Actor Definitions](actors.html): This page defines the AU Core actors, AU Core Responder and AU Core Requester.
 - [Examples](examples.html): This page lists all the examples used in this guide.
