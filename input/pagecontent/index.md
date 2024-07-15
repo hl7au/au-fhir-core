@@ -125,8 +125,8 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to exchange quality data. Each profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.
   - [Search Parameters](search-parameters.html): This page lists the search parameters extended for use in this guide for use in AU Core operations.
   - [Terminology](terminology.html): This page lists the value sets and code systems defined in this guide.
-  - [Capability Statements](capability-statements.html): These pages define the expected FHIR capabilities of AU Core Responders and Requesters.
-  - [Actor Definitions](actors.html): These pages define the AU Core actors, AU Core Responder and AU Core Requester.
+  - [Capability Statements](capability-statements.html): This page defines the expected FHIR capabilities of AU Core Responders and Requesters.
+  - [Actor Definitions](actors.html): This page defines the AU Core actors, AU Core Responder and AU Core Requester.
 - [Examples](examples.html): This page lists all the examples used in this guide.
 - [Support](support.html): These pages provide supporting material for implementation of AU Core.    
   - [Downloads](downloads.html): This page provides links to downloadable artefacts.
