@@ -15,15 +15,6 @@
       "current" : true
     },
     {
-      "version" : "0.4.0-preview",
-      "path" : "http://hl7.org.au/fhir/core/0.4.0-preview",
-      "status" : "qa-preview",
-      "sequence" : "AU Core R1",
-      "fhirversion" : "4.0.1",
-      "date" : "2024-06-20",
-      "desc" : "This June 2024 preview snapshot supports testing of AU Core prior to Ballot of AU Core R1"
-    },
-    {
       "version" : "0.3.0-ballot",
       "date" : "2024-03-10",
       "desc" : "This snapshot is published for ballot and the March 2024 Connectathon",

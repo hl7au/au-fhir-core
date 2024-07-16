@@ -47,6 +47,11 @@
 		<packageId value="hl7.fhir.uv.ipa"/>
 		<version value="1.0.0"/>
 	</dependsOn>
+	<dependsOn id="terminology">
+      <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology#5.5.0"/>
+      <packageId value="hl7.terminology.r4"/>
+      <version value="5.5.0"/>
+  	</dependsOn>
 	<definition>
 		<resource>
 			<reference>
