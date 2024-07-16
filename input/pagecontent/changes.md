@@ -28,7 +28,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Immunization.reasonCode [FHIR-44654](https://jira.hl7.org/browse/FHIR-44654), [FHIR-45968](https://jira.hl7.org/browse/FHIR-45968)
   - added Must Support to Immunization.primarySource [FHIR-44659](https://jira.hl7.org/browse/FHIR-44659)
   - changed Immunization.vaccineCode slicing rule from slicing by system to slice by value set [FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
-  - support for AIR codes and AMT Vaccine codes in Immunization.vaccineCode changed to define the slices in AU Core (no longer inherited from AU Base as per [FHIR-44821](https://jira.hl7.org/browse/FHIR-44821)). Slicing discriminator changed from slicing by value:system to slicing by value set and AMT value set binding is required within the AMT Vaccine slice . [FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
+  - support for AIR codes and AMT Vaccine codes in Immunization.vaccineCode changed to define the slices in AU Core (no longer inherited from AU Base as per [FHIR-44821](https://jira.hl7.org/browse/FHIR-44821)). Slicing discriminator changed from slicing by value:system to slicing by value set and AMT value set binding strength has been corrected to required. [FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
 - Made the following changes to AU Core Encounter:
   - removed Must Support from Encounter.identifier [FHIR-45212](https://jira.hl7.org/browse/FHIR-45212)
   - removed Must Support from Encounter.type [FHIR-44580](https://jira.hl7.org/browse/FHIR-44580)
