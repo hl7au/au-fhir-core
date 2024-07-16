@@ -1,12 +1,12 @@
 ###  Version = 0.4.0-preview
-- Publication date: June 2024
+- Publication date: July 2024
 - Publication status: Preview
 - Based on FHIR version: 4.0.1
 
 This change log documents the significant updates and resolutions implemented from version 0.3.0-ballot to the 0.4.0-preview.
 
 #### Changes in this version
-
+- Technical Errata: Dependency on SMART App Launch 2.2.0 package reference does not exist in the FHIR registry, replaced with SMART App Launch 2.1.0 package.
 - FHIR Obligations, Actors, and Capabilities:
   - changed the default obligation behaviour in AU Core for Responders from 'be capable of populate' to 'populate if known' [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45095](https://jira.hl7.org/browse/FHIR-45095), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073)
   - introduced FHIR Obligations & ActorDefinitions to clarify system actors and associated obligations [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073)
