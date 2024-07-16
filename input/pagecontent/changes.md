@@ -52,7 +52,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Medication.ingredient.isActive [FHIR-45220](https://jira.hl7.org/browse/FHIR-45220), [FHIR-45130](https://jira.hl7.org/browse/FHIR-45130), [FHIR-45049](https://jira.hl7.org/browse/FHIR-45049)
   - removed Must Support from Medication.ingredient.strength [FHIR-45220](https://jira.hl7.org/browse/FHIR-45220)
   - removed Must Support from Medication.amount [FHIR-45219](https://jira.hl7.org/browse/FHIR-45219)
-  - support for AMT codes and PBS Item Codes in Medication.medicationCodeableConcept changed to define slicing in AU Core (no longer inherited from AU Base as per [FHIR-44821](https://jira.hl7.org/browse/FHIR-44821)). Slicing discriminator changed from slicing by value:system to value set and the binding strength has been corrected to required. [FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
+  - support for AMT codes and PBS Item Codes in Medication.code changed to define slicing in AU Core (no longer inherited from AU Base as per [FHIR-44821](https://jira.hl7.org/browse/FHIR-44821)). Slicing discriminator changed from slicing by value:system to value set and the binding strength has been corrected to required. [FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
 - Made the following changes to AU Core Organizaton: 
   - removed Must Support from Organization.alias [FHIR-44585](https://jira.hl7.org/browse/FHIR-44585)
   - corrected the invariant au-core-org-01 FHIRPath expression [FHIR-46103](https://jira.hl7.org/browse/FHIR-46103) 
