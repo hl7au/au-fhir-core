@@ -8,14 +8,14 @@ A number of key considerations are included here to support HL7 Australia FHIR I
 
 ###  Disclaimer and Warning of Use
 
-HL7 Australia provides HL7 Australia Content for informational and reference purposes. While HL7 Australia and the broader HL7 community endeavour to ensure the accuracy and reliability of HL7 Australia Content, to the extent permitted by law, HL7 Australia:
+HL7 Australia provides HL7 Australia content for informational and reference purposes. While HL7 Australia and the broader HL7 community endeavour to ensure the accuracy and reliability of HL7 Australia content, to the extent permitted by law, HL7 Australia:
 
 &nbsp;&nbsp;(a) makes no warranties, express or implied:
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;(i) that HL7 Australia Content will not infringe upon any third-party intellectual property rights, including patents, copyrights, trademarks, or trade secrets; or
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;(ii) that HL7 Australia Content is suitable, complete or applicable for any particular purpose or use contemplated by the User, and
-<br/>&nbsp;&nbsp;(b) shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use or reliance on HL7 Australia Content.
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;(i) that HL7 Australia content will not infringe upon any third-party intellectual property rights, including patents, copyrights, trademarks, or trade secrets; or
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;(ii) that HL7 Australia content is suitable, complete or applicable for any particular purpose or use contemplated by the User, and
+<br/>&nbsp;&nbsp;(b) shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use or reliance on HL7 Australia content.
 
-By accessing or using HL7 Australia Content, Users agree to indemnify and hold harmless HL7 Australia, its officers, directors, employees, agents, and contributors of HL7 Australia Content from any claims, damages, losses, liabilities, costs, or expenses (including legal fees) arising out of or in connection with the User’s use of or reliance on HL7 Australia Content.
+By accessing or using HL7 Australia content, Users agree to indemnify and hold harmless HL7 Australia, its officers, directors, employees, agents, and contributors of HL7 Australia content from any claims, damages, losses, liabilities, costs, or expenses (including legal fees) arising out of or in connection with the User’s use of or reliance on HL7 Australia content.
 
 
 ### FHIR Licensing and Trademarks
@@ -34,7 +34,7 @@ HL7®, HEALTH LEVEL SEVEN®, FHIR® and the FHIR logo are trademarks owned by He
 
 #### HL7 Australia Licensing
 
-HL7 Australia licenses use of some HL7 Australia Content under Creative Commons licenses. Users may only rely on the terms of a Creative Commons license where HL7 Australia has explicitly licensed the use of an Artefact under a Creative Commons licence and shall not presume that a Creative Commons license applies to any other HL7 Australia Content not explicitly covered by a Creative Commons licence.
+HL7 Australia licenses use of some HL7 Australia content under Creative Commons licences. Users may only rely on the terms of a Creative Commons licence where HL7 Australia has explicitly licensed the use of an Artefact under a Creative Commons licence and shall not presume that a Creative Commons licence applies to any other HL7 Australia content not explicitly covered by a Creative Commons licence.
 
 **HL7 Australia defines use of this specification is licensed under Creative Commons "No Rights Reserved" ([CC0](http://creativecommons.org/publicdomain/zero/1.0/)).**
 
