@@ -284,6 +284,14 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Encounter/discharge-1"/>
+			</reference>
+			<name value="Encounter - Discharge"/>
+			<description value="Emergency encounter with discharge to home from AU Hospital&#xa;&#xa;Patient: Mr. Harry Dan"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Encounter/telehealth"/>
 			</reference>
 			<name value="Encounter - telehealth"/>
