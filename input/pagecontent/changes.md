@@ -6,7 +6,7 @@
 This change log documents the significant updates and resolutions implemented from version 0.3.0-ballot to the upcoming August ballot.
 
 #### Changes in this version
-
+- dependency to Smart App Launch changed to 2.1.0 instead of latest (2.2.0) due to missing dependency issue that causes failure to load in NPM Package registry [FHIR-46398](https://jira.hl7.org/browse/FHIR-46398)
 - FHIR Obligations, Actors, and Capabilities:
   - changed the default obligation behaviour in AU Core for Responders from 'be capable of populate' to 'populate if known' [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45095](https://jira.hl7.org/browse/FHIR-45095), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073)
   - introduced FHIR Obligations & ActorDefinitions to clarify system actors and associated obligations [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073)
