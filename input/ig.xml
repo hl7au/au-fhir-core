@@ -879,7 +879,7 @@
 		</parameter>
 		<parameter>
 			<code value="fmm-definition"/>
-			<value value="https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#maturity-levels"/>
+			<value value="https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#maturity-levels"/>
 		</parameter>	
 	</definition>
 </ImplementationGuide>
