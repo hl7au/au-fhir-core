@@ -1,9 +1,9 @@
-###  Version = 0.4.0-preview
+###  Version = 0.4.1-preview
 - Publication date: July 2024
 - Publication status: Preview
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version 0.3.0-ballot to the 0.4.0-preview.
+This change log documents the significant updates and resolutions implemented from version 0.3.0-ballot to the 0.4.1-preview.
 
 #### Changes in this version
 - Technical Errata: Dependency on SMART App Launch 2.2.0 package reference does not exist in the FHIR registry, replaced with SMART App Launch 2.1.0 package.

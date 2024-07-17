@@ -1,8 +1,8 @@
 <div class="stu-note" markdown="1">
 
-#### AU Core 0.4.0-preview for testing 
+#### AU Core 0.4.1-preview for testing 
 
-This June 2024 preview snapshot supports testing of AU Core prior to Ballot of AU Core R1.
+This July 2024 preview snapshot supports testing of AU Core prior to Ballot of AU Core R1.
 
 Testing plays a crucial role in the development of AU Core. It helps to build an AU Core that is aligned with its intended purpose and is practical, and responsive to the diverse needs of various stakeholders.  
 
