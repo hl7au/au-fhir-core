@@ -1,5 +1,5 @@
 ###  Version = 0.4.1-preview
-- Publication date: July 2024
+- Publication date: 18 July 2024
 - Publication status: Preview
 - Based on FHIR version: 4.0.1
 
