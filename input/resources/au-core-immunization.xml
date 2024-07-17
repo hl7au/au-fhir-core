@@ -62,8 +62,8 @@
       <path value="Immunization.vaccineCode.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="system" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
@@ -88,6 +88,11 @@
       </extension>
       <path value="Immunization.vaccineCode.coding" />
       <sliceName value="amtVaccineCode" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1" />
+      </binding>
       <mustSupport value="true"/>
     </element>
     <element id="Immunization.vaccineCode.coding:airVaccineCode">
@@ -109,6 +114,11 @@
       </extension>
       <path value="Immunization.vaccineCode.coding" />
       <sliceName value="airVaccineCode" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1" />
+      </binding>
       <mustSupport value="true"/>
     </element>
     <element id="Immunization.patient">
