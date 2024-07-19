@@ -14,7 +14,7 @@ It is anticipated that future releases of AU Core will define AU Core profiles o
 - MedicationDispense (with AU Core Medication) are used to support dispense records and medication management use cases.
 - MedicationStatement (with AU Core Medication) are used to support summary statements of medicine use.
 
-**Medicinal Product Identification**
+### Medicinal Product Identification
 
 For extemporaneous medications, it is expected the medication code is the primary mechanism to identify a medicine. In this case, a text only list of ingredients may be supplied or may be coded using a medicines terminology.
 
