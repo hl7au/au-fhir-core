@@ -118,7 +118,7 @@ These data elements may be supported as coded, or text, and systems are likely t
             {
               "system": "http://snomed.info/sct",
               "code": "129011000036109",
-              "display": "injection"
+              "display": "Injection"
             }
           ],
           "text": "Injection"
@@ -129,8 +129,8 @@ These data elements may be supported as coded, or text, and systems are likely t
               "coding": [
                 {
                   "system": "http://snomed.info/sct",
-                  "code": "1849011000036104",
-                  "display": "benzylpenicillin"
+                  "code": "323389000",
+                  "display": "Benzylpenicillin"
                 }
               ]
             },
