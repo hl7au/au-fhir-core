@@ -3,9 +3,6 @@
   <!--  Example adapted from MCC eCare Plan Implementation Guide bunMCC  -->
   <id value="bun-mcc"/>
   <meta>
-    <versionId value="4"/>
-    <lastUpdated value="2022-05-18T23:37:12.617+00:00"/>
-    <source value="#qAUGMmCEAqCZRmKl"/>
     <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
   </meta>
   <status value="final"/>
@@ -32,7 +29,7 @@
     </coding>
   </code>
   <subject>
-    <reference value="Patient/dan-harry"/>
+    <reference value="Patient/ronny-irvine"/>
   </subject>
   <effectiveDateTime value="2022-05-05"/>
   <valueQuantity>
