@@ -16,29 +16,29 @@
     <category>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-            <code value="CH" />
-            <display value="Chemistry" />
+            <code value="BLB" />
+            <display value="Blood Bank" />
         </coding>
-        <text value="Chemistry" />
+        <text value="Blood Bank" />
     </category>
-        <code>
-            <coding>
-                <system value="http://loinc.org"/>
-                <code value="883-9"/>
-                <display value="ABO group [Type] in Blood"/>
-            </coding>
-            <text value="Blood Group"/>
-        </code>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="882-1"/>
+            <display value="ABO and Rh group [Type] in Blood"/>
+        </coding>
+        <text value="Blood Group"/>
+    </code>
     <subject>
         <reference value="Patient/banks-mia-leanne" />
     </subject>
     <effectiveDateTime value="2024-05-10" />
-            <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="112144000"/>
-                <display value="Blood group A (finding)"/>
-            </coding>
-            <text value="A"/>
-        </valueCodeableConcept>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="278149003"/>
+            <display value="Blood group A Rh(D) positive"/>
+        </coding>
+        <text value="A Rh(D) Positive"/>
+    </valueCodeableConcept>
 </Observation>

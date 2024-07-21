@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Compliant with HI Vendor Test Data -->
 <Practitioner xmlns="http://hl7.org/fhir">
     <id value="darleen-mackay"/>
     <meta>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
     </meta>
-    <identifier>
-        <type>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                <code value="EI"/>
-            </coding>
-            <text value="Employee number"/>
-        </type>
-        <system value="http://nephrologyclinic.org.example.com/employee-id"/>
-        <value value="N765009-mackay-darleen"/>
-        <assigner>
-            <display value="Docker River Nephrology Clinic"/>
-        </assigner>
-    </identifier>
     <identifier>
         <type>
             <coding>

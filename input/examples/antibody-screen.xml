@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Adjusted from FHIR Observation/bgpanel example-->
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="rh-status"/>
+    <id value="antibody-screen"/>
     <meta>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
     </meta>
@@ -16,18 +16,18 @@
     <category>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-            <code value="CH" />
-            <display value="Chemistry" />
+            <code value="BLB" />
+            <display value="Blood Bank" />
         </coding>
-        <text value="Chemistry" />
+        <text value="Blood Bank" />
     </category>
     <code>
         <coding>
             <system value="http://loinc.org"/>
-            <code value="88027-8"/>
-            <display value="Rh group Ag [Type] on Red Blood Cells"/>
+            <code value="890-4"/>
+            <display value="Blood group antibody screen [Presence] in Serum or Plasma"/>
         </coding>
-        <text value="Rh"/>
+        <text value="Blood Group Antibody Screen"/>
     </code>
     <subject>
         <reference value="Patient/banks-mia-leanne" />
@@ -36,9 +36,9 @@
     <valueCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="165747007"/>
-            <display value="RhD positive (finding)"/>
+            <code value="260385009"/>
+            <display value="Negative"/>
         </coding>
-        <text value="Rh(D) positive"/>
+        <text value="Negative"/>
     </valueCodeableConcept>
 </Observation>

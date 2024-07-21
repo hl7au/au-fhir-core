@@ -16,10 +16,10 @@
     <category>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-            <code value="CH" />
-            <display value="Chemistry" />
+            <code value="BLB" />
+            <display value="Blood Bank" />
         </coding>
-        <text value="Chemistry" />
+        <text value="Blood Bank" />
     </category>
     <code>
         <coding>
@@ -37,6 +37,6 @@
         <reference value="Observation/blood-group"/>
     </hasMember>
     <hasMember>
-        <reference value="Observation/rh-status"/>
+        <reference value="Observation/antibody-screen"/>
     </hasMember>
 </Observation>
