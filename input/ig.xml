@@ -54,7 +54,7 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
-			<resource>
+		<resource>
 			<reference>
 				<reference value="ActorDefinition/au-core-actor-requester"/>
 			</reference>
@@ -298,7 +298,7 @@
 			<description value="Telehealth encounter&#xa;&#xa;Patient: Mrs. Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
 		</resource>
-				<resource>
+		<resource>
 			<reference>
 				<reference value="Encounter/consultation"/>
 			</reference>
@@ -349,7 +349,7 @@
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
 		</resource>
 		<resource>
-		<reference>
+			<reference>
 				<reference value="Location/mitchells-hill-audiology"/>
 			</reference>
 			<name value="Location - Mitchells Hill Audiology"/>
@@ -543,6 +543,30 @@
 			<description value="Waist Circumference&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-waistcircum"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/blood-group-panel"/>
+			</reference>
+			<name value="Observation - Blood type and Indirect antibody screen panel"/>
+			<description value="Blood type and Indirect antibody screen panel - Blood&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/blood-group"/>
+			</reference>
+			<name value="Observation - Blood Group"/>
+			<description value="Blood group&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/antibody-screen"/>
+			</reference>
+			<name value="Observation - Blood Group Antibody Screen"/>
+			<description value="Blood Group Antibody Screen&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
+		</resource>
 		<!--ORGANIZATION EXAMPLES-->
 		<resource>
 			<reference>
@@ -571,10 +595,10 @@
 		<!--PATIENT EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="Patient/dan-harry"/>
+				<reference value="Patient/ronny-irvine"/>
 			</reference>
-			<name value="Patient - Mr. Harry Dan"/>
-			<description value="Mr. Harry Dan"/>
+			<name value="Patient - Mr. Ronny Irvine"/>
+			<description value="Mr. Ronny Irvine"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<resource>
@@ -806,21 +830,21 @@
 				<title value="Support"/>
 				<generation value="markdown"/>
 			</page>
-				<page>
+			<page>
 				<nameUrl value="downloads.html"/>
 				<title value="Downloads"/>
 				<generation value="markdown"/>
-				</page>
-				<page>
+			</page>
+			<page>
 				<nameUrl value="license.html"/>
 				<title value="License and Legal"/>
 				<generation value="markdown"/>
-				</page>
+			</page>
 			<page>
 				<nameUrl value="changes.html"/>
 				<title value="Change Log"/>
 				<generation value="markdown"/>
-			</page>	
+			</page>
 		</page>
 		<!-- copyright year is a mandatory parameter -->
 		<parameter>
@@ -888,6 +912,6 @@
 		<parameter>
 			<code value="fmm-definition"/>
 			<value value="https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#maturity-levels"/>
-		</parameter>	
+		</parameter>
 	</definition>
 </ImplementationGuide>
