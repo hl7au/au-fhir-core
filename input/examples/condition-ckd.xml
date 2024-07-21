@@ -3,9 +3,6 @@
   <!--  Example adapted from MCC eCare Plan Implementation Guide ConditionCKD  -->
   <id value="ckd"/>
   <meta>
-    <versionId value="5"/>
-    <lastUpdated value="2022-06-17T23:22:56.193+00:00"/>
-    <source value="#5R98DWXS6a48AGkD"/>
     <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
   </meta>
   <clinicalStatus>
@@ -45,7 +42,7 @@
     </coding>
   </code>
   <subject>
-    <reference value="Patient/dan-harry"/>
+    <reference value="Patient/ronny-irvine"/>
   </subject>
   <onsetAge>
     <value value="52"/>
