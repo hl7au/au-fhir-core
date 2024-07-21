@@ -3,9 +3,6 @@
   <!--  Example adapted from MCC eCare Plan Implementation Guide Dialysis  -->
   <id value="dialysis"/>
   <meta>
-    <versionId value="10"/>
-    <lastUpdated value="2022-08-02T18:25:27.353+00:00"/>
-    <source value="#a5RkjLxbIWy2ffIt"/>
     <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
   </meta>
   <status value="completed"/>
@@ -18,7 +15,7 @@
     <text value="Hemodialysis"/>
   </code>
   <subject>
-    <reference value="Patient/dan-harry"/>
+    <reference value="Patient/ronny-irvine"/>
   </subject>
   <performedDateTime value="2012-08-05"/>
   <performer>
