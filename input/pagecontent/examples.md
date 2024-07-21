@@ -15,7 +15,9 @@ In addition to the examples defined in this implementation, synthetic (realistic
 * Individual Pronouns: [Patient - Mia Leanne Banks](Patient-banks-mia-leanne.html)
 * Gender Identity: [Patient - Mia Leanne Banks](Patient-banks-mia-leanne.html)
 
-
+### Missing Data & Suppressed Data
+* Missing Data:  
+* Suppressed Data: 
 
 
 
