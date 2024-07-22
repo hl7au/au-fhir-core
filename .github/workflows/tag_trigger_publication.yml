@@ -3,13 +3,16 @@ name: Dispatch Event from au-fhir-core
 
 on:
   push:
-    tags:
-      - '*'
+    tags:        
+      - '**'
 
 jobs:
   dispatch:
     runs-on: ubuntu-latest
     steps:
+      - name: Echo Repository
+        run: |
+          echo "test"
       - name: Trigger builder repository
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
