@@ -13,8 +13,20 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: hl7fhir/ig-publisher-base    # use ig publisher base image
+    container: hl7fhir/ig-publisher-base    # use ig publisher base image https://hub.docker.com/r/hl7fhir/ig-publisher-base
     steps:
+    
+    # to save load time can build custom image with dependencies and push to docker hub
+    - name: install aws cli
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y awscli
+
+      # if sudo doesnt work can try standard install
+      # curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      # unzip awscliv2.zip
+      # sudo ./aws/install
+    
     - name: Get the tag name
       id: get_tag
       run: echo "##[set-output name=tag;]${GITHUB_REF#refs/tags/}"
