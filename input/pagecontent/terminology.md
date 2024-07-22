@@ -113,7 +113,7 @@ The list below shows the code systems used in the value sets above.
 |[EncounterStatus](https://hl7.org/fhir/R4/codesystem-encounter-status.html)|[EncounterStatus](https://hl7.org/fhir/R4/valueset-encounter-status.html)|FHIR|
 |[EventStatus](https://hl7.org/fhir/R4/codesystem-event-status.html)|[EventStatus](https://hl7.org/fhir/R4/valueset-event-status.html)|FHIR|
 |[IdentifierType AU](https://build.fhir.org/ig/hl7au/au-fhir-base//CodeSystem-au-v2-0203.html)|[DVA Entitlement](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-dva-entitlement.html), [hl7VS-identifierType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0203-extended.html)|AU Base|
-|[identifierType](htts://terminology.hl7.org/5.3.0/CodeSystem-v2-0203.html)|[hl7VS-identifierType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0203-extended.html)|FHIR|
+|[identifierType]( http://terminology.hl7.org/CodeSystem/v2-0203)|[hl7VS-identifierType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0203-extended.html)|FHIR|
 |[IdentifierUse](https://hl7.org/fhir/R4/codesystem-identifier-use.html)|[IdentifierUse](https://hl7.org/fhir/R4/valueset-identifier-use.html)|FHIR|
 |[Location Type (Physical) AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-physical-type.html)|[Location Type (Physical) - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-location-physical-type-extended.html)|AU Base|
 |[Location Type AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-type.html)|[ServiceDeliveryLocationRoleType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)|AU Base|
