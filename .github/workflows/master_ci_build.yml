@@ -34,7 +34,6 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: hl7au/au-fhir-core
-        path: hl7au/au-fhir-core
 
     - name: Update Publisher
       run: |
@@ -46,7 +45,9 @@ jobs:
     #     _genonce.sh
 
     - name: Run AutoIG Publisher build
-      run: java -jar input-cache/publisher.jar -ig ig.ini -auto-ig-build -target https://build.fhir.org.au/ig/hl7au/au-fhir-core/branches/${{ github.ref }}/
+      run: |
+        branch_name=${GITHUB_REF#refs/heads/}
+        java -jar input-cache/publisher.jar -ig ig.ini -auto-ig-build -target https://build.fhir.org.au/ig/hl7au/au-fhir-core/branches/${{branch_name}}/
 
     - name: List directories
       run:  |
@@ -55,8 +56,8 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: publish-output
-        path: webroot/fhir/core
+        name: ig-output
+        path: output/full-ig.zip
 
     # - name: 📂 Sync files # ftp is incredibly slow > 30 min sometimes, costing compute and efficency 
     #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -69,4 +70,6 @@ jobs:
     #     dry-run: true
 
     - name: Upload artifacts to S3
-      run: aws s3 cp ./webroot s3://hl7au-fhir-ig/core/${{ steps.get_tag.outputs.tag }} --recursive --only-show-errors
+      run: |
+        branch_name=${GITHUB_REF#refs/heads/}
+        aws s3 cp ./webroot s3://hl7au-fhir-ig/ci/${{branch_name}}/ --recursive --only-show-errors
