@@ -3122,7 +3122,7 @@
 <name value="code"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support `multipleOr`.&#xa;&#xa;The responder **SHOULD** support `multipleOr`."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHALL** support `multipleOr`.&#xa;&#xa;The responder **SHALL** support `multipleOr`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3282,7 +3282,7 @@
 <name value="status"/>
 <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-status"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support `multipleOr`.&#xa;&#xa;The responder **SHOULD** support `multipleOr`."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHALL** support `multipleOr`.&#xa;&#xa;The responder **SHALL** support `multipleOr`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3732,7 +3732,7 @@
 <name value="status"/>
 <definition value="http://hl7.org/fhir/SearchParameter/medications-status"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support `multipleOr`.&#xa;&#xa;The responder **SHOULD** support `multipleOr`."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHALL** support `multipleOr`.&#xa;&#xa;The responder **SHALL** support `multipleOr`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3934,7 +3934,7 @@
 <name value="code"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support `multipleOr`.&#xa;&#xa;The responder **SHOULD** support `multipleOr`."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHALL** support `multipleOr`.&#xa;&#xa;The responder **SHALL** support `multipleOr`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3952,7 +3952,7 @@
 <name value="status"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Observation-status"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support `multipleOr`.&#xa;&#xa;The responder **SHOULD** support `multipleOr`."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHALL** support `multipleOr`.&#xa;&#xa;The responder **SHALL** support `multipleOr`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4532,7 +4532,7 @@
 <name value="code"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support `multipleOr`.&#xa;&#xa;The responder **SHOULD** support `multipleOr`."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHALL** support `multipleOr`.&#xa;&#xa;The responder **SHALL** support `multipleOr`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4550,7 +4550,7 @@
 <name value="status"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Procedure-status"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support `multipleOr`.&#xa;&#xa;The responder **SHOULD** support `multipleOr`."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHALL** support `multipleOr`.&#xa;&#xa;The responder **SHALL** support `multipleOr`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
