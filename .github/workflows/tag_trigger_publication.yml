@@ -1,0 +1,21 @@
+# .github/workflows/dispatch.yml
+name: Dispatch Event from au-fhir-core
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger builder repository
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          curl -X POST \
+          -H "Authorization: token $GH_PAT" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/hl7au/publications/dispatches \
+          -d '{"event_type":"tag_created","client_payload":{"repository":"au-fhir-core"}}'
