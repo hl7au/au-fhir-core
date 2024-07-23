@@ -33,7 +33,6 @@
         <text value="Occlusion of right coronary artery"/>
     </reasonCode>
     <bodySite>
-
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="13647002"/>

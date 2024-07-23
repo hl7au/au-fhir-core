@@ -16,8 +16,8 @@ In addition to the examples defined in this implementation, synthetic (realistic
 * Gender Identity: [Patient - Mia Leanne Banks](Patient-banks-mia-leanne.html)
 
 ### Missing Data & Suppressed Data
-* Missing Data:  
-* Suppressed Data: 
+* Missing Data:  [Patient - Ronny Irvine](Patient-ronny-irvine.html)
+* Suppressed Data: [Condition - Example with masked code](Condition-condition-masked.html)
 
 
 

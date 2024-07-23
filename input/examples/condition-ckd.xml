@@ -56,9 +56,5 @@
       <reference value="Procedure/dialysis"/>
       <display value="Patient receives regular dialysis"/>
     </detail>
-    <detail>
-      <reference value="Observation/bun-mcc"/>
-      <display value="BUN is 24 mg/dL"/>
-    </detail>
   </evidence>
 </Condition>

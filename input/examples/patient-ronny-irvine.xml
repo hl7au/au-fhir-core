@@ -35,7 +35,11 @@
     <use value="home"/>
   </telecom>
   <gender value="male"/>
-    <birthDate value="1953-07-19"/>
+  <birthDate>
+    <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+      <valueCode value="unknown"/>
+    </extension>
+  </birthDate>
   <address>
     <use value="home"/>
     <line value="180 Hermann Rd"/>
