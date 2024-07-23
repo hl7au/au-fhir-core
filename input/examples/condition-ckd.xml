@@ -37,8 +37,8 @@
   <code>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="700379002"/>
-      <display value="Chronic kidney disease stage 3B (disorder)"/>
+      <code value="709044004 "/>
+      <display value="Chronic kidney disease"/>
     </coding>
   </code>
   <subject>
