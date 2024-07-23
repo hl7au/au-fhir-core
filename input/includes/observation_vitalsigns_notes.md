@@ -70,7 +70,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     Example:
     
       1. GET [base]/Observation?patient=5678&amp;category=vital-signs&amp;status=final
-      1. GET [base]/Observation?patient=5678&amp;category=vital-signs&amp;
+      1. GET [base]/Observation?patient=5678&amp;category=vital-signs&amp;status=final,preliminary
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and category and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
