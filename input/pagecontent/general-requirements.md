@@ -300,16 +300,14 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
     {
       "resourceType" : "Patient",
            ...
-           "_birthDate" : [
-               {
+           "_birthDate" : {
                 "extension" : [
                   {
                     "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
                     "valueCode" : "unknown"
                   }
                 ]
-              }
-           ],
+              },
           ...
          }
     ~~~
