@@ -27,7 +27,3 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
 - To represent that a patient does not have a condition or history of condition, an appropriate negation code is used in `Condition.code`:
   - For indicating no known conditions or problems of any type `Condition.code` **SHOULD** use the code SNOMED CT 160245001 \|No current problems or disability (situation)\|
 - Refutation is not expected to be handled except as above - an appropriate negation code in `Condition.code` and `Condition.verificationStatus` of "confirmed" or "unconfirmed"
-
-<p class="request-for-feedback">Input is requested on how to exchange 'free text' medical history i.e. are these always Condition and/or Procedure resources? Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43846">FHIR-43846</a>.</p>
-
-<p class="request-for-feedback">Input is requested on how a diagnosis type (e.g. Comorbidity, Complication) would be represented in AU Core Condition. Please comment on HL7 Jira <a href="https://jira.hl7.org/browse/FHIR-43847">FHIR-43847</a>.</p>
