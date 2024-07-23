@@ -11,6 +11,7 @@
             <code value="36969009"/>
             <display value="Placement of stent in coronary artery"/>
         </coding>
+        <text value="Placement of stent in right coronary artery"/>
     </code>
     <subject>
         <reference value="Patient/wang-li"/>
