@@ -3291,7 +3291,7 @@
 <valueCode value="MAY"/>
 </extension>
 <name value="status"/>
-<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-status"/>
+<definition value="http://hl7.org/fhir/SearchParameter/Encounter-status"/>
 <type value="token"/>
 <documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHALL** support `multipleOr`.&#xa;&#xa;The responder **SHALL** support `multipleOr`."/>
 </searchParam>
@@ -3421,7 +3421,7 @@
 <valueCode value="MAY"/>
 </extension>
 <name value="vaccine-code"/>
-<definition value="http://hl7.org/fhir/SearchParameter/Immunization-status"/>
+<definition value="http://hl7.org/fhir/SearchParameter/Immunization-vaccine-code"/>
 <type value="token"/>
 <documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
