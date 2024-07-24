@@ -2848,7 +2848,7 @@
 <title value="AU Core Requester CapabilityStatement"/>
 <status value="active"/>
 <date value="2023-05-15"/>
-<description value="This CapabilityStatement describes the basic rules for the [AU Core Requester actor](ActorDefinition-au-core-actor-requester.html) is responsible for creating and initiating the queries for information. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core Requesters are defined in this CapabilityStatement."/>
+<description value="This CapabilityStatement describes the basic rules for the [AU Core Requester actor](ActorDefinition-au-core-actor-requester.html) that is responsible for creating and initiating the queries for information. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core Requesters are defined in this CapabilityStatement."/>
 <kind value="requirements"/>
 <fhirVersion value="4.0.1"/>
 <format value="json">
@@ -3280,7 +3280,7 @@
 <valueCode value="MAY"/>
 </extension>
 <name value="status"/>
-<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-status"/>
+<definition value="http://hl7.org/fhir/SearchParameter/Encounter-status"/>
 <type value="token"/>
 <documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHALL** support `multipleOr`.&#xa;&#xa;The responder **SHALL** support `multipleOr`."/>
 </searchParam>
@@ -3411,7 +3411,7 @@
 <valueCode value="MAY"/>
 </extension>
 <name value="vaccine-code"/>
-<definition value="http://hl7.org/fhir/SearchParameter/Immunization-status"/>
+<definition value="http://hl7.org/fhir/SearchParameter/Immunization-vaccine-code"/>
 <type value="token"/>
 <documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
