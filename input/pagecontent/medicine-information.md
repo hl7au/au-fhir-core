@@ -5,14 +5,14 @@ The FHIR standard defines the following resources for exchanging medicine inform
 - [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html)
 - [MedicationStatement](http://hl7.org/fhir/R4/medicationstatement.html)
 
-AU Core defines the profiles:
-- [AU Core Medication](StructureDefinition-au-core-medication.html) is profiled to support medicinal product identification in an Australian healthcare context.
-- [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html) (with AU Core Medication) to support prescription, ordering, and ePrescribing use cases.
+AU Core defines the following profiles:
+- [AU Core Medication](StructureDefinition-au-core-medication.html): to support medicinal product identification in an Australian healthcare context.
+- [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html) (with AU Core Medication): profiled to support prescription, ordering, and ePrescribing use cases.
 
 It is anticipated that future releases of AU Core will define AU Core profiles of:
-- MedicationAdministration (with AU Core Medication) are used to support medication chart and other administration use cases.
-- MedicationDispense (with AU Core Medication) are used to support dispense records and medication management use cases.
-- MedicationStatement (with AU Core Medication) are used to support summary statements of medicine use.
+- MedicationAdministration (with AU Core Medication) to support medication chart and other administration use cases.
+- MedicationDispense (with AU Core Medication) to support dispense records and medication management use cases.
+- MedicationStatement (with AU Core Medication) to support summary statements of medicine use.
 
 The guidance below addresses how medicinal product identification can be structured in FHIR conformant to AU Core.
 
@@ -30,7 +30,27 @@ In addition to the medication code, the majority of use cases support exchange o
 
 These data elements may be supported as coded, or text, and systems are likely to use a combination of coded and text elements when constructing a Medication resource. The guidance for how to support coded or text is summarised below: 
 
-1. For *coded* support for brand name, generic name, manufacturer, item form and strength:
+1.  For *coded* support of a medication, a single code can be supplied in Medication.code if the code contains the information required.
+     
+    Example: Medication with single code identifying brand name, item form and strength.
+    ~~~
+    {
+      "resourceType": "Medication",
+       ...
+      "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "32328011000036106",
+              "display": "Benpen 3 g powder for injection, 1 vial"
+            },
+          ]
+        }
+    }
+    ~~~
+
+
+2. For *coded* support for brand name, generic name, manufacturer, item form and strength:
    - Coded support for the following can be provided using code.coding with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) to explicitly declare the type of product identification in the resource (i.e. MedicationAdministration, MedicationStatement, MedicationDispense, MedicationRequest, Medication):
       - brand name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
       - generic name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
@@ -151,7 +171,7 @@ These data elements may be supported as coded, or text, and systems are likely t
     }
     ~~~
 
-2.  For *non-coded* support for brand name, generic name, manufacturer, item form and strength:
+3.  For *non-coded* support for brand name, generic name, manufacturer, item form and strength:
     - Non-coded support is provided using the Medication resource
         - brand name = `Medication.extension` [Medication Brand Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
         - generic name = `Medication.extension` [Medication Generic Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html)
