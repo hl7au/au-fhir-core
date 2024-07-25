@@ -37,7 +37,7 @@
   <code>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="709044004 "/>
+      <code value="709044004"/>
       <display value="Chronic kidney disease"/>
     </coding>
   </code>

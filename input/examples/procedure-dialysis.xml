@@ -10,9 +10,9 @@
     <coding>
       <system value="http://snomed.info/sct"/>
       <code value="302497006"/>
-      <display value="Hemodialysis (procedure)"/>
+      <display value="Haemodialysis"/>
     </coding>
-    <text value="Hemodialysis"/>
+    <text value="Haemodialysis"/>
   </code>
   <subject>
     <reference value="Patient/ronny-irvine"/>
