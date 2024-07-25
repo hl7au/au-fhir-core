@@ -26,19 +26,20 @@
       <display value="simvastatin"/>
     </coding>
   </itemCodeableConcept>
-  <strength>
-    <numerator>
-      <value value="40"/>
-      <unit value="mcg"/>
-      <system value="http://unitsofmeasure.org"/>
-      <code value="mg"/>
-    </numerator>
-    <denominator>
-      <value value="1"/>
-      <unit value="tablet"/>
-      <system value="http://unitsofmeasure.org"/>
-      <code value="{tablet}"/>
-    </denominator>
-  </strength>
+</ingredient>
+<strength>
+  <numerator>
+    <value value="40"/>
+    <unit value="mcg"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="mg"/>
+  </numerator>
+  <denominator>
+    <value value="1"/>
+    <unit value="tablet"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="{tablet}"/>
+  </denominator>
+</strength>
 </ingredient>
 </Medication>
