@@ -57,8 +57,8 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td colspan="2">Last updated</td>
-    <td>TBD</td>
-    <td>TBD</td>
+    <td>-</td>
+    <td>-</td>
     <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
   </tr>
   <tr>
@@ -88,8 +88,8 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td colspan="2">Last updated</td>
-    <td>TBD</td>
-    <td>TBD</td>
+    <td>-</td>
+    <td>-</td>
     <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
   </tr>
   <tr>
@@ -157,8 +157,8 @@ Column attribute descriptions are as follows:
   </tr>
     <tr>
     <td colspan="2">Last updated</td>
-    <td>TBD</td>
-    <td>TBD</td>
+    <td>-</td>
+    <td>-</td>
     <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
   </tr>
   <tr>
@@ -205,8 +205,8 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td colspan="2">Date of assertion</td>
-    <td>AU Core MedicationStatement</td>
-    <td>TBD</td>
+    <td>-</td>
+    <td>-</td>
     <td>Mapping of this element will be undertaken as part of the work on the AU Core MedicationStatement profile, planned for AU Core R2.</td>
   </tr>
   <tr>
@@ -230,8 +230,8 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td colspan="2">Last updated</td>
-    <td>TBD</td>
-    <td>TBD</td>
+    <td>-</td>
+    <td>-</td>
     <td>This data element is added to AUCDI R1; work is underway to map to AU Core.</td>
   </tr>
   <tr>
