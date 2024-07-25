@@ -17,11 +17,11 @@ In addition to the examples defined in this implementation, synthetic (realistic
 
 ### Missing Data & Suppressed Data
 * Missing Data:
-  * [Patient - Ronny Irvine (missing data for birth date)](Patient-ronny-irvine.html)
-  * [MedicationRequest - prescription, paracetamol 500 mg + codeine phosphate hemihydrate 30 mg (missing data for status)](MedicationRequest-paracetamol-codeine.html) 
+  * [Patient - Missing data: birth date](Patient-ronny-irvine.html)
+  * [MedicationRequest - Missing data: status and requester](MedicationRequest-paracetamol-codeine.html) 
 * Suppressed Data:
   * [Condition - Suppressed data: category and code](Condition-condition-masked.html)
-  * [Observation - Suppressed data: category, code, effectivePeriod and value](Observation-observation-masked.html)
+  * [Observation - Suppressed diagnostic result observation data: category, code, effectivePeriod and value](Observation-observation-masked.html)
 
 
 
