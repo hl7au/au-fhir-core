@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="observation-masked"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult"/>
+  </meta>
+  <status value="final"/>
+  <category>
+    <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+      <valueCode value="masked"/>
+    </extension>
+  </category>
+  <code>
+    <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+      <valueCode value="masked"/>
+    </extension>
+  </code>
+  <subject>
+    <reference value="Patient/ronny-irvine"/>
+  </subject>
+  <effectivePeriod>
+    <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+      <valueCode value="masked"/>
+    </extension>
+  </effectivePeriod>
+  <valueQuantity>
+    <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+      <valueCode value="masked"/>
+    </extension>
+  </valueQuantity>
+</Observation>

@@ -259,10 +259,10 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Condition/cellulitis-masked-subject"/>
+				<reference value="Condition/condition-masked"/>
 			</reference>
-			<name value="Condition - Cellulitis (data suppressed for subject)"/>
-			<description value="Condition with data suppressed for subject"/>
+			<name value="Condition - Data suppressed for category and code"/>
+			<description value="Condition with data suppressed for category and code&#xa;&#xa;Patient: Anne Bennelong"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
 		<resource>
@@ -543,6 +543,14 @@
 			<description value="Blood Group Antibody Screen&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/observation-masked"/>
+			</reference>
+			<name value="Observation - Data suppressed for category, code and effectiveDate"/>
+			<description value="Observation with masked category, code and effectiveDate&#xa;&#xa;Patient: Mr. Ronny Irvine"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult"/>
+		</resource>
 		<!--ORGANIZATION EXAMPLES-->
 		<resource>
 			<reference>
@@ -607,14 +615,6 @@
 			</reference>
 			<name value="Patient - Deangelo HOWE"/>
 			<description value="Deangelo Howe"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Patient/deidentified-patient"/>
-			</reference>
-			<name value="Patient - De-identified Patient (data suppresed for identifier and name)"/>
-			<description value="Patient with suppressed identifier and name"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<!--PRACTITIONER EXAMPLES-->

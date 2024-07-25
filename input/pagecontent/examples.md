@@ -20,8 +20,8 @@ In addition to the examples defined in this implementation, synthetic (realistic
   * [Patient - Ronny Irvine (missing data for birth date)](Patient-ronny-irvine.html)
   * [MedicationRequest - prescription, paracetamol 500 mg + codeine phosphate hemihydrate 30 mg (missing data for status)](MedicationRequest-paracetamol-codeine.html) 
 * Suppressed Data:
-  * [Patient - De-identified Patient (data suppressed for identifier and name)](Patient-deidentified-patient.html)
-  * [Condition - Cellulitis (data suppressed for subject)](Condition-cellulitis-masked-subject.html)
+  * [Condition - Suppressed data: category and code](Condition-condition-masked.html)
+  * [Observation - Suppressed data: category, code, effectivePeriod and value](Observation-observation-masked.html)
 
 
 
