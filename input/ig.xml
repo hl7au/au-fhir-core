@@ -521,30 +521,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Observation/blood-group-panel"/>
-			</reference>
-			<name value="Observation - Blood type and Indirect antibody screen panel"/>
-			<description value="Blood type and Indirect antibody screen panel - Blood&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/blood-group"/>
-			</reference>
-			<name value="Observation - Blood Group"/>
-			<description value="Blood group&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Observation/antibody-screen"/>
-			</reference>
-			<name value="Observation - Blood Group Antibody Screen"/>
-			<description value="Blood Group Antibody Screen&#xa;&#xa;Patient: Mia LEANNE BANKS"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Observation/observation-masked"/>
 			</reference>
 			<name value="Observation - Data suppressed for category, code and effectiveDate"/>
