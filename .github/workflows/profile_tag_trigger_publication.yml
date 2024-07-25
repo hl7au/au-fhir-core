@@ -97,21 +97,6 @@ jobs:
       run:  |
         find . -type d
 
-    # - name: Upload Artifact
-    #   uses: actions/upload-artifact@v3
-    #   with:
-    #     name: publish-output
-    #     path: webroot/fhir/core
-
-    # - name: 📂 Sync files # ftp is incredibly slow > 30 min sometimes, costing compute and efficency 
-    #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-    #   with:
-    #     server: ${{secrets.BUILD_SERVER}} # change to be env variable to support multiple environments later on
-    #     username: ${{ secrets.FTP_USER }}
-    #     password: ${{ secrets.FTP_PASSWORD }}
-    #     local-dir: aucore/output/
-    #     server-dir: /ig/hl7au/au-fhir-core/branches/${{ github.ref }}/gopublish/
-    #     dry-run: true
 
     - name: Upload artifacts to S3
       run: aws s3 cp ./webroot/fhir/core s3://hl7au-fhir-ig/fhir/core --recursive --only-show-errors #core/${{ steps.get_tag.outputs.tag }}
