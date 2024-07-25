@@ -1,5 +1,5 @@
 <Condition xmlns="http://hl7.org/fhir">
-  <id value="condition-masked"/>
+  <id value="cellulitis-masked-subject"/>
   <meta>
     <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
   </meta>
@@ -23,12 +23,15 @@
     </coding>
   </category>
   <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="10633311000119108"/>
+      <display value="Cellulitis of right knee"/>
+    </coding>
+  </code>
+  <subject>
     <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
       <valueCode value="masked"/>
     </extension>
-  </code>
-  <subject>
-    <reference value="Patient/bennelong-anne"/>
-    <display value="Anne Bennelong"/>
   </subject>
 </Condition>

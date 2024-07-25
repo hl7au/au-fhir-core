@@ -16,8 +16,12 @@ In addition to the examples defined in this implementation, synthetic (realistic
 * Gender Identity: [Patient - Mia Leanne Banks](Patient-banks-mia-leanne.html)
 
 ### Missing Data & Suppressed Data
-* Missing Data:  [Patient - Ronny Irvine](Patient-ronny-irvine.html)
-* Suppressed Data: [Condition - Example with masked code](Condition-condition-masked.html)
+* Missing Data:
+  * [Patient - Ronny Irvine (missing data for birth date)](Patient-ronny-irvine.html)
+  * [MedicationRequest - prescription, paracetamol 500 mg + codeine phosphate hemihydrate 30 mg (missing data for status)](MedicationRequest-paracetamol-codeine.html) 
+* Suppressed Data:
+  * [Patient - De-identified Patient (data suppressed for identifier and name)](Patient-deidentified-patient.html)
+  * [Condition - Cellulitis (data suppressed for subject)](Condition-cellulitis-masked-subject.html)
 
 
 
