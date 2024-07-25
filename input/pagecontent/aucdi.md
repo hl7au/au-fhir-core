@@ -166,55 +166,48 @@ Column attribute descriptions are as follows:
     <td colspan="2">Medication name</td>
     <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
     <td>MedicationStatement.medication[x] | Medication.code</td>
-    <td>Development and testing of AU Core MedicationStatement profile is planned for AU Core R2.</td>
+    <td rowspan="8"><p>Development and testing of AU Core MedicationStatement profile is planned for AU Core R2.</p><p>See <a href="medicine-information.html">Medicine Information Guidance</a>.</p></td>
   </tr>
   <tr>
     <td colspan="2">Clinical indication</td>
     <td>AU Core MedicationStatement</td>
     <td>MedicationStatement.reasonCode | MedicationStatement.reasonReference</td>
-    <td></td>
   </tr>
   <tr>
     <td colspan="2">Strength</td>
     <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
     <td>MedicationStatement.medication[x] | Medication.code | Medication.ingredient</td>
-    <td></td>
   </tr>
   <tr>
     <td colspan="2">Form</td>
     <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
     <td>MedicationStatement.medication[x] | Medication.form</td>
-    <td></td>
   </tr>
   <tr>
     <td colspan="2">Dose amount</td>
     <td>AU Core MedicationStatement</td>
     <td>MedicationStatement.dosage.doseAndRate</td>
-    <td></td>
   </tr>
   <tr>
     <td colspan="2">Route of administration</td>
     <td>AU Core MedicationStatement</td>
     <td>MedicationStatement.dosage.route</td>
-    <td></td>
   </tr>
   <tr>
     <td colspan="2">Dose timing</td>
     <td>AU Core MedicationStatement</td>
     <td>MedicationStatement.dosage.timing</td>
-    <td></td>
   </tr>
   <tr>
     <td colspan="2">Comment</td>
     <td>AU Core MedicationStatement</td>
     <td>MedicationStatement.note</td>
-    <td></td>
   </tr>
   <tr>
     <td colspan="2">Date of assertion</td>
     <td>AU Core MedicationStatement</td>
     <td>TBD</td>
-    <td>Mapping of this element as part of AU Core MedicationStatement profile is planned for AU Core R2.</td>
+    <td>Mapping of this element will be undertaken as part of the work on the AU Core MedicationStatement profile, planned for AU Core R2.</td>
   </tr>
   <tr>
     <td rowspan="4">Sex and gender summary</td>
