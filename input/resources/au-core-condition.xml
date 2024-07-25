@@ -15,16 +15,6 @@
   <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-condition"/>
   <derivation value="constraint"/>
   <differential>
-    <element id="Condition">
-      <path value="Condition"/>
-      <constraint> 
-        <key value="au-core-cond-05"/> 
-        <severity value="error"/> 
-        <human value="Clinical status shall be present if verification status is not entered-in-error"/> 
-        <expression value="clinicalStatus.exists() or verificationStatus.coding.where(system='http://terminology.hl7.org/CodeSystem/condition-ver-status' and code = 'entered-in-error').exists()"/> 
-        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/> 
-      </constraint>
-    </element>
     <element id="Condition.clinicalStatus">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -44,7 +34,6 @@
       </extension>
       <path value="Condition.clinicalStatus"/>
       <mustSupport value="true"/>
-      <condition value="au-core-cond-05"/>
     </element>
     <element id="Condition.verificationStatus">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
