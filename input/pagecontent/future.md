@@ -36,3 +36,6 @@ The following items are under consideration to add to AU Core.
 
 #### AU Core MedicationStatement 
 Development and testing of AU Core MedicationStatement profile to support AUCDI Medication Use Statement is planned for the AU Core R2 scope.
+
+#### Last Updated 
+AUCDI element Last Updated is intended to to reflect when a data group was last updated, capturing clinical relevance and currency. A known and implemented solution in other jurisdictions for similar requirements is the use of the Provenance resource. An alternative to the use of Provenance may be the definition of custom extensions. Future versions of AU Core will develop and test approaches to addressing Last Updated.
