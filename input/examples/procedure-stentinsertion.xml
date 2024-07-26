@@ -11,6 +11,7 @@
             <code value="36969009"/>
             <display value="Placement of stent in coronary artery"/>
         </coding>
+        <text value="Placement of stent in right coronary artery"/>
     </code>
     <subject>
         <reference value="Patient/wang-li"/>
@@ -32,6 +33,14 @@
         </coding>
         <text value="Occlusion of right coronary artery"/>
     </reasonCode>
+    <bodySite>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="13647002"/>
+            <display value="Right coronary artery structure"/>
+        </coding>
+        <text value="Right coronary artery"/>
+    </bodySite>
     <focalDevice>
         <action>
             <coding>

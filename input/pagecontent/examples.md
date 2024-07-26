@@ -15,7 +15,13 @@ In addition to the examples defined in this implementation, synthetic (realistic
 * Individual Pronouns: [Patient - Mia Leanne Banks](Patient-banks-mia-leanne.html)
 * Gender Identity: [Patient - Mia Leanne Banks](Patient-banks-mia-leanne.html)
 
-
+### Missing Data & Suppressed Data
+* Missing Data:
+  * [Patient - Missing data: birth date](Patient-ronny-irvine.html)
+  * [MedicationRequest - Missing data: status and requester](MedicationRequest-paracetamol-codeine.html) 
+* Suppressed Data:
+  * [Condition - Suppressed data: category and code](Condition-condition-masked.html)
+  * [Observation - Suppressed diagnostic result observation data: category, code, effectivePeriod and value](Observation-observation-masked.html)
 
 
 
