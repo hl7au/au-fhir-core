@@ -41,12 +41,4 @@
 		</coding>
 		<text value="Left upper arm"/>
 	</site>
-	<route>
-		<coding>
-			<system value="http://snomed.info/sct"/>
-			<code value="78421000"/>
-			<display value="Intramuscular route"/>
-		</coding>
-		<text value="Intramuscular"/>
-	</route>
 </Immunization>

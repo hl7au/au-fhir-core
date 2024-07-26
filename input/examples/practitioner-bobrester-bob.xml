@@ -4,20 +4,6 @@
     <meta>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
     </meta>
-    <identifier>
-        <type>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                <code value="EI"/>
-            </coding>
-            <text value="Employee number"/>
-        </type>
-        <system value="http://bobrestermedical.example.com/id/employee-id"/>
-        <value value="567845B-1"/>
-        <assigner>
-            <display value="Bobrester Medical Center"/>
-        </assigner>
-    </identifier>
     <name>
         <family value="Bobrester" />
         <given value="Bob" />
