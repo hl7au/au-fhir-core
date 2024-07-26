@@ -166,7 +166,7 @@ Column attribute descriptions are as follows:
     <td colspan="2">Medication name</td>
     <td>AU Core MedicationStatement | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
     <td>MedicationStatement.medication[x] | Medication.code</td>
-    <td rowspan="8"><p>Development and testing of AU Core MedicationStatement profile is planned for AU Core R2.</p><p>See <a href="medicine-information.html">Medicine Information Guidance</a>.</p></td>
+    <td rowspan="8"><p>Development and testing of AU Core MedicationStatement profile is planned for AU Core R2.</p><p>See <a href="medicine-information.html">Medicine Information</a> guidance.</p></td>
   </tr>
   <tr>
     <td colspan="2">Clinical indication</td>
