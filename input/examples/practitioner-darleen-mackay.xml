@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Practitioner xmlns="http://hl7.org/fhir">
     <id value="darleen-mackay"/>
     <meta>
@@ -7,15 +8,13 @@
         <type>
             <coding>
                 <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                <code value="EI"/>
+                <code value="NPI"/>
+                <display value="National provider identifier"/>
             </coding>
-            <text value="Employee number"/>
+            <text value="HPI-I"/>
         </type>
-        <system value="http://nephrologyclinic.org.example.com/employee-id"/>
-        <value value="N765009-mackay-darleen"/>
-        <assigner>
-            <display value="Docker River Nephrology Clinic"/>
-        </assigner>
+        <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+        <value value="8003613233385129"/>
     </identifier>
     <name>
         <family value="Darleen"/>

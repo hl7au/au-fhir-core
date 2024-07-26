@@ -11,13 +11,6 @@
             <display value="Active"/>
         </coding>
     </clinicalStatus>
-    <verificationStatus>
-        <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
-            <code value="unconfirmed"/>
-            <display value="Unconfirmed"/>
-        </coding>
-    </verificationStatus>
     <category>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>

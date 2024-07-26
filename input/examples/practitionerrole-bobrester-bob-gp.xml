@@ -13,15 +13,15 @@
             </coding>
             <text value="Employee Number"/>
         </type>
-        <system value="http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0/8003621566684455" />
-        <value value="BBC-GA-001" />
+        <system value="http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/12345678901"/>
+        <value value="12345678"/>
         <assigner>
-            <display value="Bobregster Medical Center QLD"/>
+            <display value="Bobrester Medical Center"/>
         </assigner>
     </identifier>
     <practitioner>
         <reference value="Practitioner/bobrester-bob"/>
-    </practitioner> 
+    </practitioner>
     <organization>
         <reference value="Organization/bobrester-medical-center"/>
     </organization>
@@ -42,6 +42,6 @@
     </telecom>
     <telecom>
         <system value="email"/>
-        <value value="drbob@bobrestermedical.example.com"/>        
-    </telecom>    
+        <value value="drbob@bobrestermedical.example.com"/>
+    </telecom>
 </PractitionerRole>

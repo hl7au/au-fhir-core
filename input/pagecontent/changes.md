@@ -6,6 +6,7 @@
 This change log documents the significant updates and resolutions implemented from version 0.3.0-ballot to the upcoming August ballot.
 
 #### Changes in this version
+- Added AUCDI element mapping Date/Time of Measurement and Date/Time of Observation, and added future consideration note for Last Updated
 - dependency to Smart App Launch changed to 2.1.0 instead of latest (2.2.0) due to missing dependency issue that causes failure to load in NPM Package registry [FHIR-46398](https://jira.hl7.org/browse/FHIR-46398)
 - FHIR Obligations, Actors, and Capabilities:
   - changed the default obligation behaviour in AU Core for Responders from 'be capable of populate' to 'populate if known' [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45095](https://jira.hl7.org/browse/FHIR-45095), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073)
@@ -90,6 +91,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from  Condition.recorder [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082)
   - removed Must Support from Condition.encounter [FHIR-45189](https://jira.hl7.org/browse/FHIR-45189)
   - added profile-specific implementation guidance on representing no known problems [FHIR-45058](https://jira.hl7.org/browse/FHIR-45058)
+  - removed invariant au-core-cond-05 [FHIR-46165](https://jira.hl7.org/browse/FHIR-46165)
 - Made the following changes to AU Core AllergyIntolerance:
   - removed profile-specific implementation guidance "`AllergyIntolerance.verificationStatus` is "unconfirmed" where a sending system does not clearly have this element or "confirmed" depending on the level of certainty" [FHIR-45039](https://jira.hl7.org/browse/FHIR-45039)
   - removed Must Support from AllergyIntolerance.asserter [FHIR-44699](https://jira.hl7.org/browse/FHIR-44699), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
