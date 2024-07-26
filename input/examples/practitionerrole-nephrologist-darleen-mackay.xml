@@ -4,13 +4,28 @@
     <meta>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
     </meta>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="EI"/>
+            </coding>
+            <text value="Employee number"/>
+        </type>
+        <system value="http://nephrologyclinic.org.example.com/employee-id"/>
+        <value value="N765009-mackay-darleen"/>
+        <assigner>
+            <display value="Docker River Nephrology Clinic"/>
+        </assigner>
+    </identifier>
     <practitioner>
         <reference value="Practitioner/darleen-mackay"/>
     </practitioner>
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="304292004"/>
+            <code value="11911009"/>
+            <display value="Nephrologist"/>
         </coding>
         <coding>
             <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>

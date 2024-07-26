@@ -11,13 +11,6 @@
             <display value="Active"/>
         </coding>
     </clinicalStatus>
-    <verificationStatus>
-        <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
-            <code value="unconfirmed"/>
-            <display value="Unconfirmed"/>
-        </coding>
-    </verificationStatus>
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
