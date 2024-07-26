@@ -4,7 +4,7 @@
     <meta>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
     </meta>
-    <status value="active"/>
+    <status value="unknown"/>
     <intent value="order"/>
     <medicationCodeableConcept>
         <coding>
@@ -18,7 +18,9 @@
     </subject>
     <authoredOn value="2018-07-15"/>
     <requester>
-        <reference value="PractitionerRole/surgeon-chau-fryer"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+        </extension>
     </requester>
     <reasonCode>
         <coding>

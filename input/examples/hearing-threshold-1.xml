@@ -24,7 +24,7 @@
     <text value="Hearing threshold Ear - left --500 Hz"/>
   </code>
   <subject>
-    <reference value="Patient/dan-harry"/>
+    <reference value="Patient/ronny-irvine"/>
   </subject>
   <effectiveDateTime value="2020-11-06T10:45:00-05:00"/>
   <performer>

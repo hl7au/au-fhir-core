@@ -5,6 +5,11 @@
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
     </meta>
     <code>
-        <text value="Perindopril-Amlodipine"/>
+        <coding>
+            <system value="http://pbs.gov.au/code/item"/>
+            <code value="13382H"/>
+            <display value="PERINDOPRIL + AMLODIPINE"/>
+        </coding>
+        <text value="perindopril arginine 10 mg + amlodipine 10 mg tablet, 30"/>
     </code>
 </Medication>
