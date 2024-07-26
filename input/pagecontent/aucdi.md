@@ -59,7 +59,7 @@ Column attribute descriptions are as follows:
     <td colspan="2">Last updated</td>
     <td>-</td>
     <td>-</td>
-    <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>. Future versions of AU Core will develop and test approaches to addressing Last Updated..</td>
+    <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>. Future versions of AU Core will develop and test approaches to addressing Last Updated.</td>
   </tr>
   <tr>
     <td rowspan="5">Problem/Diagnosis summary</td>
@@ -90,7 +90,7 @@ Column attribute descriptions are as follows:
     <td colspan="2">Last updated</td>
     <td>-</td>
     <td>-</td>
-    <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>. Future versions of AU Core will develop and test approaches to addressing Last Updated..</td>
+    <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>. Future versions of AU Core will develop and test approaches to addressing Last Updated.</td>
   </tr>
   <tr>
     <td rowspan="5">Procedure completed event</td>
@@ -159,7 +159,7 @@ Column attribute descriptions are as follows:
     <td colspan="2">Last updated</td>
     <td>-</td>
     <td>-</td>
-    <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>. Future versions of AU Core will develop and test approaches to addressing Last Updated..</td>
+    <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>. Future versions of AU Core will develop and test approaches to addressing Last Updated.</td>
   </tr>
   <tr>
     <td rowspan="9">Medication use statement</td>
