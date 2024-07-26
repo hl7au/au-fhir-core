@@ -11,7 +11,7 @@
     <display value="emergency"/>
   </class>
   <subject>
-    <reference value="Patient/dan-harry"/>
+    <reference value="Patient/ronny-irvine"/>
   </subject>
   <period>
     <start value="2023-02-20T06:15:00+10:00"/>
