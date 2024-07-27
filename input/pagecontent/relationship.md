@@ -69,4 +69,4 @@ Implementation Guide |Relationship
 [US Core Implementation Guide](https://hl7.org/fhir/us/core/STU7/)|This IG is the foundation for US Realm FHIR implementation guides. It defines the minimum constraints on the FHIR resources to create the US Core Profiles. The elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each US Core Profiles to access patient data. The REST API and profiles in this IG were reviewed and considered during development of AU Core. AU Core is compatible where possible.
 {:.grid}
 
-See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and other profiles in other implementation guides.
+See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
