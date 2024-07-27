@@ -1826,6 +1826,8 @@
   <div>
     <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
     <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> support search using the category code defined in each profile supported.</p>
+    <p>The responder <strong>SHALL</strong> support search using the category code defined in each profile supported.</p>
   </div>
 </td>
 </tr>
@@ -1843,6 +1845,8 @@
   <div>
     <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
     <p>The responder <strong>SHALL</strong> support both.</p>
+    <p>The requester <strong>SHALL</strong> support search using the LOINC codes defined in each profile supported.</p>
+    <p>The responder <strong>SHALL</strong> support search using the LOINC codes defined in each profile supported.</p>
     <p>The requester <strong>SHALL</strong> support <code>multipleOr</code>.</p>
     <p>The responder <strong>SHALL</strong> support <code>multipleOr</code>.</p>
   </div>
@@ -3932,7 +3936,7 @@
 <name value="category"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Observation-category"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xA;&#xA;The requester **SHALL** support search using the category code defined in each profile supported.&#xa;&#xa;The responder **SHALL** support search using the category code defined in each profile supported."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3941,7 +3945,7 @@
 <name value="code"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHALL** support `multipleOr`.&#xa;&#xa;The responder **SHALL** support `multipleOr`."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHALL** support `multipleOr`.&#xa;&#xa;The responder **SHALL** support `multipleOr`.&#xa;&#xa;The requester **SHALL** support search using the LOINC codes defined in each profile supported.&#xa;&#xa;The responder **SHALL** support search using the LOINC codes defined in each profile supported."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
