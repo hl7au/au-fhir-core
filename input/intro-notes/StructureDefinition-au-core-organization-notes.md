@@ -38,7 +38,7 @@
 
 The following search parameters **SHALL** be supported:
 
-1. **SHALL** support searching an organisation by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
+1. **SHALL** support searching using the **[`identifier`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
     
     `GET [base]/Organization?identifier={system|}[code]`
 
@@ -46,6 +46,7 @@ The following search parameters **SHALL** be supported:
     
       1. GET [base]/Organization?identifier=http://ns.electronichealth.net.au/id/hi/hpio/1.0\|8003621566684455
       1. GET [base]/Organization?identifier=http://hl7.org.au/id/abn\|23964200000
+      1. GET [base]/Organization?identifier=23964200000
 
     *Implementation Notes:* Fetches a bundle containing any Organization resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
@@ -74,13 +75,13 @@ The following search parameters **SHOULD** be supported:
 
     *Implementation Notes:* Fetches a bundle of all Organization resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
     
-1. **SHOULD** support fetching an Organization using the **[`_id`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
+1. **SHOULD** support searching using the **[`_id`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
     
-    `GET [base]/Organization/[id]` or `GET [base]/Organization?_id=[id]`
+    `GET [base]/Organization?_id=[id]`
 
     Example:
     
       1. GET [base]/Organization?_id=5678
 
-    *Implementation Notes:* Fetches a single Organization ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
+    *Implementation Notes:* Fetches a bundle with the requested Organization, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
 

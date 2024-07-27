@@ -39,6 +39,7 @@
         <td>patient+vaccine-code</td>
         <td><b>MAY</b></td>
         <td><code>reference</code>+<code>token</code></td>
+        <td></td>
   </tr>
    <tr>
         <td>status</td>

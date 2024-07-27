@@ -118,19 +118,18 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
-1. **SHOULD** support fetching a MedicationRequest using the **[`_id`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameter:
+1. **SHOULD** support searching using the **[`_id`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameter:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`
 
  
-    `GET [base]/MedicationRequest/[id]` or `GET [base]/MedicationRequest?_id=[id]`
+    `GET [base]/MedicationRequest?_id=[id]`
 
     Example:
     
-      1. GET [base]/MedicationRequest/2169591
       1. GET [base]/MedicationRequest?_id=2169591
       1. GET [base]/MedicationRequest?_id=2169591&amp;_include=MedicationRequest:medication
 
-    *Implementation Notes:* Fetches a single MedicationRequest ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
+    *Implementation Notes:* Fetches a bundle with the requested MedicationRequest, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`intent`](https://hl7.org/fhir/R4/medicationrequest.html#search)** and **[`authoredon`](https://hl7.org/fhir/R4/medicationrequest.html#search)** search parameters:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationRequest:medication`

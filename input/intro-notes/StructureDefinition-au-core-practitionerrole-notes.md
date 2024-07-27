@@ -51,7 +51,7 @@
 
 The following search parameters **SHALL** be supported:
 
-1. **SHALL** support searching a practitioner role by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/practitionerrole.html#search)** search parameter:
+1. **SHALL** support searching using the **[`identifier`](https://hl7.org/fhir/R4/practitionerrole.html#search)** search parameter:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `PractitionerRole:practitioner`
 
     `GET [base]/PractitionerRole?identifier={system|}[code]`
@@ -60,6 +60,7 @@ The following search parameters **SHALL** be supported:
     
       1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-prescriber-number\|553255&amp;_include=PractitionerRole:practitioner
       1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-prescriber-number\|553255
+      1. GET [base]/PractitionerRole?identifier=553255
 
     *Implementation Notes:* Fetches a bundle containing any PractitionerRole resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
@@ -81,17 +82,17 @@ The following search parameters **SHALL** be supported:
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
-1. **SHOULD** support fetching a PractitionerRole using the **[`_id`](https://hl7.org/fhir/R4/practitionerrole.html#search)** search parameter:
+1. **SHOULD** support searching using the **[`_id`](https://hl7.org/fhir/R4/practitionerrole.html#search)** search parameter:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `PractitionerRole:practitioner`
 
     `GET [base]/PractitionerRole/[id]` or `GET [base]/PractitionerRole?_id=[id]`
 
     Example:
     
-      1. GET [base]/PractitionerRole/5678
+      1. GET [base]/PractitionerRole/_id=5678
       1. GET [base]/PractitionerRole?_id=5678&amp;_include=PractitionerRole:practitioner
 
-    *Implementation Notes:* Returns a single PractitionerRole resource. ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
+    *Implementation Notes:* Fetches a bundle with the requested PractitionerRole, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
 
 1. **SHOULD** support searching using the **[`specialty`](https://hl7.org/fhir/R4/practitionerrole.html#search)** search parameter:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `PractitionerRole:practitioner`
