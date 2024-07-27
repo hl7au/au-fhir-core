@@ -55,7 +55,7 @@ The following search parameters **SHALL** be supported:
 
 The following search parameters **SHOULD** be supported:
 
-1. **SHOULD** support searching for an organisation based on text address using the **[`address`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
+1. **SHOULD** support searching based on text address using the **[`address`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
     
     `GET [base]/Organization?address=[string]`
 
@@ -65,7 +65,7 @@ The following search parameters **SHOULD** be supported:
 
     *Implementation Notes:* Fetches a bundle of all Organization resources matching the address ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
     
-1. **SHOULD** support searching for an organisation based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
+1. **SHOULD** support searching based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
     
     `GET [base]/Organization?name=[string]`
 
