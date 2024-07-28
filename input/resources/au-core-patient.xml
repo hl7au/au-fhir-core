@@ -21,16 +21,16 @@
       <constraint>
         <key value="au-core-pat-01"/>
         <severity value="error"/>
-        <human value="At least one patient identifier shall be valid"/>
-        <expression value="identifier.where(system.count() + value.count() &gt;1).exists() or identifier.extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
-        <xpath value="exists(f:identifier[f:system and f:value]) or exists(f:identifier/f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'])"/>
+        <human value="At least one patient identifier shall be valid, or if not available, the Data Absent Reason extension shall be present"/>
+        <expression value="(identifier.where(system.count() + value.count() &gt;1)).exists() xor identifier.extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
+        <xpath value="(exists(f:identifier/f:system) and exists(f:identifier/f:value)) and not(exists(f:identifier/f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'])) or not(exists(f:identifier/f:system) and exists(f:identifier/f:value)) and exists(f:identifier/f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'])"/>
       </constraint>
       <constraint>
         <key value="au-core-pat-02"/>
         <severity value="error"/>
-        <human value="At least one patient name shall have a family name"/>
-        <expression value="name.family.exists() or name.extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
-        <xpath value="exists(f:name/f:family) or exists(f:name/f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'])"/>
+        <human value="At least one patient name shall have a family name, or if not available, the Data Absent Reason extension shall be present"/>
+        <expression value="name.family.exists() xor name.extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
+        <xpath value="(exists(f:name/f:family) and not(exists(f:name/f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason']))) or (not(exists(f:name/f:family)) and exists(f:name/f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason']))"/>
         <source
           value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"
         />
@@ -235,8 +235,8 @@
         <key value="au-core-pat-04"/> 
         <severity value="error"/>
         <human value="At least text, family name, or given name shall be present"/>
-        <expression value="text.exists() or family.exists() or given.exists() or extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
-        <xpath value="exists(f:text) or exists(f:family) or exists(f:given) or exists(f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'])"/>
+        <expression value="(text.exists() or family.exists() or given.exists()) xor extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
+        <xpath value="(exists(f:text) or exists(f:family) or exists(f:given)) and not (exists(f:text) and exists(f:family) and exists(f:given)) or exists(f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'])"/>
         <source
           value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"
         />

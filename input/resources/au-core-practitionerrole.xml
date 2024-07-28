@@ -100,7 +100,7 @@
       <constraint>
         <key value="au-core-prarol-01"/>
         <severity value="error"/>
-        <human value="At least a reference, identifier or display shall be present, or, if neither is available, the Data Absent Reason extension is present"/>
+        <human value="At least a reference, identifier or display shall be present, or, if neither is available, the Data Absent Reason extension shall be present"/>
         <expression value="(reference.exists() or identifier.exists() or display.exists()) xor extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
         <xpath value="(exists(f:reference) or exists(f:display) or exists(f:identifier)) and not(exists(f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'])) or not(exists(f:reference) or exists(f:display) or exists(f:identifier)) and exists(f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'])"/>
         <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole" />
