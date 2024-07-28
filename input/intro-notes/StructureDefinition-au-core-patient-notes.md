@@ -17,7 +17,7 @@
         <td>identifier</td>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the profile. The responder <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the profile.</td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the profile. The responder <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the profile.</td>
   </tr>
   <tr>
         <td>birthdate+family</td>
@@ -59,7 +59,7 @@
         <td>birthdate</td>
         <td><b>MAY</b></td>
         <td><code>date</code></td>
-        <td>A requester <b>SHALL</b> provide a value precise to the day. A responder <b>SHALL</b> support a value precise to the day offset.</td>
+        <td>A requester <b>SHALL</b> provide a value precise to the day. A responder <b>SHALL</b> support a value precise to the day offset.<br/><br/>The requester <strong>SHOULD</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHOULD</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.<br/><br/>The requester <strong>SHOULD</strong> support <code>multipleAnd</code> and if <code>multipleAnd</code> is supported, the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code> <strong>SHALL</strong> be supported. The responder <strong>SHOULD</strong> support <code>multipleAnd</code> and if <code>multipleAnd</code> is supported, the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code> <strong>SHALL</strong> be supported.</td>
   </tr>
   <tr>
         <td>gender</td>

@@ -12,7 +12,7 @@
         <td>identifier</td>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using a Medicare Provider Number identifier as defined in the profile. The responder <b>SHOULD</b> support search using a Medicare Provider Number identifier as defined in the profile.</td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/>The requester <b>SHOULD</b> support search using a Medicare Provider Number identifier as defined in the profile. The responder <b>SHOULD</b> support search using a Medicare Provider Number identifier as defined in the profile.</td>
   </tr>
    <tr>
         <td>practitioner</td>
@@ -30,7 +30,7 @@
         <td>practitioner.identifier</td>
         <td><b>SHOULD</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using a HPI-I identifier as defined in the profile. The responder <b>SHOULD</b> support search using the using a HPI-I identifier as defined in the profile.</td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using a HPI-I identifier as defined in the AU Core Practitioner profile. The responder <b>SHOULD</b> support search using the using a HPI-I identifier as defined in the AU Core Practitioner profile.</td>
   </tr>
   <tr>
         <td>specialty</td>
