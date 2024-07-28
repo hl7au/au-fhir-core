@@ -46,31 +46,31 @@
         <td>patient.identifier</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>.<code>token</code></td>
-        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.<p>The requester <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p></td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
   </tr>
   <tr>
         <td>category</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.<p>The requester <b>SHALL</b> support search using the 'vital-signs' category defined in this profile. The responder <b>SHALL</b> support search using the 'vital-signs' category defined in this profile.</p></td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHALL</b> support search using the 'vital-signs' category defined in this profile. The responder <b>SHALL</b> support search using the 'vital-signs' category defined in this profile.</td>
   </tr>
   <tr>
         <td>code</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.<p>The requester <b>SHALL</b> support search using the LOINC codes defined in this profile. The responder <b>SHALL</b> support search using the LOINC codes defined in this profile.</p></td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHALL</b> support search using the LOINC codes defined in this profile. The responder <b>SHALL</b> support search using the LOINC codes defined in this profile.</td>
   </tr>
   <tr>
         <td>date</td>
         <td><b>MAY</b></td>
         <td><code>date</code></td>
-        <td>A requester <b>SHALL</b> provide a value precise to the second + time offset. A responder <b>SHALL</b> support a value precise to the second + time offset.<p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p><p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>. The responder <strong>SHOULD</strong> support <code>multipleAnd</code>.</p></td>
+        <td>A requester <b>SHALL</b> provide a value precise to the second + time offset. A responder <b>SHALL</b> support a value precise to the second + time offset.<br/><br/>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.<br/><br/>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>. The responder <strong>SHOULD</strong> support <code>multipleAnd</code>.</td>
   </tr>
   <tr>
         <td>status</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.<p>The requester <strong>SHALL</strong> support <code>multipleOr</code>.The responder <strong>SHALL</strong> support <code>multipleOr</code>.</p></td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <strong>SHALL</strong> support <code>multipleOr</code>.The responder <strong>SHALL</strong> support <code>multipleOr</code>.</td>
   </tr>
  </tbody>
 </table>
