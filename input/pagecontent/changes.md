@@ -41,10 +41,12 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from MedicationRequest.identifier [FHIR-45208](https://jira.hl7.org/browse/FHIR-45208)
   - removed Must Support from MedicationRequest.category [FHIR-45207](https://jira.hl7.org/browse/FHIR-45207)
   - removed Must Support from MedicationRequest.note [FHIR-45209](https://jira.hl7.org/browse/FHIR-45209)
-  - removed Must Support from MedicationRequest.dispenseRequest, MedicationRequest.dispenseRequest.validityPeriod, MedicationRequest.dispenseRequest.numberOfRepeatsAllowed, MedicationRequest.dispenseRequest.quantity [FHIR-45088](https://jira.hl7.org/browse/FHIR-45088)
+  - removed Must Support from MedicationRequest.dispenseRequest, MedicationRequest.dispenseRequest.validityPeriod, MedicationRequest.dispenseRequest.numberOfRepeatsAllowed, MedicationRequest.dispenseRequest.quantity 
+  [FHIR-45088](https://jira.hl7.org/browse/FHIR-45088)
   - removed Must Support from MedicationRequest.substitution, MedicationRequest.substitution.allowed[x] [FHIR-45088](https://jira.hl7.org/browse/FHIR-45088)
   - added Must Support to MedicationRequest.reasonReference [FHIR-45090](https://jira.hl7.org/browse/FHIR-45090)
   - support for AMT codes and PBS Item Codes in MedicationRequest.medicationCodeableConcept changed to define slicing in AU Core (no longer inherited from AU Base as per [FHIR-44821](https://jira.hl7.org/browse/FHIR-44821)). Slicing discriminator changed from slicing by value:system to slicing by value set and the binding strength has been corrected to required. [FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
+  - updated invariant au-core-medreq-03 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [FHIR-46417](https://jira.hl7.org/browse/FHIR-46417)
 - Made the following changes to AU Core Medication:
   - removal of Must Support from Medication.manufacturer [FHIR-45130](https://jira.hl7.org/browse/FHIR-45130)
   - removed Must Support from Medication.form [FHIR-45221](https://jira.hl7.org/browse/FHIR-45221)
@@ -73,7 +75,9 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support on Practitioner.name.family [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
   - added Must Support on Practitioner.name.given [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
   - replaced constraint _au-core-prac-01: At least text or family name shall be present_ with making Practitioner.name.family mandatory (1..1) [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
-- Removed Must Support from PractitionerRole.location in AU Core PractitionerRole [FHIR-43841](https://jira.hl7.org/browse/FHIR-43841).
+- Made the following changes to AU Core PractitionerRole:
+  - removed Must Support from PractitionerRole.location [FHIR-43841](https://jira.hl7.org/browse/FHIR-43841)
+  - updated invariant au-core-prarol-01 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [FHIR-46419](https://jira.hl7.org/browse/FHIR-46419)
 - Made the following changes to AU Core Procedure:
   - removed Must Support from Procedure.statusReason [FHIR-45013](https://jira.hl7.org/browse/FHIR-45013)
   - removed Must Support from Procedure.category [FHIR-45014](https://jira.hl7.org/browse/FHIR-45014)
