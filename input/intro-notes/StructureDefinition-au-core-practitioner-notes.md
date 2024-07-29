@@ -41,7 +41,7 @@ The following search parameters **SHALL** be supported:
       1. GET [base]/Practitioner?identifier=http://ns.electronichealth.net.au/id/hi/hpii/1.0\|8003619900015717
       1. GET [base]/Practitioner?identifier=8003619900015717
 
-    *Implementation Notes:* Fetches a bundle containing any Practitioner resources matching the identifier ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
+    *Implementation Notes:* Fetches a bundle containing any Practitioner resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 #### Optional Search Parameters:
 
@@ -55,7 +55,7 @@ The following search parameters **SHOULD** be supported:
     
       1. GET [base]/Practitioner?_id=5678
 
-    *Implementation Notes:* Returns a single Practitioner resource ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
+    *Implementation Notes:* Fetches a bundle with the requested Practitioner, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
 
 1. **SHOULD** support searching for a practitioner based on text name using the **[`name`](https://hl7.org/fhir/R4/practitioner.html#search)** search parameter:
 
