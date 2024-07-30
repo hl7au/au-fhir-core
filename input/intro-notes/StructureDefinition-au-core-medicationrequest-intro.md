@@ -24,6 +24,8 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [Interna
   - Although both are marked as *Must Support*, responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
   - A requester **SHALL** support both elements
   - When referencing a Medication resource, it is preferred the resource is [contained](http://hl7.org/fhir/R4/references.html#contained) but it may be an external resource
-- The MedicationRequest resource can represent a reason as a code with `MedicationRequest.reasonCode`, or a reference with `MedicationRequest.reasonReference` to a Condition or other resource.
+  - If an external reference to a Medication resource is used, the responder **SHALL** support the `_include` parameter for searching this element
+  - The requester **SHALL** support all method
+- The MedicationRequest resource can represent the clinical indication as a code with `MedicationRequest.reasonCode`, or a reference with `MedicationRequest.reasonReference` to a Condition or other resource.
   - Although both are marked as *Must Support*, responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
   - A requester **SHALL** support both elements  
