@@ -94,6 +94,11 @@ jobs:
     - name: Run Aucore Go Publisher build
       run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-core -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates -tx https://txreg.azurewebsites.net/txdev
 
+    - name: Run Aucore Go Publisher build
+      run: |
+       cp -r fhir-history/assets-hist/ ./webroot/fhir/core/assets-hist/
+       cp -r fhir-history/dist-hist/ ./webroot/fhir/core/dist-hist/
+
     - name: Upload Artifact to Github
       uses: actions/upload-artifact@v3
       with:
