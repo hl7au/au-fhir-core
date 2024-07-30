@@ -17,7 +17,7 @@ This guide is built on top of the FHIR standard and, where available, [AU Base](
 
 
 **AU Core:**
-- defines a set of conformance requirements that enforce a set of 'minimum requirements' on the Australian localised concepts from AU Base through cardinality constraints, *Must Support*  flags, required/extensible binding strengths, and capability statements. 
+- defines a set of conformance requirements that enforce a set of 'minimum requirements' on the Australian localised concepts from AU Base, specifying the elements, extensions, vocabularies, and value sets that SHALL be present and how they SHALL be used, along with the RESTful API interactions. 
 - for use by Australian stakeholders when implementing FHIR to provide a common implementation and should be built on top of when creating further Australian profiles and implementation guides.
 - conformance may become tied to regulatory and/or contractual agreements in order to necessitate adoption to this more prescriptive specification.
 
@@ -42,15 +42,15 @@ AU Core is intended to provide an implementable standard for FHIR based interfac
 
 With AUCDI defining clinical data requirements and FHIR AU Core providing detailed FHIR-based profiles for meeting clinical data requirements and administrative data requirements, an interpretation of AUCDI is necessary which is undertaken through the community.
 
-Updates to AU Core depend upon community input and we encourage our audience to submit questions and feedback to AU Core specifications by clicking on the Propose a change link in the footer of every page. In addition, we encourage requesting any necessary clarifications to AUCDI through the <a href="https://confluence.csiro.au/display/FHIR/AUCDI+Release+1">AUCDI process</a> that helps inform future updates to FHIR AU Core.
+Updates to AU Core depend upon community input and we encourage our audience to submit questions and feedback to AU Core specifications by clicking on the Propose a change link in the footer of every page. In addition, we encourage requesting any necessary clarifications to AUCDI through the <a href="https://sparked.csiro.au/index.php/sparked-products-resources/australian-core-data-for-interoperability/">AUCDI process</a> that helps inform future updates to FHIR AU Core.
 
-See [AUCDI](aucdi.html) for the relationship between the AUCDI Data Groups and Elements and AU Core profiles.
+See [AUCDI](aucdi.html) for the relationship between the AUCDI data groups, elements, and AU Core profiles.
 
 AU Core aligns to, and leverages, international standards and other national standards. Corresponding profiles included in relevant FHIR implementation guides were reviewed and considered during the development process to ensure alignment and to facilitate adoption of this standard. These implementation guides include:
 - [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)
 - [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/)
 - [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/)
-- [US Core Implementation Guide 7.0.0-ballot](https://hl7.org/fhir/us/core/2024Jan/)
+- [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/)
 
 The relationship of AU Core to AUCDI and other implementation guides is shown in the figure below.
 
@@ -66,7 +66,7 @@ Implementation Guide |Relationship
 [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)|This IG provides definitive guidance on how to exchange clinical sex and gender affirming information using HL7 models. Sex and gender concepts from this IG have been reviewed for the potential for adoption in Australia. Where adopted, these concepts are included by reference in AU Base and are available for use in AU Core via AU Base.
 [International Patient Access](https://hl7.org/fhir/uv/ipa/STU1/)|This IG describes how an application acting on behalf of a patient can access information about the patient from a clinical records system using a FHIR based API. The REST API and profiles in this IG were reviewed and considered during development of AU Core. AU Core is designed to be compatible with IPA, e.g. AU Core conformant data can be accessed by an IPA conformant client.
 [International Patient Summary Implementation Guide](https://hl7.org/fhir/uv/ips/STU1.1/)|This IG describes specify how to represent in HL7 FHIR the International Patient Summary (IPS). An International Patient Summary (IPS) document is an electronic health record extract containing essential healthcare information about a subject of care. The profiles in this IG were reviewed and considered during development of AU Core. AU Core is designed to be compatible with IPS, e.g. AU Core conformant data can be used to generate a patient summary that is conformant to IPS.
-[US Core Implementation Guide](https://hl7.org/fhir/us/core/2024Jan/)|This IG is the foundation for US Realm FHIR implementation guides. It defines the minimum constraints on the FHIR resources to create the US Core Profiles. The elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each US Core Profiles to access patient data. The REST API and profiles in this IG were reviewed and considered during development of AU Core. AU Core is compatible where possible.
+[US Core Implementation Guide](https://hl7.org/fhir/us/core/STU7/)|This IG is the foundation for US Realm FHIR implementation guides. It defines the minimum constraints on the FHIR resources to create the US Core Profiles. The elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each US Core Profiles to access patient data. The REST API and profiles in this IG were reviewed and considered during development of AU Core. AU Core is compatible where possible.
 {:.grid}
 
-See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and other profiles in other implementation guides.
+See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.

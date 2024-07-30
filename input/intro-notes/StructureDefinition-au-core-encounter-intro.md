@@ -18,6 +18,6 @@ Conformance in reverse is not guaranteed, i.e. a resource conforming to [US Core
 
 
 ### Profile specific implementation guidance
-- The Encounter resource can represent a reason as a code with `Encounter.reasonCode`, or a reference with `Encounter.reasonReference` to a Condition or other resource.
+- The Encounter resource can represent a clinical indication with `Encounter.reasonCode`, or a reference with `Encounter.reasonReference` to a Condition or other resource.
   - Although both are marked as *Must Support*, responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
   - A requester **SHALL** support both elements
