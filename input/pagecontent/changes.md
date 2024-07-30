@@ -145,6 +145,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
   - removed the required binding to Metric Body Length Units value set from Observation.valueQuantity.code to allow the FHIR standard profile binding, and added the Metric Body Length Units value set as a candidate additional binding [FHIR-44787](https://jira.hl7.org/browse/FHIR-44787)
 - Corrected the search parameter for gender identity to be `gender-identity` not `patient-gender-identity` [FHIR-45057](https://jira.hl7.org/browse/FHIR-45057).
+- Clarified the use of multipleAnd and comparators on AU Core date search parameters by appending the following to multipleAnd constraints: " and if multipleAnd is supported, SHALL support the search comparators 'gt', 'lt', 'ge', 'le'." [FHIR46309](https://jira.hl7.org/browse/FHIR-46309)
 - Changed the following Patient search parameters:
   - birthdate search parameter support for comparators gt, le, lt, ge to be SHOULD instead of SHALL and multipleAnd support introduced as SHOULD [FHIR-45410](https://jira.hl7.org/browse/FHIR-45410)
 - Changed the following Organization search parameters:
