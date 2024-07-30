@@ -46,7 +46,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from MedicationRequest.substitution, MedicationRequest.substitution.allowed[x] [FHIR-45088](https://jira.hl7.org/browse/FHIR-45088)
   - added Must Support to MedicationRequest.reasonReference [FHIR-45090](https://jira.hl7.org/browse/FHIR-45090)
   - support for AMT codes and PBS Item Codes in MedicationRequest.medicationCodeableConcept changed to define slicing in AU Core (no longer inherited from AU Base as per [FHIR-44821](https://jira.hl7.org/browse/FHIR-44821)). Slicing discriminator changed from slicing by value:system to slicing by value set and the binding strength has been corrected to required. [FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
-  - updated invariant au-core-medreq-03 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [FHIR-46417](https://jira.hl7.org/browse/FHIR-46417)
+  - updated invariant au-core-medreq-03 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements, and changed the length check from >= 10 to >= 8 to match the precision required by core FHIR invariants for date precision to the day [FHIR-46417](https://jira.hl7.org/browse/FHIR-46417)
 - Made the following changes to AU Core Medication:
   - removal of Must Support from Medication.manufacturer [FHIR-45130](https://jira.hl7.org/browse/FHIR-45130)
   - removed Must Support from Medication.form [FHIR-45221](https://jira.hl7.org/browse/FHIR-45221)
@@ -110,7 +110,8 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Observation.encounter [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222)
   - removed Must Support from Observation.performer [FHIR-45223](https://jira.hl7.org/browse/FHIR-45223)
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
-  - replaced Observation.code patternCodeableConcept constraint of 266918002 |Tobacco smoking consumption| with 1747861000168109 |Smoking status| [FHIR-45124](https://jira.hl7.org/browse/FHIR-45124) 
+  - replaced Observation.code patternCodeableConcept constraint of 266918002 |Tobacco smoking consumption| with 1747861000168109 |Smoking status| [FHIR-45124](https://jira.hl7.org/browse/FHIR-45124)
+  - updated invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match the precision required by core FHIR invariants for date precision to the day [FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
 - Removed Must Support from the following elements in AU Core Immunization:
   - Immunization.encounter [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
   - Immunization.performer [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
@@ -158,9 +159,11 @@ This change log documents the significant updates and resolutions implemented fr
 - Made the following changes to AU Core Diagnostic Result Observation:
   - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
   - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
+  - updated invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match the precision required by core FHIR invariants for date precision to the day [FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
 - Made the following changes to AU Core Pathology Result Observation:
   - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
-    - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
+  - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
+  - updated invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match the precision required by core FHIR invariants for date precision to the day [FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
 - Made the following changes in AU Core Requester CapabilityStatement:
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
   - corrected the Observation combined search parameter 'patient+category+status' from SHALL to SHOULD [FHIR-45390](https://jira.hl7.org/browse/FHIR-45390)

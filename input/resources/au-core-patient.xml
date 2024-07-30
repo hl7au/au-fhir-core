@@ -234,7 +234,7 @@
       <constraint>
         <key value="au-core-pat-04"/> 
         <severity value="error"/>
-        <human value="At least text, family name, or given name shall be present"/>
+        <human value="At least text, family name, or given name shall be present, or if neither is available, the Data Absent Reason extension shall be present"/>
         <expression value="(text.exists() or family.exists() or given.exists()) xor extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
         <xpath value="(exists(f:text) or exists(f:family) or exists(f:given)) and not (exists(f:text) and exists(f:family) and exists(f:given)) or exists(f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'])"/>
         <source
