@@ -26,11 +26,14 @@ Australian Medicines Terminology (AMT) is the national terminology for identific
 The AMT is published monthly to include new items on the Australian Register of Therapeutic Goods from the TGA, as well as items listed on the Pharmaceutical Benefits Scheme. 
 The AMT is published as part of SNOMED CT-AU (Australian edition of SNOMED CT) and can be downloaded in a variety of formats from the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).
 
-In addition to the medication code, the majority of use cases support exchange of structured medicine information as separate data elements covering brand name, generic name, item form and strength, and manufacturer.
+In addition to the medication code, the majority of use cases support exchange of structured medicine information as separate data elements covering brand name, generic name, item form and strength, and manufacturer.  These data elements may be supported as coded, or text, and systems are likely to use a combination of coded and text elements when constructing a Medication resource. 
 
-These data elements may be supported as coded, or text, and systems are likely to use a combination of coded and text elements when constructing a Medication resource. The guidance for how to support coded or text is summarised below: 
+The guidance for how to support coded or text identification of medicinal products is summarised below: 
 
-1.  For *coded* support of a medication, a single code can be supplied in Medication.code if the code contains the information required.
+1.  For *coded* support of a medication, a single code can be supplied in code.coding if the code contains the information required for identification.
+  - AMT contains both generic or branded medication concepts, and a single AMT code may be utilised to identify a medication in code.coding.  An AMT code can convey the following detail, depending on the concept level selected: brand name, generic name, item form, strength, pack size, container type. Codes can be selected from the [Australian Medication value set](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1).
+  - AMT does not contain manufacturer information. See point 2 or 3 for options to support coded or uncoded inclusion of manufacturer details.
+  - [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) can optionally be used to explicitly declare the type of product identification in the resource (i.e. MedicationAdministration, MedicationStatement, MedicationDispense, MedicationRequest, Medication).
      
     Example: Medication with single code identifying brand name, item form and strength.
     ~~~
@@ -49,8 +52,34 @@ These data elements may be supported as coded, or text, and systems are likely t
     }
     ~~~
 
+    Example: Medication with single code identifying generic name, item form and strength, with identification of product type.
+    ~~~
+    {
+      "resourceType": "Medication",
+       ...
+      "code": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "code": "UPDSF",
+                    "display": "Unbranded product with strengths and form"
+                  }
+                }
+              ],
+              "system": "http://snomed.info/sct", 
+              "code": "32686011000036108",
+              "display": "benzylpenicillin 3 g injection, vial"
+            },
+          ]
+        }
+    }
+    ~~~
 
-2. For *coded* support for brand name, generic name, manufacturer, item form and strength:
+2. For *coded* support of brand name, generic name, manufacturer, item form and strength, where the individual components required for medication identification are separately coded:
    - Coded support for the following can be provided using code.coding with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) to explicitly declare the type of product identification in the resource (i.e. MedicationAdministration, MedicationStatement, MedicationDispense, MedicationRequest, Medication):
       - brand name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
       - generic name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
@@ -109,8 +138,8 @@ These data elements may be supported as coded, or text, and systems are likely t
                 }
               ],
               "system": "http://snomed.info/sct",
-              "code": "32753011000036104",
-              "display": "benzylpenicillin 3 g injection, 1 vial"
+              "code": "32686011000036108",
+              "display": "benzylpenicillin 3 g injection, vial"
             },
             {
               "extension": [
@@ -124,8 +153,8 @@ These data elements may be supported as coded, or text, and systems are likely t
                 }
               ],
               "system": "http://snomed.info/sct",
-              "code": "32328011000036106",
-              "display": "Benpen 3 g powder for injection, 1 vial"
+              "code": "32205011000036103",
+              "display": "Benpen 3 g powder for injection, 3 g vial"
             }
           ]
         },
