@@ -59,7 +59,7 @@
         <td>birthdate</td>
         <td><b>MAY</b></td>
         <td><code>date</code></td>
-        <td>A requester <b>SHALL</b> provide a value precise to the day. A responder <b>SHALL</b> support a value precise to the day offset.<br/><br/>The requester <strong>SHOULD</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHOULD</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.<br/><br/>The requester <strong>SHOULD</strong> support <code>multipleAnd</code> and if <code>multipleAnd</code> is supported, the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code> <strong>SHALL</strong> be supported. The responder <strong>SHOULD</strong> support <code>multipleAnd</code> and if <code>multipleAnd</code> is supported, the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code> <strong>SHALL</strong> be supported.</td>
+        <td>A requester <b>SHALL</b> provide a value precise to the day. A responder <b>SHALL</b> support a value precise to the day offset.<br/><br/>The requester <strong>SHOULD</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHOULD</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.<br/><br/>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</td>
   </tr>
   <tr>
         <td>gender</td>
@@ -136,7 +136,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the combination of the **[`birthdate`](https://hl7.org/fhir/R4/patient.html#search)** and **[`family`](https://hl7.org/fhir/R4/patient.html#search)** search parameters:
     - **SHOULD** support these `date` comparators: `gt,lt,ge,le`
-    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`) and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, **SHALL** support date comparators: `gt,lt,ge,le`
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, <strong>SHALL</strong> support the search comparators `gt,lt,ge,le`
 
     
     `GET [base]/Patient?birthdate=[date]&family=[string]`
@@ -149,7 +149,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the combination of the **[`birthdate`](https://hl7.org/fhir/R4/patient.html#search)** and **[`name`](https://hl7.org/fhir/R4/patient.html#search)** search parameters:
     - **SHOULD** support these `date` comparators: `gt,lt,ge,le`
-    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`) and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, **SHALL** support date comparators: `gt,lt,ge,le`
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`) and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, <strong>SHALL</strong> support the search comparators `gt,lt,ge,le`
     
     
     `GET [base]/Patient?birthdate=[date]&name=[string]`
