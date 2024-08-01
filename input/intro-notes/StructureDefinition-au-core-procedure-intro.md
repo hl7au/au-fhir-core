@@ -12,7 +12,7 @@ The following are supported usage scenarios for this profile:
 - The use of coding can vary significantly across systems, requesters need to understand that they may encounter codes they do not recognise and be prepared to handle those resources appropriately. Responders **SHOULD** populate `Procedure.code.text` and/or `Procedure.code.coding.display` so that requesters can at least display the procedure even if the requester does not recognise the code supplied.
 - `Procedure.code` contains the identification of the procedure which may include body site information. Where a system has information not supported by the coding in `Procedure.code.coding` (e.g. body site, laterality and other qualification of procedure coding terms) that information **SHOULD** be supplied in `Procedure.code.text`
 - In an exchange with the My Health Record system `Procedure.status` is "completed"
-- The Procedure resource can represent a reason as a code with `Procedure.reasonCode`, or a reference with `Procedure.reasonReference` to a Condition or other resource.
+- The Procedure resource can represent a clinical indication with `Procedure.reasonCode`, or a reference with `Procedure.reasonReference` to a Condition or other resource.
   - Although both are marked as *Must Support*, responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
   - A requester **SHALL** support both elements
 - A procedure including an implantable device should use `Procedure.focalDevice` with a reference to a Device resource

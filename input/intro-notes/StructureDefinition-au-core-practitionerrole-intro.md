@@ -10,3 +10,4 @@ The following are supported usage scenarios for this profile:
 
 ### Profile specific implementation guidance
 - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
+- Requesters can request responders return the Practitioner resource using `_include`, see the Notes section below.
