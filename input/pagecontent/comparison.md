@@ -1,294 +1,291 @@
-A resource may be compliant with multiple implementation guides. In addition to AU Core profiles, a FHIR resource may be compliant to profiles published in project implementation guides, other national implementation guides, or international implementation guides.
-...what does it mean to be compliant
+Compliance refers to a resource meeting all the requirements, constraints, and standards specified in a particular FHIR profile or an implementation guide. These requirements can include mandatory elements, cardinality constraints, data types, terminology bindings, and extensions. A resource may be compliant with multiple implementation guides. For example, in addition to AU Core profiles, a FHIR resource may be compliant with profiles published in project implementation guides, other national implementation guides, or international implementation guides.
 
-
-#### Comparison from AU Core to International Patient Access, International Patient Summary and US Core
-
+### Comparison from AU Core to International Patient Access, International Patient Summary, and US Core
 
 The table below provides a profile-only comparison from AU Core to other implementation guides. It indicates whether a resource compliant with a particular AU Core profile also satisfies (i.e., is compliant with) a profile from [International Patient Access](https://hl7.org/fhir/uv/ipa/STU1/), [International Patient Summary](https://hl7.org/fhir/uv/ips/STU1.1/), or [US Core](https://hl7.org/fhir/us/core/STU7/). See [Relationship to AUCDI and other IGs](https://build.fhir.org/ig/hl7au/au-fhir-core/relationship.html) for more information on the relationship of AU Core to these implementation guides.
 
-Conformance in the reverse direction is not guaranteed. This means a resource conforming to International Patient Access, International Patient Summary, or US Core **MAY NOT** conform to AU Core. In the future, we may provide reverse comparisons.
+Compliance in the reverse direction is not guaranteed. This means a resource that is compliant with International Patient Access, International Patient Summary, or US Core **MAY NOT** be compliant with AU Core. In the future, we may provide reverse comparisons and CapabilityStatement comparison.
 
-In the future, we may also provide CapabilityStatement comparison.
+Levels of compliance:
 
-Legend:
-- <img src="green_checkmark.svg.png" width="20"/>: The resource meets all the requirements of the compared profile (i.e. fully compliant).
-- <img src="orange_checkmark.svg.png" width="20"/>: The resource meets some, but not all, of the requirements of the compared profile (i.e. partially compliant). ????
-- <img src="cross_red_circle.svg.png" width="20"/>: The resource does not meet the requirements of the compared profile (i.e. non-compliant). For example, an AU Core resource does not include mandatory elements required by ... E.g. The value sets are not compatible, or fixed values are not compatible...
+- **Full compliance**: An AU Core compliant resource meets all the requirements of the compared IPA, IPS, or US Core profile. Flagged with a <img src="green_checkmark.svg.png" width="20"/>.
+- **Partial compliance**: An AU Core compliant resource meets all mandatory requirements but fails to meet some optional constraints of the compared IPA, IPS, or US Core profile. Flagged with an <img src="orange_checkmark.svg.png" width="20"/>.
+- **Non-compliance**: An AU Core compliant resource fails to meet one or more mandatory requirements of the compared IPA, IPS, or US Core profile. Flagged with a <img src="cross_red_circle.svg.png" width="20"/>.
 
-<table border="1">
+Where partial compliance or non-compliance is declared, more information is provided in the sections below. Blank cells in the table indicate that the given AU Core profile has no equivalent profile.
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th><a href="https://build.fhir.org/ig/hl7au/au-fhir-core">AU Core</a></th>
-            <th><a href="https://hl7.org/fhir/uv/ipa/STU1/index.html">International Patient Access 1.0.0</a></th>
-            <th><a href="https://hl7.org/fhir/uv/ips/STU1.1/index.html">International Patient Summary 1.1.0</a></th>
-            <th><a href="https://hl7.org/fhir/us/core/STU7/">US Core 7.0.0</a></th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core">AU Core</a></th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ipa/STU1/index.html">International Patient Access 1.0.0</a></th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/index.html">International Patient Summary 1.1.0</a></th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU7/">US Core 7.0.0</a></th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-bloodpressure.html">AU Core Blood Pressure</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-bloodpressure.html">AU Core Blood Pressure</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-bodyheight.html">AU Core Body Height</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-bodyheight.html">AU Core Body Height</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-bodytemp.html">AU Core Body Temperature</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-bodytemp.html">AU Core Body Temperature</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-bodyweight.html">AU Core Body Weight</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-bodyweight.html">AU Core Body Weight</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
-            <td>&nbsp;</td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
-            <td>&nbsp;</td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-resprate.html">AU Core Respiration Rate</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-resprate.html">AU Core Respiration Rate</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
-            <td><img src="green_checkmark.svg.png" width="20"/></td>
-            <td>&nbsp;</td>
-            <td><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
     </tbody>
 </table>
 
-
 #### International Patient Access 1.0.0
+
 This table provides detailed explanations for instances where AU Core profiles do not comply with the corresponding profiles from International Patient Access.
 
-<table border="1">
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th>AU Core</th>
-            <th>International Patient Access 1.0.0</th>
-            <th>Comment</th>
+            <th style="width: 33.33%;">AU Core</th>
+            <th style="width: 33.33%;">International Patient Access 1.0.0</th>
+            <th style="width: 33.33%;">Comment</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
-            <td>MedicationRequest.requester type mismatch: IPA prohibits reference to  Organization or RelatedPerson resources.</td>
+            <td style="width: 33.33%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td style="width: 33.33%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
+            <td style="width: 33.33%;">MedicationRequest.requester type differs: IPA prohibits reference to Organization and RelatedPerson resources.</td>
         </tr>
     </tbody>
-<table>
+</table>
 
 #### International Patient Summary 1.1.0
 
 This table provides detailed explanations for instances where AU Core profiles do not comply with the corresponding profiles from International Patient Summary.
 
-<table border="1">
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th>AU Core</th>
-            <th>International Patient Summary 1.1.0</th>
-            <th>Comment</th>
+            <th style="width: 33.33%;">AU Core</th>
+            <th style="width: 33.33%;">International Patient Summary 1.1.0</th>
+            <th style="width: 33.33%;">Comment</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
-            <td><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-AllergyIntolerance-uv-ips.html">Allergy Intolerance (IPS)</a></td>
-            <td>AllergyIntolerance.patient.reference minimum cardinality differs: IPS requires minimum = 1 vs AU Core minimum = = 0.</td>
+            <td style="width: 33.33%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
+            <td style="width: 33.33%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-AllergyIntolerance-uv-ips.html">Allergy Intolerance (IPS)</a></td>
+            <td style="width: 33.33%;">AllergyIntolerance.patient.reference minimum cardinality differs: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td rowspan="2"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td rowspan="2"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
-            <td>Condition.clinicalStatus minimum cardinality differs: IPS requires minimum = 1 vs AU Core minimum = 0</td>
+            <td rowspan="2" style="width: 33.33%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
+            <td rowspan="2" style="width: 33.33%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
+            <td style="width: 33.33%;">Condition.clinicalStatus minimum cardinality differs: IPS requires minimum = 1 vs AU Core minimum = 0</td>
         </tr>
         <tr>
-            <td>Condition.subject.reference minimum cardinality differs: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 33.33%;">Condition.subject.reference minimum cardinality differs: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td rowspan="2"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
-            <td rowspan="2"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
-            <td>Observation.status fixed value differs: IPS requires fixed value 'final' vs AU Core  allows multiple values including 'final'.</td>
+            <td rowspan="2" style="width: 33.33%;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
+            <td rowspan="2" style="width: 33.33%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
+            <td style="width: 33.33%;">Observation.status fixed value differs: IPS requires fixed value 'final' vs AU Core allows multiple values including 'final'.</td>
         </tr>
         <tr>
-            <td>Observation.subject.reference minimum cardinality differs: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 33.33%;">Observation.subject.reference minimum cardinality differs: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
-            <td><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
-            <td>Immunization.patient.reference minimum cardinalities differs: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 33.33%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
+            <td style="width: 33.33%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
+            <td style="width: 33.33%;">Immunization.patient.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td rowspan="4"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
-            <td rowspan="4"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Medication-uv-ips.html">Medication (IPS)</a></td>
-            <td>Medication.ingredient.strength.numerator.system minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td rowspan="4" style="width: 33.33%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
+            <td rowspan="4" style="width: 33.33%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Medication-uv-ips.html">Medication (IPS)</a></td>
+            <td style="width: 33.33%;">Medication.ingredient.strength.numerator.system minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td>Medication.ingredient.strength.numerator.code minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 33.33%;">Medication.ingredient.strength.numerator.code minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td>Medication.ingredient.strength.denominator.system minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 33.33%;">Medication.ingredient.strength.denominator.system minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td>Medication.ingredient.strength.denominator.code minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 33.33%;">Medication.ingredient.strength.denominator.code minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-MedicationRequest-uv-ips.html">Medication Request (IPS)</a></td>
-            <td>MedicationRequest.subject.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 33.33%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td style="width: 33.33%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-MedicationRequest-uv-ips.html">Medication Request (IPS)</a></td>
+            <td style="width: 33.33%;">MedicationRequest.subject.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td rowspan="6"><a href="StructureDefinition-au-core-pathologyresult.html">AU Core Pathology Result Observation</a></td>
-            <td rowspan="3"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-laboratory-uv-ips.html">Observation Results: laboratory (IPS)</a></td>
-            <td>Observation.status fixed value differs: IPS requires fixed value 'final' vs AU Core  allows multiple values including 'final'.</td>
+            <td rowspan="6" style="width: 33.33%;"><a href="StructureDefinition-au-core-pathologyresult.html">AU Core Pathology Result Observation</a></td>
+            <td rowspan="3" style="width: 33.33%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-laboratory-uv-ips.html">Observation Results: laboratory (IPS)</a></td>
+            <td style="width: 33.33%;">Observation.status fixed value differs: IPS requires fixed value 'final' vs AU Core allows multiple values including 'final'.</td>
         </tr>
         <tr>
-            <td>Observation.subject.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 33.33%;">Observation.subject.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td>Observation.performer minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 33.33%;">Observation.performer minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td rowspan="3"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-pathology-uv-ips.html">Observation Results: pathology (IPS)</a></td>
-            <td>Observation.status fixed value differs: IPS requires fixed value 'final' vs AU Core  allows multiple values including 'final'.</td>
+            <td rowspan="3" style="width: 33.33%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-pathology-uv-ips.html">Observation Results: pathology (IPS)</a></td>
+            <td style="width: 33.33%;">Observation.status fixed value differs: IPS requires fixed value 'final' vs AU Core allows multiple values including 'final'.</td>
         </tr>
         <tr>
-            <td>Observation.subject.reference: Element minimum cardinalities differ: '1' (IPS) vs '0' (AU Core)</td>
+            <td style="width: 33.33%;">Observation.subject.reference element minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td>Observation.performer minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 33.33%;">Observation.performer minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td rowspan="3"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
-            <td rowspan="3"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Procedure-uv-ips.html">Procedure (IPS)</a></td>
-            <td>Procedure.subject.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td rowspan="2" style="width: 33.33%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
+            <td rowspan="2" style="width: 33.33%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Procedure-uv-ips.html">Procedure (IPS)</a></td>
+            <td style="width: 33.33%;">Procedure.subject.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td>Procedure.performed[x] minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 33.33%;">Procedure.performed[x] minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td>?? Procedure.performer.actor type mismatch: Reference([CanonicalType[http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/uv/ips/StructureDefinition/Device-observer-uv-ips], CanonicalType[http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips], CanonicalType[http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips], CanonicalType[http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips]]) vs Reference([CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device]])</td>
+            <td rowspan="3" style="width: 33.33%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+            <td rowspan="3" style="width: 33.33%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation - SH: tobacco use</a></td>
+            <td style="width: 33.33%;">Observation.subject.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td rowspan="3"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
-            <td rowspan="3"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation - SH: tobacco use</a></td>
-            <td>Observation.subject.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 33.33%;">Observation.code.coding differs: IPS requires LOINC 72166-2 which is not included in US Core.</td>
         </tr>
         <tr>
-            <td>Observation.code.coding value differs: IPS requires LOINC 72166-2.</td>
+            <td style="width: 33.33%;">Observationvalue[x].valueCodeableConcept binding differs: Required binding to <a href="https://hl7.org/fhir/uv/ips/STU1.1/ValueSet-current-smoking-status-uv-ips.html">Current Smoking Status - IPS</a> in IPS vs extensible binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1">Smoking Status</a> in AU Core.</td>
         </tr>
-        <tr>
-            <td>TBD: Observationvalue[x].valueCodeableConcept required binding: Required/extensible bindings differ at Observation.valueCodeableConcept using binding from AU Core Smoking Status</td>
-        </tr>
-   </tbody>
+    </tbody>
 </table>
 
+##### Additional profiles 
 
-##### Additional profile resources that are not in AU Core: 
-- Bundle - IPS 
+AU Core has no equivalent for the following profiles defined in the International Patient Summary: 
+
+- Bundle - IPS
 - Composition (IPS)
 - Device (IPS)
 - Device - performer, observer
@@ -297,71 +294,102 @@ This table provides detailed explanations for instances where AU Core profiles d
 - Imaging Study (IPS)
 - Media observation (Results: laboratory, media)
 - Medication Statement (IPS)
-- Observation: Observation - Pregnancy: EDD, Observation - Pregnancy: outcome, Observation - Pregnancy: status, Observation - SH: alcohol use, Observation Results: radiology (IPS)
+- Observation - Pregnancy: EDD
+- Observation - Pregnancy: outcome
+- Observation - Pregnancy: status
+- Observation - SH: alcohol use
+- Observation Results: radiology (IPS)
 - Specimen (IPS)
-
 
 #### US Core 7.0.0
 
-
 This table provides detailed explanations for instances where AU Core profiles do not comply with the corresponding profiles from US Core.
 
-<table border="1">
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th>AU Core</th>
-            <th>US Core 7.0.0</th>
-            <th>Comment</th>
+            <th style="width: 33.33%;">AU Core</th>
+            <th style="width: 33.33%;">US Core 7.0.0</th>
+            <th style="width: 33.33%;">Comment</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a></td>
-            <td>TBD</td>
+            <td rowspan="2" style="width: 33.33%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core Diagnostic Result Observation</a></td>
+            <td rowspan="2" style="width: 33.33%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result</a></td>
+            <td style="width: 33.33%;">Observation.code binding strength differs: US Core extensibly binds to LOINC  vs AU Core strength example</td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
-            <td>TBD</td>
+            <td style="width: 33.33%;">Observation.value[x] quantity requirements differ: US Core requires the use of UCUM for coded quantity units vs no specific requirements in AU Core. </td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core Diagnostic Result Observation</a></td>
-            <td><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result</a></td>
-            <td>TBD</td>
+            <td style="width: 33.33%;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
+            <td style="width: 33.33%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result</a></td>
+            <td style="width: 33.33%;">Encounter.type minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core Diagnostic Result Observation</a></td>
-            <td><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result</a></td>
-            <td>TBD</td>
+            <td style="width: 33.33%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
+            <td style="width: 33.33%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-immunization.html">US Core Immunization</a></td>
+            <td style="width: 33.33%;">Immunization.vaccineCode binding differs: US Core extensibly binds to CVX Vaccines Administered (which is not an AU medicines terminology) vs AU Core preferred Australian Medication and PBS Item Codes.</td>
         </tr>
         <tr>
-            <td rowspan="2"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
-            <td rowspan="2"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result</a></td>
-            <td>Encounter.type minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 33.33%;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
+            <td style="width: 33.33%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location</a></td>
+            <td style="width: 33.33%;">Location.name minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td>Encounter.identifier.system & Encounter.identifier.code required in AU Core but Encounter.identifier is not MS in AU Core therefore we stay silent here ---- REMOVE</td>
+            <td style="width: 33.33%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
+            <td style="width: 33.33%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location</a></td>
+            <td style="width: 33.33%;">Medication.code binding differs: US Core extensibly binds to RxNorm (which is not an AU medicines terminology) vs AU Core preferred Australian Medication and PBS Item Codes.</td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
-            <td><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-immunization.html">US Core Immunization</a></td>
-            <td>TBD - US Core extensibly binds to CVX which is not an AU vaccine terminology</td>
+            <td style="width: 33.33%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
+            <td style="width: 33.33%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-organization.html">US Core Organization</a></td>
+            <td style="width: 33.33%;">Organization.active minimum cardinalities differ: US Core requires minimum = 1 vs AU Core minimum = 0.</td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
-            <td><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location</a></td>
-            <td>Location.name minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
-        <tr>
-            <td><a href="StructureDefinition-au-core-location.html">AU Core Medication</a></td>
-            <td><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location</a></td>
-         <td>TBD: noting that US Core extensibly binds to RxNorm which is not an AU medicines terminology</td>
+            <td style="width: 33.33%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
+            <td style="width: 33.33%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+            <td style="width: 33.33%;">Gender identity extension differs: US Core defines an US Core Gender Identity extension vs AU Core which requires the use of the International Gender Identity extension.</td>
         </tr>
         <tr>
-            <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location</a></td>
-         <td>TBD: noting that US Core extensibly binds to RxNorm which is not an AU medicines terminology</td>
+            <td style="width: 33.33%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
+            <td style="width: 33.33%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitioner.html">US Core Practitioner</a></td>
+            <td style="width: 33.33%;">Practitioner.identifier minimum cardinalities differ: US Core requires minimum = 1 vs AU Core minimum = 0.</td>
+        </tr>
+        <tr>
+            <td style="width: 33.33%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
+            <td style="width: 33.33%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole</a></td>
+            <td style="width: 33.33%;">Non-compliance due to constraint pd-1: US Core requires constraint pd-1, which mandates that resources SHALL have contact information or a reference to an Endpoint, whereas AU Core does not enforce this requirement.</td>
         </tr>
     </tbody>
-    </table>
+</table>
 
+##### Additional profiles 
+
+AU Core has no equivalent for the following profiles defined in the US Core:
+- US Core CarePlan
+- US Core CareTeam 
+- US Core Coverage 
+- US Core Implantable Device 
+- US Core DiagnosticReport Profile for Laboratory Results Reporting
+- US Core DiagnosticReport Profile for Report and Note Exchange
+- US Core DocumentReference 
+- US Core Goal Profile
+- US Core MedicationDispense 
+- US Core Average Blood Pressure 
+- US Core Care Experience Preference 
+- US Core Observation Clinical Result 
+- US Core Laboratory Result Observation 
+- US Core Observation Occupation 
+- US Core Observation Pregnancy Intent 
+- US Core Observation Pregnancy Status 
+- US Core Observation Screening Assessment 
+- US Core Observation Sexual Orientation 
+- US Core Simple Observation 
+- US Core Smoking Status Observation 
+- US Core Treatment Intervention Preference 
+- US Core Provenance 
+- US Core QuestionnaireResponse 
+- US Core ServiceRequest 
+- US Core Specimen
