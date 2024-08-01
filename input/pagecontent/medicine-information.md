@@ -89,6 +89,8 @@ The guidance for how to support coded or text identification of medicinal produc
       - form and strength may be separately provided in `Medication.form`, `Medication.ingredient.itemCodeableConcept` and `Medication.ingredient.strength` when they are not implicit in `Medication.code`
       - manufacturer = `Medication.manufacturer.identifier`
 
+
+
     Example: Medication with coded brand name, generic name, manufacturer, item form and strength.
     ~~~
     {
@@ -125,37 +127,7 @@ The guidance for how to support coded or text identification of medicinal produc
               "system": "http://snomed.info/sct",
               "code": "3539011000036105",
               "display": "Benpen"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
-                  "valueCoding": {
-                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
-                    "code": "UPDSF",
-                    "display": "Unbranded product with strengths and form"
-                  }
-                }
-              ],
-              "system": "http://snomed.info/sct",
-              "code": "32686011000036108",
-              "display": "benzylpenicillin 3 g injection, vial"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
-                  "valueCoding": {
-                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
-                    "code": "BPDSF",
-                    "display": "Branded product with strengths and form"
-                  }
-                }
-              ],
-              "system": "http://snomed.info/sct",
-              "code": "32205011000036103",
-              "display": "Benpen 3 g powder for injection, 3 g vial"
-            }
+            }, 
           ]
         },
         "manufacturer": {
