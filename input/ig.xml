@@ -873,5 +873,13 @@
 			<code value="fmm-definition"/>
 			<value value="https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#maturity-levels"/>
 		</parameter>
+		<parameter>
+			<code value="ipa-comparison"/>
+			<value value="{last}"/>
+		</parameter>
+		<parameter>
+			<code value="ips-comparison"/>
+			<value value="{last}"/>
+		</parameter>
 	</definition>
 </ImplementationGuide>
