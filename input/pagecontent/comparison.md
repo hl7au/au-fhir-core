@@ -171,9 +171,9 @@ Where additional requirements are identified, more information is provided in th
 </table>
 
 #### International Patient Access
+[International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API. 
 
-- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/)
-This table provides detailed explanations for instances where AU Core profiles do not comply with the corresponding profiles from International Patient Access.
+AU Core is designed to be compatible with IPA, e.g. AU Core compliant data can be accessed by an IPA conformant client. To achieve compliance with both AU Core and IPA, additional requirements may need to be met. These requirements are outlined below.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -200,9 +200,9 @@ This version of AU Core has no equivalent profile for the following IPA profiles
 - IPA-MedicationStatement
 
 #### International Patient Summary
+[International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/) describes how to represent the International Patient Summary (IPS) using HL7 FHIR. An International Patient Summary  document is an electronic health record extract containing essential healthcare information about a subject of care.
 
-[International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/)
-This table provides detailed explanations for instances where AU Core profiles do not comply with the corresponding profiles from International Patient Summary.
+AU Core is designed to be compatible with IPS, meaning AU Core data can be used to create a patient summary that aligns with IPS standards. To achieve compliance with both AU Core and IPS, additional requirements may need to be met. These requirements are outlined below.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -343,8 +343,9 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - Specimen (IPS)
 
 #### US Core
-[US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/)
-This table provides detailed explanations for instances where AU Core profiles do not comply with the corresponding profiles from US Core.
+[US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/) serves as the foundation for FHIR implementation guides in the US Realm. It establishes the minimum constraints on FHIR resources to define US Core Profiles, specifying the required elements, extensions, vocabularies, and value sets, as well as their usage. It also outlines the minimum FHIR RESTful interactions needed to access patient data for each US Core Profile.
+
+AU Core was developed with consideration of the REST API and profiles in the US Core Implementation Guide, ensuring compatibility where possible. To achieve compliance with both AU Core and US Core, additional requirements may need to be met.These requirements are outlined below.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
