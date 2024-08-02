@@ -1,6 +1,16 @@
-Compliance refers to a resource meeting all the requirements, constraints, and standards specified in a particular FHIR profile or an implementation guide. These requirements can include mandatory elements, cardinality constraints, data types, terminology bindings, and extensions. A resource may be compliant with multiple implementation guides. For example, in addition to AU Core profiles, a FHIR resource may be compliant with profiles published in project implementation guides, other national implementation guides, or international implementation guides.
+AU Core aligns with international and national standards. During its development, profiles from relevant FHIR implementation guides were reviewed to ensure alignment and support the adoption of this standard. These implementation guides include:
+- [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)
+- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/)
+- [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/)
+- [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/)
+
+This page compares AU Core with other key implementation guides.
+
+For more information on how AU Core relates to other implementation guides, see [Relationship with other IGs](relationship.html).
 
 ### Profile comparison
+
+Compliance refers to a resource meeting all the requirements, constraints, and standards specified in a particular FHIR profile or an implementation guide. These requirements can include mandatory elements, cardinality constraints, data types, terminology bindings, and extensions. A resource may be compliant with multiple implementation guides. For example, in addition to AU Core profiles, a FHIR resource may be compliant with profiles published in project implementation guides, other national implementation guides, or international implementation guides.
 
 The table below provides a profile only comparison from AU Core to other implementation guides. It indicates whether a resource compliant with a particular AU Core profile also satisfies (i.e., is compliant with) a profile from [International Patient Access](https://hl7.org/fhir/uv/ipa/STU1/), [International Patient Summary](https://hl7.org/fhir/uv/ips/STU1.1/), or [US Core](https://hl7.org/fhir/us/core/STU7/). See [Relationship to AUCDI and other IGs](https://build.fhir.org/ig/hl7au/au-fhir-core/relationship.html) for more information on the relationship of AU Core to these implementation guides.
 
@@ -10,8 +20,9 @@ Legend:
 - **Compliant**: An AU Core compliant resource meets all requirements of the compared profile. Flagged with a <img src="green_checkmark.svg.png" width="20"/>.
 - **Additional requirements**: An AU Core compliant resource is compatible, but additional changes may be needed to meet all requirements of the compared profile. Flagged with an <img src="orange_checkmark.svg.png" width="20"/>.
 - **Incompatible**: An AU Core compliant resource is incompatible with the compared profile. A resource cannot be compliant to both. Flagged with a <img src="cross_red_circle.svg.png" width="20"/>.
-
-Where partial compliance or non-compliance is declared, more information is provided in the sections below. Blank cells in the table indicate that the given AU Core profile has no equivalent profile.
+- **No equivalent profile**: When AU Core profile has no equivalent in compared implementation guides, it is flagged with a <img src="minus_symbol.svg.png" width="20"/>.
+ 
+Where additional requirements are identified, more information is provided in the sections below.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -67,8 +78,8 @@ Where partial compliance or non-compliance is declared, more information is prov
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
         </tr>
         <tr>
@@ -85,8 +96,8 @@ Where partial compliance or non-compliance is declared, more information is prov
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
         </tr>
         <tr>
@@ -103,7 +114,7 @@ Where partial compliance or non-compliance is declared, more information is prov
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
         </tr>
@@ -133,7 +144,7 @@ Where partial compliance or non-compliance is declared, more information is prov
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
@@ -152,7 +163,7 @@ Where partial compliance or non-compliance is declared, more information is prov
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;">&nbsp;</td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
     </tbody>
@@ -182,7 +193,7 @@ This table provides detailed explanations for instances where AU Core profiles d
 </table>
 
 ##### Additional profiles
-This version of AU Core has no equivalent profile for the following IPA profiles: 
+This version of AU Core has no equivalent profile for the following IPA profiles:
 - IPA-DocumentReference
 - IPA-MedicationStatement
 
@@ -337,7 +348,7 @@ This table provides detailed explanations for instances where AU Core profiles d
             <th style="width: 25%;">AU Core</th>
             <th style="width: 25%;">US Core 7.0.0</th>
             <th style="width: 25%;">Element</th>
-            <th style="width: 25%;">Additional Requirements</th>
+            <th style="width: 25%;">Additional requirements</th>
         </tr>
     </thead>
     <tbody>
