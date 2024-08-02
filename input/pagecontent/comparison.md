@@ -9,19 +9,20 @@ This page compares AU Core with other key implementation guides.
 For more information on how AU Core relates to other implementation guides, see [Relationship with other IGs](relationship.html).
 
 ### Profile comparison
+A resource may be compliant to multiple implementation guides. In addition to AU Core profiles, a FHIR resource may be compliant to profiles published in project implementation guides, other national implementation guides, or international implementation guides.
 
-Compliance refers to a resource meeting all the requirements, constraints, and standards specified in a particular FHIR profile or an implementation guide. These requirements can include mandatory elements, cardinality constraints, data types, terminology bindings, and extensions. A resource may be compliant with multiple implementation guides. For example, in addition to AU Core profiles, a FHIR resource may be compliant with profiles published in project implementation guides, other national implementation guides, or international implementation guides.
+Compliance refers to a resource meeting all the requirements, constraints, and standards specified in a particular FHIR profile or an implementation guide. These requirements can include mandatory elements, cardinality constraints, data types, terminology bindings, and extensions. 
 
-The table below provides a profile only comparison from AU Core to other implementation guides. It indicates whether a resource compliant with a particular AU Core profile also satisfies (i.e., is compliant with) a profile from [International Patient Access](https://hl7.org/fhir/uv/ipa/STU1/), [International Patient Summary](https://hl7.org/fhir/uv/ips/STU1.1/), or [US Core](https://hl7.org/fhir/us/core/STU7/). See [Relationship to AUCDI and other IGs](https://build.fhir.org/ig/hl7au/au-fhir-core/relationship.html) for more information on the relationship of AU Core to these implementation guides.
+The table below provides a profile only comparison from AU Core to other implementation guides. It indicates whether a resource compliant with a particular AU Core profile also satisfies (i.e., is compliant with) a profile from [International Patient Access](https://hl7.org/fhir/uv/ipa/STU1/), [International Patient Summary](https://hl7.org/fhir/uv/ips/STU1.1/), or [US Core](https://hl7.org/fhir/us/core/STU7/). 
 
-Compliance in the reverse direction is not guaranteed. This means a resource that is compliant with International Patient Access, International Patient Summary, or US Core **MAY NOT** be compliant with AU Core. In the future, we may provide reverse comparisons and CapabilityStatement comparison.
+Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with International Patient Access, International Patient Summary, or US Core **MAY NOT** be compliant with AU Core.Future updates may include reverse comparisons and CapabilityStatement evaluations.
 
 Legend:
 - **Compliant**: An AU Core compliant resource meets all requirements of the compared profile. Flagged with a <img src="green_checkmark.svg.png" width="20"/>.
 - **Additional requirements**: An AU Core compliant resource is compatible, but additional changes may be needed to meet all requirements of the compared profile. Flagged with an <img src="orange_checkmark.svg.png" width="20"/>.
 - **Incompatible**: An AU Core compliant resource is incompatible with the compared profile. A resource cannot be compliant to both. Flagged with a <img src="cross_red_circle.svg.png" width="20"/>.
 - **No equivalent profile**: When AU Core profile has no equivalent in compared implementation guides, it is flagged with a <img src="minus_symbol.svg.png" width="20"/>.
- 
+
 Where additional requirements are identified, more information is provided in the sections below.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -171,6 +172,7 @@ Where additional requirements are identified, more information is provided in th
 
 #### International Patient Access
 
+- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/)
 This table provides detailed explanations for instances where AU Core profiles do not comply with the corresponding profiles from International Patient Access.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -187,7 +189,7 @@ This table provides detailed explanations for instances where AU Core profiles d
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
             <td style="width: 25%;">MedicationRequest.requester</td>
-            <td style="width: 25%;">MedicationRequest.requester type differs: IPA prohibits reference to Organization and RelatedPerson resources.</td>
+            <td style="width: 25%;">IPA prohibits reference to Organization and RelatedPerson resources.</td>
         </tr>
     </tbody>
 </table>
@@ -199,6 +201,7 @@ This version of AU Core has no equivalent profile for the following IPA profiles
 
 #### International Patient Summary
 
+[International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/)
 This table provides detailed explanations for instances where AU Core profiles do not comply with the corresponding profiles from International Patient Summary.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -215,32 +218,33 @@ This table provides detailed explanations for instances where AU Core profiles d
             <td style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-AllergyIntolerance-uv-ips.html">Allergy Intolerance (IPS)</a></td>
             <td style="width: 25%;">AllergyIntolerance.patient.reference</td>
-            <td style="width: 25%;">AllergyIntolerance.patient.reference minimum cardinality differs: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
             <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
             <td style="width: 25%;">Condition.clinicalStatus</td>
-            <td style="width: 25%;">Condition.clinicalStatus minimum cardinality differs: IPS requires minimum = 1 vs AU Core minimum = 0</td>
+            <td style="width: 25%;">IPS requires minimum = 1.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Condition.subject.reference minimum cardinality differs: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">Condition.subject.reference</td>
+            <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
             <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
             <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">Observation.status fixed value differs: IPS requires fixed value 'final' vs AU Core allows multiple values including 'final'.</td>
+            <td style="width: 25%;">IPS requires fixed value 'final'.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.subject.reference</td>
-            <td style="width: 25%;">Observation.subject.reference minimum cardinality differs: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
             <td style="width: 25%;">Immunization.patient.reference</td>
-            <td style="width: 25%;">Immunization.patient.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
@@ -264,50 +268,50 @@ This table provides detailed explanations for instances where AU Core profiles d
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-MedicationRequest-uv-ips.html">Medication Request (IPS)</a></td>
             <td style="width: 25%;">MedicationRequest.subject.reference</td>
-            <td style="width: 25%;">MedicationRequest.subject.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-pathologyresult.html">AU Core Pathology Result Observation</a></td>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-laboratory-uv-ips.html">Observation Results: laboratory (IPS)</a></td>
             <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">Observation.status fixed value differs: IPS requires fixed value 'final' vs AU Core allows multiple values including 'final'.</td>
+            <td style="width: 25%;">IPS requires fixed value 'final'.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.subject.reference</td>
-            <td style="width: 25%;">Observation.subject.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.performer</td>
-            <td style="width: 25%;">Observation.performer minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-pathology-uv-ips.html">Observation Results: pathology (IPS)</a></td>
             <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">Observation.status fixed value differs: IPS requires fixed value 'final' vs AU Core allows multiple values including 'final'.</td>
+            <td style="width: 25%;">IPS requires fixed value 'final'.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.subject.reference</td>
-            <td style="width: 25%;">Observation.subject.reference element minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.performer</td>
-            <td style="width: 25%;">Observation.performer minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
             <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Procedure-uv-ips.html">Procedure (IPS)</a></td>
             <td style="width: 25%;">Procedure.subject.reference</td>
-            <td style="width: 25%;">Procedure.subject.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Procedure.performed[x]</td>
-            <td style="width: 25%;">Procedure.performed[x] minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation - SH: tobacco use</a></td>
             <td style="width: 25%;">Observation.subject.reference</td>
-            <td style="width: 25%;">Observation.subject.reference minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code.coding</td>
@@ -339,7 +343,7 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - Specimen (IPS)
 
 #### US Core
-
+[US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/)
 This table provides detailed explanations for instances where AU Core profiles do not comply with the corresponding profiles from US Core.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -366,7 +370,7 @@ This table provides detailed explanations for instances where AU Core profiles d
             <td style="width: 25%;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result</a></td>
             <td style="width: 25%;">Encounter.type</td>
-            <td style="width: 25%;">Encounter.type minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">US Core requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
@@ -378,7 +382,7 @@ This table provides detailed explanations for instances where AU Core profiles d
             <td style="width: 25%;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location</a></td>
             <td style="width: 25%;">Location.name</td>
-            <td style="width: 25%;">Location.name minimum cardinalities differ: IPS requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">US Core requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
@@ -390,7 +394,7 @@ This table provides detailed explanations for instances where AU Core profiles d
             <td style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-organization.html">US Core Organization</a></td>
             <td style="width: 25%;">Organization.active</td>
-            <td style="width: 25%;">Organization.active minimum cardinalities differ: US Core requires minimum = 1 vs AU Core minimum = 0.</td>
+            <td style="width: 25%;">US Core requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
@@ -402,7 +406,7 @@ This table provides detailed explanations for instances where AU Core profiles d
             <td style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitioner.html">US Core Practitioner</a></td>
             <td style="width: 25%;">Practitioner.identifier</td>
-             <td style="width: 25%;">Practitioner.identifier minimum cardinalities differ: US Core requires minimum = 1 vs AU Core minimum = 0.</td>
+             <td style="width: 25%;">US Core requires minimum = 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
