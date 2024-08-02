@@ -6,14 +6,16 @@
   </meta>
   <status value="final"/>
   <category>
-    <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-      <valueCode value="masked"/>
-    </extension>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+      <code value="masked"/>
+    </coding>
   </category>
   <code>
-    <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-      <valueCode value="masked"/>
-    </extension>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+      <code value="masked"/>
+    </coding>
   </code>
   <subject>
     <reference value="Patient/ronny-irvine"/>
