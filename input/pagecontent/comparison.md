@@ -18,10 +18,14 @@ The table below provides a profile only comparison from AU Core to other impleme
 Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with International Patient Access, International Patient Summary, or US Core **MAY NOT** be compliant with AU Core.Future updates may include reverse comparisons and CapabilityStatement evaluations.
 
 Legend:
-- **Compliant**: An AU Core compliant resource meets all requirements of the compared profile. Flagged with a <img src="green_checkmark.svg.png" width="20"/>.
-- **Additional requirements**: An AU Core compliant resource is compatible, but additional changes may be needed to meet all requirements of the compared profile. Flagged with an <img src="orange_checkmark.svg.png" width="20"/>.
-- **Incompatible**: An AU Core compliant resource is incompatible with the compared profile. A resource cannot be compliant to both. Flagged with a <img src="cross_red_circle.svg.png" width="20"/>.
-- **No equivalent profile**: When AU Core profile has no equivalent in compared implementation guides, it is flagged with a <img src="minus_symbol.svg.png" width="20"/>.
+
+<img src="green_checkmark.svg.png" width="20"/> **Compliant**: An AU Core compliant resource meets all requirements of the compared profile.
+
+<img src="orange_checkmark.svg.png" width="20"/> **Additional requirements**: An AU Core compliant resource is compatible, but additional changes may be needed to meet all requirements of the compared profile.
+
+<img src="cross_red_circle.svg.png" width="20"/> **Incompatible**: An AU Core compliant resource is incompatible with the compared profile. A resource cannot be compliant to both.
+
+<img src="minus_symbol.svg.png" width="20"/> **No equivalent profile**: When AU Core profile has no equivalent in compared implementation guides.
 
 Where additional requirements are identified, more information is provided in the sections below.
 
@@ -194,6 +198,10 @@ AU Core is designed to be compatible with IPA, e.g. AU Core compliant data can b
     </tbody>
 </table>
 
+##### Missing Data
+
+##### Suppressed Data
+
 ##### Additional profiles
 This version of AU Core has no equivalent profile for the following IPA profiles:
 - IPA-DocumentReference
@@ -312,8 +320,12 @@ AU Core is designed to be compatible with IPS, meaning AU Core data can be used 
     </tbody>
 </table>
 
+##### Missing Data
+
+##### Suppressed Data
+
 ##### Additional profiles
-This version of AU Core has no equivalent profile for the following IPS profiles: 
+This version of AU Core has no equivalent profile for the following IPS profiles:
 - Bundle - IPS
 - Composition (IPS)
 - Device (IPS)
@@ -444,6 +456,10 @@ AU Core was developed with consideration of the REST API and profiles in the US 
         </tr>
     </tbody>
 </table>
+
+##### Missing Data
+
+##### Suppressed Data
 
 ##### Additional profiles 
 This version of AU Core has no equivalent profile for the following US Core profiles:
