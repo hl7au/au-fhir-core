@@ -1,10 +1,6 @@
-AU Core aligns with international and national standards. During its development, profiles from relevant FHIR implementation guides were reviewed to ensure alignment and support the adoption of this standard. These implementation guides include:
-- [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)
-- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/)
-- [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/)
-- [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/)
+AU Core is designed to align with both international and national standards. During its development, profiles from [International Patient Access (IPA) 1.0.0)](https://hl7.org/fhir/uv/ipa/STU1/), [International Patient Summary Implementation Guide (IPS) 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/) and [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/) were reviewed and considered to ensure compatibility. 
 
-This page compares AU Core with other key implementation guides.
+AU Core is designed to be compatible with IPA and IPS, meaning that AU Core compliant data can be accessed by an IPA conformant client or used to generate a patient summary that complies with the IPS standards. AU Core aligns with US Core where possible. 
 
 For more information on how AU Core relates to other implementation guides, see [Relationship with other IGs](relationship.html).
 
@@ -17,17 +13,15 @@ The table below provides a profile only comparison from AU Core to other impleme
 
 Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with International Patient Access, International Patient Summary, or US Core **MAY NOT** be compliant with AU Core.Future updates may include reverse comparisons and CapabilityStatement evaluations.
 
-Legend:
+**Legend:**
 
 <img src="green_checkmark.svg.png" width="20"/> **Compliant**: An AU Core compliant resource meets all requirements of the compared profile.
 
-<img src="orange_checkmark.svg.png" width="20"/> **Additional requirements**: An AU Core compliant resource is compatible, but additional changes may be needed to meet all requirements of the compared profile.
+<img src="orange_checkmark.svg.png" width="20"/> **Additional requirements**: An AU Core compliant resource is compatible, but additional changes may be needed to meet all requirements of the compared profile. Where additional requirements are identified, more information is provided in the sections below.
 
 <img src="cross_red_circle.svg.png" width="20"/> **Incompatible**: An AU Core compliant resource is incompatible with the compared profile. A resource cannot be compliant to both.
 
-<img src="minus_symbol.svg.png" width="20"/> **No equivalent profile**: When AU Core profile has no equivalent in compared implementation guides.
-
-Where additional requirements are identified, more information is provided in the sections below.
+<img src="minus_symbol.svg.png" width="20"/> **No equivalent profile**: No equivalent profile for comparison.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -113,7 +107,7 @@ Where additional requirements are identified, more information is provided in th
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/><img src="cross_red_circle.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
@@ -177,7 +171,7 @@ Where additional requirements are identified, more information is provided in th
 #### International Patient Access
 [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
 
-AU Core is designed to be compatible with IPA, e.g. AU Core compliant data can be accessed by an IPA conformant client. To achieve compliance with both AU Core and IPA, additional requirements may need to be met. These requirements are outlined below.
+The following IPA profile(s) contain incompatible requirements with the equivalent AU Core profile. Implementers are advised to note that substantial code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -200,10 +194,10 @@ AU Core is designed to be compatible with IPA, e.g. AU Core compliant data can b
 
 ##### Missing Data
 AU Core and IPA share a compatible approach to handling missing data through the use of the DataAbsentReason extension.
+An AU Core compliant resource meets all requirements of the compared profile.
 
 ##### Suppressed Data
-AU Core provides additional guidance for handling data suppression due to security or privacy reasons, using 'unknown' or 'masked' codes from the DataAbsentReason Code System based on the requester's access rights.
-This ensures AU Core resources with suppressed data remain compliant with IPA through its use of the DataAbsentReason extension for missing data.
+IPA does not contain any requirements on Suppressed Data.
 
 ##### Additional profiles
 This version of AU Core has no equivalent profile for the following IPA profiles:
@@ -213,7 +207,7 @@ This version of AU Core has no equivalent profile for the following IPA profiles
 #### International Patient Summary
 [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/) describes how to represent the International Patient Summary (IPS) using HL7 FHIR. An International Patient Summary  document is an electronic health record extract containing essential healthcare information about a subject of care.
 
-AU Core is designed to be compatible with IPS, meaning AU Core data can be used to create a patient summary that aligns with IPS standards. To achieve compliance with both AU Core and IPS, additional requirements may need to be met. These requirements are outlined below.
+The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -235,21 +229,25 @@ AU Core is designed to be compatible with IPS, meaning AU Core data can be used 
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
             <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
             <td style="width: 25%;">Condition.clinicalStatus</td>
-            <td style="width: 25%;">IPS requires minimum = 1.</td>
+            <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
             <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">IPS requires fixed value 'final'.</td>
+            <td style="width: 25%;">IPS requires value 'final'.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.value</td>
+            <td style="width: 25%;">IPS requires UCUM for coded quantity units.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
@@ -261,7 +259,7 @@ AU Core is designed to be compatible with IPS, meaning AU Core data can be used 
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Medication-uv-ips.html">Medication (IPS)</a></td>
             <td style="width: 25%;">Medication.ingredient.strength</td>
-            <td style="width: 25%;">IPS requires data type profile <a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Quantity-uv-ips.html">Quantity (IPS)</a>.</td>
+            <td style="width: 25%;">IPS requires UCUM for coded quantity units.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
@@ -273,7 +271,7 @@ AU Core is designed to be compatible with IPS, meaning AU Core data can be used 
             <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-laboratory-uv-ips.html">Observation Results: laboratory (IPS)</a></td>
             <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">IPS requires fixed value 'final'.</td>
+            <td style="width: 25%;">IPS requires value 'final'.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.subject.reference</td>
@@ -286,7 +284,7 @@ AU Core is designed to be compatible with IPS, meaning AU Core data can be used 
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-pathology-uv-ips.html">Observation Results: pathology (IPS)</a></td>
             <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">IPS requires fixed value 'final'.</td>
+            <td style="width: 25%;">IPS requires value 'final'.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.subject.reference</td>
@@ -314,11 +312,11 @@ AU Core is designed to be compatible with IPS, meaning AU Core data can be used 
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">IPS requires LOINC 72166-2.</td>
+            <td style="width: 25%;">IPS requires LOINC code 72166-2.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]</td>
-            <td style="width: 25%;">IPS has required binding to <a href="https://hl7.org/fhir/uv/ips/STU1.1/ValueSet-current-smoking-status-uv-ips.html">Current Smoking Status - IPS</a>.</td>
+            <td style="width: 25%;">IPS requires value from <a href="https://hl7.org/fhir/uv/ips/STU1.1/ValueSet-current-smoking-status-uv-ips.html">Current Smoking Status - IPS</a>.</td>
         </tr>
     </tbody>
 </table>
@@ -327,8 +325,7 @@ AU Core is designed to be compatible with IPS, meaning AU Core data can be used 
 AU Core and IPS share a compatible approach to handling missing data through the use of the DataAbsentReason extension.
 
 ##### Suppressed Data
-AU Core provides additional guidance for handling data suppression due to security or privacy reasons, using 'unknown' or 'masked' codes from the DataAbsentReason Code System based on the requester's access rights.
-This ensures AU Core resources with suppressed data remain compliant with IPS through its use of the DataAbsentReason extension for missing data.
+IPS does not contain any requirements on Suppressed Data.
 
 ##### Additional profiles
 This version of AU Core has no equivalent profile for the following IPS profiles:
@@ -351,7 +348,7 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 #### US Core
 [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/) serves as the foundation for FHIR implementation guides in the US Realm. It establishes the minimum constraints on FHIR resources to define US Core Profiles, specifying the required elements, extensions, vocabularies, and value sets, as well as their usage. It also outlines the minimum FHIR RESTful interactions needed to access patient data for each US Core Profile.
 
-AU Core was developed with consideration of the REST API and profiles in the US Core Implementation Guide, ensuring compatibility where possible. To achieve compliance with both AU Core and US Core, additional requirements may need to be met.T hese requirements are outlined below.
+The following US Core profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -378,11 +375,11 @@ AU Core was developed with consideration of the REST API and profiles in the US 
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core Diagnostic Result Observation</a></td>
             <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result</a></td>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">US Core has an extensible binding to <a href="https://hl7.org/fhir/R4/valueset-observation-codes.html">LOINC Codes</a>.</td>
+            <td style="width: 25%;">US Core extensibly binds to <a href="https://hl7.org/fhir/R4/valueset-observation-codes.html">LOINC Codes</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]</td>
-            <td style="width: 25%;">US Core requires the use of UCUM for coded quantity units.</td>
+            <td style="width: 25%;">US Core requires UCUM for coded quantity units.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
@@ -394,7 +391,7 @@ AU Core was developed with consideration of the REST API and profiles in the US 
             <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-immunization.html">US Core Immunization</a></td>
             <td style="width: 25%;">Immunization.vaccineCode</td>
-            <td style="width: 25%;">US Core uses an extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.6/expansion">CVX Vaccines Administered Vaccine Set</a> (not in AU medicines terminology).</td>
+            <td style="width: 25%;">US Core extensibly binds to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.6/expansion">CVX Vaccines Administered Vaccine Set</a> (not in AU medicines terminology).</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
@@ -406,13 +403,13 @@ AU Core was developed with consideration of the REST API and profiles in the US 
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location</a></td>
             <td style="width: 25%;">Medication.code</td>
-            <td style="width: 25%;">US Core uses an extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>, which is not in AU medicines terminology.</td>
+            <td style="width: 25%;">US Core extensibly binds to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>, which is not in AU medicines terminology.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location</a></td>
             <td style="width: 25%;">MedicationRequest.code</td>
-            <td style="width: 25%;">US Core uses an extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>, which is not in AU medicines terminology.</td>
+            <td style="width: 25%;">US Core extensibly binds to  <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>, which is not in AU medicines terminology.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
@@ -421,44 +418,52 @@ AU Core was developed with consideration of the REST API and profiles in the US 
             <td style="width: 25%;">US Core requires minimum of 1.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
             <td style="width: 25%;">Patient.identifier</td>
-            <td style="width: 25%;">US Core requires all identifiers to be valid (have system and value).</td>
+            <td style="width: 25%;">US Core requires all identifiers to have system and value.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Patient.name</td>
+            <td style="width: 25%;">US Core requires all names to have family name or given name or Data Absent Reason extension."</td>
         </tr>
         <tr>
             <td style="width: 25%;">Gender identity</td>
-            <td style="width: 25%;">US Core defines an US Core Gender Identity extension. AU Core uses the International Gender Identity extension.</td>
+            <td style="width: 25%;">US Core requires US Core Gender Identity extension. AU Core uses the International Gender Identity extension.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.telecom</td>
-            <td style="width: 25%;">US Core requires minimum of 1 system and value.</td>
+            <td style="width: 25%;">US Core requires all telecom to have system and value.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitioner.html">US Core Practitioner</a></td>
             <td style="width: 25%;">Practitioner.identifier</td>
-             <td style="width: 25%;">US Core requires minimum of 1, and requires all practitioner identifiers to have system and value.</td>
+             <td style="width: 25%;">US Core requires minimum of 1, and all identifiers to have system and value.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole</a></td>
             <td style="width: 25%;">PractitionerRole.telecom, PractitionerRole.endpoint</td>
-            <td style="width: 25%;">US Core has constraint pd-1, which mandates that resources SHALL have contact information or a reference to an Endpoint.</td>
+            <td style="width: 25%;">US Core requires telecom or endpoint to be present (pd-1).</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">PractitionerRole.telecom</td>
+            <td style="width: 25%;">US Core requires all telecom to have system and value.</td>
         </tr>
         <tr>
             <td rowspan="3" rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a></td>
             <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">US Core allows 'final' or 'entered-in-error'.</td>
+            <td style="width: 25%;">US Core requires status of 'final' or 'entered-in-error'.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">US Core has an extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.6/expansion">Smoking Status Type</a>.</td>
+            <td style="width: 25%;">US Core extensibly binds to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.6/expansion">Smoking Status Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]:valueCodeableConcept</td>
-            <td style="width: 25%;">US Core has an extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.3/expansion">Smoking status comprehensive</a>.</td>
+            <td style="width: 25%;">US Core extensibly binds to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.3/expansion">Smoking status comprehensive</a>.</td>
         </tr>
     </tbody>
 </table>
@@ -467,8 +472,7 @@ AU Core was developed with consideration of the REST API and profiles in the US 
 AU Core and US Core share a compatible approach to handling missing data through the use of the DataAbsentReason extension.
 
 ##### Suppressed Data
-AU Core provides additional guidance for handling data suppression due to security or privacy reasons, using 'unknown' or 'masked' codes from the DataAbsentReason Code System based on the requester's access rights.
-This ensures AU Core resources with suppressed data remain compliant with IPS through its use of the DataAbsentReason extension for missing data.
+US Core does not contain any requirements on Suppressed Data.
 
 ##### Additional profiles 
 This version of AU Core has no equivalent profile for the following US Core profiles:
