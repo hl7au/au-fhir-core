@@ -12,34 +12,4 @@
     </coding>
     <text value="Simvastatin 40 MG Disintegrating Oral Tablet"/>
   </code>
-  <form>
-    <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="263011000036100"/>
-      <display value="orally disintegrating tablet"/>
-    </coding>
-  </form>
-  <ingredient>
-    <itemCodeableConcept>
-      <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="2588011000036103"/>
-        <display value="simvastatin"/>
-      </coding>
-    </itemCodeableConcept>
-    <strength>
-      <numerator>
-        <value value="40"/>
-        <unit value="mg"/>
-        <system value="http://unitsofmeasure.org"/>
-        <code value="mg"/>
-      </numerator>
-      <denominator>
-        <value value="1"/>
-        <unit value="tablet"/>
-        <system value="http://unitsofmeasure.org"/>
-        <code value="{tablet}"/>
-      </denominator>
-    </strength>
-  </ingredient>
 </Medication>

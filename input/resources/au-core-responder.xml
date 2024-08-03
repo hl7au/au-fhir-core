@@ -2138,7 +2138,7 @@
 <blockquote>
 <div>
 <p>The responder <strong>SHALL</strong> support the Patient resource, the AU Core profile, and the conformance expectations for the Patient resource.</p>
-<p>responders <strong>SHALL</strong> support the capability for a requester application to access the patient record using any of the following API calls:</p>
+<p>Responders <strong>SHALL</strong> support the capability for a requester application to access the patient record using any of the following API calls:</p>
 <p>
 <code>GET [url]/Patient/[id]</code>
 </p>
@@ -2148,7 +2148,7 @@
 <p>
 <code>GET [url]/Patient?identifier=[identifier]</code>
 </p>
-<p>responders are not required to support any additional search parameters, and requesters <strong>SHOULD NOT</strong> expect responders to do so.</p>
+<p>Responders are not required to support any additional search parameters, and requesters <strong>SHOULD NOT</strong> expect responders to do so.</p>
 </div>
 </blockquote>
 </div>
@@ -2406,6 +2406,7 @@
 <blockquote>
 <div>
 <p>If the responder supports the Practitioner resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Practitioner resource.</p>
+<p>Servers that support only the Practitioner resource <strong>SHALL</strong> provide implementation specific guidance how to access a provider’s location and contact information using only the Practitioner resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2519,6 +2520,7 @@
 <blockquote>
 <div>
 <p>If the responder supports the PractitionerRole resource, the responder <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the PractitionerRole resource.</p>
+<p>Even though AU Core Profiles allow both PractitionerRole and Practitioner to be referenced, because PractitionerRole supplies a provider’s location, contact information, and reference to the Practitioner, it <strong>SHOULD</strong> be referenced instead of the Practitioner resource.</p>
 </div>
 </blockquote>
 </div>
@@ -4117,7 +4119,7 @@
 </extension>
 <type value="Patient"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
-<documentation value="responders **SHALL** support the capability for a requester application to access the patient record using any of the following API calls:&#xA;&#xA;```GET [url]/Patient/[id]```&#xA;&#xA;```GET [url]/Patient?_id=[id]```&#xA;&#xA;```GET [url]/Patient?identifier=[identifier]```&#xA;&#xA;responders are not required to support any additional search parameters, and requesters **SHOULD NOT** expect responders to do so.&#xA;&#xA;The responder **SHALL** support the AU Core profile and **SHALL** support the conformance expectations for the Patient resource."/>
+<documentation value="Responders **SHALL** support the capability for a requester application to access the patient record using any of the following API calls:&#xA;&#xA;```GET [url]/Patient/[id]```&#xA;&#xA;```GET [url]/Patient?_id=[id]```&#xA;&#xA;```GET [url]/Patient?identifier=[identifier]```&#xA;&#xA;Responders are not required to support any additional search parameters, and requesters **SHOULD NOT** expect responders to do so.&#xA;&#xA;The responder **SHALL** support the AU Core profile and **SHALL** support the conformance expectations for the Patient resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4247,7 +4249,7 @@
 </extension>
 <type value="Practitioner"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-<documentation value="If the responder supports the Practitioner resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the Practitioner resource."/>
+<documentation value="If the responder supports the Practitioner resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the Practitioner resource.&#xa;&#xa;Servers that support only the Practitioner resource **SHALL** provide implementation specific guidance how to access a provider’s location and contact information using only the Practitioner resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4334,7 +4336,7 @@
 </extension>
 <type value="PractitionerRole"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-<documentation value="If the responder supports the PractitionerRole resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the PractitionerRole resource."/>
+<documentation value="If the responder supports the PractitionerRole resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the PractitionerRole resource.&#xA;&#xA;Even though AU Core Profiles allow both PractitionerRole and Practitioner to be referenced, because PractitionerRole supplies a provider’s location, contact information, and reference to the Practitioner, it **SHOULD** be referenced instead of the Practitioner resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
