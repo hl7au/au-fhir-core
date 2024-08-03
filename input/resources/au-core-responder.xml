@@ -2138,7 +2138,7 @@
 <blockquote>
 <div>
 <p>The responder <strong>SHALL</strong> support the Patient resource, the AU Core profile, and the conformance expectations for the Patient resource.</p>
-<p>responders <strong>SHALL</strong> support the capability for a requester application to access the patient record using any of the following API calls:</p>
+<p>Responders <strong>SHALL</strong> support the capability for a requester application to access the patient record using any of the following API calls:</p>
 <p>
 <code>GET [url]/Patient/[id]</code>
 </p>
@@ -2148,7 +2148,7 @@
 <p>
 <code>GET [url]/Patient?identifier=[identifier]</code>
 </p>
-<p>responders are not required to support any additional search parameters, and requesters <strong>SHOULD NOT</strong> expect responders to do so.</p>
+<p>Responders are not required to support any additional search parameters, and requesters <strong>SHOULD NOT</strong> expect responders to do so.</p>
 </div>
 </blockquote>
 </div>
@@ -4117,7 +4117,7 @@
 </extension>
 <type value="Patient"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
-<documentation value="responders **SHALL** support the capability for a requester application to access the patient record using any of the following API calls:&#xA;&#xA;```GET [url]/Patient/[id]```&#xA;&#xA;```GET [url]/Patient?_id=[id]```&#xA;&#xA;```GET [url]/Patient?identifier=[identifier]```&#xA;&#xA;responders are not required to support any additional search parameters, and requesters **SHOULD NOT** expect responders to do so.&#xA;&#xA;The responder **SHALL** support the AU Core profile and **SHALL** support the conformance expectations for the Patient resource."/>
+<documentation value="Responders **SHALL** support the capability for a requester application to access the patient record using any of the following API calls:&#xA;&#xA;```GET [url]/Patient/[id]```&#xA;&#xA;```GET [url]/Patient?_id=[id]```&#xA;&#xA;```GET [url]/Patient?identifier=[identifier]```&#xA;&#xA;Responders are not required to support any additional search parameters, and requesters **SHOULD NOT** expect responders to do so.&#xA;&#xA;The responder **SHALL** support the AU Core profile and **SHALL** support the conformance expectations for the Patient resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
