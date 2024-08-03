@@ -39,9 +39,9 @@
         <extension url="type">
             <valueCodeableConcept>
                 <coding>
-                    <system value="http://loinc.org"/>
-                    <code value="76689-9"/>
-                    <display value="Sex Assigned At Birth"/>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="1515311000168102"/>
+                    <display value="Biological sex at birth"/>
                 </coding>
             </valueCodeableConcept>
         </extension>

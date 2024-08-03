@@ -738,8 +738,8 @@
     <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
     <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
     <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
-    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -953,8 +953,8 @@
       <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
       <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
       <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-      <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
-      <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
+      <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+      <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
     </div>
   </td>
 </tr>
@@ -1173,12 +1173,10 @@
   <div>
     <p>The requester <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.        
-    </p>
-    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.        
-    </p>
-    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
-    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
+    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -1599,12 +1597,10 @@
   <div>
     <p>The requester <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
-    </p>
-    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>,      <code>lt</code>,      <code>ge</code>,      <code>le</code>.        
-    </p>
-    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
-    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
+    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -1869,12 +1865,10 @@
   <div>
     <p>The requester <strong>SHALL</strong> provide a value precise to the second + time offset.</p>
     <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
-    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.        
-    </p>
-    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.        
-    </p>
-    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
-    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
+    <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p> 
+    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -2244,9 +2238,9 @@
     <p>The requester <strong>SHALL</strong> provide a value precise to the day offset.</p>
     <p>The responder <strong>SHALL</strong> support a value precise to the day offset.</p>
     <p>The requester <strong>SHOULD</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code> and if <code>multipleAnd</code> is supported, the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code> <strong>SHALL</strong> be supported.</p>
     <p>The responder <strong>SHOULD</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code> and if <code>multipleAnd</code> is supported, the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code> <strong>SHALL</strong> be supported.</p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -2785,8 +2779,8 @@
     <p>The responder <strong>SHALL</strong> support a value precise to the second + time offset.</p>
     <p>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
     <p>The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
-    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
-    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>.</p>
+    <p>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
+    <p>The responder <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</p>
   </div>
 </td>
 </tr>
@@ -3151,7 +3145,7 @@
 <name value="onset-date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Condition-onset-date"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`."/>
+<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3283,7 +3277,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`."/>
+<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3413,7 +3407,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`."/>
+<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3729,7 +3723,7 @@
 <name value="authoredon"/>
 <definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-authoredon"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`."/>
+<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -3958,7 +3952,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`."/>
+<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4192,7 +4186,7 @@
 <name value="birthdate"/>
 <definition value="http://hl7.org/fhir/SearchParameter/individual-birthdate"/>
 <type value="date"/>
-<documentation value="The requester **SHALL** provide a value precise to the *day*.&#xa;&#xa;The responder **SHALL** support a value a value precise to the *day*.&#xa;&#xa;The requester **SHOULD** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd` and if `multipleAnd` is supported, the search comparators `gt`, `lt`, `ge`, `le` **SHALL** be supported.&#xa;&#xa;The responder **SHOULD** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd` and if `multipleAnd` is supported, the search comparators `gt`, `lt`, `ge`, `le` **SHALL** be supported."/>
+<documentation value="The requester **SHALL** provide a value precise to the *day*.&#xa;&#xa;The responder **SHALL** support a value a value precise to the *day*.&#xa;&#xa;The requester **SHOULD** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4552,7 +4546,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`."/>
+<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
