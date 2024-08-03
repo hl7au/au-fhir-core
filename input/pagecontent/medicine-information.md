@@ -30,14 +30,13 @@ In addition to the medication code, the majority of use cases support exchange o
 
 The guidance for how to support coded or text identification of medicinal products is summarised below: 
 
-1.  For *coded* support of a medication, information required for identification of a medication (i.e. brand name, generic name, form and strength) can be provided as a single code using code.coding, if the code contains that information. 
-- [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) can optionally be used to explicitly declare the type of product identification in the resource (i.e. MedicationAdministration, MedicationStatement, MedicationDispense, MedicationRequest, Medication): 
-  - generic item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
-  - branded item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
-- Manufacturer information is not typically included in a medication code. See point 2 or 3 for options to support coded or non-coded inclusion of manufacturer details.
+1. For *coded* support of a medication, the preferred method is to use a single medication code that captures all information required for identification of the medication in code.coding.
+  - AMT contains both generic or branded medication concepts. Depending on the concept level selected, an AMT concept can convey the following detail: brand name, generic (ingredient) name, item form, strength, pack size, container type.
+  - AMT concepts are defined by relationships which detail the properties or components that identify a medication. Detailed information about the medication such as the brand name, generic (ingredient) name, form and strength can be retrieve via terminology [lookup operation](https://build.fhir.org/terminology-service.html#lookup).
+  - When there is a requirement to explicitly state the the type of medicinal coding (e.g. branded product with strength or form), [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) can optionally be used in the resource (i.e. MedicationAdministration, MedicationStatement, MedicationDispense, MedicationRequest, Medication):  
+    - generic item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
+    - branded item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
 
-    
-    
     Example: Medication with single code identifying brand name, item form and strength.
     ~~~
     {
@@ -88,11 +87,9 @@ The guidance for how to support coded or text identification of medicinal produc
       - generic name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
    - If the resource is a Medication resource:
       - form and strength may be separately provided in `Medication.form`, `Medication.ingredient.itemCodeableConcept` and `Medication.ingredient.strength` when they are not implicit in `Medication.code`
-      - manufacturer = `Medication.manufacturer.identifier`
+      
 
-
-
-    Example: Medication with coded brand name, generic name, manufacturer, item form and strength.
+    Example: Medication with coded brand name, generic name, item form and strength.
     ~~~
     {
       "resourceType": "Medication",
@@ -178,7 +175,6 @@ The guidance for how to support coded or text identification of medicinal produc
         - brand name = `Medication.extension` [Medication Brand Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
         - generic name = `Medication.extension` [Medication Generic Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html)
         - item form and strength = `Medication.code.text`
-        - manufacturer = `Medication.manufacturer.display`
   
     Example: Medication with text only brand name, generic name, item form and strength.
     ~~~
@@ -195,6 +191,44 @@ The guidance for how to support coded or text identification of medicinal produc
            "valueString": "Benpen"
          }
        ],
+       "code": {
+         "text": "Benpen 3 g powder for injection, 1 vial"
+       }
+    }
+    ~~~
+
+4. Manufacturer information is not typically included in a medication code. Support for manufacturer information is provided using a Medication resource:
+  - *coded* support: manufacturer = `Medication.manufacturer.identifier`
+  - *non-coded* support: manufacturer = `Medication.manufacturer.display`
+    
+    Example: Medication with coded manufacturer.
+    ~~~
+    {
+      "resourceType": "Medication",
+        ...
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "32328011000036106",
+              "display": "Benpen 3 g powder for injection, 1 vial"
+            }
+          ]
+        },
+        "manufacturer": {
+          "identifier": {
+            "system": "http://pbs.gov.au/code/manufacturer",
+            "value": "CS"
+          }
+        }
+    }
+    ~~~
+
+    Example: Medication with non-coded manufacturer.
+    ~~~
+    {
+      "resourceType": "Medication",
+       ...
        "code": {
          "text": "Benpen 3 g powder for injection, 1 vial"
        },
