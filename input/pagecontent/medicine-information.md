@@ -5,16 +5,18 @@ The FHIR standard defines the following resources for exchanging medicine inform
 - [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html)
 - [MedicationStatement](http://hl7.org/fhir/R4/medicationstatement.html)
 
-AU Core defines the profiles:
-- [AU Core Medication](StructureDefinition-au-core-medication.html) is profiled to support medicinal product identification in an Australian healthcare context.
-- [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html) (with AU Core Medication) to support prescription, ordering, and ePrescribing use cases.
+AU Core defines the following profiles:
+- [AU Core Medication](StructureDefinition-au-core-medication.html): to support medicinal product identification in an Australian healthcare context.
+- [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html) (with AU Core Medication): profiled to support prescription, ordering, and ePrescribing use cases.
 
 It is anticipated that future releases of AU Core will define AU Core profiles of:
-- MedicationAdministration (with AU Core Medication) are used to support medication chart and other administration use cases.
-- MedicationDispense (with AU Core Medication) are used to support dispense records and medication management use cases.
-- MedicationStatement (with AU Core Medication) are used to support summary statements of medicine use.
+- MedicationAdministration (with AU Core Medication) to support medication chart and other administration use cases.
+- MedicationDispense (with AU Core Medication) to support dispense records and medication management use cases.
+- MedicationStatement (with AU Core Medication) to support summary statements of medicine use.
 
-**Medicinal Product Identification**
+The guidance below addresses how medicinal product identification can be structured in FHIR conformant to AU Core.
+
+### Medicinal Product Identification
 
 For extemporaneous medications, it is expected the medication code is the primary mechanism to identify a medicine. In this case, a text only list of ingredients may be supplied or may be coded using a medicines terminology.
 
@@ -24,21 +26,70 @@ Australian Medicines Terminology (AMT) is the national terminology for identific
 The AMT is published monthly to include new items on the Australian Register of Therapeutic Goods from the TGA, as well as items listed on the Pharmaceutical Benefits Scheme. 
 The AMT is published as part of SNOMED CT-AU (Australian edition of SNOMED CT) and can be downloaded in a variety of formats from the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).
 
-In addition to the medication code, the majority of use cases support exchange of structured medicine information as separate data elements covering brand name, generic name, item form and strength, and manufacturer.
+In addition to the medication code, the majority of use cases support exchange of structured medicine information as separate data elements covering brand name, generic name, item form and strength, and manufacturer. These data elements may be supported as coded, or text, and systems are likely to use a combination of coded and text elements when constructing a Medication resource. 
 
-These data elements may be supported as coded, or text, and systems are likely to use a combination of coded and text elements when constructing a Medication resource. The guidance for how to support coded or text is summarised below: 
+The guidance for how to support coded or text identification of medicinal products is summarised below: 
 
-1. For *coded* support for brand name, generic name, manufacturer, item form and strength:
-   - Fully coded support is provided using code.coding with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) extension in the resource (i.e. MedicationAdministration, MedicationStatement, MedicationDispense, MedicationRequest, Medication):
+1. For *coded* support of a medication, the preferred method is to use a single medication code that captures all information required for identification of the medication in code.coding.
+  - AMT contains both generic or branded medication concepts. Depending on the concept level selected, an AMT concept can convey the following detail: brand name, generic (ingredient) name, item form, strength, pack size, container type.
+  - AMT concepts are defined by relationships which detail the properties or components that identify a medication. Detailed information about the medication such as the brand name, generic (ingredient) name, form and strength can be retrieve via terminology [lookup operation](https://build.fhir.org/terminology-service.html#lookup).
+  - When there is a requirement to explicitly state the the type of medicinal coding (e.g. branded product with strength or form), [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) can optionally be used in the resource (i.e. MedicationAdministration, MedicationStatement, MedicationDispense, MedicationRequest, Medication):  
+    - generic item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
+    - branded item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
+
+    Example: Medication with single code identifying brand name, item form and strength.
+    ~~~
+    {
+      "resourceType": "Medication",
+       ...
+      "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "32328011000036106",
+              "display": "Benpen 3 g powder for injection, 1 vial"
+            },
+          ]
+        }
+    }
+    ~~~
+
+    Example: Medication with single code identifying generic name, item form and strength, with identification of product type.
+    ~~~
+    {
+      "resourceType": "Medication",
+       ...
+      "code": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "code": "UPDSF",
+                    "display": "Unbranded product with strengths and form"
+                  }
+                }
+              ],
+              "system": "http://snomed.info/sct", 
+              "code": "32686011000036108",
+              "display": "benzylpenicillin 3 g injection, vial"
+            },
+          ]
+        }
+    }
+    ~~~
+
+2. For *coded* support of brand name, generic name, manufacturer, item form and strength, where the individual components required for medication identification are separately coded:
+   - Coded support for the following can be provided using code.coding with an optional [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) to explicitly declare the type of product identification in the resource (i.e. MedicationAdministration, MedicationStatement, MedicationDispense, MedicationRequest, Medication), for example: 
       - brand name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
       - generic name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
-      - generic item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
-      - branded item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
    - If the resource is a Medication resource:
-      - form and strength are also provided in `Medication.form`, `Medication.ingredient.itemCodeableConcept` and `Medication.ingredient.strength`
-      - manufacturer = `Medication.manufacturer.identifier`
+      - form and strength may be separately provided in `Medication.form`, `Medication.ingredient.itemCodeableConcept` and `Medication.ingredient.strength` when they are not implicit in `Medication.code`
+      
 
-    Example: Medication with coded brand name, generic name, manufacturer, item form and strength.
+    Example: Medication with coded brand name, generic name, item form and strength.
     ~~~
     {
       "resourceType": "Medication",
@@ -74,37 +125,7 @@ These data elements may be supported as coded, or text, and systems are likely t
               "system": "http://snomed.info/sct",
               "code": "3539011000036105",
               "display": "Benpen"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
-                  "valueCoding": {
-                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
-                    "code": "UPDSF",
-                    "display": "Unbranded product with strengths and form"
-                  }
-                }
-              ],
-              "system": "http://snomed.info/sct",
-              "code": "32753011000036104",
-              "display": "benzylpenicillin 3 g injection, 1 vial"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
-                  "valueCoding": {
-                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
-                    "code": "BPDSF",
-                    "display": "Branded product with strengths and form"
-                  }
-                }
-              ],
-              "system": "http://snomed.info/sct",
-              "code": "32328011000036106",
-              "display": "Benpen 3 g powder for injection, 1 vial"
-            }
+            }, 
           ]
         },
         "manufacturer": {
@@ -118,7 +139,7 @@ These data elements may be supported as coded, or text, and systems are likely t
             {
               "system": "http://snomed.info/sct",
               "code": "129011000036109",
-              "display": "injection"
+              "display": "Injection"
             }
           ],
           "text": "Injection"
@@ -129,8 +150,8 @@ These data elements may be supported as coded, or text, and systems are likely t
               "coding": [
                 {
                   "system": "http://snomed.info/sct",
-                  "code": "1849011000036104",
-                  "display": "benzylpenicillin"
+                  "code": "323389000",
+                  "display": "Benzylpenicillin"
                 }
               ]
             },
@@ -149,12 +170,11 @@ These data elements may be supported as coded, or text, and systems are likely t
     }
     ~~~
 
-1.  For *non-coded* support for brand name, generic name, manufacturer, item form and strength:
-    - Fully non-coded support is provided using the Medication resource
+3.  For *non-coded* support for brand name, generic name, manufacturer, item form and strength:
+    - Non-coded support is provided using the Medication resource
         - brand name = `Medication.extension` [Medication Brand Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
         - generic name = `Medication.extension` [Medication Generic Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html)
         - item form and strength = `Medication.code.text`
-        - manufacturer = `Medication.manufacturer.display`
   
     Example: Medication with text only brand name, generic name, item form and strength.
     ~~~
@@ -171,6 +191,44 @@ These data elements may be supported as coded, or text, and systems are likely t
            "valueString": "Benpen"
          }
        ],
+       "code": {
+         "text": "Benpen 3 g powder for injection, 1 vial"
+       }
+    }
+    ~~~
+
+4. Manufacturer information is not typically included in a medication code. Support for manufacturer information is provided using a Medication resource:
+  - *coded* support: manufacturer = `Medication.manufacturer.identifier`
+  - *non-coded* support: manufacturer = `Medication.manufacturer.display`
+    
+    Example: Medication with coded manufacturer.
+    ~~~
+    {
+      "resourceType": "Medication",
+        ...
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "32328011000036106",
+              "display": "Benpen 3 g powder for injection, 1 vial"
+            }
+          ]
+        },
+        "manufacturer": {
+          "identifier": {
+            "system": "http://pbs.gov.au/code/manufacturer",
+            "value": "CS"
+          }
+        }
+    }
+    ~~~
+
+    Example: Medication with non-coded manufacturer.
+    ~~~
+    {
+      "resourceType": "Medication",
+       ...
        "code": {
          "text": "Benpen 3 g powder for injection, 1 vial"
        },
