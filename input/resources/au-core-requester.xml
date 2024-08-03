@@ -2397,6 +2397,7 @@
 <blockquote>
 <div>
 <p>If the requester supports the Practitioner resource, the requester <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the Practitioner resource.</p>
+<p>Servers that support only the Practitioner resource <strong>SHALL</strong> provide implementation specific guidance how to access a provider’s location and contact information using only the Practitioner resource.</p>
 </div>
 </blockquote>
 </div>
@@ -2510,6 +2511,7 @@
 <blockquote>
 <div>
 <p>If the requester supports the PractitionerRole resource, the requester <strong>SHALL</strong> support the AU Core profile and the conformance expectations for the PractitionerRole resource.</p>
+<p>Even though AU Core Profiles allow both PractitionerRole and Practitioner to be referenced, because PractitionerRole supplies a provider’s location, contact information, and reference to the Practitioner, it <strong>SHOULD</strong> be referenced instead of the Practitioner resource.</p>
 </div>
 </blockquote>
 </div>
@@ -4248,7 +4250,7 @@
 </extension>
 <type value="Practitioner"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-<documentation value="If the requester supports the Practitioner resource, the requester **SHALL** support the AU Core profile and the conformance expectations for the Practitioner resource."/>
+<documentation value="If the requester supports the Practitioner resource, the requester **SHALL** support the AU Core profile and the conformance expectations for the Practitioner resource.&#xa;&#xa;Servers that support only the Practitioner resource **SHALL** provide implementation specific guidance how to access a provider’s location and contact information using only the Practitioner resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -4335,7 +4337,7 @@
 </extension>
 <type value="PractitionerRole"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-<documentation value="If the requester supports the PractitionerRole resource, the requester **SHALL** support the AU Core profile and the conformance expectations for the PractitionerRole resource."/>
+<documentation value="If the requester supports the PractitionerRole resource, the requester **SHALL** support the AU Core profile and the conformance expectations for the PractitionerRole resource.&#xA;&#xA;Even though AU Core Profiles allow both PractitionerRole and Practitioner to be referenced, because PractitionerRole supplies a provider’s location, contact information, and reference to the Practitioner, it **SHOULD** be referenced instead of the Practitioner resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>

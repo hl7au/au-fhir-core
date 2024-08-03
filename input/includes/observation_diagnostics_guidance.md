@@ -6,4 +6,7 @@
 - The Observation resource can represent a result using a single value in `Observation.value`, or can represent a set of results using either `Observation.component.value` or `Observation.hasMember`.
   - Although all are marked as *Must Support*, responders are not required to support all choices, but they **SHALL** support *at least one* of these elements
   - A requester **SHALL** support all elements (`Observation.value`, `Observation.component.value`, `Observation.hasMember`)
-- `Observation.identifier` may contain the same identifier as in the order or report connecting the resources that are related to a single request fulfilment workflow
+  - for further guidance, see the [Observation Grouping](https://hl7.org/fhir/R4/observation.html#obsgrouping) section in FHIR Specification.
+- `Observation.identifier` may contain the same identifier as in the order or report connecting the resources that are related to a single request fulfilment workflow.
+- Source system identifiers that identify the business process (order ids and reporting identifiers) **MAY** be included as [AU Local Order Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localorderidentifier.html) and [AU Local Report Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localreportidentifier.html) to support workflow and deduplication of Observation resources.
+  - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
