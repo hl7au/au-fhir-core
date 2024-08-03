@@ -175,7 +175,7 @@ Where additional requirements are identified, more information is provided in th
 </table>
 
 #### International Patient Access
-[International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API. 
+[International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
 
 AU Core is designed to be compatible with IPA, e.g. AU Core compliant data can be accessed by an IPA conformant client. To achieve compliance with both AU Core and IPA, additional requirements may need to be met. These requirements are outlined below.
 
@@ -199,8 +199,11 @@ AU Core is designed to be compatible with IPA, e.g. AU Core compliant data can b
 </table>
 
 ##### Missing Data
+AU Core and IPA share a compatible approach to handling missing data through the use of the DataAbsentReason extension.
 
 ##### Suppressed Data
+AU Core provides additional guidance for handling data suppression due to security or privacy reasons, using 'unknown' or 'masked' codes from the DataAbsentReason Code System based on the requester's access rights.
+This ensures AU Core resources with suppressed data remain compliant with IPA through its use of the DataAbsentReason extension for missing data.
 
 ##### Additional profiles
 This version of AU Core has no equivalent profile for the following IPA profiles:
@@ -321,8 +324,11 @@ AU Core is designed to be compatible with IPS, meaning AU Core data can be used 
 </table>
 
 ##### Missing Data
+AU Core and IPS share a compatible approach to handling missing data through the use of the DataAbsentReason extension.
 
 ##### Suppressed Data
+AU Core provides additional guidance for handling data suppression due to security or privacy reasons, using 'unknown' or 'masked' codes from the DataAbsentReason Code System based on the requester's access rights.
+This ensures AU Core resources with suppressed data remain compliant with IPS through its use of the DataAbsentReason extension for missing data.
 
 ##### Additional profiles
 This version of AU Core has no equivalent profile for the following IPS profiles:
@@ -458,8 +464,11 @@ AU Core was developed with consideration of the REST API and profiles in the US 
 </table>
 
 ##### Missing Data
+AU Core and US Core share a compatible approach to handling missing data through the use of the DataAbsentReason extension.
 
 ##### Suppressed Data
+AU Core provides additional guidance for handling data suppression due to security or privacy reasons, using 'unknown' or 'masked' codes from the DataAbsentReason Code System based on the requester's access rights.
+This ensures AU Core resources with suppressed data remain compliant with IPS through its use of the DataAbsentReason extension for missing data.
 
 ##### Additional profiles 
 This version of AU Core has no equivalent profile for the following US Core profiles:
