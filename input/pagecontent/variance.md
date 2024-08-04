@@ -10,14 +10,11 @@ The Variance Statement undergoes review and assessment by the FHIR Work Group as
 
 
 ### Variance from AU Base
-This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 4.2.1-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-base/)).
+This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 4.2.2-ballot ([4.2.2-ballot](https://hl7.org.au/fhir/core/4.2.2-ballot/)).
 
 #### Additionally Profiled Resources
 
 This implementation guide profiles the following resources that are not profiled in AU Base: 
-
-For FHIR implementation guides that introduce profiles not present in AU Base or AU Core Implementation Guides, the HL7 FHIRWG recommends listing all of these profiles. This will assists in identifying  potential profiles for the FHIRWG to develop further.
-
 
 - Extension
   - [AU Core Sex Assigned At Birth](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-rsg-sexassignedab.html) profiles core FHIR extension [Person Recorded Sex Or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender)   

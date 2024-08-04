@@ -1,6 +1,6 @@
 == Suppressed Messages ==
 
-# HL7 core warnings
+# === HL7 core warnings
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
@@ -13,3 +13,77 @@ The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced
 # ===  These errors are pending an update to the IG publisher for resolution; currently, there is no timeline for their correction. They are related by R4 and R5 value sets having different values, but using an R4 values returns the same error. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20error.20with.20ActorDefinition.20in.20R4.20IG ====
 ERROR: ActorDefinition/au-core-actor-requester: ActorDefinition.type: The value provided ('system') was not found in the value set 'Example Scenario Actor Type' (http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'system' in the ValueSet 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0'; The provided code '#system' was not found in the value set 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0')
 ERROR: ActorDefinition/au-core-actor-responder: ActorDefinition.type: The value provided ('system') was not found in the value set 'Example Scenario Actor Type' (http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'system' in the ValueSet 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0'; The provided code '#system' was not found in the value set 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0')
+
+# ===  These errors are pending an update to the IG publisher for resolution; currently, there is no timeline for their correction. This is an issue with generated narrative content by the IG publisher. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Invalid.20XHTML.20element.20name.20in.20generated.20output ====
+ERROR: Condition/ckd: Condition.text.div: Invalid element name inside a paragraph in the XHTML ('ul')
+
+# ================================================================================
+# ===  WARNINGS ===
+# ===========================================================-=====================
+
+# Expected recommendation does not apply
+Best Practice Recommendation: In general, all observations should have a performer
+
+# Expected multiple matches for open datatype choice
+WARNING: Organization/bobrester-medical-center: Organization.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Organization/bobrester-medical-center: Organization.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+WARNING: Organization/mitchells-hill-audiology: Organization.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Organization/mitchells-hill-audiology: Organization.identifier[1]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Organization/mitchells-hill-audiology: Organization.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+WARNING: Organization/murrabit-hospital: Organization.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Organization/murrabit-hospital: Organization.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+WARNING: Patient/banks-mia-leanne: Patient.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ihi, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Patient/banks-mia-leanne: Patient.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+WARNING: Patient/banks-mia-leanne: Patient: Constraint failed: inv-pat-3: 'Recorded sex or gender type shall be a member of the AU Recorded Sex or Gender Type value set if any codes within that value set can apply' (defined in http://hl7.org.au/fhir/StructureDefinition/au-patient)
+WARNING: Patient/bennelong-anne: Patient.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Patient/bennelong-anne: Patient.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+WARNING: Patient/howe-deangelo: Patient.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ihi, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Patient/howe-deangelo: Patient.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+WARNING: Patient/ronny-irvine: Patient.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-dvanumber, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Practitioner/chau-fryer: Practitioner.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpii, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Practitioner/darleen-mackay: Practitioner.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpii, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Practitioner/sallie-sutherland: Practitioner.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpii, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: PractitionerRole/cardiologist-sallie-sutherland: PractitionerRole.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicareprovidernumber, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: PractitionerRole/nephrologist-darleen-mackay: PractitionerRole.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: PractitionerRole/surgeon-chau-fryer: PractitionerRole.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicareprovidernumber, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Patient/wang-li: Patient.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+WARNING: PractitionerRole/bobrester-bob-gp: PractitionerRole.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Patient/wang-li: Patient.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicalrecordnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Location/bobrester-medical-center: Location.address: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+WARNING: Location/murrabit-hospital: Location.address: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+
+# === This occurs because the resource is actively used while the overall IG is still in draft status.
+The resource status 'active' and the standards status 'draft' are not consistent
+
+# Expected unavailable terminology
+WARNING: Medication/2active-ingredients: Medication.code: Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
+WARNING: Medication/2active-ingredients: Medication.code.coding[0]: Resolved system http://pbs.gov.au/code/item (v4.2.2-ci-build), but the definition doesn't include any codes, so the code has not been validated
+
+# === 
+WARNING: MedicationRequest/paracetamol-codeine: MedicationRequest.requester: A Reference without an actual reference or identifier should have a display
+
+# ================================================================================
+# ===  INFORMATION ===
+# ===========================================================-=====================
+
+# === These examples demonstrate use of additional codes or identifiers not defined in AU Core or AU Base profiles ===
+INFORMATION: PractitionerRole/nephrologist-darleen-mackay: PractitionerRole.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Patient/ronny-irvine: Patient.birthDate.extension[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Patient/wang-li: Patient.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: PractitionerRole/bobrester-bob-gp: PractitionerRole.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/pulserate-1: Observation.code.coding[2]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/smokingstatus-current-smoker: Observation.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Medication/simvastatin: Medication.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/bloodpressure-1: Observation.component[0].code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/bloodpressure-1: Observation.component[1].code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/bloodpressure-data-absent: Observation.component[0].code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/bloodpressure-data-absent: Observation.component[1].code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# === Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to fully express intended capabilities: see FHIR-12419  ===
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# Expected unavailable terminology
+INFORMATION: Medication/2active-ingredients: Medication.code.coding[0].system: A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
+WARNING: Medication/2active-ingredients: Medication.code.coding[0]: Resolved system http://pbs.gov.au/code/item (v4.2.2-ci-build), but the definition doesn't include any codes, so the code has not been validated
+
+

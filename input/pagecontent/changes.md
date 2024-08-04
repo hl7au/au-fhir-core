@@ -1,9 +1,9 @@
-###  Version = TBD-ballot
-- Expected Publication date: August 2024
-- Expected Publication status: Ballot
+###  Version = 1.0.0-ballot
+- Publication date: 5 August 2024
+- Publication status: Ballot
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version 0.3.0-ballot to the upcoming August ballot.
+This change log documents the significant updates and resolutions implemented from version 0.3.0-ballot to 1.0.0-ballot.
 
 #### Changes in this version
 - Added AUCDI element mapping Date/Time of Measurement and Date/Time of Observation, and added future consideration note for Last Updated
