@@ -124,7 +124,7 @@ The table below provides a profile only comparison from AU Core to profiles in k
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
@@ -372,13 +372,13 @@ The following US Core profile(s) contain additional requirements. Implementers a
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns</a></td>
-            <td style="width: 25%;">Category.code</td>
-            <td style="width: 25%;">US Core requires a value from <a href="https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-problem-or-health-concern.html">US Core Problem or Health Concern</a>.</td>
+            <td style="width: 25%;">Condition.category</td>
+            <td style="width: 25%;">US Core requires category of 'problem-list-item' or 'health-concern'.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a></td>
-            <td style="width: 25%;">Category.code</td>
-            <td style="width: 25%;">US Core requires 'encounter-diagnosis' value.</td>
+            <td style="width: 25%;">Condition.category</td>
+            <td style="width: 25%;">US Core requires category of 'encounter-diagnosis'.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core Diagnostic Result Observation</a></td>
@@ -421,13 +421,23 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-organization.html">US Core Organization</a></td>
             <td style="width: 25%;">Organization.active</td>
             <td style="width: 25%;">US Core requires minimum of 1.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a></td>
+            <td style="width: 25%;">Observation.code</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-laboratory-test-codes.html">US Core Laboratory Test Codes</a>. </td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.referenceRange</td>
+            <td style="width: 25%;">US Core requires UCUM for coded quantity units.</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
             <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
             <td style="width: 25%;">Patient.identifier</td>
             <td style="width: 25%;">US Core requires all identifiers to have system and value.</td>
@@ -445,13 +455,13 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">US Core requires all telecom to have system and value.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitioner.html">US Core Practitioner</a></td>
             <td style="width: 25%;">Practitioner.identifier</td>
              <td style="width: 25%;">US Core requires minimum of 1, and all identifiers to have system and value.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
             <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole</a></td>
             <td style="width: 25%;">PractitionerRole.telecom, PractitionerRole.endpoint</td>
             <td style="width: 25%;">US Core requires telecom or endpoint to be present (pd-1).</td>
