@@ -1,17 +1,20 @@
-AU Core is designed to ensure that core digital health and administrative data can be recorded, updated, searched, and retrieved efficiently, promoting interoperability and adoption across healthcare systems. By aligning with key FHIR implementation guides such [International Patient Access (IPA) 1.0.0)](https://hl7.org/fhir/uv/ipa/STU1/), [International Patient Summary Implementation Guide (IPS) 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/) and [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/), AU Core ensures consistency with both international and national requirements.
+AU Core aligns to, and leverages, international standards and other national standards, in particular:
+- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/)
+- [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/)
+- [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/)
 
-Aligning data standards is crucial for enabling seamless data exchange across different healthcare systems and jurisdictions. It ensures that AU Core compliant systems can integrate smoothly with global healthcare frameworks, allowing consistent and accurate data sharing.
+Relationships between AU Core, AUCDI, and the above key implementation guides is described in [Relationship with other IGs](relationship.html). 
 
-The comparison highlights where AU Core aligns with these national and international guides and identifies additional requirements necessary to meet their standards. 
+Corresponding profiles, conformance requirements, and capability statements included in the key FHIR implementation guides were reviewed and considered during AU Core's development to ensure alignment, and to facilitate adoption of, this standard.
 
-For more information on how AU Core relates to other implementation guides, see [Relationship with other IGs](relationship.html).
+The below comparison evaluates AU Core conformance requirements with the key implementation guides identifying where compliance with AU Core satisfies the expectations established by the referenced implementation guide. 
+
+At this time only profile comparison is available. Future versions of AU Core will compare capability statements.
 
 ### Profile comparison
-The profile comparison highlights how AU Core profiles align with other key FHIR implementation guides, such as International Patient Access (IPA), International Patient Summary (IPS), and US Core.  
+As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. 
 
-A resource can comply with multiple implementation guides, such as AU Core, other national implementation guides, or international implementation guides.Compliance requires meeting specific requirements and constraints, including mandatory elements, cardinality, data types, terminology bindings, and extensions.
-
-The comparison table shows where a resource compliant with AU Core also meets the requirements of profiles in International Patient Access, International Patient Summary, or US Core. Note that compliance in the reverse direction is not guaranteed, i.e. a resources compliant with International Patient Access, International Patient Summary, or US Core **MAY NOT** be compliant with AU Core. Future updates may include reverse comparisons and CapabilityStatement evaluations.
+The table below provides a profile only comparison from AU Core to profiles in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an International Patient Access profile **MAY NOT** be compliant with AU Core.
 
 **Legend:**
 
@@ -19,7 +22,7 @@ The comparison table shows where a resource compliant with AU Core also meets th
 
 <img src="orange_checkmark.svg.png" width="20"/> **Additional requirements**: An AU Core compliant resource is compatible, but additional changes may be needed to meet all requirements of the compared profile. Where additional requirements are identified, more information is provided in the sections below.
 
-<img src="cross_red_circle.svg.png" width="20"/> **Incompatible**: An AU Core compliant resource is incompatible with the compared profile. A resource cannot be compliant to both.
+<img src="cross_red_circle.svg.png" width="20"/> **Incompatible**: An AU Core compliant resource is incompatible with the compared profile. A resource cannot be compliant to both. Where incompatible requirements are identified, more information is provided in the sections below.
 
 <img src="minus_symbol.svg.png" width="20"/> **No equivalent profile**: No equivalent profile for comparison.
 
@@ -171,6 +174,7 @@ The comparison table shows where a resource compliant with AU Core also meets th
 #### International Patient Access
 [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
 
+##### Incompatible requirements
 The following IPA profile(s) contain incompatible requirements with the equivalent AU Core profile. Implementers are advised to note that substantial code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -193,10 +197,10 @@ The following IPA profile(s) contain incompatible requirements with the equivale
 </table>
 
 ##### Missing Data
-An AU Core compliant resource meets the requirements for Missing Data in the compared IPA profile(s).
+AU Core compliant resources are compliant with IPA requirements for Missing Data.
 
 ##### Suppressed Data
-IPA does not contain any requirements on Suppressed Data.
+IPA does not have Suppressed Data requirements.
 
 ##### Additional profiles
 This version of AU Core has no equivalent profile for the following IPA profiles:
@@ -206,6 +210,7 @@ This version of AU Core has no equivalent profile for the following IPA profiles
 #### International Patient Summary
 [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/) describes how to represent the International Patient Summary (IPS) using HL7 FHIR. An International Patient Summary  document is an electronic health record extract containing essential healthcare information about a subject of care.
 
+##### Incompatible requirements
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -319,16 +324,16 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]</td>
-            <td style="width: 25%;">IPS requires value from <a href="https://hl7.org/fhir/uv/ips/STU1.1/ValueSet-current-smoking-status-uv-ips.html">Current Smoking Status - IPS</a>.</td>
+            <td style="width: 25%;">IPS required binding to <a href="https://hl7.org/fhir/uv/ips/STU1.1/ValueSet-current-smoking-status-uv-ips.html">Current Smoking Status - IPS</a>.</td>
         </tr>
     </tbody>
 </table>
 
 ##### Missing Data
-An AU Core compliant resource meets the requirements for Missing Data in the compared IPS profile(s).
+AU Core compliant resources are compliant with IPS requirements for Missing Data.
 
 ##### Suppressed Data
-IPS does not contain any requirements on Suppressed Data.
+IPS does not have Suppressed Data requirements.
 
 ##### Additional profiles
 This version of AU Core has no equivalent profile for the following IPS profiles:
@@ -351,6 +356,7 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 #### US Core
 [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/) serves as the foundation for FHIR implementation guides in the US Realm. It establishes the minimum constraints on FHIR resources to define US Core Profiles, specifying the required elements, extensions, vocabularies, and value sets, as well as their usage. It also outlines the minimum FHIR RESTful interactions needed to access patient data for each US Core Profile.
 
+##### Incompatible requirements
 The following US Core profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -367,7 +373,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns</a></td>
             <td style="width: 25%;">Category.code</td>
-            <td style="width: 25%;">US Core requires a value from <a href="https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-problem-or-health-concern.html">US Core Problem or Health Concern</a> value set.</td>
+            <td style="width: 25%;">US Core requires a value from <a href="https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-problem-or-health-concern.html">US Core Problem or Health Concern</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a></td>
@@ -394,7 +400,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-immunization.html">US Core Immunization</a></td>
             <td style="width: 25%;">Immunization.vaccineCode</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.6/expansion">CVX Vaccines Administered Vaccine Set</a> (not in AU medicines terminology).</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.6/expansion">CVX Vaccines Administered Vaccine Set</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
@@ -406,13 +412,13 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location</a></td>
             <td style="width: 25%;">Medication.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>, which is not in AU medicines terminology.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location</a></td>
             <td style="width: 25%;">MedicationRequest.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>, which is not in AU medicines terminology.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
@@ -428,11 +434,11 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Patient.name</td>
-            <td style="width: 25%;">US Core requires all name to have family or given or Data Absent Reason extension."</td>
+            <td style="width: 25%;">US Core requires all name to have family or given or Data Absent Reason extension.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Gender identity</td>
-            <td style="width: 25%;">US Core requires US Core Gender Identity extension. AU Core uses the International Gender Identity extension.</td>
+            <td style="width: 25%;">US Core requires US Core Gender Identity extension.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.telecom</td>
@@ -472,10 +478,10 @@ The following US Core profile(s) contain additional requirements. Implementers a
 </table>
 
 ##### Missing Data
-An AU Core compliant resource meets the requirements for Missing Data in the compared US Core profile(s).
+AU Core compliant resources are compliant with US Core requirements for Missing Data.
 
 ##### Suppressed Data
-US Core does not contain any requirements on Suppressed Data.
+US Core does not include requirements for Suppressed Data.
 
 ##### Additional profiles 
 This version of AU Core has no equivalent profile for the following US Core profiles:
