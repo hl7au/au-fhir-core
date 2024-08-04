@@ -656,7 +656,7 @@
 				<reference value="PractitionerRole/nephrologist-darleen-mackay"/>
 			</reference>
 			<name value="PractitionerRole - Nephrologist"/>
-			<description value="Shows an example of a nephrologist for the *AU Core PractitionerRole* profile, demonstrating the local employee number as the role identifier and with Practitioner reference."/>
+			<description value="Shows an example of a nephrologist for the *AU Core PractitionerRole* profile, using a local employee number as the role identifier and including a refernce to the Practitioner."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<!--PROCEDURE EXAMPLES-->
@@ -682,7 +682,7 @@
 				<reference value="Specimen/nasoswab"/>
 			</reference>
 			<name value="Specimen - Naso swab (COVID test)"/>
-			<description value="Shows a naso swab specimen referenced by the [COVID Pathology Result (Not detected)](href=Observation-pathresult-covid-1.html) example for the *AU Core Pathology Result Observation* profile. Patient: Mr. Li Wang."/>
+			<description value="Shows a naso swab specimen referenced by the [COVID Pathology Result (Not detected)](Observation-pathresult-covid-1.html) example for the *AU Core Pathology Result Observation* profile. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
 		</resource>
 		<!--PAGES-->
