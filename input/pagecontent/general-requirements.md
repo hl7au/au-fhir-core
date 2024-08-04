@@ -145,7 +145,7 @@ The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot
 
 
 ##### Must Support - Primitive Elements
-Primitive elements are single elements with a primitive value. If a primitive element is labelled as *Must Support*, an: 
+Primitive elements are single elements with a primitive value. If a primitive element is labelled as *Must Support*: 
 - AU Core Responders **SHALL** correctly populate the element if a value is known. 
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid value.
 
@@ -156,7 +156,7 @@ For example, the AU Core Organization Profile `name` element is a primitive stri
 ##### Must Support - Complex Elements
 Complex elements are composed of primitive and/or other complex elements. Elements may have additional rules defined in the profile that also apply, e.g. terminology binding, or invariants. 
 
-If a complex element is labelled as *Must Support*, an:
+If a complex element is labelled as *Must Support*:
 - AU Core Responders **SHALL** correctly populate the element with at least one of the sub-element values.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid sub-elements.
 
@@ -358,7 +358,7 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
 ### Suppressed Data
 In some circumstances, specific pieces of data may be hidden due to security or privacy reasons. 
 
-When an element definition is optional (minimum cardinality = 0), including elements labelled *Must Support*, an
+When an element definition is optional (minimum cardinality = 0), including elements labelled *Must Support*:
 - AU Core Responder **SHALL NOT** populate the element in the resource when a value is suppressed.  
 
 When an element definition is mandatory (minimum cardinality > 0), 
