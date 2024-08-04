@@ -262,7 +262,7 @@
 				<reference value="Condition/condition-masked"/>
 			</reference>
 			<name value="Condition - Data suppressed for category and code"/>
-			<description value="Shows an example of a condition with suppressed data category (category and code) for the *AU Core Condition* profile. Patient: Anne Bennelong."/>
+			<description value="Shows an example of a Condition with suppressed data (category and code) where the data requester has access rights to know that data is suppressed for the *AU Core Condition* profile. Patient: Anne Bennelong."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
 		<resource>
@@ -404,7 +404,7 @@
 				<reference value="Observation/bloodpressure-data-absent"/>
 			</reference>
 			<name value="Observation - Blood Pressure (data absent for diastolic)"/>
-			<description value="Shows an example of a blood pressure with missing diastolic measurement for the *AU Core Blood Pressure* profile. Patient: Ronny Lawrence Irvine."/>
+			<description value="Shows an example of a blood pressure observation with systolic measurement and unknown dystolic measurement for the *AU Core Blood Pressure* profile. Patient: Ronny Lawrence Irvine."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
 		</resource>
 		<resource>
@@ -468,7 +468,7 @@
 				<reference value="Observation/lipid-ldl-1"/>
 			</reference>
 			<name value="Observation - LDL"/>
-			<description value="Shown an example of an LDL result for the *AU Core Pathology Result Observation* profile. Patient: Mia Leanne Banks."/>
+			<description value="Shows an example of an LDL result for the *AU Core Pathology Result Observation* profile. Patient: Mia Leanne Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -492,7 +492,7 @@
 				<reference value="Observation/pathresult-covid-1"/>
 			</reference>
 			<name value="Observation - COVID Pathology Result (Not detected)"/>
-			<description value="Shows an example of a COVID Pathology Result (with an HPI-O scoped identifier) for the *AU Core Pathology Result Observation* profile. Patient: Mr. Li Wang."/>
+			<description value="Shows an example of a COVID-19 PCR test result indicating 'Not detected' for the *AU Core Diagnostic Result - Pathology* profile, with notes on test accreditation and evaluation status. Patient: Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -500,7 +500,7 @@
 				<reference value="Observation/resprate-1"/>
 			</reference>
 			<name value="Observation - Respiration rate"/>
-			<description value="Shows an example of an observation of respiration rate for the *AU Core Respiration Rate* profile. Patient: Mia Leanne Banks."/>
+			<description value="Shows an example of a respiration rate observation for the *AU Core Respiration Rate* profile. Patient: Mia Leanne Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-resprate"/>
 		</resource>
 		<resource>
@@ -582,7 +582,7 @@
 				<reference value="Patient/banks-mia-leanne"/>
 			</reference>
 			<name value="Patient - Mia Leanne Banks"/>
-			<description value="Shows an example for the *AU Core Patient* example that demonstrates the adopted extensions for sex and gender."/>
+			<description value="Shows an example of patient who has an IHI, identifies as female, whose sex at birth is recorded as female, identifies as she/her/her/hers/herself, and has multiple contact details for the *AU Core Patient* profile."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<resource>
@@ -607,7 +607,7 @@
 				<reference value="Practitioner/sallie-sutherland"/>
 			</reference>
 			<name value="Practitioner - Dr. Sallie Sutherland"/>
-			<description value="Shows an exaple of a practitioner with HPI-I for the *AU Core Practitioner* profile."/>
+			<description value="Shows an example of a practitioner with HPI-I for the *AU Core Practitioner* profile."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
@@ -615,7 +615,7 @@
 				<reference value="Practitioner/chau-fryer"/>
 			</reference>
 			<name value="Practitioner - Dr. Chau FRYER"/>
-			<description value="Shows an example of practitioner with HPI-I for the *AU Core Practitioner* profile."/>
+			<description value="Shows an example of a practitioner with HPI-I for the *AU Core Practitioner* profile."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
@@ -623,7 +623,7 @@
 				<reference value="Practitioner/darleen-mackay"/>
 			</reference>
 			<name value="Practitioner - Darleen MACKAY"/>
-			<description value="Shows an example of practitioner with HPI-I example for the *AU Core Practitioner* profile."/>
+			<description value="Shows an example of a practitioner with HPI-I example for the *AU Core Practitioner* profile."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<!--PRACTITIONERROLE EXAMPLES-->
@@ -632,7 +632,7 @@
 				<reference value="PractitionerRole/bobrester-bob-gp"/>
 			</reference>
 			<name value="PractitionerRole - General practitioner"/>
-			<description value="Shows an example of a General practitioner for the *AU Core PractitionerRole* profile with practitioner and organisation as references."/>
+			<description value="Shows an example of a general practitioner for the *AU Core PractitionerRole* profile with practitioner and organisation as references."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
@@ -682,7 +682,7 @@
 				<reference value="Specimen/nasoswab"/>
 			</reference>
 			<name value="Specimen - Naso swab (COVID test)"/>
-			<description value="Shows a naso swab specimen referenced by the *AU Core Pathology Result Observation* profile. Patient: Mr. Li Wang."/>
+			<description value="Shows a naso swab specimen referenced by the <a href=Observation-pathresult-covid-1.html>COVID Pathology Result (Not detected)</a> example for the *AU Core Pathology Result Observation* profile. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
 		</resource>
 		<!--PAGES-->
