@@ -371,7 +371,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
     <tbody>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
             <td style="width: 25%;">Condition.category</td>
             <td style="width: 25%;">US Core requires category of 'problem-list-item' or 'health-concern'.</td>
         </tr>
@@ -382,7 +382,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core Diagnostic Result Observation</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result Profile</a></td>
             <td style="width: 25%;">Observation.code</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/R4/valueset-observation-codes.html">LOINC Codes</a>.</td>
         </tr>
@@ -392,37 +392,37 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
             <td style="width: 25%;">Encounter.type</td>
             <td style="width: 25%;">US Core requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-immunization.html">US Core Immunization</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-immunization.html">US Core Immunization Profile</a></td>
             <td style="width: 25%;">Immunization.vaccineCode</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.6/expansion">CVX Vaccines Administered Vaccine Set</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location Profile</a></td>
             <td style="width: 25%;">Location.name</td>
             <td style="width: 25%;">US Core requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-medication.html">US Core Medication Profile</a></td>
             <td style="width: 25%;">Medication.code</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location</a></td>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
             <td style="width: 25%;">MedicationRequest.code</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-organization.html">US Core Organization</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td>
             <td style="width: 25%;">Organization.active</td>
             <td style="width: 25%;">US Core requires minimum of 1.</td>
         </tr>
@@ -438,7 +438,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></td>
             <td style="width: 25%;">Patient.identifier</td>
             <td style="width: 25%;">US Core requires all identifiers to have system and value.</td>
         </tr>
@@ -456,13 +456,13 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitioner.html">US Core Practitioner</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></td>
             <td style="width: 25%;">Practitioner.identifier</td>
              <td style="width: 25%;">US Core requires minimum of 1, and all identifiers to have system and value.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole Profile</a></td>
             <td style="width: 25%;">PractitionerRole.telecom, PractitionerRole.endpoint</td>
             <td style="width: 25%;">US Core requires telecom or endpoint to be present (pd-1).</td>
         </tr>
@@ -495,28 +495,25 @@ US Core does not include requirements for Suppressed Data.
 
 ##### Additional profiles 
 This version of AU Core has no equivalent profile for the following US Core profiles:
-- US Core CarePlan
-- US Core CareTeam 
-- US Core Coverage 
-- US Core Implantable Device 
-- US Core DiagnosticReport Profile for Laboratory Results Reporting
-- US Core DiagnosticReport Profile for Report and Note Exchange
-- US Core DocumentReference 
-- US Core Goal Profile
-- US Core MedicationDispense 
-- US Core Average Blood Pressure 
-- US Core Care Experience Preference 
-- US Core Observation Clinical Result 
-- US Core Laboratory Result Observation 
-- US Core Observation Occupation 
-- US Core Observation Pregnancy Intent 
-- US Core Observation Pregnancy Status 
-- US Core Observation Screening Assessment 
-- US Core Observation Sexual Orientation 
-- US Core Simple Observation 
-- US Core Smoking Status Observation 
-- US Core Treatment Intervention Preference 
-- US Core Provenance 
-- US Core QuestionnaireResponse 
-- US Core ServiceRequest 
-- US Core Specimen
+- US Core CarePlan Profile
+- US Core CareTeam Profile
+- US Core Coverage Profile
+- US Core Implantable Device Profile
+- US Core DiagnosticReport Profile for Laboratory Results Reporting Profile
+- US Core DiagnosticReport Profile for Report and Note Exchange Profile
+- US Core DocumentReference Profile
+- US Core Goal Profile Profile
+- US Core MedicationDispense Profile
+- US Core Average Blood Pressure Profile
+- US Core Care Experience Preference Profile
+- US Core Observation Occupation Profile
+- US Core Observation Pregnancy Intent Profile
+- US Core Observation Pregnancy Status Profile
+- US Core Observation Screening Assessment Profile
+- US Core Observation Sexual Orientation Profile
+- US Core Simple Observation Profile
+- US Core Treatment Intervention Preference Profile
+- US Core Provenance Profile
+- US Core QuestionnaireResponse Profile  
+- US Core ServiceRequest Profile 
+- US Core Specimen Profile
