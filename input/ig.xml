@@ -492,7 +492,7 @@
 				<reference value="Observation/pathresult-covid-1"/>
 			</reference>
 			<name value="Observation - COVID Pathology Result (Not detected)"/>
-			<description value="Shows an example of a COVID-19 PCR test result indicating 'Not detected' for the *AU Core Diagnostic Result - Pathology* profile, with notes on test accreditation and evaluation status. Patient: Li Wang."/>
+			<description value="Shows an example of a COVID-19 PCR test result indicating 'Not detected' with notes on test accreditation and evaluation status for the *AU Core Diagnostic Result - Pathology* profile. Patient: Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -524,7 +524,7 @@
 				<reference value="Observation/observation-masked"/>
 			</reference>
 			<name value="Observation - Data suppressed for category, code, effective[x] and value[x]"/>
-			<description value="Shows an example of suppressed data (category, code, effectivePeriod and valueQuantity) for the *AU Core Diagnostic Result Observation* profile. Patient: Ronny Lawrence Irvine."/>
+			<description value="Shows an example of an observation with suppressed data (category, code, effectivePeriod, and valueQuantity) where the data requester has access rights to know that data is suppressed for the  *AU Core Diagnostic Result Observation* profile. Patient: Ronny Lawrence Irvine."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult"/>
 		</resource>
 		<!--ORGANIZATION EXAMPLES-->
@@ -682,7 +682,7 @@
 				<reference value="Specimen/nasoswab"/>
 			</reference>
 			<name value="Specimen - Naso swab (COVID test)"/>
-			<description value="Shows a naso swab specimen referenced by the [COVID Pathology Result (Not detected)](Observation-pathresult-covid-1.html) example for the *AU Core Pathology Result Observation* profile. Patient: Mr. Li Wang."/>
+			<description value="Shows a naso swab specimen referenced by the [Observation - COVID Pathology Result (Not detected)](Observation-pathresult-covid-1.html) example for the *AU Core Pathology Result Observation* profile. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
 		</resource>
 		<!--PAGES-->
