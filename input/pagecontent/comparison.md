@@ -200,7 +200,7 @@ The following IPA profile(s) contain incompatible requirements with the equivale
 AU Core compliant resources are compliant with IPA requirements for Missing Data.
 
 ##### Suppressed Data
-IPA does not have Suppressed Data requirements.
+IPA does not include requirements for Suppressed Data.
 
 ##### Additional profiles
 This version of AU Core has no equivalent profile for the following IPA profiles:
@@ -210,7 +210,7 @@ This version of AU Core has no equivalent profile for the following IPA profiles
 #### International Patient Summary
 [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/) describes how to represent the International Patient Summary (IPS) using HL7 FHIR. An International Patient Summary  document is an electronic health record extract containing essential healthcare information about a subject of care.
 
-##### Incompatible requirements
+##### Additional requirements
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -333,7 +333,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
 AU Core compliant resources are compliant with IPS requirements for Missing Data.
 
 ##### Suppressed Data
-IPS does not have Suppressed Data requirements.
+IPS does not include requirements for Suppressed Data.
 
 ##### Additional profiles
 This version of AU Core has no equivalent profile for the following IPS profiles:
@@ -356,7 +356,7 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 #### US Core
 [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/) serves as the foundation for FHIR implementation guides in the US Realm. It establishes the minimum constraints on FHIR resources to define US Core Profiles, specifying the required elements, extensions, vocabularies, and value sets, as well as their usage. It also outlines the minimum FHIR RESTful interactions needed to access patient data for each US Core Profile.
 
-##### Incompatible requirements
+##### Additional requirements
 The following US Core profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
