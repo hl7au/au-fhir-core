@@ -16,8 +16,5 @@ This implementation guide has no variance (i.e. fully compliant) from AU Base FH
 
 This implementation guide profiles the following resources that are not profiled in AU Base: 
 
-For FHIR implementation guides that introduce profiles not present in AU Base or AU Core Implementation Guides, the HL7 FHIRWG recommends listing all of these profiles. This will assists in identifying  potential profiles for the FHIRWG to develop further.
-
-
 - Extension
   - [AU Core Sex Assigned At Birth](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-rsg-sexassignedab.html) profiles core FHIR extension [Person Recorded Sex Or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender)   
