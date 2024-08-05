@@ -158,7 +158,7 @@ Complex elements are composed of primitive and/or other complex elements. Elemen
 
 If a complex element is labelled as *Must Support*:
 - AU Core Responders **SHALL** correctly populate the element with at least one of the sub-element values if the value is known.
-- AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid sub-element value.
+- AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid sub-element.
 
 For example, the AU Core MedicationRequest Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
 - AU Core Responders **SHALL** correctly populate a value in any valid `MedicationRequest.note` sub-element if a value is known e.g. `MedicationRequest.note.text`.
