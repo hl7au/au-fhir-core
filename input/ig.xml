@@ -35,7 +35,7 @@
 	<dependsOn id="aubaser4">
 		<uri value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"/>
 		<packageId value="hl7.fhir.au.base"/>
-		<version value="current"/>
+		<version value="4.2.2-ballot"/>
 	</dependsOn>
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
@@ -814,7 +814,7 @@
 		<!-- releaselabel should be the ballot status for HL7-published IGs. -->
 		<parameter>
 			<code value="releaselabel"/>
-			<value value="R1"/>
+			<value value="Ballot"/>
 		</parameter>
 		<parameter>
 			<code value="find-other-resources"/>
