@@ -1,5 +1,5 @@
-###  Version = 1.0.0-ballot
-- Publication date: 5 August 2024
+###  Release 1.0.0-ballot
+- Publication date: 2024-08-05
 - Publication status: Ballot
 - Based on FHIR version: 4.0.1
 
