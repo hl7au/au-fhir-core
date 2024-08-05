@@ -1,5 +1,5 @@
-###  Version = TBD-ballot
-- Expected Publication date: August 2024
+###  Release TBD-ballot
+- Expected Publication date: 2024-08
 - Expected Publication status: Ballot
 - Based on FHIR version: 4.0.1
 
