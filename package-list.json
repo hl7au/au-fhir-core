@@ -16,7 +16,7 @@
     {
       "version" : "0.4.0-preview",
       "path" : "http://hl7.org.au/fhir/core/0.4.0-preview",
-      "status" : "qa-preview",
+      "status" : "preview",
       "sequence" : "AU Core R1",
       "fhirversion" : "4.0.1",
       "date" : "2024-06-20",
@@ -37,7 +37,7 @@
       "desc" : "This snapshot is published for the November 2023 Connectathon",
       "path" : "http://hl7.org.au/fhir/core/0.2.2-preview",
       "fhirversion" : "4.0.1",
-      "status" : "qa-preview",
+      "status" : "preview",
       "sequence" : "AU Core R1"
     },
     {

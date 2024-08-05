@@ -1,5 +1,4 @@
-# .github/workflows/dispatch.yml
-name: Dispatch Event from au-fhir-core
+name: Dispatch Event from au-fhir-core to publications repo
 
 on:
   push:
