@@ -116,4 +116,7 @@ jobs:
         path: ./output.zip
   
     - name: Upload Core Webroot to S3
-      run: aws s3 cp ./webroot/fhir/core s3://hl7au-fhir-ig/fhir/core --recursive --only-show-errors #core/${{ steps.get_tag.outputs.tag }}
+      run: |
+        aws s3 cp ./webroot/fhir/core s3://hl7au-fhir-ig/fhir/core --recursive --only-show-errors #core/${{ steps.get_tag.outputs.tag }}
+        aws s3 cp ./webroot/fhir/package-feed.xml s3://hl7au-fhir-ig/fhir/package-feed.aucore.xml
+        aws s3 cp ./webroot/fhir/publication-feed.xml s3://hl7au-fhir-ig/fhir/publication-feed.aucore.xml
