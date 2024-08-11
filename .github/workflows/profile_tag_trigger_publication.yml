@@ -79,10 +79,10 @@ jobs:
         FULL_URL="$URL/core/package-list.json"
         curl --output webroot/fhir/core/package-list.json --url $FULL_URL
 
-     name: Download package-feed.xml
+    - name: Download package-feed.xml
       run: |
-        curl --output webroot/fhir/package-feed.xml --url https://hl7.org.au/fhir/package-feed.xml
-        curl --output webroot/fhir/package-feed.bak.xml --url https://hl7.org.au/fhir/package-feed.xml
+          curl --output webroot/fhir/package-feed.xml --url https://hl7.org.au/fhir/package-feed.xml
+          curl --output webroot/fhir/package-feed.bak.xml --url https://hl7.org.au/fhir/package-feed.xml
 
     - name: Download publication-feed.xml
       run: |
