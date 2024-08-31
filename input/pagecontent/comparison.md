@@ -202,6 +202,41 @@ AU Core compliant resources are compliant with IPA requirements for Missing Data
 ##### Suppressed Data
 IPA does not include requirements for Suppressed Data.
 
+##### Additional Must Support elements
+The following IPA profile(s) contain additional Must Support elements. Implementers are advised to note that some code changes may be required to support these profiles.
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 25%;">AU Core</th>
+            <th style="width: 25%;">International Patient Access 1.0.0</th>
+            <th style="width: 25%;">Element</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-immunization.html">IPA-Immunization</a></td>
+            <td style="width: 25%;">Immunization.statusReason</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
+            <td style="width: 25%;">MedicationRequest.reported[x]</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationRequest.dosageInstruction.text</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
+            <td style="width: 25%;">Patient.active</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Patient.link</td>
+        </tr>
+    </tbody>
+</table>
+
 ##### Additional profiles
 This version of AU Core has no equivalent profile for the following IPA profiles:
 - IPA-DocumentReference
@@ -335,6 +370,107 @@ AU Core compliant resources are compliant with IPS requirements for Missing Data
 ##### Suppressed Data
 IPS does not include requirements for Suppressed Data.
 
+##### Additional Must Support elements
+The following IPS profile(s) contain additional Must Support elements. Implementers are advised to note that some code changes may be required to support these profiles.
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 25%;">AU Core</th>
+            <th style="width: 25%;">International Patient Summary 1.1.0</th>
+            <th style="width: 25%;">Element</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-AllergyIntolerance-uv-ips.html">Allergy Intolerance (IPS)</a></td>
+            <td style="width: 25%;">AllergyIntolerance.type</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">AllergyIntolerance.patient.reference</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
+            <td style="width: 25%;">Condition.patient.reference</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
+            <td style="width: 25%;">Observation.patient.reference</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
+            <td style="width: 25%;">Observation.patient.reference</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
+            <td style="width: 25%;">Immunization.patient.reference</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Medication-uv-ips.html">Medication (IPS)</a></td>
+            <td style="width: 25%;">Medication.form</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Medication.ingredient</td>
+        </tr>    
+        <tr>
+            <td style="width: 25%;">Medication.ingredient.item[x]</td>
+        </tr>     
+        <tr>
+            <td style="width: 25%;">Medication.ingredient.strength</td>
+        </tr>   
+        <tr>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-MedicationRequest-uv-ips.html">Medication Request (IPS)</a></td>
+            <td style="width: 25%;">MedicationRequest.subject.reference</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationRequest.dosageInstruction.text</td>
+        </tr>    
+        <tr>
+            <td style="width: 25%;">MedicationRequest.dosageInstruction.timing</td>
+        </tr>     
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/StructureDefinition-Observation-results-pathology-uv-ips.html">Observation Results: pathology (IPS)</a></td>
+            <td style="width: 25%;">Observation.patient.reference</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/StructureDefinition-Patient-uv-ips.html">Patient (IPS)</a></td>
+            <td style="width: 25%;">Patient.generalPractitioner</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Practitioner-uv-ips.html">Practitioner (IPS)</a></td>
+            <td style="width: 25%;">Practitioner.telecom</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Practitioner.address</td>
+        </tr>  
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Procedure-uv-ips.html">Procedure (IPS)</a></td>
+            <td style="width: 25%;">Procedure.patient.reference</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation - SH: tobacco use</a></td>
+            <td style="width: 25%;">Observation.subject.reference</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
+            <td style="width: 25%;">Observation.subject.reference</td>
+        </tr>
+    </tbody>
+</table>
+
 ##### Additional profiles
 This version of AU Core has no equivalent profile for the following IPS profiles:
 - Bundle - IPS
@@ -352,6 +488,7 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - Observation - SH: alcohol use
 - Observation Results: radiology (IPS)
 - Specimen (IPS)
+
 
 #### US Core
 [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/) serves as the foundation for FHIR implementation guides in the US Realm. It establishes the minimum constraints on FHIR resources to define US Core Profiles, specifying the required elements, extensions, vocabularies, and value sets, as well as their usage. It also outlines the minimum FHIR RESTful interactions needed to access patient data for each US Core Profile.
@@ -492,6 +629,244 @@ AU Core compliant resources are compliant with US Core requirements for Missing 
 
 ##### Suppressed Data
 US Core does not include requirements for Suppressed Data.
+
+##### Additional Must Support elements
+The following US Core profile(s) contain additional Must Support elements. Implementers are advised to note that some code changes may be required to support these profiles.
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 25%;">AU Core</th>
+            <th style="width: 25%;">US Core 7.0.0</th>
+            <th style="width: 25%;">Element</th>
+        </tr>
+    </thead>
+    <tbody>
+         <tr>
+            <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a></td>
+            <td>Condition.assertedDate</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.encounter</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.recordedDate</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+            <td style="width: 25%;">Condition.meta</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.meta.lastUpdated</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.assertedDate</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.recordedDate</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result Profile</a></td>
+            <td style="width: 25%;">Observation.encounter</td>
+        </tr> 
+        <tr>
+            <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
+            <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
+            <td style="width: 25%;">Encounter.meta</td>
+        </tr>  
+        <tr>
+            <td style="width: 25%;">Encounter.meta.lastUpdated</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Encounter.identifier</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Encounter.identifier.system</td>
+       </tr>
+       <tr>
+            <td style="width: 25%;">Encounter.identifier.value</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Encounter.type</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Encounter.participant.period</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Encounter.hospitalization</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Encounter.hospitalization.dischargeDisposition</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-immunization.html">US Core Immunization Profile</a></td>
+            <td style="width: 25%;">Immunization.statusReason</td>
+        </tr> 
+        <tr>
+            <td style="width: 25%;">Immunization.encounter</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Immunization.location</td>
+        </tr>
+        <tr>
+            <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location Profile</a></td>
+            <td style="width: 25%;">Location.status</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Location.telecom</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Location.address.line</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Location.address.city</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Location.address.state</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Location.address.postalCode</td>
+        </tr>
+        <tr>
+            <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest </a></td>
+            <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
+            <td style="width: 25%;">MedicationRequest.category</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationRequest.reported[x]</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationRequest.dosageInstruction.text</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationRequest.dosageInstruction.timing</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationRequest.dosageInstruction.doseAndRate</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationRequest.dosageInstruction.doseAndRate.dose[x]</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationRequest.dosageInstruction.dispenseRequest</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationRequest.dosageInstruction.dispenseRequest.numberOfRepeatsAllowed</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationRequest.dosageInstruction.dispenseRequest.quantity</td>
+        </tr>
+        <tr>
+            <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
+            <td rowspan="8" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td>
+            <td style="width: 25%;">Organization.active</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Organization.telecom.system</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Organization.telecom.value</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Organization.address.line</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Organization.address.city</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Organization.address.state</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Organization.address.postalCode</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Organization.address.country</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a></td>
+            <td style="width: 25%;">Observation.meta</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.meta.lastUpdated</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.encounter</td>
+        </tr>
+        <tr>
+            <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></td>
+            <td style="width: 25%;">Patient.telecom.system</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Patient.telecom.value</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Patient.telecom.use</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Patient.address.line</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Patient.address.city</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Patient.address.state</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Patient.address.postalCode</td>
+        </tr>
+        <tr>
+            <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
+            <td rowspan="8" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></td>
+            <td style="width: 25%;">Practitioner.telecom.system</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Practitioner.telecom.value</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Practitioner.address</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Practitioner.address.line</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Practitioner.address.city</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Practitioner.address.state</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Practitioner.address.postalCode</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Practitioner.address.country</td>
+        </tr>
+       <tr>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole Profile</a></td>
+            <td style="width: 25%;">PractitionerRole.location</td>
+        </tr> 
+        <tr>
+            <td style="width: 25%;">PractitionerRole.telecom.system</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">PractitionerRole.telecom.value</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">PractitionerRole.endpoint</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-simple-observation.html">US Core Simple Observation Profile</a></td>
+            <td style="width: 25%;">Observation.performer</td>
+        </tr> 
+    </tbody>
+</table>
 
 ##### Additional profiles 
 This version of AU Core has no equivalent profile for the following US Core profiles:
