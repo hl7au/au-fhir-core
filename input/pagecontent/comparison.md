@@ -393,17 +393,12 @@ The following IPS profile(s) contain additional Must Support elements. Implement
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
-            <td style="width: 25%;">Condition.patient.reference</td>
+            <td style="width: 25%;">Condition.subject.reference</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
-            <td style="width: 25%;">Observation.patient.reference</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
-            <td style="width: 25%;">Observation.patient.reference</td>
+            <td style="width: 25%;">Observation.subject.reference</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
@@ -436,9 +431,13 @@ The following IPS profile(s) contain additional Must Support elements. Implement
             <td style="width: 25%;">MedicationRequest.dosageInstruction.timing</td>
         </tr>     
         <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-laboratory-uv-ips.html">Observation Results: laboratory (IPS)</a></td>
+            <td style="width: 25%;">Observation.subject.reference</td>
+        </tr>
+        <tr>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/StructureDefinition-Observation-results-pathology-uv-ips.html">Observation Results: pathology (IPS)</a></td>
-            <td style="width: 25%;">Observation.patient.reference</td>
+            <td style="width: 25%;">Observation.subject.reference</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
@@ -456,7 +455,7 @@ The following IPS profile(s) contain additional Must Support elements. Implement
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Procedure-uv-ips.html">Procedure (IPS)</a></td>
-            <td style="width: 25%;">Procedure.patient.reference</td>
+            <td style="width: 25%;">Procedure.subject.reference</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
