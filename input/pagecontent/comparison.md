@@ -227,8 +227,11 @@ The following IPA profile(s) contain additional Must Support elements. Implement
             <td style="width: 25%;">MedicationRequest.dosageInstruction.text</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
+            <td style="width: 25%;">Patient.identifier.value</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">Patient.active</td>
         </tr>
         <tr>
@@ -797,8 +800,14 @@ The following US Core profile(s) contain additional Must Support elements. Imple
             <td style="width: 25%;">Observation.encounter</td>
         </tr>
         <tr>
-            <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></td>
+            <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
+            <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></td>
+            <td style="width: 25%;">Patient.identifier.system</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Patient.identifier.value</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">Patient.telecom.system</td>
         </tr>
         <tr>
@@ -820,8 +829,17 @@ The following US Core profile(s) contain additional Must Support elements. Imple
             <td style="width: 25%;">Patient.address.postalCode</td>
         </tr>
         <tr>
-            <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
-            <td rowspan="8" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></td>
+            <td rowspan="11" style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
+            <td rowspan="11" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></td>
+            <td style="width: 25%;">Practitioner.identifier.system</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Practitioner.identifier.value</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Practitioner.telecom</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">Practitioner.telecom.system</td>
         </tr>
         <tr>
@@ -858,6 +876,14 @@ The following US Core profile(s) contain additional Must Support elements. Imple
         </tr>
         <tr>
             <td style="width: 25%;">PractitionerRole.endpoint</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a></td>
+            <td style="width: 25%;">Observation.value[x]:valueQuantity</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.value[x]:valueCodeableConcept</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
