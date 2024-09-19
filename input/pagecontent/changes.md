@@ -177,9 +177,13 @@ This change log documents the significant updates and resolutions implemented fr
   - corrected the Observation combined search parameter 'patient+category+status' from SHALL to SHOULD [FHIR-45390](https://jira.hl7.org/browse/FHIR-45390)
   - corrected narrative of Location identifier parameter requester requirements on providing both the system and code values from SHOULD to MAY [FHIR-46209](https://jira.hl7.org/browse/FHIR-46209)
   - replaced security and authorization requirements with pointer to Security and Privacy page [FHIR-46067](https://jira.hl7.org/browse/FHIR-46067)
+  - corrected structure of Patient identifier search parameter responder requirements to support both system and code values [FHIR-47154](https://jira.hl7.org/browse/FHIR-47154)
 - Made the following changes in AU Core Responder CapabilityStatement:
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
   - corrected the Observation combined search parameter 'patient+category+status' from SHALL to SHOULD [FHIR-45390](https://jira.hl7.org/browse/FHIR-45390)
   - corrected MedicationRequest combined search parameter 'patient+intent+authoredon' from SHALL to SHOULD [FHIR-46167](https://jira.hl7.org/browse/FHIR-46167)
   - corrected narrative of Location identifier parameter requester requirements on providing both the system and code values from SHOULD to MAY [FHIR-46209](https://jira.hl7.org/browse/FHIR-46209)
   - replaced security and authorization requirements with pointer to Security and Privacy page [FHIR-46067](https://jira.hl7.org/browse/FHIR-46067)
+  - corrected structure of Patient identifier search parameter responder requirements to support both system and code values [FHIR-47154](https://jira.hl7.org/browse/FHIR-47154)
+  - corrected narrative of PractitionerRole practitioner.identifier search parameter from supporting search using Medicare Provider Number to HPI-I [FHIR-47013](https://jira.hl7.org/browse/FHIR-47013)
+  - corrected structure and narrative of Practitioner _id search parameter from SHALL to SHOULD [FHIR-46777](https://jira.hl7.org/browse/FHIR-46777)
