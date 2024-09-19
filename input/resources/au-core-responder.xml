@@ -2588,8 +2588,8 @@
   <div>
     <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>SHOULD</strong> provide both the system and code values.</p>
     <p>The responder <strong>SHALL</strong> support both.</p>
-    <p>The requester <strong>SHOULD</strong> support search using a Medicare Provider Number identifier as defined in the profile.</p>
-    <p>The responder <strong>SHOULD</strong> support search using a Medicare Provider Number identifier as defined in the profile.</p>
+    <p>The requester <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the AU Core Practitioner profile.</p>
+    <p>The responder <strong>SHOULD</strong> support search using a HPI-I identifier as defined in the AU Core Practitioner profile.</p>
   </div>
 </td>
 </tr>
@@ -4223,7 +4223,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Patient-identifier"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide both the system and code values. The responder **SHALL NOT** support only code values.&#xa;&#xa;The requester **SHOULD** support search using IHI, Medicare Number, and DVA Number identifiers as defined in the profile. The responder **SHOULD** support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the profile."/>
+<documentation value="The requester **SHALL** provide both the system and code values. The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support search using IHI, Medicare Number, and DVA Number identifiers as defined in the profile. The responder **SHOULD** support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
