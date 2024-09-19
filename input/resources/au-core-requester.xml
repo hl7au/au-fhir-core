@@ -2162,18 +2162,6 @@
   <b>SHALL</b>
 </td>
 <td>
-  <a href="http://hl7.org/fhir/R4/resource.html#search">_id</a>
-</td>
-<td>
-  <code>token</code>
-</td>
-<td></td>
-</tr>
-<tr>
-<td>
-  <b>SHALL</b>
-</td>
-<td>
   <a href="http://hl7.org/fhir/R4/patient.html#search">identifier</a>
 </td>
 <td>
@@ -2186,6 +2174,25 @@
     <p>The responder <strong>SHALL</strong> support both.</p>
     <p>The requester <strong>SHOULD</strong> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
     <p>The responder <strong>SHOULD</strong> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</p>
+  </div>
+  </div>
+</td>
+</tr>
+<tr>
+<td>
+  <b>SHOULD</b>
+</td>
+<td>
+  <a href="http://hl7.org/fhir/R4/resource.html#search">_id</a>
+</td>
+<td>
+  <code>token</code>
+</td>
+<td>
+  <div>
+    <div>
+    <p>The requester <strong>SHOULD</strong> support <code>_id</code>.</p>
+    <p>The responder <strong>SHALL</strong> support <code>_id</code>.</p>
   </div>
   </div>
 </td>
@@ -4175,11 +4182,12 @@
 </referencePolicy>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="_id"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
 <type value="token"/>
+<documentation value="The requester **SHOULD** support `_id`.&#xa;&#xa;The responder **SHALL** support `_id`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">

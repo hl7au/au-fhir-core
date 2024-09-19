@@ -8,10 +8,15 @@
     <th>Requirements (when used alone or in combination)</th>
   </tr>
   <tr>
-        <td>_id</td>
+        <td rowspan="2">_id</td>
+        <td><b>SHOULD</b></td>
+        <td><code>token</code></td>
+        <td>The requester <b>SHOULD</b> support <code>_id</code>.</td>
+  </tr>
+    <tr>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td></td>
+        <td>The responder <b>SHALL</b> support <code>_id</code>.</td>
   </tr>
   <tr>
         <td>identifier</td>
