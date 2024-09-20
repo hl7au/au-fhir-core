@@ -13,11 +13,6 @@
         <td><code>token</code></td>
         <td></td>
   </tr>
-    <tr>
-        <td><b>SHALL</b></td>
-        <td><code>token</code></td>
-        <td>The responder <b>SHALL</b> support <code>_id</code>.</td>
-  </tr>
   <tr>
         <td>identifier</td>
         <td><b>SHALL</b></td>
