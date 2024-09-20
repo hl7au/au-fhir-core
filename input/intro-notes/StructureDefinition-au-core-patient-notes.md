@@ -8,10 +8,10 @@
     <th>Requirements (when used alone or in combination)</th>
   </tr>
   <tr>
-        <td rowspan="2">_id</td>
-        <td><b>SHOULD</b></td>
+        <td>_id</td>
+        <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHOULD</b> support <code>_id</code>.</td>
+        <td></td>
   </tr>
     <tr>
         <td><b>SHALL</b></td>
@@ -98,7 +98,7 @@
     
       1. GET [base]/Patient?_id=5678
 
-    *Implementation Notes:* Fetches a bundle with the requested Patient, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
+    *Implementation Notes:* Fetches a bundle with the requested Patient, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id)). Requester and responder have different conformance requirements for `_id`; requester **SHOULD** and responder **SHALL** support searching using the `_id` search parameter.
 
 1. **SHALL** support searching a patient by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
     
