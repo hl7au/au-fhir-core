@@ -273,10 +273,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="Observation.hasMember.reference">
-      <path value="Observation.hasMember.reference"/>
-      <min value="0"/>
-    </element>
     <element id="Observation.component">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
