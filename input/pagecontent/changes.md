@@ -169,15 +169,13 @@ This change log documents the significant updates and resolutions implemented fr
   - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
   - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
   - updated invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match required precision to the day [FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
-  - removed Obligations on Observation.hasMember.reference [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728)
-  - removed the cardinality constraint on Observation.hasMember.reference, changing it from 1..1 to 0..1 [FHIR-48331](https://jira.hl7.org/browse/FHIR-48331)
+  - removed constraints from Observation.hasMember.reference [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728), [FHIR-48331](https://jira.hl7.org/browse/FHIR-48331)
   - removed Must Support and Obligations from the identifier, interpretation, note, method and referenceRange elements [FHIR-46737](https://jira.hl7.org/browse/FHIR-46737)
 - Made the following changes to AU Core Pathology Result Observation:
   - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
   - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
   - updated invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match required precision to the day [FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
-  - removed Obligations on Observation.hasMember.reference and Observation.specimen.reference [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728)
-  - removed the cardinality constraint on Observation.hasMember.reference and Observation.specimen.reference, changing it from 1..1 to 0..1 [FHIR-46731](https://jira.hl7.org/browse/FHIR-46731)
+  - removed constraints from Observation.hasMember.reference and Observation.specimen.reference [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728), [FHIR-46731](https://jira.hl7.org/browse/FHIR-46731)
   - removed Must Support and Obligations from the identifier, method and note elements [FHIR-46732](https://jira.hl7.org/browse/FHIR-46732)
 - Made the following changes in AU Core Requester CapabilityStatement:
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
