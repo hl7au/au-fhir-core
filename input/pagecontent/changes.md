@@ -1,6 +1,16 @@
+###  Release 1.0.0
+- Expected Publication date: 2025-24-01
+- Expected Publication status: Normative
+- Based on FHIR version: 4.0.1
+
+This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to 1.0.0.
+
+#### Changes in this version
+- Removed Must Support flag and associated Obligation extensions from location.identifier [FHIR-47105](https://jira.hl7.org/browse/FHIR-47105) and location.mode [FHIR-47104](https://jira.hl7.org/browse/FHIR-47104)
+
 ###  Release 1.0.0-ballot
-- Expected Publication date: 2024-08-05
-- Expected Publication status: Ballot
+- Publication date: 2024-08-05
+- Publication status: Ballot
 - Based on FHIR version: 4.0.1
 
 This change log documents the significant updates and resolutions implemented from version 0.3.0-ballot to 1.0.0-ballot.
