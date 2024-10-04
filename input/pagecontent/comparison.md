@@ -341,7 +341,7 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - Composition (IPS)
 - Device (IPS)
 - Device - performer, observer
-- Device - performer, observer
+- Device Use Statement (IPS)
 - DiagnosticReport (IPS)
 - Imaging Study (IPS)
 - Media observation (Results: laboratory, media)
