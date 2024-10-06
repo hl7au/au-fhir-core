@@ -46,7 +46,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from MedicationRequest.substitution, MedicationRequest.substitution.allowed[x] [FHIR-45088](https://jira.hl7.org/browse/FHIR-45088)
   - added Must Support to MedicationRequest.reasonReference [FHIR-45090](https://jira.hl7.org/browse/FHIR-45090)
   - support for AMT codes and PBS Item Codes in MedicationRequest.medicationCodeableConcept changed to define slicing in AU Core (no longer inherited from AU Base as per [FHIR-44821](https://jira.hl7.org/browse/FHIR-44821)). Slicing discriminator changed from slicing by value:system to slicing by value set and the binding strength has been corrected to required. [FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
-  - updated invariant au-core-medreq-03 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements, and corrected the FHIRPath expression [FHIR-46417](https://jira.hl7.org/browse/FHIR-46417), [FHIR-46498](https://jira.hl7.org/browse/FHIR-46498), [FHIR-48362](https://jira.hl7.org/browse/FHIR-48362)
+  - updated invariant au-core-medreq-03 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [FHIR-46417](https://jira.hl7.org/browse/FHIR-46417)
 - Made the following changes to AU Core Medication:
   - removal of Must Support from Medication.manufacturer [FHIR-45130](https://jira.hl7.org/browse/FHIR-45130)
   - removed Must Support from Medication.form [FHIR-45221](https://jira.hl7.org/browse/FHIR-45221)
