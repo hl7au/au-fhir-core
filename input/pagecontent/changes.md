@@ -162,6 +162,7 @@ This change log documents the significant updates and resolutions implemented fr
 - Clarified that multipleAnd requires comparator support for AU Core date search parameters. [FHIR46309](https://jira.hl7.org/browse/FHIR-46309)
 - Changed the following Patient search parameters:
   - birthdate search parameter support for comparators gt, le, lt, ge to be SHOULD instead of SHALL and multipleAnd support introduced as SHOULD [FHIR-45410](https://jira.hl7.org/browse/FHIR-45410)
+  - _id search parameter for AU Core Requester to be SHOULD instead of SHALL [FHIR-46390](https://jira.hl7.org/browse/FHIR-46390)
 - Changed the following Organization search parameters:
   - address search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
   - name search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
