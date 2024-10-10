@@ -1,6 +1,17 @@
+###  Release 1.0.0
+- Expected Publication date: 2025-01
+- Expected Publication status: Normative
+- Based on FHIR version: 4.0.1
+
+This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to 1.0.0.
+
+#### Changes in this version
+- Made the following changes to AU Core Diagnostic Result Observation:
+  - corrected base profile definition from Observation to AU Base Diagnostic Observation [FHIR-47116](https://jira.hl7.org/browse/FHIR-47116)
+
 ###  Release 1.0.0-ballot
-- Expected Publication date: 2024-08-05
-- Expected Publication status: Ballot
+- Publication date: 2024-08-05
+- Publication status: Ballot
 - Based on FHIR version: 4.0.1
 
 This change log documents the significant updates and resolutions implemented from version 0.3.0-ballot to 1.0.0-ballot.
