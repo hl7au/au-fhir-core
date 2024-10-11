@@ -1,4 +1,7 @@
 {% include search_parameters_intro.md -%}
+
+<br/><br/>*Note:* Support for _id is mandatory for a responder and optional for a requester. Where the expectation for a search parameter differs between actors, the table below will reflect the stronger conformance requirement.
+
 <table class="list">
 <tbody>
   <tr>
@@ -93,9 +96,7 @@
     
       1. GET [base]/Patient?_id=5678
 
-    *Implementation Notes:* 
-      - Fetches a bundle with the requested Patient, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id)). 
-      - Only for this search parameter are the conformance strengths different across requester and responder. Support for this search is optional for a requester.
+    *Implementation Notes:* Fetches a bundle with the requested Patient, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id)).
 
 1. **SHALL** support searching a patient by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
     
