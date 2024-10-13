@@ -21,7 +21,7 @@
       <definition value="Measurement of a patient's waist circumference at a point in time."/>
       <comment value="Waist circumference observation using a LOINC code, a SNOMED CT code and a metric UCUM unit of measure."/>
       <constraint>
-        <key value="au-core-obs-02"/>
+        <key value="au-core-obs-00"/>
         <severity value="error"/>
         <human value="At least value or data absent reason shall be present"/>
         <expression value="dataAbsentReason.exists() or value.exists()"/>
@@ -279,7 +279,7 @@
       </extension>
       <path value="Observation.valueQuantity"/> 
       <short value="Waist circumference"/>
-      <condition value="au-core-obs-02"/>
+      <condition value="au-core-obs-00"/>
     </element> 
     <element id="Observation.valueQuantity.value">
       <path value="Observation.valueQuantity.value"/> 
@@ -349,13 +349,13 @@
         </extension>
       </extension>
       <path value="Observation.dataAbsentReason"/>
-      <condition value="au-core-obs-02"/>
+      <condition value="au-core-obs-00"/>
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
-      <condition value="au-core-obs-04"/>
+      <condition value="au-core-obs-01"/>
       <constraint>
-        <key value="au-core-obs-04"/>
+        <key value="au-core-obs-01"/>
         <severity value="error"/>
         <human value="If a coded body site is provided, at least one code shall be from SNOMED CT"/>
         <expression value="coding.exists() implies coding.where(system='http://snomed.info/sct').exists()"/>

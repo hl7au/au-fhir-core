@@ -20,7 +20,7 @@
       <short value="Smoking status" />
       <definition value="An observation of smoking status, i.e. current behaviour for all types of tobacco smoking, at a point in time." />
       <constraint>
-        <key value="au-core-obs-02"/>
+        <key value="au-core-obs-00"/>
         <severity value="error"/>
         <human value="At least value or data absent reason shall be present"/>
         <expression value="dataAbsentReason.exists() or value.exists()"/>
@@ -225,7 +225,7 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <condition value="au-core-obs-02"/>
+      <condition value="au-core-obs-00"/>
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible" />
@@ -250,7 +250,7 @@
         </extension>
       </extension>
       <path value="Observation.dataAbsentReason"/>
-      <condition value="au-core-obs-02"/>
+      <condition value="au-core-obs-00"/>
       <mustSupport value="true"/>
     </element>
   </differential>

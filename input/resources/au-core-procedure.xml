@@ -183,9 +183,9 @@
     </element>
     <element id="Procedure.bodySite">
       <path value="Procedure.bodySite"/>
-      <condition value="au-core-pro-04"/>
+      <condition value="au-core-pro-00"/>
       <constraint>
-        <key value="au-core-pro-04"/>
+        <key value="au-core-pro-00"/>
         <severity value="error"/>
         <human value="If a coded body site is provided, at least one code shall be from SNOMED CT"/>
         <expression value="coding.exists() implies coding.where(system='http://snomed.info/sct').exists()"/>

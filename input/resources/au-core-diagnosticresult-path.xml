@@ -18,7 +18,7 @@
     <element id="Observation">
       <path value="Observation"/>
       <constraint>
-        <key value="au-core-obs-05"/>
+        <key value="au-core-obs-00"/>
         <severity value="error"/>
         <human value="If there is no component or hasMember element then at least value or data absent reason shall be present"/>
         <expression value="(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())"/>
@@ -193,7 +193,7 @@
         </extension>
       </extension>
       <path value="Observation.value[x]"/>
-      <condition value="au-core-obs-05"/>
+      <condition value="au-core-obs-00"/>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.dataAbsentReason">
@@ -214,7 +214,7 @@
         </extension>
       </extension>
       <path value="Observation.dataAbsentReason"/>
-      <condition value="au-core-obs-05"/>
+      <condition value="au-core-obs-00"/>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.interpretation">
@@ -401,7 +401,7 @@
       </extension>
       <path value="Observation.component"/>
       <constraint>
-        <key value="au-core-obs-06"/>
+        <key value="au-core-obs-02"/>
         <severity value="error"/>
         <human value="The component shall at least have a value or a data absent reason"/>
         <expression value="value.exists() or dataAbsentReason.exists()"/>
@@ -453,7 +453,7 @@
         </extension>
       </extension>
       <path value="Observation.component.value[x]"/>
-      <condition value="au-core-obs-06"/>
+      <condition value="au-core-obs-02"/>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.component.dataAbsentReason">
@@ -474,7 +474,7 @@
         </extension>
       </extension>
       <path value="Observation.component.dataAbsentReason"/>
-      <condition value="au-core-obs-06"/>
+      <condition value="au-core-obs-02"/>
       <mustSupport value="true"/>
     </element>
   </differential>

@@ -130,9 +130,9 @@
     </element>
     <element id="Condition.bodySite">
       <path value="Condition.bodySite"/>
-      <condition value="au-core-cond-02"/>
+      <condition value="au-core-cond-00"/>
       <constraint>
-        <key value="au-core-cond-02"/>
+        <key value="au-core-cond-00"/>
         <severity value="error"/>
         <human value="If a coded body site is provided, at least one code shall be from SNOMED CT"/>
         <expression value="coding.exists() implies coding.where(system='http://snomed.info/sct').exists()"/>
