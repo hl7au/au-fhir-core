@@ -7,7 +7,7 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 - Made the following changes to AU Core Diagnostic Result Observation:
-  - corrected base profile definition from Observation to AU Base Diagnostic Observation [FHIR-47116](https://jira.hl7.org/browse/FHIR-47116)
+  - corrected base profile to AU Base Diagnostic Observation [FHIR-47116](https://jira.hl7.org/browse/FHIR-47116)
 
 ###  Release 1.0.0-ballot
 - Publication date: 2024-08-05
