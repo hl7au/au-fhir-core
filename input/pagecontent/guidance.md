@@ -1,6 +1,6 @@
 - [General Guidance](general-guidance.html)
 - [Medicine Information](medicine-information.html)
-- [AU Core Data for Interoperability](aucdi.html)
+- [AUCDI](aucdi.html)
 - [Relationship with other IGs](relationship.html)
 - [AU Variance Statement](variance.html)
 - [Comparison with other national and international IGs](comparison.html)

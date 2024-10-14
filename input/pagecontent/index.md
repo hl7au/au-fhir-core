@@ -1,13 +1,13 @@
 ### Introduction
 AU Core is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context. It sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
 
-AU Core defines the data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. 
+AU Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. 
 
 AU Core uses AU Base representations, where available, as the basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each resource type to access data. AU Core promotes interoperability and adoption through common implementation and SHOULD be the basis of further implementation guide development for specific use cases. 
 
 There are two different ways to implement AU Core:
 1. Profile Only Support: systems support only the resources as profiled by AU Core to represent digital health information.
-1. Profile Support + Interaction Support: systems support the resources as profiled by AU Core to represent digital health information (Profile Support) and the [RESTful FHIR API](http://hl7.org/fhir/R4/http.html) interactions defined for it (Interaction Support).
+1. Profile Support + Interaction Support: systems support the resources as profiled by AU Core to represent digital health information (Profile Support) and [the RESTful FHIR API](http://hl7.org/fhir/R4/http.html) interactions defined for it (Interaction Support).
 
 In this regard it is similar in nature to other national core specifications such as US Core FHIR Implementation Guide and international FHIR specifications such as International Patient Access FHIR Implementation Guide.
 
@@ -33,7 +33,7 @@ AU Core is particularly useful in defining:
 
 - A testable level of system conformance
 - Assumed support by client applications
-- The basis of downstream implementation guides
+- As the basis of downstream implementation guides
 
 Implementation of capabilities defined in AU Core enables specifications, applications and business logic to be developed with confidence.
 
@@ -49,12 +49,12 @@ The following actors are part of AU Core:
 **AU Core Requestor**
 
 A system that creates and initiates a data access request to retrieve core digital health and administrative information. The AU Core Requestor is the client in a client-server interaction.  
-<br/>
+<br/><br/>
 
 **AU Core Responder**
 
 A system that responds to the data access request submitted by requesters, providing responses to requests for core digital health and administrative information. The AU Core Responder is the server in a client-server interaction.  
-<br/>
+<br/><br/>
 
 ### AU Core FHIR RESTful interactions
 
@@ -91,7 +91,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Declaring Conformance](declaring-conformance.html): This page describes how to declare conformance to AU Core.
 - [Guidance](guidance.html): These pages list the guidance for this guide.
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide.
-  - [Medicine Information](medicine-information.html): This page provides guidance on constructing medication related resources.
+  - [Medicine Information](medicine-information.html): This page provides guidance on constructing medications related resources.
   - [AU Core Data for Interoperability](aucdi.html): This page maps AUCDI data groups and elements to FHIR artefacts in AU Core.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Core, AUCDI, and other implementation guides.
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base.
@@ -118,7 +118,6 @@ This guide is the product of collaborative work undertaken with participants fro
 * Australian FHIR Implementers Community
 
 Primary Editors: Brett Esler, Danielle Tavares-Rixon, Dusica Bojicic.
-
 
 
 
