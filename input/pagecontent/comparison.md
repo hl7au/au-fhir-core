@@ -1,5 +1,5 @@
 AU Core aligns to, and leverages, international standards and other national standards, in particular:
-- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/) 
+- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/)
 - [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/)
 - [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/)
 
