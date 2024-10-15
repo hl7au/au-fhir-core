@@ -1,3 +1,13 @@
+###  Release 1.0.0
+- Expected Publication date: 2025-01
+- Expected Publication status: TBC
+- Based on FHIR version: 4.0.1
+
+This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to 1.0.0.
+
+#### Changes in this version
+- Remove Condition.severity from Chronic Kidney Disease example, add Condition.severity to Urinary tract infection example [FHIR-46955](https://jira.hl7.org/browse/FHIR-46955)
+
 ###  Release 1.0.0-ballot
 - Expected Publication date: 2024-08-05
 - Expected Publication status: Ballot
