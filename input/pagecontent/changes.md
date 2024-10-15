@@ -1,3 +1,14 @@
+###  Release 1.0.0
+- Expected Publication date: 2025-01
+- Expected Publication status: TBC
+- Based on FHIR version: 4.0.1
+
+This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to 1.0.0.
+
+#### Changes in this version
+- Clarify Read/Search Syntax guidance [FHIR-46470](https://jira.hl7.org/browse/FHIR-46740), [FHIR-47194](https://jira.hl7.org/browse/FHIR-47194)
+- Clarify Medicine Information guidance for extemporaneous and non-extemporaneous medicinal product identification [FHIR-46741](https://jira.hl7.org/browse/FHIR-46741), [FHIR-46742](https://jira.hl7.org/browse/FHIR-46742)
+
 ###  Release 1.0.0-ballot
 - Expected Publication date: 2024-08-05
 - Expected Publication status: Ballot
