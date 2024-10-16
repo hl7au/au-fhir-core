@@ -21,7 +21,7 @@
       <definition value="Measurement of a patient's height at a point in time."/>
       <comment value="Body height observation using a LOINC code, a SNOMED CT code and a metric UCUM unit of measure."/>
       <constraint>
-        <key value="au-core-obs-00"/>
+        <key value="au-core-obs-02"/>
         <severity value="error"/>
         <human value="At least value or data absent reason shall be present"/>
         <expression value="dataAbsentReason.exists() or value.exists()"/>
@@ -250,7 +250,7 @@
       </extension>
       <path value="Observation.valueQuantity"/>
       <short value="Body height"/>
-      <condition value="au-core-obs-00"/>
+      <condition value="au-core-obs-02"/>
     </element>
     <element id="Observation.valueQuantity.value">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -361,7 +361,7 @@
         </extension>
       </extension>
       <path value="Observation.dataAbsentReason"/>
-      <condition value="au-core-obs-00"/>
+      <condition value="au-core-obs-02"/>
     </element>
     <element id="Observation.component">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">

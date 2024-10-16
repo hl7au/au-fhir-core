@@ -21,7 +21,7 @@
       <definition value="Measurement of a patient's respiration rate at a point in time."/>
       <comment value="Respiration rate observation using a LOINC code and a SNOMED CT code."/>
       <constraint>
-        <key value="au-core-obs-00"/>
+        <key value="au-core-obs-02"/>
         <severity value="error"/>
         <human value="At least value or data absent reason shall be present"/>
         <expression value="dataAbsentReason.exists() or value.exists()"/>
@@ -250,7 +250,7 @@
       </extension>
       <path value="Observation.valueQuantity"/>
       <short value="Respiration rate"/>
-      <condition value="au-core-obs-00"/>
+      <condition value="au-core-obs-02"/>
     </element>
     <element id="Observation.valueQuantity.value">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -346,13 +346,13 @@
         </extension>
       </extension>
       <path value="Observation.dataAbsentReason"/>
-      <condition value="au-core-obs-00"/>
+      <condition value="au-core-obs-02"/>
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
-      <condition value="au-core-obs-01"/>
+      <condition value="au-core-obs-04"/>
       <constraint>
-        <key value="au-core-obs-01"/>
+        <key value="au-core-obs-04"/>
         <severity value="error"/>
         <human value="If a coded body site is provided, at least one code shall be from SNOMED CT"/>
         <expression value="coding.exists() implies coding.where(system='http://snomed.info/sct').exists()"/>

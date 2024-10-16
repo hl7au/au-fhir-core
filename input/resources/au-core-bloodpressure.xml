@@ -244,9 +244,9 @@
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
-      <condition value="au-core-obs-00"/>
+      <condition value="au-core-obs-04"/>
       <constraint>
-        <key value="au-core-obs-00"/>
+        <key value="au-core-obs-04"/>
         <severity value="error"/>
         <human value="If a coded body site is provided, at least one code shall be from SNOMED CT"/>
         <expression value="coding.exists() implies coding.where(system='http://snomed.info/sct').exists()"/>

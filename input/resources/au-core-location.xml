@@ -19,7 +19,7 @@
       <path value="Location"/>
       <short value="A location in an Australian healthcare context"/>
       <constraint>
-        <key value="au-core-loc-00" />
+        <key value="au-core-loc-01" />
         <severity value="error" />
         <human value="The location shall at least have a valid identifier or address or type" />
         <expression value="address.exists() or type.exists() or identifier.where(system.count() + value.count() &gt;1).exists()" />
@@ -47,7 +47,7 @@
       <path value="Location.identifier"/>
       <short value="Unique code or number identifying the location to its users" />
       <definition value="Unique code or number identifying the location to its users." />
-      <condition value="au-core-loc-00"/>
+      <condition value="au-core-loc-01"/>
       <mustSupport value="true" />
     </element>
     <element id="Location.name">
@@ -108,7 +108,7 @@
         </extension>
       </extension>
       <path value="Location.type"/>
-      <condition value="au-core-loc-00"/>
+      <condition value="au-core-loc-01"/>
       <mustSupport value="true" />
     </element>
     <element id="Location.address">
@@ -129,7 +129,7 @@
         </extension>
       </extension>
       <path value="Location.address" />
-      <condition value="au-core-loc-00"/>
+      <condition value="au-core-loc-01"/>
       <mustSupport value="true" />
     </element>
     <element id="Location.physicalType">
