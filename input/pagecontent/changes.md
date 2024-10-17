@@ -1,3 +1,13 @@
+###  Release 1.0.0
+- Expected Publication date: 2025-01
+- Expected Publication status: TBC
+- Based on FHIR version: 4.0.1
+
+This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to 1.0.0.
+
+#### Changes in this version
+- Added Summary of Must Support and References Between Profiles table to AU Core Requester and Responder CapabilityStatements [FHIR-46547](https://jira.hl7.org/browse/FHIR-46547)
+
 ###  Release 1.0.0-ballot
 - Expected Publication date: 2024-08-05
 - Expected Publication status: Ballot
