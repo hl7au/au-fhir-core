@@ -18,9 +18,9 @@ The guidance below addresses how medicinal product identification can be structu
 
 ### Medicinal Product Identification
 
-For extemporaneous medications, the medication code element is the primary mechanism to identify a medicine. In this case, a list of ingredients including strength and form is recommended to be provided as text in the medication code element e.g. Medication.code.text or MedicationRequest.medicationCodeableConcept.text.
+For extemporaneous medications, the medication code element is the primary mechanism to identify a medicine. In this case, a list of ingredients including strength and form is recommended to be provided as text in the medication code element e.g. `Medication.code.text` or `MedicationRequest.medicationCodeableConcept.text`.
 
-For non-extemporaneous medications, the medication code element is the primary mechanism to identify a medicine. In this case, information identifying the medicinal product including strength and form is recommended to be provided as a code from a terminology in the medication code element, e.g. Medication.code.coding or MedicationRequest.medicationCodeableConcept.coding, and the description of the medicinal product as presented to the user is provided in the text e.g. Medication.code.text or MedicationRequest.medicationCodeableConcept.text. 
+For non-extemporaneous medications, the medication code element is the primary mechanism to identify a medicine. In this case, information identifying the medicinal product including strength and form is recommended to be provided as a code from a terminology in the medication code element, e.g. `Medication.code.coding` or `MedicationRequest.medicationCodeableConcept.coding`, and the description of the medicinal product as presented to the user is provided in the text e.g. `Medication.code.text` or `MedicationRequest.medicationCodeableConcept.text`. 
 
 Australian Medicines Terminology (AMT) is the national terminology for identification and naming of medicines in clinical systems for Australia. 
 The AMT is published monthly to include new items on the Australian Register of Therapeutic Goods from the TGA, as well as items listed on the Pharmaceutical Benefits Scheme. 
