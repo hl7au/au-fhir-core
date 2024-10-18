@@ -6,7 +6,6 @@
     </meta>
     <status value="active"/>
     <name value="Patient's home"/> 
-    <mode value="kind"/>
     <type> 
         <coding> 
             <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/> 
