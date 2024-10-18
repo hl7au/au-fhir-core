@@ -874,7 +874,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
 AU Core compliant resources are compliant with US Core requirements for Missing Data.
 
 ##### Suppressed Data
-US Core does not include requirements for Suppressed Data.
+AU Core compliant resources are compliant with US Core requirements for Suppressed Data.
 
 ##### Additional profiles 
 This version of AU Core has no equivalent profile for the following US Core profiles:

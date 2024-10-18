@@ -15,9 +15,9 @@ The following profiles and have been defined for this implementation guide.
 
 ### Extensions
 
-All extensions used in this guide are defined in the base FHIR specification or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions).
+All extensions used in this guide are defined in the FHIR Extensions Pack or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions).
 
-The following extension are marked with *Must Support* in this implementation guide:
+The following extensions are marked with *Must Support* in this implementation guide:
 * [Australian Indigenous Status](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-indigenous-status.html) in [AU Core Patient](StructureDefinition-au-core-patient.html)
 * [Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns) in [AU Core Patient](StructureDefinition-au-core-patient.html)
 * [Individual Gender Identity](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) in [AU Core Patient](StructureDefinition-au-core-patient.html)
