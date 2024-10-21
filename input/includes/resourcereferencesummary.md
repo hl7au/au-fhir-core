@@ -4,7 +4,6 @@
 |Condition|[AU Core Condition](StructureDefinition-au-core-condition.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|
 |DocumentReference|[DocumentReference](https://hl7.org/fhir/R4/documentreference.html)|-|
 |Encounter|[AU Core Encounter](StructureDefinition-au-core-encounter.html)|[AU Core Condition](StructureDefinition-au-core-condition.html), [AU Core Location](StructureDefinition-au-core-location.html), [Observation](http://hl7.org/fhir/R4/observation.html), [AU Core Organization](StructureDefinition-au-core-organization.html), [AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Practitioner](StructureDefinition-au-core-practitioner.html), [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html), [AU Core Procedure](StructureDefinition-au-core-procedure.html), [AU Base Related Person](http://hl7.org.au/fhir/StructureDefinition/au-relatedperson)|
-|Extension|[AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html)|-|
 |Immunization|[AU Core Immunization](StructureDefinition-au-core-immunization.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|
 |Location|[AU Core Location](StructureDefinition-au-core-location.html)|[AU Core Organization](StructureDefinition-au-core-organization.html)|
 |Medication|[Medication](https://hl7.org/fhir/R4/medication.html)|-|
