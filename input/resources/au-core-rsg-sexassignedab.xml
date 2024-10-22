@@ -8,7 +8,7 @@
   <name value="AUCoreSexAssignedAtBirth"/>
   <title value="AU Core Sex Assigned At Birth"/>
   <status value="active" />
-  <description value="This profile defines the minimum expectations for a [Person Recorded Sex or Gender extension](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-individual-recordedSexOrGender.html) when representing Sex Assigned at Birth. This profile identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Extension when conforming to this profile." />
+  <description value="This profile defines the minimum expectations for a [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) when representing Sex Assigned at Birth. This profile identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Extension when conforming to this profile." />
   <kind value="complex-type"/>
   <abstract value="false"/>
   <context>

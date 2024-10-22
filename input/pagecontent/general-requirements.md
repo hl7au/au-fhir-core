@@ -1,8 +1,8 @@
 ### Conforming to AU Core
 
 There are two different ways to implement AU Core:
-1. [Profile Only Support](#profile-only-support): system that represent digital health information using AU Core profiles without the expectation to implement any FHIR specified interactions.
-1. [Profile Support + Interaction Support](#profile-support--interaction-support): system that represents digital health information using AU Core profiles (Profile Support) AND implement the [FHIR REST API](http://hl7.org/fhir/R4/http.html) interactions defined by an [AU Core Capability Statement](capability-statements.html) (Interaction Support).
+1. [Profile Only Support](#profile-only-support): system that represents digital health information using AU Core profiles without the expectation to implement any FHIR specified interactions.
+1. [Profile Support + Interaction Support](#profile-support--interaction-support): system that represents digital health information using AU Core profiles (Profile Support) AND implements the [FHIR REST API](http://hl7.org/fhir/R4/http.html) interactions defined by an [AU Core Capability Statement](capability-statements.html) (Interaction Support).
 
 The requirements of the FHIR standard and [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html) apply, and define the use of terms in this guide including the conformance verbs - **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **MAY**.
 
@@ -201,11 +201,11 @@ The table below provides a list of AU Core profile elements that allow multiple 
 
 AU Core Profile |Must Support Element|Data Types
 ---|---|---
-AU Core AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
-AU Core Condition|Condition.onset[x]|dateTime, age, Period, Range
-AU Core Condition|Condition.abatement[x]|dateTime, age, Period, Range
+AU Core AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, Age, Period, Range
+AU Core Condition|Condition.onset[x]|dateTime, Age, Period, Range
+AU Core Condition|Condition.abatement[x]|dateTime, Age, Period, Range
 AU Core Diagnostic Result Observation|Observation.effective[x]|dateTime, Period, Timing, instant
-AU Core Pathology Result Observation|Observation.effective[x]|dateTime, Period, Timing, instant
+AU Core Pathology Result Observation|Observation.effective[x]|dateTime, Period
 AU Core Diagnostic Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU Core Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU Core Diagnostic Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
