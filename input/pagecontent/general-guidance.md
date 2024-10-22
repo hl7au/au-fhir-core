@@ -4,7 +4,7 @@ In some circumstances, the content referred to in the resource reference does no
 In AU Core profiles:
 - Systems constructing a resource that represent medication information are encouraged to make use of contained resources within the context of a FHIR transaction. Operations on Medication resources are expected to be within the context of a referencing resource query such as an MedicationAdministration, MedicationDispense, MedicationRequest or MedicationStatement.
 - If referencing a contained resource, both the contained resource and the referencing resource **SHALL** conform to the applicable AU Core profile.
-- Otherwise, when responding to a query, it is recommended that servers avoid using inline contained resources to represent the returned data.
+- Otherwise, it is recommended that an AU Core Responder avoids the use of contained resources unless the referenced resource does not have an independent existence apart from the resource that contains it and cannot be identified independently.
 
 Further guidance about the general use case for [contained resources](http://hl7.org/fhir/R4/references.html#contained) can be found in the base FHIR specification.
 
@@ -153,7 +153,7 @@ Example: Condition resource cellulitis of right knee
 2\. Primary finding/procedure `code` only (pre-coordinated code including body site without laterality and separate laterality qualifier)
 * For systems that have pre-coordinated coding describing a concept including body site without laterality, and have a laterality qualifier recorded separately e.g. left, right:
   * use the `code` element:
-    * `code.coding` contains the primary concept (no body site information).
+    * `code.coding` contains the primary concept including body site (without laterality).
     * `code.text` is used to describe concept fully, this can include information on recorded laterality e.g. ', Right'.
   * in this case laterality is not expressed in coded form.
 
@@ -181,7 +181,7 @@ Example: Condition resource showing coded condition that includes body site, lat
 3\. Coded `body site` with laterality and separate primary finding/procedure `code`.
 * For systems that have pre-coordinated coding describing primary concept without body site and separate body site with laterality recorded as coded value:
   * use the code element:
-    * `code.coding` contains the primary concept including body site without laterality.
+    * `code.coding` contains the primary concept alone (no body site or laterality).
     * `code.text` describes the concept fully, this can include information on recorded body site and laterality as text.
   * optionally, coded element `bodySite` may be supplied containing the coded body site with laterality.
 
@@ -225,7 +225,6 @@ Example: Condition resource showing coded condition, coded body site that includ
   * optionally, coded element bodySite may be supplied containing:
     * `bodySite.coding` contains the coded body site without laterality.
     * `bodySite.text` describes the body site concept fully, this can include information on recorded laterality as text e.g. ', Right'.
-  * coded laterality is supplied as the text in `bodySite.text`   
 
 
 Example: Condition resource with coded condition, coded body site, laterality as text only
@@ -262,7 +261,7 @@ Example: Condition resource with coded condition, coded body site, laterality as
 
 Searching resources is defined by the [FHIR RESTful API](https://hl7.org/fhir/R4/http.html) and included here for informative purposes. The [AU Core CapabilityStatements](capability-statements.html) document the server and client rules for the RESTful interactions described in this guide.
 
-All the search interactions in this guide use the `GET` command with the following syntax:
+All the search interaction examples in this guide use the HTTP GET method with the following syntax:
 
  **`GET [base]/[Resource-type]?[parameter1]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]{&[parameter2]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]&...}`**
 
@@ -289,4 +288,4 @@ In the simplest case, a search is executed by performing a GET operation in the 
 
 For this RESTful search, the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource has the name "code" for searching on the LOINC or SNOMED CT-AU code.  For more information, see the [FHIR RESTful Search API](https://hl7.org/fhir/R4/http.html#search).
 
-
+Examples in AU Core do not demonstrate the url encoding [rules for special characters](https://hl7.org/fhir/R4/search.html#escaping) e.g. "\|".
