@@ -6,7 +6,7 @@
 This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to 1.0.0.
 
 #### Changes in this version
-- Corrected requirement for both system and code values for Location, Organization, Practitioner and PractitionerRole identifier search parameter to be mandatory for Requester [FHIR-46782](https://jira.hl7.org/browse/FHIR-46782)
+- Changed the Observation  search parameter 'patient' from SHALL to MAY [FHIR-47171](https://jira.hl7.org/browse/FHIR-47171)
 
 ###  Release 1.0.0-ballot
 - Expected Publication date: 2024-08-05
