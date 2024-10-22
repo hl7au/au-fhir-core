@@ -1470,7 +1470,7 @@
     </td>
     <td>
       <div>
-        <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>MAY</strong> provide both the system and code values.</p>
+        <p>The requester <b>SHALL</b> provide both the system and code values.</p>
         <p>The responder <strong>SHALL</strong> support both.</p>
       </div>
     </td>
@@ -2108,7 +2108,7 @@
 </td>
 <td>
   <div>
-    <p>The requester <strong>SHALL</strong> provide at least a code value and <strong>SHOULD</strong> provide both the system and code values.</p>
+    <p>The requester <b>SHALL</b> provide both the system and code values.</p>
     <p>The responder <strong>SHALL</strong> support both.</p>
     <p>The requester <strong>SHOULD</strong> support search using HPI-O and ABN identifiers as defined in the profile.</p>
     <p>The responder <strong>SHOULD</strong> support search using HPI-O and ABN identifiers as defined in the profile.</p>
@@ -3680,7 +3680,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Location-identifier"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 </resource>
 <!-- MEDICATION :: DONE -->
@@ -4187,7 +4187,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Organization-identifier"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **SHOULD** provide both the system and code values. The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using HPI-O and ABN identifiers as defined in the profile. The responder **SHOULD** support search using the using HPI-O and ABN identifiers as defined in the profile."/>
+<documentation value="The requester **SHALL** provide both the system and code values. The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using HPI-O and ABN identifiers as defined in the profile. The responder **SHOULD** support search using the using HPI-O and ABN identifiers as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4458,7 +4458,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Practitioner-identifier"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values. The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using a HPI-I identifier as defined in the profile. The responder **SHOULD** support search using a HPI-I identifier as defined in the profile."/>
+<documentation value="The requester **SHALL** provide both the system and code values. The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using a HPI-I identifier as defined in the profile. The responder **SHOULD** support search using a HPI-I identifier as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -4546,7 +4546,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values. The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile. The responder **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile."/>
+<documentation value="The requester **SHALL** provide both the system and code values. The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile. The responder **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
