@@ -7,7 +7,6 @@
     <status value="active"/>
     <name value="Tindal Building"/>
     <alias value="Bobrester Medical Center"/>
-    <mode value="instance"/>
     <type>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
