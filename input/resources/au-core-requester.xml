@@ -1126,7 +1126,7 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="MAY"/>
 </extension>
 <name value="patient"/>
 <definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
