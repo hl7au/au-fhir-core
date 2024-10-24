@@ -89,17 +89,15 @@ How the system processes the resource depends on local requirements that could a
 
 When a *Must Support* element requires a more tightly stated obligation, this obligation is specified in the AU Core Requester [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition.
 
-#### Presentation of elements labelled Must Support in profiles
+#### Presentation of elements labelled Must Support and Obligation in profiles
 
-##### Presentation of elements labelled Must Support in table views
+##### Presentation of elements labelled Must Support and Obligation in table views
 
 When rendered in an implementation guide each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table".
 
-The elements labelled *Must Support* in these views are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Implementers should refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support*, and the full set of terminology requirements.
+The elements labelled *Must Support* in these views are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. The elements labelled with *Obligation* in these views are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span>.  The elements labelled *Must Support* and *Obligation* in these views are are flagged with <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span>. Implementers should refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support* or with Obligations, and the full set of terminology requirements.
 
-Implementers should take note that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile. 
-
-##### Presentation of elements labelled Must Support in raw representations
+##### Presentation of elements labelled Must Support and Obligation in raw representations
 
 When viewing the raw representation (e.g. XML or JSON) of a profile, elements labelled *Must Support* are flagged as `mustSupport` set to "true". 
 
@@ -127,6 +125,45 @@ Example: AU Core AllergyIntolerance profile showing clinicalStatus and verificat
 }
 ~~~
 
+When viewing the raw representation (e.g. XML or JSON) of a profile, elements with *Obligation* are indicated by the Obligation Extension.
+
+Example: AU Core AllergyIntolerance profile showing *Obligation* on clinicalStatus
+~~~
+{
+    "resourceType" : "StructureDefinition",
+    ...
+    "url" : "http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance",
+    ...
+    "type" : "AllergyIntolerance",
+    "baseDefinition" : "http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance",     
+    ...
+           {
+              "id" : "AllergyIntolerance.clinicalStatus",
+              "extension" : [{
+                "extension" : [{
+                "url" : "code",
+                "valueCode" : "SHALL:populate-if-known"
+            },
+            {
+                "url" : "actor",
+                "valueCanonical" : "http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"
+            }],
+            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+            },
+            {
+                "extension" : [{
+                "url" : "code",
+                "valueCode" : "SHALL:no-error"
+            },
+            {
+                "url" : "actor",
+                "valueCanonical" : "http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"
+              }],
+            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+            }],
+    ...
+}
+~~~
 
 #### Interpreting profile elements labelled Must Support
 
