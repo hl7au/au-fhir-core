@@ -863,7 +863,7 @@
 </referencePolicy>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="_id"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
@@ -1545,7 +1545,7 @@
 </referencePolicy>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="_id"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
