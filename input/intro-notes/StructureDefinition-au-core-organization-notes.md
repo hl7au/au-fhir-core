@@ -11,7 +11,7 @@
         <td>identifier</td>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using HPI-O and ABN identifiers as defined in the profile. The responder <b>SHOULD</b> support search using the using HPI-O and ABN identifiers as defined in the profile.</td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using HPI-O and ABN identifiers as defined in the profile. The responder <b>SHOULD</b> support search using the using HPI-O and ABN identifiers as defined in the profile.</td>
   </tr>
   <tr>
         <td>address</td>
@@ -46,7 +46,6 @@ The following search parameters **SHALL** be supported:
     
       1. GET [base]/Organization?identifier=http://ns.electronichealth.net.au/id/hi/hpio/1.0\|8003621566684455
       1. GET [base]/Organization?identifier=http://hl7.org.au/id/abn\|23964200000
-      1. GET [base]/Organization?identifier=23964200000
 
     *Implementation Notes:* Fetches a bundle containing any Organization resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 

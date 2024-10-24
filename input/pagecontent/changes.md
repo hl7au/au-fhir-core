@@ -7,6 +7,7 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 - Changed the Observation  search parameter 'patient' from SHALL to MAY [FHIR-47171](https://jira.hl7.org/browse/FHIR-47171)
+- Updated requirement for AU Core Requester to mandate both system and code values for identifier search parameters on Location, Organization, Practitioner and PractitionerRole [FHIR-46782](https://jira.hl7.org/browse/FHIR-46782)
 
 ###  Release 1.0.0-ballot
 - Expected Publication date: 2024-08-05
