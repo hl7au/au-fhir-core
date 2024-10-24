@@ -138,12 +138,3 @@ The list below shows the code systems used in the value sets above.
 |[v3 Code System ObservationInterpretation](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html)|[Observation Category Codes](https://hl7.org/fhir/R4/valueset-observation-interpretation.html)|FHIR|
 |[v3 Code System ParticipationType](https://hl7.org/fhir/R4/v3/ParticipationType/cs.html)|[Participant type](https://hl7.org/fhir/R4/valueset-encounter-participant-type.html)|FHIR|
 {:.grid}
-
-
-### Concept Maps
-
-See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-conceptmaps.html) for a complete discussion on concept maps and a list of concept map names used in FHIR.  Most concept maps relevant to this guide are defined in the base FHIR specification or [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html). The following concept maps are unique to this guide.
-
-**Concept maps published in the NCTS**
-- [ObservationStatus Result Available to v2 OBSERVATION RESULT STATUS](https://healthterminologies.gov.au/fhir/ConceptMap/observstatus-result-avail-to-v2-obs-result-status-1)
-- [v2 OBSERVATION RESULT STATUS to ObservationStatus Result Available](https://healthterminologies.gov.au/fhir/ConceptMap/v2-obs-result-status-to-observstatus-result-avail-1)
