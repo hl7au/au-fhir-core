@@ -8,6 +8,7 @@ This change log documents the significant updates and resolutions implemented fr
 #### Changes in this version
 - Made the following changes to AU Core Location:
   - removed Must Support flag and associated Obligation extensions from Location.identifier [FHIR-47105](https://jira.hl7.org/browse/FHIR-47105) and Location.mode [FHIR-47104](https://jira.hl7.org/browse/FHIR-47104)
+- Changed the Observation  search parameter 'patient' from SHALL to MAY [FHIR-47171](https://jira.hl7.org/browse/FHIR-47171)
 
 ###  Release 1.0.0-ballot
 - Publication date: 2024-08-05
@@ -98,6 +99,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Procedure.bodySite and added profile-specific implementation guidance on including body site information [FHIR-45017](https://jira.hl7.org/browse/FHIR-45017), [FHIR-45114](https://jira.hl7.org/browse/FHIR-45114)
   - removed Must Support from Procedure.note [FHIR-45114](https://jira.hl7.org/browse/FHIR-45114)
   - removed the cardinality constraint on Procedure.performed[x], changing it from 1..1 to 0..1 [FHIR-45109](https://jira.hl7.org/browse/FHIR-45109)
+  - removed Obligations on Procedure.bodySite [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728)
 - Removed AU Core Provenance [FHIR-45191](https://jira.hl7.org/browse/FHIR-45191).
 - Removed AU Core MedicationStatement and added to Future of AU Core that AU Core MedicationStatement is planned for AU Core R2 [FHIR-45052](https://jira.hl7.org/browse/FHIR-45052).
 - Updated mapping of AUCDI Procedure Completed Event to be represented by Procedure only [au-fhir-core #147](https://github.com/hl7au/au-fhir-core/issues/147).
@@ -172,6 +174,7 @@ This change log documents the significant updates and resolutions implemented fr
 - Clarified that multipleAnd requires comparator support for AU Core date search parameters. [FHIR46309](https://jira.hl7.org/browse/FHIR-46309)
 - Changed the following Patient search parameters:
   - birthdate search parameter support for comparators gt, le, lt, ge to be SHOULD instead of SHALL and multipleAnd support introduced as SHOULD [FHIR-45410](https://jira.hl7.org/browse/FHIR-45410)
+  - _id search parameter for AU Core Requester to be SHOULD instead of SHALL [FHIR-46390](https://jira.hl7.org/browse/FHIR-46390)
 - Changed the following Organization search parameters:
   - address search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
   - name search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
@@ -179,18 +182,26 @@ This change log documents the significant updates and resolutions implemented fr
   - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
   - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
   - updated invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match required precision to the day [FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
+  - removed constraints from Observation.hasMember.reference [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728), [FHIR-48331](https://jira.hl7.org/browse/FHIR-48331)
+  - removed Must Support and Obligations from Observation.identifier, Observation.interpretation, Observation.note, Observation.method, Observation.referenceRange, Observation.referenceRange.low, Observation.referenceRange.high, Observation.referenceRange.type and Observation.referenceRange.text [FHIR-46737](https://jira.hl7.org/browse/FHIR-46737)
 - Made the following changes to AU Core Pathology Result Observation:
   - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
   - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
   - updated invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match required precision to the day [FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
+  - removed constraints from Observation.hasMember.reference and Observation.specimen.reference [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728), [FHIR-46731](https://jira.hl7.org/browse/FHIR-46731)
+  - removed Must Support and Obligations from Observation.identifier, Observation.method and Observation.note [FHIR-46732](https://jira.hl7.org/browse/FHIR-46732)
 - Made the following changes in AU Core Requester CapabilityStatement:
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
   - corrected the Observation combined search parameter 'patient+category+status' from SHALL to SHOULD [FHIR-45390](https://jira.hl7.org/browse/FHIR-45390)
   - corrected narrative of Location identifier parameter requester requirements on providing both the system and code values from SHOULD to MAY [FHIR-46209](https://jira.hl7.org/browse/FHIR-46209)
   - replaced security and authorization requirements with pointer to Security and Privacy page [FHIR-46067](https://jira.hl7.org/browse/FHIR-46067)
+  - added missing entries for DocumentReference and RelatedPerson resources [FHIR-46546](https://jira.hl7.org/browse/FHIR-46546)
 - Made the following changes in AU Core Responder CapabilityStatement:
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
   - corrected the Observation combined search parameter 'patient+category+status' from SHALL to SHOULD [FHIR-45390](https://jira.hl7.org/browse/FHIR-45390)
   - corrected MedicationRequest combined search parameter 'patient+intent+authoredon' from SHALL to SHOULD [FHIR-46167](https://jira.hl7.org/browse/FHIR-46167)
   - corrected narrative of Location identifier parameter requester requirements on providing both the system and code values from SHOULD to MAY [FHIR-46209](https://jira.hl7.org/browse/FHIR-46209)
   - replaced security and authorization requirements with pointer to Security and Privacy page [FHIR-46067](https://jira.hl7.org/browse/FHIR-46067)
+  - corrected narrative of PractitionerRole practitioner.identifier search parameter from Medicare Provider Number to HPI-I [FHIR-47013](https://jira.hl7.org/browse/FHIR-47013)
+  - corrected support for Practitioner _id search parameter to be SHOULD instead of SHALL [FHIR-46777](https://jira.hl7.org/browse/FHIR-46777)
+  - added missing entries for DocumentReference and RelatedPerson resources [FHIR-46546](https://jira.hl7.org/browse/FHIR-46546)
