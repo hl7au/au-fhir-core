@@ -232,7 +232,7 @@
       <comment value="A patient may have multiple names with different uses or applicable periods. At least one name SHOULD be the name the patient is considered to have for administrative and record keeping purposes - family name is used to enable matching against patient records."/>
       <condition value="au-core-pat-02"/>
       <constraint>
-        <key value="au-core-pat-04"/> 
+        <key value="au-core-pat-03"/> 
         <severity value="error"/>
         <human value="At least text, family name, or given name shall be present, or if neither is available, the Data Absent Reason extension shall be present"/>
         <expression value="(text.exists() or family.exists() or given.exists()) xor extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
