@@ -44,7 +44,7 @@
 </implementationGuide>
 <rest>
 <mode value="client"/>
-<documentation value="The AU Core Requester **SHALL**:&#xA;1. Support the AU Core Patient resource profile.&#xA;1. Support at least one additional resource profile from the list of AU Core Profiles.&#xA;1. Implement the RESTful behavior according to the FHIR specification.&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support JSON source formats for all AU Core interactions.&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;The AU Core Requester **SHOULD**:&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support XML source formats for all AU Core interactions."/>
+<documentation value="The AU Core Requester **SHALL**:&#xA;1. Support the AU Core Patient resource profile.&#xA;1. Support at least one additional resource profile from the list of AU Core Profiles.&#xA;1. Implement the RESTful behaviour according to the FHIR specification.&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support JSON source formats for all AU Core interactions.&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;The AU Core Requester **SHOULD**:&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;1. Support XML source formats for all AU Core interactions."/>
 <security>
 <description value="See the [Security and Privacy](security.html) page for AU Core security requirements."/>
 </security>
@@ -292,7 +292,7 @@
 <name value="onset-date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Condition-onset-date"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
+<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -434,7 +434,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
+<documentation value="The requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;The responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -565,7 +565,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
+<documentation value="The requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;The responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -884,7 +884,7 @@
 <name value="authoredon"/>
 <definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-authoredon"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
+<documentation value="The requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;The responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -1113,7 +1113,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
+<documentation value="The requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;The responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -1210,7 +1210,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Organization-identifier"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide both the system and code values. The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using HPI-O and ABN identifiers as defined in the profile. The responder **SHOULD** support search using the using HPI-O and ABN identifiers as defined in the profile."/>
+<documentation value="The requester **SHALL** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using HPI-O and ABN identifiers as defined in the profile.&#xA;&#xA;The responder **SHOULD** support search using the using HPI-O and ABN identifiers as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -1350,7 +1350,7 @@
 <name value="birthdate"/>
 <definition value="http://hl7.org/fhir/SearchParameter/individual-birthdate"/>
 <type value="date"/>
-<documentation value="The requester **SHALL** provide a value precise to the *day*.&#xa;&#xa;The responder **SHALL** support a value a value precise to the *day*.&#xa;&#xa;The requester **SHOULD** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
+<documentation value="The requester **SHALL** provide a value precise to the *day*.&#xa;&#xa;The responder **SHALL** support a value a value precise to the *day*.&#xa;&#xa;The requester **SHOULD** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -1385,7 +1385,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Patient-identifier"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide both the system and code values. The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support search using IHI, Medicare Number, and DVA Number identifiers as defined in the profile. The responder **SHOULD** support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the profile."/>
+<documentation value="The requester **SHALL** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support search using IHI, Medicare Number, and DVA Number identifiers as defined in the profile.&#xa;&#xa;The responder **SHOULD** support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -1481,7 +1481,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Practitioner-identifier"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide both the system and code values. The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using a HPI-I identifier as defined in the profile. The responder **SHOULD** support search using a HPI-I identifier as defined in the profile."/>
+<documentation value="The requester **SHALL** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using a HPI-I identifier as defined in the profile.&#xa;&#xa;The responder **SHOULD** support search using a HPI-I identifier as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -1569,7 +1569,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide both the system and code values. The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile. The responder **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile."/>
+<documentation value="The requester **SHALL** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile.&#xa;&#xa;The responder **SHOULD** support search using a Medicare Provider Number identifier as defined in the profile."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -1642,7 +1642,7 @@
 </extension>
 <type value="Procedure"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
-<documentation value="If the requester supports the Procedure resource, the requester **SHALL** support the AU Core profile and the conformance expectations for the Procedure resource.&#xA;&#xA;The Procedure resource can communicate the clinical indication using either a code in `Procedure.reasonCode` or a reference using `Procedure.reasonReference`. Although both `Procedure.reasonCode` and `Procedure.reasonReference` are marked as Must Support, a responder is not required to support both but **SHALL** support at least one of these elements. The requester **SHALL** support both elements."/>
+<documentation value="If the requester supports the Procedure resource, the requester **SHALL** support the AU Core profile and the conformance expectations for the Procedure resource.&#xA;&#xA;The Procedure resource can communicate the clinical indication using either a code in `Procedure.reasonCode` or a reference using `Procedure.reasonReference`. Although both `Procedure.reasonCode` and `Procedure.reasonReference` are marked as Must Support, a responder is not required to support both but **SHALL** support at least one of these elements.&#xA;&#xA;The requester **SHALL** support both elements."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -1712,7 +1712,7 @@
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators 'gt', 'lt', 'ge', 'le'."/>
+<documentation value="The requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;The responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
