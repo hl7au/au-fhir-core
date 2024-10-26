@@ -286,16 +286,6 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">IPS requires minimum of 1. Must Support element in IPS.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
-            <td style="width: 25%;">TBD</td>
-            <td style="width: 25%;">TBD</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">TBD</td>
-            <td style="width: 25%;">TBD</td>
-        </tr>
-        <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
             <td style="width: 25%;">Immunization.patient.reference</td>
@@ -374,8 +364,8 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation - SH: tobacco use</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation - SH: tobacco use</a></td>
             <td style="width: 25%;">Observation.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. Must Support element in IPS.</td>
         </tr>
