@@ -243,9 +243,9 @@
       </extension>
       <path value="MedicationRequest.authoredOn"/>
       <min value="1"/>
-      <condition value="au-core-medreq-03"/>
+      <condition value="au-core-medreq-01"/>
       <constraint>
-        <key value="au-core-medreq-03"/>
+        <key value="au-core-medreq-01"/>
         <severity value="error"/>
         <human value="Date shall be precise to the day or, if not available, the Data Absent Reason extension shall be present"/>
         <expression value="(toString().length() &gt;= 8) xor extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
