@@ -292,7 +292,7 @@
 <name value="onset-date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Condition-onset-date"/>
 <type value="date"/>
-<documentation value="A requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;A responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`."/>
+<documentation value="The requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;The responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support multipleAnd, and if multipleAnd is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
