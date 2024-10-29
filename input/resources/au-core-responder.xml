@@ -1205,7 +1205,7 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="SHALL"/>
 </extension>
 <name value="name"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Organization-name"/>
