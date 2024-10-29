@@ -11,7 +11,7 @@
         <td>identifier</td>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using a HPI-I identifier as defined in the profile. The responder <b>SHOULD</b> support search using the using a HPI-I identifier as defined in the profile.</td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using a HPI-I identifier as defined in the profile. The responder <b>SHOULD</b> support search using the using a HPI-I identifier as defined in the profile.</td>
   </tr>
   <tr>
         <td>_id</td>
@@ -39,7 +39,6 @@ The following search parameters **SHALL** be supported:
     Example:
     
       1. GET [base]/Practitioner?identifier=http://ns.electronichealth.net.au/id/hi/hpii/1.0\|8003619900015717
-      1. GET [base]/Practitioner?identifier=8003619900015717
 
     *Implementation Notes:* Fetches a bundle containing any Practitioner resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
