@@ -652,7 +652,7 @@
 </referencePolicy>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <name value="address"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Location-address"/>
