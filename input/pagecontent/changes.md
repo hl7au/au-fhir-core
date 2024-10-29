@@ -1,16 +1,20 @@
 ###  Release 1.0.0
-- Expected Publication date: 2025-01
+- Expected Publication date: 2025-01-24
 - Expected Publication status: TBC
 - Based on FHIR version: 4.0.1
 
 This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to 1.0.0.
 
 #### Changes in this version
+- Made the following changes to AU Core Location:
+  - removed Must Support flag and associated Obligation extensions from Location.identifier [FHIR-47105](https://jira.hl7.org/browse/FHIR-47105) and Location.mode [FHIR-47104](https://jira.hl7.org/browse/FHIR-47104)
 - Changed the Observation  search parameter 'patient' from SHALL to MAY [FHIR-47171](https://jira.hl7.org/browse/FHIR-47171)
+- Removed the requirement for including an offset in the Patient 'birthdate' search parameter [FHIR-47150](https://jira.hl7.org/browse/FHIR-47150)
+- Updated requirement for AU Core Requester to mandate both system and code values for identifier search parameters on Location, Organization, Practitioner and PractitionerRole [FHIR-46782](https://jira.hl7.org/browse/FHIR-46782)
 
 ###  Release 1.0.0-ballot
-- Expected Publication date: 2024-08-05
-- Expected Publication status: Ballot
+- Publication date: 2024-08-05
+- Publication status: Ballot
 - Based on FHIR version: 4.0.1
 
 This change log documents the significant updates and resolutions implemented from version 0.3.0-ballot to 1.0.0-ballot.
