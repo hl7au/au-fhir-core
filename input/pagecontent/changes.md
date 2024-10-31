@@ -13,6 +13,7 @@ This change log documents the significant updates and resolutions implemented fr
 - Changed the Observation  search parameter 'patient' from SHALL to MAY [FHIR-47171](https://jira.hl7.org/browse/FHIR-47171)
 - Removed the requirement for including an offset in the Patient 'birthdate' search parameter [FHIR-47150](https://jira.hl7.org/browse/FHIR-47150)
 - Updated requirement for AU Core Requester to mandate both system and code values for identifier search parameters on Location, Organization, Practitioner and PractitionerRole [FHIR-46782](https://jira.hl7.org/browse/FHIR-46782)
+- Changed the Location search parameter 'address' from SHALL to SHOULD [FHIR-47107](https://jira.hl7.org/browse/FHIR-47107)
 
 ###  Release 1.0.0-ballot
 - Publication date: 2024-08-05
