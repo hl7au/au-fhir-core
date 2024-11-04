@@ -138,8 +138,8 @@
         <key value="au-core-obs-01"/>
         <severity value="error"/>
         <human value="Date shall be at least to day"/>
-        <expression value="$this is DateTime implies $this.toString().length() &gt;= 8"/>
-        <xpath value="f:matches(effectiveDateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)"/>
+        <expression value="(($this is dateTime implies $this.toString().length() >= 10) and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').value.exists().not()) xor ($this.hasValue().not() and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').value.exists())"/>
+        <xpath value="((string-length(.) >= 10 and not(extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason']/value))) != (not(.) and extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason']/value)"/>
         <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult"/>
       </constraint>
       <mustSupport value="true"/>
