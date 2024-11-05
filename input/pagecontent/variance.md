@@ -8,7 +8,7 @@ If a FHIR implementation guide cannot comply with an AU Core profile or reuse an
 
 The Variance Statement identifies where an HL7 Australia published FHIR implementation guide does not meet the expectations set by AU Base and/or AU Core. It also identifies resources not profiled in AU Base or AU Core, facilitating the FHIR Work Group's assessment for potential further development. Additionally, the Variance Statement page indicates where the HL7 Australia FHIR IG fully complies with AU Base or AU Core.
 
-The Variance Statement undergoes review and assessment by the FHIR Work Group as part of the FHIR IG balloting process. For more details on the requirements of a Variance Statement, refer to [AU FHIR IG Variance Requirements](https://confluence.hl7.org/display/HA/Process%3A++AU+FHIR+IG+Variance+Requirements).
+The Variance Statement undergoes review and assessment by the FHIR Work Group as part of the FHIR IG balloting process. For more details on the requirements of a Variance Statement, refer to [AU FHIR IG Variance Requirements](https://confluence.hl7.org/display/HA/Process%3A++AU+FHIR+IG+Variance+Requirements?preview=/239212390/281217432/HL7%20AU%20Variance%20Requirements%20v1.0.pdf).
 
 
 ### Variance from AU Base
