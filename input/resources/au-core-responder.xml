@@ -817,7 +817,7 @@
 </extension>
 <type value="MedicationRequest"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
-<documentation value="MedicationRequest resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The responder **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the responder **SHALL** support the `_include` parameter for searching this element. The requester application **SHALL** support all methods.&#xA;&#xA;If the responder supports the MedicationRequest resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the MedicationRequest resource.&#xA;&#xA;The MedicationRequest resource can communicate the clinical indication using either a code in `MedicationRequest.reasonCode` or a reference using `MedicationRequest.reasonReference`. Although both `MedicationRequest.reasonCode` and `MedicationRequest.reasonReference` are marked as Must Support, a responder is not required to support both but **SHALL** support at least one of these elements. The requester **SHALL** support both elements."/>
+<documentation value="If the responder supports the MedicationRequest resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the MedicationRequest resource.&#xA;&#xA;MedicationRequest resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The responder **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the responder **SHALL** support the `_include` parameter for searching this element. The requester application **SHALL** support all methods.&#xA;&#xA;The MedicationRequest resource can communicate the clinical indication using either a code in `MedicationRequest.reasonCode` or a reference using `MedicationRequest.reasonReference`. Although both `MedicationRequest.reasonCode` and `MedicationRequest.reasonReference` are marked as Must Support, a responder is not required to support both but **SHALL** support at least one of these elements. The requester **SHALL** support both elements.&#xa;&#xa;The responder **SHOULD** support the `_include` parameter for `MedicationRequest:medication`.The requester **SHOULD** support the `_include` parameter for `MedicationRequest:medication`."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -868,7 +868,7 @@
 </interaction>
 <searchInclude value="MedicationRequest:medication">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 </searchInclude>
 <referencePolicy value="resolves">
