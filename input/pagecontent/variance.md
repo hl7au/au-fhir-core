@@ -1,4 +1,4 @@
-This version of the AU Core FHIR IG complies with Version 1.0 of the [HL7 Australia FHIR Work Group AU Variance Requirements](https://confluence.hl7.org/display/HA/Process%3A++AU+FHIR+IG+Variance+Requirements?preview=/239212390/281217432/HL7%20AU%20Variance%20Requirements%20v1.0.pdf).
+This version of the AU Core FHIR IG complies with [Version 1.0 of the HL7 Australia FHIR Work Group AU Variance Requirements](https://confluence.hl7.org/display/HA/Process%3A++AU+FHIR+IG+Variance+Requirements?preview=/239212390/281217432/HL7%20AU%20Variance%20Requirements%20v1.0.pdf).
 
 HL7 Australia published FHIR implementation guides under the governance of the HL7 Australia FHIR Work Group are required to follow specific publishing guidelines:
 - **SHOULD** use AU Core profiles
