@@ -114,7 +114,7 @@ Example: Patient resource with interpreter required and language is known
 When exchanging `Procedure` and `Condition` resources using AU Core profiles there may be a need to represent a relevant body site and associated laterality using `CodeableConcept` elements. In FHIR, body site and associated laterality can be recorded in various ways and implementers are encourage to consider the following points when implementing:
 
 * The `bodySite` element is not *Must Support* in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
-* The `CodeableConcept.text` element is system populated and may reflect more specific detail than the `CodeableConcept`.coding concepts provided.
+* The `CodeableConcept.text` element is system populated and may reflect more specific detail than the `CodeableConcept.coding` concepts provided.
 
 AU Core provides the following guidance for what to do in each of the following scenarios:
 

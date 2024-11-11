@@ -11,16 +11,16 @@
         <td>identifier</td>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using HPI-O and ABN identifiers as defined in the profile. The responder <b>SHOULD</b> support search using the using HPI-O and ABN identifiers as defined in the profile.</td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using HPI-O and ABN identifiers as defined in the profile. The responder <b>SHOULD</b> support search using the using HPI-O and ABN identifiers as defined in the profile.</td>
   </tr>
-  <tr>
-        <td>address</td>
-        <td><b>SHOULD</b></td>
+    <tr>
+        <td>name</td>
+        <td><b>SHALL</b></td>
         <td><code>string</code></td>
         <td></td>
   </tr>
   <tr>
-        <td>name</td>
+        <td>address</td>
         <td><b>SHOULD</b></td>
         <td><code>string</code></td>
         <td></td>
@@ -46,10 +46,18 @@ The following search parameters **SHALL** be supported:
     
       1. GET [base]/Organization?identifier=http://ns.electronichealth.net.au/id/hi/hpio/1.0\|8003621566684455
       1. GET [base]/Organization?identifier=http://hl7.org.au/id/abn\|23964200000
-      1. GET [base]/Organization?identifier=23964200000
 
     *Implementation Notes:* Fetches a bundle containing any Organization resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
+1. **SHALL** support searching based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
+    
+    `GET [base]/Organization?name=[string]`
+
+    Example:
+    
+      1. GET [base]/Organization?name=Hospital
+
+    *Implementation Notes:* Fetches a bundle of all Organization resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 #### Optional Search Parameters:
 
@@ -64,16 +72,6 @@ The following search parameters **SHOULD** be supported:
       1. GET [base]/Organization?address=QLD
 
     *Implementation Notes:* Fetches a bundle of all Organization resources matching the address ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
-    
-1. **SHOULD** support searching based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
-    
-    `GET [base]/Organization?name=[string]`
-
-    Example:
-    
-      1. GET [base]/Organization?name=Hospital
-
-    *Implementation Notes:* Fetches a bundle of all Organization resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
     
 1. **SHOULD** support searching using the **[`_id`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
     

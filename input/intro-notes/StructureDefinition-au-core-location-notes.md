@@ -8,14 +8,14 @@
     <th>Requirements (when used alone or in combination)</th>
   </tr>
   <tr>
-        <td>address</td>
+        <td>name</td>
         <td><b>SHALL</b></td>
         <td><code>string</code></td>
         <td></td>
   </tr>
-  <tr>
-        <td>name</td>
-        <td><b>SHALL</b></td>
+    <tr>
+        <td>address</td>
+        <td><b>SHOULD</b></td>
         <td><code>string</code></td>
         <td></td>
   </tr>
@@ -41,26 +41,13 @@
         <td>identifier</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
   </tr>
  </tbody>
 </table>
 
 
 #### Mandatory Search Parameters
-
-The following search parameters **SHALL** be supported:
-
-1. **SHALL** support searching based on text address using the **[`address`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
-    
-    `GET [base]/Location?address=[string]`
-
-    Example:
-    
-      1. GET [base]/Location?address=QLD
-      1. GET [base]/Location?address=QLD
-
-    *Implementation Notes:* Fetches a bundle of all Location resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 1. **SHALL** support searching based on text name using the **[`name`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
     
@@ -76,6 +63,17 @@ The following search parameters **SHALL** be supported:
 #### Optional Search Parameters:
 
 The following search parameters **SHOULD** be supported:
+
+1. **SHOULD** support searching based on text address using the **[`address`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
+    
+    `GET [base]/Location?address=[string]`
+
+    Example:
+    
+      1. GET [base]/Location?address=QLD
+      1. GET [base]/Location?address=QLD
+
+    *Implementation Notes:* Fetches a bundle of all Location resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 1. **SHOULD** support searching using the **[`address-city`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
     

@@ -12,13 +12,13 @@
         <td>identifier</td>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/>The requester <b>SHOULD</b> support search using a Medicare Provider Number identifier as defined in the profile. The responder <b>SHOULD</b> support search using a Medicare Provider Number identifier as defined in the profile.<br/><br/>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile. The responder <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile.</td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/>The requester <b>SHOULD</b> support search using a Medicare Provider Number identifier as defined in the profile. The responder <b>SHOULD</b> support search using a Medicare Provider Number identifier as defined in the profile.</td>
   </tr>
    <tr>
         <td>practitioner</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code></td>
-        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values.<br/><br/>The requester <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile. The responder <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile.</td>
   </tr>
   <tr>
         <td>_id</td>
@@ -54,7 +54,6 @@ The following search parameters **SHALL** be supported:
     
       1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-prescriber-number\|553255&amp;_include=PractitionerRole:practitioner
       1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-prescriber-number\|553255
-      1. GET [base]/PractitionerRole?identifier=553255
 
     *Implementation Notes:* Fetches a bundle containing any PractitionerRole resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
