@@ -120,8 +120,8 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     Example:
     
-      1. GET [base]/PractitionerRole?specialty=http://snomed.info/sct\|304292004
-      1. GET [base]/PractitionerRole?specialty=http://snomed.info/sct\|304292004&amp;_include=PractitionerRole:practitioner
+      1. GET [base]/PractitionerRole?role=http://snomed.info/sct\|304292004
+      1. GET [base]/PractitionerRole?role=http://snomed.info/sct\|304292004&amp;_include=PractitionerRole:practitioner
 
-    *Implementation Notes:* Fetches a bundle of all PractitionerRole resources for the specified specialty ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all PractitionerRole resources for the specified role ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
