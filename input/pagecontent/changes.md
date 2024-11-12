@@ -1,6 +1,6 @@
 ###  Release 1.0.0
 - Expected Publication date: 2025-01-24
-- Expected Publication status: TBC
+- Expected Publication status: Working Standard
 - Based on FHIR version: 4.0.1
 
 This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to 1.0.0.
