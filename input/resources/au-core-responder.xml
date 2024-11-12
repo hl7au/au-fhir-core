@@ -78,42 +78,6 @@
 </extension>
 <code value="search-type"/>
 </interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
-</interaction>
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -214,42 +178,6 @@
 <valueCode value="SHALL"/>
 </extension>
 <code value="search-type"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
 </interaction>
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -373,42 +301,6 @@
 </extension>
 <code value="search-type"/>
 </interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
-</interaction>
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -512,42 +404,6 @@
 </extension>
 <code value="search-type"/>
 </interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
-</interaction>
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -608,42 +464,6 @@
 <valueCode value="SHALL"/>
 </extension>
 <code value="search-type"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
 </interaction>
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -719,42 +539,6 @@
 </extension>
 <code value="search-type"/>
 </interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
-</interaction>
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -829,42 +613,6 @@
 <valueCode value="SHALL"/>
 </extension>
 <code value="search-type"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
 </interaction>
 <searchInclude value="MedicationRequest:medication">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -1054,42 +802,6 @@
 </extension>
 <code value="search-type"/>
 </interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
-</interaction>
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -1159,42 +871,6 @@
 <valueCode value="SHALL"/>
 </extension>
 <code value="search-type"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
 </interaction>
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -1298,42 +974,6 @@
 </extension>
 <code value="search-type"/>
 </interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
-</interaction>
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -1429,42 +1069,6 @@
 </extension>
 <code value="search-type"/>
 </interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
-</interaction>
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -1515,42 +1119,6 @@
 <valueCode value="SHALL"/>
 </extension>
 <code value="search-type"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
 </interaction>
 <searchInclude value="PractitionerRole:practitioner">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -1661,42 +1229,6 @@
 <valueCode value="SHALL"/>
 </extension>
 <code value="search-type"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="create"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="update"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="delete"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="vread"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="patch"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-instance"/>
 </interaction>
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
