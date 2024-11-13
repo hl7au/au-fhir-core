@@ -15,6 +15,7 @@ This change log documents the significant updates and resolutions implemented fr
 - Updated requirement for AU Core Requester to mandate both system and code values for identifier search parameters on Location, Organization, Practitioner and PractitionerRole [FHIR-46782](https://jira.hl7.org/browse/FHIR-46782)
 - Changed the Organization 'name' search parameter from SHOULD to SHALL [FHIR-47109](https://jira.hl7.org/browse/FHIR-47109)
 - Changed the Location 'address' search parameter from SHALL to SHOULD [FHIR-47107](https://jira.hl7.org/browse/FHIR-47107)
+- Added a PractitionerRole 'role' search parameter as a SHOULD [FHIR-47115](https://jira.hl7.org/browse/FHIR-47115)
 - Changed MedicationRequest search parameters 'patient+intent' and 'patient+intent+status' from SHALL to SHOULD, and added a new MedicationRequest search parameter 'patient+status' as a SHALL [FHIR-47073](https://jira.hl7.org/browse/FHIR-47073)
 
 ###  Release 1.0.0-ballot
