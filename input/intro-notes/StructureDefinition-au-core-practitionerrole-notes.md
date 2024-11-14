@@ -33,6 +33,12 @@
         <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
   </tr>
   <tr>
+        <td>role</td>
+        <td><b>SHOULD</b></td>
+        <td><code>token</code></td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
+  </tr>
+  <tr>
         <td>organization</td>
         <td><b>MAY</b></td>
         <td><code>reference</code></td>
@@ -100,4 +106,16 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/PractitionerRole?specialty=http://snomed.info/sct\|62247001&amp;_include=PractitionerRole:practitioner
 
     *Implementation Notes:* Fetches a bundle of all PractitionerRole resources for the specified specialty ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+
+1. **SHOULD** support searching using the **[`role`](https://hl7.org/fhir/R4/practitionerrole.html#search)** search parameter:
+    - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `PractitionerRole:practitioner`
+
+    `GET [base]/PractitionerRole?role={system|}[code]`
+
+    Example:
+    
+      1. GET [base]/PractitionerRole?role=http://snomed.info/sct\|304292004
+      1. GET [base]/PractitionerRole?role=http://snomed.info/sct\|304292004&amp;_include=PractitionerRole:practitioner
+
+    *Implementation Notes:* Fetches a bundle of all PractitionerRole resources for the specified role ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
