@@ -290,9 +290,11 @@ There are situations when information for a particular data element is missing a
 
 If the source system does not know the value for an optional element (minimum cardinality = 0), including elements labelled *Must Support*, the data element **SHALL** be omitted from the resource.  
 
+In AU Core Observation resources, `Observation.value` is conditionally mandatory. If the source system does not know the value for `Observation.value`, `Observation.dataAbsentReason` **SHALL** be used to capture the absence. Noting that other meaningful values can be captured in Observation.dataAbsentReason beyond `missing` or `suppressed`. 
+
 #### Missing Must Support and Mandatory Data
 
-If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system does not know the value or the reason the value is absent. The core specification provides guidance for what to do in this situation, which is summarised below.
+If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system does not know the value or the reason the value is absent.
 
 1.  For *non-coded* data elements where the applicable AU Core profile does not mandate a sub-element
     - use the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) 
