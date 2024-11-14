@@ -92,6 +92,7 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Guidance](guidance.html): These pages list the guidance for this guide.
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide.
   - [Medicine Information](medicine-information.html): This page provides guidance on constructing medication related resources.
+  - [Sex and Gender](sex-and-gender.html): This page provides guidance on the representation of sex, gender, and related concepts.
   - [AU Core Data for Interoperability](aucdi.html): This page maps AUCDI data groups and elements to FHIR artefacts in AU Core.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Core, AUCDI, and other implementation guides.
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base.
