@@ -540,12 +540,6 @@
 </extension>
 <code value="read"/>
 </interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="search-type"/>
-</interaction>
 <referencePolicy value="resolves">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
