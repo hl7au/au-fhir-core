@@ -1,11 +1,13 @@
 ###  Release 1.0.0
 - Expected Publication date: 2025-01-24
-- Expected Publication status: TBC
+- Expected Publication status: Working Standard
 - Based on FHIR version: 4.0.1
 
 This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to 1.0.0.
 
 #### Changes in this version
+- Made the following changes to AU Core Diagnostic Result Observation:
+  - corrected base profile to AU Base Diagnostic Observation [FHIR-47116](https://jira.hl7.org/browse/FHIR-47116)
 - Made the following changes to AU Core Location:
   - removed Must Support flag and associated Obligation extensions from Location.identifier [FHIR-47105](https://jira.hl7.org/browse/FHIR-47105) and Location.mode [FHIR-47104](https://jira.hl7.org/browse/FHIR-47104)
 - Changed the Observation  search parameter 'patient' from SHALL to MAY [FHIR-47171](https://jira.hl7.org/browse/FHIR-47171)
@@ -64,7 +66,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from MedicationRequest.substitution, MedicationRequest.substitution.allowed[x] [FHIR-45088](https://jira.hl7.org/browse/FHIR-45088)
   - added Must Support to MedicationRequest.reasonReference [FHIR-45090](https://jira.hl7.org/browse/FHIR-45090)
   - support for AMT codes and PBS Item Codes in MedicationRequest.medicationCodeableConcept changed to define slicing in AU Core (no longer inherited from AU Base as per [FHIR-44821](https://jira.hl7.org/browse/FHIR-44821)). Slicing discriminator changed from slicing by value:system to slicing by value set and the binding strength has been corrected to required. [FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
-  - updated invariant au-core-medreq-03 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements, and changed the length check from >= 10 to >= 8 to match required precision to the day [FHIR-46417](https://jira.hl7.org/browse/FHIR-46417)
+  - updated invariant au-core-medreq-01 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [FHIR-46417](https://jira.hl7.org/browse/FHIR-46417)
 - Made the following changes to AU Core Medication:
   - removal of Must Support from Medication.manufacturer [FHIR-45130](https://jira.hl7.org/browse/FHIR-45130)
   - removed Must Support from Medication.form [FHIR-45221](https://jira.hl7.org/browse/FHIR-45221)
