@@ -1,10 +1,5 @@
 ### Profile specific implementation guidance
-- When populating the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension for Sex Assigned at Birth:
-  - *Male* may be represented by sending the SNOMED CT code 248153007\|Male\|
-  - *Female* may be represented by sending the SNOMED CT code 248152002\|Female\|
-  - *Intersex* may be represented by sending the SNOMED CT code 32570691000036108\|Intersex\|
-  - *Indeterminate sex* may be represented by sending the SNOMED CT code 32570681000036106\|Indeterminate sex\|
-Refer to [Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#sex-assigned-at-birth) in AU Base for further guidance.
+Refer to the guidance on [Sex and Gender](sex-and-gender) in AU Core, the guidance on [Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html) in AU Base and the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
 
 **Examples:**
 
