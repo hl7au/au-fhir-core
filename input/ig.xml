@@ -751,34 +751,45 @@
 				</page>
 			</page>
 			<page>
-				<nameUrl value="profiles-and-extensions.html"/>
-				<title value="Profiles and Extensions"/>
-				<generation value="markdown"/>
-			</page>
-			<page>
-				<nameUrl value="search-parameters.html"/>
-				<title value="Search Parameters"/>
-				<generation value="markdown"/>
-			</page>
-			<page>
-				<nameUrl value="terminology.html"/>
-				<title value="Terminology"/>
-				<generation value="markdown"/>
-			</page>
-			<page>
 				<nameUrl value="security.html"/>
 				<title value="Security and Privacy"/>
 				<generation value="markdown"/>
 			</page>
 			<page>
-				<nameUrl value="capability-statements.html"/>
-				<title value="Capability Statements"/>
+				<nameUrl value="fhirartefacts.html"/>
+				<title value="FHIR Artefacts"/>
 				<generation value="markdown"/>
-			</page>
-			<page>
-				<nameUrl value="actors.html"/>
-				<title value="Actor Definitions"/>
-				<generation value="markdown"/>
+				<page>
+					<nameUrl value="artifacts.html"/>
+					<title value="Artefacts Summary"/>
+					<generation value="html"/>
+				</page>
+				<page>
+					<nameUrl value="profiles-and-extensions.html"/>
+					<title value="Profiles and Extensions"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="search-parameters.html"/>
+					<title value="Search Parameters"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="terminology.html"/>
+					<title value="Terminology"/>
+					<generation value="markdown"/>
+				</page>
+
+				<page>
+					<nameUrl value="capability-statements.html"/>
+					<title value="Capability Statements"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="actors.html"/>
+					<title value="Actor Definitions"/>
+					<generation value="markdown"/>
+				</page>
 			</page>
 			<page>
 				<nameUrl value="examples.html"/>
