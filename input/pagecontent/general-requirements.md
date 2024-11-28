@@ -238,10 +238,10 @@ The table below provides a list of AU Core profile elements that allow multiple 
 
 AU Core Profile |Must Support Element|Data Types
 ---|---|---
-AU Core AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, Age, Period, Range
-AU Core Condition|Condition.onset[x]|dateTime, Age, Period, Range
-AU Core Condition|Condition.abatement[x]|dateTime, Age, Period, Range
-AU Core Diagnostic Result Observation|Observation.effective[x]|dateTime, Period, Timing, instant
+AU Core AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
+AU Core Condition|Condition.onset[x]|dateTime, age, Period, Range
+AU Core Condition|Condition.abatement[x]|dateTime, age, Period, Range
+AU Core Diagnostic Result Observation|Observation.effective[x]|dateTime, Period
 AU Core Pathology Result Observation|Observation.effective[x]|dateTime, Period
 AU Core Diagnostic Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU Core Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
