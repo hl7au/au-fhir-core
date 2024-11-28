@@ -1296,17 +1296,5 @@
 </extension>
 <code value="batch"/>
 </interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="search-system"/>
-</interaction>
-<interaction>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<code value="history-system"/>
-</interaction>
 </rest>
 </CapabilityStatement>
