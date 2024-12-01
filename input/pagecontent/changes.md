@@ -25,7 +25,7 @@ This change log documents the significant updates and resolutions implemented fr
   - Changed the Location 'address' search parameter from SHALL to SHOULD [FHIR-47107](https://jira.hl7.org/browse/FHIR-47107)
   - Added a PractitionerRole 'role' search parameter as a SHOULD [FHIR-47115](https://jira.hl7.org/browse/FHIR-47115)
   - Changed MedicationRequest search parameters 'patient+intent' and 'patient+intent+status' from SHALL to SHOULD, and added a new MedicationRequest search parameter 'patient+status' as a SHALL [FHIR-47073](https://jira.hl7.org/browse/FHIR-47073)
-  - removed Location search parameter 'identifier' [FHIR-48927](https://jira.hl7.org/browse/FHIR-46209)
+  - removed Location search parameter 'identifier' [FHIR-48927](https://jira.hl7.org/browse/FHIR-48927)
 - Made the following changes in AU Core Responder CapabilityStatement:
   - replaced security and authorization requirements with pointer to Security and Privacy page [FHIR-46067](https://jira.hl7.org/browse/FHIR-46067)
   - corrected narrative of PractitionerRole practitioner.identifier search parameter from Medicare Provider Number to HPI-I [FHIR-47013](https://jira.hl7.org/browse/FHIR-47013)
@@ -38,7 +38,7 @@ This change log documents the significant updates and resolutions implemented fr
   - Changed the Location 'address' search parameter from SHALL to SHOULD [FHIR-47107](https://jira.hl7.org/browse/FHIR-47107)
   - Added a PractitionerRole 'role' search parameter as a SHOULD [FHIR-47115](https://jira.hl7.org/browse/FHIR-47115)
   - Changed MedicationRequest search parameters 'patient+intent' and 'patient+intent+status' from SHALL to SHOULD, and added a new MedicationRequest search parameter 'patient+status' as a SHALL [FHIR-47073](https://jira.hl7.org/browse/FHIR-47073)
-  - removed Location search parameter 'identifier' [FHIR-48927](https://jira.hl7.org/browse/FHIR-46209)
+  - removed Location search parameter 'identifier' [FHIR-48927](https://jira.hl7.org/browse/FHIR-48927)
 
 
 ###  Release 1.0.0-ballot
