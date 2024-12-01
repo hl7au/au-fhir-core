@@ -98,8 +98,8 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Comparison with other national and international IGs](comparison.html): This page provides comparison between AU Core profiles and other national, or international implementation guides.
   - [Future of AU Core](future.html): This page outlines the approach to developing AU Core and yearly update cycle.
 - [Security and Privacy](security.html): This page documents the AU Core general security and privacy requirements and recommendations.
-- [FHIR Artefacts](fhirartefacts.html): These pages provide details of the FHIR artefacts defined in this guide.
-  - [Artefacts Summary](artifacts.html): This page provides detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
+- [FHIR Artefacts](fhirartefacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
+  - [Artefacts Summary](artifacts.html): This page lists the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to exchange data. Each profile page includes a narrative description and guidance, formal definition and a "Notes" section that summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.
   - [Search Parameters](search-parameters.html): This page lists the search parameters extended for use in this guide for use in AU Core operations.
   - [Terminology](terminology.html): This page lists the value sets and code systems supported in this guide.
