@@ -1,9 +1,9 @@
-###  Release TBD
-- Publication date: TBD
-- Publication status: TBD
+###  Release 1.0.0-preview
+- Publication date: 2024-12-02
+- Publication status: Preview
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to TBD.
+This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to 1.0.0-preview.
 
 #### Changes in this version
 - Made the following changes to AU Core Diagnostic Result Observation:

@@ -12,7 +12,7 @@ The Variance Statement undergoes review and assessment by the FHIR Work Group as
 
 
 ### Variance from AU Base
-This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 4.2.2-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-base/)).
+This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 4.2.2-preview ([4.2.2-preview](https://hl7.org.au/fhir/4.2.2-preview/index.html)).
 
 #### Additionally Profiled Resources
 
