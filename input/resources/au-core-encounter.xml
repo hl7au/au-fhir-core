@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-core-encounter"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="1"/>
+    <valueInteger value="2"/>
   </extension>
   <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
   <name value="AUCoreEncounter"/>
