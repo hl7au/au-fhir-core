@@ -65,7 +65,6 @@ The following search parameters **SHOULD** be supported:
     Example:
     
       1. GET [base]/Location?address=QLD
-      1. GET [base]/Location?address=QLD
 
     *Implementation Notes:* Fetches a bundle of all Location resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
