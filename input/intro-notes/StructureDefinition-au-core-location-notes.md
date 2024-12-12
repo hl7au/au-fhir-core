@@ -66,7 +66,7 @@ The following search parameters **SHOULD** be supported:
     
       1. GET [base]/Location?address=QLD
 
-    *Implementation Notes:* Fetches a bundle of all Location resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
+    *Implementation Notes:* Fetches a bundle of all Location resources matching the address ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 1. **SHOULD** support searching using the **[`address-city`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
     
