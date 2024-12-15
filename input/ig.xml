@@ -533,7 +533,7 @@
 				<reference value="Organization/bobrester-medical-center"/>
 			</reference>
 			<name value="Organization - Bobrester Medical Centre"/>
-			<description value="Shows an example of an organisation resource for the *AU Core Organization* profile. Organisation: Bobrester Medical Center, with ABN identifier, type as Medical Center, and contact details including email and phone number. "/>
+			<description value="Shows an example of an organisation, Bobrester Medical Center, for the *AU Core Organization* profile, with with ABN identifier, type as Medical Center, and contact details including email and phone number. "/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<resource>
@@ -541,7 +541,7 @@
 				<reference value="Organization/murrabit-hospital"/>
 			</reference>
 			<name value="Organization - Murrabit Public Hospital"/>
-			<description value="Shows an example of an organisation resource for the *AU Core Organization* profile. Organisation: Murrabit Public Hospital, with HPI-O identifier, type as Hospital, and contact details including multiple phone numbers and email address."/>
+			<description value="Shows an example of an organisation, Murrabit Public Hospital, for the *AU Core Organization* profile, with an HPI-O, type as Hospital, and contact details including multiple phone numbers and email address."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<resource>
@@ -549,7 +549,7 @@
 				<reference value="Organization/mitchells-hill-audiology"/>
 			</reference>
 			<name value="Organization - Mitchells Hill Audiology"/>
-			<description value="Shows an example of an organisation resource for the *AU Core Organization* profile. Organisation: Mitchells Hill Audiology, with HPI-O and ABN identifiers, type specified as an audiology clinic, with contact details and an address."/>
+			<description value="Shows an example of an organisation, Mitchells Hill Audiology, for the *AU Core Organization* profile, with HPI-O and ABN identifiers, type specified as an audiology clinic, with contact details and an address."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<!--PATIENT EXAMPLES-->
@@ -632,7 +632,7 @@
 				<reference value="PractitionerRole/bobrester-bob-gp"/>
 			</reference>
 			<name value="PractitionerRole - General practitioner"/>
-			<description value="Shows an example of a general practitioner for the *AU Core PractitionerRole* profile with Practitioner and Organisation references."/>
+			<description value="Shows an example of a General Practitioner role for the *AU Core PractitionerRole*, including an employee number identifier, contact details and and references to the associated Practitioner and Organization."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
@@ -640,7 +640,7 @@
 				<reference value="PractitionerRole/cardiologist-sallie-sutherland"/>
 			</reference>
 			<name value="PractitionerRole - Cardiologist"/>
-			<description value="Shows an example of a cardiologist, Dr. Sallie Sutherland, for the *AU Core PractitionerRole*. The resource includes a Medicare Provider Number, role details, and references to the Practitioner, Organization and Location."/>
+			<description value="Shows an example of a Cardiologist role for the *AU Core PractitionerRole*, including a Medicare Provider Number identifier, contact details, and references to the associated Practitioner, Organization, and Location."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
@@ -648,7 +648,7 @@
 				<reference value="PractitionerRole/surgeon-chau-fryer"/>
 			</reference>
 			<name value="PractitionerRole - Surgeon"/>
-			<description value="Shows an example of a surgeon, Dr. Chau Fryer, for the *AU Core PractitionerRole* profile. The resource includes a Medicare Provider Number, role details, and references to the Practitioner, Organization, and Location."/>
+			<description value="Shows an example of a Surgeon role for the *AU Core PractitionerRole* profile, including a Medicare Provider Number identifier, contact details, and references to the associated Practitioner, Organization, and Location."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
@@ -656,7 +656,7 @@
 				<reference value="PractitionerRole/nephrologist-darleen-mackay"/>
 			</reference>
 			<name value="PractitionerRole - Nephrologist"/>
-			<description value="Shows an example of a nephrologist, Dr. Darleen Mackay, for the *AU Core PractitionerRole* profile. The resource includes an employee number, role details, and references to the Practitioner."/>
+			<description value="Shows an example of a Nephrologist role for the *AU Core PractitionerRole* profile,  including an employee number identifier, contact details, and a reference to the associated Practitioner."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<!--PROCEDURE EXAMPLES-->
