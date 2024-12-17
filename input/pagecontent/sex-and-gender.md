@@ -36,7 +36,7 @@ Example: Patient resource with name to use
 
 ### Pronouns​
 
-<p class="stu-note">Must Support and Obligations for the [Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns) extension are requirements for future consideration.</p>
+<p class="stu-note">Must Support and Obligations for the <a href="http://hl7.org/fhir/StructureDefinition/individual-pronouns">Individual Pronouns</a> extension are requirements for future consideration.</p>
 
 
 AU Core supports representation and exchange of the Pronouns data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
@@ -114,7 +114,7 @@ Example: Patient resource with prefer not to answer for pronouns
 
 ### Gender Identity (GI)
 
-<p class="stu-note">Must Support and Obligations for the [Individual Gender Identity](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) extension are requirements for future consideration.</p>
+<p class="stu-note">Must Support and Obligations for the <a href="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">Individual Gender Identity</a> extension are requirements for future consideration.</p>
 
 AU Core supports representation and exchange of the Gender Identity data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) and aligned to [Australian Bureau of Statics Standard for Sex, Gender, Variations of Sex Characteristics and Sexual Orientation Variables, 2020](https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release#gender) in:
 - [AU Core Patient](StructureDefinition-au-core-patient.html)
@@ -157,11 +157,11 @@ Example: Patient resource with gender identity
 }  
 ~~~
 
-### Recorded Sex or Gender
+### Recorded Sex or Gender (RSG)
 
-<p class="stu-note">Must Support and Obligations for the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension are requirements for future consideration.</p>
+<p class="stu-note">Must Support and Obligations for the <a href="https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex or Gender</a> extension are requirements for future consideration.</p>
 
-AU Core allows representation and exchange of the Recorded Sex or Gender (RSG) data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)).  RSG is represented using the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension.  
+AU Core allows representation and exchange of the Recorded Sex or Gender data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)).  RSG is represented using the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension.  
 
 It should be noted the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension is not marked as *Must Support* in AU Core.  See [AU Base Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#recorded-sex-or-gender) for further guidance on the use of RSG in Patient, Practitoner and RelatedPerson resources.
 
