@@ -516,15 +516,6 @@
 <definition value="http://hl7.org/fhir/SearchParameter/Location-address-postalcode"/>
 <type value="string"/>
 </searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="MAY"/>
-</extension>
-<name value="identifier"/>
-<definition value="http://hl7.org/fhir/SearchParameter/Location-identifier"/>
-<type value="token"/>
-<documentation value="The requester **SHALL** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
-</searchParam>
 </resource>
 <!-- MEDICATION :: DONE -->
 <resource>
