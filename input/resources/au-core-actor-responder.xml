@@ -2,7 +2,7 @@
 <ActorDefinition xmlns="http://hl7.org/fhir">
   <id value="au-core-actor-responder"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="1"/> 
+    <valueInteger value="2"/> 
   </extension>
   <url value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder" />
   <name value="AUCoreResponder"/> 
