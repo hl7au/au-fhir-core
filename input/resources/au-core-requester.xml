@@ -1302,7 +1302,7 @@
 <valueCode value="SHALL"/>
 </extension>
 <name value="identifier"/>
-<definition value="RelatedPerson-identifier"/>
+<definition value="http://hl7.org/fhir/SearchParameter/RelatedPerson-identifier"/>
 <type value="token"/>
 <documentation value="The requester **SHALL** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support search using IHI, Medicare Number, and DVA Number identifiers as defined in the profile.&#xA;&#xA;The responder **SHOULD** support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the profile."/>
 </searchParam>
