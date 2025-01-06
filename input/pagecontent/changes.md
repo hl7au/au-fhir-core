@@ -3,9 +3,27 @@
 - Publication status: TBD
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to TBD.
+This change log documents the significant updates and resolutions implemented from version 1.0.0 to TBD
+
+- Added AU Core RelatedPerson profile
+- Made the following changes in AU Core Responder CapabilityStatement:
+   - added RelatedPerson SHALL support search parameter for 'patient'
+   - added RelatedPerson SHOULD support search parameters for '_id', 'identifier', 'name', 'relationship'
+   - added RelatedPerson SHOULD support combined search parameters 'patient+relationship'
+ - Made the following changes in AU Core Requester CapabilityStatement:
+  - added RelatedPerson SHALL support search parameter for 'patient'
+   - added RelatedPerson SHOULD support search parameters for '_id', 'identifier', 'name', 'relationship'
+   - added RelatedPerson SHOULD support combined search parameters 'patient+relationship'
+
+###  Release 1.0.0
+- Publication date: TBD
+- Publication status: Trial-Use
+- Based on FHIR version: 4.0.1
+
+This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to 1.0.0
 
 #### Changes in this version
+
 - Made the following changes to AU Core Diagnostic Result Observation:
   - corrected base profile to AU Base Diagnostic Observation [FHIR-47116](https://jira.hl7.org/browse/FHIR-47116)
   - removed constraints from Observation.hasMember.reference [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728), [FHIR-48331](https://jira.hl7.org/browse/FHIR-48331)
