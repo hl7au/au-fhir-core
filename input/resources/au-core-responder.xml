@@ -1270,6 +1270,17 @@
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHALL"/>
+</extension>
+<extension url="required">
+<valueString value="patient"/>
+</extension>
+<extension url="required">
+<valueString value="relationship"/>
+</extension>
+</extension>
 <type value="RelatedPerson"/>
 <profile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
 <documentation value="If the responder supports the RelatedPerson resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the RelatedPerson resource."/>
