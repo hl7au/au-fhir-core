@@ -7,6 +7,12 @@
     <th>Type(s)</th>
     <th>Requirements (when used alone or in combination)</th>
   </tr>
+    <tr>
+        <td>_id</td>
+        <td><b>SHALL</b></td>
+        <td><code>token</code></td>
+        <td></td>
+  </tr>
   <tr>
         <td>patient</td>
         <td><b>SHALL</b></td>
@@ -29,12 +35,12 @@
         <td>patient.identifier</td>
         <td><b>SHOULD</b></td>
         <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both. <br/><br/> The client <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The server <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
+        <td>The client <b>SHALL</b> provide both the system and code values. The server <b>SHALL</b> support both. <br/><br/> The client <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Related Person profile. The server <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
   </tr>
   <tr>
         <td>patient+relationship</td>
         <td><b>SHOULD</b></td>
-        <td><code>reference +token</code></td>
+        <td><code>reference</code>+<code>token</code></td>
         <td></td>
   </tr>
  </tbody>
@@ -44,6 +50,16 @@
 #### Mandatory Search Parameters
 
 The following search parameters and search parameter combinations **SHALL** be supported:
+
+1. **SHALL** support searching using the **[`_id`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
+    
+    `GET [base]/RelatedPerson?_id=[id]`
+
+    Example:
+    
+      1. GET [base]/RelatedPerson?_id=5678
+
+    *Implementation Notes:* Fetches a bundle with the requested RelatedPerson, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id)).
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
