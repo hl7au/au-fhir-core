@@ -103,11 +103,12 @@ The following search parameters and search parameter combinations **SHOULD** be 
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `relationship` (e.g.`relationship={system|}[code],{system|}[code],...`)
 
+
     `GET [base]/RelatedPerson?patient={Type/}[id]&relationship={system|}[code]{,{system|}[code],...}`
 
     Example:
     
       1. GET [base]/RelatedPerson?patient=5678&amp;relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode\|MTH,http://snomed.info/sct\|133932002
-      2. GET [base]/RelatedPerson?patient.identifier=http://example.org/fhir/mrn|12345&amp;relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode\|MTH,http://snomed.info/sct\|133932002
+      1. GET [base]/RelatedPerson?patient.identifier=http://example.org/fhir/mrn|12345&amp;relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode\|MTH,http://snomed.info/sct\|133932002
 
     *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient and relationship code(s) **SHOULD** support search by multiple codes. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
