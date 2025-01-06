@@ -7,17 +7,17 @@
     <th>Type(s)</th>
     <th>Requirements (when used alone or in combination)</th>
   </tr>
-    <tr>
-        <td>_id</td>
-        <td><b>SHALL</b></td>
-        <td><code>token</code></td>
-        <td></td>
-  </tr>
   <tr>
         <td>patient</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code></td>
         <td>The client <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The server <b>SHALL</b> support both.</td>
+  </tr>
+    <tr>
+        <td>_id</td>
+        <td><b>SHOULD</b></td>
+        <td><code>token</code></td>
+        <td></td>
   </tr>
   <tr>
         <td>identifier</td>
@@ -51,15 +51,6 @@
 
 The following search parameters and search parameter combinations **SHALL** be supported:
 
-1. **SHALL** support searching using the **[`_id`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
-    
-    `GET [base]/RelatedPerson?_id=[id]`
-
-    Example:
-    
-      1. GET [base]/RelatedPerson?_id=5678
-
-    *Implementation Notes:* Fetches a bundle with the requested RelatedPerson, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id)).
 
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
@@ -77,6 +68,16 @@ The following search parameters and search parameter combinations **SHALL** be s
 #### Optional Search Parameters
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
+
+1. **SHOULD** support searching using the **[`_id`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
+    
+    `GET [base]/RelatedPerson?_id=[id]`
+
+    Example:
+    
+      1. GET [base]/RelatedPerson?_id=5678
+
+    *Implementation Notes:* Fetches a bundle with the requested RelatedPerson, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id)).
 
 1. **SHOULD** support searching for a related person by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
     

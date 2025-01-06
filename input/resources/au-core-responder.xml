@@ -1286,15 +1286,6 @@
 <code value="search-type"/>
 </interaction>
 <referencePolicy value="resolves">
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-<name value="_id"/>
-<definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
-<type value="token"/>
-<documentation value="The requester **SHOULD** support `_id`.&#xa;&#xa;The responder **SHALL** support `_id`."/>
-</searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
@@ -1312,6 +1303,14 @@
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
+<name value="_id"/>
+<definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+<type value="token"/>
+</searchParam>
+<searchParam>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHOULD"/>
+</extension>
 <name value="name"/>
 <definition value="http://hl7.org/fhir/SearchParameter/RelatedPerson-name"/>
 <type value="string"/>
@@ -1321,7 +1320,7 @@
 <valueCode value="SHOULD"/>
 </extension>
 <name value="relationship"/>
-<definition value="http://hl7.org/fhir/SearchParameter/	RelatedPerson-relationship"/>
+<definition value="http://hl7.org/fhir/SearchParameter/RelatedPerson-relationship"/>
 <type value="token"/>
 <documentation value="The requester **SHALL** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam> 
