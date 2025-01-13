@@ -24,6 +24,6 @@ The following are supported usage scenarios for this profile:
   - `name.text` specifies the entire name as it should be displayed and this may be provided instead of, or as well as, the specific parts. It is important to note that the presence of parts of a name, e.g. `name.family` and `name.given`, do not imply that `name.text` is known or must be supplied. 
   - In this profile, the following sub-elements of `name` are marked as *Must Support*: `name.use`, `name.text`, `name.family`, and `name.given`
     - responders are required to support at least one of the following sub-elements: `name.text`, `name.family`, and `name.given`
-    - requesters are required to all sub-elements marked *Must Support*: `name.use`, `name.text`, `name.family`, and `name.given`
+    - requesters are required to support all sub-elements marked *Must Support*: `name.use`, `name.text`, `name.family`, and `name.given`
 
 
