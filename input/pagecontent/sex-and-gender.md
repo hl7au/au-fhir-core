@@ -1,135 +1,126 @@
-In support of the vision for LGBTIQA+ people achieving equitable health and wellbeing outcomes, AU Core has included content to represent and exchange key data elements including Name to Use, Pronouns and Gender Identity.
+AU Core includes content to represent and exchange key sex and gender related data elements including Name to Use, Pronouns and Gender Identity.
 Where possible, AU Core has considered:
 - the logical data element models provided by [HL7 International’s Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1 specification](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/),
 - the FHIR representations of the Gender Harmony data elements in the core FHIR standard and FHIR core extensions,
-- localisation and adoption of these data elements from [HL7 Australia’ AU Base FHIR Implementation Guide](https://build.fhir.org/ig/hl7au/au-fhir-base) profiles.
+- localisation and adoption of these data elements from [HL7 Australia AU Base FHIR Implementation Guide](https://build.fhir.org/ig/hl7au/au-fhir-base) profiles.
 
 This page provides guidance on how sex and gender related concepts can be structured in FHIR and conformant to AU Core. 
 
-AU Base represents sex and gender related data elements, and describes their use for Patient, Pracititoner and Related Person. Guidance that is relevant the use of these elements in AU Core has been excerpted from AU Base. See the AU Base [Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html) guidance for additional detail. AU Core inherits those sex and gender related elements defined in AU Base, and places *Must Support* and Obligations on some concepts. The tables below provide an overview of the sex and gender related data elements in AU Base and AU Core, indicating for which profiles the element is supported or allowed. 
+### Localisation of sex and gender concepts in AU Core
+
+AU Core inherits sex and gender related elements defined in AU Base, and places *Must Support* and Obligations on some concepts. AU Base represents and describes their use for Patient, Practitioner and Related Person, and does not place *Must Support* or Obligations on any concepts. Guidance that is relevant to the use of sex and gender related concepts in AU Core has been excerpted from AU Base and included below. See the AU Base [Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html) guidance for additional detail. 
+
+The table below provides an overview of the sex and gender concepts represented in AU Core, indicating for which profiles the concept is supported or allowed. Where a relevant profile does not exist in AU Core, the appropriate AU Base profile is listed. 
 
 **Legend:**
 
-<img src="green_checkmark.svg.png" width="20"/> **Supported**: The sex or gender related element has *Must Support* and Obligations in the specified profile.
+<img src="green_checkmark.svg.png" width="20"/> **Supported**: The sex or gender related concept has *Must Support* and Obligations defined.
 
-<img src="orange_checkmark.svg.png" width="20"/> **Allowed**: The sex or gender related element may be used in the specified profile, but does not have *Must Support* or Obligations defined.
+<img src="orange_checkmark.svg.png" width="20"/> **Localised**: The sex or gender related concept is localised for use in an Australian context but does not have *Must Support* or Obligations defined.
 
-<img src="minus_symbol.svg.png" width="20"/> **Not applicable**: Sex or gender related element is not applicable to the specified profile.
+<img src="minus_symbol.svg.png" width="20"/> **Not applicable**: Sex or gender related concept is not localised for use in an Australian context.
 
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 25%; text-align: center; vertical-align: middle;" rowspan="2">Sex and Gender Concept</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;" colspan="3">AU Base<sup>1</sup></th>
-        </tr>
-        <tr>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">Patient</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">Practitioner</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">Related Person</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">Sex and Gender Concept</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base Related Person</a></th>
         </tr>
     </thead>
     <tbody>
+          <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sex-and-gender.html#administrative-gender-patientgender">Administrative Gender (Patient.gender)</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+        </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">Name to Use</td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sex-and-gender.html#name-to-use">Name to Use</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sex-and-gender.html#pronouns">Pronouns</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sex-and-gender.html#gender-identity">Gender Identity</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sex-and-gender.html#recorded-sex-or-gender">Recorded Sex or Gender</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">Pronouns</td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">Gender Identity</td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">Recorded Sex or Gender</td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">Sex Assigned at Birth</td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">Patient.gender</td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sex-and-gender.html#sex-assigned-at-birth">Sex Assigned at Birth</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
     </tbody>
 </table>
-<br>
-*Notes*
-1. AU Base does not place *Must Support* requirements, and therefore all concepts included in AU Base are <img src="orange_checkmark.svg.png" width="20"/> and not *Must Support*.   
 
 
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
-    <thead>
-        <tr>
-            <th style="width: 25%; text-align: center; vertical-align: middle;" rowspan="2">Sex and Gender Concept</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;" colspan="3">AU Core<sup>1</sup></th>
-        </tr>
-        <tr>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">Patient</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">Practitioner<sup>2</sup></th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">Related Person<sup>3</sup></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">Name to Use</td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">Pronouns</td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">Gender Identity</td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">Recorded Sex or Gender</td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">Sex Assigned at Birth</td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">Patient.gender</td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-        </tr>
-    </tbody>
-</table>
-<br>
-*Notes*
-1. AU Base does not place *Must Support* requirements, and therefore all concepts inherhited from AU Base are <img src="orange_checkmark.svg.png" width="20"/> and not *Must Support*. 
-2. The requirements for sex and gender related concepts in Practitioner are inherited from AU Base.
-3. The requirements for sex and gender related concepts in Related Person are inherited from AU Base.
+### Administrative Gender (Patient.gender)
+AU Core supports representation and exchange of [Administrative Gender](https://hl7.org/fhir/R4/patient.html#gender),  i.e. the basic [Patient.gender](https://hl7.org/fhir/R4/patient-definitions.html#Patient.gender) property, in:
+- [AU Core Patient](StructureDefinition-au-core-patient.html)
 
+In AU Core, the `Patient.gender` value is regarded as a Recorded Sex or Gender. If assertions regarding the nature of the `Patient.gender` value are required, a single instance of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension can be included with these assertions and its `genderElementQualifier` subelement set to a value of "true". Practically, this means that the `Patient.gender` element in instances of AU Core Patient must not be relied upon as a valid gender identity value for the patient nor be relied upon as a sex category for clinical use.
+
+Example: Patient resource with Patient.gender qualified with Person Recorded Sex or Gender extension
+~~~
+{
+  "resourceType" : "Patient",
+  ...
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender",
+      "extension" : [
+        {
+          "url" : "value",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "http://snomed.info/sct",
+                "code" : "248153007",
+                "display" : "Male"
+              }
+            ]
+          }
+        },
+                {
+          "url" : "type",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "http://snomed.info/sct",
+                "code" : "1515311000168102",
+                "display" : "Biological sex at birth"
+              }
+            ]
+          }
+        },
+        {
+          "url" : "genderElementQualifier",
+          "valueBoolean" : true
+        }
+      ]
+    }
+  ],
+  ...
+  "gender" : "male"
+}
+~~~
 
 ### Name to Use
 
@@ -335,55 +326,6 @@ Example: Patient resource with sex assigned at birth.
               }
             ]
           }
-        }
-      ]
-    }
-  ...
-}
-~~~
-
-### `Patient.gender`
-The [AU Core Patient](StructureDefinition-au-core-patient.html) profile inherits from and extends the [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) profile from the AU Base FHIR Implementation Guide. Accordingly, it should be noted that the following implementation guidance applies to instances of the AU Core Patient profile:
-- The `Patient.gender` value **SHALL** be regarded as a Recorded Sex or Gender value. If assertions regarding the nature of the `Patient.gender` value are required, a single instance of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension may be included with these assertions and its `genderElementQualifier` subelement set to a value of “true”.
-- Practically, this means that the `Patient.gender` element in instances of AU Core Patient
-    - must not be relied upon as a valid gender identity value for the patient
-    - must not be relied upon as a sex category for clinical use.
-
-Example: Patient resource with `Patient.gender` qualified with Person Recorded Sex or Gender extension. 
-~~~
-{
-  "resourceType" : "Patient",
-  ...
-  "gender" : "female",
-  {
-      "url" : "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender",
-      "extension" : [
-        {
-          "url" : "value",
-          "valueCodeableConcept" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "248152002"
-              }
-            ]
-          }
-        },
-        {
-          "url" : "type",
-          "valueCodeableConcept" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "1515311000168102",
-                "display" : "Biological sex at birth"
-              }
-            ]
-          }
-        },
-        {
-          "url" : "genderElementQualifier",
-          "valueBoolean" : true
         }
       ]
     }
