@@ -885,7 +885,7 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core DiagnosticReport Profile for Laboratory Results Reporting Profile
 - US Core DiagnosticReport Profile for Report and Note Exchange Profile
 - US Core DocumentReference Profile
-- US Core Goal Profile Profile
+- US Core Goal Profile
 - US Core MedicationDispense Profile
 - US Core Average Blood Pressure Profile
 - US Core Care Experience Preference Profile

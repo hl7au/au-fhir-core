@@ -271,10 +271,10 @@ All the search interaction examples in this guide use the HTTP GET method with t
 -   Variables:
     -   base: The Service Root URL (e.g., "<https://fhir-open-api-dstu2.smarthealthit.org>”)
     -  Resource-type: The name of a resource type (e.g., "Patient")
-    -  parameter: the search parameters as defined for the particular interaction (e.g.,"?patient=Patient/123")
-    -  value: the search parameter value for a particular search
-       - When searching using the `token` type SearchParameter [(how to search by token)](https://hl7.org/fhir/R4/search.html#token), the syntax `{system|}[code]` means that the system value is optional *for the client* to supply.:
-       - When searching using the `reference` type SearchParameter [(how to search by reference)](https://hl7.org/fhir/R4/search.html#reference), the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply:
+    -  parameter: The search parameters as defined for the particular interaction (e.g.,"?patient=Patient/123")
+    -  value: The search parameter value for a particular search
+       - When searching using the `token` type SearchParameter [(how to search by token)](https://hl7.org/fhir/R4/search.html#token), the syntax `{system|}[code]` means that the system value is optional *for the client* to supply.
+       - When searching using the `reference` type SearchParameter [(how to search by reference)](https://hl7.org/fhir/R4/search.html#reference), the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply.
        - When searching using the `date` type SearchParameter [(how to search by date)](https://hl7.org/fhir/R4/search.html#date), the syntax `{gt|lt|ge|le}[date]` means the date comparators "gt", "lt", "ge", and "le" are optional.   Date type searches without a comparator prefix are equivalent to searches with the "eq" comparator *even if* a server does not support the comparator.
     - \{:m1&#124;m2&#124;...}: The list of supported search parameter modifiers
     - {c1&#124;c2&#124;...}: The list of supported search parameter comparators
