@@ -1,4 +1,4 @@
-{% assign code_code = "266918002" %}
+{% assign code_code = "1747861000168109" %}
 {% assign code_system = "http://snomed.info/sct" %}
 {% include search_parameters_intro.md -%}
 {% include observation_parameters.md -%}
