@@ -1,15 +1,22 @@
-This page lists all ValueSets and CodeSystems supported as part of AU Core. 
+This page lists ValueSets and CodeSystems supported as part of AU Core. 
 
-As well as terminology defined in FHIR, this specification supports terminology defined in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html) or [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/integration/R4/fhir) terminology resources. 
+As well as terminology defined in FHIR, this specification supports terminology published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html) or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).
 
 ### Value Sets
 
-This implementation guide does not define any unique value sets. The value sets used in this guide are defined in the base FHIR specification, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), or [NCTS](https://www.healthterminologies.gov.au/integration/R4/fhir/metadata).  
+This implementation guide does not define any unique value sets. The value sets used in this guide are defined in the base FHIR specification, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), or the [NCTS](https://www.healthterminologies.gov.au/).
 
 The list below shows the value sets bound as [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) or greater to a supported element, element slice, or extension.
 
+<p>Column attribute descriptions are as follows:</p>
+<ul>
+  <li><strong>ValueSet:</strong> The title of the value set.</li>
+  <li><strong>Profiles and Extensions where used:</strong> The profiles and extensions that reference the value set.</li>
+  <li><strong>Available from:</strong> Where the value set is published.</li>
+</ul>  
+
 |ValueSet|Profile where used|Available from|
-|---|---|---|---|
+|---|---|---|
 |[ActEncounterCode - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ActEncounterCode-extended.html)|[AU Core Encounter](StructureDefinition-au-core-encounter.html)|AU Base|
 |[AdministrativeGender](https://hl7.org/fhir/R4/valueset-administrative-gender.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|FHIR|
 |[AddressUse](https://hl7.org/fhir/R4/valueset-address-use.html)|[AU Core Location](StructureDefinition-au-core-location.html), [AU Core Organization](StructureDefinition-au-core-organization.html), [AU Core Patient](StructureDefinition-au-core-patient.html)|FHIR|
@@ -23,7 +30,7 @@ The list below shows the value sets bound as [preferred](https://hl7.org/fhir/R4
 |[Australian Indigenous Status](https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1)|[AU Core Patient](StructureDefinition-au-core-patient.html)|NCTS|
 |[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1)|[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html), [AU Core Medication](StructureDefinition-au-core-medication.html)|NCTS|
 |[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1)|[AU Core Immunization](StructureDefinition-au-core-immunization.html)|NCTS|
-|[Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1)|[Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns)|NCTS|
+|[Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1)|[Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns)|NCTS|
 |[Australian States and Territories](https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2)|[AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html), [AU Core Organization](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-organization.html), [AU Core Patient](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-patient.html)|NCTS|
 |[Biological Sex](https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1)|[AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html)|NCTS|
 |[Body Length Units](https://hl7.org/fhir/R4/valueset-ucum-bodylength.html)|[AU Core Body Height](StructureDefinition-au-core-bodyheight.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html)|FHIR|
@@ -64,7 +71,7 @@ The list below shows the value sets bound as [preferred](https://hl7.org/fhir/R4
 |[Observation Category Codes](https://hl7.org/fhir/R4/valueset-observation-category.html)|[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), [AU Core Heart Rate](StructureDefinition-au-core-heartrate.html), [AU Core Body Height](StructureDefinition-au-core-bodyheight.html), [AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html), [AU Core Respiration Rate](StructureDefinition-au-core-resprate.html), [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html), [AU Core Body Temperature](StructureDefinition-au-core-bodytemp.html), [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html), [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html)|FHIR|
 |[Observation Interpretation Codes](https://hl7.org/fhir/R4/valueset-observation-interpretation.html)|[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|FHIR|
 |[Observation Reference Range Meaning Codes](https://hl7.org/fhir/R4/valueset-referencerange-meaning.html)|[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|FHIR|
-|[ObservationStatus](http://hl7.org/fhir/R4/valueset-observation-status.html)|[AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html), [AU Core Body Height](StructureDefinition-au-core-bodyheight.html), [AU Core Body Temperature](StructureDefinition-au-core-bodytemp.html), [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html), [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html), [AU Core Heart Rate](StructureDefinition-au-core-heartrate.html), [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), [AU Core Respiration Rate](StructureDefinition-au-core-resprate.html), [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html)|FHIR|Health Level Seven International|
+|[ObservationStatus](http://hl7.org/fhir/R4/valueset-observation-status.html)|[AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html), [AU Core Body Height](StructureDefinition-au-core-bodyheight.html), [AU Core Body Temperature](StructureDefinition-au-core-bodytemp.html), [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html), [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html), [AU Core Heart Rate](StructureDefinition-au-core-heartrate.html), [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), [AU Core Respiration Rate](StructureDefinition-au-core-resprate.html), [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html)|FHIR|
 |[Participant type](https://hl7.org/fhir/R4/valueset-encounter-participant-type.html)|[AU Core Encounter](StructureDefinition-au-core-encounter.html)|FHIR|
 |[PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html)|[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html), [AU Core Medication](StructureDefinition-au-core-medication.html)|AU Base|
 |[Practitioner Role](https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1)|[AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|NCTS|
@@ -80,15 +87,21 @@ The list below shows the value sets bound as [preferred](https://hl7.org/fhir/R4
 |[SNOMED CT Administration Method Codes](https://hl7.org/fhir/R4/valueset-administration-method-codes.html)|[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|FHIR|
 |[Vital Signs Units](https://hl7.org/fhir/R4/valueset-ucum-vitals-common.html)|[AU Core Heart Rate](StructureDefinition-au-core-heartrate.html), [AU Core Body Height](StructureDefinition-au-core-bodyheight.html), [AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html), [AU Core Respiration Rate](StructureDefinition-au-core-resprate.html), [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html), [AU Core Body Temperature](StructureDefinition-au-core-bodytemp.html)|FHIR|
 |[VitalSigns](https://hl7.org/fhir/R4/valueset-observation-vitalsignresult.html)|[AU Core Heart Rate](StructureDefinition-au-core-heartrate.html), [AU Core Body Height](StructureDefinition-au-core-bodyheight.html), [AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html), [AU Core Respiration Rate](StructureDefinition-au-core-resprate.html), [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html), [AU Core Body Temperature](StructureDefinition-au-core-bodytemp.html)|FHIR|
-
-
-
+{:.grid}
 
 ### Code systems
 
-This implementation guide does not define any unique code systems. The code systems used in this guide are defined in the base FHIR specification, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), or [NCTS](https://www.healthterminologies.gov.au/integration/R4/fhir/metadata).  
+This implementation guide does not define any unique code systems. The code systems used in this guide are defined in the base FHIR specification, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), or the [NCTS]((https://www.healthterminologies.gov.au/).  
 
 The list below shows the code systems used in the value sets above.
+
+<p>Column attribute descriptions are as follows:</p>
+<ul>
+  <li><strong>CodeSystem:</strong> The title of a code system.</li>
+  <li><strong>ValueSet where used:</strong> The value set(s) that reference the code system.</li>
+  <li><strong>Available from:</strong> Where the code system is published.</li>
+  <li><strong>Publisher:</strong> Identifies the organisation responsible for maintaining the code system.</li>
+</ul>
 
 |CodeSystem|ValueSet where used|Available from|Publisher|
 |---|---|---|---|
@@ -108,7 +121,7 @@ The list below shows the code systems used in the value sets above.
 |[ConditionVerificationStatus](https://hl7.org/fhir/R4/codesystem-condition-ver-status.html)|[ConditionVerificationStatus](https://hl7.org/fhir/R4/valueset-condition-ver-status.html)|FHIR|Health Level Seven International|
 |[ContactPointSystem](https://hl7.org/fhir/R4/codesystem-contact-point-system.html)|[ContactPointSystem](https://hl7.org/fhir/R4/valueset-contact-point-system.html)|FHIR|Health Level Seven International|
 |[ContactPointUse](https://hl7.org/fhir/R4/codesystem-contact-point-use.html)|[ContactPointUse](https://hl7.org/fhir/R4/valueset-contact-point-use.html)|FHIR|Health Level Seven International|
-|[DataAbsentReason](http://terminology.hl7.org/CodeSystem/data-absent-reason)|[Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1), [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1), [DataAbsentReason](https://hl7.org/fhir/R4/valueset-data-absent-reason.html)|HL7 Terminology|Health Level Seven International|
+|[DataAbsentReason](http://terminology.hl7.org/CodeSystem/data-absent-reason)|[Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1), [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1), [DataAbsentReason](https://hl7.org/fhir/R4/valueset-data-absent-reason.html)|HL7 Terminology|Health Level Seven International|
 |[DegreeLicenseCertificate AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v2-0360.html)|[hl7VS-degreeLicenseCertificate - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0360-extended.html)|AU Base|Health Level Seven International|
 |[EncounterStatus](https://hl7.org/fhir/R4/codesystem-encounter-status.html)|[EncounterStatus](https://hl7.org/fhir/R4/valueset-encounter-status.html)|FHIR|Health Level Seven International|
 |[EventStatus](https://hl7.org/fhir/R4/codesystem-event-status.html)|[EventStatus](https://hl7.org/fhir/R4/valueset-event-status.html)|FHIR|Health Level Seven International|
