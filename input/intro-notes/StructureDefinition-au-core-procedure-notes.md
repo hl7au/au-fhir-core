@@ -104,7 +104,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle of all Procedure resources for the specified patient and date and procedure code(s). **SHOULD** support search by multiple codes. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/procedure.html#search)** and **[`status`](https://hl7.org/fhir/R4/procedure.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
     `GET [base]/Procedure?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
