@@ -279,7 +279,7 @@
 				<reference value="Encounter/covid-admin-1"/>
 			</reference>
 			<name value="Encounter - COVID 19 Vaccine Administration Dose 1"/>
-			<description value="Shows an example of COVID19 vaccine administration encouter for the *AU Core Encounter* profile. Patient: Mrs. Anne Bennelong."/>
+			<description value="Shows an example of COVID19 vaccine administration encounter for the *AU Core Encounter* profile. Patient: Mrs. Anne Bennelong."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
 		</resource>
 		<resource>
@@ -354,7 +354,7 @@
 				<reference value="Medication/2active-ingredients"/>
 			</reference>
 			<name value="Medication - Product with two active ingredients"/>
-			<description value="Shows an example of a Product with two active ingredients mediction for the *AU Core Medication* profile."/>
+			<description value="Shows an example of a Product with two active ingredients medication for the *AU Core Medication* profile."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
 		</resource>
 		<resource>
@@ -404,7 +404,7 @@
 				<reference value="Observation/bloodpressure-data-absent"/>
 			</reference>
 			<name value="Observation - Blood Pressure (data absent for diastolic)"/>
-			<description value="Shows an example of a blood pressure observation with systolic measurement and unknown dystolic measurement for the *AU Core Blood Pressure* profile. Patient: Ronny Lawrence Irvine."/>
+			<description value="Shows an example of a blood pressure observation with systolic measurement and unknown diastolic measurement for the *AU Core Blood Pressure* profile. Patient: Ronny Lawrence Irvine."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
 		</resource>
 		<resource>
@@ -656,7 +656,7 @@
 				<reference value="PractitionerRole/nephrologist-darleen-mackay"/>
 			</reference>
 			<name value="PractitionerRole - Nephrologist"/>
-			<description value="Shows an example of a nephrologist for the *AU Core PractitionerRole* profile, using a local employee number as the role identifier and including a refernce to the Practitioner."/>
+			<description value="Shows an example of a nephrologist for the *AU Core PractitionerRole* profile, using a local employee number as the role identifier and including a reference to the Practitioner."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<!--PROCEDURE EXAMPLES-->
