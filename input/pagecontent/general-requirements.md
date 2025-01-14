@@ -89,44 +89,60 @@ How the system processes the resource depends on local requirements that could a
 
 When a *Must Support* element requires a more tightly stated obligation, this obligation is specified in the AU Core Requester [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition.
 
-#### Presentation of elements labelled Must Support in profiles
+#### Presentation of Must Support and obligation in profiles
 
-##### Presentation of elements labelled Must Support in table views
+All elements with *Must Support* in AU Core are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements flagged with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
 
-When rendered in an implementation guide each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table".
+ <div> 
+    <img src="allergyintolerance-keyelementstable.png" alt="AU Core AllergyIntolerance Key Elements Table" style="width:100%"/>
+  </div>
+*Figure 1: Key Elements Table View*
+<br/>
 
-The elements labelled *Must Support* in these views are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Implementers should refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support*, and the full set of terminology requirements.
+Implementers should refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support* with obligations, and the full set of terminology requirements.  Implementers should note that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile.
 
-Implementers should take note that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile. 
+##### Presentation of Must Support and obligation in raw representations
 
-##### Presentation of elements labelled Must Support in raw representations
+When viewing the raw representation (e.g. XML or JSON) of a profile, elements with *Must Support* are denoted by `mustSupport` set to "true", and obligations are defined in the [Obligation Extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) as shown in the example below.
 
-When viewing the raw representation (e.g. XML or JSON) of a profile, elements labelled *Must Support* are flagged as `mustSupport` set to "true". 
+Example: AU Core AllergyIntolerance profile with *Must Support* and obligations on clinicalStatus.
 
-Example: AU Core AllergyIntolerance profile showing clinicalStatus and verificationStatus labelled *Must Support*
 ~~~
 {
     "resourceType" : "StructureDefinition",
     ...
     "url" : "http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance",
     ...
-    "type" : "AllergyIntolerance",
-    "baseDefinition" : "http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance",     
-    ...
            {
               "id" : "AllergyIntolerance.clinicalStatus",
-              "path" : "AllergyIntolerance.clinicalStatus",
-              "mustSupport" : true
-           },
-           {
-              "id" : "AllergyIntolerance.verificationStatus",
-              "path" : "AllergyIntolerance.verificationStatus",
-              "mustSupport" : true
+              "extension" : [{
+                "extension" : [{
+                "url" : "code",
+                "valueCode" : "SHALL:populate-if-known"
+            },
+            {
+                "url" : "actor",
+                "valueCanonical" : "http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"
+            }],
+            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+            },
+            {
+                "extension" : [{
+                "url" : "code",
+                "valueCode" : "SHALL:no-error"
+            },
+            {
+                "url" : "actor",
+                "valueCanonical" : "http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"
+              }],
+            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+            }],
+            "path" : "AllergyIntolerance.clinicalStatus",
+            "mustSupport" : true,
            },
     ...
 }
 ~~~
-
 
 #### Interpreting profile elements labelled Must Support
 
