@@ -205,7 +205,7 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <th style="width: 25%;">AU Core</th>
             <th style="width: 25%;">International Patient Access 1.0.0</th>
             <th style="width: 25%;">Element</th>
-            <th style="width: 25%;">Incompatible requirements</th>
+            <th style="width: 25%;">Additional requirements</th>
         </tr>
     </thead>
     <tbody>

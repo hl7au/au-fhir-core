@@ -58,8 +58,8 @@ The following search parameters **SHALL** be supported:
 
     Example:
     
-      1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-prescriber-number\|553255&amp;_include=PractitionerRole:practitioner
-      1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-prescriber-number\|553255
+      1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-provider-number\|2426621B&amp;_include=PractitionerRole:practitioner
+      1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-provider-number\|2426621B
 
     *Implementation Notes:* Fetches a bundle containing any PractitionerRole resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
