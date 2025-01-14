@@ -15,7 +15,7 @@ The list below shows the value sets bound as [preferred](https://hl7.org/fhir/R4
   <li><strong>Available from:</strong> Where the value set is published.</li>
 </ul>  
 
-|ValueSet|Profile where used|Available from|
+|ValueSet|Profile and Extension where used|Available from|
 |---|---|---|
 |[ActEncounterCode - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ActEncounterCode-extended.html)|[AU Core Encounter](StructureDefinition-au-core-encounter.html)|AU Base|
 |[AdministrativeGender](https://hl7.org/fhir/R4/valueset-administrative-gender.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|FHIR|
@@ -91,7 +91,7 @@ The list below shows the value sets bound as [preferred](https://hl7.org/fhir/R4
 
 ### Code systems
 
-This implementation guide does not define any unique code systems. The code systems used in this guide are defined in the base FHIR specification, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), or the [NCTS]((https://www.healthterminologies.gov.au/).  
+This implementation guide does not define any unique code systems. The code systems used in this guide are defined in the base FHIR specification, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), or the [NCTS](https://www.healthterminologies.gov.au/).  
 
 The list below shows the code systems used in the value sets above.
 
@@ -106,7 +106,7 @@ The list below shows the code systems used in the value sets above.
 |CodeSystem|ValueSet where used|Available from|Publisher|
 |---|---|---|---|
 |[ActCode AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v3-ActCode.html)|[ActEncounterCode - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v3-ActEncounterCode-extended.html)|AU Base|HL7 Australia|
-|[ActCode](https://terminology.hl7.org/5.3.0/CodeSystem-v3-ActCode.html)|[ActEncounterCode](https://terminology.hl7.org/5.5.0/ValueSet-v3-ActEncounterCode.html)|HL7 Terminology|Health Level Seven International|
+|[ActCode](https://terminology.hl7.org/5.3.0/CodeSystem-v3-ActCode.html)|[ActEncounterCode](https://terminology.hl7.org/5.5.0/ValueSet-v3-ActEncounterCode.html)|HL7 Terminology (THO)|Health Level Seven International|
 |[AddressUse](https://hl7.org/fhir/R4/codesystem-address-use.html)|[AddressUse](https://hl7.org/fhir/R4/valueset-address-use.html)|FHIR|Health Level Seven International|
 |[AddressType](https://hl7.org/fhir/R4/codesystem-address-type.html)|[AddressType](https://hl7.org/fhir/R4/valueset-address-type.html)|FHIR|Health Level Seven International|
 |[AdministrativeGender](https://hl7.org/fhir/R4/codesystem-administrative-gender.html)|[AdministrativeGender](https://hl7.org/fhir/R4/valueset-administrative-gender.html)|FHIR|Health Level Seven International|
@@ -121,8 +121,8 @@ The list below shows the code systems used in the value sets above.
 |[ConditionVerificationStatus](https://hl7.org/fhir/R4/codesystem-condition-ver-status.html)|[ConditionVerificationStatus](https://hl7.org/fhir/R4/valueset-condition-ver-status.html)|FHIR|Health Level Seven International|
 |[ContactPointSystem](https://hl7.org/fhir/R4/codesystem-contact-point-system.html)|[ContactPointSystem](https://hl7.org/fhir/R4/valueset-contact-point-system.html)|FHIR|Health Level Seven International|
 |[ContactPointUse](https://hl7.org/fhir/R4/codesystem-contact-point-use.html)|[ContactPointUse](https://hl7.org/fhir/R4/valueset-contact-point-use.html)|FHIR|Health Level Seven International|
-|[DataAbsentReason](http://terminology.hl7.org/CodeSystem/data-absent-reason)|[Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1), [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1), [DataAbsentReason](https://hl7.org/fhir/R4/valueset-data-absent-reason.html)|HL7 Terminology|Health Level Seven International|
-|[DegreeLicenseCertificate AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v2-0360.html)|[hl7VS-degreeLicenseCertificate - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0360-extended.html)|AU Base|Health Level Seven International|
+|[DataAbsentReason](http://terminology.hl7.org/CodeSystem/data-absent-reason)|[Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1), [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1), [Biological Sex](https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1), [DataAbsentReason](https://hl7.org/fhir/R4/valueset-data-absent-reason.html)|HL7 Terminology|Health Level Seven International|
+|[DegreeLicenseCertificate AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v2-0360.html)|[hl7VS-degreeLicenseCertificate - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0360-extended.html)|AU Base|HL7 Australia|
 |[EncounterStatus](https://hl7.org/fhir/R4/codesystem-encounter-status.html)|[EncounterStatus](https://hl7.org/fhir/R4/valueset-encounter-status.html)|FHIR|Health Level Seven International|
 |[EventStatus](https://hl7.org/fhir/R4/codesystem-event-status.html)|[EventStatus](https://hl7.org/fhir/R4/valueset-event-status.html)|FHIR|Health Level Seven International|
 |[IdentifierType AU](https://build.fhir.org/ig/hl7au/au-fhir-base//CodeSystem-au-v2-0203.html)|[DVA Entitlement](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-dva-entitlement.html), [hl7VS-identifierType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0203-extended.html)|AU Base|HL7 Australia|
