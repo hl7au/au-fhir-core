@@ -2,23 +2,23 @@ AU Core includes content to represent and exchange key sex and gender related da
 Where possible, AU Core has considered:
 - the logical data element models provided by [HL7 International’s Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1 specification](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/),
 - the FHIR representations of the Gender Harmony data elements in the core FHIR standard and FHIR core extensions,
-- localisation and adoption of these data elements from [HL7 Australia AU Base FHIR Implementation Guide](https://build.fhir.org/ig/hl7au/au-fhir-base) profiles.
+- localisation and adoption of these data elements from [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base) profiles.
 
 This page provides guidance on how sex and gender related concepts can be structured in FHIR and conformant to AU Core. 
 
 ### Localisation of sex and gender concepts in AU Core
 
-AU Core inherits sex and gender related elements defined in AU Base, and places *Must Support* and Obligations on some concepts. AU Base represents and describes their use for Patient, Practitioner and Related Person, and does not place *Must Support* or Obligations on any concepts. Guidance that is relevant to the use of sex and gender related concepts in AU Core has been excerpted from AU Base and included below. See the AU Base [Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html) guidance for additional detail. 
+AU Core inherits sex and gender related elements defined in AU Base and places *Must Support* on some concepts. AU Base represents and describes their use for Patient, Practitioner and Related Person, and does not place *Must Support* on any concepts. Guidance that is relevant to the use of sex and gender related concepts in AU Core has been excerpted from AU Base and included below. See the AU Base [Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html) guidance for additional detail. 
 
-The table below provides an overview of the sex and gender concepts represented in AU Core, indicating for which profiles the concept is supported or allowed. Where a relevant profile does not exist in AU Core, the appropriate AU Base profile is listed. 
+The table below provides an overview of the sex and gender concepts represented in AU Core, indicating for which profiles the concept is supported or allowed. Where a relevant profile does not exist in AU Core the appropriate AU Base profile is listed, e.g. AU Base Related Person.
 
 **Legend:**
 
-<img src="green_checkmark.svg.png" width="20"/> **Supported**: The sex or gender related concept has *Must Support* and Obligations defined.
+<img src="green_checkmark.svg.png" width="20"/> **Supported**: The sex or gender related concept is marked as *Must Support*.
 
-<img src="orange_checkmark.svg.png" width="20"/> **Localised**: The sex or gender related concept is localised for use in an Australian context but does not have *Must Support* or Obligations defined.
+<img src="orange_checkmark.svg.png" width="20"/> **Localised**: The sex or gender related concept is localised for use in an Australian context but is not marked as *Must Support*.
 
-<img src="minus_symbol.svg.png" width="20"/> **Not applicable**: Sex or gender related concept is not localised for use in an Australian context.
+<img src="minus_symbol.svg.png" width="20"/> **Not applicable**: The sex or gender related concept is not localised for use in an Australian context.
 
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
