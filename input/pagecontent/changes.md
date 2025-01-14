@@ -3,19 +3,7 @@
 - Publication status: TBD
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version 1.0.0-preview to TBD.
-
-#### Changes in this version
-- Maturity level changed to AFMM 2 for the following: 
-  - AU Core AllergyIntolerance, AU Core Condition, AU Core Encounter, AU Core Immunization, AU Core Location, AU Core Medication, AU Core Organization, AU Core Patient, AU Core Practitioner, AU Core PractitionerRole, AU Core Procedure, AU Core Sex Assigned At Birth [FHIR-48676](https://jira.hl7.org/browse/FHIR-48676)
-  - AU Core Blood Pressure, AU Core MedicationRequest, AU Core Requester ActorDefinition, AU Core Responder ActorDefinition, AU Core Responder CapabilityStatement, AU Core Smoking Status [FHIR-48873](https://jira.hl7.org/browse/FHIR-48873)
-
-###  Release 1.0.0-preview
-- Publication date: 2024-12-02
-- Publication status: Preview
-- Based on FHIR version: 4.0.1
-
-This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to 1.0.0-preview.
+This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to TBD.
 
 #### Changes in this version
 - Made the following changes to AU Core Diagnostic Result Observation:

@@ -229,7 +229,7 @@
 				<reference value="AllergyIntolerance/noneknown"/>
 			</reference>
 			<name value="AllergyIntolerance - No known allergy"/>
-			<description value="Shows an example of allergyintolerance for the *AU Core AllergyIntolerance* indicating the patient has no known allergies. Patient: Mr. Li Wang."/>
+			<description value="Shows an example of allergy intolerance for the *AU Core AllergyIntolerance* profile indicating the patient has no known allergies. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
 		</resource>
 		<resource>
@@ -237,7 +237,7 @@
 				<reference value="AllergyIntolerance/penicillin"/>
 			</reference>
 			<name value="AllergyIntolerance - Penicillin allergy"/>
-			<description value="Shows an example of Penicillin allergy with the reaction manifestation as hives for the *AU Core AllergyIntolerance* profile. Patient: Deangelo HOWE."/>
+			<description value="Shows an example of a Penicillin allergy with the reaction manifestation as hives for the *AU Core AllergyIntolerance* profile. Patient: Deangelo HOWE."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
 		</resource>
 		<!--CONDITION EXAMPLES-->
@@ -246,7 +246,7 @@
 				<reference value="Condition/ckd"/>
 			</reference>
 			<name value="Condition - Chronic Kidney Disease"/>
-			<description value="Shows an example of an active Chronic Kidney Disease with onset age for the *AU Core Condition* profile. Patient: Ronny Lawrence Irvine."/>
+			<description value="Shows an example of active Chronic Kidney Disease with onset age for the *AU Core Condition* profile. Patient: Ronny Lawrence Irvine."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
 		<resource>
@@ -279,7 +279,7 @@
 				<reference value="Encounter/covid-admin-1"/>
 			</reference>
 			<name value="Encounter - COVID 19 Vaccine Administration Dose 1"/>
-			<description value="Shows an example of a completed COVID-19 vaccination encounter for the *AU Core Encounter* profile. Patient: Mrs. Anne Bennelong."/>
+			<description value="Shows an example of a COVID-19 vaccine administration encounter for the *AU Core Encounter* profile. Patient: Mrs. Anne Bennelong."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
 		</resource>
 		<resource>
@@ -533,7 +533,7 @@
 				<reference value="Organization/bobrester-medical-center"/>
 			</reference>
 			<name value="Organization - Bobrester Medical Centre"/>
-			<description value="Shows an example of an organisation, Bobrester Medical Center, for the *AU Core Organization* profile, with with ABN identifier, type as Medical Center, and contact details including email and phone number. "/>
+			<description value="Shows an example of an organisation, Bobrester Medical Center, for the *AU Core Organization* profile, with ABN identifier, type as Medical Center, and contact details including email and phone number. "/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<resource>
@@ -558,7 +558,7 @@
 				<reference value="Patient/ronny-irvine"/>
 			</reference>
 			<name value="Patient - Ronny Lawrence Irvine (missing data for birth date)"/>
-			<description value="Shows an example of a patient resource for Mr. Ronny Lawrence Irvine for the *AU Core Patient* profile.The patient identifies as Torres Strait Islander but not of Aboriginal origin, with an unknown birth date documented using the Data Absent Reason extension."/>
+			<description value="Shows an example of a patient resource for Mr. Ronny Lawrence Irvine for the *AU Core Patient* profile. The patient identifies as Torres Strait Islander but not of Aboriginal origin, with an unknown birth date documented using the Data Absent Reason extension."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<resource>
@@ -632,7 +632,7 @@
 				<reference value="PractitionerRole/bobrester-bob-gp"/>
 			</reference>
 			<name value="PractitionerRole - General practitioner"/>
-			<description value="Shows an example of a General Practitioner role for the *AU Core PractitionerRole*, including an employee number identifier, contact details and and references to the associated Practitioner and Organization."/>
+			<description value="Shows an example of a General Practitioner role for the *AU Core PractitionerRole* profile, including an employee number identifier, contact details and references to the associated Practitioner and Organization."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
@@ -640,7 +640,7 @@
 				<reference value="PractitionerRole/cardiologist-sallie-sutherland"/>
 			</reference>
 			<name value="PractitionerRole - Cardiologist"/>
-			<description value="Shows an example of a Cardiologist role for the *AU Core PractitionerRole*, including a Medicare Provider Number identifier, contact details, and references to the associated Practitioner, Organization, and Location."/>
+			<description value="Shows an example of a Cardiologist role for the *AU Core PractitionerRole* profile, including a Medicare Provider Number identifier, contact details, and references to the associated Practitioner, Organization, and Location."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
@@ -656,7 +656,7 @@
 				<reference value="PractitionerRole/nephrologist-darleen-mackay"/>
 			</reference>
 			<name value="PractitionerRole - Nephrologist"/>
-			<description value="Shows an example of a Nephrologist role for the *AU Core PractitionerRole* profile,  including an employee number identifier, contact details, and a reference to the associated Practitioner."/>
+			<description value="Shows an example of a nephrologist for the *AU Core PractitionerRole* profile, using a local employee number as the role identifier and including a reference to the Practitioner."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<!--PROCEDURE EXAMPLES-->
