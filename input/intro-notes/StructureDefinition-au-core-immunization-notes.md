@@ -18,11 +18,13 @@
         <td>patient+status</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>token</code></td>
+        </td>
   </tr>
   <tr>
         <td>patient+date</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>date</code></td>
+        </td>
   </tr>
   <tr>
         <td>date</td>
