@@ -313,6 +313,7 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
 1.  For *non-coded* data elements where the applicable AU Core profile does not mandate a sub-element
     - use the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) 
     - use the code `unknown` _The value is expected to exist but is not known_
+    - For some AU Core Observation profiles the `Observation.value` element is conditionally mandatory, e.g. AU Core Body Height.  In this case the `Observation.dataAbsentReason` element is used with the code `unknown` rather than the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html). Requesters are advised that other meaningful values can be captured in `Observation.dataAbsentReason` beyond missing or suppressed.
   
     Example: Patient resource where the patient's birthDate is not available.
     ~~~
@@ -369,6 +370,7 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
         ]
         ...
         ~~~
+    - For some AU Core Observation profiles the `Observation.value` element is conditionally mandatory, e.g. AU Core Smoking Status.  In this case the `Observation.dataAbsentReason` element is used with the code `unknown` rather than the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html). Requesters are advised that other meaningful values can be captured in `Observation.dataAbsentReason` beyond missing or suppressed.
 
 
 ### Suppressed Data
