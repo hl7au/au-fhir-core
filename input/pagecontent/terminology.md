@@ -15,7 +15,7 @@ The list below shows the value sets bound as [preferred](https://hl7.org/fhir/R4
   <li><strong>Available from:</strong> Where the value set is published.</li>
 </ul>  
 
-|ValueSet|Profile and Extensions where used|Available from|
+|ValueSet|Profiles and Extensions where used|Available from|
 |---|---|---|
 |[ActEncounterCode - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ActEncounterCode-extended.html)|[AU Core Encounter](StructureDefinition-au-core-encounter.html)|AU Base|
 |[AdministrativeGender](https://hl7.org/fhir/R4/valueset-administrative-gender.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|FHIR|
