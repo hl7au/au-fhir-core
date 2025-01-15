@@ -254,7 +254,7 @@
 				<reference value="Condition/uti"/>
 			</reference>
 			<name value="Condition - Urinary tract infection"/>
-			<description value="Shows an example of a resolved Urinary tract infection with onset and abatement age for the *AU Core Condition* profile. Patient: Mia Leanne Banks."/>
+			<description value="Shows an example of a resolved urinary tract infection with onset and abatement age for the *AU Core Condition* profile. Patient: Mia Leanne Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
 		<resource>
@@ -262,7 +262,7 @@
 				<reference value="Condition/condition-masked"/>
 			</reference>
 			<name value="Condition - Data suppressed for category and code"/>
-			<description value="Shows an example of a Condition with suppressed data (category and code) where the data requester has access rights to know that data is suppressed for the *AU Core Condition* profile. Patient: Anne Bennelong."/>
+			<description value="Shows an example of a condition with suppressed data (category and code) where the data requester has access rights to know that data is suppressed for the *AU Core Condition* profile. Patient: Anne Bennelong."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
 		<resource>
@@ -295,7 +295,7 @@
 				<reference value="Encounter/telehealth"/>
 			</reference>
 			<name value="Encounter - telehealth"/>
-			<description value="Shows and example of a completed virtual telehealth encounter for the *AU Core Encounter* profile. Patient: Mrs. Anne Bennelong."/>
+			<description value="Shows an example of a completed virtual telehealth encounter for the *AU Core Encounter* profile. Patient: Mrs. Anne Bennelong."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
 		</resource>
 		<!--IMMUNIZATION EXAMPLES-->
@@ -312,7 +312,7 @@
 				<reference value="Immunization/zoster-notgiven"/>
 			</reference>
 			<name value="Immunization - Administration of Zoster vaccination refused"/>
-			<description value="Shows an example of not-administered vaccination due to patient's refusal for the *AU Core Immunization* profile. Patient: Deangelo HOWE."/>
+			<description value="Shows an example of a vaccination not administered due to patient's refusal for the *AU Core Immunization* profile. Patient: Deangelo HOWE."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
 		</resource>
 		<!--LOCATION EXAMPLES-->
@@ -346,7 +346,7 @@
 				<reference value="Medication/1active-ingredient"/>
 			</reference>
 			<name value="Medication - Branded pack with one active ingredient"/>
-			<description value="Shows an example of a branded medication, Chlorsig (chloramphenicol 0.5%), with one active ingredient for the *AU Core Medication* profile. Includes a medication type extension indicating a branded product with no specified strengths or form."/>
+			<description value="Shows an example of a branded medication, Chlorsig (chloramphenicol 0.5%), with one active ingredient for the *AU Core Medication* profile. Includes a medication type extension indicating a branded product with no specified strength or form."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
 		</resource>
 		<resource>
@@ -476,7 +476,7 @@
 				<reference value="Observation/lipid-total-chol-1"/>
 			</reference>
 			<name value="Observation - Total Cholesterol/HDL ratio"/>
-			<description value="Shows an example of a laboratory result for the Total Cholesterol/HDL ratio result for the *AU Core Pathology Result Observation* profile. Patient: Mia Leanne Banks."/>
+			<description value="Shows an example of a laboratory result for the Total Cholesterol/HDL ratio for the *AU Core Pathology Result Observation* profile. Patient: Mia Leanne Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -492,7 +492,7 @@
 				<reference value="Observation/pathresult-covid-1"/>
 			</reference>
 			<name value="Observation - COVID Pathology Result (Not detected)"/>
-			<description value="Shows an example of a COVID-19 PCR test result indicating 'Not detected' with notes on test accreditation and evaluation status for the *AU Core Diagnostic Result - Pathology* profile. Patient: Li Wang."/>
+			<description value="Shows an example of a COVID-19 PCR test result indicating 'Not detected' with notes on test accreditation and evaluation status for the *AU Core Pathology Result Observation* profile. Patient: Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -541,7 +541,7 @@
 				<reference value="Organization/murrabit-hospital"/>
 			</reference>
 			<name value="Organization - Murrabit Public Hospital"/>
-			<description value="Shows an example of an organisation, Murrabit Public Hospital, for the *AU Core Organization* profile, with an HPI-O, type as Hospital, and contact details including multiple phone numbers and email address."/>
+			<description value="Shows an example of an organisation, Murrabit Public Hospital, for the *AU Core Organization* profile, with a HPI-O, type as Hospital, and contact details including multiple phone numbers and email address."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<resource>
@@ -582,7 +582,7 @@
 				<reference value="Patient/banks-mia-leanne"/>
 			</reference>
 			<name value="Patient - Mia Leanne Banks"/>
-			<description value="Shows an example of a patient resource for Mia Leanne Banks for the *AU Core Patient* profile. The patient identifies as female gender, uses the pronouns she/her', and has a verified IHI. The resource includes detailed contact information and a recorded biological sex at birth as female."/>
+			<description value="Shows an example of a patient resource for Mia Leanne Banks for the *AU Core Patient* profile. The patient identifies as female gender, uses the pronouns she/her, and has a verified IHI. The resource includes detailed contact information and a recorded biological sex at birth as female."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<resource>
@@ -607,7 +607,7 @@
 				<reference value="Practitioner/sallie-sutherland"/>
 			</reference>
 			<name value="Practitioner - Dr. Sallie Sutherland"/>
-			<description value="Shows an example of a practitioner resource for Dr. Sallie Sutherland with an HPI-I for the *AU Core Practitioner* profile. The resource includes the practitioner's official name and identifier details."/>
+			<description value="Shows an example of a practitioner resource for Dr. Sallie Sutherland with a HPI-I for the *AU Core Practitioner* profile. The resource includes the practitioner's official name and identifier details."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
@@ -615,7 +615,7 @@
 				<reference value="Practitioner/chau-fryer"/>
 			</reference>
 			<name value="Practitioner - Dr. Chau FRYER"/>
-			<description value="Shows an example of a practitioner resource for Dr. Chau Fryer with an HPI-I for the *AU Core Practitioner* profile. The resource includes the practitioner's official name and identifier details."/>
+			<description value="Shows an example of a practitioner resource for Dr. Chau Fryer with a HPI-I for the *AU Core Practitioner* profile. The resource includes the practitioner's official name and identifier details."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
@@ -623,7 +623,7 @@
 				<reference value="Practitioner/darleen-mackay"/>
 			</reference>
 			<name value="Practitioner - Darleen MACKAY"/>
-			<description value="Shows an example of a practitioner resource for Darleen Mackay with an HPI-I for the *AU Core Practitioner* profile. The resource includes the practitioner's name and identifier details."/>
+			<description value="Shows an example of a practitioner resource for Darleen Mackay with a HPI-I for the *AU Core Practitioner* profile. The resource includes the practitioner's name and identifier details."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<!--PRACTITIONERROLE EXAMPLES-->
