@@ -64,7 +64,7 @@ This change log documents the significant updates and resolutions implemented fr
 - Removed support for the following search parameters and search parameter combinations:
   - Encounter: discharge-disposition, identifier, type, patient+discharge-disposition, patient+type [FHIR-45954](https://jira.hl7.org/browse/FHIR-45954), [FHIR-45603](https://jira.hl7.org/browse/FHIR-45603), [FHIR-46057](https://jira.hl7.org/browse/FHIR-46057)
   - MedicationRequest: identifier and category [FHIR-45991](https://jira.hl7.org/browse/FHIR-45991)
-- Made the following changes to AU Core Immunization:
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-immunization.html">AU Core Immunization</a>:
   - removed Must Support from Immunization.encounter [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
   - removed Must Support from Immunization.performer, Immunization.performer.function, Immunization.performer.actor [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
   - removed Must Support from Immunization.protocolApplied, Immunization.protocolApplied.series, Immunization.protocolApplied.targetDisease, Immunization.protocolApplied.doseNumber[x] [FHIR-44674](https://jira.hl7.org/browse/FHIR-44674), [FHIR-44656](https://jira.hl7.org/browse/FHIR-44656), [FHIR-44654](https://jira.hl7.org/browse/FHIR-44654)
@@ -72,13 +72,13 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support to Immunization.primarySource [FHIR-44659](https://jira.hl7.org/browse/FHIR-44659)
   - changed Immunization.vaccineCode slicing rule from slicing by system to slice by value set [FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
   - support for AIR codes and AMT Vaccine codes in Immunization.vaccineCode changed to define the slices in AU Core (no longer inherited from AU Base as per [FHIR-44821](https://jira.hl7.org/browse/FHIR-44821)). Slicing discriminator changed from slicing by value:system to slicing by value set and AMT value set binding strength has been corrected to required. [FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
-- Made the following changes to AU Core Encounter:
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-encounter.html">AU Core Encounter</a>:
   - removed Must Support from Encounter.identifier [FHIR-45212](https://jira.hl7.org/browse/FHIR-45212)
   - removed Must Support from Encounter.type [FHIR-44580](https://jira.hl7.org/browse/FHIR-44580)
   - removed Must Support from Encounter.hospitalization, Encounter.hospitalization.dischargeDisposition [FHIR-45210](https://jira.hl7.org/browse/FHIR-45210)
   - in Encounter.participant.individual replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
-- Removed Must Support from Location.description in AU Core Location [FHIR-45029](https://jira.hl7.org/browse/FHIR-45029).
-- Made the following changes to AU Core MedicationRequest:
+- Removed Must Support from Location.description in <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-location.html">AU Core Location</a> [FHIR-45029](https://jira.hl7.org/browse/FHIR-45029).
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a>:
   - in MedicationRequest.requester replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
   - removed Must Support from MedicationRequest.identifier [FHIR-45208](https://jira.hl7.org/browse/FHIR-45208)
   - removed Must Support from MedicationRequest.category [FHIR-45207](https://jira.hl7.org/browse/FHIR-45207)
@@ -89,7 +89,7 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support to MedicationRequest.reasonReference [FHIR-45090](https://jira.hl7.org/browse/FHIR-45090)
   - support for AMT codes and PBS Item Codes in MedicationRequest.medicationCodeableConcept changed to define slicing in AU Core (no longer inherited from AU Base as per [FHIR-44821](https://jira.hl7.org/browse/FHIR-44821)). Slicing discriminator changed from slicing by value:system to slicing by value set and the binding strength has been corrected to required. [FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
   - updated invariant au-core-medreq-01 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [FHIR-46417](https://jira.hl7.org/browse/FHIR-46417)
-- Made the following changes to AU Core Medication:
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-medication.html">AU Core Medication</a>:
   - removal of Must Support from Medication.manufacturer [FHIR-45130](https://jira.hl7.org/browse/FHIR-45130)
   - removed Must Support from Medication.form [FHIR-45221](https://jira.hl7.org/browse/FHIR-45221)
   - removed Must Support from Medication.ingredient [FHIR-45220](https://jira.hl7.org/browse/FHIR-45220)
@@ -98,10 +98,10 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Medication.ingredient.strength [FHIR-45220](https://jira.hl7.org/browse/FHIR-45220)
   - removed Must Support from Medication.amount [FHIR-45219](https://jira.hl7.org/browse/FHIR-45219)
   - support for AMT codes and PBS Item Codes in Medication.code changed to define slicing in AU Core (no longer inherited from AU Base as per [FHIR-44821](https://jira.hl7.org/browse/FHIR-44821)). Slicing discriminator changed from slicing by value:system to value set and the binding strength has been corrected to required. [FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
-- Made the following changes to AU Core Organizaton: 
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-organization.html">AU Core Organizaton</a>: 
   - removed Must Support from Organization.alias [FHIR-44585](https://jira.hl7.org/browse/FHIR-44585)
   - corrected the invariant au-core-org-01 FHIRPath expression [FHIR-46103](https://jira.hl7.org/browse/FHIR-46103) 
-- Made the following changes to AU Core Patient:
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-patient.html">AU Core Patient</a>:
   - removed Must Support from Patient.extension:birthPlace [FHIR-45018](https://jira.hl7.org/browse/FHIR-45018)
   - removed Must Support from Patient.extension:interpreterRequired [FHIR-45186](https://jira.hl7.org/browse/FHIR-45186)
   - removed Must Support from Patient.birthDate.extension:birthTime [FHIR-45028](https://jira.hl7.org/browse/FHIR-45028)
@@ -109,8 +109,8 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support on Patient.name.text [FHIR-44818](https://jira.hl7.org/browse/FHIR-44818)
   - added Must Support on Patient.name.family [FHIR-44818](https://jira.hl7.org/browse/FHIR-44818)
   - added Must Support on Patient.name.given [FHIR-44818](https://jira.hl7.org/browse/FHIR-44818)
- - updated invariants au-core-pat-01, au-core-pat-02, and au-core-pat-04 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [FHIR-46406](https://jira.hl7.org/browse/FHIR-46406)
-- Made the following changes to AU Core Practitioner:
+  - updated invariants au-core-pat-01, au-core-pat-02, and au-core-pat-04 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [FHIR-46406](https://jira.hl7.org/browse/FHIR-46406)
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a>:
   - removed Must Support from Practitioner.communication [FHIR-44588](https://jira.hl7.org/browse/FHIR-44588)
   - removed Must Support from Practitioner.qualification, Practitioner.qualification.identifier, Practitioner.qualification.code, Practitioner.qualification.period, Practitioner.qualification.issuer: [FHIR-45118](https://jira.hl7.org/browse/FHIR-45118), [FHIR-44587](https://jira.hl7.org/browse/FHIR-44587)
   - removed Must Support from Practitioner.address [FHIR-43860](https://jira.hl7.org/browse/FHIR-43860)
@@ -118,10 +118,10 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support on Practitioner.name.family [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
   - added Must Support on Practitioner.name.given [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
   - replaced constraint _au-core-prac-01: At least text or family name shall be present_ with making Practitioner.name.family mandatory (1..1) [FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
-- Made the following changes to AU Core PractitionerRole:
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a>:
   - removed Must Support from PractitionerRole.location [FHIR-43841](https://jira.hl7.org/browse/FHIR-43841)
   - updated invariant au-core-prarol-01 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [FHIR-46419](https://jira.hl7.org/browse/FHIR-46419)
-- Made the following changes to AU Core Procedure:
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-procedure.html">AU Core Procedure</a>:
   - removed Must Support from Procedure.statusReason [FHIR-45013](https://jira.hl7.org/browse/FHIR-45013)
   - removed Must Support from Procedure.category [FHIR-45014](https://jira.hl7.org/browse/FHIR-45014)
   - removed Must Support from Procedure.recorder [FHIR-45015](https://jira.hl7.org/browse/FHIR-45015), [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082)
@@ -134,13 +134,13 @@ This change log documents the significant updates and resolutions implemented fr
 - Removed AU Core MedicationStatement and added to Future of AU Core that AU Core MedicationStatement is planned for AU Core R2 [FHIR-45052](https://jira.hl7.org/browse/FHIR-45052).
 - Updated mapping of AUCDI Procedure Completed Event to be represented by Procedure only [au-fhir-core #147](https://github.com/hl7au/au-fhir-core/issues/147).
 - Updated mapping of AUCDI Medication Use Statement to be represented by MedicationStatement only [au-fhir-core #145](https://github.com/hl7au/au-fhir-core/issues/145).
-- Made the following changes to AU Core Condition:
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-condition.html">AU Core Condition</a>:
   - removed Must Support from Condition.asserter [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45127](https://jira.hl7.org/browse/FHIR-45127), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - removed Must Support from  Condition.recorder [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082)
   - removed Must Support from Condition.encounter [FHIR-45189](https://jira.hl7.org/browse/FHIR-45189)
   - added profile-specific implementation guidance on representing no known problems [FHIR-45058](https://jira.hl7.org/browse/FHIR-45058)
   - removed invariant au-core-cond-05 [FHIR-46165](https://jira.hl7.org/browse/FHIR-46165)
-- Made the following changes to AU Core AllergyIntolerance:
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a>:
   - removed profile-specific implementation guidance "`AllergyIntolerance.verificationStatus` is "unconfirmed" where a sending system does not clearly have this element or "confirmed" depending on the level of certainty" [FHIR-45039](https://jira.hl7.org/browse/FHIR-45039)
   - removed Must Support from AllergyIntolerance.asserter [FHIR-44699](https://jira.hl7.org/browse/FHIR-44699), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - removed Must Support from AllergyIntolerance.recorder [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082), [FHIR-45066](https://jira.hl7.org/browse/FHIR-45066)
@@ -149,52 +149,52 @@ This change log documents the significant updates and resolutions implemented fr
   - changed the AllergyIntolerance.code 
     - changed Indicator of Hypersensitivity or Intolerance to Substance value set binding strength from preferred to extensible [FHIR-44713](https://jira.hl7.org/browse/FHIR-44713) 
     - added Additional Binding, Adverse Reaction Substances and Negated Findings value set as candidate [FHIR-44713](https://jira.hl7.org/browse/FHIR-44713) 
-- Made the following changes to AU Core Smoking Status: 
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a>: 
   - removed Must Support from Observation.encounter [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222)
   - removed Must Support from Observation.performer [FHIR-45223](https://jira.hl7.org/browse/FHIR-45223)
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
   - replaced Observation.code patternCodeableConcept constraint of 266918002 |Tobacco smoking consumption| with 1747861000168109 |Smoking status| [FHIR-45124](https://jira.hl7.org/browse/FHIR-45124)
   - updated invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match required precision to the day [FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
-- Removed Must Support from the following elements in AU Core Immunization:
+- Removed Must Support from the following elements in <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-immunization.html">AU Core Immunization</a>:
   - Immunization.encounter [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
   - Immunization.performer [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
   - Immunization.performer.function [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
   - Immunization.performer.actor [FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
-- Made the following changes to AU Core Blood Pressure: 
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-bloodpressure.html">AU Core Blood Pressure</a>: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
   - removed invariant au-core-obs-01 (duplicates invariant vs-1) [FHIR-46486](https://jira.hl7.org/browse/FHIR-46486)
-- Made the following changes to AU Core Body Height:
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-bodyheight.html">AU Core Body Height</a>:
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
   - removed the required binding to Metric Body Length Units value set from Observation.value[x]:valueQuantity to allow the FHIR standard profile binding, and added the Metric Body Length Units value set as a candidate additional binding [FHIR-44787](https://jira.hl7.org/browse/FHIR-44787)
   - removed invariant au-core-obs-01 (duplicates invariant vs-1) [FHIR-46486](https://jira.hl7.org/browse/FHIR-46486)  
-- Made the following changes to AU Core Body Temperature: 
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-bodytemp.html">AU Core Body Temperature</a>: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786) 
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
   - removed the required binding to Metric Body Temperature Units value set from Observation.value[x]:valueQuantity to allow the FHIR standard profile binding, and added the Metric Body Temperature Units value set as a candidate additional binding [FHIR-44787](https://jira.hl7.org/browse/FHIR-44787) 
   - removed invariant au-core-obs-01 (duplicates invariant vs-1) [FHIR-46486](https://jira.hl7.org/browse/FHIR-46486)
-- Made the following changes to AU Core Body Weight: 
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-bodyweight.html">AU Core Body Weight</a>: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120) 
   - removed the required binding to Metric Body Weight Units value set from Observation.value[x]:valueQuantity to allow the FHIR standard profile binding, and added the Metric Body Weight Units value set as a candidate additional binding [FHIR-44787](https://jira.hl7.org/browse/FHIR-44787) 
   - removed invariant au-core-obs-01 (duplicates invariant vs-1) [FHIR-46486](https://jira.hl7.org/browse/FHIR-46486)
-- Made the following changes to AU Core Heart Rate: 
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a>: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786) 
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
   - added profile-specific implementation guidance on representing pulse rate observations [FHIR-44861](https://jira.hl7.org/browse/FHIR-44861) 
   - removed invariant au-core-obs-01 (duplicates invariant vs-1) [FHIR-46486](https://jira.hl7.org/browse/FHIR-46486)
-- Made the following changes to AU Core Respiration Rate: 
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-resprate.html">AU Core Respiration Rate</a>: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
   - removed invariant au-core-obs-01 (duplicates invariant vs-1) [FHIR-46486](https://jira.hl7.org/browse/FHIR-46486)
-- Made the following changes to AU Core Waist Circumference: 
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a>: 
   - removed Must Support from Observation.encounter [FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)  
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
@@ -208,21 +208,21 @@ This change log documents the significant updates and resolutions implemented fr
 - Changed the following Organization search parameters:
   - address search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
   - name search parameter to be SHOULD instead of SHALL [FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
-- Made the following changes to AU Core Diagnostic Result Observation:
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a>:
   - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
   - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
   - updated invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match required precision to the day [FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
-- Made the following changes to AU Core Pathology Result Observation:
+- Made the following changes to <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a>:
   - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
   - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
   - updated invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match required precision to the day [FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
-- Made the following changes in AU Core Requester CapabilityStatement:
+- Made the following changes in <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/CapabilityStatement-au-core-requester.html">AU Core Requester CapabilityStatement</a>:
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
   - corrected the Observation combined search parameter 'patient+category+status' from SHALL to SHOULD [FHIR-45390](https://jira.hl7.org/browse/FHIR-45390)
   - corrected narrative of Location identifier parameter requester requirements on providing both the system and code values from SHOULD to MAY [FHIR-46209](https://jira.hl7.org/browse/FHIR-46209)
   - replaced security and authorization requirements with pointer to Security and Privacy page [FHIR-46067](https://jira.hl7.org/browse/FHIR-46067)
   - added missing entries for DocumentReference and RelatedPerson resources [FHIR-46546](https://jira.hl7.org/browse/FHIR-46546)
-- Made the following changes in AU Core Responder CapabilityStatement:
+- Made the following changes in <a href="https://hl7.org.au/fhir/core/1.0.0-ballot/CapabilityStatement-au-core-responder.html">AU Core Responder CapabilityStatement</a>:
   - removed reference to Bulk Data Access implementation guide [FHIR-45113](https://jira.hl7.org/browse/FHIR-45113)
   - corrected the Observation combined search parameter 'patient+category+status' from SHALL to SHOULD [FHIR-45390](https://jira.hl7.org/browse/FHIR-45390)
   - corrected MedicationRequest combined search parameter 'patient+intent+authoredon' from SHALL to SHOULD [FHIR-46167](https://jira.hl7.org/browse/FHIR-46167)
