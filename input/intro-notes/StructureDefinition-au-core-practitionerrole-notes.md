@@ -54,7 +54,7 @@ The following search parameters **SHALL** be supported:
 1. **SHALL** support searching using the **[`identifier`](https://hl7.org/fhir/R4/practitionerrole.html#search)** search parameter:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `PractitionerRole:practitioner`
 
-    `GET [base]/PractitionerRole?identifier={system|}[code]`
+    `GET [base]/PractitionerRole?identifier=[system|][code]`
 
     Example:
     
