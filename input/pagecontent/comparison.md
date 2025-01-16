@@ -642,15 +642,15 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Must Support element in US Core.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">MedicationRequest.dosageInstruction.dispenseRequest</td>
+            <td style="width: 25%;">MedicationRequest.dispenseRequest</td>
             <td style="width: 25%;">Must Support element in US Core.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">MedicationRequest.dosageInstruction.dispenseRequest.numberOfRepeatsAllowed</td>
+            <td style="width: 25%;">MedicationRequest.dispenseRequest.numberOfRepeatsAllowed</td>
             <td style="width: 25%;">Must Support element in US Core.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">MedicationRequest.dosageInstruction.dispenseRequest.quantity</td>
+            <td style="width: 25%;">MedicationRequest.dispenseRequest.quantity</td>
             <td style="width: 25%;">Must Support element in US Core.</td>
         </tr>
         <tr>

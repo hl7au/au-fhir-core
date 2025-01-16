@@ -395,7 +395,7 @@
 			<reference>
 				<reference value="Observation/bloodpressure-1"/>
 			</reference>
-			<name value="Observation - Blood Pressure (systolic and dystolic)"/>
+			<name value="Observation - Blood Pressure (systolic and diastolic)"/>
 			<description value="Shows an example of a blood pressure observation with both systolic and diastolic measurements for the *AU Core Blood Pressure* profile. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
 		</resource>

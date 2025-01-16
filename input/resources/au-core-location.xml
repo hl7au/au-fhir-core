@@ -29,8 +29,6 @@
     </element>
     <element id="Location.identifier">
       <path value="Location.identifier"/>
-      <short value="Unique code or number identifying the location to its users" />
-      <definition value="Unique code or number identifying the location to its users." />
       <condition value="au-core-loc-01"/>
     </element>
     <element id="Location.name">

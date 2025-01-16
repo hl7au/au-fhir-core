@@ -182,7 +182,7 @@ For example, the AU Core MedicationRequest Profile `note` element is labelled *M
 
 If a sub-element is labelled as *Must Support*: 
 - AU Core Responders **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
-- AU Core Requesters **SHALL** accept resource without error if *Must Support* sub-elements are present and containing any valid value.
+- AU Core Requesters **SHALL** accept resources without error if *Must Support* sub-elements are present and containing any valid value.
 
 For example, in the AU Core Practitioner Profile, the `name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
 - AU Core Responders **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.

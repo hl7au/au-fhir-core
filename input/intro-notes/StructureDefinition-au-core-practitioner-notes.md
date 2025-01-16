@@ -34,7 +34,7 @@ The following search parameters **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`identifier`](https://hl7.org/fhir/R4/practitioner.html#search)** search parameter:
 
-    `GET [base]/Practitioner?identifier={system|}[code]`
+    `GET [base]/Practitioner?identifier=[system|][code]`
 
     Example:
     

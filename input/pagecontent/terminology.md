@@ -1,14 +1,16 @@
-This page lists ValueSets and CodeSystems supported as part of AU Core. 
+This page includes the value sets and code systems supported in AU Core.  
 
-As well as terminology defined in FHIR, this specification supports terminology published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html) or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).
+AU Core does not define any unique terminology FHIR artefacts. Terminology supported in AU Core are published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), the base FHIR specification, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).
+
+<div class="stu-note">
+Implementers are advised to take note that expansions of value sets visible in this guide may differ from expansions returned with a server using <a href="http://terminology.hl7.org">HL7 Terminology (THO)</a> version 6.0.0 or higher.
+</div>
 
 ### Value Sets
 
-This implementation guide does not define any unique value sets. The value sets used in this guide are defined in the base FHIR specification, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), or the [NCTS](https://www.healthterminologies.gov.au/).
+The following value sets are supported in AU Core, i.e bound as [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) or stronger to a supported element, element slice, or extension in an AU Core profile.
 
-The list below shows the value sets bound as [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) or greater to a supported element, element slice, or extension.
-
-<p>Column attribute descriptions are as follows:</p>
+Column attribute descriptions are as follows:
 <ul>
   <li><strong>ValueSet:</strong> The title of the value set.</li>
   <li><strong>Profiles and Extensions where used:</strong> The profiles and extensions that reference the value set.</li>
@@ -61,7 +63,6 @@ The list below shows the value sets bound as [preferred](https://hl7.org/fhir/R4
 |[Indicator of Hypersensitivity or Intolerance to Substance](https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2)|[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)|NCTS|
 |[Individual Healthcare Identifier Record Status](https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1)|[AU Core Patient](StructureDefinition-au-core-patient.html)|NCTS|
 |[Location Type (Physical) - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-location-physical-type-extended.html)|[AU Core Location](StructureDefinition-au-core-location.html)|AU Base|
-|[LocationMode](https://hl7.org/fhir/R4/valueset-location-mode.html)|[AU Core Location](StructureDefinition-au-core-location.html)|FHIR|
 |[LocationStatus](https://hl7.org/fhir/R4/valueset-location-status.html)|[AU Core Location](StructureDefinition-au-core-location.html)|FHIR|
 |[Medication request intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html)|[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|FHIR|
 |[Medicationrequest status](https://hl7.org/fhir/R4/valueset-medicationrequest-status.html)|[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|FHIR|
@@ -89,13 +90,13 @@ The list below shows the value sets bound as [preferred](https://hl7.org/fhir/R4
 |[VitalSigns](https://hl7.org/fhir/R4/valueset-observation-vitalsignresult.html)|[AU Core Heart Rate](StructureDefinition-au-core-heartrate.html), [AU Core Body Height](StructureDefinition-au-core-bodyheight.html), [AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html), [AU Core Respiration Rate](StructureDefinition-au-core-resprate.html), [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html), [AU Core Body Temperature](StructureDefinition-au-core-bodytemp.html)|FHIR|
 {:.grid}
 
-### Code systems
+### Code Systems
 
-This implementation guide does not define any unique code systems. The code systems used in this guide are defined in the base FHIR specification, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), or the [NCTS](https://www.healthterminologies.gov.au/).  
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR. 
 
-The list below shows the code systems used in the value sets above.
+The following code systems are referenced by the value sets listed above.
 
-<p>Column attribute descriptions are as follows:</p>
+Column attribute descriptions are as follows:
 <ul>
   <li><strong>CodeSystem:</strong> The title of a code system.</li>
   <li><strong>ValueSet where used:</strong> The value set(s) that reference the code system.</li>
@@ -130,7 +131,6 @@ The list below shows the code systems used in the value sets above.
 |[IdentifierUse](https://hl7.org/fhir/R4/codesystem-identifier-use.html)|[IdentifierUse](https://hl7.org/fhir/R4/valueset-identifier-use.html)|FHIR|Health Level Seven International|
 |[Location Type (Physical) AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-physical-type.html)|[Location Type (Physical) - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-location-physical-type-extended.html)|AU Base|HL7 Australia|
 |[Location Type AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-type.html)|[ServiceDeliveryLocationRoleType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)|AU Base|HL7 Australia|
-|[LocationMode](https://hl7.org/fhir/R4/codesystem-location-mode.html)|[LocationMode](https://hl7.org/fhir/R4/valueset-location-mode.html)|FHIR|Health Level Seven International|
 |[LocationStatus](https://hl7.org/fhir/R4/codesystem-location-status.html)|[LocationStatus](https://hl7.org/fhir/R4/valueset-location-status.html)|FHIR|Health Level Seven International|
 |[LOINC](https://www.healthterminologies.gov.au/access-clinical-terminology/access-fhir-terminology-resources/code-systems/?ui:filter=loinc)|[Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1), [RCPA SPIA Pathology Reporting](https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1), [Vital Signs](http://hl7.org/fhir/R4/valueset-observation-vitalsignresult.html)|NCTS, HL7 Terminology (THO)|Regenstrief Institute, Inc|
 |[Medication request intent](https://hl7.org/fhir/R4/codesystem-medicationrequest-intent.html)|[Medication request intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html)|FHIR|Health Level Seven International|
