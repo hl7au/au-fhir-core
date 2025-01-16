@@ -40,7 +40,7 @@ The following search parameters **SHALL** be supported:
 
 1. **SHALL** support searching using the **[`identifier`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
     
-    `GET [base]/Organization?identifier={system|}[code]`
+    `GET [base]/Organization?identifier=[system|][code]`
 
     Example:
     
