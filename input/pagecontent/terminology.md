@@ -1,14 +1,16 @@
-This page lists ValueSets and CodeSystems supported as part of AU Core. 
+This page includes the value sets and code systems supported in AU Core.  
 
-As well as terminology defined in FHIR, this specification supports terminology published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html) or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).
+AU Core does not define any unique terminology FHIR artefacts. Terminology supported in AU Core are published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), the base FHIR specification, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).
+
+<div class="stu-note">
+Implementers are advised to take note that expansions of value sets visible in this guide may differ from expansions returned with a server using <a href="http://terminology.hl7.org">HL7 Terminology (THO)</a> version 6.0.0 or higher.
+</div>
 
 ### Value Sets
 
-This implementation guide does not define any unique value sets. The value sets used in this guide are defined in the base FHIR specification, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), or the [NCTS](https://www.healthterminologies.gov.au/).
+The following value sets are supported in AU Core, i.e bound as [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) or stronger to a supported element, element slice, or extension in an AU Core profile.
 
-The list below shows the value sets bound as [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) or greater to a supported element, element slice, or extension.
-
-<p>Column attribute descriptions are as follows:</p>
+Column attribute descriptions are as follows:
 <ul>
   <li><strong>ValueSet:</strong> The title of the value set.</li>
   <li><strong>Profiles and Extensions where used:</strong> The profiles and extensions that reference the value set.</li>
@@ -88,13 +90,13 @@ The list below shows the value sets bound as [preferred](https://hl7.org/fhir/R4
 |[VitalSigns](https://hl7.org/fhir/R4/valueset-observation-vitalsignresult.html)|[AU Core Heart Rate](StructureDefinition-au-core-heartrate.html), [AU Core Body Height](StructureDefinition-au-core-bodyheight.html), [AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html), [AU Core Respiration Rate](StructureDefinition-au-core-resprate.html), [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html), [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html), [AU Core Body Temperature](StructureDefinition-au-core-bodytemp.html)|FHIR|
 {:.grid}
 
-### Code systems
+### Code Systems
 
-This implementation guide does not define any unique code systems. The code systems used in this guide are defined in the base FHIR specification, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), or the [NCTS](https://www.healthterminologies.gov.au/).  
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR. 
 
-The list below shows the code systems used in the value sets above.
+The following code systems are referenced by the value sets listed above.
 
-<p>Column attribute descriptions are as follows:</p>
+Column attribute descriptions are as follows:
 <ul>
   <li><strong>CodeSystem:</strong> The title of a code system.</li>
   <li><strong>ValueSet where used:</strong> The value set(s) that reference the code system.</li>
