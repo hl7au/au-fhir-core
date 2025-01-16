@@ -39,8 +39,8 @@ Implementation of capabilities defined in AU Core enables specifications, applic
 
 This document is a working specification that may be directly implemented by FHIR<sup>&reg;&copy;</sup> system producers.
 
-FHIR<sup>&reg;&copy;</sup> connectathon events are key to the verification of the guide as being suitable for 
-implementation. This implementation guide will be used as the basis for Australian connectathon events.
+FHIR<sup>&reg;&copy;</sup> Connectathon events are key to the verification of the guide as being suitable for 
+implementation. This implementation guide will be used as the basis for Australian Connectathon events.
 
 ### AU Core Actors
 
@@ -100,7 +100,7 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Security and Privacy](security.html): This page documents the AU Core general security and privacy requirements and recommendations.
 - [FHIR Artefacts](fhirartefacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Artefacts Summary](artifacts.html): This page lists the FHIR artefacts defined in this guide.
-  - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to exchange data. Each profile page includes a narrative description and guidance, formal definition and a "Notes" section that summarises the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation.
+  - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to exchange data. Each profile page includes a narrative description and guidance, formal definition and a "Notes" section that summarises the supported search transactions for each profile. Guidance typically focuses on the profiled elements but can include guidance on un-profiled elements to aid with implementation.
   - [Search Parameters](search-parameters.html): This page lists the search parameters extended for use in this guide for use in AU Core operations.
   - [Terminology](terminology.html): This page lists the value sets and code systems supported in this guide.
   - [Capability Statements](capability-statements.html): This page defines the expected FHIR capabilities of AU Core Responders and Requesters.
