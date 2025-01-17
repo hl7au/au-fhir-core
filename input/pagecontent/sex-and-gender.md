@@ -67,7 +67,7 @@ The table below provides an overview of the sex and gender concepts that are inc
 In AU Core, the `Patient.gender` value **SHALL** be regarded as a Recorded Sex or Gender and is a *Must Support* element in [AU Core Patient](StructureDefinition-au-core-patient.html). AU Core adopts the guidance defined in AU Base [Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#administrative-gender-patientgender).
 
 ### Name to Use
-In AU Core, `name.use` is a *Must Support* element in [AU Core Patient](StructureDefinition-au-core-patient.html). It should be noted that, `name.period` is not a *Must Support* element. AU Core adopts the guidance defined in AU Base [Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#name-to-use-ntu).
+In AU Core, `name.use` is a *Must Support* element in [AU Core Patient](StructureDefinition-au-core-patient.html). It should be noted that, `name.period` is not a *Must Support* element. AU Core adopts the implementation guidance defined in AU Base for [Name to Use](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#name-to-use-ntu) without change.
 
 ### Pronouns​
 In AU Core, the [Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns) extension is a *Must Support* element in [AU Core Patient](StructureDefinition-au-core-patient.html), with the value element of the extension constrained to be [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)). AU Core adopts the guidance defined in AU Base [Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#pronouns).
