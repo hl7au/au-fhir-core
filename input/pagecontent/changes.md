@@ -6,15 +6,15 @@
 This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to TBD.
 
 #### Changes in this version
-- Changes to [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html):
+- [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html):
   - corrected base profile to AU Base Diagnostic Observation [FHIR-47116](https://jira.hl7.org/browse/FHIR-47116)
   - removed constraints from Observation.hasMember.reference [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728), [FHIR-48331](https://jira.hl7.org/browse/FHIR-48331)
   - removed Must Support and Obligations from Observation.identifier, Observation.interpretation, Observation.note, Observation.method, Observation.referenceRange, Observation.referenceRange.low, Observation.referenceRange.high, Observation.referenceRange.type and Observation.referenceRange.text [FHIR-46737](https://jira.hl7.org/browse/FHIR-46737)
 - [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html):
   - removed constraints from Observation.hasMember.reference and Observation.specimen.reference [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728), [FHIR-46731](https://jira.hl7.org/browse/FHIR-46731)
   - removed Must Support and Obligations from Observation.identifier, Observation.method and Observation.note [FHIR-46732](https://jira.hl7.org/browse/FHIR-46732)
-- Changes to [AU Core Location](StructureDefinition-au-core-location.html): removed Must Support flag and associated Obligation extensions from Location.identifier [FHIR-47105](https://jira.hl7.org/browse/FHIR-47105) and Location.mode [FHIR-47104](https://jira.hl7.org/browse/FHIR-47104)
-- Changes to the following AU Core search parameters and search parameter combinations:
+- [AU Core Location](StructureDefinition-au-core-location.html): removed Must Support flag and associated Obligation extensions from Location.identifier [FHIR-47105](https://jira.hl7.org/browse/FHIR-47105) and Location.mode [FHIR-47104](https://jira.hl7.org/browse/FHIR-47104)
+- AU Core search parameters and search parameter combinations:
   - [Observation search parameters](StructureDefinition-au-core-bloodpressure.html#notes): changed 'patient' from SHALL to MAY [FHIR-47171](https://jira.hl7.org/browse/FHIR-47171)
   - [Patient search parameters](StructureDefinition-au-core-patient.html#notes): removed the requirement for including an offset for 'birthdate' [FHIR-47150](https://jira.hl7.org/browse/FHIR-47150)
   - [Organization search parameters](StructureDefinition-au-core-organization.html#notes): changed 'name' search parameter from SHOULD to SHALL [FHIR-47109](https://jira.hl7.org/browse/FHIR-47109)
@@ -24,12 +24,12 @@ This change log documents the significant updates and resolutions implemented fr
   - [PractitionerRole search parameters](): added 'role' as a SHOULD [FHIR-47115](https://jira.hl7.org/browse/FHIR-47115)
   - [MedicationRequest search parameters](StructureDefinition-au-core-medicationrequest.html#notes): changed 'patient+intent' and 'patient+intent+status' from SHALL to SHOULD, and added a new MedicationRequest search parameter 'patient+status' as a SHALL [FHIR-47073](https://jira.hl7.org/browse/FHIR-47073)
   - updated requirement to mandate both system and code values for identifier search parameters on Organization, Practitioner and PractitionerRole [FHIR-46782](https://jira.hl7.org/browse/FHIR-46782)
-- Changes to [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html):
+- [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html):
   - removed all instances of MAY support create, update, delete, vread, patch, history-instance [FHIR-46060](https://jira.hl7.org/browse/FHIR-46060)
   - removed MAY support search-system and history-system [FHIR-46059](https://jira.hl7.org/browse/FHIR-46059)
   - _id Patient search parameter changed to SHOULD from SHALL [FHIR-46390](https://jira.hl7.org/browse/FHIR-46390)
   - added missing entries for DocumentReference and RelatedPerson resources [FHIR-46546](https://jira.hl7.org/browse/FHIR-46546)
-- Changes to [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html):
+- [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html):
   - removed all instances of MAY support create, update, delete, vread, patch, history-instance [FHIR-46060](https://jira.hl7.org/browse/FHIR-46060)
   - corrected narrative of PractitionerRole practitioner.identifier search parameter from Medicare Provider Number to HPI-I [FHIR-47013](https://jira.hl7.org/browse/FHIR-47013)
   - corrected support for Practitioner _id search parameter to be SHOULD instead of SHALL [FHIR-46777](https://jira.hl7.org/browse/FHIR-46777)
