@@ -1,5 +1,5 @@
 ### Profile specific implementation guidance
-- When exchanging concepts of sex or gender, refer to the guidance in [Sex and Gender](sex-and-gender.html).
+- See the [Sex and Gender](sex-and-gender.html) page for guidance on exchanging sex and gender related concepts conformant to AU Core.
 
 **Examples:**
 
