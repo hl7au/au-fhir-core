@@ -1,9 +1,5 @@
 ### Profile specific implementation guidance
-- When populating the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension for Sex Assigned at Birth:
-  - *Male* may be represented by sending the SNOMED CT code 248153007\|Male\|
-  - *Female* may be represented by sending the SNOMED CT code 248152002\|Female\|
-  - *Intersex* may be represented by sending the SNOMED CT code 32570691000036108\|Intersex\|
-  - *Indeterminate sex* may be represented by sending the SNOMED CT code 32570681000036106\|Indeterminate sex\|
+- When exchanging concepts of sex or gender, refer to the guidance in [Sex and Gender](sex-and-gender.html).
 
 **Examples:**
 

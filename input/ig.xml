@@ -725,6 +725,11 @@
 					<generation value="markdown"/>
 				</page>
 				<page>
+					<nameUrl value="sex-and-gender.html"/>
+					<title value="Sex and Gender"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
 					<nameUrl value="aucdi.html"/>
 					<title value="AU Core Data for Interoperability"/>
 					<generation value="markdown"/>
