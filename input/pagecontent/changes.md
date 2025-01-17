@@ -3,7 +3,7 @@
 - Publication status: TBD
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version 1.0.0-ballot to TBD.
+This change log documents the significant updates and resolutions implemented from version [1.0.0-ballot](https://hl7.org.au/fhir/core/1.0.0-ballot/index.html) to TBD.
 
 #### Changes in this version
 - [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html):
@@ -43,7 +43,10 @@ This change log documents the significant updates and resolutions implemented fr
 This change log documents the significant updates and resolutions implemented from version [0.3.0-ballot](https://hl7.org.au/fhir/core/0.3.0-ballot/index.html) to [1.0.0-ballot](https://hl7.org.au/fhir/core/1.0.0-ballot/index.html).
 
 #### Changes in this version
-- In the [AU Core Data for Interoperability](https://hl7.org.au/fhir/core/1.0.0-ballot/aucdi.html) page, to align to the published AUCDI Release 1 (R1): added AUCDI element mapping Date/Time of Measurement and Date/Time of Observation, and added future consideration note for Last Updated to 
+- In the [AU Core Data for Interoperability](https://hl7.org.au/fhir/core/1.0.0-ballot/aucdi.html) page, to align to the published AUCDI Release 1 (R1): 
+  - added AUCDI element mapping Date/Time of Measurement and Date/Time of Observation, and added future consideration note for Last Updated
+  - updated mapping of AUCDI Procedure Completed Event to be represented by Procedure only [au-fhir-core #147](https://github.com/hl7au/au-fhir-core/issues/147).
+  - updated mapping of AUCDI Medication Use Statement to be represented by MedicationStatement only [au-fhir-core #145](https://github.com/hl7au/au-fhir-core/issues/145).
 - dependency to Smart App Launch changed to 2.1.0 instead of latest (2.2.0) due to missing dependency issue that causes failure to load in NPM Package registry [FHIR-46398](https://jira.hl7.org/browse/FHIR-46398)
 - Throughout the specification made significant clarifications to FHIR Obligations, Actors, and Capabilities:
   - changed the default obligation behaviour in AU Core for Responders from 'be capable of populate' to 'populate if known' [FHIR-45231](https://jira.hl7.org/browse/FHIR-45231), [FHIR-45195](https://jira.hl7.org/browse/FHIR-45195), [FHIR-45163](https://jira.hl7.org/browse/FHIR-45163), [FHIR-45095](https://jira.hl7.org/browse/FHIR-45095), [FHIR-45073](https://jira.hl7.org/browse/FHIR-45073)
@@ -135,8 +138,6 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Obligations on Procedure.bodySite [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728)
 - Removed AU Core Provenance [FHIR-45191](https://jira.hl7.org/browse/FHIR-45191).
 - Removed AU Core MedicationStatement in accordance with the agreement to move work on this profile from AU Core R1 to R2. This decision is noted in the AU Core [Future Candidate Requirements Under Consideration](https://hl7.org.au/fhir/core/1.0.0-ballot/future.html#future-candidate-requirements-under-consideration) [FHIR-45052](https://jira.hl7.org/browse/FHIR-45052).
-- Updated mapping of AUCDI Procedure Completed Event to be represented by Procedure only [au-fhir-core #147](https://github.com/hl7au/au-fhir-core/issues/147).
-- Updated mapping of AUCDI Medication Use Statement to be represented by MedicationStatement only [au-fhir-core #145](https://github.com/hl7au/au-fhir-core/issues/145).
 - Changes to [AU Core Condition](https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-condition.html):
   - removed Must Support from Condition.asserter [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45127](https://jira.hl7.org/browse/FHIR-45127), [FHIR-45083](https://jira.hl7.org/browse/FHIR-45083)
   - removed Must Support from  Condition.recorder [FHIR-45019](https://jira.hl7.org/browse/FHIR-45019), [FHIR-45082](https://jira.hl7.org/browse/FHIR-45082)
@@ -204,11 +205,11 @@ This change log documents the significant updates and resolutions implemented fr
   - removed the required binding to Metric Body Length Units value set from Observation.valueQuantity.code to allow the FHIR standard profile binding, and added the Metric Body Length Units value set as a candidate additional binding [FHIR-44787](https://jira.hl7.org/browse/FHIR-44787)
   - removed invariant au-core-obs-01 (duplicates invariant vs-1) [FHIR-46486](https://jira.hl7.org/browse/FHIR-46486)
 - Changes to [AU Core Diagnostic Result Observation](https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-diagnosticresult.html):
-  - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
+  - changed Observation.performer type from RelatedPerson to AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
   - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
   - updated invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match required precision to the day [FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
 - Changes to [AU Core Pathology Result Observation](https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-diagnosticresult-path.html):
-  - in Observation.performer replaced RelatedPerson with AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
+  - changed Observation.performer type from RelatedPerson to AU Base RelatedPerson [FHIR-45228](https://jira.hl7.org/browse/FHIR-45228)
   - removed the required binding to ObservationStatus Result Available value set from Observation.status [FHIR-45125](https://jira.hl7.org/browse/FHIR-45125)
   - updated invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match required precision to the day [FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
 - Changes in [AU Core Requester CapabilityStatement](https://hl7.org.au/fhir/core/1.0.0-ballot/CapabilityStatement-au-core-requester.html):
