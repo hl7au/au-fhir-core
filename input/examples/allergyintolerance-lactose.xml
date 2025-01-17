@@ -33,9 +33,6 @@
   <recorder>
     <reference value="PractitionerRole/bobrester-bob-gp"/>
   </recorder>
-  <asserter>
-    <reference value="PractitionerRole/bobrester-bob-gp"/>
-  </asserter>
   <reaction>
     <manifestation>
       <coding>
