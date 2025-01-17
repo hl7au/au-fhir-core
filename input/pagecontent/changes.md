@@ -6,6 +6,7 @@
 This change log documents the significant updates and resolutions implemented from version [1.0.0-ballot](https://hl7.org.au/fhir/core/1.0.0-ballot/index.html) to TBD.
 
 #### Changes in this version
+- Added [Sex and Gender](sex-and-gender.html) page to consolidate implementation guidance on sex and gender concepts, including Administrative Gender, Name to Use, Gender Identity, Pronouns, and Sex Assigned at Birth. This change removes duplicate guidance already defined in AU Base and references the AU Base guidance where applicable [FHIR-47176](https://jira.hl7.org/browse/FHIR-47176), [FHIR-47178](https://jira.hl7.org/browse/FHIR-47178), [FHIR-47182](https://jira.hl7.org/browse/FHIR-47182), [FHIR-47183](https://jira.hl7.org/browse/FHIR-47183), [FHIR-46892](https://jira.hl7.org/browse/FHIR-46892), [FHIR-46896](https://jira.hl7.org/browse/FHIR-46896).
 - [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html):
   - corrected base profile to AU Base Diagnostic Observation [FHIR-47116](https://jira.hl7.org/browse/FHIR-47116)
   - removed constraints from Observation.hasMember.reference [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728), [FHIR-48331](https://jira.hl7.org/browse/FHIR-48331)
@@ -35,13 +36,6 @@ This change log documents the significant updates and resolutions implemented fr
   - corrected narrative of PractitionerRole practitioner.identifier search parameter from Medicare Provider Number to HPI-I [FHIR-47013](https://jira.hl7.org/browse/FHIR-47013)
   - corrected support for Practitioner _id search parameter to SHOULD instead of SHALL [FHIR-46777](https://jira.hl7.org/browse/FHIR-46777)
   - added missing entries for DocumentReference and RelatedPerson resources [FHIR-46546](https://jira.hl7.org/browse/FHIR-46546)
-- Added [Sex and Gender](sex-and-gender.html) page [FHIR-47176](https://jira.hl7.org/browse/FHIR-47178), [FHIR-47176](https://jira.hl7.org/browse/FHIR-47178), [FHIR-47182](https://jira.hl7.org/browse/FHIR-47182), [FHIR-47183](https://jira.hl7.org/browse/FHIR-47183), [FHIR-46892](https://jira.hl7.org/browse/FHIR-46892), [FHIR-46896](https://jira.hl7.org/browse/FHIR-46896).  
-=======
-
-
-
-
->>>>>>> master
 
 ###  Release 1.0.0-ballot
 - Publication date: 2024-08-05
