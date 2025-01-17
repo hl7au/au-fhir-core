@@ -64,7 +64,7 @@ The table below provides an overview of the sex and gender concepts that are inc
 
 
 ### Administrative Gender (Patient.gender)
-In AU Core, the `Patient.gender` value **SHALL** be regarded as a Recorded Sex or Gender and is a *Must Support* element in [AU Core Patient](StructureDefinition-au-core-patient.html). AU Core adopts the implementation guidance defined in AU Based for [Administrative Gender (Patient.gender)](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#administrative-gender-patientgender) without change..
+In AU Core, the `Patient.gender` value **SHALL** be regarded as a Recorded Sex or Gender and is a *Must Support* element in [AU Core Patient](StructureDefinition-au-core-patient.html). AU Core adopts the implementation guidance defined in AU Based for [Administrative Gender (Patient.gender)](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#administrative-gender-patientgender) without change.
 
 ### Name to Use
 In AU Core, `name.use` is a *Must Support* element in [AU Core Patient](StructureDefinition-au-core-patient.html). It should be noted that, `name.period` is not a *Must Support* element. AU Core adopts the implementation guidance defined in AU Base for [Name to Use](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#name-to-use-ntu) without change.
