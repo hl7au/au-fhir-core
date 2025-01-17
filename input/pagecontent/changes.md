@@ -41,6 +41,7 @@ This change log documents the significant updates and resolutions implemented fr
   - added a PractitionerRole 'role' search parameter as a SHOULD [FHIR-47115](https://jira.hl7.org/browse/FHIR-47115)
   - changed MedicationRequest search parameters 'patient+intent' and 'patient+intent+status' from SHALL to SHOULD, and added a new MedicationRequest search parameter 'patient+status' as a SHALL [FHIR-47073](https://jira.hl7.org/browse/FHIR-47073)
   - removed Location search parameter 'identifier' [FHIR-48927](https://jira.hl7.org/browse/FHIR-48927)
+- Added [Sex and Gender](sex-and-gender.html) page [FHIR-47176](https://jira.hl7.org/browse/FHIR-47178), [FHIR-47176](https://jira.hl7.org/browse/FHIR-47178), [FHIR-47182](https://jira.hl7.org/browse/FHIR-47182), [FHIR-47183](https://jira.hl7.org/browse/FHIR-47183), [FHIR-46892](https://jira.hl7.org/browse/FHIR-46892), [FHIR-46896](https://jira.hl7.org/browse/FHIR-46896).  
 
 ###  Release 1.0.0-ballot
 - Publication date: 2024-08-05
