@@ -20,7 +20,7 @@
     <coding>
       <system value="http://snomed.info/sct"/>
       <code value="13644009"/>
-      <display value="Hypercholesterolemia"/>
+      <display value="Hypercholesterolaemia"/>
     </coding>
     <text value="High cholesterol"/>
   </reasonCode>
