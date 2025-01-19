@@ -3,7 +3,7 @@ AU Core is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&cop
 
 AU Core defines the data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. 
 
-AU Core uses AU Base representations, where available, as the basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each resource type to access data. AU Core promotes interoperability and adoption through common implementation and SHOULD be the basis of further implementation guide development for specific use cases. 
+AU Core uses AU Base representations, where available, as the basis for profiles that define the FHIR resources to be supported, along with their elements, extensions, vocabularies, and value sets, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each resource type to access data. AU Core promotes interoperability and adoption through common implementation and provides the basis for further implementation guide development for specific use cases.
 
 There are two different ways to implement AU Core:
 1. Profile Only Support: systems support only the resources as profiled by AU Core to represent digital health information.
