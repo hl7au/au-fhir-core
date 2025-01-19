@@ -1,14 +1,6 @@
 
 ### Relationship to HL7 AU Base
 
-This guide is built on top of the FHIR standard and, where available, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/).
-
-  <div> 
-    <img src="relationship.png" alt="Relationship with HL7 AU Base" style="width:70%"/>
-  </div>
-*Figure 1: Relationship with HL7 AU Base*
-<br/>
-
 **AU Base:**
 - defines Australian realm concepts (e.g. Medicare card number) as an additional set of options to what is available in the FHIR standard including extensions and terminology.
 - provides ‘Base’ profiles to inform a reader of which added concepts are considered relevant to a particular resource type. 
@@ -17,7 +9,7 @@ This guide is built on top of the FHIR standard and, where available, [AU Base](
 
 
 **AU Core:**
-- defines a set of conformance requirements that enforce a set of 'minimum requirements' on the Australian localised concepts from AU Base, specifying the elements, extensions, vocabularies, and value sets that SHALL be present and how they SHALL be used, along with the RESTful API interactions. 
+- defines a set of conformance requirements that enforce a set of 'minimum requirements' on the local concepts from AU Base, specifying rules for the elements, extensions, vocabularies, and value sets, and the RESTful API interactions. 
 - for use by Australian stakeholders when implementing FHIR to provide a common implementation and should be built on top of when creating further Australian profiles and implementation guides.
 - conformance may become tied to regulatory and/or contractual agreements in order to necessitate adoption to this more prescriptive specification.
 
@@ -25,7 +17,7 @@ The context of AU Core within the set of HL7 AU standards is shown in the figure
   <div> 
     <img src="architecture.png" alt="Context of AU Core within the set of HL7 AU standards" style="width:70%"/>
   </div>
-*Figure 2: Context of AU Core within the set of HL7 AU standards*
+*Figure 1: Context of AU Core within the set of HL7 AU FHIR standards*
 <br/>
 
 ### Relationship to AUCDI and other IGs
