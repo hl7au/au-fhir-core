@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-core-relatedperson"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
   <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
   <name value="AUCoreRelatedPerson"/>
   <title value="AU Core RelatedPerson"/>
