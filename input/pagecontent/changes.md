@@ -23,7 +23,7 @@ This change log documents the significant updates and resolutions implemented fr
   - [Location search parameters](StructureDefinition-au-core-location.html#notes): 
     - changed 'address' search parameter from SHALL to SHOULD [FHIR-47107](https://jira.hl7.org/browse/FHIR-47107)
     - removed 'identifier' [FHIR-48927](https://jira.hl7.org/browse/FHIR-48927)
-  - [PractitionerRole search parameters](): added 'role' as a SHOULD [FHIR-47115](https://jira.hl7.org/browse/FHIR-47115)
+  - [PractitionerRole search parameters](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-practitionerrole.html#notes): added 'role' as a SHOULD [FHIR-47115](https://jira.hl7.org/browse/FHIR-47115)
   - [MedicationRequest search parameters](StructureDefinition-au-core-medicationrequest.html#notes): changed 'patient+intent' and 'patient+intent+status' from SHALL to SHOULD, and added a new MedicationRequest search parameter 'patient+status' as a SHALL [FHIR-47073](https://jira.hl7.org/browse/FHIR-47073)
   - updated requirement to mandate both system and code values for identifier search parameters on Organization, Practitioner and PractitionerRole [FHIR-46782](https://jira.hl7.org/browse/FHIR-46782)
 - [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html):
