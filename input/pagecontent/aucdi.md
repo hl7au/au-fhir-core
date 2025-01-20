@@ -1,14 +1,21 @@
-[Australian Core Data for Interoperability (AUCDI)](https://sparked.csiro.au/index.php/sparked-products-resources/australian-core-data-for-interoperability/aucdi-release-1/)  and the AU Core FHIR Implementation Guide complement each other assisting in common understanding of clinical data concepts when implemented in systems and exchanged between systems.  
+[Australian Core Data for Interoperability (AUCDI)](https://sparked.csiro.au/index.php/sparked-products-resources/australian-core-data-for-interoperability/aucdi-release-1/) and the AU Core FHIR Implementation Guide complement each other assisting in common understanding of clinical data concepts when implemented in systems and exchanged between systems.  
+
+  <div> 
+    <img src="aucdi2core.png" alt="AUCDI and AU Core Activity" style="width:70%"/>
+  </div>
  
-AUCDI is the product of a national clinician focussed requirements gathering project operating as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au/).  Content in AUDI material can be used as the basis of requirements for clinical system implementation including information capture, storage and exchange aspects. It defines **AUCDI Data Groups** made up of **AUCDI Data Elements** and references appropriate clinical terminology concepts which address the definition of suitable, coherent and reusable information building blocks for clinical data. These guidelines support safe and meaningful information content to ensure common understanding of clinical data between care providers.
- 
-The AU Core FHIR Implementation guide is a technical specification that addresses constraints and obligations on data representation for exchange. AU Core enables system data to be mapped to FHIR format in an agreed way and define capability requirements to manage data via FHIR RESTful API interactions.   AU Core is intended to enable system data to be commonly exchanged by an agreed FHIR representation, and supports testing and validation to ensure technical consistency.
- 
-When systems implement AUCDI concepts AU Core interprets how that data can be exchanged, noting: 
-* FHIR-based profiles for AU Core are an interpretation of AUCDI concepts and made implementable through the Technical Design Group community. 
-* At any stage AU Core may not cover all aspects of the defined AUCDI data concepts, especially when AUCDI data concepts are not supported in existing systems.
-* AU Core may include exchange for concepts that are commonly implemented in systems and not included in AUCDI.   
-* AU Core includes information not included in AUCDI but is required to make implementable as FHIR for exchange.
+AUCDI is the product of a national clinician focussed requirements gathering project operating as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au/). AUCDI can be used as the basis of requirements for clinical system implementation including information capture, storage and sharing aspects. It defines data groups made up of data elements and references clinical terminology concepts which address the definition of suitable, coherent and reusable information building blocks for clinical data. 
+
+AUCDI may define information models that are future focussed and as yet do not align with system implementation of the clinical concept.
+
+Neither AUCDI nor AU Core are required to be implemented as a whole single product. Parts can be implemented as required for specific use cases.
+
+AU Core is a technical specification that addresses constraints and obligations on data representation for exchange. AU Core enables system data to be mapped to an agreed FHIR format and define capability requirements to exchange data via FHIR RESTful API interactions. 
+
+AU Core agreed FHIR formats that supports exchange of clinical and administrative data within technical constraints, an interpretation of AUCDI information requirements is undertaken through the community. Note that:
+* In any particular release AU Core may not cover all aspects of the defined AUCDI data concepts, especially when AUCDI data concepts are not supported in existing systems.
+* AU Core includes exchange for concepts that are commonly implemented in systems and not included in AUCDI e.g. demographics. 
+* AU Core includes data elements not included in AUCDI that are required to make FHIR implementable e.g. provenance, versions. 
 
 ### AUCDI mappings into AU Core
 
