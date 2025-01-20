@@ -63,7 +63,7 @@ This change log documents the significant updates and resolutions implemented fr
 - Added additional guidance for body site / laterality implementation to [General Guidance](https://hl7.org.au/fhir/core/1.0.0-ballot/general-guidance.html) page [FHIR-45176](https://jira.hl7.org/browse/FHIR-45176).
 - Moved the Medicine Information section from the General Guidance page to a new [Medicine Information](https://hl7.org.au/fhir/core/1.0.0-ballot/medicine-information.html) page [FHIR-45165](https://jira.hl7.org/browse/FHIR-45165).
 - Changes to the following AU Core search parameters and search parameter combinations:
-  - clarified multipleAnd comparator support for AU Core date search parameters. [FHIR46309](https://jira.hl7.org/browse/FHIR-46309)
+  - clarified multipleAnd comparator support for AU Core date search parameters [FHIR-46309](https://jira.hl7.org/browse/FHIR-46309)
   - [Encounter search parameters](https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-encounter.html#notes): removed discharge-disposition, identifier, type, patient+discharge-disposition, patient+type [FHIR-45954](https://jira.hl7.org/browse/FHIR-45954), [FHIR-45603](https://jira.hl7.org/browse/FHIR-45603), [FHIR-46057](https://jira.hl7.org/browse/FHIR-46057)
   - [MedicationRequest search parameters](https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-medicationrequest.html#notes): removed identifier and category [FHIR-45991](https://jira.hl7.org/browse/FHIR-45991)
   - [Patient search parameters](https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-patient.html#notes): 
@@ -158,7 +158,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed Must Support from Observation.encounter [FHIR-45222](https://jira.hl7.org/browse/FHIR-45222)
   - removed Must Support from Observation.performer [FHIR-45223](https://jira.hl7.org/browse/FHIR-45223)
   - removed the fixed value constraint 'final' on Observation.status [FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
-  - replaced Observation.code patternCodeableConcept constraint of 266918002 |Tobacco smoking consumption| with 1747861000168109 |Smoking status| [FHIR-45124](https://jira.hl7.org/browse/FHIR-45124)
+  - replaced Observation.code patternCodeableConcept constraint of 266918002 \|Tobacco smoking consumption\| with 1747861000168109 \|Smoking status\| [FHIR-45124](https://jira.hl7.org/browse/FHIR-45124)
   - corrected invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match required precision to the day [FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
 - Changes to [AU Core Immunization](https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-immunization.html):
   - removed Must Support from Immunization.encounter [FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
