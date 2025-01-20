@@ -1,7 +1,7 @@
 
 ### Relationship to HL7 AU Base
 
-This guide is built on top of the FHIR standard and, where available, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/).
+This guide is built on top of the FHIR standard and, where available, [AU Base](https://hl7.org.au/fhir/5.0.0/index.html).
 
   <div> 
     <img src="relationship.png" alt="Relationship with HL7 AU Base" style="width:70%"/>
@@ -62,7 +62,7 @@ The relationship of AU Core to AUCDI and other implementation guides is shown in
 
 Implementation Guide |Relationship
 ---|---
-[AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/)|This IG defines Australian realm concepts including terminology, identifiers, and extensions. AU Core uses AU Base, where available, as the basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined.
+[AU Base](https://hl7.org.au/fhir/5.0.0/index.html)|This IG defines Australian realm concepts including terminology, identifiers, and extensions. AU Core uses AU Base, where available, as the basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined.
 [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)|This IG provides definitive guidance on how to exchange clinical sex and gender affirming information using HL7 models. Sex and gender concepts from this IG have been reviewed for the potential for adoption in Australia. Where adopted, these concepts are included by reference in AU Base and are available for use in AU Core via AU Base.
 [International Patient Access](https://hl7.org/fhir/uv/ipa/STU1/)|This IG describes how an application acting on behalf of a patient can access information about the patient from a clinical records system using a FHIR based API. The REST API and profiles in this IG were reviewed and considered during development of AU Core. AU Core is designed to be compatible with IPA, e.g. AU Core conformant data can be accessed by an IPA conformant client.
 [International Patient Summary Implementation Guide](https://hl7.org/fhir/uv/ips/STU1.1/)|This IG describes specify how to represent in HL7 FHIR the International Patient Summary (IPS). An International Patient Summary (IPS) document is an electronic health record extract containing essential healthcare information about a subject of care. The profiles in this IG were reviewed and considered during development of AU Core. AU Core is designed to be compatible with IPS, e.g. AU Core conformant data can be used to generate a patient summary that is conformant to IPS.

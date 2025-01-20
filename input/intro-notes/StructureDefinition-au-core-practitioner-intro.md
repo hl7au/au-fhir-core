@@ -10,5 +10,5 @@ The following are supported usage scenarios for this profile:
 ### Profile specific implementation guidance
 - Even though AU Core Profiles allow both PractitionerRole and Practitioner to be referenced, because PractitionerRole supplies a provider’s location, contact information, and reference to the Practitioner, it **SHOULD** be referenced instead of the Practitioner resource. 
 - If a system only supports Practitioner, the system **SHALL** provide implementation specific guidance how to access a provider’s location and contact information using only the Practitioner resource.
-- See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#business-identifiers) in AU Base.
+- See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://hl7.org.au/fhir/5.0.0/generalguidance.html#business-identifiers) in AU Base.
 

@@ -1,4 +1,4 @@
-AU Core does not introduce new search parameters. AU Core SearchParameters are derived from existing [FHIR SearchParameters](https://hl7.org/fhir/R4/searchparameter-registry.html) or [AU Base SearchParameters](https://build.fhir.org/ig/hl7au/au-fhir-base/search-parameters.html) to specify additional requirements for requesters and responders for the following SearchParameter elements:​
+AU Core does not introduce new search parameters. AU Core SearchParameters are derived from existing [FHIR SearchParameters](https://hl7.org/fhir/R4/searchparameter-registry.html) or [AU Base SearchParameters](https://hl7.org.au/fhir/5.0.0/search-parameters.html) to specify additional requirements for requesters and responders for the following SearchParameter elements:​
 
 - [multipleAnd](https://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)
 - [multipleOr](https://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)
