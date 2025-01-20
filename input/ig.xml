@@ -2,10 +2,10 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
 	<id value="hl7.fhir.au.core"/>
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-		<valueCode value="draft"/>
+		<valueCode value="trial-use"/>
 	</extension>
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-		<valueInteger value="1"/>
+		<valueInteger value="2"/>
 	</extension>
 	<url value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
 	<version value="1.0.0-ci-build"/>
@@ -40,7 +40,7 @@
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
 		<packageId value="hl7.fhir.uv.smart-app-launch"/>
-		<version value="2.1.0"/>
+		<version value="current"/>
 	</dependsOn>
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa"/>
@@ -221,7 +221,7 @@
 				<reference value="AllergyIntolerance/lactose"/>
 			</reference>
 			<name value="AllergyIntolerance - Lactose intolerance"/>
-			<description value="Shows an example of Lactose intolerance for the *AU Core AllergyIntolerance* profile. Patient: Mia Leanne Banks."/>
+			<description value="Shows an example of Lactose intolerance with manifestations of abdominal pain, bloating, and diarrhoea for the *AU Core AllergyIntolerance* profile. Patient: Mia Leanne Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
 		</resource>
 		<resource>
@@ -229,7 +229,7 @@
 				<reference value="AllergyIntolerance/noneknown"/>
 			</reference>
 			<name value="AllergyIntolerance - No known allergy"/>
-			<description value="Shows an example of allergyintolerance for the *AU Core AllergyIntolerance* indicating the patient has no known allergies. Patient: Mr. Li Wang."/>
+			<description value="Shows an example of allergy intolerance for the *AU Core AllergyIntolerance* profile indicating the patient has no known allergies. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
 		</resource>
 		<resource>
@@ -237,7 +237,7 @@
 				<reference value="AllergyIntolerance/penicillin"/>
 			</reference>
 			<name value="AllergyIntolerance - Penicillin allergy"/>
-			<description value="Shows an example of Penicillin allergy for the *AU Core AllergyIntolerance* profile. Patient: Deangelo HOWE."/>
+			<description value="Shows an example of a Penicillin allergy with the reaction manifestation as hives for the *AU Core AllergyIntolerance* profile. Patient: Deangelo HOWE."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
 		</resource>
 		<!--CONDITION EXAMPLES-->
@@ -246,7 +246,7 @@
 				<reference value="Condition/ckd"/>
 			</reference>
 			<name value="Condition - Chronic Kidney Disease"/>
-			<description value="Shows an example of an active Chronic Kidney Disease with onset age for the *AU Core Condition* profile. Patient: Ronny Lawrence Irvine."/>
+			<description value="Shows an example of active Chronic Kidney Disease with onset age for the *AU Core Condition* profile. Patient: Ronny Lawrence Irvine."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
 		<resource>
@@ -254,7 +254,7 @@
 				<reference value="Condition/uti"/>
 			</reference>
 			<name value="Condition - Urinary tract infection"/>
-			<description value="Shows an example of a resolved Urinary tract infection with onset and abatement age for the *AU Core Condition* profile. Patient: Mia Leanne Banks."/>
+			<description value="Shows an example of a resolved urinary tract infection with onset and abatement age for the *AU Core Condition* profile. Patient: Mia Leanne Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
 		<resource>
@@ -262,7 +262,7 @@
 				<reference value="Condition/condition-masked"/>
 			</reference>
 			<name value="Condition - Data suppressed for category and code"/>
-			<description value="Shows an example of a Condition with suppressed data (category and code) where the data requester has access rights to know that data is suppressed for the *AU Core Condition* profile. Patient: Anne Bennelong."/>
+			<description value="Shows an example of a condition with suppressed data (category and code) where the data requester has access rights to know that data is suppressed for the *AU Core Condition* profile. Patient: Anne Bennelong."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
 		<resource>
@@ -279,7 +279,7 @@
 				<reference value="Encounter/covid-admin-1"/>
 			</reference>
 			<name value="Encounter - COVID 19 Vaccine Administration Dose 1"/>
-			<description value="Shows an example of COVID19 vaccine administration encouter for the *AU Core Encounter* profile. Patient: Mrs. Anne Bennelong."/>
+			<description value="Shows an example of a COVID-19 vaccine administration encounter for the *AU Core Encounter* profile. Patient: Mrs. Anne Bennelong."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
 		</resource>
 		<resource>
@@ -287,7 +287,7 @@
 				<reference value="Encounter/discharge-1"/>
 			</reference>
 			<name value="Encounter - Discharge"/>
-			<description value="Shows an example of an emergency department encounter for the *AU Core Encounter* profile. Patient: Ronny Lawrence Irvine."/>
+			<description value="Shows an example of a completed emergency encounter for the *AU Core Encounter* profile. Patient: Ronny Lawrence Irvine."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
 		</resource>
 		<resource>
@@ -295,7 +295,7 @@
 				<reference value="Encounter/telehealth"/>
 			</reference>
 			<name value="Encounter - telehealth"/>
-			<description value="Shows and example of a telehealth encounter for the *AU Core Encounter* profile. Patient: Mrs. Anne Bennelong."/>
+			<description value="Shows an example of a completed virtual telehealth encounter for the *AU Core Encounter* profile. Patient: Mrs. Anne Bennelong."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
 		</resource>
 		<!--IMMUNIZATION EXAMPLES-->
@@ -304,7 +304,7 @@
 				<reference value="Immunization/covid-1"/>
 			</reference>
 			<name value="Immunization - COVID Dose 1"/>
-			<description value="Shows an example of administered COVID 19 vaccine for the *AU Core Immunization* profile. Patient: Mrs. Anne Bennelong."/>
+			<description value="Shows an example of administered COVID-19 vaccine for the *AU Core Immunization* profile. Patient: Mrs. Anne Bennelong."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
 		</resource>
 		<resource>
@@ -312,7 +312,7 @@
 				<reference value="Immunization/zoster-notgiven"/>
 			</reference>
 			<name value="Immunization - Administration of Zoster vaccination refused"/>
-			<description value="Shows an example of not-administered vaccination due to patient's refusal for the *AU Core Immunization* profile. Patient: Deangelo HOWE."/>
+			<description value="Shows an example of a vaccination not administered due to patient's refusal for the *AU Core Immunization* profile. Patient: Deangelo HOWE."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
 		</resource>
 		<!--LOCATION EXAMPLES-->
@@ -346,7 +346,7 @@
 				<reference value="Medication/1active-ingredient"/>
 			</reference>
 			<name value="Medication - Branded pack with one active ingredient"/>
-			<description value="Shows an example of a branded pack with one active ingredient for the *AU Core Medication* profile."/>
+			<description value="Shows an example of a branded medication, Chlorsig (chloramphenicol 0.5%), with one active ingredient for the *AU Core Medication* profile. Includes a medication type extension indicating a branded product with no specified strength or form."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
 		</resource>
 		<resource>
@@ -354,7 +354,7 @@
 				<reference value="Medication/2active-ingredients"/>
 			</reference>
 			<name value="Medication - Product with two active ingredients"/>
-			<description value="Shows an example of a Product with two active ingredients mediction for the *AU Core Medication* profile."/>
+			<description value="Shows an example of a combination medication, perindopril arginine 10 mg + amlodipine 10 mg tablets, for the *AU Core Medication* profile. Includes a PBS code for the medication."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
 		</resource>
 		<resource>
@@ -362,7 +362,7 @@
 				<reference value="Medication/simvastatin"/>
 			</reference>
 			<name value="Medication - Simvastatin 40 MG Disintegrating Oral Tablet"/>
-			<description value="Shows an example of Simvastatin 40 MG Disintegrating Oral Tablet for the *AU Core Medication* profile."/>
+			<description value="Shows an example of Simvastatin 40 mg oral tablet for the *AU Core Medication* profile. Includes a SNOMED CT code for the medication."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
 		</resource>
 		<!--MEDICATIONREQUEST EXAMPLES-->
@@ -379,7 +379,7 @@
 				<reference value="MedicationRequest/reaptan"/>
 			</reference>
 			<name value="MedicationRequest - active prescription, Reaptan"/>
-			<description value="Shows an example of an order for Reaptan for pain management for the *AU Core MedicationRequest* profile example that demonstrates representing medication as a contained Medication resource. Patient: Mr. Li Wang."/>
+			<description value="Shows an example of an order for Reaptan 10 mg/10 mg for the *AU Core MedicationRequest* profile. The request includes the reason code, a reference to a contained Medication resource, and dosage instructions. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
 		</resource>
 		<resource>
@@ -387,7 +387,7 @@
 				<reference value="MedicationRequest/simvastatin"/>
 			</reference>
 			<name value="MedicationRequest - active prescription, Simvastatin"/>
-			<description value="Shows an example of an order for Simvastatin for high cholesterol for the *AU Core MedicationRequest* profile that demonstrates representing medication as a reference to Medication resource. Patient: Mr. Li Wang."/>
+			<description value="Shows an example of an order for Simvastatin 40 mg oral tablet for high cholesterol for the *AU Core MedicationRequest* profile, demonstrating representation of medication as a reference to a Medication resource. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
 		</resource>
 		<!--OBSERVATION EXAMPLES-->
@@ -395,8 +395,8 @@
 			<reference>
 				<reference value="Observation/bloodpressure-1"/>
 			</reference>
-			<name value="Observation - Blood Pressure (systolic and dystolic)"/>
-			<description value="Shows an example of a blood pressure with both systolic and diastolic measurements for the *AU Core Blood Pressure* profile. Patient: Mr. Li Wang."/>
+			<name value="Observation - Blood Pressure (systolic and diastolic)"/>
+			<description value="Shows an example of a blood pressure observation with both systolic and diastolic measurements for the *AU Core Blood Pressure* profile. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
 		</resource>
 		<resource>
@@ -404,7 +404,7 @@
 				<reference value="Observation/bloodpressure-data-absent"/>
 			</reference>
 			<name value="Observation - Blood Pressure (data absent for diastolic)"/>
-			<description value="Shows an example of a blood pressure observation with systolic measurement and unknown dystolic measurement for the *AU Core Blood Pressure* profile. Patient: Ronny Lawrence Irvine."/>
+			<description value="Shows an example of a blood pressure observation for the *AU Core Blood Pressure* profile, where the systolic value is recorded and the diastolic value is marked as unknown using the Data Absent Reason extension. Patient: Ronny Lawrence Irvine."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
 		</resource>
 		<resource>
@@ -428,7 +428,7 @@
 				<reference value="Observation/bodyweight-1"/>
 			</reference>
 			<name value="Observation - Body weight"/>
-			<description value="Shows an example of a body weight observation  for the *AU Core Body Weight* profile. Patient: Mia Leanne Banks."/>
+			<description value="Shows an example of a body weight observation for the *AU Core Body Weight* profile. Patient: Mia Leanne Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight"/>
 		</resource>
 		<resource>
@@ -436,7 +436,7 @@
 				<reference value="Observation/hearing-threshold-1"/>
 			</reference>
 			<name value="Observation - Hearing threshold Ear (left) 500 Hz"/>
-			<description value="Shows an example of a hearing threshold result for the *AU Core Diagnostic Result Observation* profile. Patient: Ronny Lawrence Irvine."/>
+			<description value="Shows an example of a hearing threshold observation for the *AU Core Diagnostic Result Observation* profile. Patient: Ronny Lawrence Irvine."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult"/>
 		</resource>
 		<resource>
@@ -460,7 +460,7 @@
 				<reference value="Observation/lipid-hdl-1"/>
 			</reference>
 			<name value="Observation - HDL"/>
-			<description value="Shows an example of an HDL result for the *AU Core Pathology Result Observation* profile. Patient: Mia Leanne Banks."/>
+			<description value="Shows an example of a laboratory result for HDL cholesterol levels for the *AU Core Pathology Result Observation* profile. Patient: Mia Leanne Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -468,7 +468,7 @@
 				<reference value="Observation/lipid-ldl-1"/>
 			</reference>
 			<name value="Observation - LDL"/>
-			<description value="Shows an example of an LDL result for the *AU Core Pathology Result Observation* profile. Patient: Mia Leanne Banks."/>
+			<description value="Shows an example of a laboratory result for LDL cholesterol for the *AU Core Pathology Result Observation* profile. Patient: Mia Leanne Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -476,7 +476,7 @@
 				<reference value="Observation/lipid-total-chol-1"/>
 			</reference>
 			<name value="Observation - Total Cholesterol/HDL ratio"/>
-			<description value="Shows an example of a Total Cholesterol/HDL ratio result for the *AU Core Pathology Result Observation* profile. Patient: Mia Leanne Banks."/>
+			<description value="Shows an example of a laboratory result for the Total Cholesterol/HDL ratio for the *AU Core Pathology Result Observation* profile. Patient: Mia Leanne Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -484,7 +484,7 @@
 				<reference value="Observation/lipid-triglyceride-1"/>
 			</reference>
 			<name value="Observation - Triglyceride"/>
-			<description value="Shows an example of a Triglyceride result for the *AU Core Pathology Result Observation* profile. Patient: Mia Leanne Banks."/>
+			<description value="Shows an example of a laboratory result for Triglyceride levels for the *AU Core Pathology Result Observation* profile. Patient: Mia Leanne Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -492,7 +492,7 @@
 				<reference value="Observation/pathresult-covid-1"/>
 			</reference>
 			<name value="Observation - COVID Pathology Result (Not detected)"/>
-			<description value="Shows an example of a COVID-19 PCR test result indicating 'Not detected' with notes on test accreditation and evaluation status for the *AU Core Diagnostic Result - Pathology* profile. Patient: Li Wang."/>
+			<description value="Shows an example of a COVID-19 PCR test result indicating 'Not detected' with notes on test accreditation and evaluation status for the *AU Core Pathology Result Observation* profile. Patient: Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
 		</resource>
 		<resource>
@@ -508,7 +508,7 @@
 				<reference value="Observation/smokingstatus-current-smoker"/>
 			</reference>
 			<name value="Observation - Current smoker"/>
-			<description value="Shows an example of an observation of smoking status of current smoker for the *AU Core Smoking Status* profile. Patient: Mr. Li Wang."/>
+			<description value="Shows an example of an observation of smoking status as a current smoker for the *AU Core Smoking Status* profile. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus"/>
 		</resource>
 		<resource>
@@ -533,7 +533,7 @@
 				<reference value="Organization/bobrester-medical-center"/>
 			</reference>
 			<name value="Organization - Bobrester Medical Centre"/>
-			<description value="Shows an example of Bobrester Medical Centre organisation with ABN identifier for the *AU Core Organization* profile."/>
+			<description value="Shows an example of an organisation, Bobrester Medical Center, for the *AU Core Organization* profile, with ABN identifier, type as Medical Center, and contact details including email and phone number. "/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<resource>
@@ -541,7 +541,7 @@
 				<reference value="Organization/murrabit-hospital"/>
 			</reference>
 			<name value="Organization - Murrabit Public Hospital"/>
-			<description value="Shows an example of Murrabit Public Hospital organisation with an HPI-O identifier for the *AU Core Organization* profile."/>
+			<description value="Shows an example of an organisation, Murrabit Public Hospital, for the *AU Core Organization* profile, with a HPI-O, type as Hospital, and contact details including multiple phone numbers and email address."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<resource>
@@ -549,7 +549,7 @@
 				<reference value="Organization/mitchells-hill-audiology"/>
 			</reference>
 			<name value="Organization - Mitchells Hill Audiology"/>
-			<description value="Shows an example Mitchells Hill Audiology organisation with ABN and HPI-O identifiers for the *AU Core Organization* profile."/>
+			<description value="Shows an example of an organisation, Mitchells Hill Audiology, for the *AU Core Organization* profile, with HPI-O and ABN identifiers, type specified as an audiology clinic, with contact details and an address."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<!--PATIENT EXAMPLES-->
@@ -558,7 +558,7 @@
 				<reference value="Patient/ronny-irvine"/>
 			</reference>
 			<name value="Patient - Ronny Lawrence Irvine (missing data for birth date)"/>
-			<description value="Shows an example of a patient with missing data for birth date for the *AU Core Patient* profile."/>
+			<description value="Shows an example of a patient resource for Mr. Ronny Lawrence Irvine for the *AU Core Patient* profile. The patient identifies as Torres Strait Islander but not of Aboriginal origin, with an unknown birth date documented using the Data Absent Reason extension."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<resource>
@@ -566,7 +566,7 @@
 				<reference value="Patient/bennelong-anne"/>
 			</reference>
 			<name value="Patient - Mrs. Anne Bennelong"/>
-			<description value="Shows an example of a patient with a Medicare Number and communication preferences for the *AU Core Patient* profile."/>
+			<description value="Shows an example of a patient resource for Mrs. Anne Bennelong for the *AU Core Patient* profile. The patient identifies as Aboriginal but not of Torres Strait Islander origin, speaks Yugambal as a primary language, and has a documented Medicare number."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<resource>
@@ -574,7 +574,7 @@
 				<reference value="Patient/wang-li"/>
 			</reference>
 			<name value="Patient - Mr. Li Wang"/>
-			<description value="Shows an example of a patient with an HPI-O scoped identifier and communications preferences for the *AU Core Patient* profile."/>
+			<description value="Shows an example of a patient resource for Mr. Li Wang for the *AU Core Patient* profile. The patient is identified as neither Aboriginal nor Torres Strait Islander origin, speaks Cantonese as the preferred language, and has a Medical Record Number assigned by Large Metropolitan Hospital."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<resource>
@@ -582,7 +582,7 @@
 				<reference value="Patient/banks-mia-leanne"/>
 			</reference>
 			<name value="Patient - Mia Leanne Banks"/>
-			<description value="Shows an example of patient who has an IHI, identifies as female, whose sex at birth is recorded as female, identifies as she/her/her/hers/herself, and has multiple contact details for the *AU Core Patient* profile."/>
+			<description value="Shows an example of a patient resource for Mia Leanne Banks for the *AU Core Patient* profile. The patient identifies as female gender, uses the pronouns she/her, and has a verified IHI. The resource includes detailed contact information and a recorded biological sex at birth as female."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<resource>
@@ -590,7 +590,7 @@
 				<reference value="Patient/howe-deangelo"/>
 			</reference>
 			<name value="Patient - Deangelo HOWE"/>
-			<description value="Shows an example of a patient with IHI for the *AU Core Patient* profile."/>
+			<description value="Shows an example of a patient resource for Deangelo HOWE for the *AU Core Patient* profile. The patient has a verified IHI and identifies as neither Aboriginal nor Torres Strait Islander origin. The resource includes contact details, gender, date of birth, and address."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<!--PRACTITIONER EXAMPLES-->
@@ -599,7 +599,7 @@
 				<reference value="Practitioner/bobrester-bob"/>
 			</reference>
 			<name value="Practitioner - Dr. Bob Bobrester"/>
-			<description value="Shows an example of a practitioner for the *AU Core Practitioner* profile."/>
+			<description value="Shows an example of a practitioner resource for Dr. Bob Bobrester for the *AU Core Practitioner* profile. The resource includes the practitioner's name with a title prefix."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
@@ -607,7 +607,7 @@
 				<reference value="Practitioner/sallie-sutherland"/>
 			</reference>
 			<name value="Practitioner - Dr. Sallie Sutherland"/>
-			<description value="Shows an example of a practitioner with HPI-I for the *AU Core Practitioner* profile."/>
+			<description value="Shows an example of a practitioner resource for Dr. Sallie Sutherland with a HPI-I for the *AU Core Practitioner* profile. The resource includes the practitioner's official name and identifier details."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
@@ -615,7 +615,7 @@
 				<reference value="Practitioner/chau-fryer"/>
 			</reference>
 			<name value="Practitioner - Dr. Chau FRYER"/>
-			<description value="Shows an example of a practitioner with HPI-I for the *AU Core Practitioner* profile."/>
+			<description value="Shows an example of a practitioner resource for Dr. Chau Fryer with a HPI-I for the *AU Core Practitioner* profile. The resource includes the practitioner's official name and identifier details."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<resource>
@@ -623,7 +623,7 @@
 				<reference value="Practitioner/darleen-mackay"/>
 			</reference>
 			<name value="Practitioner - Darleen MACKAY"/>
-			<description value="Shows an example of a practitioner with HPI-I example for the *AU Core Practitioner* profile."/>
+			<description value="Shows an example of a practitioner resource for Darleen Mackay with a HPI-I for the *AU Core Practitioner* profile. The resource includes the practitioner's name and identifier details."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
 		</resource>
 		<!--PRACTITIONERROLE EXAMPLES-->
@@ -632,7 +632,7 @@
 				<reference value="PractitionerRole/bobrester-bob-gp"/>
 			</reference>
 			<name value="PractitionerRole - General practitioner"/>
-			<description value="Shows an example of a general practitioner for the *AU Core PractitionerRole* profile with Practitioner and Organisation references."/>
+			<description value="Shows an example of a General Practitioner role for the *AU Core PractitionerRole* profile, including an employee number identifier, contact details and references to the associated Practitioner and Organization."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
@@ -640,7 +640,7 @@
 				<reference value="PractitionerRole/cardiologist-sallie-sutherland"/>
 			</reference>
 			<name value="PractitionerRole - Cardiologist"/>
-			<description value="Shows an example of a cardiologist for the *AU Core PractitionerRole* profile that demonstrates the use of Medicare Provider Number and Practitioner, Organization and Location references."/>
+			<description value="Shows an example of a Cardiologist role for the *AU Core PractitionerRole* profile, including a Medicare Provider Number identifier, contact details, and references to the associated Practitioner, Organization, and Location."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
@@ -648,7 +648,7 @@
 				<reference value="PractitionerRole/surgeon-chau-fryer"/>
 			</reference>
 			<name value="PractitionerRole - Surgeon"/>
-			<description value="Shows an example of a surgeon for the *AU Core PractitionerRole* profile that demonstrates the Medicare Provider Number and Practitioner, Organization and Location references."/>
+			<description value="Shows an example of a Surgeon role for the *AU Core PractitionerRole* profile, including a Medicare Provider Number identifier, contact details, and references to the associated Practitioner, Organization, and Location."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
@@ -656,7 +656,7 @@
 				<reference value="PractitionerRole/nephrologist-darleen-mackay"/>
 			</reference>
 			<name value="PractitionerRole - Nephrologist"/>
-			<description value="Shows an example of a nephrologist for the *AU Core PractitionerRole* profile, using a local employee number as the role identifier and including a refernce to the Practitioner."/>
+			<description value="Shows an example of a nephrologist for the *AU Core PractitionerRole* profile, using a local employee number as the role identifier and including a reference to the Practitioner."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<!--PROCEDURE EXAMPLES-->
@@ -665,7 +665,7 @@
 				<reference value="Procedure/dialysis"/>
 			</reference>
 			<name value="Procedure - Dialysis"/>
-			<description value="Shows an example of a Dialysis procedure for the *AU Core Procedure* profile with reason as a reference to a Condition resource. Patient: Ronny Lawrence Irvine."/>
+			<description value="Shows an example of a completed haemodialysis procedure for the *AU Core Procedure* profile, with reason as a reference to a Condition resource. Patient: Ronny Lawrence Irvine."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
 		</resource>
 		<resource>
@@ -673,7 +673,7 @@
 				<reference value="Procedure/stentinsertion"/>
 			</reference>
 			<name value="Procedure - Stent insertion"/>
-			<description value="Shows an example of a stent insertion procedure for the *AU Core Procedure* profile. Patient: Mr. Li Wang."/>
+			<description value="Shows an example of a completed stent placement procedure for the *AU Core Procedure* profile, demonstrating performed date, body site, reason, and focal device. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
 		</resource>
 		<!--SPECIMEN EXAMPLES-->
@@ -682,7 +682,7 @@
 				<reference value="Specimen/nasoswab"/>
 			</reference>
 			<name value="Specimen - Naso swab (COVID test)"/>
-			<description value="Shows a naso swab specimen referenced by the [Observation - COVID Pathology Result (Not detected)](Observation-pathresult-covid-1.html) example for the *AU Core Pathology Result Observation* profile. Patient: Mr. Li Wang."/>
+			<description value="Shows an example of a nasopharyngeal swab specimen referenced by the [Observation - COVID Pathology Result (Not detected)](Observation-pathresult-covid-1.html) example for the *AU Core Pathology Result Observation* profile. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
 		</resource>
 		<!--PAGES-->
@@ -722,6 +722,11 @@
 				<page>
 					<nameUrl value="medicine-information.html"/>
 					<title value="Medicine Information"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="sex-and-gender.html"/>
+					<title value="Sex and Gender"/>
 					<generation value="markdown"/>
 				</page>
 				<page>
@@ -885,8 +890,8 @@
 			<value value="https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#maturity-levels"/>
 		</parameter>
 		<parameter>
-     		<code value="version-comparison-master"/>
-     		<value value="1.0.0-ballot"/>
+			<code value="version-comparison-master"/>
+			<value value="1.0.0-ballot"/>
 		</parameter>
 	</definition>
 </ImplementationGuide>

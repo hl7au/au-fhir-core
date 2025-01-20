@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-core-bloodpressure" />
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="1"/> 
+    <valueInteger value="2"/> 
   </extension>
   <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure" />
   <name value="AUCoreBloodPressure" />
@@ -248,7 +248,7 @@
       <constraint>
         <key value="au-core-obs-01"/>
         <severity value="error"/>
-        <human value="If a coded body site is provided, at least one code shall be from SNOMED CT"/>
+        <human value="If a coded body site is provided, at least one coding shall be from SNOMED CT"/>
         <expression value="coding.exists() implies coding.where(system='http://snomed.info/sct').exists()"/>
         <xpath value="not(exists(f:coding/f:system)) or exists(f:coding/f:system[@value='http://snomed.info/sct'])"/>
         <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
