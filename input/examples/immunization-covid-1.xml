@@ -37,7 +37,7 @@
 		<coding>
 			<system value="http://snomed.info/sct"/>
 			<code value="368208006"/>
-			<display value="Left upper arm structure"/>
+			<display value="Structure of left upper arm"/>
 		</coding>
 		<text value="Left upper arm"/>
 	</site>
