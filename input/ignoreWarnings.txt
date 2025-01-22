@@ -7,7 +7,6 @@
 # ===  These HTML fragments provide a summary information about this guide that is either not relevant (e.g. AU Core does not define any global profiles) or is already addressed through other means in the guide. Suppressing these warnings does not impact the IG's conformance or usability. ===
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
-The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 
 # === This warning is based on FHIR IG Publisher best practice, which recommends that all observations include a performer. AU Core does not require Observation.performer as the Must Support flag was removed based on the TDG agreement. AU Core examples align with this decision, and the warning can be safely ignored. ===
 WARNING: Observation/bodyheight-1: Observation: Best Practice Recommendation: In general, all observations should have a performer
