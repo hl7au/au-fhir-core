@@ -14,6 +14,7 @@ AU Core is a technical specification that addresses constraints and obligations 
 An interpretation of AUCDI clinical information requirements through community consensus is undertaken to define support for the exchange of clinical and administrative data within technical constraints. Note that:
 * In any particular release, AU Core may not cover all AUCDI data concepts, especially when AUCDI data concepts are not supported in existing systems.
 * AU Core includes exchange for concepts that are commonly implemented in systems and not included in AUCDI e.g. Patient.name, Practitioner.identifier, Procedure.encounter. 
+* AU Core may include exchange for clinical concepts not yet included in AUCDI e.g. MedicationRequest
 * AU Core includes data elements not included in AUCDI that are required to make FHIR implementable e.g. Observation.status, MedicationRequest.intent, Provenance.
 * Neither AUCDI nor AU Core are required to be implemented as a whole single product. Parts can be implemented as required for specific use cases.
 
