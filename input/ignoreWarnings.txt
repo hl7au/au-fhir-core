@@ -4,11 +4,10 @@
 # === Warnings ====
 # =========================================================================================
 
-# ===  These HTML fragments provide a summary information about this guide that is either not relevant (e.g. AU Core does not define any global profiles) or is already addressed through other means in the guide. Suppressing these warnings does not impact the IG's conformance or usability. ===
+# === WARNING: HL7 Australia FHIR IGs requires all HL7 AU FHIR IGs to include a License and Legal page that already covers this content. ===  
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
-An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 
-# === This warning is based on FHIR IG Publisher best practice, which recommends that all observations include a performer. AU Core does not require Observation.performer as the Must Support flag was removed based on the TDG agreement. AU Core examples align with this decision, and the warning can be safely ignored. ===
+# === WARNING: This warning is based on FHIR IG Publisher best practice, which recommends that all observations include a performer. AU Core does not require Observation.performer as the Must Support flag was removed based on the TDG agreement. AU Core examples align with this decision, and the warning can be safely ignored. ===
 WARNING: Observation/bodyheight-1: Observation: Best Practice Recommendation: In general, all observations should have a performer
 WARNING: Observation/bodytemp-1: Observation: Best Practice Recommendation: In general, all observations should have a performer
 WARNING: Observation/bodyweight-1: Observation: Best Practice Recommendation: In general, all observations should have a performer
@@ -33,14 +32,14 @@ Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/Structu
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicareprovidernumber, http://hl7.org/fhir/StructureDefinition/Identifier
 
-# === These warnings are trigerred because the PBS terminology (CodeSystem http://pbs.gov.au/code/item and related ValueSet) is not currently published in FHIR format and therefore cannot be validated by the IG Publisher. The PBS CodeSystem and ValueSet use valid URLs as placeholders but do not include actual code definitions in the terminology server. This is an expected limitation, and the codes have been verified offline. These warnings can be safely ignored as they do not indicate any issue with the implementation guide. ===
+# === WARNING: AU Core example instances are using the PBS terminology, which triggers warnings because the IG Publisher cannot find the code system publicly available. Since there is no publicly available code system resource to resolve against, all examples using this code system will trigger the same warning.   ===
 WARNING: Medication/2active-ingredients: Medication.code: Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
 WARNING: Medication/2active-ingredients: Medication.code.coding[0].system: A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
 WARNING: Medication/2active-ingredients: Medication.code: Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0' because the code system http://pbs.gov.au/code/item was not found
 WARNING: Medication/2active-ingredients: Medication.code: A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found; Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0' because the code system http://pbs.gov.au/code/item was not found
 WARNING: Medication/2active-ingredients: Medication.code.coding[0]: Resolved system http://pbs.gov.au/code/item (v5.0.0), but the definition doesn't include any codes, so the code has not been validated
 
-# === This example uses the Data Absent Reason extension to represent missing data for the requester element, following AU Core rules for handling missing data. The warning is triggered due to this representation. The example is intentionally designed to demonstrate the handling of missing data and does not indicate an issue with the implementation guide. ==
+# === WARNING: This example demonstrates how to repesent missing data and therefore uses the Data Absent Reason extension as per AU Core rules. The IG Publisher triggers a warning because of this, but the example is intentionally designed to show the correct handling of missing data and does not indicate any issues with the IG. ==
 WARNING: MedicationRequest/paracetamol-codeine: MedicationRequest.requester: A Reference without an actual reference or identifier should have a display
 
 
@@ -61,11 +60,13 @@ This element does not match any known slice defined in the profile http://hl7.or
 # === Information about the use of standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities; see FHIR-12419. ===
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# === These informational messages are related to references to external terminology resources not under the direct control of AU Core editors. Examples include ValueSets and CodeSystems published by core FHIR, HL7 Terminology (THO), or RCPA. ==== 
+# === This is NCTS managed content on behalf of the RCPA. IG Publisher raises a warning whenever it detects status of experimental. There is no issue here...related to artefacts
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3|3.0.1
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3|3.0.1
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3|3.0.1
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3|3.0.1
+
+# === This is HL7 Terminology TBD ===
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/location-physical-type|2.0.0
 Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
