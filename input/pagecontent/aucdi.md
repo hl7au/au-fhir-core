@@ -1,7 +1,7 @@
 [Australian Core Data for Interoperability (AUCDI)](https://sparked.csiro.au/index.php/sparked-products-resources/australian-core-data-for-interoperability/aucdi-release-1/) and the AU Core FHIR Implementation Guide complement each other assisting in common understanding of clinical data concepts when implemented in systems and exchanged between systems.  
 
   <div> 
-    <img src="aucdi2core.png" alt="AUCDI and AU Core Development Approach" style="width:70%"/>
+    <img src="aucdi2core.png" alt="AUCDI and AU Core Development Approach" style="width:45%"/>
   </div>
 *Figure 1: AUCDI and AU Core Development Approach*
 <br/><br/>
