@@ -4,12 +4,12 @@
 # === Warnings ====
 # =========================================================================================
 
-# === HL7 core warnings ===
+# ===  These HTML fragments provide a summary information about this guide that is either not relevant (e.g. AU Core does not define any global profiles) or is already addressed through other means in the guide. Suppressing these warnings does not impact the IG's conformance or usability. ===
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 
-# === This warning is based on FHIR IG Publisher best practice recommending that all observations include a performer. However, AU Core does not require Observation.performer as the Must Support flag was intentionally removed by the AU Core TDG agreement. AU Core examples align with this decision, and the warning can safely be ignored. ===
+# === This warning is based on FHIR IG Publisher best practice, which recommends that all observations include a performer. AU Core does not require Observation.performer as the Must Support flag was removed based on the TDG agreement. AU Core examples align with this decision, and the warning can be safely ignored. ===
 WARNING: Observation/bodyheight-1: Observation: Best Practice Recommendation: In general, all observations should have a performer
 WARNING: Observation/bodytemp-1: Observation: Best Practice Recommendation: In general, all observations should have a performer
 WARNING: Observation/bodyweight-1: Observation: Best Practice Recommendation: In general, all observations should have a performer
@@ -23,7 +23,7 @@ WARNING: Observation/bloodpressure-data-absent: Observation: Best Practice Recom
 WARNING: Observation/lipid-total-chol-1: Observation: Best Practice Recommendation: In general, all observations should have a performer
 WARNING: Observation/observation-masked: Observation: Best Practice Recommendation: In general, all observations should have a performer
 
-# === These warnings are expected due to the datatype choices in AU Base, which allows multiple profiles for certain data types (e.g. Address, Identifier). The warnings are trigerred because the IG Publisher matches instances against both the base FHIR types (e.g. Address) and the AU Base profiles (e.g. AU Address). This is intentional and does not indicate an issue with the implementation guide. ===
+# === These warnings are expected and are trigerred because AU Base allows multiple profiles for certain data types (e.g., Address, Identifier) that are also used in AU Core. The IG Publisher matches instances against both the core FHIR types (e.g. Address) and the AU Base profiles (e.g. AU Address). This behaviour is intentional and aligns with the design of AU Core and AU Base. ===
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
@@ -34,14 +34,14 @@ Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/Structu
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicareprovidernumber, http://hl7.org/fhir/StructureDefinition/Identifier
 
-# === These warnings are trigerred because the PBS terminology (CodeSystem http://pbs.gov.au/code/item and related ValueSet) is not currently published in FHIR format and therefore cannot be validated by the IG Publisher. The PBS CodeSystem and ValueSet are placeholders with valid URLs but do not include actual code definitions in the terminology server. This is an expected limitation. These codes have been checked offline and these warnings can be safely ignored. ===
+# === These warnings are trigerred because the PBS terminology (CodeSystem http://pbs.gov.au/code/item and related ValueSet) is not currently published in FHIR format and therefore cannot be validated by the IG Publisher. The PBS CodeSystem and ValueSet use valid URLs as placeholders but do not include actual code definitions in the terminology server. This is an expected limitation, and the codes have been verified offline. These warnings can be safely ignored as they do not indicate any issue with the implementation guide. ===
 WARNING: Medication/2active-ingredients: Medication.code: Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
 WARNING: Medication/2active-ingredients: Medication.code.coding[0].system: A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
 WARNING: Medication/2active-ingredients: Medication.code: Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0' because the code system http://pbs.gov.au/code/item was not found
 WARNING: Medication/2active-ingredients: Medication.code: A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found; Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0' because the code system http://pbs.gov.au/code/item was not found
 WARNING: Medication/2active-ingredients: Medication.code.coding[0]: Resolved system http://pbs.gov.au/code/item (v5.0.0), but the definition doesn't include any codes, so the code has not been validated
 
-# === This example uses the Data Absent Reason extension to represent missing data for the requester field, in line with AU Core rules for handling missing data. The warning is triggered due to this representation. The example is intentionally designed to demonstrate the representation of missing data and does not indicate an issue with the implementation guide. ==
+# === This example uses the Data Absent Reason extension to represent missing data for the requester element, following AU Core rules for handling missing data. The warning is triggered due to this representation. The example is intentionally designed to demonstrate the handling of missing data and does not indicate an issue with the implementation guide. ==
 WARNING: MedicationRequest/paracetamol-codeine: MedicationRequest.requester: A Reference without an actual reference or identifier should have a display
 
 
@@ -49,20 +49,20 @@ WARNING: MedicationRequest/paracetamol-codeine: MedicationRequest.requester: A R
 # === Information ====
 # =========================================================================================
 
-# === These examples demonstrate the use of additional Codes or Identifiers not defined in AU Core profiles. These messages can be safely ignored. === 
+# === Information about the usage of additional codes or identifiers not defined in AU Core profiles is provided to highlight their inclusion. These informational messages are expected and do not indicate any issues with the implementation guide.  === 
 This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# === These messages are due to inherited slicing from the base profile. The AU Core profile does not redeclare the slicing discriminator but remains valid. These messages can be safely ignored. === 
+# === Informational messages that results from inherited slicing in the base profile. The AU Core profile does not redeclare the slicing discriminator but remains valid. These messages are expected and do not indicate any issues with the implementation guide. === 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# === Using the standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities; see FHIR-12419. ===
+# === Information about the use of standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities; see FHIR-12419. ===
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# === These informational messages occur due to references to external terminology resources that are not under the direct control of AU Core editors. Examples include ValueSets and CodeSystems published by core FHIR, HL7 Terminology (THO), or RCPA. ==== 
+# === These informational messages are related to references to external terminology resources not under the direct control of AU Core editors. Examples include ValueSets and CodeSystems published by core FHIR, HL7 Terminology (THO), or RCPA. ==== 
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3|3.0.1
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3|3.0.1
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3|3.0.1
@@ -71,12 +71,12 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/location-physical-type|2.0.0
 Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
 
-# === These informational messages are triggered the IG Publisher tooling, which infers the default language "en-AU" from the jurisdiction. The terminology server (tx.ontoserver) used for validation does not support "en-AU" for SNOMED CT lookup and instead expects "en". This is a known limitation of the tooling and terminology server. These codes were checked manually and these messages can be safely ignored. See related Zulip chat: https://chat.fhir.org/#narrow/channel/437028-Terminology-Service-Test-Cases/topic/DisplayLanguage.20with.20Accept.20Header.20like.20Syntax. ===
+# === These informational messages are generated by the IG Publisher tooling, which infers the default language "en-AU" from the jurisdiction. The terminology server (tx.ontoserver) used for validation does not recognise "en-AU" for SNOMED CT lookup and instead expects "en". This is a known limitation of the tooling and terminology server. These codes were manually verified. See related Zulip chat: https://chat.fhir.org/#narrow/channel/437028-Terminology-Service-Test-Cases/topic/DisplayLanguage.20with.20Accept.20Header.20like.20Syntax. ===
 INFORMATION: Immunization/covid-1: Immunization.site.coding[0].display: 'Structure of left upper arm' is the default display; the code system http://snomed.info/sct has no Display Names for the language en-AU
 INFORMATION: MedicationRequest/simvastatin: MedicationRequest.reasonCode[0].coding[0].display: 'Hypercholesterolaemia' is the default display; the code system http://snomed.info/sct has no Display Names for the language en-AU
 INFORMATION: Patient/banks-mia-leanne: Patient.extension[0].extension[0].value.ofType(CodeableConcept).coding[0].display: 'Identifies as female gender' is the default display; the code system http://snomed.info/sct has no Display Names for the language en-AU
 
-# === AU Core uses the discriminator type 'pattern', which is valid for R4 but deprecated in R5+. Future updates will consider transitioning to the recommended 'type=value' approach to ensure compatibility with R5+. ===
+# === Information about the AU Core use of the discriminator type 'pattern,' which is fully valid and supported in FHIR R4 but deprecated in R5+. This does not affect the functionality or conformance in R4. Future updates will consider transitioning to the recommended 'type=value' approach to ensure compatibility with R5+. ===
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
 
