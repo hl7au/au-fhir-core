@@ -48,7 +48,6 @@
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
-
     <element id="RelatedPerson.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
