@@ -91,6 +91,7 @@
         </extension>
       </extension>
       <path value="RelatedPerson.relationship"/>
+      <condition value="au-core-relper-01"/>
       <mustSupport value="true"/>
     </element>
     <element id="RelatedPerson.name">
