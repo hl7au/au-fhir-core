@@ -99,7 +99,7 @@ All elements with *Must Support* in AU Core are accompanied by an explicit oblig
 *Figure 1: Key Elements Table View*
 <br/>
 
-Implementers should refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support* with obligations, and the full set of terminology requirements.  Implementers should note that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile.
+Implementers need to refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support* with obligations, and the full set of terminology requirements.  Implementers need to be aware that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile.
 
 ##### Presentation of Must Support and obligation in raw representations
 
