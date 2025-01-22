@@ -9,8 +9,7 @@ The following are supported usage scenarios for this profile:
 
 
 ### Profile specific implementation guidance
-  - See the [Medicine Information](medicine-information.html) page for guidance.
-  - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#business-identifiers) in AU Base.
+  - See the [Medicine Information](medicine-information.html) page for guidance on how medicinal product identification can be structured in FHIR conformant to AU Core.
   - MedicationStatement resources can represent a medication using either a code with `MedicationStatement.medicationCodeableConcept`, or reference a [Medication](http://hl7.org/fhir/R4/medication.html) resource with `MedicationStatement.medicationReference`.
     - Although both are marked as *Must Support*, responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
     - A requester **SHALL** support both elements
