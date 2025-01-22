@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-core-smokingstatus" />
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-        <valueInteger value="1"/> 
+        <valueInteger value="2"/> 
   </extension>
   <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus" />
   <name value="AUCoreSmokingStatus" />
@@ -20,7 +20,7 @@
       <short value="Smoking status" />
       <definition value="An observation of smoking status, i.e. current behaviour for all types of tobacco smoking, at a point in time." />
       <constraint>
-        <key value="au-core-obs-02"/>
+        <key value="au-core-obs-01"/>
         <severity value="error"/>
         <human value="At least value or data absent reason shall be present"/>
         <expression value="dataAbsentReason.exists() or value.exists()"/>
@@ -193,13 +193,13 @@
       <type>
         <code value="dateTime" />
       </type>
-      <condition value="au-core-obs-01"/>
+      <condition value="au-core-obs-02"/>
       <constraint>
-        <key value="au-core-obs-01"/>
+        <key value="au-core-obs-02"/>
         <severity value="error"/>
-        <human value="Date shall be at least to day"/>
-        <expression value="$this is DateTime implies $this.toString().length() &gt;= 8"/>
-        <xpath value="f:matches(effectiveDateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)"/>
+        <human value="Date shall be at least to day or, if not available, the Data Absent Reason extension shall be present"/>
+        <expression value="(($this is dateTime implies $this.toString().length() >= 10) and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').value.exists().not()) xor ($this is dateTime implies ($this.hasValue().not() and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').value.exists()))"/>
+        <xpath value="((self::dateTime and string-length(.) >= 10 and not(extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'])) xor (self::dateTime and not(.) and extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason']))"/>
         <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus"/>
       </constraint>
       <mustSupport value="true"/>
@@ -225,7 +225,7 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <condition value="au-core-obs-02"/>
+      <condition value="au-core-obs-01"/>
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible" />
@@ -250,7 +250,7 @@
         </extension>
       </extension>
       <path value="Observation.dataAbsentReason"/>
-      <condition value="au-core-obs-02"/>
+      <condition value="au-core-obs-01"/>
       <mustSupport value="true"/>
     </element>
   </differential>

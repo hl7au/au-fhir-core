@@ -18,19 +18,13 @@
         <td>practitioner</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code></td>
-        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values.<br/><br/>The requester <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile. The responder <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile.</td>
   </tr>
   <tr>
         <td>_id</td>
         <td><b>SHOULD</b></td>
         <td><code>token</code></td>
         <td></td>
-  </tr>
-  <tr>
-        <td>practitioner.identifier</td>
-        <td><b>SHOULD</b></td>
-        <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using a HPI-I identifier as defined in the AU Core Practitioner profile. The responder <b>SHOULD</b> support search using the using a HPI-I identifier as defined in the AU Core Practitioner profile.</td>
   </tr>
   <tr>
         <td>specialty</td>
@@ -60,12 +54,12 @@ The following search parameters **SHALL** be supported:
 1. **SHALL** support searching using the **[`identifier`](https://hl7.org/fhir/R4/practitionerrole.html#search)** search parameter:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `PractitionerRole:practitioner`
 
-    `GET [base]/PractitionerRole?identifier={system|}[code]`
+    `GET [base]/PractitionerRole?identifier=[system|][code]`
 
     Example:
     
-      1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-prescriber-number\|553255&amp;_include=PractitionerRole:practitioner
-      1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-prescriber-number\|553255
+      1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-provider-number\|2426621B&amp;_include=PractitionerRole:practitioner
+      1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-provider-number\|2426621B
 
     *Implementation Notes:* Fetches a bundle containing any PractitionerRole resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 

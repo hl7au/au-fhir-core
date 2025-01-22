@@ -98,7 +98,7 @@
 
     *Implementation Notes:* Fetches a bundle with the requested Patient, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id)).
 
-1. **SHALL** support searching a patient by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
+1. **SHALL** support searching using the **[`identifier`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
     
     `GET [base]/Patient?identifier=[system|][code]`
 

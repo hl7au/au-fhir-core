@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-core-diagnosticresult-path"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="1"/> 
+    <valueInteger value="2"/> 
   </extension>
   <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
   <name value="AUCorePathologyResult"/>
@@ -18,7 +18,7 @@
     <element id="Observation">
       <path value="Observation"/>
       <constraint>
-        <key value="au-core-obs-02"/>
+        <key value="au-core-obs-01"/>
         <severity value="error"/>
         <human value="If there is no component or hasMember element then at least value or data absent reason shall be present"/>
         <expression value="(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())"/>
@@ -44,7 +44,6 @@
         </extension>
       </extension>
       <path value="Observation.status"/>
-      <short value="preliminary | final | amended +"/>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.category">
@@ -136,9 +135,9 @@
       </extension>
       <path value="Observation.effective[x]"/>
       <short value="Time of specimen collection"/>
-      <condition value="au-core-obs-01"/>
+      <condition value="au-core-obs-02"/>
       <constraint>
-        <key value="au-core-obs-01"/>
+        <key value="au-core-obs-02"/>
         <severity value="error"/>
         <human value="Date shall be at least to day or, if not available, the Data Absent Reason extension shall be present"/>
         <expression value="(($this is dateTime implies $this.toString().length() >= 10) and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').value.exists().not()) xor ($this is dateTime implies ($this.hasValue().not() and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').value.exists()))"/>
@@ -193,7 +192,7 @@
         </extension>
       </extension>
       <path value="Observation.value[x]"/>
-      <condition value="au-core-obs-02"/>
+      <condition value="au-core-obs-01"/>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.dataAbsentReason">
@@ -214,7 +213,7 @@
         </extension>
       </extension>
       <path value="Observation.dataAbsentReason"/>
-      <condition value="au-core-obs-02"/>
+      <condition value="au-core-obs-01"/>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.interpretation">
