@@ -20,12 +20,6 @@
         <td></td>
   </tr>
   <tr>
-        <td>identifier</td>
-        <td><b>SHOULD</b></td>
-        <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the profile. The responder <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the profile.</td>
-  </tr>
-  <tr>
         <td>name</td>
         <td><b>SHOULD</b></td>
         <td><code>string</code></td>
@@ -85,16 +79,6 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     *Implementation Notes:* Fetches a bundle with the requested RelatedPerson, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id)).
 
-1. **SHOULD** support searching for a related person by an identifier using the **[`identifier`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
-    
-    `GET [base]/RelatedPerson?identifier={system|}[code]`
-
-    Example:
-    
-      1. GET [base]/RelatedPerson?identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952
-      1. GET [base]/RelatedPerson?identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361
-
-    *Implementation Notes:* Fetches a bundle containing any RelatedPerson resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching for a related person based on text name using the **[`name`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
       
