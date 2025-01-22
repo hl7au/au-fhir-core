@@ -2,7 +2,7 @@
 
 AUCDI is the product of a national clinician focussed requirements gathering project operating as part of the [Sparked FHIR Accelerator](https://sparked.csiro.au/). It defines data groups made up of data elements and references clinical terminology concepts which address the definition of suitable, coherent and reusable information building blocks for clinical data. AUCDI clinical information requirements for information capture, storage and sharing may define information models that are future focussed and as yet do not align with system implementation of the clinical concept.
 
-AU Core is a technical specification that addresses constraints and obligations on data representation for exchange. AU Core enables system data to be mapped to an agreed FHIR format and define capability requirements to exchange data via FHIR RESTful API interactions. 
+AU Core is a technical specification that addresses constraints and obligations on data representation for exchange. AU Core enables system data to be mapped to an agreed FHIR format and defines capability requirements to share data via FHIR RESTful API interactions. 
 
 
   <div> 
