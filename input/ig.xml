@@ -893,9 +893,5 @@
 			<code value="version-comparison-master"/>
 			<value value="1.0.0-ballot"/>
 		</parameter>
-		<parameter>
-   			<code value="globals-in-artifacts"/>
-   			<value value="true"/>
-		</parameter>
 	</definition>
 </ImplementationGuide>

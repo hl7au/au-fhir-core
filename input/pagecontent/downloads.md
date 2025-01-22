@@ -7,9 +7,6 @@ It is not recommended to view locally without hosting, but you can extract the f
 
 - [Downloadable Copy](full-ig.zip)
 
-### Cross version analysis 
-{% include cross-version-analysis.xhtml %}
-
 ### Package file
 
 The following package file includes an NPM package file used by many of the FHIR tools.  It contains all the value sets, profiles, extensions, list of pages and urls in the IG, etc defined as part of this version of the Implementation Guides. This file should be the first choice whenever generating any implementation artefacts since it contains all of the rules about what makes the profiles valid. Implementers will still need to be familiar with the content of the specification and profiles that apply in order to make a conformant implementation:

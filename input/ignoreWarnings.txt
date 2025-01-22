@@ -4,10 +4,12 @@
 # === Warnings ====
 # =========================================================================================
 
-# === WARNING: HL7 Australia FHIR IGs requires all HL7 AU FHIR IGs to include a License and Legal page that already covers this content. ===  
+# === WARNING: These are warnings for publication artefacts not used in HL7 AU specifications at this time and are accepted by the AU FHIR WG. ===  
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 
-# === WARNING: This warning is based on FHIR IG Publisher best practice, which recommends that all observations include a performer. AU Core does not require Observation.performer as the Must Support flag was removed based on the TDG agreement. AU Core examples align with this decision, and the warning can be safely ignored. ===
+# === WARNING: The following warnings flag aspects of FHIR implementation of best practice. These warnings do not indicate an error in the specification, and ignore profiled requirements. ===
 WARNING: Observation/bodyheight-1: Observation: Best Practice Recommendation: In general, all observations should have a performer
 WARNING: Observation/bodytemp-1: Observation: Best Practice Recommendation: In general, all observations should have a performer
 WARNING: Observation/bodyweight-1: Observation: Best Practice Recommendation: In general, all observations should have a performer
@@ -21,7 +23,7 @@ WARNING: Observation/bloodpressure-data-absent: Observation: Best Practice Recom
 WARNING: Observation/lipid-total-chol-1: Observation: Best Practice Recommendation: In general, all observations should have a performer
 WARNING: Observation/observation-masked: Observation: Best Practice Recommendation: In general, all observations should have a performer
 
-# === These warnings are expected and are trigerred because AU Base allows multiple profiles for certain data types (e.g., Address, Identifier) that are also used in AU Core. The IG Publisher matches instances against both the core FHIR types (e.g. Address) and the AU Base profiles (e.g. AU Address). This behaviour is intentional and aligns with the design of AU Core and AU Base. ===
+# === WARNING: Artefacts inherit multiple profiles for certain data types (e.g., Address, Identifier) from AU Base. The IG Publisher cannot match instances to a single profile and generates these warnings. This behaviour is expected and consistent with the design of AU Core and AU Base. ===
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
@@ -32,14 +34,14 @@ Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/Structu
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicareprovidernumber, http://hl7.org/fhir/StructureDefinition/Identifier
 
-# === WARNING: AU Core example instances are using the PBS terminology, which triggers warnings because the IG Publisher cannot find the code system publicly available. Since there is no publicly available code system resource to resolve against, all examples using this code system will trigger the same warning.   ===
+# === WARNING: Examples with PBS concepts have this warning as there is no publicly available instance of the PBS code system and therefore IG Publisher cannot validate the concept. This is known, accepted behaviour for IG Publisher. ===
 WARNING: Medication/2active-ingredients: Medication.code: Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
 WARNING: Medication/2active-ingredients: Medication.code.coding[0].system: A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
 WARNING: Medication/2active-ingredients: Medication.code: Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0' because the code system http://pbs.gov.au/code/item was not found
 WARNING: Medication/2active-ingredients: Medication.code: A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found; Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0' because the code system http://pbs.gov.au/code/item was not found
 WARNING: Medication/2active-ingredients: Medication.code.coding[0]: Resolved system http://pbs.gov.au/code/item (v5.0.0), but the definition doesn't include any codes, so the code has not been validated
 
-# === WARNING: This example demonstrates how to repesent missing data and therefore uses the Data Absent Reason extension as per AU Core rules. The IG Publisher triggers a warning because of this, but the example is intentionally designed to show the correct handling of missing data and does not indicate any issues with the IG. ==
+# === WARNING: This example demonstrates how to repesent missing data and therefore uses the Data Absent Reason extension as per AU Core rules. The IG Publisher triggers a warning because of this, but the example is intentionally designed to show the correct handling of missing data and does not indicate any issues with the IG. ===
 WARNING: MedicationRequest/paracetamol-codeine: MedicationRequest.requester: A Reference without an actual reference or identifier should have a display
 
 
