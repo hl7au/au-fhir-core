@@ -48,27 +48,6 @@
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="RelatedPerson.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-      </extension>
-      <path value="RelatedPerson.identifier"/>
-      <definition value="Identifier for a person within a particular scope."/>
-      <mustSupport value="true"/>
-    </element>
     <element id="RelatedPerson.patient">
     <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
