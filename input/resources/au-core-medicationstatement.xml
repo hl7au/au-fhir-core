@@ -61,6 +61,27 @@
       <path value="MedicationStatement.status"/>
       <mustSupport value="true"/>
     </element>
+   <element id="MedicationStatement.statusReason">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
+      <path value="MedicationStatement.statusReason"/>
+      <mustSupport value="true"/>
+    </element>
+
     <element id="MedicationStatement.medication[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -172,7 +193,7 @@
       </type>
     </element>
     <element id="MedicationStatement.subject">
-    <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
         </extension>
@@ -195,6 +216,50 @@
         <targetProfile
           value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
       </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.context">
+    <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+          <extension url="code">
+            <valueCode value="SHALL:populate-if-known"/>
+          </extension>
+          <extension url="actor">
+            <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+          <extension url="code">
+            <valueCode value="SHALL:no-error"/>
+          </extension>
+          <extension url="actor">
+            <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+          </extension>
+        </extension>
+      <path value="MedicationStatement.context"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.effective[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+          <extension url="code">
+            <valueCode value="SHALL:populate-if-known"/>
+          </extension>
+          <extension url="actor">
+            <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+          <extension url="code">
+            <valueCode value="SHALL:no-error"/>
+          </extension>
+          <extension url="actor">
+            <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+          </extension>
+        </extension>
+      <path value="MedicationStatement.effective[x]"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationStatement.dateAsserted">
