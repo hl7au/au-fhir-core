@@ -1313,15 +1313,6 @@
 <documentation value="If the requester supports the RelatedPerson resource, the requester **SHALL** support the AU Core profile and the conformance expectations for the RelatedPerson resource."/>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
-<name value="identifier"/>
-<definition value="http://hl7.org/fhir/SearchParameter/RelatedPerson-identifier"/>
-<type value="token"/>
-<documentation value="The requester **SHALL** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support search using IHI, Medicare Number, and DVA Number identifiers as defined in the profile.&#xA;&#xA;The responder **SHOULD** support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the profile."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
 <name value="_id"/>
