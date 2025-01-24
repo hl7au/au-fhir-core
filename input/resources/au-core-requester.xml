@@ -1285,6 +1285,20 @@
 </extension>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHALL"/>
+</extension>
+<extension url="required">
+<valueString value="patient"/>
+</extension>
+<extension url="required">
+<valueString value="name"/>
+</extension>
+</extension>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHOULD"/>
+</extension>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
 <extension url="required">
