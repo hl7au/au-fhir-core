@@ -22,8 +22,15 @@
        <constraint>
         <key value="au-core-relper-01"/>
         <severity value="error"/>
-        <human value="Either a name or a relationship SHALL be provided (or both)"/>
+        <human value="Either a name or a relationship shall be provided (or both)"/>
         <expression value="name.exists() or relationship.exists()"/>
+        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
+      </constraint>
+      <constraint>
+        <key value="au-core-relper-01"/>
+        <severity value="error"/>
+        <human value="Names must have a family, given or text name."/>
+        <expression value="name.exists() implies name.all(family.exists() or given.exists() or text.exists())"/>
         <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
       </constraint>
     </element>
