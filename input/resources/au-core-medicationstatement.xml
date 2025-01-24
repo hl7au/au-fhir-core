@@ -64,8 +64,6 @@
       <path value="MedicationStatement.status"/>
       <mustSupport value="true"/>
     </element>
-   
-
     <element id="MedicationStatement.medication[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
