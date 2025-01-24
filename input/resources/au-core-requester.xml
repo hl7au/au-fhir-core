@@ -1310,7 +1310,24 @@
 </extension>
 <type value="RelatedPerson"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
-<documentation value="If the requester supports the RelatedPerson resource, the requester **SHALL** support the AU Core profile and the conformance expectations for the RelatedPerson resource."/>
+<documentation value="If the requester supports the RelatedPerson resource, the requester **SHALL** support the AU Core profile and the conformance expectations for the RelatedPerson resource.&#xA;&#xA;The RelatedPerson resource can communicate the clinical indication using either a code in `RelatedPerson.reasonCode` or a reference using `RelatedPerson.reasonReference`. Although both `RelatedPerson.reasonCode` and `RelatedPerson.reasonReference` are marked as *Must Support*, a responder is not required to support both but **SHALL** support at least one of these elements.&#xA;&#xA;The requester **SHALL** support both elements."/>
+<interaction>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHALL"/>
+</extension>
+<code value="read"/>
+</interaction>
+<interaction>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHALL"/>
+</extension>
+<code value="search-type"/>
+</interaction>
+<referencePolicy value="resolves">
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHOULD"/>
+</extension>
+</referencePolicy>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
