@@ -27,7 +27,7 @@
         <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
       </constraint>
       <constraint>
-        <key value="au-core-relper-01"/>
+        <key value="au-core-relper-02"/>
         <severity value="error"/>
         <human value="Names must have a family, given or text name."/>
         <expression value="name.exists() implies name.all(family.exists() or given.exists() or text.exists())"/>
