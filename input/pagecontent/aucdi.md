@@ -1,29 +1,32 @@
-[Australian Core Data for Interoperability (AUCDI)](https://sparked.csiro.au/index.php/sparked-products-resources/australian-core-data-for-interoperability/aucdi-release-1/) is the product of a national clinician focussed requirements gathering project operating as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au/).  The AUCDI outputs form a set of data requirements to be considered and referred to as part of the development and definition of AU Core. 
+[Australian Core Data for Interoperability (AUCDI)](https://sparked.csiro.au/index.php/sparked-products-resources/australian-core-data-for-interoperability/aucdi-release-1/) and AU Core complement each other assisting in common understanding of clinical data concepts when implemented in systems and exchanged between systems.  
 
-The primary intent of the AUCDI is to design and govern a collection of coherent, reusable building blocks known as ‘data groups’. These data groups specify “what” the clinical requirements of the clinical information that should be included for data entry, data use, and sharing of information supporting healthcare delivery. However, it does not specify “how” the data is exchanged; this is the
-role fulfilled by the FHIR standard. AUCDI is not required to be implemented as a whole single product. Parts can be
-implemented as required for specific use cases.
+AUCDI is the product of a national clinician focussed requirements gathering project operating as part of the [Sparked FHIR Accelerator](https://sparked.csiro.au/). It defines data groups made up of data elements and references clinical terminology concepts which address the definition of suitable, coherent and reusable information building blocks for clinical data. AUCDI clinical information requirements for information capture, storage and sharing may define information models that are future focussed and as yet do not align with system implementation of the clinical concept.
 
-AUCDI Release 1 (R1) is focused on an agreement of “the core of the core” common data elements; minimum data required to support standardised clinical information capture at the point of care as well as enable the safe and meaningful exchange of information to other care providers. 
+AU Core is a technical specification that addresses constraints and obligations on data representation for exchange. AU Core enables system data to be mapped to an agreed FHIR format and defines capability requirements to share data via FHIR RESTful API interactions. 
 
-AU Core is intended to provide an implementable standard for FHIR based interfaces for provider and patient information systems in Australia​ providing:
-- an exchange standard for AUCDI (the underpinning clinical data model)
-- Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information​
-- be built on top of for standards development for specific use cases
 
-With AUCDI defining clinical data requirements and FHIR AU Core providing detailed FHIR-based profiles for meeting clinical data requirements and administrative data requirements, an interpretation of AUCDI is necessary which is undertaken through the community.
+  <div> 
+    <img src="aucdi2core.png" alt="AUCDI and AU Core Development Approach" style="width:45%"/>
+  </div>
+*Figure 1: AUCDI and AU Core Development Approach*
+<br/><br/>
 
-Updates to AU Core depend upon community input and we encourage our audience to submit questions and feedback to AU Core specifications by clicking on the Propose a change link in the footer of every page. In addition, we encourage requesting any necessary clarifications to AUCDI through the AUCDI process that helps inform future updates to FHIR AU Core.
+An interpretation of AUCDI clinical information requirements through community consensus is undertaken to define support for the exchange of clinical and administrative data within technical constraints. Note that:
+* In any particular release, AU Core may not cover all AUCDI data concepts, especially when AUCDI data concepts are not supported in existing systems.
+* AU Core includes exchange for concepts that are commonly implemented in systems and not included in AUCDI e.g. Patient.name, Practitioner.identifier, Procedure.encounter. 
+* AU Core includes exchange for clinical concepts not yet included in AUCDI e.g. MedicationRequest
+* AU Core includes data elements not included in AUCDI that are required to make FHIR implementable e.g. Observation.status, MedicationRequest.intent, Provenance.
+* Neither AUCDI nor AU Core are required to be implemented as a whole single product. Parts can be implemented as required for specific use cases.
 
 ### AUCDI mappings into AU Core
 
-The table below shows the relationship between the AUCDI Data Groups and Elements and AU Core profiles.<br/>
+The table below shows the relationship between data defined in the AUCDI Data Groups and Elements and expected usage in AU Core profiles.<br/>
 Column attribute descriptions are as follows:
-- <b>AUCDI Data Group</b>: Represents a grouping of one or more AUCDI Data Elements.
-- <b>AUCDI Data Element</b>: Represents a single, discreet clinical concept defined by AUCDI.
-- <b>AU Core Profile(s)</b>: Represents the mapping of AUCDI Data Groups and AUCDI Data Elements to AU Core FHIR artefacts.
-- <b>FHIR Path</b>: The specific path in the FHIR standards for each AUCDI Data Element within, showing where and how to implement these elements in FHIR-based systems. 
-- <b>Comment</b>: Additional information about the mapping including an explanation of where an element or group is not yet mapped.
+- **AUCDI Data Group**: The name of the AUCDI data group.
+- **AUCDI Data Element**: The name of the AUCDI data element within an AUCDI data group.
+- **AU Core Profile(s)**: The title of the AU Core profile relevant for exchange.
+- **FHIR Path**: The [FHIRPath expression](https://build.fhir.org/ig/HL7/FHIRPath/) to the FHIR element relevant for exchange, i.e. the FHIR element that can be populated with data from a source system that represents the clinical concept expressed in the AUCDI data element. 
+- **Comment**: Additional information about the mapping including an explanation of where an element or group is not yet mapped.
 
 <table border="1" cellspacing="0" cellpadding="0" width="100%">
 <thead>

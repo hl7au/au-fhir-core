@@ -22,9 +22,9 @@
             <text value="Medical Record Number"/>
         </type>
         <system value="http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0/8003626566699734" />
-        <value value="2338189" />
+        <value value="22421441" />
         <assigner>
-            <display value="Large Metropolitan Hospital"/>
+            <display value="Mount Mitchell Private Hospital"/>
         </assigner>
     </identifier>
     <name>

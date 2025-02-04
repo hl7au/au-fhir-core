@@ -11,30 +11,27 @@
         <td>patient</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code></td>
-        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both</td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.
+      </td>
   </tr>
   <tr>
         <td>patient+status</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>token</code></td>
+        </td>
   </tr>
   <tr>
         <td>patient+date</td>
         <td><b>SHOULD</b></td>
         <td><code>reference</code>+<code>date</code></td>
-  </tr>
-  <tr>
-        <td>patient.identifier</td>
-        <td><b>SHOULD</b></td>
-        <td><code>reference</code>.<code>token</code></td>
-        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support search using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <b>SHOULD</b> support search using the using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
+        </td>
   </tr>
   <tr>
         <td>date</td>
         <td><b>MAY</b></td>
         <td><code>date</code></td>
         <td>A requester <b>SHALL</b> provide a value precise to the second + time offset. A responder <b>SHALL</b> support a value precise to the second + time offset.<br/><br/>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.<br/><br/>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.
-</td>
+      </td>
   </tr>
   <tr>
         <td>patient+vaccine-code</td>
@@ -93,7 +90,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/immunization.html#search)** and **[`date`](https://hl7.org/fhir/R4/immunization.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHALL** support these `date` comparators: `gt,lt,ge,le`
     - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, <strong>SHALL</strong> support the search comparators `gt,lt,ge,le`
 
