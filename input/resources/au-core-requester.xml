@@ -1285,7 +1285,7 @@
 </extension>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
+<valueCode value="SHOULD"/>
 </extension>
 <extension url="required">
 <valueString value="patient"/>
@@ -1293,9 +1293,6 @@
 <extension url="required">
 <valueString value="name"/>
 </extension>
-</extension>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
 </extension>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -1338,7 +1335,7 @@
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="MAY"/>
 </extension>
 <name value="name"/>
 <definition value="http://hl7.org/fhir/SearchParameter/RelatedPerson-name"/>
@@ -1346,7 +1343,7 @@
 </searchParam> 
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
+<valueCode value="MAY"/>
 </extension>
 <name value="relationship"/>
 <definition value="http://hl7.org/fhir/SearchParameter/RelatedPerson-relationship"/>
