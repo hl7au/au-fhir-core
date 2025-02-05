@@ -40,7 +40,7 @@
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
 		<packageId value="hl7.fhir.uv.smart-app-launch"/>
-		<version value="current"/>
+		<version value="2.1.0"/>
 	</dependsOn>
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa"/>
