@@ -1328,6 +1328,15 @@
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
 </extension>
+<name value="name"/>
+<definition value="http://hl7.org/fhir/SearchParameter/RelatedPerson-relationship"/>
+<type value="string"/>
+</searchParam> 
+<searchParam>
+<searchParam>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="MAY"/>
+</extension>
 <name value="relationship"/>
 <definition value="http://hl7.org/fhir/SearchParameter/RelatedPerson-relationship"/>
 <type value="token"/>
