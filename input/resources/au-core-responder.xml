@@ -1333,7 +1333,6 @@
 <type value="string"/>
 </searchParam> 
 <searchParam>
-<searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
 </extension>
