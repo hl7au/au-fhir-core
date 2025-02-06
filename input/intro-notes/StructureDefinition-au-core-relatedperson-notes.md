@@ -41,7 +41,7 @@
    <tr>
         <td>relationship</td>
         <td><b>MAY</b></td>
-        <td><code>string</code></td>
+        <td><code>token</code></td>
         <td>The requester SHALL provide at least a code value and MAY provide both the system and code values. The responder SHALL support both.</td>
   </tr>
  </tbody>
