@@ -32,6 +32,12 @@
         <td><code>reference</code>+<code>string</code></td>
         <td></td>
   </tr>
+  <tr>
+        <td>name</td>
+        <td><b>MAY</b></td>
+        <td><code>string</code></td>
+        <td></td>
+  </tr>
    <tr>
         <td>relationship</td>
         <td><b>MAY</b></td>
