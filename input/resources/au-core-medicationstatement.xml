@@ -38,8 +38,9 @@
       <path value="MedicationStatement.derivedFrom"/>
       <type>
         <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-medicationdispense"/>
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-servicerequest"/>
       </type>
       <mustSupport value="true"/>
