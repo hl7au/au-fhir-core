@@ -683,7 +683,7 @@
 </extension>
 <type value="MedicationStatement"/>
 <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
-<documentation value="If the responder supports the MedicationStatement resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the MedicationStatement resource.&#xA;&#xA;MedicationStatement resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The responder **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the responder **SHALL** support the `_include` parameter for searching this element. The requester application **SHALL** support all methods.&#xa;&#xa;The responder **SHOULD** support the `_include` parameter for `MedicationRequest:medication`, but where a responder references external Medication resources the responder **SHALL** support the `_include` parameter. The requester **SHOULD** support the `_include` parameter for `MedicationStatement:medication`.&#xA;&#xA;The MedicationStatement resource can communicate the clinical indication using either a code in `MedicationStatement.reasonCode` or a reference using `MedicationStatement.reasonReference`. Although both `MedicationStatement.reasonCode` and `MedicationStatement.reasonReference` are marked as *Must Support*, a responder is not required to support both but **SHALL** support at least one of these elements. The requester **SHALL** support both elements."/>
+<documentation value="If the responder supports the MedicationStatement resource, the responder **SHALL** support the AU Core profile and the conformance expectations for the MedicationStatement resource.&#xA;&#xA;MedicationStatement resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The responder **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the responder **SHALL** support the `_include` parameter for searching this element. The requester application **SHALL** support all methods.&#xa;&#xa;The responder **SHOULD** support the `_include` parameter for `MedicationStatement:medication`, but where a responder references external Medication resources the responder **SHALL** support the `_include` parameter. The requester **SHOULD** support the `_include` parameter for `MedicationStatement:medication`.&#xA;&#xA;The MedicationStatement resource can communicate the clinical indication using either a code in `MedicationStatement.reasonCode` or a reference using `MedicationStatement.reasonReference`. Although both `MedicationStatement.reasonCode` and `MedicationStatement.reasonReference` are marked as *Must Support*, a responder is not required to support both but **SHALL** support at least one of these elements. The requester **SHALL** support both elements."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
@@ -696,7 +696,7 @@
 </extension>
 <code value="search-type"/>
 </interaction>
-<searchInclude value="MedicationRequest:medication">
+<searchInclude value="MedicationStatement:medication">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
@@ -719,7 +719,7 @@
 <valueCode value="MAY"/>
 </extension>
 <name value="effective"/>
-<definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-authoredon"/>
+<definition value="http://hl7.org/fhir/SearchParameter/MedicationStatement-effective"/>
 <type value="date"/>
 <documentation value="The requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;The responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
