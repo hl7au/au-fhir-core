@@ -236,7 +236,7 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnositcReport"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticreport"/>
       </type>
       <mustSupport value="true"/>
     </element>
