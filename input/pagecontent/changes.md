@@ -3,35 +3,45 @@
 - Publication status: TBD
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [1.0.0-ballot](https://hl7.org.au/fhir/core/1.0.0-ballot/index.html) to TBD.
+This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to TBD.
 
 #### Changes in this version
-- Added [Sex and Gender](sex-and-gender.html) page to consolidate implementation guidance on sex and gender concepts in AU Core. Duplicate guidance already defined in AU Base is removed, and replaced with reference to AU Base guidance [FHIR-47176](https://jira.hl7.org/browse/FHIR-47176), [FHIR-47178](https://jira.hl7.org/browse/FHIR-47178), [FHIR-47182](https://jira.hl7.org/browse/FHIR-47182), [FHIR-47183](https://jira.hl7.org/browse/FHIR-47183), [FHIR-46892](https://jira.hl7.org/browse/FHIR-46892), [FHIR-46896](https://jira.hl7.org/browse/FHIR-46896).
-- [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html):
+TBD
+
+### Release 1.0.0
+- Publication date: 2025-01-29
+- Publication status: Working Standard (Trial Use)
+- Based on FHIR version: 4.0.1
+
+This change log documents the significant updates and resolutions implemented from version [1.0.0-ballot](https://hl7.org.au/fhir/core/1.0.0-ballot/index.html) to [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html).
+
+#### Changes in this version
+- Added [Sex and Gender](https://hl7.org.au/fhir/core/1.0.0/sex-and-gender.html) page to consolidate implementation guidance on sex and gender concepts in AU Core. Duplicate guidance already defined in AU Base is removed, and replaced with reference to AU Base guidance [FHIR-47176](https://jira.hl7.org/browse/FHIR-47176), [FHIR-47178](https://jira.hl7.org/browse/FHIR-47178), [FHIR-47182](https://jira.hl7.org/browse/FHIR-47182), [FHIR-47183](https://jira.hl7.org/browse/FHIR-47183), [FHIR-46892](https://jira.hl7.org/browse/FHIR-46892), [FHIR-46896](https://jira.hl7.org/browse/FHIR-46896).
+- [AU Core Diagnostic Result Observation](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-diagnosticresult.html):
   - corrected base profile to AU Base Diagnostic Observation [FHIR-47116](https://jira.hl7.org/browse/FHIR-47116)
   - removed constraints from Observation.hasMember.reference [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728), [FHIR-48331](https://jira.hl7.org/browse/FHIR-48331)
   - removed Must Support and Obligations from Observation.identifier, Observation.interpretation, Observation.note, Observation.method, Observation.referenceRange, Observation.referenceRange.low, Observation.referenceRange.high, Observation.referenceRange.type and Observation.referenceRange.text [FHIR-46737](https://jira.hl7.org/browse/FHIR-46737)
-- [AU Core Location](StructureDefinition-au-core-location.html): removed Must Support flag and associated Obligation extensions from Location.identifier [FHIR-47105](https://jira.hl7.org/browse/FHIR-47105) and Location.mode [FHIR-47104](https://jira.hl7.org/browse/FHIR-47104)
-- [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html): updated invariant au-core-medreq-01 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [FHIR-46417](https://jira.hl7.org/browse/FHIR-46417)
-- [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html):
+- [AU Core Location](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-location.html): removed Must Support flag and associated Obligation extensions from Location.identifier [FHIR-47105](https://jira.hl7.org/browse/FHIR-47105) and Location.mode [FHIR-47104](https://jira.hl7.org/browse/FHIR-47104)
+- [AU Core MedicationRequest](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-medicationrequest.html): updated invariant au-core-medreq-01 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [FHIR-46417](https://jira.hl7.org/browse/FHIR-46417)
+- [AU Core Pathology Result Observation](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-diagnosticresult-path.html):
   - removed constraints from Observation.hasMember.reference and Observation.specimen.reference [FHIR-46728](https://jira.hl7.org/browse/FHIR-46728), [FHIR-46731](https://jira.hl7.org/browse/FHIR-46731)
   - removed Must Support and Obligations from Observation.identifier, Observation.method and Observation.note [FHIR-46732](https://jira.hl7.org/browse/FHIR-46732)
 - AU Core search parameters and search parameter combinations:
-  - [Observation search parameters](StructureDefinition-au-core-bloodpressure.html#notes): changed 'patient' from SHALL to MAY [FHIR-47171](https://jira.hl7.org/browse/FHIR-47171)
-  - [Patient search parameters](StructureDefinition-au-core-patient.html#notes): removed the requirement for including an offset for 'birthdate' [FHIR-47150](https://jira.hl7.org/browse/FHIR-47150)
-  - [Organization search parameters](StructureDefinition-au-core-organization.html#notes): changed 'name' search parameter from SHOULD to SHALL [FHIR-47109](https://jira.hl7.org/browse/FHIR-47109)
-  - [Location search parameters](StructureDefinition-au-core-location.html#notes): 
+  - [Observation search parameters](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-bloodpressure.html#notes): changed 'patient' from SHALL to MAY [FHIR-47171](https://jira.hl7.org/browse/FHIR-47171)
+  - [Patient search parameters](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-patient.html#notes): removed the requirement for including an offset for 'birthdate' [FHIR-47150](https://jira.hl7.org/browse/FHIR-47150)
+  - [Organization search parameters](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-organization.html#notes): changed 'name' search parameter from SHOULD to SHALL [FHIR-47109](https://jira.hl7.org/browse/FHIR-47109)
+  - [Location search parameters](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-location.html#notes): 
     - changed 'address' search parameter from SHALL to SHOULD [FHIR-47107](https://jira.hl7.org/browse/FHIR-47107)
     - removed 'identifier' [FHIR-48927](https://jira.hl7.org/browse/FHIR-48927)
-  - [PractitionerRole search parameters](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-practitionerrole.html#notes): added 'role' as a SHOULD [FHIR-47115](https://jira.hl7.org/browse/FHIR-47115)
-  - [MedicationRequest search parameters](StructureDefinition-au-core-medicationrequest.html#notes): changed 'patient+intent' and 'patient+intent+status' from SHALL to SHOULD, and added a new MedicationRequest search parameter 'patient+status' as a SHALL [FHIR-47073](https://jira.hl7.org/browse/FHIR-47073)
+  - [PractitionerRole search parameters](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-practitionerrole.html#notes): added 'role' as a SHOULD [FHIR-47115](https://jira.hl7.org/browse/FHIR-47115)
+  - [MedicationRequest search parameters](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-medicationrequest.html#notes): changed 'patient+intent' and 'patient+intent+status' from SHALL to SHOULD, and added a new MedicationRequest search parameter 'patient+status' as a SHALL [FHIR-47073](https://jira.hl7.org/browse/FHIR-47073)
   - updated requirement to mandate both system and code values for identifier search parameters on Organization, Practitioner and PractitionerRole [FHIR-46782](https://jira.hl7.org/browse/FHIR-46782)
-- [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html):
+- [AU Core Requester CapabilityStatement](https://hl7.org.au/fhir/core/1.0.0/CapabilityStatement-au-core-requester.html):
   - removed all instances of MAY support create, update, delete, vread, patch, history-instance [FHIR-46060](https://jira.hl7.org/browse/FHIR-46060)
   - removed MAY support search-system and history-system [FHIR-46059](https://jira.hl7.org/browse/FHIR-46059)
   - _id Patient search parameter changed to SHOULD from SHALL [FHIR-46390](https://jira.hl7.org/browse/FHIR-46390)
   - added missing entries for DocumentReference and RelatedPerson resources [FHIR-46546](https://jira.hl7.org/browse/FHIR-46546)
-- [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html):
+- [AU Core Responder CapabilityStatement](https://hl7.org.au/fhir/core/1.0.0/CapabilityStatement-au-core-responder.html):
   - removed all instances of MAY support create, update, delete, vread, patch, history-instance [FHIR-46060](https://jira.hl7.org/browse/FHIR-46060)
   - corrected narrative of PractitionerRole practitioner.identifier search parameter from Medicare Provider Number to HPI-I [FHIR-47013](https://jira.hl7.org/browse/FHIR-47013)
   - corrected support for Practitioner _id search parameter to SHOULD instead of SHALL [FHIR-46777](https://jira.hl7.org/browse/FHIR-46777)
