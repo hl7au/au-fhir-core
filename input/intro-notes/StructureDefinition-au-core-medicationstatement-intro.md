@@ -1,3 +1,5 @@
+{% include note-medicationstatement-dosage.md -%}
+
 See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
 
 ### Usage scenarios
@@ -17,5 +19,5 @@ The following are supported usage scenarios for this profile:
     - If an external reference to a Medication resource is used, the responder **SHALL** support the `_include` parameter for searching this element
     - The requester **SHALL** support all methods
   - The MedicationRequest resource can represent the clinical indication as a code with `MedicationStatement.reasonCode`, or a reference with `MedicationStatement.reasonReference` to a Condition or other resource.
-  - Although both are marked as *Must Support*, responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
-  - A requester **SHALL** support both elements 
+    - Although both are marked as *Must Support*, responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
+    - A requester **SHALL** support both elements 
