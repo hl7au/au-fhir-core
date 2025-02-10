@@ -100,11 +100,12 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     `GET [base]/RelatedPerson?patient={Type/}[id]&name=[string]`
 
-Example:
+    Example:
 
-    1. GET [base]/RelatedPerson?patient=5678&amp;name=Wang
-    1. GET [base]/RelatedPerson?patient.identifier=http://example.org/fhir/mrn\|12345&amp;name=Wang
+      1. GET [base]/RelatedPerson?patient=5678&amp;name=Wang
+      1. GET [base]/RelatedPerson?patient.identifier=http://example.org/fhir/mrn\|12345&amp;name=Wang
 
-   *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient and name. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by string](http://hl7.org/fhir/R4/search.html#string))
+    *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient and name. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by string](http://hl7.org/fhir/R4/search.html#string))
+   
 
   
