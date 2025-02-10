@@ -17,8 +17,6 @@
   <differential>
     <element id="RelatedPerson">
       <path value="RelatedPerson"/>
-      <definition value="A person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process. A related person might be a family member, close friend, carer, legal guardian, or someone with enduring power of attorney. "/>
-      <comment value="In the context of the My Health Record, a related person may manage another individual's My Health Record as an authorised representative, or they may view or help manage another individual's My Health Record as a nominated representative. "/>
        <constraint>
         <key value="au-core-relper-01"/>
         <severity value="error"/>
@@ -219,7 +217,6 @@
         </extension>
       </extension>
       <path value="RelatedPerson.address"/>
-      <definition value="Address where the related person can be contacted or visited."/>
       <mustSupport value="true"/>
     </element>
   </differential>
