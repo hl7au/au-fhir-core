@@ -170,7 +170,7 @@
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
-         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
       </type>
       <mustSupport value="true"/>
     </element>
