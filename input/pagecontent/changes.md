@@ -6,7 +6,7 @@
 This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to TBD.
 
 #### Changes in this version
-TBD
+- Added [AU Core Related Person](StructureDefinition-au-core-relatedperson.html) [FHIR-49745](https://jira.hl7.org/browse/FHIR-49745), [FHIR-49746](https://jira.hl7.org/browse/FHIR-49746), [FHIR-49747](https://jira.hl7.org/browse/FHIR-49747).
 
 ### Release 1.0.0
 - Publication date: 2025-01-29

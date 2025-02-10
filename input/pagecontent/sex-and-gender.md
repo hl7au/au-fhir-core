@@ -19,7 +19,7 @@ The table below provides an overview of the sex and gender concepts that are inc
             <th style="width: 25%; text-align: center; vertical-align: middle;">Sex and Gender Concept</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></th>
             <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-core-relatedperson.html">AU Core Related Person</a></th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-relatedperson.html">AU Core Related Person</a></th>
         </tr>
     </thead>
     <tbody>
