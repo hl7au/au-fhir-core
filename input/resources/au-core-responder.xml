@@ -1329,7 +1329,7 @@
 <valueCode value="MAY"/>
 </extension>
 <name value="name"/>
-<definition value="http://hl7.org/fhir/SearchParameter/RelatedPerson-relationship"/>
+<definition value="http://hl7.org/fhir/SearchParameter/RelatedPerson-name"/>
 <type value="string"/>
 </searchParam> 
 <searchParam>
