@@ -30,7 +30,7 @@
         <key value="au-core-relper-02"/>
         <severity value="error"/>
         <human value="Names shall have at least text, family name, or given name present, or if neither is available, the Data Absent Reason extension shall be present"/>
-        <expression value="(name.exists() implies name.all(text.exists() or family.exists() or given.exists()) xor extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()))"/>
+        <expression value="name.exists() implies name.all(text.exists() or family.exists() or given.exists()) xor extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
         <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
       </constraint>
     </element>
