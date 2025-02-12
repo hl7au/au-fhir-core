@@ -1,25 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-core-encounter"/>
+  <id value="au-core-relatedperson"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="2"/>
+    <valueInteger value="0"/> 
   </extension>
-  <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-  <name value="AUCoreEncounter"/>
-  <title value="AU Core Encounter"/>
-  <status value="active"/>
-  <description value="This profile sets minimum expectations for an Encounter resource to record, search, and fetch basic encounter information for a patient. It is based on the [AU Base Encounter](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-encounter.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Encounter when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
+  <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
+  <name value="AUCoreRelatedPerson"/>
+  <title value="AU Core RelatedPerson"/>
+  <status value="draft"/>
+  <description value="This profile sets minimum expectations for a RelatedPerson resource to record, search, and fetch basic demographics and other administrative information about individual related persons associated with a patient. It is based on the [AU Base Related Person](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the RelatedPerson resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."/>
   <kind value="resource"/>
   <abstract value="false"/>
-  <type value="Encounter"/>
-  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-encounter"/>
+  <type value="RelatedPerson"/>
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
   <derivation value="constraint"/>
   <differential>
-    <element id="Encounter">
-      <path value="Encounter"/>
+    <element id="RelatedPerson">
+      <path value="RelatedPerson"/>
+       <constraint>
+        <key value="au-core-relper-01"/>
+        <severity value="error"/>
+        <human value="Either a name or a relationship shall be provided (or both)"/>
+        <expression value="name.exists() or relationship.exists()"/>
+        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
+      </constraint>
+      <constraint>
+        <key value="au-core-relper-02"/>
+        <severity value="error"/>
+        <human value="Names shall have at least text, family name, or given name present, or if neither is available, the Data Absent Reason extension shall be present"/>
+        <expression value="name.exists() implies name.extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists() xor name.all(text.exists() or family.exists() or given.exists())"/>
+        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
+      </constraint>
     </element>
-    <element id="Encounter.status">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+    <element id="RelatedPerson.patient">
+    <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
         </extension>
@@ -35,80 +49,16 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="Encounter.status"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.class">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-      </extension>
-      <path value="Encounter.class"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.serviceType">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-      </extension>
-      <path value="Encounter.serviceType"/>
-      <mustSupport value="true"/>
-      <binding>
-        <strength value="preferred"/>
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/service-type-1"/>
-      </binding>
-    </element>
-    <element id="Encounter.subject">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-      </extension>
-      <path value="Encounter.subject"/>
-      <min value="1"/>
+      <path value="RelatedPerson.patient"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
+        <targetProfile
+          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="Encounter.participant">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+    <element id="RelatedPerson.relationship">
+    <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
         </extension>
@@ -124,11 +74,12 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="Encounter.participant"/>
+      <path value="RelatedPerson.relationship"/>
+      <condition value="au-core-relper-01"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Encounter.participant.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+    <element id="RelatedPerson.name">
+    <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
         </extension>
@@ -144,10 +95,11 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="Encounter.participant.type"/>
+      <path value="RelatedPerson.name"/>
+      <condition value="au-core-relper-01"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Encounter.participant.individual">
+      <element id="RelatedPerson.name.use">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
@@ -164,16 +116,10 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="Encounter.participant.individual"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
-      </type>
+      <path value="RelatedPerson.name.use"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Encounter.period">
+    <element id="RelatedPerson.name.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
@@ -190,10 +136,10 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="Encounter.period"/>
+      <path value="RelatedPerson.name.text"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Encounter.reasonCode">
+    <element id="RelatedPerson.name.family">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
@@ -210,10 +156,10 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="Encounter.reasonCode"/>
+      <path value="RelatedPerson.name.family"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Encounter.reasonReference">
+    <element id="RelatedPerson.name.given">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
@@ -230,17 +176,11 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="Encounter.reasonReference"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
-      </type>
+      <path value="RelatedPerson.name.given"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Encounter.location">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+    <element id="RelatedPerson.telecom">
+     <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
         </extension>
@@ -256,11 +196,11 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="Encounter.location"/>
+      <path value="RelatedPerson.telecom"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Encounter.location.location">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+    <element id="RelatedPerson.address">
+     <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
         </extension>
@@ -276,35 +216,7 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="Encounter.location.location"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.serviceProvider">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-      </extension>
-      <path value="Encounter.serviceProvider"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
-      </type>
+      <path value="RelatedPerson.address"/>
       <mustSupport value="true"/>
     </element>
   </differential>
