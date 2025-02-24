@@ -208,7 +208,7 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td colspan="2">Date of assertion</td>
-    <td>-</td>
+    <td><a href="StructureDefinition-au-core-medication.html">AU Core MedicationStatement</a></td>
     <td>MedicationStatement.dateAsserted</td>
   </tr>
   <tr>

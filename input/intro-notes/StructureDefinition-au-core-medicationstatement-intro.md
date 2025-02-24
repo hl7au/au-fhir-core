@@ -6,7 +6,7 @@ See [Comparison with other national and international IGs](comparison.html) for 
 
 The following are supported usage scenarios for this profile:
 
-- Query for a patient's medication usage (current and historical)
+- Query for a patient's medication usage (current or historical)
 - Record or update stated medication usage for a patient
 
 
