@@ -169,7 +169,7 @@ Column attribute descriptions are as follows:
     <td colspan="2">Medication name</td>
     <td><a href="StructureDefinition-au-core-medication.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
     <td>MedicationStatement.medication[x] | Medication.code</td>
-    <td rowspan="8"><p>Development and testing of <a href="StructureDefinition-au-core-medication.html">AU Core MedicationStatement</a></p><p>See <a href="medicine-information.html">Medicine Information</a> guidance.</p></td>
+    <td rowspan="9">See <a href="medicine-information.html">Medicine Information</a> guidance.</td>
   </tr>
   <tr>
     <td colspan="2">Clinical indication</td>
@@ -210,7 +210,6 @@ Column attribute descriptions are as follows:
     <td colspan="2">Date of assertion</td>
     <td>-</td>
     <td>MedicationStatement.dateAsserted</td>
-    <td>This FHIR element is suggested as suitable to support this AUCDI concept.</td>
   </tr>
   <tr>
     <td rowspan="4">Sex and gender summary</td>
