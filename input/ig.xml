@@ -214,6 +214,13 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
+		<!-- DATATYPES -->
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-dosage"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
 		<!--EXAMPLES-->
 		<!--ALLERGYINTOLERANCE EXAMPLES-->
 		<resource>
