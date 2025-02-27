@@ -115,6 +115,12 @@ The table below provides a profile only comparison from AU Core to profiles in k
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationStatement</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+        </tr>
+        <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
@@ -231,6 +237,20 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">MedicationRequest.dosageInstruction.text</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
+         <tr>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationstatement.html">IPA-MedicationStatement</a></td>
+            <td style="width: 25%;">MedicationStatement.context</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationStatement.informationSource</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationStatement.dosageInstruction.text</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+        </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
@@ -257,7 +277,6 @@ IPA does not include requirements for Suppressed Data.
 ##### Additional profiles
 This version of AU Core has no equivalent profile for the following IPA profiles:
 - IPA-DocumentReference
-- IPA-MedicationStatement
 
 #### International Patient Summary
 [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/) describes how to represent the International Patient Summary (IPS) using HL7 FHIR. An International Patient Summary  document is an electronic health record extract containing essential healthcare information about a subject of care.
@@ -345,6 +364,24 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>   
             <td style="width: 25%;">MedicationRequest.dosageInstruction.timing</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-MedicationStatement-uv-ips.html">Medication Statement (IPS)</a></td>
+            <td style="width: 25%;">MedicationStatement.subject.reference</td>
+            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
+        </tr>
+        <tr>   
+            <td style="width: 25%;">MedicationStatement.effective[x].extension.where (url='http://hl7.org/fhir/StructureDefinition/data-absent-reason')</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+        </tr>
+        <tr>   
+            <td style="width: 25%;">MedicationStatement.dosageInstruction.text</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+        </tr>
+        <tr>   
+            <td style="width: 25%;">MedicationStatement.dosageInstruction.timing</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
@@ -447,7 +484,6 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - DiagnosticReport (IPS)
 - Imaging Study (IPS)
 - Media observation (Results: laboratory, media)
-- Medication Statement (IPS)
 - Observation - Pregnancy: EDD
 - Observation - Pregnancy: outcome
 - Observation - Pregnancy: status
