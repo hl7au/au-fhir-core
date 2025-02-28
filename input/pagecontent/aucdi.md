@@ -167,48 +167,48 @@ Column attribute descriptions are as follows:
   <tr>
     <td rowspan="9">Medication use statement</td>
     <td colspan="2">Medication name</td>
-    <td><a href="StructureDefinition-au-core-medication.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
     <td>MedicationStatement.medication[x] | Medication.code</td>
     <td rowspan="9">See <a href="medicine-information.html">Medicine Information</a> guidance.</td>
   </tr>
   <tr>
     <td colspan="2">Clinical indication</td>
-    <td><a href="StructureDefinition-au-core-medication.html">AU Core MedicationStatement</a></td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
     <td>MedicationStatement.reasonCode | MedicationStatement.reasonReference</td>
   </tr>
   <tr>
     <td colspan="2">Strength</td>
-    <td><a href="StructureDefinition-au-core-medication.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
     <td>MedicationStatement.medication[x] | Medication.code | Medication.ingredient</td>
   </tr>
   <tr>
     <td colspan="2">Form</td>
-    <td><a href="StructureDefinition-au-core-medication.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
     <td>MedicationStatement.medication[x] | Medication.form</td>
   </tr>
   <tr>
     <td colspan="2">Dose amount</td>
-    <td><a href="StructureDefinition-au-core-medication.html">AU Core MedicationStatement</a></td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
     <td>MedicationStatement.dosage.doseAndRate</td>
   </tr>
   <tr>
     <td colspan="2">Route of administration</td>
-    <td><a href="StructureDefinition-au-core-medication.html">AU Core MedicationStatement</a></td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
     <td>MedicationStatement.dosage.route</td>
   </tr>
   <tr>
     <td colspan="2">Dose timing</td>
-    <td><a href="StructureDefinition-au-core-medication.html">AU Core MedicationStatement</a></td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
     <td>MedicationStatement.dosage.timing</td>
   </tr>
   <tr>
     <td colspan="2">Comment</td>
-    <td><a href="StructureDefinition-au-core-medication.html">AU Core MedicationStatement</a></td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
     <td>MedicationStatement.note</td>
   </tr>
   <tr>
     <td colspan="2">Date of assertion</td>
-    <td><a href="StructureDefinition-au-core-medication.html">AU Core MedicationStatement</a></td>
+    <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
     <td>MedicationStatement.dateAsserted</td>
   </tr>
   <tr>

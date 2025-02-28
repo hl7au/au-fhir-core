@@ -115,7 +115,7 @@ The table below provides a profile only comparison from AU Core to profiles in k
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationStatement</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
@@ -238,8 +238,12 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
          <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationstatement.html">IPA-MedicationStatement</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationstatement.html">IPA-MedicationStatement</a></td>
+            <td style="width: 25%;">MedicationStatement.statusReason</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+        </tr>
+         <tr>
             <td style="width: 25%;">MedicationStatement.context</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
@@ -248,7 +252,7 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">MedicationStatement.dosageInstruction.text</td>
+            <td style="width: 25%;">MedicationStatement.dosage.text</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
         <tr>
@@ -377,11 +381,11 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>   
-            <td style="width: 25%;">MedicationStatement.dosageInstruction.text</td>
+            <td style="width: 25%;">MedicationStatement.dosage.text</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>   
-            <td style="width: 25%;">MedicationStatement.dosageInstruction.timing</td>
+            <td style="width: 25%;">MedicationStatement.dosage.timing</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
