@@ -41,7 +41,7 @@
         <td>status</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <strong>SHALL</strong> support <code>multipleOr</code>. The responder <strong>SHALL</strong> support <code>multipleOr</code>.</td>
   </tr>
  </tbody>
 </table>
@@ -55,7 +55,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationStatement:medication`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
-    `GET [base]/MedicationStatement?patient={Type/}[id]` or optionally`GET [base]/MedicationStatement?patient.identifier=[system|][code]`
+    `GET [base]/MedicationStatement?patient={Type/}[id]` or optionally `GET [base]/MedicationStatement?patient.identifier=[system|][code]`
 
     Example:
     
@@ -86,11 +86,24 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
+1. **SHOULD** support searching using the **[`_id`](https://hl7.org/fhir/R4/medicationstatement.html#search)** search parameter:
+    - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationStatement:medication`
+
+ 
+    `GET [base]/MedicationStatement?_id=[id]`
+
+    Example:
+    
+      1. GET [base]/MedicationStatement?_id=2169591
+      1. GET [base]/MedicationStatement?_id=2169591&amp;_include=MedicationStatement:medication
+
+    *Implementation Notes:* Fetches a bundle with the requested MedicationStatement, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
+
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationstatement.html#search)** and **[`effective`](https://hl7.org/fhir/R4/medicationstatement.html#search)** search parameters:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationStatement:medication`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHALL** support these `effective` comparators: `gt,lt,ge,le`
-    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `effective` (e.g.`effective=[date]&effective=[date]]&...`)
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `effective` (e.g.`effective=[date]&effective=[date]&...`)
     
 
     `GET [base]/MedicationStatement?patient={Type/}[id]&effective={gt|lt|ge|le}[date]{&effective={gt|lt|ge|le}[date]&...}`
