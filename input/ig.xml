@@ -390,6 +390,31 @@
 			<description value="Shows an example of an order for Simvastatin 40 mg oral tablet for high cholesterol for the *AU Core MedicationRequest* profile, demonstrating representation of medication as a reference to a Medication resource. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
 		</resource>
+		<!--MEDICATIONSTATEMENT EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="MedicationStatement/active-bisoprolol"/>
+			</reference>
+			<name value="MedicationStatement - active use of Bisoprolol 2.5mg"/>
+			<description value="Shows an example of current (active) use of Bisolprolol 2.5mg with dosage text, at the time of the Home Medicines Review, for the *AU Core MedicationStatement* profile. This example demonstrates representation of medication as a reference to a contained Medication resource. Patient:  Mia Leanne Banks."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationStatement/completed-chloramphenicol"/>
+			</reference>
+			<name value="MedicationStatement - completed use of Chloramphenicol 1% eye ointment"/>
+			<description value="Shows an example of completed use of Chloramphenicol 1% eye ointment due to Adult gonococcal conjunctivitis, at the time of the Home Medicines Review, for the *AU Core MedicationStatement* profile. Patient:  Mia Leanne Banks."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationStatement/previous-use-diflucan"/>
+			</reference>
+			<name value="MedicationStatement - patient has taken Diflucan in the past but is not taking it any more"/>
+			<description value="Shows an example of the previous use of Diflucan 200 mg/100 mL injection and the patient is not currently on this medicine at the time of the Home Medicines Review, for the *AU Core MedicationStatement* profile. This example demonstrates representation of additional AUCDI concepts for dosage including route, timing, dose and rate. Patient:  Mia Leanne Banks."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
+		</resource>
 		<!--OBSERVATION EXAMPLES-->
 		<resource>
 			<reference>
