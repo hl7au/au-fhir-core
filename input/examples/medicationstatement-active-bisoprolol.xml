@@ -19,12 +19,6 @@
                 </coding>
                 <text value="Bisoprolol 2.5mg tab"/>
             </code>
-            <manufacturer>
-                <identifier>
-                    <system value="http://pbs.gov.au/code/manufacturer"/>
-                    <value value="LR"/>
-                </identifier>
-            </manufacturer>
         </Medication>
     </contained>
     <status value="active"/>
