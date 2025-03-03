@@ -202,6 +202,26 @@
       <path value="MedicationStatement.effective[x]"/>
       <mustSupport value="true"/>
     </element>
+   <element id="MedicationStatement.dateAsserted">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
+      <path value="MedicationStatement.dateAsserted"/>
+      <mustSupport value="true"/>
+    </element>
   <element id="MedicationStatement.reasonCode">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
