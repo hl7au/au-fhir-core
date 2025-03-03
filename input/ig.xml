@@ -420,7 +420,7 @@
 				<reference value="MedicationStatement/previous-use-diflucan"/>
 			</reference>
 			<name value="MedicationStatement - patient has taken Diflucan in the past but is not taking it any more"/>
-			<description value="Shows an example of the previous use of Diflucan 200 mg/100 mL injection and the patient is not currently on this medicine at the time of the Home Medicines Review, for the *AU Core MedicationStatement* profile. This example demonstrates representation of additional AUCDI concepts for dosage including route, timing, dose and rate. Patient:  Mia Leanne Banks."/>
+			<description value="Shows an example of the previous use of Diflucan 200 mg/100 mL injection and the patient is not currently on this medicine for the *AU Core MedicationStatement* profile. This example demonstrates representation of additional AUCDI concepts for dosage including route, timing, dose and rate. Patient:  Mia Leanne Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
 		</resource>
 		<!--OBSERVATION EXAMPLES-->
