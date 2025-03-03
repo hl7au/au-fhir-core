@@ -10,10 +10,6 @@
             <code value="22717011000036101"/>
             <display value="Chloramphenicol 1% eye ointment"/>
         </coding>
-        <coding>
-            <system value="http://pbs.gov.au/code/item"/>
-            <code value="11112W"/>
-        </coding>
         <text value="Chloramphenicol 1% eye ointment"/>
     </medicationCodeableConcept>
     <subject>

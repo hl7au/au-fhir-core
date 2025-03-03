@@ -5,12 +5,16 @@
     </meta>
     <status value="completed"/>
     <medicationCodeableConcept>
-    <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="6632011000036102"/>
-      <display value="Bactrim DS tablet"/>
-    </coding>
-    <text value="Bactrim DS - tablet"/>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="6632011000036102"/>
+            <display value="Bactrim DS tablet"/>
+        </coding>
+        <coding>
+            <system value="http://pbs.gov.au/code/item"/>
+            <code value="2951H"/>
+        </coding>
+        <text value="Bactrim DS - tablet"/>
     </medicationCodeableConcept>
     <subject>
         <reference value="Patient/banks-mia-leanne"/>
