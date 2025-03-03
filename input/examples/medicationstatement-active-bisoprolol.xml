@@ -13,10 +13,6 @@
                     <code value="23281011000036106"/>
                     <display value="Bisoprolol fumarate 2.5 mg tablet"/>
                 </coding>
-                <coding>
-                    <system value="http://pbs.gov.au/code/item"/>
-                    <code value="8604W"/>
-                </coding>
                 <text value="Bisoprolol 2.5mg tab"/>
             </code>
         </Medication>
@@ -28,9 +24,6 @@
     <subject>
         <reference value="Patient/banks-mia-leanne"/>
     </subject>
-    <context>
-        <display value="Home Medicines Review for Mrs. Leanne Banks 05 FEB 2019"/>
-    </context>
     <dateAsserted value="2019-02-05"/>
     <dosage>
         <text value="1/2 tablet in the morning"/>

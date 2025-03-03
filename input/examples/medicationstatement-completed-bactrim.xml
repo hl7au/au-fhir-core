@@ -1,0 +1,22 @@
+<MedicationStatement xmlns="http://hl7.org/fhir">
+    <id value="completed-bactrim"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement" />
+    </meta>
+    <status value="completed"/>
+    <medicationCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="6632011000036102"/>
+      <display value="Bactrim DS tablet"/>
+    </coding>
+    <text value="Bactrim DS - tablet"/>
+    </medicationCodeableConcept>
+    <subject>
+        <reference value="Patient/banks-mia-leanne"/>
+    </subject>
+    <dateAsserted value="2020-05-30T10:00:00+10:00"/>
+    <reasonReference>
+        <reference value="Condition/uti"/>
+    </reasonReference>
+</MedicationStatement>

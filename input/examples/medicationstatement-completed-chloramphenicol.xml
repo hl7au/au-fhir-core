@@ -10,14 +10,15 @@
             <code value="22717011000036101"/>
             <display value="Chloramphenicol 1% eye ointment"/>
         </coding>
+        <coding>
+            <system value="http://pbs.gov.au/code/item"/>
+            <code value="11112W"/>
+        </coding>
         <text value="Chloramphenicol 1% eye ointment"/>
     </medicationCodeableConcept>
     <subject>
         <reference value="Patient/banks-mia-leanne"/>
     </subject>
-    <context>
-        <display value="Home Medicines Review for Mrs. Leanne Banks 05 FEB 2019"/>
-    </context>
     <dateAsserted value="2019-02-05"/>
     <reasonCode>
         <coding>
