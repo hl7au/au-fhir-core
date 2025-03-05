@@ -288,5 +288,9 @@
       <path value="MedicationStatement.dosage"/>
       <mustSupport value="true"/>
     </element>
+    <element id="MedicationStatement.dosage.text">
+      <path value="MedicationStatement.dosage.text" />
+      <mustSupport value="true" />
+    </element>
   </differential>
 </StructureDefinition>
