@@ -908,7 +908,7 @@
 		</parameter>
 		<parameter>
 			<code value="version-comparison-master"/>
-			<value value="1.0.0-ballot"/>
+			<value value="1.0.0"/>
 		</parameter>
 	</definition>
 </ImplementationGuide>
