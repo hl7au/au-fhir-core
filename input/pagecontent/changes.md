@@ -6,8 +6,12 @@
 This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to TBD.
 
 #### Changes in this version
-- Added [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html), including interaction support and adding the DiagnosticReport resource to AU Core CapabilityStatements [TBD](https://jira.hl7.org/browse/TBD).
 - Added [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html), including interaction support and replacing references to AU Base Related Person with AU Core RelatedPerson [FHIR-49745](https://jira.hl7.org/browse/FHIR-49745), [FHIR-49746](https://jira.hl7.org/browse/FHIR-49746), [FHIR-44600](https://jira.hl7.org/browse/FHIR-44600), [FHIR-49747](https://jira.hl7.org/browse/FHIR-49747).
+- Added [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html), including interaction support and adding the DiagnosticReport resource to AU Core CapabilityStatements [TBD](https://jira.hl7.org/browse/TBD).
+- [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html):
+  - added Must Support to MedicationStatement.dosage.text [TBD](https://jira.hl7.org/browse/TBD)
+- [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html):
+  - added Must Support to MedicationRequest.dosageInstruction.text [TBD](https://jira.hl7.org/browse/TBD)
 
 ### Release 1.0.0
 - Publication date: 2025-01-29
