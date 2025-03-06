@@ -18,6 +18,6 @@ The following are supported usage scenarios for this profile:
     - When referencing a Medication resource, it is preferred the resource is [contained](http://hl7.org/fhir/R4/references.html#contained) but it may be an external resource
     - If an external reference to a Medication resource is used, the responder **SHALL** support the `_include` parameter for searching this element
     - The requester **SHALL** support all methods
-  - The MedicationRequest resource can represent the clinical indication as a code with `MedicationStatement.reasonCode`, or a reference with `MedicationStatement.reasonReference` to a Condition or other resource.
+  - The MedicationStatement resource can represent the clinical indication as a code with `MedicationStatement.reasonCode`, or a reference with `MedicationStatement.reasonReference` to a Condition or other resource.
     - Although both are marked as *Must Support*, responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
     - A requester **SHALL** support both elements 
