@@ -12,6 +12,7 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support to MedicationStatement.dosage.text [TBD](https://jira.hl7.org/browse/TBD)
 - [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html):
   - added Must Support to MedicationRequest.dosageInstruction.text [TBD](https://jira.hl7.org/browse/TBD)
+- updated AUCDI mapping Date of assertion to be MedicationStatement.dateAsserted [FHIR-49960](https://jira.hl7.org/browse/49960).
 
 ### Release 1.0.0
 - Publication date: 2025-01-29
