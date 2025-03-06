@@ -1,7 +1,7 @@
 {
     "package-id" : "hl7.fhir.au.core",
     "version" : "1.1.0-preview",
-    "path" : "https://hl7.org.au/fhir/core/1.1.0-preview",
+    "path" : "http://hl7.org.au/fhir/core/1.1.0-preview",
     "mode" : "working",
     "status" : "preview",
     "sequence" : "R2",
