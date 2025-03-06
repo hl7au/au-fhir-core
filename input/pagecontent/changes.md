@@ -1,9 +1,9 @@
-###  Release TBD
-- Publication date: TBD
-- Publication status: TBD
+###  Release 1.1.0-preview
+- Publication date: 2025-03-06
+- Publication status: Preview
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to TBD.
+This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to [1.0.0](https://hl7.org.au/fhir/core/1.1.0-preview/index.html).
 
 #### Changes in this version
 - updated AUCDI mapping Date of assertion to be MedicationStatement.dateAsserted [FHIR-49960](https://jira.hl7.org/browse/FHIR-49960).
