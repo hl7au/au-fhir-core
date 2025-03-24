@@ -247,6 +247,24 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">MedicationStatement.informationSource</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
+         <tr>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationstatement.html">IPA-MedicationStatement</a></td>
+            <td style="width: 25%;">MedicationStatement.statusReason</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+        </tr>
+         <tr>
+            <td style="width: 25%;">MedicationStatement.context</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationStatement.informationSource</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationStatement.dosage.text</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+        </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
@@ -366,6 +384,24 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>   
             <td style="width: 25%;">MedicationStatement.effective[x].extension.where (url='http://hl7.org/fhir/StructureDefinition/data-absent-reason')</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+        </tr>
+        <tr>   
+            <td style="width: 25%;">MedicationStatement.dosage.timing</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-MedicationStatement-uv-ips.html">Medication Statement (IPS)</a></td>
+            <td style="width: 25%;">MedicationStatement.subject.reference</td>
+            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
+        </tr>
+        <tr>   
+            <td style="width: 25%;">MedicationStatement.effective[x].extension.where (url='http://hl7.org/fhir/StructureDefinition/data-absent-reason')</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+        </tr>
+        <tr>   
+            <td style="width: 25%;">MedicationStatement.dosage.text</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>   
