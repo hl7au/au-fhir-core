@@ -1,6 +1,6 @@
 AU Core aligns to, and leverages, international standards and other national standards, in particular:
-- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/) 
-- [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/)
+- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/)
+- [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/)
 - [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/)
 
 Relationships between AU Core, AUCDI, and the above key implementation guides is described in [Relationship with other IGs](relationship.html). 
@@ -31,7 +31,7 @@ The table below provides a profile only comparison from AU Core to profiles in k
         <tr>
             <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Access 1.0.0</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Summary 1.1.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Summary 2.0.0-ballot</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">US Core 7.0.0</th>
         </tr>
     </thead>
@@ -75,7 +75,7 @@ The table below provides a profile only comparison from AU Core to profiles in k
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
@@ -275,7 +275,7 @@ This version of AU Core has no equivalent profile for the following IPA profiles
 - IPA-DocumentReference
 
 #### International Patient Summary
-[International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/) describes how to represent the International Patient Summary (IPS) using HL7 FHIR. An International Patient Summary  document is an electronic health record extract containing essential healthcare information about a subject of care.
+[International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) describes how to represent the International Patient Summary (IPS) using HL7 FHIR. An International Patient Summary  document is an electronic health record extract containing essential healthcare information about a subject of care.
 
 ##### Additional requirements
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
@@ -284,15 +284,15 @@ The following IPS profile(s) contain additional requirements. Implementers are a
     <thead>
         <tr>
             <th style="width: 25%;">AU Core</th>
-            <th style="width: 25%;">International Patient Summary 1.1.0</th>
+            <th style="width: 25%;">International Patient Summary 2.0.0-ballot</th>
             <th style="width: 25%;">Element</th>
             <th style="width: 25%;">Additional requirements</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-AllergyIntolerance-uv-ips.html">Allergy Intolerance (IPS)</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-AllergyIntolerance-uv-ips.html">Allergy Intolerance (IPS)</a></td>
             <td style="width: 25%;">AllergyIntolerance.patient.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
         </tr>
@@ -301,56 +301,90 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
-            <td style="width: 25%;">Condition.clinicalStatus</td>
-            <td style="width: 25%;">IPS requires minimum of 1.</td>
+            <td style="width: 25%;">AllergyIntolerance.clinicalStatus</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
         </tr>
         <tr>
+            <td style="width: 25%;">AllergyIntolerance.verificationStatus</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">AllergyIntolerance.code</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">AllergyIntolerance.reaction.manifestation</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">AllergyIntolerance.onset[x]</td>
+            <td style="width: 25%;"><i>Must Support</i> on onsetDateTime in IPS.</td>
+        </tr>
+        <tr>
+            <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
             <td style="width: 25%;">Condition.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
-            <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">IPS requires value 'final'.</td>
+            <td style="width: 25%;">Condition.onset[x]</td>
+            <td style="width: 25%;"><i>Must Support</i> on onsetDateTime in IPS.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Observation.subject.reference</td>
-            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">Condition.clinicalStatus</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
+            <td style="width: 25%;">Condition.verificationStatus</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.category</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.severity</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.code</td>
+            <td  style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
             <td style="width: 25%;">Immunization.patient.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
+            <td style="width: 25%;">Immunization.vaccineCode</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
+        </tr>
+        <tr>
             <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Medication-uv-ips.html">Medication (IPS)</a></td>
-            <td style="width: 25%;">Medication.ingredient.strength</td>
-            <td style="width: 25%;">IPS requires UCUM for coded quantity units.</td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Medication-uv-ips.html">Medication (IPS)</a></td>
+            <td style="width: 25%;">Medication.code</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Medication.form</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>. <i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Medication.ingredient</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>. <i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Medication.ingredient.item[x]</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>. <i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Medication.ingredient.strength</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">IPS requires UCUM for coded quantity units. <i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-MedicationRequest-uv-ips.html">Medication Request (IPS)</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-MedicationRequest-uv-ips.html">Medication Request (IPS)</a></td>
             <td style="width: 25%;">MedicationRequest.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
         </tr>
@@ -373,10 +407,10 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
-            <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-laboratory-uv-ips.html">Observation Results: laboratory (IPS)</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-laboratory-uv-ips.html">Observation Results: laboratory (IPS)</a></td>
             <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">IPS requires value 'final'.</td>
+            <td style="width: 25%;">IPS requires value from <a href="https://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-status-uv-ips.html">Results Status Codes - IPS</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.subject.reference</td>
@@ -385,47 +419,30 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         <tr>
             <td style="width: 25%;">Observation.performer</td>
             <td style="width: 25%;">IPS requires minimum of 1.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Observation.value</td>
-            <td style="width: 25%;">IPS requires UCUM for coded quantity units.</td>
-        </tr>
-        <tr>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-pathology-uv-ips.html">Observation Results: pathology (IPS)</a></td>
-            <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">IPS requires value 'final'.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Observation.subject.reference</td>
-            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Observation.performer</td>
-            <td style="width: 25%;">IPS requires minimum of 1.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Observation.value</td>
-            <td style="width: 25%;">IPS requires UCUM for coded quantity units.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/StructureDefinition-Patient-uv-ips.html">Patient (IPS)</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Patient-uv-ips.html">Patient (IPS)</a></td>
             <td style="width: 25%;">Patient.generalPractitioner</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Practitioner-uv-ips.html">Practitioner (IPS)</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Practitioner-uv-ips.html">Practitioner (IPS)</a></td>
             <td style="width: 25%;">Practitioner.telecom</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
-        </tr>  
+        </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Procedure-uv-ips.html">Procedure (IPS)</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Procedure-uv-ips.html">Procedure (IPS)</a></td>
+            <td style="width: 25%;">Procedure.code</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>. <i>Must Support</i> element in IPS.</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">Procedure.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
         </tr>
@@ -434,24 +451,14 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation - SH: tobacco use</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation - SH: tobacco use</a></td>
             <td style="width: 25%;">Observation.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">IPS requires LOINC code 72166-2.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Observation.value[x]</td>
-            <td style="width: 25%;">IPS requires value from <a href="https://hl7.org/fhir/uv/ips/STU1.1/ValueSet-current-smoking-status-uv-ips.html">Current Smoking Status - IPS</a>.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
-            <td style="width: 25%;">Observation.subject.reference</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>    
+            <td style="width: 25%;">IPS requires LOINC code 72166-2. IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
         </tr>
     </tbody>
 </table>
@@ -469,6 +476,7 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - Device (IPS)
 - Device - performer, observer
 - Device Use Statement (IPS)
+- Flag - Alert (IPS)
 - DiagnosticReport (IPS)
 - Imaging Study (IPS)
 - Media observation (Results: laboratory, media)
