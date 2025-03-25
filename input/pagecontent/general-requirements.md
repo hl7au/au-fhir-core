@@ -197,14 +197,15 @@ The table below provides a list of AU Core profile elements that allow multiple 
 
 AU Core Profile |Must Support Element|Reference
 ---|---|---
-AU Core Diagnostic Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Base RelatedPerson
+AU Core Diagnostic Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 AU Core Diagnostic Result Observation|Observation.hasMember|AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
-AU Core Encounter|Encounter.participant.individual|AU Core Practitioner, AU Core PractitionerRole, AU Base Related Person
+AU Core Encounter|Encounter.participant.individual|AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
 AU Core Encounter|Encounter.reasonReference|AU Core Condition, Observation, AU Core Procedure
-AU Core Pathology Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Base RelatedPerson
+AU Core Pathology Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 AU Core Procedure|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
-AU Core MedicationRequest|MedicationRequest.requester|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Base Related Person
+AU Core MedicationRequest|MedicationRequest.requester|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 AU Core MedicationRequest|MedicationRequest.reasonReference|AU Core Condition, Observation
+AU Core MedicationStatement|MedicationStatement.reasonReference|AU Core Condition, Observation, AU Base Diagnostic Report
 {:.grid}
 
 
@@ -235,6 +236,7 @@ AU Core Respiration Rate|Observation.component.value[x]|Quantity, CodeableConcep
 AU Core Waist Circumference|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU Core Immunization|Immunization.occurrence[x]|dateTime, string
 AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
+AU Core MedicationStatement|MedicationStatement.medication[x]|CodeableConcept, Reference
 AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
 {:.grid}
 
@@ -272,6 +274,7 @@ AU Core Profile |Must Support Choice Elements
 AU Core Encounter|Encounter.reasonCode, Encounter.reasonReference
 AU Core Procedure|Procedure.reasonCode, Procedure.reasonReference
 AU Core MedicationRequest|MedicationRequest.reasonCode, MedicationRequest.reasonReference
+AU Core MedicationStatement|MedicationStatement.reasonCode, MedicationStatement.reasonReference
 {:.grid}
 
 
@@ -288,6 +291,7 @@ AU Core Profile |Must Support Sub-Element|Terminology Choices
 AU Core Immunization|Immunization.code.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
 AU Core Medication|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 AU Core MedicationRequest|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+AU Core MedicationStatement|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 {:.grid}
 
 For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) requires support for the following terminology choices `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging *Must Support* on those two terminology slices.
