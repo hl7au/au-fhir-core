@@ -1,0 +1,54 @@
+<HealthcareService xmlns="http://hl7.org/fhir">
+    <id value="murrabit-crisis-hotline" />
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice" />
+    </meta>
+    <identifier>
+        <system value="http://pca.digitalhealth.gov.au/id/pca-healthcare-service" />
+        <value value="4d00ad2659cb4b54bd8028798af62631" />
+    </identifier>
+    <active value="true" />
+    <providedBy>
+        <reference value="Organization/murrabit-hospital" />
+        <display value="Murrabit Public Hospital" />
+    </providedBy>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="1244561000168107" />
+            <display value="Crisis counselling" />
+        </coding>
+    </type>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="310026003" />
+            <display value="Counselling service" />
+        </coding>
+    </type>
+    <name value="Murrabit Crisis Hotline" />
+    <telecom>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/contact-purpose">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org.au/CodeSystem/contact-purpose" />
+                    <code value="emergency" />
+                    <display value="Emergency" />
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <system value="phone" />
+        <value value="1800975708" />
+        <use value="work" />
+    </telecom>
+    <availableTime>
+        <daysOfWeek value="mon" />
+        <daysOfWeek value="tue" />
+        <daysOfWeek value="wed" />
+        <daysOfWeek value="thu" />
+        <daysOfWeek value="fri" />
+        <daysOfWeek value="sat" />
+        <daysOfWeek value="sun" />
+        <allDay value="true" />
+    </availableTime>
+</HealthcareService>

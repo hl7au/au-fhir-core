@@ -1,0 +1,40 @@
+<HealthcareService xmlns="http://hl7.org/fhir">
+    <id value="physiotherapy" />
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice" />
+    </meta>
+    <active value="true" />
+    <providedBy>
+        <reference value="Organization/bobrester-medical-center" />
+        <display value="Bobrester Medical Center" />
+    </providedBy>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="722140001" />
+            <display value="Physiotherapy service" />
+        </coding>
+    </type>
+    <specialty>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="722138006" />
+            <display value="Physiotherapy" />
+        </coding>
+    </specialty>
+    <location>
+        <reference value="Location/bobrester-medical-center" />
+        <display value="Bobrester Medical Center" />
+    </location>
+    <name value="CoreStrength Physiotherapy" />
+    <telecom>
+        <system value="phone" />
+        <value value="0755504444" />
+        <use value="work" />
+    </telecom>
+    <telecom>
+        <system value="email" />
+        <value value="reception@corestrength.example.org." />
+        <use value="work" />
+    </telecom>
+</HealthcareService>
