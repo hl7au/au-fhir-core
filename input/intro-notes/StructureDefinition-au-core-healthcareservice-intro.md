@@ -10,4 +10,3 @@ The following are supported usage scenarios for this profile:
 
 ### Profile specific implementation guidance
 - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#business-identifiers) in AU Base.
-- An HPI-O **SHOULD** only be used as a HealthcareService.identifier value if the HPI-O identifies an actual healthcare service and not an organisation.
