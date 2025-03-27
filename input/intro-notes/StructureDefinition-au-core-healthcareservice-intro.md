@@ -7,7 +7,7 @@ See [Comparison with other national and international IGs](comparison.html) for 
 The following are supported usage scenarios for this profile:
 
 - Query for basic information about a healthcare service by name or identifier
-- Record or update a record basic information for a healthcare service
+- Record or update basic information for a healthcare service
 - Read information about a healthcare service referenced by another resource
 
 ### Profile specific implementation guidance
