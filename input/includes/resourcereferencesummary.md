@@ -17,7 +17,7 @@
 |Organization|[AU Core Organization](StructureDefinition-au-core-organization.html)|-|
 |Patient|[AU Core Patient](StructureDefinition-au-core-patient.html)|-|
 |Practitioner|[AU Core Practitioner](StructureDefinition-au-core-practitioner.html)|-|
-|PractitionerRole|[AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|[AU Core HealthcareService](StructureDefinition-au-core-healthcareservice.html), [AU Core Organization](StructureDefinition-au-core-organization.html), [AU Core Practitioner](StructureDefinition-au-core-practitioner.html)|
+|PractitionerRole|[AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|[AU Core Organization](StructureDefinition-au-core-organization.html), [AU Core Practitioner](StructureDefinition-au-core-practitioner.html)|
 |Procedure|[AU Core Procedure](StructureDefinition-au-core-procedure.html)|[AU Core Condition](StructureDefinition-au-core-condition.html), [DocumentReference](https://hl7.org/fhir/R4/documentreference.html), [AU Core Encounter](StructureDefinition-au-core-encounter.html), [Observation](http://hl7.org/fhir/R4/observation.html), [AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Procedure](StructureDefinition-au-core-procedure.html)|
 |RelatedPerson|[AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|
 |Specimen|[AU Base Specimen](http://hl7.org.au/fhir/StructureDefinition/au-specimen)|-|
