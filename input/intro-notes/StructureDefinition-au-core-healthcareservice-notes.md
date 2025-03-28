@@ -47,9 +47,9 @@
   </tr>
   <tr>
         <td>location</td>
-        <td><b>MAY</b></td>
+        <td><b>SHOULD</b></td>
         <td><code>reference</code></td>
-        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>MAY</b> support chained search location.name. The responder <b>MAY</b> support chained search location.name.<br/><br/>The requester <b>MAY</b> support chained search location.address. The responder <b>MAY</b> support chained search location.address.</td>
   </tr>
  </tbody>
 </table>
