@@ -127,21 +127,18 @@ The following search parameters **SHOULD** be supported:
 
 1. **SHOULD** support searching using the **[`location`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
     - **MAY** support chained searching by location name (e.g. `location.name=[string]`)
-    - **MAY** support chained searching by location address parts (e.g. `location.address-state=[string]`, `location.address-city=[string]`, `location.address-postalcode=[string]`)
+    - **MAY** support chained searching by location address parts (e.g. `location.address-state=[string]`)
 
     `GET [base]/HealthcareService?location.name=[string]`
 
     `GET [base]/HealthcareService?location.address-state=[string]`
 
-    `GET [base]/HealthcareService?location.address-city=[string]`
-
-    `GET [base]/HealthcareService?location.address-postalcode=[string]`
+    `GET [base]/HealthcareService?location={Type/}[id]`
 
     Example: 
 
     1. GET [base]/HealthcareService?location.name=albion%20hospital
-    1. GET [base]/HealthcareService?location.address-state=qld
-    1. GET [base]/HealthcareService?location.address-city=bayview%20heights
     1. GET [base]/HealthcareService?location.address-postalcode=4868
+    1. GET [base]/HealthcareService?location=Location/45688
 
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified location ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference))
