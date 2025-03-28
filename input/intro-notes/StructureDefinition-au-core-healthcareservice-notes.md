@@ -12,7 +12,7 @@
         <td>identifier</td>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support search using HPI-O identifiers as defined in the profile. The responder <b>SHOULD</b> support search using the using HPI-O, as defined in the profile.</td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/></td>
   </tr>
   <tr>
         <td>name</td>
