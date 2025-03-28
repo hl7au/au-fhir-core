@@ -41,9 +41,9 @@
   </tr>  
   <tr>
         <td>organization</td>
-        <td><b>MAY</b></td>
+        <td><b>SHOULD</b></td>
         <td><code>reference</code></td>
-        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support chained search organization.identifier using HPI-O identifier defined in the AU Core Organisation profile. The responder <b>SHOULD</b> support chained search organization.identifier using HPI-O identifier defined in the AU Core Organisation profile.<br/><br/>The requester <b>MAY</b> support chained search organization.name. The responder <b>MAY</b> support chained search organization.name.</td>
   </tr>
   <tr>
         <td>location</td>
