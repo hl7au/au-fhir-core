@@ -9,6 +9,7 @@ This change log documents the significant updates and resolutions implemented fr
 - updated AUCDI mapping Date of assertion to be MedicationStatement.dateAsserted [FHIR-49960](https://jira.hl7.org/browse/FHIR-49960).
 - Added [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html), including interaction support and adding the DiagnosticReport resource to AU Core CapabilityStatements [FHIR-49954](https://jira.hl7.org/browse/FHIR-49954), [FHIR-49956](https://jira.hl7.org/browse/FHIR-49956), [FHIR-49957](https://jira.hl7.org/browse/FHIR-49957), [FHIR-49958](https://jira.hl7.org/browse/FHIR-49958), [FHIR-49959](https://jira.hl7.org/browse/FHIR-49959).
 - Added [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html), including interaction support and replacing references to AU Base Related Person with AU Core RelatedPerson [FHIR-49745](https://jira.hl7.org/browse/FHIR-49745), [FHIR-49746](https://jira.hl7.org/browse/FHIR-49746), [FHIR-44600](https://jira.hl7.org/browse/FHIR-44600), [FHIR-49747](https://jira.hl7.org/browse/FHIR-49747).
+- Added [AU Core HealthcareService](StructureDefinition-au-core-healthcareservice.html) [FHIR-49934](https://jira.hl7.org/browse/FHIR-49934), including interaction support.
 
 ### Release 1.0.0
 - Publication date: 2025-01-29
