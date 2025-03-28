@@ -1,7 +1,5 @@
 {%   include search_parameters_intro.md -%}
 
-<br/><br/>*Note:* Support for _id is mandatory for a responder and optional for a requester. Where the expectation for a search parameter differs between actors, the table below will reflect the stronger conformance requirement.
-
 <table class="list">
 <tbody>
   <tr>
