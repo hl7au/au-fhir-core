@@ -80,6 +80,16 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
+1. **SHOULD** support searching using the **[`_id`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
+ 
+    `GET [base]/HealthcareService?_id=[id]`
+
+    Example:
+    
+      1. GET [base]/HealthcareService?_id=214466
+
+    *Implementation Notes:* Fetches a bundle with the requested HealthcareService, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
+
 1. **SHOULD** support searching using the **[`organization`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
     - **SHOULD** support chained searching of organisation canonical identifier `organization.identifier` (e.g. `organization.identifier=[system|][code]`)
     - **MAY** support chained searching of organisation name `organization.name` (e.g. `organization.name=[string]`)
