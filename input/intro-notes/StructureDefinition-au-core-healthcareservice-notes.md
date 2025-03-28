@@ -113,7 +113,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     1. GET [base]/HealthcareService?service-type=http://snomed.info/sct\|1223451000168109
 
-    *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified healthcare service type(s) ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified healthcare service type ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the **[`specialty`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
 
