@@ -105,7 +105,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified organisation ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference))
 
-1. **SHOULD** support searching using the **[`service-type`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter, in order to search for a HealthcareService based on the type of service(s) it provides or offers.
+1. **SHOULD** support searching using the **[`service-type`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
 
     `GET [base]/HealthcareService?service-type={system|}[code]`
 
