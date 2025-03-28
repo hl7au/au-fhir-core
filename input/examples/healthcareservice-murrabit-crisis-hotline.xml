@@ -7,7 +7,6 @@
         <system value="http://pca.digitalhealth.gov.au/id/pca-healthcare-service" />
         <value value="4d00ad2659cb4b54bd8028798af62631" />
     </identifier>
-    <active value="true" />
     <providedBy>
         <reference value="Organization/murrabit-hospital" />
         <display value="Murrabit Public Hospital" />
@@ -41,14 +40,4 @@
         <value value="1800975708" />
         <use value="work" />
     </telecom>
-    <availableTime>
-        <daysOfWeek value="mon" />
-        <daysOfWeek value="tue" />
-        <daysOfWeek value="wed" />
-        <daysOfWeek value="thu" />
-        <daysOfWeek value="fri" />
-        <daysOfWeek value="sat" />
-        <daysOfWeek value="sun" />
-        <allDay value="true" />
-    </availableTime>
 </HealthcareService>

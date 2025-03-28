@@ -744,14 +744,6 @@
 		<!--HEALTHCARESERVICE EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="HealthcareService/cardiothoracic-services"/>
-			</reference>
-			<name value="HealthcareService - Cardiothoracic Service at Bobrester Medical Center"/>
-			<description value="Shows an example of a healthcare service resource for the *AU Core HealthcareService* profile, demonstrating a statewide Cardiothoracic Service provided by Bobrester Medical Center"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="HealthcareService/physiotherapy"/>
 			</reference>
 			<name value="HealthcareService - CoreStrength Physiotherapy"/>
