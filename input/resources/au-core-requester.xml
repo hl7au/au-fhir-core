@@ -397,7 +397,7 @@
 <name value="identifier"/>
 <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-identifier"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xA;&#xA;The requester **SHOULD** support search using HPI-O and ABN identifiers as defined in the profile.&#xA;&#xA;The responder **SHOULD** support search using the using HPI-O and ABN identifiers as defined in the profile."/>
+<documentation value="The requester **SHALL** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
