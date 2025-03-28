@@ -107,7 +107,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the **[`service-type`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter, in order to search for a HealthcareService based on the type of service(s) it provides or offers.
 
-    `GET [base]/HealthcareService?service-type=[system|][code]`
+    `GET [base]/HealthcareService?service-type={system|}[code]`
 
     Example:
 
@@ -117,7 +117,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the **[`specialty`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
 
-    `GET [base]/HealthcareService?specialty=[system|][code]`
+    `GET [base]/HealthcareService?specialty={system|}[code]`
 
     Example:
 
