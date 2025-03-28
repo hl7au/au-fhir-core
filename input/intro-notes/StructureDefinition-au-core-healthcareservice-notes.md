@@ -126,7 +126,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified specialty ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the **[`location`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
-    - **SHOULD** support searching by location name (e.g. `location.name=[string]`)
+    - **MAY** support chained searching by location name (e.g. `location.name=[string]`)
     - **MAY** support chained searching by location address parts (e.g. `location.address-state=[string]`, `location.address-city=[string]`, `location.address-postalcode=[string]`)
 
     `GET [base]/HealthcareService?location.name=[string]`
