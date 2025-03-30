@@ -318,7 +318,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">AllergyIntolerance.onset[x]</td>
-            <td style="width: 25%;"><i>Must Support</i> on onsetDateTime in IPS.</td>
+            <td style="width: 25%;">onsetDateTime is a <i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
             <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
@@ -328,7 +328,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">Condition.onset[x]</td>
-            <td style="width: 25%;"><i>Must Support</i> on onsetDateTime in IPS.</td>
+            <td style="width: 25%;">onsetDateTime is a <i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.clinicalStatus</td>
@@ -372,7 +372,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">Medication.ingredient</td>
-            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>. <i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Medication.ingredient.item[x]</td>
@@ -394,7 +394,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-MedicationStatement-uv-ips.html">Medication Statement (IPS)</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-MedicationStatement-uv-ips.html">Medication Statement (IPS)</a></td>
             <td style="width: 25%;">MedicationStatement.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
         </tr>
@@ -407,8 +407,8 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-laboratory-uv-ips.html">Observation Results: laboratory (IPS)</a></td>
+            <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+            <td rowspan="8" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html">Observation Results: laboratory/pathology (IPS)</a></td>
             <td style="width: 25%;">Observation.status</td>
             <td style="width: 25%;">IPS requires value from <a href="https://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-status-uv-ips.html">Results Status Codes - IPS</a>.</td>
         </tr>
@@ -419,6 +419,26 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         <tr>
             <td style="width: 25%;">Observation.performer</td>
             <td style="width: 25%;">IPS requires minimum of 1.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.category</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.code</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.effective[x].extension.where (url='http://hl7.org/fhir/StructureDefinition/data-absent-reason')</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.value[x]</td>
+            <td style="width: 25%;">valueString, valueQuantity and valueCodeableConcept <i>Must Support</i> in IPS.</td>
+        </tr>
+         <tr>
+            <td style="width: 25%;">Observation.valueCodeableConcept</td>
+            <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
@@ -437,8 +457,8 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Procedure-uv-ips.html">Procedure (IPS)</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Procedure-uv-ips.html">Procedure (IPS)</a></td>
             <td style="width: 25%;">Procedure.code</td>
             <td style="width: 25%;">IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>. <i>Must Support</i> element in IPS.</td>
         </tr>
@@ -451,14 +471,22 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation - SH: tobacco use</a></td>
+            <td style="width: 25%;">Procedure.performed[x].extension.where (url='http://hl7.org/fhir/StructureDefinition/data-absent-reason')</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation - SH: tobacco use</a></td>
             <td style="width: 25%;">Observation.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
             <td style="width: 25%;">IPS requires LOINC code 72166-2. IPS requires <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.effective[x].extension.where (url='http://hl7.org/fhir/StructureDefinition/data-absent-reason')</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
     </tbody>
 </table>
