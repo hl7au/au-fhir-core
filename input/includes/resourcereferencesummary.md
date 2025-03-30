@@ -5,6 +5,7 @@
 |DiagnosticReport|[AU Base Diagnostic Report](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-diagnosticreport.html)|-|
 |DocumentReference|[DocumentReference](https://hl7.org/fhir/R4/documentreference.html)|-|
 |Encounter|[AU Core Encounter](StructureDefinition-au-core-encounter.html)|[AU Core Condition](StructureDefinition-au-core-condition.html), [AU Core Location](StructureDefinition-au-core-location.html), [Observation](http://hl7.org/fhir/R4/observation.html), [AU Core Organization](StructureDefinition-au-core-organization.html), [AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Practitioner](StructureDefinition-au-core-practitioner.html), [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html), [AU Core Procedure](StructureDefinition-au-core-procedure.html), [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html)|
+|HealthcareService|[AU Core HealthcareService](StructureDefinition-au-core-healthcareservice.html)|[AU Core Location](StructureDefinition-au-core-location.html), [AU Core Organization](StructureDefinition-au-core-organization.html)|
 |Immunization|[AU Core Immunization](StructureDefinition-au-core-immunization.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|
 |Location|[AU Core Location](StructureDefinition-au-core-location.html)|[AU Core Organization](StructureDefinition-au-core-organization.html)|
 |Medication|[AU Core Medication](StructureDefinition-au-core-medication.html)|-|

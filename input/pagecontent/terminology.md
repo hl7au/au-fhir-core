@@ -40,7 +40,7 @@ Column attribute descriptions are as follows:
 |[Body Weight Units](https://hl7.org/fhir/R4/valueset-ucum-bodyweight.html)|[AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)|FHIR|
 |[Clinical Condition](https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1)|[AU Core Condition](StructureDefinition-au-core-condition.html)|NCTS|
 |[Clinical Finding](https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1)|[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html), [AU Core Condition](StructureDefinition-au-core-condition.html)|NCTS|
-|[Clinical Specialty](https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1)|[AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|NCTS|
+|[Clinical Specialty](https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1)|[AU Core HealthcareService](StructureDefinition-au-core-healthcareservice.html), [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|NCTS|
 |[Common Languages in Australia](https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2)|[AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Practitioner](StructureDefinition-au-core-practitioner.html)|NCTS|
 |[Condition/Diagnosis Severity](https://hl7.org/fhir/R4/valueset-condition-severity.html)|[AU Core Condition](StructureDefinition-au-core-condition.html)|FHIR|
 |[ConditionCategoryCodes](https://hl7.org/fhir/R4/valueset-condition-category.html)|[AU Core Condition](StructureDefinition-au-core-condition.html)|FHIR|
@@ -84,7 +84,7 @@ Column attribute descriptions are as follows:
 |[Reason for Request](https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1)|[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|NCTS|
 |[Related Person Relationship Type](https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1)|[AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html)|NCTS|
 |[Route of Administration](https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1)|[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|NCTS|
-|[Service Type](https://healthterminologies.gov.au/fhir/ValueSet/service-type-1)|[AU Core Encounter](StructureDefinition-au-core-encounter.html)|NCTS|
+|[Service Type](https://healthterminologies.gov.au/fhir/ValueSet/service-type-1)|[AU Core Encounter](StructureDefinition-au-core-encounter.html), [AU Core HealthcareService](StructureDefinition-au-core-healthcareservice.html)|NCTS|
 |[ServiceDeliveryLocationRoleType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)|[AU Core Location](StructureDefinition-au-core-location.html)|AU Base|
 |[Smoking Status](https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1)|[AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html)|NCTS|
 |[SNOMED CT Additional Dosage Instructions](https://hl7.org/fhir/R4/valueset-additional-instruction-codes.html)|[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|FHIR|
