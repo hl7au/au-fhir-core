@@ -393,8 +393,8 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-MedicationStatement-uv-ips.html">Medication Statement (IPS)</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-MedicationStatement-uv-ips.html">Medication Statement (IPS)</a></td>
             <td style="width: 25%;">MedicationStatement.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
         </tr>
@@ -405,6 +405,10 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         <tr>   
             <td style="width: 25%;">MedicationStatement.dosage.timing</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+        </tr>
+        <tr>   
+            <td style="width: 25%;">MedicationStatement.code</td>
+            <td style="width: 25%;">m</td>
         </tr>
         <tr>
             <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
