@@ -94,12 +94,11 @@ The following search parameters **SHOULD** be supported:
     - **SHOULD** support chained searching of organisation canonical identifier `organization.identifier` (e.g. `organization.identifier=[system|][code]`)
     - **MAY** support chained searching of organisation name `organization.name` (e.g. `organization.name=[string]`)
 
-    `GET [base]/HealthcareService?organization.identifier=[system|][code]`
-
-    `GET [base]/HealthcareService?organization.name=[string]`
+    `GET [base]/HealthcareService?organization={Type/}[id]` or optionally `GET [base]/HealthcareService?organization.identifier=[system|][code]` or `GET [base]/HealthcareService?organization.name=[string]`
 
     Example:
 
+    1. GET [base]/HealthcareService?organization=Organization/49873
     1. GET [base]/HealthcareService?organization.identifier=http://ns.electronichealth.net.au/id/hi/hpio/1.0\|8003626566706976
     1. GET [base]/HealthcareService?organization.name=murrabit%20public%20hospital
     
