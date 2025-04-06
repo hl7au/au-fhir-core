@@ -1272,7 +1272,7 @@ The table below provides a comparison of capability statements at the resource l
             <td>IPA requires (SHALL) support for the patient and <code>_id</code> search parameters  and optional (MAY) support for <code>category</code>, <code>contenttype</code>, <code>date</code>, <code>period</code>, <code>status</code>, and <code>type</code>.</td>
         </tr>
         <tr>
-           <td style="width: 25%;">IPA requires (SHALL) support for combined search parameters <code>patient+category</code>, <code>patient+category+date</code>, and </code>patient+type</code>, and recommends (SHOULD) support for <code>patient+contenttype</code>, <code>patient+status</code>, </code>patient+type+date</code>, and <code>patient+type+period</code> combined search parameters.</td>
+           <td style="width: 25%;">IPA requires (SHALL) support for combined search parameters <code>patient+category</code>, <code>patient+category+date</code>, and </code>patient+type</code>, and recommends (SHOULD) support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> combined search parameters.</td>
         </tr>
         <tr>
            <td style="width: 25%;">IPA requires (SHALL) support for the <code>$docref</code> operation.</td>
@@ -1400,13 +1400,12 @@ The following IPS capability statements introduce additional conformance expecta
 </table>        
 
 #### US Core
-[US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/) defines the expected capabilities of systems to promote interoperability and data exchange within the US healthcare context. It provides the following capability statements:
-- [US Core Client CapabilityStatemt](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) that desribes the expected expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. 
+[US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/) defines the expected capabilities of systems to support interoperability and clinical data exchange in the US healthcare context. It includes two capability statements:
+- [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) that desribes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. 
 - [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html) that describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. 
-
+#####
 ##### Additional requirements
 The following US Core capability statements introduce additional conformance expectations. Implementers are advised to note that some code changes may be required for full compliance.
-
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -1422,7 +1421,7 @@ The following US Core capability statements introduce additional conformance exp
             <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
             <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="2" style="width: 25%;">AllergyIntolerance</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revincludes: Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
             <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
@@ -1431,7 +1430,7 @@ The following US Core capability statements introduce additional conformance exp
             <td rowspan="3" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="3" style="width: 25%;">Condition</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revincludes: Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
             <td>US Core states optional (MAY) support for <code>abatement-date</code>, <code>asserted-date</code>, <code>encounter</code>, <code>recorded-date</code>, and <code>_lastUpdated</code> search parameters.</td>
@@ -1584,7 +1583,7 @@ The following US Core capability statements introduce additional conformance exp
             <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the following search paramaters and search paramater combinations:<code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code>.</td>
+            <td>US Core requires (SHALL) support for the following search paramaters and search parameter combinations:<code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code>.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
@@ -1656,7 +1655,7 @@ The following US Core capability statements introduce additional conformance exp
             <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
             <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
             <td rowspan="2" style="width: 25%;">AllergyIntolerance</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revincludes: Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
             <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
@@ -1665,7 +1664,7 @@ The following US Core capability statements introduce additional conformance exp
             <td rowspan="3" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
             <td rowspan="3" style="width: 25%;">Condition</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revincludes: Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
             <td>US Core states optional (MAY) support for <code>abatement-date</code>, <code>asserted-date</code>, <code>encounter</code>, <code>recorded-date</code> and <code>_lastUpdated</code> search parameters.</td>
@@ -1792,6 +1791,7 @@ The following US Core capability statements introduce additional conformance exp
         </tr>
         <tr>
             <td>US Core requires (SHALL) clients to support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
+        </tr>    
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
@@ -1872,7 +1872,7 @@ The following US Core capability statements introduce additional conformance exp
         </tr>
         <tr>
             <td rowspan="5" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Serve CapabilityStatement</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server CapabilityStatement</a></td>
             <td rowspan="5" style="width: 25%;">Specimen</td>
             <td style="width: 25%;">US Core requires (SHALL) support the read interaction.</td>
         </tr>
