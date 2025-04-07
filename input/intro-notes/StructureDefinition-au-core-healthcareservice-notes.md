@@ -94,12 +94,11 @@ The following search parameters **SHOULD** be supported:
     - **SHOULD** support chained searching of organisation canonical identifier `organization.identifier` (e.g. `organization.identifier=[system|][code]`)
     - **MAY** support chained searching of organisation name `organization.name` (e.g. `organization.name=[string]`)
 
-    `GET [base]/HealthcareService?organization.identifier=[system|][code]`
-
-    `GET [base]/HealthcareService?organization.name=[string]`
+    `GET [base]/HealthcareService?organization={Type/}[id]` or optionally `GET [base]/HealthcareService?organization.identifier=[system|][code]` or `GET [base]/HealthcareService?organization.name=[string]`
 
     Example:
 
+    1. GET [base]/HealthcareService?organization=Organization/49873
     1. GET [base]/HealthcareService?organization.identifier=http://ns.electronichealth.net.au/id/hi/hpio/1.0\|8003626566706976
     1. GET [base]/HealthcareService?organization.name=murrabit%20public%20hospital
     
@@ -129,16 +128,12 @@ The following search parameters **SHOULD** be supported:
     - **MAY** support chained searching by location name (e.g. `location.name=[string]`)
     - **MAY** support chained searching by location address parts (e.g. `location.address-state=[string]`)
 
-    `GET [base]/HealthcareService?location.name=[string]`
-
-    `GET [base]/HealthcareService?location.address-state=[string]`
-
-    `GET [base]/HealthcareService?location={Type/}[id]`
+    `GET [base]/HealthcareService?location={Type/}[id]` or optionally `GET [base]/HealthcareService?location.name=[string]` or `GET [base]/HealthcareService?location.address-state=[string]`    
 
     Example: 
 
+    1. GET [base]/HealthcareService?location=Location/45688
     1. GET [base]/HealthcareService?location.name=albion%20hospital
     1. GET [base]/HealthcareService?location.address-postalcode=4868
-    1. GET [base]/HealthcareService?location=Location/45688
-
+    
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified location ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference))
