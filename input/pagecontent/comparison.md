@@ -1363,7 +1363,9 @@ The following IPS capability statements introduce additional conformance expecta
             <td style="width: 70%;">IPS SHOULD support <code>$docref</code> operation.</td>
         </tr>
     </tbody>
-</table>        
+</table>    
+
+    
 
 #### US Core
 [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/) defines the expected capabilities of systems to support interoperability and clinical data exchange in the US healthcare context. It includes two capability statements:
@@ -1390,7 +1392,7 @@ The following US Core capability statements introduce additional conformance exp
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">US Core SHOULD support <code>patient+ clinical-status</code> search parameter combination.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+clinical-status</code> search parameter combination.</td>
         </tr>
         <tr>
             <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code>.</td>
@@ -1434,7 +1436,7 @@ The following US Core capability statements introduce additional conformance exp
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">US Core recommends SHOULD support <code>status</code>, <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameters and search parameter combinations.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>status</code>, <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameters and search parameter combinations.</td>
 		</tr>
         <tr>
             <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
@@ -1500,6 +1502,7 @@ The following US Core capability statements introduce additional conformance exp
         </tr>
 		<tr>
             <td style="width: 70%;">US Core MAY support <code>class</code>, <code>date</code>, <code>_lastUpdated</code>, <code>discharge-disposition</code>, <code>location</code>, <code>status</code> and <code>type</code> search parameters.</td>
+		</tr>
         <tr>
             <td rowspan="4" style="width: 30%;">Immunization</td>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
@@ -1568,10 +1571,10 @@ The following US Core capability statements introduce additional conformance exp
 		<tr>
         <tr>
             <td rowspan="3" style="width: 30%;">Organization</td>
-            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHALL support <code>name</code> search parameter.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core SHALL support <code>name</code> search parameter.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
             <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
