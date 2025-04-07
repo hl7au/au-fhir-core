@@ -1198,99 +1198,96 @@ The table below provides a comparison of capability statements at the resource l
 ##### Additional requirements
 ​The following IPA capability statements introduce additional conformance expectations. Implementers are advised to note that some code changes may be required to for full compliance.
 
+##### IPA Client CapabilityStatement additional requirements 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 25%;">AU Core CapabilityStatement</th>
-            <th style="width: 25%;">International Patient Access 1.0.0 CapabilityStatement</th>
-            <th style="width: 25%;">Resource type</th>
-            <th style="width: 25%;">Additional requirements</th>
+            <th style="width: 30%;">Resource type</th>
+            <th style="width: 70%;">Additional requirements</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-client.html">IPA Client</a></td>
-            <td style="width: 25%;">Condition</td>
-            <td style="width: 25%;">IPA supports <code>verification-status</code> search parameter as MAY.</td>
+            <td style="width: 30%;">Condition</td>
+            <td style="width: 70%;">IPA client MAY support <code>verification-status</code> search parameter.</td>
         </tr>
         <tr>
-            <td rowspan="6" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-client.html">IPA Client</a></td>
-            <td rowspan="6" style="width: 25%;">DocumentReference</td>
-            <td style="width: 25%;">IPA mandates support (SHALL) for the read and <code>search-type</code> interactions.</td>
+            <td rowspan="6" style="width:30%;">DocumentReference</td>
+            <td style="width: 70%;">IPA client SHALL support <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
         <tr>
-            <td>IPA requires (SHALL) support for the <code>patient</code> search parameter.</td> 
+            <td >IPA client SHALL support the <code>patient</code> search parameter.</td> 
         </tr>
         <tr>
-            <td>IPA recommends (SHOULD) support for <code>_id</code>.</td>
+            <td>IPA SHOULD support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td> IPA states optionall (MAY) support for the follow search parameters: <code>category</code>, <code>contenttype</code>, <code>date</code>, <code>period</code>, <code>status</code>, and <code>type</code>.</td>
+            <td> IPA client MAY support the follow search parameters: <code>category</code>, <code>contenttype</code>, <code>date</code>, <code>period</code>, <code>status</code>, and <code>type</code>.</td>
         </tr>
         <tr>
-           <td style="width: 25%;">IPA recommends (SHOULD) for combined search parameters <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code>.</td>
+           <td style="width: 30%;">IPA client SHOULD support the combined search parameters <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code>.</td>
         </tr>
         <tr>
-           <td style="width: 25%;">IPA recommends (SHOULD) support for the <code>$docref</code> operation.</td>
+           <td style="width: 70%;">IPA client SHOULD support the <code>$docref</code> operation.</td>
         </tr>  
         <tr>
-            <td style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-client.html">IPA Client</a></td>
-            <td style="width: 25%;">MedicationRequest</td>
-            <td style="width: 25%;">IPA recommends (SHOULD) support for category and code search parameters.</td>
+            <td style="width: 30%;">MedicationRequest</td>
+            <td style="width: 70%;">IPA client SHOULD support for category and code search parameters.</td>
         </tr>   
         <tr>
-            <td style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-client.html">IPA Client</a></td>
-            <td style="width: 25%;">Observation</td>
-            <td style="width: 25%;">IPA mandates (SHALL) support for the patient search parameter.</td>
+            <td style="width: 30%;">Observation</td>
+            <td style="width: 70%;">IPA client SHALL support <code>patient</code> search parameter.</td>
         </tr>   
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-client.html">IPA Client</a></td>
-            <td rowspan="2" style="width: 25%;">Patient</td>
-            <td style="width: 25%;">IPA recommends (SHOULD) support for the <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
+            <td rowspan="2" style="width: 30%;">Patient</td>
+            <td style="width: 70%;">IPA client SHOULD support the <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
         </tr>
         <tr>
-            <td>IPA requires (SHALL) support for Patient.link processing.</td>
+            <td>IPA client SHALL support Patient.link processing.</td>
+        </tr>
+  </tbody>
+</table>
+
+##### IPA Server CapabilityStatement additional requirements 
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 30%;">Resource type</th>
+            <th style="width: 70%;">Additional requirements</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="width: 30%;">Condition</td>
+            <td style="width: 70%;">IPA server MAY support <code>verification-status</code> search parameter.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
-            <td style="width: 25%;">Condition</td>
-            <td style="width: 25%;">IPA supports verification-status search parameter as MAY.</td>
+            <td rowspan="5" style="width: 30%;">DocumentReference</td>
+            <td style="width: 70%;">IPA server SHALL support <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
-            <td rowspan="4" style="width: 25%;">DocumentReference</td>
-            <td style="width: 25%;">IPA mandates support (SHALL) for the <code>read</code> and <code>search-type</code> interactions.</td>
+            <td>IPA server SHALL support <code>patient</code> and <code>_id</code> search parameters.</td>
         </tr>
         <tr>
-            <td>IPA requires (SHALL) support for the patient and <code>_id</code> search parameters  and optional (MAY) support for <code>category</code>, <code>contenttype</code>, <code>date</code>, <code>period</code>, <code>status</code>, and <code>type</code>.</td>
+            <td>IPA server MAY support <code>category</code>, <code>contenttype</code>, <code>date</code>, <code>period</code>, <code>status</code>, and <code>type</code> search parameters.</td>
         </tr>
         <tr>
-           <td style="width: 25%;">IPA requires (SHALL) support for combined search parameters <code>patient+category</code>, <code>patient+category+date</code>, and </code>patient+type</code>, and recommends (SHOULD) support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> combined search parameters.</td>
+           <td style="width: 70%;">IPA server SHALL support <code>patient+category</code>, <code>patient+category+date</code>, and </code>patient+type</code>, and recommends (SHOULD) support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> combined search parameters.</td>
         </tr>
         <tr>
-           <td style="width: 25%;">IPA requires (SHALL) support for the <code>$docref</code> operation.</td>
+           <td style="width: 25%;">IPA server SHALL support <code>$docref</code> operation.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
             <td style="width: 25%;">MedicationRequest</td>
-            <td style="width: 25%;">IPA recommends (SHOULD) support for <code>category</code> and <code>code</code> search parameters.</td>
+            <td style="width: 25%;">IPA server SHOULD support <code>category</code> and <code>code</code> search parameters.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
             <td rowspan="2" style="width: 25%;">Patient</td>
-            <td style="width: 25%;">IPA recommends (SHOULD) support for the <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
+            <td style="width: 25%;">IPA server SHOULD support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
         </tr>
         <tr>
-            <td>IPA requires (SHALL) support for Patient.link processing.</td>
+            <td>IPA server SHALL support Patient.link processing.</td>
         </tr>
   </tbody>
 </table>
@@ -1407,6 +1404,8 @@ The following IPS capability statements introduce additional conformance expecta
 ##### Additional requirements
 The following US Core capability statements introduce additional conformance expectations. Implementers are advised to note that some code changes may be required for full compliance.
 
+
+
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
@@ -1418,475 +1417,419 @@ The following US Core capability statements introduce additional conformance exp
     </thead>
     <tbody>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="2" style="width: 25%;">AllergyIntolerance</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude: Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core client SHOULD support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core client SHOULD support  for the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="3" style="width: 25%;">Condition</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude: Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core client SHOULD support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core states optional (MAY) support for <code>abatement-date</code>, <code>asserted-date</code>, <code>encounter</code>, <code>recorded-date</code>, and <code>_lastUpdated</code> search parameters.</td>
+            <td>US Core client MAY support <code>abatement-date</code>, <code>asserted-date</code>, <code>encounter</code>, <code>recorded-date</code>, and <code>_lastUpdated</code> search parameters.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> combined search parameters.</td>
+            <td>US Core client SHOULD support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> combined search parameters.</td>
         </tr>
         <tr>
-            <td rowspan="6" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="6" style="width: 25%;">DiagnosticReport</td>
-            <td style="width: 25%;">US Core requires (SHALL) support for GET by id: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
+            <td style="width: 25%;">US Core client SHALL support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the following search parameters and search parameter combinations: <code>patient</code>, <code>code</code>, <code>category</code>, <code>date</code>, <code>_lastUpdated</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code>.</td>
+            <td>US Core client SHALL support the following search parameters and search parameter combinations: <code>patient</code>, <code>code</code>, <code>category</code>, <code>date</code>, <code>_lastUpdated</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>status</code>, <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameters and search parameter combinations.</td>
+            <td>US Core recommends SHOULD support <code>status</code>, <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td>US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the <code>read</code> and <code>search-type</code> interactions, and requires (SHALL) support for <code>create</code> if using the Report and Note Exchange profile.</td>
+            <td>US Core client SHALL support <code>read</code> and <code>search-type</code> interactions, and SHALL support <code>create</code> if using the Report and Note Exchange profile.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the resolves reference policy.</td>
+            <td>US Core client SHOULD support the <code>resolves</code> reference policy.</td>
         </tr>
         <tr>
-            <td rowspan="11" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="11" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="11" style="width: 25%;">DocumentReference</td>
-            <td style="width: 25%;">US Core requires (SHALL) support for GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
+            <td style="width: 25%;">US Core client SHALL support for GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the resolves reference policy.</td>
+            <td>US Core client SHOULD support the <code>resolves</code> reference policy.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the <code>create</code>, <code>read</code> and <code>search-type</code> interactions.</td>
+            <td>US Core client SHALL support <code>create</code>, <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
          <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>$docref</code> operation.</td>
+            <td>US Core client SHOULD support the <code>$docref</code> operation.</td>
         </tr>
          <tr>
-            <td>US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td>US Core client SHOULD support for <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the following search parameters and search parameter combinations: <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code>.</td>
+            <td>US Core client SHALL support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the following search parameter combinations: <code>patient+type+period</code> and <code>patient+status</code>.</td>
+            <td>US Core client SHOULD support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) clients to support both DocumentReference.attachment.url and DocumentReference.attachment.data representations of content.</td>
+            <td>US Core client SHALL support both DocumentReference.attachment.url and DocumentReference.attachment.data representations of content.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) clients to handle multiple DocumentReference.content repetitions as alternative formats of the same document, not different versions.</td>
+            <td>US Core client SHALL handle multiple DocumentReference.content repetitions as alternative formats of the same document, not different versions.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) that the client be capable of processing a responsible organization from either DocumentReference.custodian, or aProvenance resource pointing to the DocumentReference via agent.who or agent.onBehalfOf.</td>
+            <td>US Core client SHALLbe capable of processing a responsible organization from either DocumentReference.custodian, or aProvenance resource pointing to the DocumentReference via agent.who or agent.onBehalfOf.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="4" style="width: 25%;">Encounter</td>
-            <td style="width: 25%;">US Core requires (SHALL) support for the <code>_id</code> search parameter.</td>
+            <td style="width: 25%;">US Core client SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the following search parameters and search parameter combinations: <code>identifier</code>, <code>class</code>, <code>date</code>, <code>location</code>, <code>status</code>, <code>type</code>, <code>discharge-disposition</code>, <code>_lastUpdated</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code>.</td>
+            <td>US Core client SHOULD support <code>identifier</code>, <code>class</code>, <code>date</code>, <code>location</code>, <code>status</code>, <code>type</code>, <code>discharge-disposition</code>, <code>_lastUpdated</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td>US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="2" style="width: 25%;">Immunization</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td style="width: 25%;">Location</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 25%;">US Core client SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
-            <td style="width: 25%;">Medication</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+              <td style="width: 25%;">Medication</td>
+            <td style="width: 25%;">US Core client SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="6" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="6" style="width: 25%;">MedicationRequest</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core defines (SHALL) support for the following additional combined search parameter combinations: <code>patient+intent</code>, <code>patient+intent+status</code>, and <code>patient+intent+encounter</code>.</td>
+            <td>US Core client SHALL support <code>patient+intent</code>, <code>patient+intent+status</code>, and <code>patient+intent+encounter</code> search parameter combinations.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) clients to support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
+            <td>US Core client SHALL support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
         </tr> 
         <tr>
-            <td>US Core requires (SHALL) clients to support all potential target resource types for MedicationRequest.reasonReference.</td>
+            <td>US Core client SHALL support all potential target resource types for MedicationRequest.reasonReference.</td>
         </tr>  
         <tr>
-            <td>US Core recommends (SHOULD) that referenced resources in MedicationRequest.reasonReference conform to US Core profiles.</td>
+            <td>US Core client SHOULD have referenced resources in MedicationRequest.reasonReference conform to US Core profiles.</td>
         </tr> 
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="3" style="width: 25%;">Observation</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr> 
         <tr>
-            <td>US Core recommends (SHOULD) support for the combined search paramaters <code>patient+category</code>+_lastUpdated.</td>
+            <td>US Core client SHOULD support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="2" style="width: 25%;">Organization</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 25%;">US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core defines (SHALL) support for the name search parameter.</td>
+            <td>US Core client SHALL support <code>name</code> search parameter.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="3" style="width: 25%;">Patient</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core client SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the following search paramaters and search parameter combinations:<code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code>.</td>
+            <td>US Core cient SHALL support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="2" style="width: 25%;">Practitioner</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 25%;">US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the <code>name</code> search paramater.</td>
+            <td>US Core client SHALL support <code>name</code> search paramater.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="4" style="width: 25%;">PractitionerRole</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>_include=PractitionerRole:endpoint</code>.</td>
+            <td>US Core client SHOULD support <code>_include=PractitionerRole:endpoint</code>.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the <code>specialty</code> search paramater.</td>
+            <td>US Core client SHALL support <code>specialty</code> search paramater.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="2" style="width: 25%;">Procedure</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="4" style="width: 25%;">RelatedPerson</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the <code>_id</code> search parameter.</td>
+            <td>US Core client SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>name</code> search parameter.</td>
+            <td>US Core client SHOULD support <code>name</code> search parameter.</td>
         </tr>
         <tr>
-            <td rowspan="5" style="width: 25%;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
             <td rowspan="5" style="width: 25%;">Specimen</td>
-            <td style="width: 25%;">US Core requires (SHALL) support for GET by id: <code>GET [base]/Specimen/[id]</code>.</td>
+            <td style="width: 25%;">US Core client SHALL support GET by id: <code>GET [base]/Specimen/[id]</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the <code>_id</code> search parameter.</td>
+            <td>US Core client SHALL support the <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>patient</code> search parameter.</td>
+            <td>US Core client SHOULD support <code>patient</code> search parameter.</td>
         </tr>
         <tr>
-            <td>US Core defines (SHALL) that the client SHALL support both Specimen.identifier and Specimen.accessionIdentifier.</td>
+            <td>US Core client SHALL support both Specimen.identifier and Specimen.accessionIdentifier.</td>
+        </tr>
+    <tbody>
+</table>    
+
+<table>
+    <thead>
+        <tr>
+            <th style="width:30%">Resource type</th>
+            <th style="width: 70%">Additional requirements</th>
+        </tr>
+    </thead>
+    <tbody>        
+        <tr>
+            <td rowspan="2" style="width: 30%;">AllergyIntolerance</td>
+            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td rowspan="2" style="width: 25%;">AllergyIntolerance</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude: Provenance:target</code>.</td>
+            <td>US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td rowspan="3" style="width: 30%;">Condition</td>
+            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td rowspan="3" style="width: 25%;">Condition</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude: Provenance:target</code>.</td>
+            <td>US Core client MAY support <code>abatement-date</code>, <code>asserted-date</code>, <code>encounter</code>, <code>recorded-date</code> and <code>_lastUpdated</code> search parameters.</td>
         </tr>
         <tr>
-            <td>US Core states optional (MAY) support for <code>abatement-date</code>, <code>asserted-date</code>, <code>encounter</code>, <code>recorded-date</code> and <code>_lastUpdated</code> search parameters.</td>
+            <td>US Core server SHOULD support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> combined search parameters.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> combined search parameters.</td>
+            <td rowspan="7" style="width: 30%;">DiagnosticReport</td>
+            <td style="width: 70%;">US Core server SHALL support GET by id: <code>?GET [base]/DiagnosticReport/[id]</code>.</td>
         </tr>
         <tr>
-            <td rowspan="7" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td rowspan="7" style="width: 25%;">DiagnosticReport</td>
-            <td style="width: 25%;">US Core requires (SHALL) support for GET by id: <code>?GET [base]/DiagnosticReport/[id]</code>.</td>
+            <td>US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td>US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core server SHALL support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the following search parameters and search parameter combinations: <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code>.</td>
+            <td>US Core server SHOULD support <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
+            <td>US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td>US Core server SHOULD support the <code>resolves</code> reference policy.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the resolves reference policy.</td>
+            <td rowspan="11" style="width: 30%;">DocumentReference</td>
+            <td style="width: 70%;">US Core server SHALL support GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
         </tr>
         <tr>
-            <td rowspan="11" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="11" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td rowspan="11" style="width: 25%;">DocumentReference</td>
-            <td style="width: 25%;">US Core requires (SHALL) support for GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
+            <td>US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td>US Core server SHALL support <code>$docref</code> operation. </td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the <code>$docref</code> operation. </td>
+            <td>US Core server SHALL support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the following search parameters and search parameter combinations: <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code>.</td>
+            <td>US Core server SHOULD support <code>patient+type+period</code> and <code>patient+status</code> search parameter and search parameter combinations.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the following search parameters and search parameter combinations: <code>patient+type+period</code> and <code>patient+status</code>.</td>
+            <td>US Core server SHALL <code>create</code>, <code>search-type</code> and <code>read</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the <code>create</code>, <code>search-type</code> and <code>read</code> interactions.</td>
+            <td>US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core server SHOULD support the <code>resolves</code> reference policy.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the resolves reference policy.</td>
+            <td>US Core server SHALL support either both DocumentReference.attachment.url or DocumentReference.attachment.data representations of content.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for either both DocumentReference.attachment.url or DocumentReference.attachment.data representations of content.</td>
+            <td>US Core server SHALL support multiple DocumentReference.content elements represent the same document in different formats.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) that multiple DocumentReference.content elements represent the same document in different formats.</td>
+            <td>US Core server SHALL responsible organisation present in DocumentReference.custodian or via Provenance.agent.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) a responsible organisation to be present in DocumentReference.custodian or via Provenance.agent.</td>
+            <td rowspan="6" style="width: 30%;">Encounter</td>
+            <td style="width: 70%;">US Core server SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td rowspan="6" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td rowspan="6" style="width: 25%;">Encounter</td>
-            <td style="width: 25%;">US Core requires (SHALL) support for the <code>_id</code> search parameter.</td>
+            <td>US Core server SHOULD support <code>identifier</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameter and search parameter combinations.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the following search parameters and search parameter combinations: <code>identifier</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code>.</td>
+            <td>US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td>US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core server SHALL support either Encounter.location.location or Encounter.serviceProvider.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for either Encounter.location.location or Encounter.serviceProvider.</td>
+            <td>US Core server SHOULD ensure that if Encounter.reasonReference references an Observation, it SHOULD conform to a US Core Observation profile.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) that if Encounter.reasonReference references an Observation, it SHOULD conform to a US Core Observation profile.</td>
+            <td rowspan="2" style="width: 30%;">Immunization</td>
+            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td rowspan="2" style="width: 25%;">Immunization</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td>US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 30%;">Location</td>
+            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td style="width: 25%;">Location</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 30%;">Medication</td>
+            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td style="width: 25%;">Medication</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td rowspan="5" style="width: 30%;">MedicationRequest</td>
+            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td rowspan="5" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td rowspan="5" style="width: 25%;">MedicationRequest</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td>US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>vread</code> and <code>history-instance</code> interactions.</td>
-        </tr>
-        <tr>
-            <td>US Core defines (SHALL) support for the <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations.</td>
+            <td>US Core server SHALL support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations.</td>
         </tr>	
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>patient+intent+encounter</code> search parameter combination.</td>
+            <td>US Core server SHOULD support <code>patient+intent+encounter</code> search parameter combination.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) clients to support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
+            <td>US Core server SHALL support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
         </tr>    
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
             <td rowspan="3" style="width: 25%;">Observation</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr> 
         <tr>
-            <td>US Core recommends (SHOULD) support for the combined search paramaters <code>patient+category+_lastUpdated</code>.</td>
+            <td>US Core server SHOULD support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td style="width: 25%;">Organization</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 30%;">Organization</td>
+            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td rowspan="4" style="width: 25%;">Patient</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td rowspan="4" style="width: 30%;">Patient</td>
+            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the following search paramaters and search paramater combinations: <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code>.</td>
+            <td>US Core server SHALL support <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>death-date+family</code> search parameter combination.</td>
+            <td>US Core server SHOULD support <code>death-date+family</code> search parameter combination.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td rowspan="2" style="width: 25%;">Practitioner</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td rowspan="2" style="width: 30%;">Practitioner</td>
+            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the <code>name</code> search paramater.</td>
+            <td>US Core server SHALL support <code>name</code> search paramater.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td rowspan="3" style="width: 25%;">PractitionerRole</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td rowspan="3" style="width: 30%;">PractitionerRole</td>
+            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for <code>_include=PractitionerRole:endpoint</code>.</td>
+            <td>US Core server SHOULD support <code>_include=PractitionerRole:endpoint</code>.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the <code>specialty</code> search paramater.</td>
+            <td>US Core server SHALL support f<code>specialty</code> search paramater.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
-            <td rowspan="2" style="width: 25%;">Procedure</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td rowspan="2" style="width: 30%;">Procedure</td>
+            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
             <td rowspan="4" style="width: 25%;">RelatedPerson</td>
-            <td style="width: 25%;">US Core recommends (SHOULD) support for <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core recommen server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the <code>_id</code> search parameter.</td>
+            <td>US Core server SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>name</code> search parameter.</td>
+            <td>US Core server SHOULD support <code>name</code> search parameter.</td>
         </tr>
         <tr>
-            <td rowspan="5" style="width: 25%;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server CapabilityStatement</a></td>
-            <td rowspan="5" style="width: 25%;">Specimen</td>
-            <td style="width: 25%;">US Core requires (SHALL) support the read interaction.</td>
+            <td rowspan="5" style="width: 30%;">Specimen</td>
+            <td style="width: 70%;">US Core server SHALL support <code>read</code> interaction.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td>US Core requires (SHALL) support for the <code>_id</code> search parameter.</td>
+            <td>US Core server SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td>US Core recommends (SHOULD) support for the <code>patient</code> search parameter.</td>
+            <td>US Core server SHOULD support <code>patient</code> search parameter.</td>
         </tr>
         <tr>
-            <td>US Core defines (SHALL) that the client SHALL support either Specimen.identifier or Specimen.accessionIdentifier.</td>
+            <td>US Core server SHALL support either Specimen.identifier or Specimen.accessionIdentifier.</td>
         </tr>
     </tbody>
 </table>        
+
