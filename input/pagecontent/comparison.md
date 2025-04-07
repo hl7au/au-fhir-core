@@ -1365,7 +1365,47 @@ The following IPS capability statements introduce additional conformance expecta
     </tbody>
 </table>    
 
+##### Additional resources
+The following table lists resource types that are supported by [IPS Server CapabilityStatement](https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html) but are not currently supported by the AU Core Responder CapabiltyStatement. These differences may have implications for systems aiming to be interoperable across both specifications.
     
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 30%;">Resource type</th>
+            <th style="width: 70%;">Conformance level</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr>
+            <td style="width: 30%;">Bundle</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Composition</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Device</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">DeviceUseStatement</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">ImagingStudy</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Flag</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">OperationDefinition</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+	</tbody>
+</table>
 
 #### US Core
 [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/) defines the expected capabilities of systems to support interoperability and clinical data exchange in the US healthcare context. It includes two capability statements:
@@ -1667,7 +1707,74 @@ The following US Core capability statements introduce additional conformance exp
             <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
         </tr>
     </tbody>
-</table>    
+</table>  
+  
+##### Additional resources
+The following table lists resource types that are supported by [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) but are not currently supported by the AU Core Client CapabiltyStatement. These differences may have implications for systems aiming to be interoperable across both specifications.
+    
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 30%;">Resource type</th>
+            <th style="width: 70%;">Conformance level</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr>
+            <td style="width: 30%;">CarePlan</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">CareTeam</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Coveerage</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Device</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Endpoint</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Goal</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">HealthcareService</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">Media</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">MedicationDispense</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">Provenance</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">Questionnaire</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">QuestionnaireResponse</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">ValueSet</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+	</tbody>
+</table>
+
 
 ###### US Core Server CapabilityStatement additional requirements
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -1951,5 +2058,70 @@ The following US Core capability statements introduce additional conformance exp
             <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
         </tr>
     </tbody>
-</table>        
-
+</table>     
+   
+##### Additional resources
+The following table lists resource types that are supported by [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html) but are not currently supported by the AU Core Client CapabiltyStatement. These differences may have implications for systems aiming to be interoperable across both specifications.
+    
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 30%;">Resource type</th>
+            <th style="width: 70%;">Conformance level</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr>
+            <td style="width: 30%;">CarePlan</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">CareTeam</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Coveerage</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Device</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Endpoint</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Goal</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">HealthcareService</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">Media</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">MedicationDispense</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">Provenance</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">Questionnaire</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">QuestionnaireResponse</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">ValueSet</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+	</tbody>
+</table>
