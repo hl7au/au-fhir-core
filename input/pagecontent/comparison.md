@@ -1209,41 +1209,41 @@ The following IPA capability statements introduce additional conformance expecta
     <tbody>
         <tr>
             <td style="width: 30%;">Condition</td>
-            <td style="width: 70%;">IPA client MAY support <code>verification-status</code> search parameter.</td>
+            <td style="width: 70%;">IPA MAY support <code>verification-status</code> search parameter.</td>
         </tr>
         <tr>
             <td rowspan="6" style="width:30%;">DocumentReference</td>
-            <td style="width: 70%;">IPA client SHALL support <code>read</code> and <code>search-type</code> interactions.</td>
+            <td style="width: 70%;">IPA SHALL support <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">IPA client SHALL support the <code>patient</code> search parameter.</td> 
+            <td style="width: 70%;">IPA SHALL support the <code>patient</code> search parameter.</td> 
         </tr>
         <tr>
             <td style="width: 70%;">IPA SHOULD support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">IPA client MAY support the follow search parameters: <code>category</code>, <code>contenttype</code>, <code>date</code>, <code>period</code>, <code>status</code>, and <code>type</code>.</td>
+            <td style="width: 70%;">IPA MAY support the follow search parameters: <code>category</code>, <code>contenttype</code>, <code>date</code>, <code>period</code>, <code>status</code>, and <code>type</code>.</td>
         </tr>
         <tr>
-           <td style="width: 30%;">IPA client SHOULD support the combined search parameters <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code>.</td>
+           <td style="width: 30%;">IPA SHOULD support the combined search parameters <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code>.</td>
         </tr>
         <tr>
-           <td style="width: 70%;">IPA client SHOULD support the <code>$docref</code> operation.</td>
+           <td style="width: 70%;">IPA SHOULD support the <code>$docref</code> operation.</td>
         </tr>  
         <tr>
             <td style="width: 30%;">MedicationRequest</td>
-            <td style="width: 70%;">IPA client SHOULD support for category and code search parameters.</td>
+            <td style="width: 70%;">IPA SHOULD support for category and code search parameters.</td>
         </tr>   
         <tr>
             <td style="width: 30%;">Observation</td>
-            <td style="width: 70%;">IPA client SHALL support <code>patient</code> search parameter.</td>
+            <td style="width: 70%;">IPA SHALL support <code>patient</code> search parameter.</td>
         </tr>   
         <tr>
             <td rowspan="2" style="width: 30%;">Patient</td>
-            <td style="width: 70%;">IPA client SHOULD support the <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
+            <td style="width: 70%;">IPA SHOULD support the <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">IPA client SHALL support Patient.link processing.</td>
+            <td style="width: 70%;">IPA SHALL support Patient.link processing.</td>
         </tr>
   </tbody>
 </table>
@@ -1259,34 +1259,34 @@ The following IPA capability statements introduce additional conformance expecta
     <tbody>
         <tr>
             <td style="width: 30%;">Condition</td>
-            <td style="width: 70%;">IPA server MAY support <code>verification-status</code> search parameter.</td>
+            <td style="width: 70%;">IPA MAY support <code>verification-status</code> search parameter.</td>
         </tr>
         <tr>
             <td rowspan="5" style="width: 30%;">DocumentReference</td>
-            <td style="width: 70%;">IPA server SHALL support <code>read</code> and <code>search-type</code> interactions.</td>
+            <td style="width: 70%;">IPA SHALL support <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">IPA server SHALL support <code>patient</code> and <code>_id</code> search parameters.</td>
+            <td style="width: 70%;">IPA SHALL support <code>patient</code> and <code>_id</code> search parameters.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">IPA server MAY support <code>category</code>, <code>contenttype</code>, <code>date</code>, <code>period</code>, <code>status</code>, and <code>type</code> search parameters.</td>
+            <td style="width: 70%;">IPA MAY support <code>category</code>, <code>contenttype</code>, <code>date</code>, <code>period</code>, <code>status</code>, and <code>type</code> search parameters.</td>
         </tr>
         <tr>
-           <td style="width: 70%;">IPA server SHALL support <code>patient+category</code>, <code>patient+category+date</code>, and </code>patient+type</code>, and recommends (SHOULD) support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> combined search parameters.</td>
+           <td style="width: 70%;">IPA SHALL support <code>patient+category</code>, <code>patient+category+date</code>, and </code>patient+type</code>, and recommends (SHOULD) support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> combined search parameters.</td>
         </tr>
         <tr>
-           <td style="width: 70%;">IPA server SHALL support <code>$docref</code> operation.</td>
+           <td style="width: 70%;">IPA SHALL support <code>$docref</code> operation.</td>
         </tr>
         <tr>
             <td style="width: 30%;">MedicationRequest</td>
-            <td style="width: 70%;">IPA server SHOULD support <code>category</code> and <code>code</code> search parameters.</td>
+            <td style="width: 70%;">IPA SHOULD support <code>category</code> and <code>code</code> search parameters.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">Patient</td>
-            <td style="width: 70%;">IPA server SHOULD support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
+            <td style="width: 70%;">IPA SHOULD support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
         </tr>
         <tr>
-            <td>IPA server SHALL support Patient.link processing.</td>
+            <td>IPA SHALL support Patient.link processing.</td>
         </tr>
   </tbody>
 </table>
@@ -1385,203 +1385,203 @@ The following US Core capability statements introduce additional conformance exp
     <tbody>
         <tr>
             <td rowspan="2" style="width: 30%;">AllergyIntolerance</td>
-            <td style="width: 70%;">US Core client SHOULD support <code>_revinclude: Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support  for the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support  for the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 30%;">Condition</td>
-            <td style="width: 70%;">US Core client SHOULD support <code>_revinclude: Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client MAY support <code>abatement-date</code>, <code>asserted-date</code>, <code>encounter</code>, <code>recorded-date</code>, and <code>_lastUpdated</code> search parameters.</td>
+            <td style="width: 70%;">US Core MAY support <code>abatement-date</code>, <code>asserted-date</code>, <code>encounter</code>, <code>recorded-date</code>, and <code>_lastUpdated</code> search parameters.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> combined search parameters.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> combined search parameters.</td>
         </tr>
         <tr>
             <td rowspan="6" style="width: 30%;">DiagnosticReport</td>
-            <td style="width: 70%;">US Core client SHALL support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
+            <td style="width: 70%;">US Core SHALL support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL support the following search parameters and search parameter combinations: <code>patient</code>, <code>code</code>, <code>category</code>, <code>date</code>, <code>_lastUpdated</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code>.</td>
+            <td style="width: 70%;">US Core SHALL support the following search parameters and search parameter combinations: <code>patient</code>, <code>code</code>, <code>category</code>, <code>date</code>, <code>_lastUpdated</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code>.</td>
         </tr>
         <tr>
             <td style="width: 70%;">US Core recommends SHOULD support <code>status</code>, <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL support <code>read</code> and <code>search-type</code> interactions, and SHALL support <code>create</code> if using the Report and Note Exchange profile.</td>
+            <td style="width: 70%;">US Core SHALL support <code>read</code> and <code>search-type</code> interactions, and SHALL support <code>create</code> if using the Report and Note Exchange profile.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support the <code>resolves</code> reference policy.</td>
+            <td style="width: 70%;">US Core SHOULD support the <code>resolves</code> reference policy.</td>
         </tr>
         <tr>
             <td rowspan="11" style="width: 30%;">DocumentReference</td>
-            <td style="width: 70%;">US Core client SHALL support for GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
+            <td style="width: 70%;">US Core SHALL support for GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support the <code>resolves</code> reference policy.</td>
+            <td style="width: 70%;">US Core SHOULD support the <code>resolves</code> reference policy.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL support <code>create</code>, <code>read</code> and <code>search-type</code> interactions.</td>
+            <td style="width: 70%;">US Core SHALL support <code>create</code>, <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
          <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support the <code>$docref</code> operation.</td>
+            <td style="width: 70%;">US Core SHOULD support the <code>$docref</code> operation.</td>
         </tr>
          <tr>
-            <td style="width: 70%;">US Core client SHOULD support for <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support for <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL support both DocumentReference.attachment.url and DocumentReference.attachment.data representations of content.</td>
+            <td style="width: 70%;">US Core SHALL support both DocumentReference.attachment.url and DocumentReference.attachment.data representations of content.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL handle multiple DocumentReference.content repetitions as alternative formats of the same document, not different versions.</td>
+            <td style="width: 70%;">US Core SHALL handle multiple DocumentReference.content repetitions as alternative formats of the same document, not different versions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALLbe capable of processing a responsible organization from either DocumentReference.custodian, or aProvenance resource pointing to the DocumentReference via agent.who or agent.onBehalfOf.</td>
+            <td style="width: 70%;">US Core SHALLbe capable of processing a responsible organization from either DocumentReference.custodian, or aProvenance resource pointing to the DocumentReference via agent.who or agent.onBehalfOf.</td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 30%;">Encounter</td>
-            <td style="width: 70%;">US Core client SHALL support <code>_id</code> search parameter.</td>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>identifier</code>, <code>class</code>, <code>date</code>, <code>location</code>, <code>status</code>, <code>type</code>, <code>discharge-disposition</code>, <code>_lastUpdated</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameters and search parameter combinations.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>identifier</code>, <code>class</code>, <code>date</code>, <code>location</code>, <code>status</code>, <code>type</code>, <code>discharge-disposition</code>, <code>_lastUpdated</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">Immunization</td>
-            <td style="width: 70%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td style="width: 30%;">Location</td>
-            <td style="width: 70%;">US Core client SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
               <td style="width: 30%;">Medication</td>
-            <td style="width: 70%;">US Core client SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td rowspan="6" style="width: 30%;">MedicationRequest</td>
-            <td style="width: 70%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL support <code>patient+intent</code>, <code>patient+intent+status</code>, and <code>patient+intent+encounter</code> search parameter combinations.</td>
+            <td style="width: 70%;">US Core SHALL support <code>patient+intent</code>, <code>patient+intent+status</code>, and <code>patient+intent+encounter</code> search parameter combinations.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
+            <td style="width: 70%;">US Core SHALL support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
         </tr> 
         <tr>
-            <td style="width: 70%;">US Core client SHALL support all potential target resource types for MedicationRequest.reasonReference.</td>
+            <td style="width: 70%;">US Core SHALL support all potential target resource types for MedicationRequest.reasonReference.</td>
         </tr>  
         <tr>
-            <td style="width: 70%;">US Core client SHOULD have referenced resources in MedicationRequest.reasonReference conform to US Core profiles.</td>
+            <td style="width: 70%;">US Core SHOULD have referenced resources in MedicationRequest.reasonReference conform to US Core profiles.</td>
         </tr> 
         <tr>
             <td rowspan="3" style="width: 30%;">Observation</td>
-            <td style="width: 70%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr> 
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">Organization</td>
-            <td style="width: 70%;">US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL support <code>name</code> search parameter.</td>
+            <td style="width: 70%;">US Core SHALL support <code>name</code> search parameter.</td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 30%;">Patient</td>
-            <td style="width: 70%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td style="width: 70%;">US Core cient SHALL support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">Practitioner</td>
-            <td style="width: 70%;">US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL support <code>name</code> search paramater.</td>
+            <td style="width: 70%;">US Core SHALL support <code>name</code> search paramater.</td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 30%;">PractitionerRole</td>
-            <td style="width: 70%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>_include=PractitionerRole:endpoint</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_include=PractitionerRole:endpoint</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL support <code>specialty</code> search paramater.</td>
+            <td style="width: 70%;">US Core SHALL support <code>specialty</code> search paramater.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">Procedure</td>
-            <td style="width: 70%;">US Core client SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 30%;">RelatedPerson</td>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL support <code>_id</code> search parameter.</td>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>name</code> search parameter.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>name</code> search parameter.</td>
         </tr>
         <tr>
             <td rowspan="5" style="width: 30%;">Specimen</td>
-            <td style="width: 70%;">US Core client SHALL support GET by id: <code>GET [base]/Specimen/[id]</code>.</td>
+            <td style="width: 70%;">US Core SHALL support GET by id: <code>GET [base]/Specimen/[id]</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL support the <code>_id</code> search parameter.</td>
+            <td style="width: 70%;">US Core SHALL support the <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHOULD support <code>patient</code> search parameter.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>patient</code> search parameter.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client SHALL support both Specimen.identifier and Specimen.accessionIdentifier.</td>
+            <td style="width: 70%;">US Core SHALL support both Specimen.identifier and Specimen.accessionIdentifier.</td>
         </tr>
     <tbody>
 </table>    
@@ -1596,206 +1596,206 @@ The following US Core capability statements introduce additional conformance exp
     <tbody>        
         <tr>
             <td rowspan="2" style="width: 30%;">AllergyIntolerance</td>
-            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude: Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td>US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td>US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 30%;">Condition</td>
-            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude: Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core client MAY support <code>abatement-date</code>, <code>asserted-date</code>, <code>encounter</code>, <code>recorded-date</code> and <code>_lastUpdated</code> search parameters.</td>
+            <td style="width: 70%;">US Core MAY support <code>abatement-date</code>, <code>asserted-date</code>, <code>encounter</code>, <code>recorded-date</code> and <code>_lastUpdated</code> search parameters.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> combined search parameters.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> combined search parameters.</td>
         </tr>
         <tr>
             <td rowspan="7" style="width: 30%;">DiagnosticReport</td>
-            <td style="width: 70%;">US Core server SHALL support GET by id: <code>?GET [base]/DiagnosticReport/[id]</code>.</td>
+            <td style="width: 70%;">US Core SHALL support GET by id: <code>?GET [base]/DiagnosticReport/[id]</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
+            <td style="width: 70%;">US Core SHALL support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support the <code>resolves</code> reference policy.</td>
+            <td style="width: 70%;">US Core SHOULD support the <code>resolves</code> reference policy.</td>
         </tr>
         <tr>
             <td rowspan="11" style="width: 30%;">DocumentReference</td>
-            <td style="width: 70%;">US Core server SHALL support GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
+            <td style="width: 70%;">US Core SHALL support GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support <code>$docref</code> operation. </td>
+            <td style="width: 70%;">US Core SHALL support <code>$docref</code> operation. </td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>patient+type+period</code> and <code>patient+status</code> search parameter and search parameter combinations.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+type+period</code> and <code>patient+status</code> search parameter and search parameter combinations.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL <code>create</code>, <code>search-type</code> and <code>read</code> interactions.</td>
+            <td style="width: 70%;">US Core SHALL <code>create</code>, <code>search-type</code> and <code>read</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support the <code>resolves</code> reference policy.</td>
+            <td style="width: 70%;">US Core SHOULD support the <code>resolves</code> reference policy.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support either both DocumentReference.attachment.url or DocumentReference.attachment.data representations of content.</td>
+            <td style="width: 70%;">US Core SHALL support either both DocumentReference.attachment.url or DocumentReference.attachment.data representations of content.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support multiple DocumentReference.content elements represent the same document in different formats.</td>
+            <td style="width: 70%;">US Core SHALL support multiple DocumentReference.content elements represent the same document in different formats.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL responsible organisation present in DocumentReference.custodian or via Provenance.agent.</td>
+            <td style="width: 70%;">US Core SHALL responsible organisation present in DocumentReference.custodian or via Provenance.agent.</td>
         </tr>
         <tr>
             <td rowspan="6" style="width: 30%;">Encounter</td>
-            <td style="width: 70%;">US Core server SHALL support <code>_id</code> search parameter.</td>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td>US Core server SHOULD support <code>identifier</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameter and search parameter combinations.</td>
+            <td>US Core SHOULD support <code>identifier</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameter and search parameter combinations.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support either Encounter.location.location or Encounter.serviceProvider.</td>
+            <td style="width: 70%;">US Core SHALL support either Encounter.location.location or Encounter.serviceProvider.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD ensure that if Encounter.reasonReference references an Observation, it SHOULD conform to a US Core Observation profile.</td>
+            <td style="width: 70%;">US Core SHOULD ensure that if Encounter.reasonReference references an Observation, it SHOULD conform to a US Core Observation profile.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">Immunization</td>
-            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td style="width: 30%;">Location</td>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td style="width: 30%;">Medication</td>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td rowspan="5" style="width: 30%;">MedicationRequest</td>
-            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations.</td>
+            <td style="width: 70%;">US Core SHALL support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations.</td>
         </tr>	
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>patient+intent+encounter</code> search parameter combination.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+intent+encounter</code> search parameter combination.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
+            <td style="width: 70%;">US Core SHALL support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
         </tr>    
         <tr>
             <td rowspan="3" style="width: 25%;">Observation</td>
-            <td style="width: 25%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 25%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr> 
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
         </tr>
         <tr>
             <td style="width: 30%;">Organization</td>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 30%;">Patient</td>
-            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameters and search parameter combinations.</td>
+            <td style="width: 70%;">US Core SHALL support <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>death-date+family</code> search parameter combination.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>death-date+family</code> search parameter combination.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">Practitioner</td>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support <code>name</code> search paramater.</td>
+            <td style="width: 70%;">US Core SHALL support <code>name</code> search paramater.</td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 30%;">PractitionerRole</td>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>_include=PractitionerRole:endpoint</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_include=PractitionerRole:endpoint</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support f<code>specialty</code> search paramater.</td>
+            <td style="width: 70%;">US Core SHALL support f<code>specialty</code> search paramater.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">Procedure</td>
-            <td style="width: 70%;">US Core server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 30%;">RelatedPerson</td>
             <td style="width: 70%;">US Core recommen server SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support <code>_id</code> search parameter.</td>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>name</code> search parameter.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>name</code> search parameter.</td>
         </tr>
         <tr>
             <td rowspan="5" style="width: 30%;">Specimen</td>
-            <td style="width: 70%;">US Core server SHALL support <code>read</code> interaction.</td>
+            <td style="width: 70%;">US Core SHALL support <code>read</code> interaction.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support <code>_id</code> search parameter.</td>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td>US Core server SHOULD support <code>patient</code> search parameter.</td>
+            <td>US Core SHOULD support <code>patient</code> search parameter.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core server SHALL support either Specimen.identifier or Specimen.accessionIdentifier.</td>
+            <td style="width: 70%;">US Core SHALL support either Specimen.identifier or Specimen.accessionIdentifier.</td>
         </tr>
     </tbody>
 </table>        
