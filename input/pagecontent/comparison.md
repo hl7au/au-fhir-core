@@ -1196,7 +1196,7 @@ The table below provides a comparison of capability statements at the resource l
 - [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-server.html) that describes the basic rules for the International Patient Access server actor that is responsible for providing responses to queries submitted by International Patient Access requestors.
 
 ##### Additional requirements
-​The following IPA capability statements introduce additional conformance expectations. Implementers are advised to note that some code changes may be required to for full compliance.
+The following IPA capability statements introduce additional conformance expectations. Implementers are advised to note that some code changes may be required to for full compliance.
 
 ##### IPA Client CapabilityStatement additional requirements 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
