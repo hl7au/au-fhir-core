@@ -1425,7 +1425,7 @@ The following table lists resource types that are supported by [IPS Server Capab
 - [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) that desribes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. 
 - [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html) that describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. 
 
-###### US Core Client CapabilityStatement additional requirements
+##### US Core Client CapabilityStatement additional requirements
 The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -1786,8 +1786,7 @@ The following table lists resource types that are supported by [US Core Client C
 	</tbody>
 </table>
 
-
-###### US Core Server CapabilityStatement additional requirements
+##### US Core Server CapabilityStatement additional requirements
 The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
