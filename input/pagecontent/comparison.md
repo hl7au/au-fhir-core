@@ -1608,7 +1608,6 @@ The following US Core capability statements introduce additional conformance exp
 		<tr>
             <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
         </tr>
-		<tr>
         <tr>
             <td rowspan="3" style="width: 30%;">Organization</td>
             <td style="width: 70%;">US Core SHALL support <code>name</code> search parameter.</td>
@@ -1834,7 +1833,7 @@ The following table lists resource types that are supported by [US Core Client C
             <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
         </tr>		
 		<tr>
-            <td style="width: 70%;">US Core MAY support <code>category</code>, <code>code</code>, <code>date</code>, <code>_lastupdated</code>, <code>patient</code> and <code></code> search parameters.</td>
+            <td style="width: 70%;">US Core MAY support <code>category</code>, <code>code</code>, <code>date</code>, <code>_lastupdated</code>, and <code>patient</code> search parameters.</td>
         </tr>
         <tr>
             <td rowspan="13" style="width: 30%;">DocumentReference</td>
@@ -1847,7 +1846,7 @@ The following table lists resource types that are supported by [US Core Client C
             <td style="width: 70%;">US Core SHALL support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
         </tr>        
 		<tr>
-            <td style="width: 70%;">US Core SHALL <code>create</code>, <code>search-type</code> and <code>read</code> interactions.</td>
+            <td style="width: 70%;">US Core SHALL support <code>create</code>, <code>search-type</code> and <code>read</code> interactions.</td>
         </tr>	
 <tr>
             <td style="width: 70%;">US Core SHALL support either both DocumentReference.attachment.url or DocumentReference.attachment.data representations of content.</td>
@@ -1874,7 +1873,7 @@ The following table lists resource types that are supported by [US Core Client C
             <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">US Core MAY support <code>category</code>, <code>date</code>, <code>patient</code>, <code>period</code>, <code>status</code>, and <code>type search parameters.</td>
+            <td style="width: 70%;">US Core MAY support <code>category</code>, <code>date</code>, <code>patient</code>, <code>period</code>, <code>status</code>, and <code>type</code> search parameters.</td>
         </tr>
         <tr>
             <td rowspan="8" style="width: 30%;">Encounter</td>
