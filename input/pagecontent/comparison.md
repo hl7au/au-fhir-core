@@ -936,6 +936,8 @@ As part of capability statement comparison, the supported resource types, intera
 
 The table below provides a comparison of capability statements at the resource level from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system that meets the expectations of an International Patient Access capability statement **MAY NOT** meet the expectations defined in AU Core.
 
+The comparisons are presented separately for requester (client) and responder (server) capability statements to clearly distinguish alignment and any gaps with key international implementation guides.
+
 **Legend:**
 
 <img src="green_checkmark.svg.png" width="20"/> **Compliant**: A system conforming to the AU Core requester/ responder expectations meets all mandatory (SHALL) requirements of the compared implementation guide capability statement. While the implementation guide may include 'SHOULD' (recommended) and 'MAY' (optional) expectations, these do not impact the compliant status. Where such additional expectations are identifier, more details are provided in the sections below.  
@@ -946,7 +948,9 @@ The table below provides a comparison of capability statements at the resource l
 
 <img src="minus_symbol.svg.png" width="20"/> **No equivalent profile**: No equivalent capability statement for comparison.
 
-#### Requester (client) capability statement comparison
+#### Requester capability statement comparison
+The table below compares the AU Core requester expectations with other implementation guides.
+
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
@@ -1068,7 +1072,9 @@ The table below provides a comparison of capability statements at the resource l
     </tbody>
 </table>    
 
-#### Responder (server) capability statement comparison
+#### Responder capability statement comparison
+The table below compares the AU Core responder expectations with other implementation guides.
+
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
@@ -1195,10 +1201,9 @@ The table below provides a comparison of capability statements at the resource l
 - [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-client.html) that describes the basic rules for the International Patient Access client actor that initiates a data access request to and retrieves patient data from an IPA Responder.
 - [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-server.html) that describes the basic rules for the International Patient Access server actor that is responsible for providing responses to queries submitted by International Patient Access requestors.
 
-##### Additional requirements
-The following IPA capability statements introduce additional conformance expectations defined in IPA capability statements. Implementers are advised to note that some code changes may be required to ensure full compliance.
-
 ##### IPA Client CapabilityStatement additional requirements 
+The [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-client.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
@@ -1248,7 +1253,12 @@ The following IPA capability statements introduce additional conformance expecta
   </tbody>
 </table>
 
+##### Additional resources
+No additional resource types supported in [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-client.html) that are not already included in this version of AU Core.
+
 ##### IPA Server CapabilityStatement additional requirements 
+The [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-server.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
@@ -1291,12 +1301,15 @@ The following IPA capability statements introduce additional conformance expecta
   </tbody>
 </table>
 
+##### Additional resources
+No additional resource types supported in [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-server.html) that are not already included in this version of AU Core.
+
 #### International Patient Summary
 [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/2024Sep/) defines the expected capabilities of systems that represent the International Patient Summary (IPS) using HL7 FHIR. An IPS document is an electronic health record extract containing essential healthcare information about a subject of care. It includes the following capability statement:
 - [IPS Server CapabilityStatement](https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html) that describes the expected capabilities of the IPS Server actor which is responsible for providing responses to the queries submitted for IPS documents. 
 
-##### Additional requirements
-The following IPS capability statements introduce additional conformance expectations defined in IPS capability statement. Implementers are advised to note that some code changes may be required to ensure full compliance. 
+##### IPA Server CapabilityStatement additional requirements 
+The [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/2024Sep/) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -1412,10 +1425,9 @@ The following table lists resource types that are supported by [IPS Server Capab
 - [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) that desribes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. 
 - [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html) that describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. 
 
-##### Additional requirements
-The following US Core capability statements introduce additional conformance expectations defined in AU Core capability statements. Implementers are advised to note that some code changes may be required to ensure full compliance.
-
 ###### US Core Client CapabilityStatement additional requirements
+The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
@@ -1776,6 +1788,8 @@ The following table lists resource types that are supported by [US Core Client C
 
 
 ###### US Core Server CapabilityStatement additional requirements
+The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
