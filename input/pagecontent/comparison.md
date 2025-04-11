@@ -9,8 +9,6 @@ Corresponding profiles, conformance requirements, and capability statements incl
 
 The below comparison evaluates AU Core conformance requirements with the key implementation guides identifying where compliance with AU Core satisfies the expectations established by the referenced implementation guide. 
 
-At this time only profile comparison is available. Future versions of AU Core will compare capability statements.
-
 ### Profile comparison
 As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. 
 
@@ -956,3 +954,1057 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core QuestionnaireResponse Profile  
 - US Core ServiceRequest Profile 
 - US Core Specimen Profile
+
+### Capability statement comparison
+As part of capability statement comparison, the supported resource types, interactions (e.g. <code>read</code>, <code>search-type</code>), search parameters, combined search parameter support, operations, and other conformance expectations for requesters (clients) or responders (servers) are evaluated. 
+
+The table below provides a comparison of capability statements at the resource level from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system that meets the expectations of an International Patient Access capability statement **MAY NOT** meet the expectations defined in AU Core.
+
+The comparisons are presented separately for requester (client) and responder (server) capability statements to clearly distinguish alignment and any gaps with key international implementation guides.
+
+**Legend:**
+
+<img src="green_checkmark.svg.png" width="20"/> **Compliant**: A system conforming to the AU Core requester/ responder expectations meets all mandatory (SHALL) requirements of the compared implementation guide capability statement. While the implementation guide may include 'SHOULD' (recommended) and 'MAY' (optional) expectations, these do not impact the compliant status. Where such additional expectations are identifier, more details are provided in the sections below.  
+
+<img src="orange_checkmark.svg.png" width="20"/> **Additional requirements**: A system conforming to the AU Core capability statement aligns with but may require additional modifications to meet the stricter requirements of the compared capability statement. Where additional requirements are identified, more details are provided in the sections below.
+
+<img src="cross_red_circle.svg.png" width="20"/> **Incompatible**: A system conforming to the AU Core capability statement has conformance expectations that conflict with the mandatory requirements of the compared implementation guide, making full conformance to both impossible. Where incompatible requirements are identified, more details are provided in the sections below.
+
+<img src="minus_symbol.svg.png" width="20"/> **No equivalent profile**: No equivalent capability statement for comparison.
+
+#### Requester capability statement comparison
+The table below compares the AU Core requester expectations with other implementation guides.
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">Resource type</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Access 1.0.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Summary 2.0.0-ballot</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">US Core 7.0.0</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#AllergyIntolerance1-1">AllergyIntolerance</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Condition1-2">Condition</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#DiagnosticReport1-3">DiagnosticReport</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#DocumentReference1-4">DocumentReference</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Encounter1-5">Encounter</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Immunization1-6">Immunization</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Location1-7">Location</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Medication1-8">Medication</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#MedicationRequest1-9">MedicationRequest</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#MedicationStatement1-10">MedicationStatement</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Observation1-11">Observation</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Organization1-12">Organization</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Patient1-13">Patient</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Practitioner1-14">Practitioner</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#PractitionerRole1-15">PractitionerRole</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Procedure1-16">Procedure</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#RelatedPerson1-17">RelatedPerson</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Specimen1-18">Specimen</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+    </tbody>
+</table>    
+
+#### Responder capability statement comparison
+The table below compares the AU Core responder expectations with other implementation guides.
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">Resource type</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Access 1.0.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Summary 2.0.0-ballot</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">US Core 7.0.0</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#AllergyIntolerance1-1">AllergyIntolerance</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Condition1-2">Condition</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#DiagnosticReport1-3">DiagnosticReport</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#DocumentReference1-4">DocumentReference</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Encounter1-5">Encounter</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Immunization1-6">Immunization</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Location1-7">Location</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Medication1-8">Medication</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#MedicationRequest1-9">MedicationRequest</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#MedicationStatement1-10">MedicationStatement</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Observation1-11">Observation</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Organization1-12">Organization</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Patient1-13">Patient</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Practitioner1-14">Practitioner</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#PractitionerRole1-15">PractitionerRole</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Procedure1-16">Procedure</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#RelatedPerson1-17">RelatedPerson</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Specimen1-18">Specimen</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+    </tbody>
+</table>   
+
+#### International Patient Access
+[International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/) defines the expected capabilities of systems enabling patient authorised access to clinical records via a FHIR-based API. It includes two capability statements:
+- [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-client.html) that describes the basic rules for the International Patient Access client actor that initiates a data access request to and retrieves patient data from an IPA Responder.
+- [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-server.html) that describes the basic rules for the International Patient Access server actor that is responsible for providing responses to queries submitted by International Patient Access requestors.
+
+##### IPA Client CapabilityStatement additional requirements 
+The [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-client.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 30%;">Resource type</th>
+            <th style="width: 70%;">Additional requirements</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="width: 30%;">Condition</td>
+            <td style="width: 70%;">IPA MAY support <code>verification-status</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td rowspan="6" style="width:30%;">DocumentReference</td>
+            <td style="width: 70%;">IPA SHALL support <code>read</code> and <code>search-type</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">IPA SHALL support the <code>patient</code> search parameter.</td> 
+        </tr>
+        <tr>
+            <td style="width: 70%;">IPA SHOULD support <code>_id</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">IPA MAY support the follow search parameters: <code>category</code>, <code>contenttype</code>, <code>date</code>, <code>period</code>, <code>status</code>, and <code>type</code>.</td>
+        </tr>
+        <tr>
+           <td style="width: 30%;">IPA SHOULD support <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> the search parameter combinations.</td>
+        </tr>
+        <tr>
+           <td style="width: 70%;">IPA SHOULD support the <code>$docref</code> operation.</td>
+        </tr>  
+        <tr>
+            <td style="width: 30%;">MedicationRequest</td>
+            <td style="width: 70%;">IPA SHOULD support for category and code search parameters.</td>
+        </tr>   
+        <tr>
+            <td style="width: 30%;">Observation</td>
+            <td style="width: 70%;">IPA SHALL support <code>patient</code> search parameter.</td>
+        </tr>   
+        <tr>
+            <td rowspan="2" style="width: 30%;">Patient</td>
+            <td style="width: 70%;">IPA SHALL support Patient.link processing.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">IPA SHOULD support the <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
+        </tr>
+  </tbody>
+</table>
+
+##### Additional resources
+No additional resource types supported in [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-client.html) that are not already included in this version of AU Core.
+
+##### IPA Server CapabilityStatement additional requirements 
+The [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-server.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 30%;">Resource type</th>
+            <th style="width: 70%;">Additional requirements</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="4" style="width: 30%;">DocumentReference</td>
+            <td style="width: 70%;">IPA SHALL support <code>read</code> and <code>search-type</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">IPA SHALL support <code>patient</code> and <code>_id</code> search parameters.</td>
+        </tr>
+		 <tr>
+           <td style="width: 70%;">IPA SHALL support <code>patient+category</code>, <code>patient+category+date</code>, and </code>patient+type</code>, and recommends (SHOULD) support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters combination.</td>
+        </tr>
+		<tr>
+           <td style="width: 70%;">IPA SHALL support <code>$docref</code> operation.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">MedicationRequest</td>
+            <td style="width: 70%;">IPA SHOULD support <code>category</code> and <code>code</code> search parameters.</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 30%;">Patient</td>
+            <td style="width: 70%;">IPA SHALL support Patient.link processing.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">IPA SHOULD support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
+        </tr>
+  </tbody>
+</table>
+
+##### Additional resources
+No additional resource types supported in [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-server.html) that are not already included in this version of AU Core.
+
+#### International Patient Summary
+[International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) defines the expected capabilities of systems that represent the International Patient Summary (IPS) using HL7 FHIR. An IPS document is an electronic health record extract containing essential healthcare information about a subject of care. It includes the following capability statement:
+- [IPS Server CapabilityStatement](https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html) that describes the expected capabilities of the IPS Server actor which is responsible for providing responses to the queries submitted for IPS documents. 
+
+##### IPA Server CapabilityStatement additional requirements 
+The [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 30%;">Resource type</th>
+            <th style="width: 70%;">Additional requirements</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr>
+            <td style="width: 30%;">AllergyIntolerance</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Condition</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">DiagnosticReport</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Immunization</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Medication</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">MedicationRequest</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">MedicationStatement</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Observation</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Organization</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Practitioner</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">PractitionerRole</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+			<td style="width: 30%;">Procedure</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Specimen</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">DocumentReference</td>
+            <td style="width: 70%;">IPS SHOULD support <code>$docref</code> operation.</td>
+        </tr>
+    </tbody>
+</table>    
+
+##### Additional resources
+The following table lists resource types that are supported by [IPS Server CapabilityStatement](https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html) but are not currently supported by the AU Core Responder CapabiltyStatement. These differences may have implications for systems aiming to be interoperable across both specifications.
+    
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 30%;">Resource type</th>
+            <th style="width: 70%;">Conformance level</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr>
+            <td style="width: 30%;">Bundle</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Composition</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Device</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">DeviceUseStatement</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">ImagingStudy</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Flag</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">OperationDefinition</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+	</tbody>
+</table>
+
+#### US Core
+[US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/) defines the expected capabilities of systems to support interoperability and clinical data exchange in the US healthcare context. It includes two capability statements:
+- [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) that desribes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. 
+- [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html) that describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. 
+
+##### US Core Client CapabilityStatement additional requirements
+The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 30%;">Resource type</th>
+            <th style="width: 70%;">Additional requirements</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="3" style="width: 30%;">AllergyIntolerance</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude: Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+clinical-status</code> search parameter combination.</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="width: 30%;">Condition</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude: Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> search parameters combination.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+       </tr>
+        <tr>
+            <td rowspan="7" style="width: 30%;">DiagnosticReport</td>
+            <td style="width: 70%;">US Core SHALL support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL support <code>patient</code>, <code>code</code>, <code>category</code>, <code>date</code>, <code>_lastUpdated</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL support <code>read</code> and <code>search-type</code> interactions, and SHALL support <code>create</code> if using the Report and Note Exchange profile.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support the <code>resolves</code> reference policy.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">US Core SHOULD support <code>status</code>, <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameters and search parameter combinations.</td>
+		</tr>
+        <tr>
+            <td rowspan="11" style="width: 30%;">DocumentReference</td>
+            <td style="width: 70%;">US Core SHALL support for GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL support <code>create</code>, <code>read</code> and <code>search-type</code> interactions.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">US Core SHALL support both DocumentReference.attachment.url and DocumentReference.attachment.data representations of content.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL handle multiple DocumentReference.content repetitions as alternative formats of the same document, not different versions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL be capable of processing a responsible organization from either DocumentReference.custodian, or a Provenance resource pointing to the DocumentReference via agent.who or agent.onBehalfOf.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">US Core SHOULD support the <code>resolves</code> reference policy.</td>
+        </tr>
+         <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support the <code>$docref</code> operation.</td>
+        </tr>
+         <tr>
+            <td style="width: 70%;">US Core SHOULD support for <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations.</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="width: 30%;">Encounter</td>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>identifier</code>, <code>class</code>, <code>date</code>, <code>location</code>, <code>status</code>, <code>type</code>, <code>discharge-disposition</code>, <code>_lastUpdated</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameters and search parameter combinations.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 30%;">Immunization</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Location</td>
+            <td style="width: 70%;">US Core SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Medication</td>
+            <td style="width: 70%;">US Core SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+		<tr>
+            <td rowspan="6" style="width: 30%;">MedicationRequest</td>
+            <td style="width: 70%;">US Core SHALL support <code>patient+intent</code>, <code>patient+intent+status</code>, and <code>patient+intent+encounter</code> search parameter combinations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">US Core SHALL support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
+        </tr> 
+        <tr>
+            <td style="width: 70%;">US Core SHALL support all potential target resource types for MedicationRequest.reasonReference.</td>
+        </tr>  
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD have referenced resources in MedicationRequest.reasonReference conform to US Core profiles.</td>
+        </tr> 
+        <tr>
+            <td rowspan="3" style="width: 30%;">Observation</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr> 
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 30%;">Organization</td>
+            <td style="width: 70%;">US Core SHALL support <code>name</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="width: 30%;">Patient</td>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 30%;">Practitioner</td>
+            <td style="width: 70%;">US Core SHALL support <code>name</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="width: 30%;">PractitionerRole</td>
+            <td style="width: 70%;">US Core SHALL support <code>specialty</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_include=PractitionerRole:endpoint</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 30%;">Procedure</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="width: 30%;">RelatedPerson</td>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>name</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td rowspan="5" style="width: 30%;">Specimen</td>
+            <td style="width: 70%;">US Core SHALL support GET by id: <code>GET [base]/Specimen/[id]</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL support both Specimen.identifier and Specimen.accessionIdentifier.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL support the <code>_id</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>patient</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+    </tbody>
+</table>  
+  
+##### Additional resources
+The following table lists resource types that are supported by [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) but are not currently supported by the AU Core Client CapabiltyStatement. These differences may have implications for systems aiming to be interoperable across both specifications.
+    
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 30%;">Resource type</th>
+            <th style="width: 70%;">Conformance level</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr>
+            <td style="width: 30%;">CarePlan</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">CareTeam</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Coveerage</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Device</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Endpoint</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Goal</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">HealthcareService</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">Media</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">MedicationDispense</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">Provenance</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">Questionnaire</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">QuestionnaireResponse</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">ValueSet</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+	</tbody>
+</table>
+
+##### US Core Server CapabilityStatement additional requirements
+The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width:30%">Resource type</th>
+            <th style="width: 70%">Additional requirements</th>
+        </tr>
+    </thead>
+    <tbody>        
+        <tr>
+            <td rowspan="2" style="width: 30%;">AllergyIntolerance</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude: Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 30%;">Condition</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude: Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> search parameters combination.</td>
+        </tr>
+       <tr>
+            <td rowspan="7" style="width: 30%;">DiagnosticReport</td>
+            <td style="width: 70%;">US Core SHALL support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support the <code>resolves</code> reference policy.</td>
+        </tr>
+        <tr>
+            <td rowspan="11" style="width: 30%;">DocumentReference</td>
+            <td style="width: 70%;">US Core SHALL support GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">US Core SHALL support <code>$docref</code> operation. </td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
+        </tr>        
+		<tr>
+            <td style="width: 70%;">US Core SHALL support <code>create</code>, <code>search-type</code> and <code>read</code> interactions.</td>
+        </tr>	
+<tr>
+            <td style="width: 70%;">US Core SHALL support either both DocumentReference.attachment.url or DocumentReference.attachment.data representations of content.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL support multiple DocumentReference.content elements represent the same document in different formats.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL support inclusion of the responsible organisation present in DocumentReference.custodian or via Provenance.agent.</td>
+        </tr>	
+		<tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+type+period</code> and <code>patient+status</code> search parameter and search parameter combinations.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support the <code>resolves</code> reference policy.</td>
+        </tr>
+        <tr>
+            <td rowspan="5" style="width: 30%;">Encounter</td>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL support either Encounter.location.location or Encounter.serviceProvider.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">US Core SHOULD support <code>identifier</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameter and search parameter combinations.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD ensure that if Encounter.reasonReference references an Observation, it SHOULD conform to a US Core Observation profile.</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 30%;">Immunization</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 30%;">Location</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Medication</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td rowspan="5" style="width: 30%;">MedicationRequest</td>
+            <td style="width: 70%;">US Core SHALL support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">US Core SHALL support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
+        </tr>  
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>	
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+intent+encounter</code> search parameter combination.</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="width: 30%;">Observation</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr> 
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Organization</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="width: 30%;">Patient</td>
+            <td style="width: 70%;">US Core SHALL support <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameters and search parameter combinations.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>death-date+family</code> search parameter combination.</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 30%;">Practitioner</td>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL support <code>name</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="width: 30%;">PractitionerRole</td>
+            <td style="width: 70%;">US Core SHALL support <code>specialty</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>_include=PractitionerRole:endpoint</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 30%;">Procedure</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="width: 30%;">RelatedPerson</td>
+            <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>name</code> search parameter.</td>
+        </tr>
+        <tr>
+            <td rowspan="5" style="width: 30%;">Specimen</td>
+            <td style="width: 70%;">US Core SHALL support <code>read</code> interaction.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">US Core SHALL support either Specimen.identifier or Specimen.accessionIdentifier.</td>
+        </tr>        
+		<tr>
+            <td style="width: 70%;">US Core SHOULD support <code>patient</code> search parameter.</td>
+        </tr>  
+    </tbody>
+</table>     
+   
+##### Additional resources
+The following table lists resource types that are supported by [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html) but are not currently supported by the AU Core Client CapabiltyStatement. These differences may have implications for systems aiming to be interoperable across both specifications.
+    
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 30%;">Resource type</th>
+            <th style="width: 70%;">Conformance level</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr>
+            <td style="width: 30%;">CarePlan</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">CareTeam</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Coveerage</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Device</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Endpoint</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Goal</td>
+            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">HealthcareService</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">Media</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">MedicationDispense</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">Provenance</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">Questionnaire</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">QuestionnaireResponse</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">ValueSet</td>
+            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+        </tr>
+	</tbody>
+</table>
