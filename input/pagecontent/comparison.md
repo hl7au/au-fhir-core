@@ -1461,7 +1461,7 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
     </thead>
     <tbody>
         <tr>
-            <td rowspan="5" style="width: 30%;">AllergyIntolerance</td>
+            <td rowspan="3" style="width: 30%;">AllergyIntolerance</td>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
@@ -1471,13 +1471,7 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td style="width: 70%;">US Core SHOULD support <code>patient+clinical-status</code> search parameter combination.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code>.</td>
-        </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>clinical-status</code> search parameter.</td>
-        </tr>
-        <tr>
-            <td rowspan="5" style="width: 30%;">Condition</td>
+            <td rowspan="3" style="width: 30%;">Condition</td>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
@@ -1486,14 +1480,9 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
 		<tr>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
+       </tr>
         <tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code>.</td>
-        </tr>
-        <tr>
-            <td style="width: 70%;">US Core MAY support <code>abatement-date</code>, <code>asserted-date</code>, <code>encounter</code>, <code>recorded-date</code>, and <code>_lastUpdated</code> search parameters.</td>
-        </tr>
-        <tr>
-            <td rowspan="9" style="width: 30%;">DiagnosticReport</td>
+            <td rowspan="7" style="width: 30%;">DiagnosticReport</td>
             <td style="width: 70%;">US Core SHALL support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
         </tr>
         <tr>
@@ -1515,13 +1504,7 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td style="width: 70%;">US Core SHOULD support <code>status</code>, <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameters and search parameter combinations.</td>
 		</tr>
         <tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
-        <tr>
-            <td style="width: 70%;">US Core MAY support <code>category</code>, <code>code</code>, <code>date</code>, <code>_lastupdated</code>, and <code>status</code> search parameters.</td>
-        </tr>
-        <tr>
-            <td rowspan="13" style="width: 30%;">DocumentReference</td>
+            <td rowspan="11" style="width: 30%;">DocumentReference</td>
             <td style="width: 70%;">US Core SHALL support for GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
         </tr>
         <tr>
@@ -1555,13 +1538,7 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td style="width: 70%;">US Core SHOULD support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>category</code>, <code>date</code>, <code>period</code>, <code>status</code>, and <code>type</code> search parameters.</td>
-        </tr>
-        <tr>
-            <td rowspan="6" style="width: 30%;">Encounter</td>
+            <td rowspan="4" style="width: 30%;">Encounter</td>
             <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
@@ -1573,41 +1550,23 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>class</code>, <code>date</code>, <code>_lastUpdated</code>, <code>discharge-disposition</code>, <code>location</code>, <code>status</code> and <code>type</code> search parameters.</td>
-		</tr>
         <tr>
-            <td rowspan="4" style="width: 30%;">Immunization</td>
+            <td rowspan="2" style="width: 30%;">Immunization</td>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td style="width: 70%;">US Core MAY support <code>date</code> and <code>status</code> search parameters.</td>
-        </tr>
-        <tr>
-            <td rowspan="2" style="width: 30%;">Location</td>
+            <td style="width: 30%;">Location</td>
             <td style="width: 70%;">US Core SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-       <tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="2" style="width: 30%;">Medication</td>
+            <td style="width: 30%;">Medication</td>
             <td style="width: 70%;">US Core SHOULD support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
-        <tr>
-            <td rowspan="8" style="width: 30%;">MedicationRequest</td>
+            <td rowspan="6" style="width: 30%;">MedicationRequest</td>
             <td style="width: 70%;">US Core SHALL support <code>patient+intent</code>, <code>patient+intent+status</code>, and <code>patient+intent+encounter</code> search parameter combinations.</td>
         </tr>
 		<tr>
@@ -1625,14 +1584,8 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;">US Core SHOULD have referenced resources in MedicationRequest.reasonReference conform to US Core profiles.</td>
         </tr> 
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>authoredon</code>, <code>encounter</code>, <code>intent</code>, <code>patient</code>, and <code>status</code> search parameters.</td>
-        </tr>
         <tr>
-            <td rowspan="4" style="width: 30%;">Observation</td>
+            <td rowspan="3" style="width: 30%;">Observation</td>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
@@ -1641,21 +1594,15 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="3" style="width: 30%;">Organization</td>
+            <td rowspan="2" style="width: 30%;">Organization</td>
             <td style="width: 70%;">US Core SHALL support <code>name</code> search parameter.</td>
         </tr>
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="5" style="width: 30%;">Patient</td>
+            <td rowspan="3" style="width: 30%;">Patient</td>
             <td style="width: 70%;">US Core SHALL support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations.</td>
         </tr>
         <tr>
@@ -1664,24 +1611,15 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>death-date</code> search parameter.</td>
-        </tr>
         <tr>
-            <td rowspan="3" style="width: 30%;">Practitioner</td>
+            <td rowspan="2" style="width: 30%;">Practitioner</td>
             <td style="width: 70%;">US Core SHALL support <code>name</code> search parameter.</td>
         </tr>
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="5" style="width: 30%;">PractitionerRole</td>
+            <td rowspan="4" style="width: 30%;">PractitionerRole</td>
             <td style="width: 70%;">US Core SHALL support <code>specialty</code> search parameter.</td>
         </tr>
         <tr>
@@ -1693,21 +1631,15 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="3" style="width: 30%;">Procedure</td>
+            <td rowspan="2" style="width: 30%;">Procedure</td>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="5" style="width: 30%;">RelatedPerson</td>
+            <td rowspan="4" style="width: 30%;">RelatedPerson</td>
             <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
@@ -1719,11 +1651,8 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>name</code> search parameter.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="6" style="width: 30%;">Specimen</td>
+            <td rowspan="5" style="width: 30%;">Specimen</td>
             <td style="width: 70%;">US Core SHALL support GET by id: <code>GET [base]/Specimen/[id]</code>.</td>
         </tr>
         <tr>
@@ -1737,9 +1666,6 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         </tr>
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
-        </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
         </tr>
     </tbody>
 </table>  
@@ -1822,30 +1748,21 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
     </thead>
     <tbody>        
         <tr>
-            <td rowspan="3" style="width: 30%;">AllergyIntolerance</td>
+            <td rowspan="2" style="width: 30%;">AllergyIntolerance</td>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="4" style="width: 30%;">Condition</td>
+            <td rowspan="2" style="width: 30%;">Condition</td>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> search parameters combination.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>abatement-date</code>, <code>asserted-date</code>, <code>encounter</code>, <code>recorded-date</code> and <code>_lastUpdated</code> search parameters.</td>
-        </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
-        <tr>
-            <td rowspan="9" style="width: 30%;">DiagnosticReport</td>
+       <tr>
+            <td rowspan="7" style="width: 30%;">DiagnosticReport</td>
             <td style="width: 70%;">US Core SHALL support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
         </tr>
         <tr>
@@ -1866,14 +1783,8 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;">US Core SHOULD support the <code>resolves</code> reference policy.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>		
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>category</code>, <code>code</code>, <code>date</code>, <code>_lastupdated</code>, and <code>patient</code> search parameters.</td>
-        </tr>
         <tr>
-            <td rowspan="13" style="width: 30%;">DocumentReference</td>
+            <td rowspan="11" style="width: 30%;">DocumentReference</td>
             <td style="width: 70%;">US Core SHALL support GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
         </tr>
 		<tr>
@@ -1906,14 +1817,8 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;">US Core SHOULD support the <code>resolves</code> reference policy.</td>
         </tr>
-       <tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>category</code>, <code>date</code>, <code>patient</code>, <code>period</code>, <code>status</code>, and <code>type</code> search parameters.</td>
-        </tr>
         <tr>
-            <td rowspan="8" style="width: 30%;">Encounter</td>
+            <td rowspan="5" style="width: 30%;">Encounter</td>
             <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
@@ -1931,38 +1836,23 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;">US Core SHOULD ensure that if Encounter.reasonReference references an Observation, it SHOULD conform to a US Core Observation profile.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>_lastUpdated</code>, <code>discharge-disposition</code>, <code>identifier</code> and <code>type</code> search parameters.</td>
-        </tr>
         <tr>
-            <td rowspan="3" style="width: 30%;">Immunization</td>
+            <td rowspan="2" style="width: 30%;">Immunization</td>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">Location</td>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="2" style="width: 30%;">Medication</td>
+            <td style="width: 30%;">Medication</td>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="7" style="width: 30%;">MedicationRequest</td>
+            <td rowspan="5" style="width: 30%;">MedicationRequest</td>
             <td style="width: 70%;">US Core SHALL support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations.</td>
         </tr>
 		<tr>
@@ -1978,13 +1868,7 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td style="width: 70%;">US Core SHOULD support <code>patient+intent+encounter</code> search parameter combination.</td>
         </tr>
         <tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr> 
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>encounter</code> search parameter.</td>
-        </tr>
-        <tr>
-            <td rowspan="5" style="width: 30%;">Observation</td>
+            <td rowspan="3" style="width: 30%;">Observation</td>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
@@ -1993,21 +1877,12 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>_lastUpdated</code> search parameter.</td>
-        </tr>
         <tr>
-            <td rowspan="2" style="width: 30%;">Organization</td>
+            <td style="width: 30%;">Organization</td>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="6" style="width: 30%;">Patient</td>
+            <td rowspan="4" style="width: 30%;">Patient</td>
             <td style="width: 70%;">US Core SHALL support <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
@@ -2019,24 +1894,15 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>death-date+family</code> search parameter combination.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>death-date</code> search parameter.</td>
-        </tr>
         <tr>
-            <td rowspan="3" style="width: 30%;">Practitioner</td>
+            <td rowspan="2" style="width: 30%;">Practitioner</td>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td style="width: 70%;">US Core SHALL support <code>name</code> search parameter.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="4" style="width: 30%;">PractitionerRole</td>
+            <td rowspan="3" style="width: 30%;">PractitionerRole</td>
             <td style="width: 70%;">US Core SHALL support <code>specialty</code> search parameter.</td>
         </tr>
         <tr>
@@ -2045,21 +1911,15 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="3" style="width: 30%;">Procedure</td>
+            <td rowspan="2" style="width: 30%;">Procedure</td>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="5" style="width: 30%;">RelatedPerson</td>
+            <td rowspan="4" style="width: 30%;">RelatedPerson</td>
             <td style="width: 70%;">US Core SHOULD support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
@@ -2071,11 +1931,8 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;">US Core SHOULD support <code>name</code> search parameter.</td>
         </tr>
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
         <tr>
-            <td rowspan="6" style="width: 30%;">Specimen</td>
+            <td rowspan="5" style="width: 30%;">Specimen</td>
             <td style="width: 70%;">US Core SHALL support <code>read</code> interaction.</td>
         </tr>
         <tr>
@@ -2090,9 +1947,6 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
 		<tr>
             <td style="width: 70%;">US Core SHOULD support <code>patient</code> search parameter.</td>
         </tr>  
-		<tr>
-            <td style="width: 70%;">US Core MAY support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-type</code> interactions.</td>
-        </tr>
     </tbody>
 </table>     
    
