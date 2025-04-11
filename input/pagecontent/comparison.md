@@ -1292,11 +1292,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
     </thead>
     <tbody>
         <tr>
-            <td style="width: 30%;">Condition</td>
-            <td style="width: 70%;">IPA MAY support <code>verification-status</code> search parameter.</td>
-        </tr>
-        <tr>
-            <td rowspan="5" style="width: 30%;">DocumentReference</td>
+            <td rowspan="4" style="width: 30%;">DocumentReference</td>
             <td style="width: 70%;">IPA SHALL support <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
         <tr>
@@ -1307,9 +1303,6 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
         </tr>
 		<tr>
            <td style="width: 70%;">IPA SHALL support <code>$docref</code> operation.</td>
-        </tr>
-        <tr>
-            <td style="width: 70%;">IPA MAY support <code>category</code>, <code>contenttype</code>, <code>date</code>, <code>period</code>, <code>status</code>, and <code>type</code> search parameters.</td>
         </tr>
         <tr>
             <td style="width: 30%;">MedicationRequest</td>
