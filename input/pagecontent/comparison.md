@@ -958,13 +958,13 @@ This version of AU Core has no equivalent profile for the following US Core prof
 ### Capability statement comparison
 As part of capability statement comparison, the supported resource types, interactions (e.g. <code>read</code>, <code>search-type</code>), search parameters, combined search parameter support, operations, and other conformance expectations for requesters (clients) or responders (servers) are evaluated. 
 
-The table below provides a comparison of capability statements at the resource level from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system that meets the expectations of an International Patient Access capability statement **MAY NOT** meet the expectations defined in AU Core.
+The table below provides a comparison of capability statements at the resource level from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system that meets the expectations of an International Patient Access capability statement **MAY NOT** meet the expectations defined in AU Core. The comparison is based on 'SHALL (mandatory) and 'SHOULD' (recommended)conformance expectations. Expectations marked as 'MAY' (optional) are excluded from consideration in this comparison. 
 
 The comparisons are presented separately for requester (client) and responder (server) capability statements to clearly distinguish alignment and any gaps with key international implementation guides.
 
 **Legend:**
 
-<img src="green_checkmark.svg.png" width="20"/> **Compliant**: A system conforming to the AU Core requester/ responder expectations meets all mandatory (SHALL) requirements of the compared implementation guide capability statement. While the implementation guide may include 'SHOULD' (recommended) and 'MAY' (optional) expectations, these do not impact the compliant status. Where such additional expectations are identifier, more details are provided in the sections below.  
+<img src="green_checkmark.svg.png" width="20"/> **Compliant**: A system conforming to the AU Core requester/ responder expectations meets all mandatory (SHALL) requirements of the compared implementation guide capability statement. While the implementation guide may include 'SHOULD' (recommended) and 'MAY' (optional) expectations, these do not impact the compliant status. Where 'SHOULD' additional expectations are identifier, more details are provided in the sections below.  
 
 <img src="orange_checkmark.svg.png" width="20"/> **Additional requirements**: A system conforming to the AU Core capability statement aligns with but may require additional modifications to meet the stricter requirements of the compared capability statement. Where additional requirements are identified, more details are provided in the sections below.
 
@@ -1237,11 +1237,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
     </thead>
     <tbody>
         <tr>
-            <td style="width: 30%;">Condition</td>
-            <td style="width: 70%;">IPA MAY support <code>verification-status</code> search parameter.</td>
-        </tr>
-        <tr>
-            <td rowspan="6" style="width:30%;">DocumentReference</td>
+            <td rowspan="4" style="width:30%;">DocumentReference</td>
             <td style="width: 70%;">IPA SHALL support <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
         <tr>
@@ -1249,9 +1245,6 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
         </tr>
         <tr>
             <td style="width: 70%;">IPA SHOULD support <code>_id</code> search parameter.</td>
-        </tr>
-        <tr>
-            <td style="width: 70%;">IPA MAY support the follow search parameters: <code>category</code>, <code>contenttype</code>, <code>date</code>, <code>period</code>, <code>status</code>, and <code>type</code>.</td>
         </tr>
         <tr>
            <td style="width: 30%;">IPA SHOULD support <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> the search parameter combinations.</td>
@@ -1319,7 +1312,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
 </table>
 
 ##### Additional resources
-No additional resource types supported in [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-server.html) that are not already included in this version of AU Core.
+None.
 
 #### International Patient Summary
 [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) defines the expected capabilities of systems that represent the International Patient Summary (IPS) using HL7 FHIR. An IPS document is an electronic health record extract containing essential healthcare information about a subject of care. It includes the following capability statement:
@@ -1401,38 +1394,38 @@ The following table lists resource types that are supported by [IPS Server Capab
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 30%;">Resource type</th>
+            <th style="width: 30%;">Additional resource type</th>
             <th style="width: 70%;">Conformance level</th>
         </tr>
     </thead> 
     <tbody>
         <tr>
             <td style="width: 30%;">Bundle</td>
-            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+            <td style="width: 70%;">supported</td>
         </tr>
         <tr>
             <td style="width: 30%;">Composition</td>
-            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+            <td style="width: 70%;">supported</td>
         </tr>
         <tr>
             <td style="width: 30%;">Device</td>
-            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+            <td style="width: 70%;">supported</td>
         </tr>
         <tr>
             <td style="width: 30%;">DeviceUseStatement</td>
-            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+            <td style="width: 70%;">supported</td>
         </tr>
         <tr>
             <td style="width: 30%;">ImagingStudy</td>
-            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+            <td style="width: 70%;">supported</td>
         </tr>
         <tr>
             <td style="width: 30%;">Flag</td>
-            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+            <td style="width: 70%;">supported</td>
         </tr>
         <tr>
             <td style="width: 30%;">OperationDefinition</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 	</tbody>
 </table>
@@ -1664,7 +1657,7 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
 </table>  
   
 ##### Additional resources
-The following table lists resource types that are supported by [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) but are not currently supported by the AU Core Client CapabiltyStatement. These differences may have implications for systems aiming to be interoperable across both specifications.
+The following table lists resource types that are supported by [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) but are not currently supported by the AU Core Requester CapabiltyStatement. These differences may have implications for systems aiming to be interoperable across both specifications.
     
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -1837,7 +1830,7 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 30%;">Location</td>
+            <td style="width: 30%;">Location</td>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
