@@ -747,7 +747,7 @@
 				<reference value="HealthcareService/physiotherapy"/>
 			</reference>
 			<name value="HealthcareService - CoreStrength Physiotherapy"/>
-			<description value="Shows an example of a physiotherapy healthcare service for the *AU Core HealthcareService* profile. The service is provided by Bobrester Medical Center and includes type, specialty, contact details, and location."/>
+			<description value="Shows an example of a physiotherapy healthcare service for the *AU Core HealthcareService* profile. The service is provided by Bobrester Medical Center and includes type and contact details."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
 		</resource>
 		<resource>
@@ -755,7 +755,7 @@
 				<reference value="HealthcareService/murrabit-crisis-hotline"/>
 			</reference>
 			<name value="HealthcareService - Murrabit Crisis Hotline"/>
-			<description value="Shows an example of a 24/7 telephone counselling service for the *AU Core HealthcareService* profile. The service is provided by Murrabit Public Hospital and includes healthcare service types, emergency contact number, and organization reference."/>
+			<description value="Shows an example of a 24/7 telephone counselling service for the *AU Core HealthcareService* profile. The service is provided by Murrabit Public Hospital and includes healthcare service types and emergency contact number."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
 		</resource>
 		<!--PAGES-->
