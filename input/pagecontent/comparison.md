@@ -28,8 +28,8 @@ The table below provides a profile only comparison from AU Core to profiles in k
     <thead>
         <tr>
             <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Access 1.0.0</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Summary 2.0.0-ballot</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">IPA 1.1.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">IPS 2.0.0-ballot</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">US Core 7.0.0</th>
         </tr>
     </thead>
@@ -182,7 +182,7 @@ The table below provides a profile only comparison from AU Core to profiles in k
 </table>
 
 #### International Patient Access
-[International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
+[International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
 
 ##### Incompatible requirements
 The following IPA profile(s) contain incompatible requirements with the equivalent AU Core profile. Implementers are advised to note that substantial code changes may be required to support these profiles.
@@ -191,7 +191,7 @@ The following IPA profile(s) contain incompatible requirements with the equivale
     <thead>
         <tr>
             <th style="width: 25%;">AU Core</th>
-            <th style="width: 25%;">International Patient Access 1.0.0</th>
+            <th style="width: 25%;">IPA 1.1.0</th>
             <th style="width: 25%;">Element</th>
             <th style="width: 25%;">Incompatible requirements</th>
         </tr>
@@ -970,7 +970,66 @@ The comparisons are presented separately for requester (client) and responder (s
 
 <img src="cross_red_circle.svg.png" width="20"/> **Incompatible**: A system conforming to the AU Core capability statement has conformance expectations that conflict with the mandatory requirements of the compared implementation guide, making full conformance to both impossible. Where incompatible requirements are identified, more details are provided in the sections below.
 
-<img src="minus_symbol.svg.png" width="20"/> **No equivalent profile**: No equivalent capability statement for comparison.
+<img src="minus_symbol.svg.png" width="20"/> **No equivalent capability statement**: No equivalent capability statement for comparison.
+
+#### CapabilityStatement equivalence and mapping
+The capability statements used for comparison are defined in the AU Core, International Patient Access, International Patient Summary, and US Core specifications. Each specification describes the expected conformance of systems acting as either requesters (clients) or responders (servers).
+
+The table below identifies the capability statements that are considered equivalent for the purposes of comparison. Where no equivalent capability statement exists, this is indicated using the 'No equivalent capability statement' icon.
+
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+    <tr>
+        <th>AU Core CapabilityStatement</th>
+        <th>Specification</th>
+        <th>CapabilityStatement</th>
+        <th>Version</th>
+        <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td rowspan="3"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
+        <td>IPA</td>
+        <td><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-client.html">IPA Client</a></td>
+        <td></td>
+        <td>Describes the basic rules for the International Patient Access client actor that initiates a data access request to and retrieves patient data from an IPA Responder. In addition, it lists the client conformance expectations for each resource type documented in IPA. These expectations include supported FHIR profiles, RESTful operations, and search parameters. International Patient Access clients define their capabilities by choosing from this list based on the resource types they need to access.</td>
+    </tr>
+    <tr>
+        <td>IPS</td>
+        <td><img src="minus_symbol.svg.png" width="20"/></td>
+        <td><img src="minus_symbol.svg.png" width="20"/></td>
+        <td><img src="minus_symbol.svg.png" width="20"/></td>
+        <td><img src="minus_symbol.svg.png" width="20%"/></td>
+    </tr>
+    <tr>
+        <td>US Core</td>
+        <td><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
+        <td>7.0.0</td>
+        <td>Describes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined in the Conformance Requirements for Server. US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.</td>
+    </tr>
+    <tr>
+        <td rowspan="3"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
+        <td>IPA</td>
+        <td><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
+        <td></td>
+        <td>Describes the basic rules for the International Patient Access server actor that is responsible for providing responses to queries submitted by International Patient Access requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by International Patient Access servers are defined in this CapabilityStatement.</td>
+    </tr>
+    <tr>
+        <td>IPS</td>
+        <td><a href="https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html">IPS Server</a></td>
+        <td>2.2.0-ballot</td>
+        <td>Describes the expected capabilities of the IPS Server actor which is responsible for providing responses to the queries submitted for IPS documents. The list of FHIR profiles and operations supported by IPS Servers are defined.</td>
+    </tr>
+    <tr>
+        <td>US Core</td>
+        <td><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
+        <td>7.0.0</td>
+        <td>Describes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined in the Conformance Requirements for Server. US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.</td>
+    </tr>
+  </tbody>
+</table>       
 
 #### Requester capability statement comparison
 The table below compares the AU Core requester expectations with other implementation guides.
@@ -979,8 +1038,8 @@ The table below compares the AU Core requester expectations with other implement
     <thead>
         <tr>
             <th style="width: 25%; text-align: center; vertical-align: middle;">Resource type</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Access 1.0.0</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Summary 2.0.0-ballot</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">IPA 1.0.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">IPS 2.0.0-ballot</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">US Core 7.0.0</th>
         </tr>
     </thead>
@@ -1237,7 +1296,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
     </thead>
     <tbody>
         <tr>
-            <td rowspan="4" style="width:30%;">DocumentReference</td>
+            <td rowspan="5" style="width:30%;">DocumentReference</td>
             <td style="width: 70%;">IPA SHALL support <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
         <tr>
@@ -1271,7 +1330,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
 </table>
 
 ##### Additional resources
-No additional resource types supported in [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-client.html) that are not already included in this version of AU Core.
+None.
 
 ##### IPA Server CapabilityStatement additional requirements 
 The [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1/CapabilityStatement-ipa-server.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
@@ -1331,7 +1390,7 @@ The [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl
     <tbody>
         <tr>
             <td style="width: 30%;">AllergyIntolerance</td>
-            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+            <td style="width: 70%;">supported</td>
         </tr>
         <tr>
             <td style="width: 30%;">Condition</td>
@@ -1466,7 +1525,6 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
 		<tr>
             <td style="width: 70%;">US Core SHOULD support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-       </tr>
         <tr>
             <td rowspan="7" style="width: 30%;">DiagnosticReport</td>
             <td style="width: 70%;">US Core SHALL support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
@@ -1662,62 +1720,62 @@ The following table lists resource types that are supported by [US Core Client C
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 30%;">Resource type</th>
+            <th style="width: 30%;">Additional resource type</th>
             <th style="width: 70%;">Conformance level</th>
         </tr>
     </thead> 
     <tbody>
         <tr>
             <td style="width: 30%;">CarePlan</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
         <tr>
             <td style="width: 30%;">CareTeam</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
         <tr>
             <td style="width: 30%;">Coveerage</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
         <tr>
             <td style="width: 30%;">Device</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
         <tr>
             <td style="width: 30%;">Endpoint</td>
-            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
         <tr>
             <td style="width: 30%;">Goal</td>
-            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
         <tr>
             <td style="width: 30%;">HealthcareService</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 		<tr>
             <td style="width: 30%;">Media</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 		<tr>
             <td style="width: 30%;">MedicationDispense</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 		<tr>
             <td style="width: 30%;">Provenance</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 		<tr>
             <td style="width: 30%;">Questionnaire</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 		<tr>
             <td style="width: 30%;">QuestionnaireResponse</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 		<tr>
             <td style="width: 30%;">ValueSet</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 	</tbody>
 </table>
@@ -1804,7 +1862,7 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td style="width: 70%;">US Core SHOULD support the <code>resolves</code> reference policy.</td>
         </tr>
         <tr>
-            <td rowspan="5" style="width: 30%;">Encounter</td>
+            <td rowspan="6" style="width: 30%;">Encounter</td>
             <td style="width: 70%;">US Core SHALL support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
@@ -1942,62 +2000,62 @@ The following table lists resource types that are supported by [US Core Server C
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 30%;">Resource type</th>
+            <th style="width: 30%;">Additional resource type</th>
             <th style="width: 70%;">Conformance level</th>
         </tr>
     </thead> 
     <tbody>
         <tr>
             <td style="width: 30%;">CarePlan</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
         <tr>
             <td style="width: 30%;">CareTeam</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
         <tr>
             <td style="width: 30%;">Coveerage</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
         <tr>
             <td style="width: 30%;">Device</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
         <tr>
             <td style="width: 30%;">Endpoint</td>
-            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
         <tr>
             <td style="width: 30%;">Goal</td>
-            <td style="width: 70%;">IPS resource conformance level:supported.</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
         <tr>
             <td style="width: 30%;">HealthcareService</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 		<tr>
             <td style="width: 30%;">Media</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 		<tr>
             <td style="width: 30%;">MedicationDispense</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 		<tr>
             <td style="width: 30%;">Provenance</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 		<tr>
             <td style="width: 30%;">Questionnaire</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 		<tr>
             <td style="width: 30%;">QuestionnaireResponse</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 		<tr>
             <td style="width: 30%;">ValueSet</td>
-            <td style="width: 70%;">IPS resource conformance level:SHOULD</td>
+            <td style="width: 70%;">SHOULD</td>
         </tr>
 	</tbody>
 </table>
