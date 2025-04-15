@@ -1470,31 +1470,31 @@ The following table lists resource types that are supported by [IPS Server Capab
     <tbody>
         <tr>
             <td style="width: 30%;">Bundle</td>
-            <td style="width: 70%;">supported</td>
+            <td style="width: 70%;"><strong>supported</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Composition</td>
-            <td style="width: 70%;">supported</td>
+            <td style="width: 70%;"><strong>supported</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Device</td>
-            <td style="width: 70%;">supported</td>
+            <td style="width: 70%;"><strong>supported</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">DeviceUseStatement</td>
-            <td style="width: 70%;">supported</td>
+            <td style="width: 70%;"><strong>supported</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">ImagingStudy</td>
-            <td style="width: 70%;">supported</td>
+            <td style="width: 70%;"><strong>supported</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Flag</td>
-            <td style="width: 70%;">supported</td>
+            <td style="width: 70%;"><strong>supported</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">OperationDefinition</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 	</tbody>
 </table>
@@ -1735,55 +1735,55 @@ The following table lists resource types that are supported by [US Core Client C
     <tbody>
         <tr>
             <td style="width: 30%;">CarePlan</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">CareTeam</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Coveerage</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Device</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Endpoint</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Goal</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">HealthcareService</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">Media</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">MedicationDispense</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">Provenance</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">Questionnaire</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">QuestionnaireResponse</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">ValueSet</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 	</tbody>
 </table>
@@ -2015,55 +2015,55 @@ The following table lists resource types that are supported by [US Core Server C
     <tbody>
         <tr>
             <td style="width: 30%;">CarePlan</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">CareTeam</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Coveerage</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Device</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Endpoint</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Goal</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">HealthcareService</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">Media</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">MedicationDispense</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">Provenance</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">Questionnaire</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">QuestionnaireResponse</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">ValueSet</td>
-            <td style="width: 70%;">SHOULD</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 	</tbody>
 </table>
