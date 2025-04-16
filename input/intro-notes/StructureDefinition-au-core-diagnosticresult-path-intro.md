@@ -11,4 +11,4 @@ The following are supported usage scenarios for this profile:
 
 ### Profile specific implementation guidance
 {% include observation_diagnostics_guidance.md -%}
-- The AU Core Pathology Result Observation is used to represent the result of a pathology test. It is not intended to be used for non-pathology diagnostic results. To represent the result of a non-pathology diagnostic test, see the [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html) profile.
+- To represent the result of a specialist or other diagnostic (non imaging or pathology) test, see the [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html) profile.
