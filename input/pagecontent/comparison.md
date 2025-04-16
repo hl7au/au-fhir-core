@@ -967,13 +967,13 @@ The capability statements used for comparison are defined in the AU Core, Intern
 
 The table below identifies the capability statements that are considered equivalent for the purposes of comparison. Only capability statements that describe client or server conformance are included. Descriptions are provided to clarify the role of each CapabilityStatement in its respective specification. Where no equivalent capability statement exists, this is indicated using the 'No equivalent capability statement' icon.
 
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+<table border="1" style="width: 50%; margin-left: 0; margin: auto; border-collapse: collapse;">
     <thead>
     <tr>
-        <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core</th>
-        <th style="width: 25%; text-align: center; vertical-align: middle;">IPA</th>
-        <th style="width: 25%; text-align: center; vertical-align: middle;">IPS</th>
-		<th style="width: 25%; text-align: center; vertical-align: middle;">US Core</th>
+        <th style="width: 25%; text-align: left; vertical-align: middle;">AU Core</th>
+        <th style="width: 25%; text-align: left; vertical-align: middle;">IPA 1.1.0</th>
+        <th style="width: 25%; text-align: left; vertical-align: middle;">IPS 2.0.0-ballot</th>
+		<th style="width: 25%; text-align: left; vertical-align: middle;">US Core 7.0.0</th>
     </tr>
   </thead>
   <tbody>
@@ -992,6 +992,7 @@ The table below identifies the capability statements that are considered equival
   </tbody>
 </table>       
 
+
 **Legend:**
 
 <img src="green_checkmark.svg.png" width="20"/> **Compliant**: A system conforming to the AU Core requester/ responder expectations meets all mandatory (<strong>SHALL</strong>) requirements of the compared implementation guide capability statement. While the implementation guide may include '<strong>SHOULD</strong>' (recommended) and 'MAY' (optional) expectations, these do not impact the compliant status. Where '<strong>SHOULD</strong>' additional expectations are identified, more details are provided in the sections below.  
@@ -1005,24 +1006,24 @@ The table below identifies the capability statements that are considered equival
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th colspan="2" style="text-align: center; vertical-align: middle;">AU Core</th>
-            <th colspan="3" style="text-align: center; vertical-align: middle;">Requester CapabilityStatement</th>
-            <th colspan="3" style="text-align: center; vertical-align: middle;">Responder CapabilityStatement</th>
+            <th colspan="2" style="text-align: left; vertical-align: middle;"></th>
+            <th colspan="3" style="text-align: left; vertical-align: middle;">Requester CapabilityStatement</th>
+            <th colspan="3" style="text-align: left; vertical-align: middle;">Responder CapabilityStatement</th>
         </tr>
     </thead>
     <tbody>
-    <tr>
-            <td style="width: 15%; text-align: center; vertical-align: middle;">CapabilityStatement requirement</td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;">Requirement</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;">IPA 1.1.0</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;">IPS 2.0.0-ballot</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;">US Core 7.0.0</td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;">IPA 1.1.0</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;">IPS 2.0.0-ballot</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;">US Core 7.0.0</td>
+		<tr>
+            <td style="width: 15%; text-align: center; vertical-align: middle;"><strong>CapabilityStatement requirement</strong></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><strong>Requirement</strong></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><strong>IPS 2.0.0-ballot</strong></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><strong>US Core 7.0.0</strong></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><strong>IPS 2.0.0-ballot</strong></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><strong>US Core 7.0.0</strong></td>
         </tr>
         <tr>
-            <td rowspan="5" style="width: 15%; text-align: left; vertical-align: middle;">System wide interactions</td>
+            <td rowspan="8" style="width: 15%; text-align: left; vertical-align: middle;">System wide interactions</td>
             <td style="width: 25%; text-align: left; vertical-align: middle;">FHIR version</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
@@ -1037,7 +1038,16 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
 			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">FHIR Capabilities</td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
@@ -1050,13 +1060,22 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">Supported implementation guides </td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">Supported implementation guides</td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">FHIR Profile Support</td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">System wide interactions</td>
@@ -1067,8 +1086,17 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
+		<tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">Security</td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+        </tr>
         <tr>
-            <td rowspan="18" style="width: 15%; text-align: left; vertical-align: middle;">Resource type interactions</td>
+            <td rowspan="18" style="width: 15%; text-align: left; vertical-align: middle;">Capabilities by Resource/Profile</td>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#AllergyIntolerance1-1">AllergyIntolerance</a></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
@@ -1233,164 +1261,6 @@ The table below identifies the capability statements that are considered equival
     </tbody>
 </table>    
 
-#### Responder capability statement comparison
-The table below compares the AU Core responder expectations with other implementation guides.
-
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
-    <thead>
-        <tr>
-            <th style="width: 20%; text-align: center; vertical-align: middle;">Capability group</th>
-            <th style="width: 35%; text-align: center; vertical-align: middle;">Conformance item</th>
-            <th style="width: 15%; text-align: center; vertical-align: middle;">IPA 1.1.0</th>
-            <th style="width: 15%; text-align: center; vertical-align: middle;">IPS 2.0.0-ballot</th>
-            <th style="width: 15%; text-align: center; vertical-align: middle;">US Core 7.0.0</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan ="5" style="width: 20%; text-align: left; vertical-align: middle;">System wide interactions</td>
-            <td style="width: 35%; text-align: left; vertical-align: middle;">FHIR version</td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;">Supported formats</td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;">Supported patch formats</td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;">Supported implementation guides </td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;">System wide interactions</td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td rowspan="18" style="width: 20%; text-align: left; vertical-align: middle;">Resource type interactions</td>
-<td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#AllergyIntolerance1-1">AllergyIntolerance</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Condition1-2">Condition</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#DiagnosticReport1-3">DiagnosticReport</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#DocumentReference1-4">DocumentReference</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Encounter1-5">Encounter</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Immunization1-6">Immunization</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Location1-7">Location</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Medication1-8">Medication</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#MedicationRequest1-9">MedicationRequest</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#MedicationStatement1-10">MedicationStatement</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Observation1-11">Observation</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Organization1-12">Organization</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Patient1-13">Patient</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Practitioner1-14">Practitioner</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#PractitionerRole1-15">PractitionerRole</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Procedure1-16">Procedure</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#RelatedPerson1-17">RelatedPerson</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 35%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html#Specimen1-18">Specimen</a></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 15%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-    </tbody>
-</table>
-   
-
 #### International Patient Access
 [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) defines the expected capabilities of systems enabling patient authorised access to clinical records via a FHIR-based API. 
 
@@ -1405,7 +1275,15 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
         </tr>
     </thead>
     <tbody>
+		<tr>
+            <td style="width:30%;">Supported implementation guides</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</	a>.</td>
+        </tr>
         <tr>
+            <td style="width:30%;">FHIR Profile Support</td>
+            <td style="width: 70%;">IPA Client <strong>SHALL</strong> support the IPA conformance expectations for the Patient resource profile and for each IPA resource type they support.</td>
+        </tr>
+		<tr>
             <td rowspan="5" style="width:30%;">DocumentReference</td>
             <td style="width: 70%;"><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
@@ -1453,6 +1331,14 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
         </tr>
     </thead>
     <tbody>
+		<tr>
+            <td style="width:30%;">Supported implementation guides</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</		a>.</td>
+        </tr>
+		<tr>
+            <td style="width:30%;">FHIR Profile Support</td>
+            <td style="width: 70%;">IPA Client <strong>SHALL</strong> support the IPA Patient resource profile and at least one additional resource profile from the list of IPA profiles.</td>
+        </tr>
         <tr>
             <td rowspan="4" style="width: 30%;">DocumentReference</td>
             <td style="width: 70%;"><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
@@ -1461,7 +1347,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;"><strong>SHALL</strong> support <code>patient</code> and <code>_id</code> search parameters.</td>
         </tr>
 		 <tr>
-           <td style="width: 70%;"><strong>SHALL</strong> support <code>patient+category</code>, <code>patient+category+date</code>, and </code>patient+type</code>, and recommends (<strong>SHOULD</strong>) support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters combination.</td>
+           <td style="width: 70%;"><strong>SHALL</strong> support <code>patient+category</code>, <code>patient+category+date</code>, and <code>patient+type</code>, and recommends (<strong>SHOULD</strong>) support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters combination.</td>
         </tr>
 		<tr>
            <td style="width: 70%;"><strong>SHALL</strong> support <code>$docref</code> operation.</td>
@@ -1511,7 +1397,7 @@ The following table lists resource types that are supported by [IPS Server Capab
     <thead>
         <tr>
             <th style="width: 30%;">Additional resource type</th>
-            <th style="width: 70%;">Conformance level</th>
+            <th style="width: 70%;">Resource conformance</th>
         </tr>
     </thead> 
     <tbody>
@@ -1560,6 +1446,10 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         </tr>
     </thead>
     <tbody>
+		<tr>
+            <td style="width:30%;">FHIR Profile Support</td>
+            <td style="width: 70%;">US Core Client <strong>SHALL</strong> support fetching and querying of one or more US Core profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement.</td>
+        </tr>	
         <tr>
             <td rowspan="3" style="width: 30%;">AllergyIntolerance</td>
             <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
@@ -1776,11 +1666,11 @@ The following table lists resource types that are supported by [US Core Client C
     <thead>
         <tr>
             <th style="width: 30%;">Additional resource type</th>
-            <th style="width: 70%;">Conformance level</th>
+            <th style="width: 70%;">Resource conformance</th>
         </tr>
     </thead> 
     <tbody>
-        <tr>
+		<tr>
             <td style="width: 30%;">CarePlan</td>
             <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
         </tr>
@@ -1836,7 +1726,7 @@ The following table lists resource types that are supported by [US Core Client C
 </table>
 
 ##### US Core Server CapabilityStatement additional requirements
-The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+US Core introduces additional capability requirements in both capability statements that are not required in AU Core. Implementers are advised that some code changes may be required to ensure full compliance.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -1845,7 +1735,11 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <th style="width: 70%">Additional requirements</th>
         </tr>
     </thead>
-    <tbody>        
+    <tbody>  
+		  <tr>
+            <td style="width:30%;">FHIR Profile Support</td>
+            <td style="width: 70%;">US Core Server <strong>SHALL</strong> support the US Core Patient resource profile AND at least one additional resource profile from the list of US Core Profiles AND and all Must Support US Core Profiles and resources it references.</td>
+        </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">AllergyIntolerance</td>
             <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
@@ -2056,7 +1950,7 @@ The following table lists resource types that are supported by [US Core Server C
     <thead>
         <tr>
             <th style="width: 30%;">Additional resource type</th>
-            <th style="width: 70%;">Conformance level</th>
+            <th style="width: 70%;">Resource conformance</th>
         </tr>
     </thead> 
     <tbody>
