@@ -9,16 +9,16 @@
     <th>Requirements (when used alone or in combination)</th>
   </tr>
   <tr>
-        <td>identifier</td>
-        <td><b>SHALL</b></td>
-        <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/></td>
-  </tr>
-  <tr>
         <td>name</td>
         <td><b>SHALL</b></td>
         <td><code>string</code></td>
         <td></td>
+  </tr>
+  <tr>
+        <td>identifier</td>
+        <td><b>SHOULD</b></td>
+        <td><code>token</code></td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/></td>
   </tr>
   <tr>
         <td>_id</td>
@@ -39,16 +39,6 @@
 
 The following search parameters **SHALL** be supported:
 
-1. **SHALL** support searching using the **[`identifier`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
-
-    `GET [base]/HealthcareService?identifier=[system|][code]`
-
-    Example:
-    
-      1. GET [base]/HealthcareService?identifier=http://ns.electronichealth.net.au/id/hi/hpio/1.0\|8003621566684455
-
-    *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
-
 1. **SHALL** support searching using the **[`name`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
 
     `GET [base]/HealthcareService?name=[string]`
@@ -62,6 +52,16 @@ The following search parameters **SHALL** be supported:
 #### Optional Search Parameters:
 
 The following search parameters **SHOULD** be supported:
+
+1. **SHALL** support searching using the **[`identifier`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
+
+    `GET [base]/HealthcareService?identifier=[system|][code]`
+
+    Example:
+    
+      1. GET [base]/HealthcareService?identifier=http://ns.electronichealth.net.au/id/hi/hpio/1.0\|8003621566684455
+
+    *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the **[`_id`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
  
