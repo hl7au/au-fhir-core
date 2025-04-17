@@ -8,7 +8,7 @@
     <name value="AUCorePractitionerRolePractitioner"/>
     <derivedFrom value="http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner"/>
     <status value="active"/>
-    <description value="This SearchParameter describes the rules on the practitioner search parameter in AU Core. It is based on &lt;a href=&quot;https://hl7.org/fhir/R4/practitionerrole.html#search&quot;&gt;PractitionerRole-practitioner&lt;/a&gt; parameter and identifies the additional requirements when conforming to AU Core.&#xa;&#xa;NOTE: For more information about the base parameter, see PractitionerRole-practitioner in the &lt;a href=&quot;https://hl7.org/fhir/R4/searchparameter-registry.html&quot;&gt;Search Parameter Registry&lt;/a&gt;."/>
+    <description value="This SearchParameter describes the rules on the practitioner search parameter in AU Core. It is based on the core FHIR [practitioner](https://hl7.org/fhir/R4/practitionerrole.html#search) search parameter and identifies the additional requirements when conforming to AU Core.&#xa;&#xa;This SearchParameter describes the rules on the PractitionerRole-practitioner search parameter in AU Core. It is based on the core FHIR [PractitionerRole-practitioner](https://hl7.org/fhir/R4/practitionerrole.html#search) search parameter and identifies the additional requirements when conforming to AU Core."/>
     <code value="practitioner"/>
     <base value="PractitionerRole"/>
     <type value="reference"/>
