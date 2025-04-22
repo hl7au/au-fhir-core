@@ -1143,10 +1143,10 @@ The table below identifies the capability statements that are considered equival
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Immunization1-6">Immunization</a></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
@@ -1170,19 +1170,19 @@ The table below identifies the capability statements that are considered equival
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#MedicationRequest1-9">MedicationRequest</a></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#MedicationStatement1-10">MedicationStatement</a></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
         </tr>
@@ -1201,15 +1201,15 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
 			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Patient1-13">Patient</a></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
@@ -1277,7 +1277,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
     <tbody>
 		<tr>
             <td style="width:30%;">Supported implementation guides</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</	a>.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>.</td>
         </tr>
         <tr>
             <td style="width:30%;">FHIR Profile Support</td>
@@ -1333,7 +1333,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
     <tbody>
 		<tr>
             <td style="width:30%;">Supported implementation guides</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</		a>.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>.</td>
         </tr>
 		<tr>
             <td style="width:30%;">FHIR Profile Support</td>
@@ -1427,7 +1427,7 @@ The following table lists resource types that are supported by [IPS Server Capab
         </tr>
         <tr>
             <td style="width: 30%;">OperationDefinition</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 	</tbody>
 </table>
@@ -1672,55 +1672,55 @@ The following table lists resource types that are supported by [US Core Client C
     <tbody>
 		<tr>
             <td style="width: 30%;">CarePlan</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">CareTeam</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
-            <td style="width: 30%;">Coveerage</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 30%;">Coverage</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Device</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Endpoint</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Goal</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">HealthcareService</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">Media</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">MedicationDispense</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">Provenance</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">Questionnaire</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">QuestionnaireResponse</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">ValueSet</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 	</tbody>
 </table>
@@ -1738,7 +1738,7 @@ US Core introduces additional capability requirements in both capability stateme
     <tbody>  
 		  <tr>
             <td style="width:30%;">FHIR Profile Support</td>
-            <td style="width: 70%;">US Core Server <strong>SHALL</strong> support the US Core Patient resource profile AND at least one additional resource profile from the list of US Core Profiles AND and all Must Support US Core Profiles and resources it references.</td>
+            <td style="width: 70%;">US Core Server <strong>SHALL</strong> support the US Core Patient resource profile and at least one additional resource profile from the list of US Core Profiles and all Must Support US Core Profiles and resources it references.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">AllergyIntolerance</td>
@@ -1789,7 +1789,7 @@ US Core introduces additional capability requirements in both capability stateme
 		<tr>
             <td style="width: 70%;"><strong>SHALL</strong> support <code>create</code>, <code>search-type</code> and <code>read</code> interactions.</td>
         </tr>	
-<tr>
+        <tr>
             <td style="width: 70%;"><strong>SHALL</strong> support either both DocumentReference.attachment.url or DocumentReference.attachment.data representations of content.</td>
         </tr>
         <tr>
@@ -1956,55 +1956,55 @@ The following table lists resource types that are supported by [US Core Server C
     <tbody>
         <tr>
             <td style="width: 30%;">CarePlan</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">CareTeam</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
-            <td style="width: 30%;">Coveerage</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 30%;">Coverage</td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Device</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Endpoint</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">Goal</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
         <tr>
             <td style="width: 30%;">HealthcareService</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">Media</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">MedicationDispense</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">Provenance</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">Questionnaire</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">QuestionnaireResponse</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td style="width: 30%;">ValueSet</td>
-            <td style="width: 70%;"><strong><strong>SHOULD</strong></strong></td>
+            <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 	</tbody>
 </table>
