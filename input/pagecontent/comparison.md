@@ -1041,15 +1041,6 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
-		<tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">FHIR Capabilities</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-        </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Supported patch formats</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
@@ -1069,7 +1060,16 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;">FHIR Profile Support</td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">FHIR Capabilities</td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">FHIR resource support</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
@@ -1088,34 +1088,34 @@ The table below identifies the capability statements that are considered equival
         </tr>
 		<tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Security</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="cross_red_circle.svg.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="18" style="width: 15%; text-align: left; vertical-align: middle;">Capabilities by Resource/Profile</td>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#AllergyIntolerance1-1">AllergyIntolerance</a></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">AllergyIntolerance</td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Condition1-2">Condition</a></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">Condition</td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#DiagnosticReport1-3">DiagnosticReport</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">DiagnosticReport</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
@@ -1124,7 +1124,7 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#DocumentReference1-4">DocumentReference</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">DocumentReference</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
@@ -1133,7 +1133,7 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Encounter1-5">Encounter</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">Encounter</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
@@ -1142,7 +1142,7 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Immunization1-6">Immunization</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">Immunization</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
@@ -1151,7 +1151,7 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Location1-7">Location</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">Location</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
@@ -1160,16 +1160,7 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Medication1-8">Medication</a></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#MedicationRequest1-9">MedicationRequest</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">Medication</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
@@ -1178,16 +1169,7 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#MedicationStatement1-10">MedicationStatement</a></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Observation1-11">Observation</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">MedicationRequest</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
@@ -1196,7 +1178,25 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Organization1-12">Organization</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">MedicationStatement</td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">Observation</td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">Organization</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
@@ -1205,7 +1205,7 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Patient1-13">Patient</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">Patient</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
@@ -1214,25 +1214,25 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Practitioner1-14">Practitioner</a></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">Practitioner</td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#PractitionerRole1-15">PractitionerRole</a></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">PractitionerRole</td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Procedure1-16">Procedure</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">Procedure</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
@@ -1241,7 +1241,7 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#RelatedPerson1-17">RelatedPerson</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">RelatedPerson</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
@@ -1250,7 +1250,7 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html#Specimen1-18">Specimen</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">Specimen</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
@@ -1270,7 +1270,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 30%;">Resource type</th>
+            <th style="width: 30%;">Resource/Section</th>
             <th style="width: 70%;">Additional requirements</th>
         </tr>
     </thead>
@@ -1280,11 +1280,47 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;"><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>.</td>
         </tr>
         <tr>
-            <td style="width:30%;">FHIR Profile Support</td>
-            <td style="width: 70%;">IPA Client <strong>SHALL</strong> support the IPA conformance expectations for the Patient resource profile and for each IPA resource type they support.</td>
+            <td style="width:30%;">FHIR resource support</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA conformance expectations for the Patient resource profile and for each IPA resource type they support.</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="width: 30%">Security</td>
+            <td style="width: 70%"><strong>SHALL</strong> follow <a href="https://hl7.org/fhir/R4/security.html">FHIR Security</a> requirements.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%"><strong>SHOULD</strong> follow the security best practices outlined in <a href="https://hl7.org/fhir/R4/security.html">FHIR Security</a> and elsewhere.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%">Clients <strong>SHALL</strong> handle scope-based authorisation failures gracefully.</td>
         </tr>
 		<tr>
-            <td rowspan="5" style="width:30%;">DocumentReference</td>
+            <td rowspan="2" style="width:30%;">AllergyIntolerance</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA AllergyIntolerance profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr>
+		<tr>
+            <td rowspan="5" style="width:30%;">Condition</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA Condition profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL NOT</strong> treat all Condition resources as entries in the current problem list.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> correctly process and display clinicalStatus and verificationStatus.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> continue to function safely when some expected search parameters are not supported.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr>
+		<tr>
+            <td rowspan="7" style="width:30%;">DocumentReference</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA DocumentReference profile and conformance expectations.</td>
+        </tr>
+		<tr>
             <td style="width: 70%;"><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
         <tr>
@@ -1298,22 +1334,96 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
         </tr>
         <tr>
            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>$docref</code> operation.</td>
-        </tr>  
+        </tr> 
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated)</td>
+        </tr>
+		<tr>
+            <td rowspan="2" style="width:30%;">Immunization</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA Immunization profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr>
+		<tr>
+            <td rowspan="2" style="width:30%;">Medication</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA Medication profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr>
         <tr>
-            <td style="width: 30%;">MedicationRequest</td>
+            <td rowspan="4" style="width: 30%;">MedicationRequest</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA MedicationRequest profile and conformance expectations.</td>
+        </tr> 
+		<tr>
+            <td style="width: 70%;">Clients <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
+        </tr>
+		<tr>
             <td style="width: 70%;"><strong>SHOULD</strong> support for category and code search parameters.</td>
-        </tr>   
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr>
+		<tr>
+            <td rowspan="3" style="width:30%;">MedicationStatement</td>
+           <td style="width: 70%;"><strong>SHALL</strong> support the IPA MedicationStatement profile and conformance expectations.</td>
+        </tr> 
+		<tr>
+            <td style="width: 70%;">Clients <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support for category and code search parameters.</td>
+        </tr>
         <tr>
-            <td style="width: 30%;">Observation</td>
+            <td rowspan="4" style="width: 30%;">Observation</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA Observation profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> support the Vital Signs Profile.</td>
+        </tr>
+		<tr>
             <td style="width: 70%;"><strong>SHALL</strong> support <code>patient</code> search parameter.</td>
         </tr>   
+		<tr>
+            <td style="width: 70%;">IPA declares support for `_revinclude=Provenance:target` (no conformance level stated).</td>
+        </tr> 
         <tr>
-            <td rowspan="2" style="width: 30%;">Patient</td>
+            <td rowspan="7" style="width: 30%;">Patient</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA Patient profile and conformance expectations.</td>
+        </tr>
+		<tr>
+			<td style="width: 70%;">Client <strong>SHALL</strong> be able to follow Patient.link(s) to other Patient resources and understand direction of the link.</td>
+		</tr>
+		<tr>
+			<td style="width: 70%;">Client <strong>SHALL</strong> understand the Patient.link.type code.</td>
+		</tr>
+		<tr>
+			<td style="width: 70%;">Client <strong>SHALL</strong> be aware of the linked Patient's <code>active</code> flag and that inactive patients may have relevant information.</td>
+		</tr>
+		<tr>
             <td style="width: 70%;"><strong>SHALL</strong> support Patient.link processing.</td>
         </tr>
         <tr>
             <td style="width: 70%;"><strong>SHOULD</strong> support the <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
         </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr>
+		<tr>
+            <td rowspan="2" style="width:30%;">Practitioner</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA Practitioner profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr> 
+		<tr>
+            <td rowspan="2" style="width:30%;">PractitionerRole</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA PractitionerRole profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr> 
   </tbody>
 </table>
 
@@ -1326,7 +1436,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 30%;">Resource type</th>
+            <th style="width: 30%;">Resource/Section</th>
             <th style="width: 70%;">Additional requirements</th>
         </tr>
     </thead>
@@ -1336,11 +1446,41 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;"><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>.</td>
         </tr>
 		<tr>
-            <td style="width:30%;">FHIR Profile Support</td>
-            <td style="width: 70%;">IPA Client <strong>SHALL</strong> support the IPA Patient resource profile and at least one additional resource profile from the list of IPA profiles.</td>
+            <td style="width:30%;">FHIR resource support</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA Patient resource profile and at least one additional resource profile from the list of IPA profiles.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 30%;">DocumentReference</td>
+            <td rowspan="2" style="width: 30%">Security</td>
+            <td style="width: 70%"><strong>SHALL</strong> follow <a href="https://hl7.org/fhir/R4/security.html">FHIR Security</a> requirements.</td>
+        </tr>
+        <tr>
+            <td style="width: 70%"><strong>SHOULD</strong> follow the security best practices outlined in <a href="https://hl7.org/fhir/R4/security.html">FHIR Security</a> and elsewhere.</td>
+        </tr>
+		<tr>
+            <td rowspan="2" style="width:30%;">AllergyIntolerance</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA AllergyIntolerance profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr>
+		<tr>
+            <td rowspan="4" style="width:30%;">Condition</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA Condition profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> populate Condition.code.coding.display and/or Condition.code.text</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">Servers <strong>SHOULD</strong> avoid leaving clinicalStatus and verificationStatus missing.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr>
+        <tr>
+            <td rowspan="6" style="width: 30%;">DocumentReference</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA DocumentReference profile and conformance expectations.</td>
+        </tr>
+		<tr>
             <td style="width: 70%;"><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
         <tr>
@@ -1352,17 +1492,83 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
 		<tr>
            <td style="width: 70%;"><strong>SHALL</strong> support <code>$docref</code> operation.</td>
         </tr>
-        <tr>
-            <td style="width: 30%;">MedicationRequest</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>category</code> and <code>code</code> search parameters.</td>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr>
+		<tr>
+            <td rowspan="2" style="width:30%;">Immunization</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA Immunization profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr>
+		<tr>
+            <td rowspan="2" style="width:30%;">Medication</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA Medication profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 30%;">Patient</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support Patient.link processing.</td>
+            <td rowspan="4" style="width: 30%;">MedicationRequest</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA MedicationRequest profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">Servers <strong>SHOULD</strong> use codings at the level of a clinical drug.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>category</code> and <code>code</code> search parameters.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr>
+		<tr>
+            <td rowspan="2" style="width:30%;">MedicationStatement</td>
+           <td style="width: 70%;"><strong>SHALL</strong> support the IPA MedicationStatement profile and conformance expectations.</td>
+        </tr> 
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated)</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="width: 30%;">Observation</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA Observation profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> support the Vital Signs Profile.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr> 
+        <tr>
+            <td rowspan="5" style="width: 30%;">Patient</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA Patient profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">Server <strong>SHALL</strong> have no more than one Patient.active = true for the same patient on the server.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">Server <strong>SHALL</strong> use Patient.link cross-link multiple Patient resources for the same person in search Bundles.</td>
         </tr>
         <tr>
             <td style="width: 70%;"><strong>SHOULD</strong> support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
         </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr> 
+		<tr>
+            <td rowspan="2" style="width:30%;">Practitioner</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA Practitioner profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr> 
+		<tr>
+            <td rowspan="2" style="width:30%;">PractitionerRole</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the IPA PractitionerRole profile and conformance expectations.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+        </tr> 
   </tbody>
 </table>
 
@@ -1447,9 +1653,31 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
     </thead>
     <tbody>
 		<tr>
-            <td style="width:30%;">FHIR Profile Support</td>
+            <td style="width:30%;">FHIR resource support</td>
             <td style="width: 70%;">US Core Client <strong>SHALL</strong> support fetching and querying of one or more US Core profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement.</td>
-        </tr>	
+        </tr>
+		<tr>
+            <td rowspan="7" style="width:30%;">Security</td>
+            <td style="width: 70%;"><strong>SHALL</strong> establish a risk analysis and management regime conforming with HIPAA.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> use a single time source for audit and logging.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> maintain audit logs of the various transactions.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> conform to FHIR Communications Security requirements.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> support SMART App Launch for authentication and authorisation.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> implement consent according to local, institutional, and legal policy.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> provide Provenance statements using the US Core Provenance Profile resource and associated requirements.</td>
+        </tr>
         <tr>
             <td rowspan="3" style="width: 30%;">AllergyIntolerance</td>
             <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
@@ -1737,8 +1965,30 @@ US Core introduces additional capability requirements in both capability stateme
     </thead>
     <tbody>  
 		  <tr>
-            <td style="width:30%;">FHIR Profile Support</td>
+            <td style="width:30%;">FHIR resource support</td>
             <td style="width: 70%;">US Core Server <strong>SHALL</strong> support the US Core Patient resource profile and at least one additional resource profile from the list of US Core Profiles and all Must Support US Core Profiles and resources it references.</td>
+        </tr>
+		<tr>
+            <td rowspan="7" style="width:30%;">Security</td>
+            <td style="width: 70%;"><strong>SHALL</strong> establish a risk analysis and management regime conforming with HIPAA.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> use a single time source for audit and logging.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> maintain audit logs of the various transactions.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> conform to FHIR Communications Security requirements.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> support SMART App Launch for authentication and authorisation.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> implement consent according to local, institutional, and legal policy.</td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> provide Provenance statements using the US Core Provenance Profile resource and associated requirements.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">AllergyIntolerance</td>
