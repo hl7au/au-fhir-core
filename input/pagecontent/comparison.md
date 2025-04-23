@@ -1096,7 +1096,7 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="18" style="width: 15%; text-align: left; vertical-align: middle;">Capabilities by Resource/Profile</td>
+            <td rowspan="19" style="width: 15%; text-align: left; vertical-align: middle;">Capabilities by Resource/Profile</td>
             <td style="width: 25%; text-align: left; vertical-align: middle;">AllergyIntolerance</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
