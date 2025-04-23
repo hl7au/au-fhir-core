@@ -53,7 +53,7 @@ The following search parameters **SHALL** be supported:
 
 The following search parameters **SHOULD** be supported:
 
-1. **SHALL** support searching using the **[`identifier`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
+1. **SHOULD** support searching using the **[`identifier`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
 
     `GET [base]/HealthcareService?identifier=[system|][code]`
 
