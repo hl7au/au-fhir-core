@@ -200,14 +200,10 @@ The following IPA profile(s) contain additional requirements. Implementers are a
     </thead>
     <tbody>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
             <td style="width: 25%;">MedicationRequest.reported[x]</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
-        </tr>
-            <td style="width: 25%;">MedicationRequest.doNotPerform</td>
-            <td style="width: 25%;">Element has defined server and client obligations in IPA.</td>
-        <tr>
         </tr>
          <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
@@ -224,10 +220,18 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
+            <td style="width: 25%;">Patient.identifier</td>     
+            <td style="width: 25%;">IPA requires all identifiers to have system, type or assigner.</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">Patient.identifier.value</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Patient.name.text</td>
+            <td style="width: 25%;">IPS recommends this element be present.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.active</td>
