@@ -1141,6 +1141,15 @@ The table below identifies the capability statements that are considered equival
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
+		<tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;">HealthcareService</td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"></td>
+        </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Immunization</td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
