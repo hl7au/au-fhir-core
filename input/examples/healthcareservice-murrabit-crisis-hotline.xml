@@ -7,10 +7,6 @@
         <system value="http://pca.digitalhealth.gov.au/id/pca-healthcare-service" />
         <value value="4d00ad2659cb4b54bd8028798af62631" />
     </identifier>
-    <providedBy>
-        <reference value="Organization/murrabit-hospital" />
-        <display value="Murrabit Public Hospital" />
-    </providedBy>
     <type>
         <coding>
             <system value="http://snomed.info/sct" />

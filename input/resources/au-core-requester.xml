@@ -394,19 +394,19 @@
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>
 </extension>
-<name value="identifier"/>
-<definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-identifier"/>
-<type value="token"/>
-<documentation value="The requester **SHALL** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHALL"/>
-</extension>
 <name value="name"/>
 <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-name"/>
 <type value="string"/>
 </searchParam>
+<searchParam>
+  <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+  <valueCode value="SHOULD"/>
+  </extension>
+  <name value="identifier"/>
+  <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-identifier"/>
+  <type value="token"/>
+  <documentation value="The requester **SHALL** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
+  </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
@@ -423,33 +423,6 @@
 <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-service-type"/>
 <type value="token"/>
 <documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<name value="specialty"/>
-<definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
-<type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<name value="organization"/>
-<definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-organization"/>
-<type value="reference"/>
-<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support chained search organization.identifier using HPI-O identifier as defined in the AU Core Organisation profile.&#xa;&#xa;The responder **SHOULD** support chained search organization.identifier using HPI-O identifier as defined in the AU Core Organisation profile.&#xa;&#xa;The requester **MAY** support chained search organization.name.&#xa;&#xa;The responder **MAY** support chained search organization.name."/>
-</searchParam>
-<searchParam>
-<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-<valueCode value="SHOULD"/>
-</extension>
-<name value="location"/>
-<definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-location"/>
-<type value="reference"/>
-<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **MAY** support chained search location.name.&#xa;&#xa;The responder **MAY** support chained search location.name.&#xa;&#xa;The requester **MAY** support chained search location.address.&#xa;&#xa;The responder **MAY** support chained search location.address."/>
 </searchParam>
 </resource>
 <!-- IMMUNIZATION :: DONE -->

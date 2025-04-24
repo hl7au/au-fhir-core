@@ -8,7 +8,7 @@
   <name value="AUCoreHealthcareService"/>
   <title value="AU Core HealthcareService"/>
   <status value="draft"/>
-  <description value="This profile sets minimum expectations for a HealthcareService resource to record, search, and fetch information about a healthcare service. It is based on the [AU Base HealthcareService](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-healthcareservice.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the HealthcareService resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."/>
+  <description value="This profile sets minimum expectations for a HealthcareService resource when used to record, search, and fetch information about a healthcare service. It is based on the [AU Base HealthcareService](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-healthcareservice.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the HealthcareService resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="HealthcareService"/>
@@ -39,30 +39,6 @@
       <definition value="Identifier for the organization that is used to identify the healthcare service across multiple disparate systems."/>
       <mustSupport value="true" />
     </element>
-    <element id="HealthcareService.providedBy">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-      </extension>
-      <path value="HealthcareService.providedBy" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization" />
-      </type>
-      <mustSupport value="true" />
-    </element>
     <element id="HealthcareService.type">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -86,54 +62,6 @@
         <strength value="extensible"/>
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/service-type-1"/>
       </binding>
-    </element>
-    <element id="HealthcareService.specialty">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-      </extension>
-      <path value="HealthcareService.specialty" />
-      <mustSupport value="true" />
-      <binding>
-        <strength value="extensible"/>
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1"/>
-      </binding>
-    </element>
-    <element id="HealthcareService.location">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
-        </extension>
-      </extension>
-      <path value="HealthcareService.location" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location" />
-      </type>
-      <mustSupport value="true" />
     </element>
     <element id="HealthcareService.name">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
