@@ -223,7 +223,7 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
             <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
             <td style="width: 25%;">Patient.identifier</td>     
-            <td style="width: 25%;">IPA requires all identifiers to have system, type or assigner.</td>
+            <td style="width: 25%;">IPA requires all identifiers to have system, type or assigner (ipa-pat-1).</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.identifier.value</td>
@@ -231,7 +231,7 @@ The following IPA profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">Patient.name.text</td>
-            <td style="width: 25%;">IPS recommends this element be present.</td>
+            <td style="width: 25%;">Element SHOULD be present (ipa-pat-3).</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.active</td>
