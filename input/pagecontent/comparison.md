@@ -1,6 +1,6 @@
 AU Core aligns to, and leverages, international standards and other national standards, in particular:
-- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/) 
-- [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/)
+- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/)
+- [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/)
 - [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/)
 
 Relationships between AU Core, AUCDI, and the above key implementation guides is described in [Relationship with other IGs](relationship.html). 
@@ -31,7 +31,7 @@ The table below provides a profile only comparison from AU Core to profiles in k
         <tr>
             <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Access 1.0.0</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Summary 1.1.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Summary 2.0.0-ballot</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">US Core 7.0.0</th>
         </tr>
     </thead>
@@ -75,7 +75,7 @@ The table below provides a profile only comparison from AU Core to profiles in k
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
@@ -231,49 +231,41 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-immunization.html">IPA-Immunization</a></td>
             <td style="width: 25%;">Immunization.statusReason</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
+            <td rowspan="1" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td rowspan="1" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
             <td style="width: 25%;">MedicationRequest.reported[x]</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">MedicationRequest.dosageInstruction.text</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
          <tr>
-            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationstatement.html">IPA-MedicationStatement</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationstatement.html">IPA-MedicationStatement</a></td>
             <td style="width: 25%;">MedicationStatement.statusReason</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
          <tr>
             <td style="width: 25%;">MedicationStatement.context</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationStatement.informationSource</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">MedicationStatement.dosage.text</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
             <td style="width: 25%;">Patient.identifier.value</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.active</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.link</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
     </tbody>
 </table>
@@ -289,7 +281,7 @@ This version of AU Core has no equivalent profile for the following IPA profiles
 - IPA-DocumentReference
 
 #### International Patient Summary
-[International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/) describes how to represent the International Patient Summary (IPS) using HL7 FHIR. An International Patient Summary  document is an electronic health record extract containing essential healthcare information about a subject of care.
+[International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) describes how to represent the International Patient Summary (IPS) using HL7 FHIR. An International Patient Summary  document is an electronic health record extract containing essential healthcare information about a subject of care.
 
 ##### Additional requirements
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
@@ -298,182 +290,197 @@ The following IPS profile(s) contain additional requirements. Implementers are a
     <thead>
         <tr>
             <th style="width: 25%;">AU Core</th>
-            <th style="width: 25%;">International Patient Summary 1.1.0</th>
+            <th style="width: 25%;">International Patient Summary 2.0.0-ballot</th>
             <th style="width: 25%;">Element</th>
             <th style="width: 25%;">Additional requirements</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-AllergyIntolerance-uv-ips.html">Allergy Intolerance (IPS)</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-AllergyIntolerance-uv-ips.html">Allergy Intolerance (IPS)</a></td>
             <td style="width: 25%;">AllergyIntolerance.patient.reference</td>
-            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">AllergyIntolerance.type</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
-            <td style="width: 25%;">Condition.clinicalStatus</td>
-            <td style="width: 25%;">IPS requires minimum of 1.</td>
+            <td style="width: 25%;">AllergyIntolerance.clinicalStatus</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
+            <td style="width: 25%;">AllergyIntolerance.verificationStatus</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">AllergyIntolerance.code</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">AllergyIntolerance.reaction.manifestation</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">AllergyIntolerance.onset[x]</td>
+            <td style="width: 25%;">Type choice dateTime is flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+            <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
             <td style="width: 25%;">Condition.subject.reference</td>
-            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
-            <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">IPS requires value 'final'.</td>
+            <td style="width: 25%;">Condition.onset[x]</td>
+            <td style="width: 25%;">Type choice dateTime is flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Observation.subject.reference</td>
-            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">Condition.clinicalStatus</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
+            <td style="width: 25%;">Condition.verificationStatus</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.category</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.severity</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.code</td>
+            <td  style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
             <td style="width: 25%;">Immunization.patient.reference</td>
-            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Immunization.vaccineCode</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Medication-uv-ips.html">Medication (IPS)</a></td>
-            <td style="width: 25%;">Medication.ingredient.strength</td>
-            <td style="width: 25%;">IPS requires UCUM for coded quantity units.</td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Medication-uv-ips.html">Medication (IPS)</a></td>
+            <td style="width: 25%;">Medication.code</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Medication.form</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Medication.ingredient</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Medication.ingredient.item[x]</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Medication.ingredient.strength</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Ratio-uv-ips.html">Ratio (IPS)</a> are flagged as <i>Must Support</i>. IPS requires UCUM for coded quantity units. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-MedicationRequest-uv-ips.html">Medication Request (IPS)</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-MedicationRequest-uv-ips.html">Medication Request (IPS)</a></td>
             <td style="width: 25%;">MedicationRequest.subject.reference</td>
-            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
-        </tr>
-        <tr>   
-            <td style="width: 25%;">MedicationRequest.dosageInstruction.text</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>   
             <td style="width: 25%;">MedicationRequest.dosageInstruction.timing</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-MedicationStatement-uv-ips.html">Medication Statement (IPS)</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-MedicationStatement-uv-ips.html">Medication Statement (IPS)</a></td>
             <td style="width: 25%;">MedicationStatement.subject.reference</td>
-            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
-        </tr>
-        <tr>   
-            <td style="width: 25%;">MedicationStatement.effective[x].extension.where (url='http://hl7.org/fhir/StructureDefinition/data-absent-reason')</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
-        </tr>
-        <tr>   
-            <td style="width: 25%;">MedicationStatement.dosage.text</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>   
             <td style="width: 25%;">MedicationStatement.dosage.timing</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>   
+            <td style="width: 25%;">MedicationStatement.code</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
-            <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-laboratory-uv-ips.html">Observation Results: laboratory (IPS)</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html">Observation Results: laboratory/pathology (IPS)</a></td>
             <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">IPS requires value 'final'.</td>
+            <td style="width: 25%;">IPS requires value from <a href="https://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-status-uv-ips.html">Results Status Codes - IPS</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.subject.reference</td>
-            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.performer</td>
             <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Observation.value</td>
-            <td style="width: 25%;">IPS requires UCUM for coded quantity units.</td>
+            <td style="width: 25%;">Observation.category</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-pathology-uv-ips.html">Observation Results: pathology (IPS)</a></td>
-            <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">IPS requires value 'final'.</td>
+            <td style="width: 25%;">Observation.code</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Observation.subject.reference</td>
-            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">Observation.value[x]</td>
+            <td style="width: 25%;">Types string, Quantity and CodeableConceptIPS are flagged as <i>Must Support</i> in IPS.</td>
         </tr>
-        <tr>
-            <td style="width: 25%;">Observation.performer</td>
-            <td style="width: 25%;">IPS requires minimum of 1.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Observation.value</td>
-            <td style="width: 25%;">IPS requires UCUM for coded quantity units.</td>
+         <tr>
+            <td style="width: 25%;">Observation.valueCodeableConcept</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/StructureDefinition-Patient-uv-ips.html">Patient (IPS)</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Patient-uv-ips.html">Patient (IPS)</a></td>
             <td style="width: 25%;">Patient.generalPractitioner</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Practitioner-uv-ips.html">Practitioner (IPS)</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Practitioner-uv-ips.html">Practitioner (IPS)</a></td>
             <td style="width: 25%;">Practitioner.telecom</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>
-        </tr>  
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Procedure-uv-ips.html">Procedure (IPS)</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Procedure-uv-ips.html">Procedure (IPS)</a></td>
+            <td style="width: 25%;">Procedure.code</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">Procedure.subject.reference</td>
-            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Procedure.performed[x]</td>
             <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation - SH: tobacco use</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation - SH: tobacco use</a></td>
             <td style="width: 25%;">Observation.subject.reference</td>
-            <td style="width: 25%;">IPS requires minimum of 1. <i>Must Support</i> element in IPS.</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">IPS requires LOINC code 72166-2.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Observation.value[x]</td>
-            <td style="width: 25%;">IPS requires value from <a href="https://hl7.org/fhir/uv/ips/STU1.1/ValueSet-current-smoking-status-uv-ips.html">Current Smoking Status - IPS</a>.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU1.1/StructureDefinition-Observation-results-uv-ips.html">Observation Results (IPS)</a></td>
-            <td style="width: 25%;">Observation.subject.reference</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPS.</td>    
+            <td style="width: 25%;">IPS requires LOINC code 72166-2. Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
     </tbody>
 </table>
@@ -491,6 +498,7 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - Device (IPS)
 - Device - performer, observer
 - Device Use Statement (IPS)
+- Flag - Alert (IPS)
 - DiagnosticReport (IPS)
 - Imaging Study (IPS)
 - Media observation (Results: laboratory, media)
@@ -526,32 +534,32 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Condition.meta</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.meta.lastUpdated</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.assertedDate</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.recordedDate</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a></td>
             <td style="width: 25%;">Condition.assertedDate</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.encounter</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
          <tr>
             <td style="width: 25%;">Condition.recordedDate</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core Diagnostic Result Observation</a></td>
@@ -565,45 +573,45 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.encounter</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
             <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
             <td style="width: 25%;">Encounter.type</td>
-            <td style="width: 25%;">US Core requires minimum of 1. <i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.meta</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.meta.lastUpdated</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.identifier</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.identifier.system</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.identifier.value</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.participant.period</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.hospitalization</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.hospitalization.dischargeDisposition</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
@@ -613,15 +621,15 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Immunization.statusReason</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Immunization.encounter</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Immunization.location</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
@@ -631,31 +639,31 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Location.identifier</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Location.status</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Location.telecom</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Location.address.line</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Location.address.city</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Location.address.state</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Location.address.postalCode</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
@@ -664,84 +672,80 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
-            <td rowspan="10" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td rowspan="10" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
+            <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
             <td style="width: 25%;">MedicationRequest.medicationCodeableConcept</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.category</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.reported[x]</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">MedicationRequest.dosageInstruction.text</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dosageInstruction.timing</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dosageInstruction.doseAndRate</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dosageInstruction.doseAndRate.dose[x]</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dispenseRequest</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dispenseRequest.numberOfRepeatsAllowed</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dispenseRequest.quantity</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
             <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td>
             <td style="width: 25%;">Organization.active</td>
-            <td style="width: 25%;">US Core requires minimum of 1. <i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.telecom.system</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.telecom.system</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.telecom.value</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.address.line</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.address.city</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.address.state</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.address.postalCode</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.address.country</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
@@ -755,15 +759,15 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.meta</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.meta.lastUpdated</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.encounter</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="13" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
@@ -773,11 +777,11 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Patient.identifier.system</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.identifier.value</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.name</td>
@@ -793,31 +797,31 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Patient.telecom.system</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.telecom.value</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.telecom.use</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.telecom.line</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.telecom.city</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.telecom.state</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.telecom.postalCode</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="12" style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
@@ -827,47 +831,47 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.identifier.system</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.identifier.value</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.telecom</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.telecom.system</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.telecom.value</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address.line</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address.city</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address.state</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address.postalCode</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address.country</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
@@ -877,7 +881,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">PractitionerRole.location</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">PractitionerRole.telecom</td>
@@ -885,21 +889,21 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">PractitionerRole.telecom.system</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">PractitionerRole.telecom.value</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">PractitionerRole.endpoint</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-relatedperson.html">AU Core RelatedPerson</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-relatedperson.html">US Core RelatedPerson Profile</a></td>
             <td style="width: 25%;">RelatedPerson.active</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core and requires minimum of 1.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core and requires minimum of 1.</td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
@@ -913,17 +917,17 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]:valueCodeableConcept</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core. US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.3/expansion">Smoking status comprehensive</a>.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.3/expansion">Smoking status comprehensive</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]:valueQuantity</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-simple-observation.html">US Core Simple Observation Profile</a></td>
             <td style="width: 25%;">Observation.performer</td>
-            <td style="width: 25%;"><i>Must Support</i> element in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr> 
     </tbody>
 </table>

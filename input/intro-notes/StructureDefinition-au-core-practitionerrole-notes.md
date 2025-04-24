@@ -18,7 +18,7 @@
         <td>practitioner</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code></td>
-        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values.<br/><br/>The requester <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile. The responder <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile.</td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHALL</b> provide at least a code value and <b>SHOULD</b> provide both the system and code values.<br/><br/>The requester <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile. The responder <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile.</td>
   </tr>
   <tr>
         <td>_id</td>
