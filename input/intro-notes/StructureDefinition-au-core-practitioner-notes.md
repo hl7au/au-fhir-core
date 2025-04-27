@@ -40,7 +40,7 @@ The following search parameters **SHALL** be supported:
     
       1. GET [base]/Practitioner?identifier=http://ns.electronichealth.net.au/id/hi/hpii/1.0\|8003619900015717
 
-    *Implementation Notes:* Fetches a bundle containing any Practitioner resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle containing all Practitioner resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 #### Optional Search Parameters:
 

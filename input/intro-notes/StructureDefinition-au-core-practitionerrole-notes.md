@@ -61,7 +61,7 @@ The following search parameters **SHALL** be supported:
       1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-provider-number\|2426621B&amp;_include=PractitionerRole:practitioner
       1. GET [base]/PractitionerRole?identifier=http://ns.electronichealth.net.au/id/medicare-provider-number\|2426621B
 
-    *Implementation Notes:* Fetches a bundle containing any PractitionerRole resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle containing all PractitionerRole resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching using the **[`practitioner`](https://hl7.org/fhir/R4/practitionerrole.html#search)** search parameters:
     - **SHOULD** support chained searching of practitioner canonical identifier `practitioner.identifier` (e.g. `practitioner.identifier=[system|][code]`)

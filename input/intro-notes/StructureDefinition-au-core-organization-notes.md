@@ -47,7 +47,7 @@ The following search parameters **SHALL** be supported:
       1. GET [base]/Organization?identifier=http://ns.electronichealth.net.au/id/hi/hpio/1.0\|8003621566684455
       1. GET [base]/Organization?identifier=http://hl7.org.au/id/abn\|23964200000
 
-    *Implementation Notes:* Fetches a bundle containing any Organization resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle containing all Organization resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHALL** support searching based on text name using the **[`name`](https://hl7.org/fhir/R4/organization.html#search)** search parameter:
     
