@@ -74,7 +74,7 @@ The following search parameters **SHALL** be supported:
     
       1. GET [base]/PractitionerRole?practitioner=Practitioner/sandyson-sandy
       1. GET [base]/PractitionerRole?practitioner=Practitioner/sandyson-sandy&amp;_include=PractitionerRole:practitioner
-      1. GET [base]/PractitionerRole?practitioner.identifier=http://ns.electronichealth.net.au/id/hi/hpii/1.0\|8003619900015717
+      1. GET [base]/PractitionerRole?practitioner.identifier=http://ns.electronichealth.net.au/id/medicare-provider-number\|2426621B
 
     *Implementation Notes:* Fetches a bundle of all PractitionerRole resources matching the specified practitioner ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 

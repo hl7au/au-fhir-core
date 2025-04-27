@@ -38,7 +38,7 @@ The following search parameters **SHALL** be supported:
 
     Example:
     
-      1. GET [base]/Practitioner?identifier=http://ns.electronichealth.net.au/id/hi/hpii/1.0\|8003619900015717
+      1. GET [base]/Practitioner?identifier=http://ns.electronichealth.net.au/id/hi/hpii/1.0\|8003616566719020
 
     *Implementation Notes:* Fetches a bundle containing all Practitioner resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
