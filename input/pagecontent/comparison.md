@@ -1,5 +1,5 @@
 AU Core aligns to, and leverages, international standards and other national standards, in particular:
-- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/)
+- [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/)
 - [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/)
 - [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/)
 
@@ -30,7 +30,7 @@ The table below provides a profile only comparison from AU Core to profiles in k
     <thead>
         <tr>
             <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Access 1.0.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Access 1.1.0</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Summary 2.0.0-ballot</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">US Core 7.0.0</th>
         </tr>
@@ -92,7 +92,7 @@ The table below provides a profile only comparison from AU Core to profiles in k
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
@@ -110,7 +110,7 @@ The table below provides a profile only comparison from AU Core to profiles in k
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/><img src="cross_red_circle.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
@@ -184,29 +184,7 @@ The table below provides a profile only comparison from AU Core to profiles in k
 </table>
 
 #### International Patient Access
-[International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
-
-##### Incompatible requirements
-The following IPA profile(s) contain incompatible requirements with the equivalent AU Core profile. Implementers are advised to note that substantial code changes may be required to support these profiles.
-
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
-    <thead>
-        <tr>
-            <th style="width: 25%;">AU Core</th>
-            <th style="width: 25%;">International Patient Access 1.0.0</th>
-            <th style="width: 25%;">Element</th>
-            <th style="width: 25%;">Incompatible requirements</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
-            <td style="width: 25%;">MedicationRequest.requester</td>
-            <td style="width: 25%;">IPA prohibits reference to Organization and RelatedPerson resources.</td>
-        </tr>
-    </tbody>
-</table>
+[International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
 
 ##### Additional requirements
 The following IPA profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
@@ -215,27 +193,21 @@ The following IPA profile(s) contain additional requirements. Implementers are a
     <thead>
         <tr>
             <th style="width: 25%;">AU Core</th>
-            <th style="width: 25%;">International Patient Access 1.0.0</th>
+            <th style="width: 25%;">International Patient Access 1.1.0</th>
             <th style="width: 25%;">Element</th>
             <th style="width: 25%;">Additional requirements</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-immunization.html">IPA-Immunization</a></td>
-            <td style="width: 25%;">Immunization.statusReason</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
-        </tr>
-        <tr>
-            <td rowspan="1" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td rowspan="1" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
             <td style="width: 25%;">MedicationRequest.reported[x]</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
          <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationstatement.html">IPA-MedicationStatement</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-medicationstatement.html">IPA-MedicationStatement</a></td>
             <td style="width: 25%;">MedicationStatement.statusReason</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
@@ -248,10 +220,18 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
+            <td style="width: 25%;">Patient.identifier</td>     
+            <td style="width: 25%;">IPA requires all identifiers to have system, type or assigner (ipa-pat-1).</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">Patient.identifier.value</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Patient.name.text</td>
+            <td style="width: 25%;">Element SHOULD be present (ipa-pat-3).</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.active</td>
