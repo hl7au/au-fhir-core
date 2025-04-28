@@ -959,16 +959,18 @@ This version of AU Core has no equivalent profile for the following US Core prof
 As part of capability statement comparison, the supported resource types, interactions (e.g. <code>read</code>, <code>search-type</code>), search parameters, combined search parameter support, operations, and other conformance expectations for requesters (clients) or responders (servers) are evaluated. 
 
 #### CapabilityStatement mapping
-The capability statements used for comparison are defined in the AU Core, International Patient Access, International Patient Summary, and US Core specifications. Each specification describes the expected conformance of systems acting as either requesters (clients) or responders (servers).
+The capability statements used for comparison are defined in the AU Core, International Patient Access, International Patient Summary, and US Core specifications. Each CapabilityStatement defines the conformance requirements and expectations of systems acting as either requsters (clients) ot responders (servers). 
 
-The table below identifies the capability statements that are considered equivalent for the purposes of comparison. Only capability statements that describe client or server conformance are included. Descriptions are provided to clarify the role of each CapabilityStatement in its respective specification. Where no equivalent capability statement exists, this is indicated using the 'No equivalent capability statement' icon.
+The AU Core Requester defines the conformance requirements and expectations of a client system responsible for initiating queries for information from an AU Core Responder. The AU Core Responder defines the conformance requirements and expectations of a server system responsible for providing responses to queries submitted by an AU Core Requester. Other implementation guides, including International Patient Access, International Patient Summary, and US Core, define similar client and server actors and capabilities. 
+ 
+For the purpose of comparison, CapabilityStatements are mapped from the AU Core Requester or AU Core Responder to the corresponding CapabilityStatement in other specifications that describe actors with similar roles and responsibilies. CapabilityStatements are considered comparable where they define actors with similar responsibilities in the exchange of healthcare information. Where no equivalent capability statement exists, this is indicated using the ‘No equivalent capability statement’ icon in the table below.
 
-<table border="1" style="width: 50%; margin-left: 0; margin-right: auto; border-collapse: collapse;">
+<table border="1" style="width: 100%; margin-left: 0; margin-right: auto; border-collapse: collapse;">
     <thead>
     <tr>
         <th style="width: 25%; text-align: left; vertical-align: middle;">AU Core</th>
-        <th style="width: 25%; text-align: left; vertical-align: middle;">IPA 1.1.0</th>
-        <th style="width: 25%; text-align: left; vertical-align: middle;">IPS 2.0.0-ballot</th>
+        <th style="width: 25%; text-align: left; vertical-align: middle;">International Patient Access 1.1.0</th>
+        <th style="width: 25%; text-align: left; vertical-align: middle;">International Patient Summary 2.0.0-ballot</th>
 		<th style="width: 25%; text-align: left; vertical-align: middle;">US Core 7.0.0</th>
     </tr>
   </thead>
@@ -976,22 +978,21 @@ The table below identifies the capability statements that are considered equival
     <tr>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-client.html">IPA Client</a></td>
-		<td style="width: 15%; text-align: left; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-		<td style="width: 15%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
     </tr>
 	<tr>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
-		<td style="width: 15%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html">IPS Server</a></td>
-		<td style="width: 15%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html">IPS Server</a></td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
     </tr>
   </tbody>
 </table>       
 
 #### CapabilityStatement comparison details
 
-The table below provides a comparison of capability statements from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system that meets the expectations of an International Patient Access capability statement **MAY NOT** meet the expectations defined in AU Core. The comparison is based on '<strong>SHALL</strong> (mandatory) and '<strong>SHOULD</strong>' (recommended) conformance expectations. Expectations marked as 'MAY' (optional) are excluded from consideration in this comparison. 
-
+The table below provides a comparison of capability statements from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system that meets the expectations of an International Patient Access capability statement **MAY NOT** meet the expectations defined in AU Core. The comparison is based on '<strong>SHALL</strong> (mandatory) and '<strong>SHOULD</strong>' (recommended) conformance expectations. Expectations marked as '<strong>MAY</strog>' (optional) are excluded from consideration in this comparison. 
 
 **Legend:**
 
@@ -1029,7 +1030,7 @@ The table below provides a comparison of capability statements from AU Core to t
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
 			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
@@ -1038,7 +1039,7 @@ The table below provides a comparison of capability statements from AU Core to t
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
 			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
@@ -1210,7 +1211,7 @@ The table below provides a comparison of capability statements from AU Core to t
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
 			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
@@ -1403,7 +1404,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;"><strong>SHOULD</strong> support for category and code search parameters.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle MedicationStatement.status, MedicationStatement.statusReason, MedicationStatement.medication[x], MedicationStatement.subject, MedicationStatement.effective[x], MedicationStatement.dosageInstruction, and MedicationStatement.dosageInstruction.text. (UP)</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle MedicationStatement.status, MedicationStatement.statusReason, MedicationStatement.medication[x], MedicationStatement.subject, MedicationStatement.effective[x], MedicationStatement.dosage, and MedicationStatement.dosage.text. (UP)</td>
 		</tr>
         <tr>
             <td rowspan="5" style="width: 30%;">Observation</td>
@@ -1519,7 +1520,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
         <tr>
-            <td rowspan="7" style="width: 30%;">DocumentReference</td>
+            <td rowspan="8" style="width: 30%;">DocumentReference</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA DocumentReference profile. (TODO: point to IPA profile comparison Additional profiles)</td>
         </tr>
 		<tr>
@@ -1528,11 +1529,14 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
         <tr>
             <td style="width: 70%;"><strong>SHALL</strong> support <code>patient</code> and <code>_id</code> search parameters.</td>
         </tr>
-		 <tr>
-           <td style="width: 70%;"><strong>SHALL</strong> support <code>patient+category</code>, <code>patient+category+date</code>, and <code>patient+type</code>, and recommends (<strong>SHOULD</strong>) support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters combination.</td>
+		<tr>
+           <td style="width: 70%;"><strong>SHALL</strong> support <code>patient+category</code>, <code>patient+category+date</code>, and <code>patient+type</code> search parameters. (UP)</td>
         </tr>
 		<tr>
            <td style="width: 70%;"><strong>SHALL</strong> support <code>$docref</code> operation.</td>
+        </tr>
+		<tr>
+           <td style="width: 70%;"><strong>SHOULD</strong> support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters combination.</td>
         </tr>
 		<tr>
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
@@ -1571,14 +1575,17 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known MedicationRequest.reported[x]. (UP)</td>
 		</tr>
 		<tr>
-            <td rowspan="2" style="width:30%;">MedicationStatement</td>
+            <td rowspan="3" style="width:30%;">MedicationStatement</td>
            <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA MedicationStatement profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr> 
 		<tr>
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated)</td>
         </tr>
+		<tr>
+            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known MedicationStatement.context and MedicationStatement.informationSource. (UP)</td>
+		</tr>
         <tr>
-            <td rowspan="3" style="width: 30%;">Observation</td>
+            <td rowspan="4" style="width: 30%;">Observation</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Observation profile.</td>
         </tr>
 		<tr>
