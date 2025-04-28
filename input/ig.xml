@@ -755,7 +755,7 @@
 				<reference value="HealthcareService/murrabit-crisis-hotline"/>
 			</reference>
 			<name value="HealthcareService - Murrabit Crisis Hotline"/>
-			<description value="Shows an example of a 24/7 telephone counselling service, Murrabit Crisis Hotline, for the *AU Core HealthcareService* profile with healthcare service types, identifier and a telephone contact number."/>
+			<description value="Shows an example of a 24/7 telephone counselling service, Murrabit Crisis Hotline, for the *AU Core HealthcareService* profile, with healthcare service types, identifier and a telephone contact number."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
 		</resource>
 		<!--PAGES-->
