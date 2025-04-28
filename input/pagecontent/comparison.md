@@ -958,16 +958,12 @@ This version of AU Core has no equivalent profile for the following US Core prof
 ### Capability statement comparison
 As part of capability statement comparison, the supported resource types, interactions (e.g. <code>read</code>, <code>search-type</code>), search parameters, combined search parameter support, operations, and other conformance expectations for requesters (clients) or responders (servers) are evaluated. 
 
-The table below provides a comparison of capability statements from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system that meets the expectations of an International Patient Access capability statement **MAY NOT** meet the expectations defined in AU Core. The comparison is based on '<strong>SHALL</strong> (mandatory) and '<strong>SHOULD</strong>' (recommended) conformance expectations. Expectations marked as 'MAY' (optional) are excluded from consideration in this comparison. 
-
-The comparisons are presented separately for requester (client) and responder (server) capability statements to clearly distinguish alignment and any gaps with key international implementation guides.
-
 #### CapabilityStatement mapping
 The capability statements used for comparison are defined in the AU Core, International Patient Access, International Patient Summary, and US Core specifications. Each specification describes the expected conformance of systems acting as either requesters (clients) or responders (servers).
 
 The table below identifies the capability statements that are considered equivalent for the purposes of comparison. Only capability statements that describe client or server conformance are included. Descriptions are provided to clarify the role of each CapabilityStatement in its respective specification. Where no equivalent capability statement exists, this is indicated using the 'No equivalent capability statement' icon.
 
-<table border="1" style="width: 50%; margin-left: 0; margin: auto; border-collapse: collapse;">
+<table border="1" style="width: 50%; margin-left: 0; margin-right: auto; border-collapse: collapse;">
     <thead>
     <tr>
         <th style="width: 25%; text-align: left; vertical-align: middle;">AU Core</th>
@@ -991,6 +987,10 @@ The table below identifies the capability statements that are considered equival
     </tr>
   </tbody>
 </table>       
+
+#### CapabilityStatement comparison details
+
+The table below provides a comparison of capability statements from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system that meets the expectations of an International Patient Access capability statement **MAY NOT** meet the expectations defined in AU Core. The comparison is based on '<strong>SHALL</strong> (mandatory) and '<strong>SHOULD</strong>' (recommended) conformance expectations. Expectations marked as 'MAY' (optional) are excluded from consideration in this comparison. 
 
 
 **Legend:**
@@ -1143,12 +1143,12 @@ The table below identifies the capability statements that are considered equival
         </tr>
 		<tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">HealthcareService</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Immunization</td>
@@ -1303,14 +1303,17 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%">Clients <strong>SHALL</strong> handle scope-based authorisation failures gracefully.</td>
         </tr>
 		<tr>
-            <td rowspan="2" style="width:30%;">AllergyIntolerance</td>
+            <td rowspan="3" style="width:30%;">AllergyIntolerance</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA AllergyIntolerance profile.</td>
         </tr>
 		<tr>
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
+        <tr>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle AllergyIntolerance.clinicalStatus, AllergyIntolerance.verificationStatus, and AllergyIntolerance.code. (UP)</td>
+		</tr>
 		<tr>
-            <td rowspan="5" style="width:30%;">Condition</td>
+            <td rowspan="6" style="width:30%;">Condition</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Condition profile.</td>
         </tr>
 		<tr>
@@ -1325,8 +1328,11 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
 		<tr>
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
+        <tr>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Condition.clinicalStatus, Condition.verificationStatus, and Condition.code. (UP)</td>
+		</tr>
 		<tr>
-            <td rowspan="7" style="width:30%;">DocumentReference</td>
+            <td rowspan="8" style="width:30%;">DocumentReference</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA DocumentReference profile. (TODO: point to IPA profile comparison Additional profiles)</td>
         </tr>
 		<tr>
@@ -1348,21 +1354,30 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated)</td>
         </tr>
 		<tr>
-            <td rowspan="2" style="width:30%;">Immunization</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.contentType, DocumentReference.content.data, DocumentReference.content.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. (NEW)</td>
+		</tr>
+		<tr>
+            <td rowspan="3" style="width:30%;">Immunization</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Immunization profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
 		<tr>
-            <td rowspan="2" style="width:30%;">Medication</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Immunization.status, Immunization.statusReason, Immunization.vaccineCode, Immunization.patient and Immunization.occurence[x]. (UP)</td>
+		</tr>
+		<tr>
+            <td rowspan="3" style="width:30%;">Medication</td>
             <td style="width: 70%;"><strong>SHALL</strong> support the IPA Medication profile and conformance expectations.</td>
         </tr>
 		<tr>
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
+		<tr>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Medication.code. (UP)</td>
+		</tr>
         <tr>
-            <td rowspan="4" style="width: 30%;">MedicationRequest</td>
+            <td rowspan="5" style="width: 30%;">MedicationRequest</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA MedicationRequest profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr> 
 		<tr>
@@ -1375,7 +1390,10 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
 		<tr>
-            <td rowspan="3" style="width:30%;">MedicationStatement</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle MedicationRequest.status, MedicationRequest.doNotPerform, MedicationRequest.reported[x], MedicationRequest.medication[x], MedicationRequest.subject, MedicationRequest.encounter, MedicationRequest.requester, MedicationRequest.dosageInstruction, MedicationRequest.dosageInstruction.text. (UP)</td>
+		</tr>
+		<tr>
+            <td rowspan="4" style="width:30%;">MedicationStatement</td>
            <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA MedicationStatement profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr> 
 		<tr>
@@ -1384,8 +1402,11 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
 		<tr>
             <td style="width: 70%;"><strong>SHOULD</strong> support for category and code search parameters.</td>
         </tr>
+		<tr>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle MedicationStatement.status, MedicationStatement.statusReason, MedicationStatement.medication[x], MedicationStatement.subject, MedicationStatement.effective[x], MedicationStatement.dosageInstruction, and MedicationStatement.dosageInstruction.text. (UP)</td>
+		</tr>
         <tr>
-            <td rowspan="4" style="width: 30%;">Observation</td>
+            <td rowspan="5" style="width: 30%;">Observation</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Observation profile.</td>
         </tr>
 		<tr>
@@ -1397,8 +1418,11 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
 		<tr>
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr> 
+		<tr>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Observation.status, Observation.category, Observation.code, Observation.subject, Observation.effective[x], Observation.value[x], and Observation.dataAbsentReason. (UP)</td>
+		</tr>
         <tr>
-            <td rowspan="7" style="width: 30%;">Patient</td>
+            <td rowspan="8" style="width: 30%;">Patient</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Patient profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
@@ -1420,19 +1444,28 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
 		<tr>
-            <td rowspan="2" style="width:30%;">Practitioner</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Patient.identifier, Patient.gender, Patient.birthDate, and Patient.link.(UP)</td>
+		</tr>
+		<tr>
+            <td rowspan="3" style="width:30%;">Practitioner</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Practitioner profile.</td>
         </tr>
 		<tr>
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr> 
 		<tr>
-            <td rowspan="2" style="width:30%;">PractitionerRole</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Practitioner.name. (UP)</td>
+		</tr>
+		<tr>
+            <td rowspan="3" style="width:30%;">PractitionerRole</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA PractitionerRole profile.</td>
         </tr>
 		<tr>
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr> 
+		<tr>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle PractitionerRole.practitioner. (UP)</td>
+		</tr>
   </tbody>
 </table>
 
@@ -1486,7 +1519,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
         <tr>
-            <td rowspan="6" style="width: 30%;">DocumentReference</td>
+            <td rowspan="7" style="width: 30%;">DocumentReference</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA DocumentReference profile. (TODO: point to IPA profile comparison Additional profiles)</td>
         </tr>
 		<tr>
@@ -1505,6 +1538,9 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
 		<tr>
+            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.contentType, DocumentReference.content.data, DocumentReference.content.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. (NEW)</td>
+		</tr>
+		<tr>
             <td rowspan="2" style="width:30%;">Immunization</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Immunization profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
@@ -1519,7 +1555,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 30%;">MedicationRequest</td>
+            <td rowspan="5" style="width: 30%;">MedicationRequest</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA MedicationRequest profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
@@ -1531,6 +1567,9 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
 		<tr>
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
+		<tr>
+            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known MedicationRequest.reported[x]. (UP)</td>
+		</tr>
 		<tr>
             <td rowspan="2" style="width:30%;">MedicationStatement</td>
            <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA MedicationStatement profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
@@ -1548,8 +1587,11 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
 		<tr>
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr> 
+		<tr>
+            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known MedicationStatement.statusReason, MedicationStatement.context, and MedicationStatement.informationSource. (UP)</td>
+		</tr>
         <tr>
-            <td rowspan="5" style="width: 30%;">Patient</td>
+            <td rowspan="7" style="width: 30%;">Patient</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Patient profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
@@ -1564,6 +1606,12 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
 		<tr>
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr> 
+		<tr>
+            <td style="width: 70%;">Servers <strong>SHALL</strong>:explain Patient.identifier. (UP)</td>
+		</tr>
+		<tr>
+            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known Patient.identifier.value, Patient.active, and Patient.link. (UP)</td>
+		</tr>
 		<tr>
             <td rowspan="2" style="width:30%;">Practitioner</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Practitioner profile.</td>
@@ -1929,10 +1977,6 @@ The following table lists resource types that are supported by [US Core Client C
         </tr>
         <tr>
             <td style="width: 30%;">Goal</td>
-            <td style="width: 70%;"><strong>SHOULD</strong></td>
-        </tr>
-        <tr>
-            <td style="width: 30%;">HealthcareService</td>
             <td style="width: 70%;"><strong>SHOULD</strong></td>
         </tr>
 		<tr>
