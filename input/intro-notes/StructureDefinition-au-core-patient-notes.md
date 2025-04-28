@@ -88,6 +88,8 @@
 
 #### Mandatory Search Parameters
 
+The following search parameters **SHALL** be supported:
+
 1. **SHALL** support searching using the **[`_id`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
     
     `GET [base]/Patient?_id=[id]`
@@ -108,14 +110,14 @@
       1. GET [base]/Patient?identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361
       1. GET [base]/Patient?identifier=http://example.org/fhir/mrn\|12345
 
-    *Implementation Notes:* Fetches a bundle containing any Patient resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle containing all Patient resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 
 #### Optional Search Parameters:
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
-1. **SHOULD** support searching by a responder-defined search that matches any of the string fields in the HumanName, including family, given, prefix, suffix, and/or text using the **[`name`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
+1. **SHOULD** support searching by a responder-defined search that matches any string field in HumanName, including family, given, prefix, suffix, and/or text using the **[`name`](https://hl7.org/fhir/R4/patient.html#search)** search parameter:
     
     `GET [base]/Patient?name=[string]`
 

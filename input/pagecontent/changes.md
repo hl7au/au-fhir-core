@@ -13,6 +13,8 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support to MedicationStatement.dosage.text [FHIR-50101](https://jira.hl7.org/browse/FHIR-50101)
 - Added [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html), including interaction support and replacing references to AU Base Related Person with AU Core RelatedPerson [FHIR-49745](https://jira.hl7.org/browse/FHIR-49745), [FHIR-49746](https://jira.hl7.org/browse/FHIR-49746), [FHIR-44600](https://jira.hl7.org/browse/FHIR-44600), [FHIR-49747](https://jira.hl7.org/browse/FHIR-49747).
 - Added [AU Core HealthcareService](StructureDefinition-au-core-healthcareservice.html) [FHIR-49934](https://jira.hl7.org/browse/FHIR-49934), including interaction support.
+- [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html): clarified that this profile is for specialist and other (non imaging or pathology) results, and added profile-specific implementation guidance to see AU Core Pathology Result Observation profile for pathology results [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
+- [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html): Added profile-specific implementation guidance to see AU Core Diagnostic Result Observation profile for non imaging or pathology results  [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
 
 
 ### Release 1.0.0
