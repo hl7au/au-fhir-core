@@ -23,17 +23,7 @@
     </type>
     <name value="Murrabit Crisis Hotline" />
     <telecom>
-        <extension url="http://hl7.org.au/fhir/StructureDefinition/contact-purpose">
-            <valueCodeableConcept>
-                <coding>
-                    <system value="http://terminology.hl7.org.au/CodeSystem/contact-purpose" />
-                    <code value="emergency" />
-                    <display value="Emergency" />
-                </coding>
-            </valueCodeableConcept>
-        </extension>
         <system value="phone" />
         <value value="1800975708" />
-        <use value="work" />
     </telecom>
 </HealthcareService>

@@ -47,7 +47,7 @@ The following search parameters **SHALL** be supported:
 
     1. GET [base]/HealthcareService?name=Albion%20Hospital%20Radiology%20Service
 
-    *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
+    *Implementation Notes:* Fetches a bundle containing all HealthcareService resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 #### Optional Search Parameters:
 
@@ -59,9 +59,9 @@ The following search parameters **SHOULD** be supported:
 
     Example:
     
-      1. GET [base]/HealthcareService?identifier=http://ns.electronichealth.net.au/id/hi/hpio/1.0\|8003621566684455
+      1. GET [base]/HealthcareService?identifier=http://ns.electronichealth.net.au/id/hi/hpio/1.0\|8003626566707032
 
-    *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle containing all HealthcareService resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the **[`_id`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
  
@@ -80,5 +80,6 @@ The following search parameters **SHOULD** be supported:
     Example:
 
     1. GET [base]/HealthcareService?service-type=http://snomed.info/sct\|1223451000168109
+    1. GET [base]/HealthcareService?service-type=1223451000168109
 
-    *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified healthcare service type ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle containing all HealthcareService resources matching the specified service type ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
