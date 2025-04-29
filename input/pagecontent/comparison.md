@@ -16,13 +16,13 @@ The table below provides a profile only comparison from AU Core to profiles in k
 
 **Legend:**
 
-<img src="green_checkmark.svg.png" width="20"/> **Compliant**: An AU Core compliant resource meets all requirements of the compared profile.
+<img src="green_checkmark.png" width="20"/> **Compliant**: An AU Core compliant resource meets all requirements of the compared profile.
 
-<img src="orange_checkmark.svg.png" width="20"/> **Additional requirements**: An AU Core compliant resource is compatible, but additional changes may be needed to meet all requirements of the compared profile. Where additional requirements are identified, more information is provided in the sections below.
+<img src="orange_checkmark.png" width="20"/> **Additional requirements**: An AU Core compliant resource is compatible, but additional changes may be needed to meet all requirements of the compared profile. Where additional requirements are identified, more information is provided in the sections below.
 
-<img src="cross_red_circle.svg.png" width="20"/> **Incompatible**: An AU Core compliant resource is incompatible with the compared profile. A resource cannot be compliant to both. Where incompatible requirements are identified, more information is provided in the sections below.
+<img src="cross_red_circle.png" width="20"/> **Incompatible**: An AU Core compliant resource is incompatible with the compared profile. A resource cannot be compliant to both. Where incompatible requirements are identified, more information is provided in the sections below.
 
-<img src="minus_symbol.svg.png" width="20"/> **No equivalent profile**: No equivalent profile for comparison.
+<img src="minus_symbol.png" width="20"/> **No equivalent profile**: No equivalent profile for comparison.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -36,147 +36,147 @@ The table below provides a profile only comparison from AU Core to profiles in k
     <tbody>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-bloodpressure.html">AU Core Blood Pressure</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-bodyheight.html">AU Core Body Height</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-bodytemp.html">AU Core Body Temperature</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-bodyweight.html">AU Core Body Weight</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/><img src="cross_red_circle.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/><img src="cross_red_circle.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
          <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-relatedperson.html">AU Core RelatedPerson</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-resprate.html">AU Core Respiration Rate</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
     </tbody>
 </table>
@@ -978,7 +978,7 @@ For the purpose of comparison, CapabilityStatements are mapped from the AU Core 
     <tr>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-client.html">IPA Client</a></td>
-		<td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
 		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
     </tr>
 	<tr>
@@ -996,13 +996,13 @@ The table below provides a comparison of capability statements from AU Core to t
 
 **Legend:**
 
-<img src="green_checkmark.svg.png" width="20"/> **Compliant**: A system conforming to the AU Core requester/ responder expectations meets all mandatory (<strong>SHALL</strong>) requirements of the compared implementation guide capability statement. While the implementation guide may include '<strong>SHOULD</strong>' (recommended) and 'MAY' (optional) expectations, these do not impact the compliant status. Where '<strong>SHOULD</strong>' additional expectations are identified, more details are provided in the sections below.  
+<img src="green_checkmark.png" width="20"/> **Compliant**: A system conforming to the AU Core requester/ responder expectations meets all mandatory (<strong>SHALL</strong>) requirements of the compared implementation guide capability statement. While the implementation guide may include '<strong>SHOULD</strong>' (recommended) and 'MAY' (optional) expectations, these do not impact the compliant status. Where '<strong>SHOULD</strong>' additional expectations are identified, more details are provided in the sections below.  
 
-<img src="orange_checkmark.svg.png" width="20"/> **Additional requirements**: A system conforming to the AU Core capability statement aligns with but may require additional modifications to meet the stricter requirements of the compared capability statement. Where additional requirements are identified, more details are provided in the sections below.
+<img src="orange_checkmark.png" width="20"/> **Additional requirements**: A system conforming to the AU Core capability statement aligns with but may require additional modifications to meet the stricter requirements of the compared capability statement. Where additional requirements are identified, more details are provided in the sections below.
 
-<img src="cross_red_circle.svg.png" width="20"/> **Incompatible**: A system conforming to the AU Core capability statement has conformance expectations that conflict with the mandatory requirements of the compared implementation guide, making full conformance to both impossible. Where incompatible requirements are identified, more details are provided in the sections below.
+<img src="cross_red_circle.png" width="20"/> **Incompatible**: A system conforming to the AU Core capability statement has conformance expectations that conflict with the mandatory requirements of the compared implementation guide, making full conformance to both impossible. Where incompatible requirements are identified, more details are provided in the sections below.
 
-<img src="minus_symbol.svg.png" width="20"/> **No equivalent capability statement**: No equivalent capability statement for comparison.
+<img src="minus_symbol.png" width="20"/> **No equivalent capability statement**: No equivalent capability statement for comparison.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -1026,247 +1026,247 @@ The table below provides a comparison of capability statements from AU Core to t
         <tr>
             <td rowspan="8" style="width: 15%; text-align: left; vertical-align: middle;">FHIR RESTful Capabilities (system wide)</td>
             <td style="width: 25%; text-align: left; vertical-align: middle;">FHIR version</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Supported formats</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Supported patch formats</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Supported implementation guides</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
 		<tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">FHIR capabilities</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">FHIR resource support</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">System wide interactions</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
 		<tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Security</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="19" style="width: 15%; text-align: left; vertical-align: middle;">Capabilities by Resource/Profile</td>
             <td style="width: 25%; text-align: left; vertical-align: middle;">AllergyIntolerance</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Condition</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">DiagnosticReport</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">DocumentReference</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Encounter</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
 		<tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">HealthcareService</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Immunization</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Location</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Medication</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">MedicationRequest</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">MedicationStatement</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Observation</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Organization</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Patient</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Practitioner</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">PractitionerRole</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Procedure</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">RelatedPerson</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;">Specimen</td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 10%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
     </tbody>
 </table>    
@@ -1311,7 +1311,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
         <tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle AllergyIntolerance.clinicalStatus, AllergyIntolerance.verificationStatus, and AllergyIntolerance.code. (UP)</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle AllergyIntolerance.clinicalStatus, AllergyIntolerance.verificationStatus, and AllergyIntolerance.code. </td>
 		</tr>
 		<tr>
             <td rowspan="6" style="width:30%;">Condition</td>
@@ -1330,7 +1330,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
         <tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Condition.clinicalStatus, Condition.verificationStatus, and Condition.code. (UP)</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Condition.clinicalStatus, Condition.verificationStatus, and Condition.code. </td>
 		</tr>
 		<tr>
             <td rowspan="8" style="width:30%;">DocumentReference</td>
@@ -1346,16 +1346,16 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;"><strong>SHOULD</strong> support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-           <td style="width: 30%;"><strong>SHOULD</strong> support <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> the search parameter combinations.</td>
+           <td style="width: 30%;"><strong>SHOULD</strong> support <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> the search parameter combinations. </td>
         </tr>
         <tr>
-           <td style="width: 70%;"><strong>SHOULD</strong> support the <code>$docref</code> operation.</td>
+           <td style="width: 70%;"><strong>SHOULD</strong> support the <code>$docref</code> operation. </td>
         </tr> 
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated)</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). </td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.contentType, DocumentReference.content.data, DocumentReference.content.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. (NEW)</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.contentType, DocumentReference.content.data, DocumentReference.content.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. </td>
 		</tr>
 		<tr>
             <td rowspan="3" style="width:30%;">Immunization</td>
@@ -1365,7 +1365,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Immunization.status, Immunization.statusReason, Immunization.vaccineCode, Immunization.patient and Immunization.occurence[x]. (UP)</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Immunization.status, Immunization.statusReason, Immunization.vaccineCode, Immunization.patient and Immunization.occurence[x]. </td>
 		</tr>
 		<tr>
             <td rowspan="3" style="width:30%;">Medication</td>
@@ -1542,7 +1542,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
             <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.contentType, DocumentReference.content.data, DocumentReference.content.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. (NEW)</td>
+            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.contentType, DocumentReference.content.data, DocumentReference.content.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. </td>
 		</tr>
 		<tr>
             <td rowspan="2" style="width:30%;">Immunization</td>
