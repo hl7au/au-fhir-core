@@ -1,0 +1,24 @@
+<HealthcareService xmlns="http://hl7.org/fhir">
+    <id value="physiotherapy" />
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice" />
+    </meta>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="722140001" />
+            <display value="Physiotherapy service" />
+        </coding>
+    </type>
+    <name value="CoreStrength Physiotherapy" />
+    <telecom>
+        <system value="phone" />
+        <value value="0755504444" />
+        <use value="work" />
+    </telecom>
+    <telecom>
+        <system value="email" />
+        <value value="reception@corestrength.example.org." />
+        <use value="work" />
+    </telecom>
+</HealthcareService>
