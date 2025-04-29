@@ -1287,7 +1287,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
     <tbody>
 		<tr>
             <td style="width:30%;">Supported implementation guides</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>. <img src="arrow_up.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width:30%;">FHIR resource support</td>
@@ -1295,177 +1295,177 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
         </tr>
         <tr>
             <td rowspan="3" style="width: 30%">Security</td>
-            <td style="width: 70%"><strong>SHALL</strong> follow <a href="https://hl7.org/fhir/R4/security.html">FHIR Security</a> requirements.</td>
+            <td style="width: 70%"><strong>SHALL</strong> follow <a href="https://hl7.org/fhir/R4/security.html">FHIR Security</a> requirements. <img src="arrow_up.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%"><strong>SHOULD</strong> follow the security best practices outlined in <a href="https://hl7.org/fhir/R4/security.html">FHIR Security</a> and elsewhere.</td>
+            <td style="width: 70%"><strong>SHOULD</strong> follow the security best practices outlined in <a href="https://hl7.org/fhir/R4/security.html">FHIR Security</a> and elsewhere. <img src="arrow_up.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%">Clients <strong>SHALL</strong> handle scope-based authorisation failures gracefully.</td>
+            <td style="width: 70%">Clients <strong>SHALL</strong> handle scope-based authorisation failures gracefully.<img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="3" style="width:30%;">AllergyIntolerance</td>
-            <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA AllergyIntolerance profile.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA AllergyIntolerance profile.<img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).<img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle AllergyIntolerance.clinicalStatus, AllergyIntolerance.verificationStatus, and AllergyIntolerance.code. </td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle AllergyIntolerance.clinicalStatus, AllergyIntolerance.verificationStatus, and AllergyIntolerance.code.<img src="arrow_up.png" width="20"/></td>
 		</tr>
 		<tr>
             <td rowspan="6" style="width:30%;">Condition</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Condition profile.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL NOT</strong> treat all Condition resources as entries in the current problem list.</td>
+            <td style="width: 70%;"><strong>SHALL NOT</strong> treat all Condition resources as entries in the current problem list.<img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> correctly process and display clinicalStatus and verificationStatus.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> correctly process and display clinicalStatus and verificationStatus.<img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> continue to function safely when some expected search parameters are not supported.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> continue to function safely when some expected search parameters are not supported.<img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).<img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Condition.clinicalStatus, Condition.verificationStatus, and Condition.code. </td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Condition.clinicalStatus, Condition.verificationStatus, and Condition.code.<img src="arrow_up.png" width="20"/></td>
 		</tr>
 		<tr>
             <td rowspan="8" style="width:30%;">DocumentReference</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA DocumentReference profile. (TODO: point to IPA profile comparison Additional profiles)</td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.<img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support the <code>patient</code> search parameter.</td> 
+            <td style="width: 70%;"><strong>SHALL</strong> support the <code>patient</code> search parameter.<img src="plus_sign.png" width="20"/></td> 
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_id</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_id</code> search parameter.<img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-           <td style="width: 30%;"><strong>SHOULD</strong> support <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> the search parameter combinations. </td>
+           <td style="width: 30%;"><strong>SHOULD</strong> support <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> the search parameter combinations.<img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-           <td style="width: 70%;"><strong>SHOULD</strong> support the <code>$docref</code> operation. </td>
+           <td style="width: 70%;"><strong>SHOULD</strong> support the <code>$docref</code> operation.<img src="plus_sign.png" width="20"/></td>
         </tr> 
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). </td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).<img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.contentType, DocumentReference.content.data, DocumentReference.content.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. </td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.contentType, DocumentReference.content.data, DocumentReference.content.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period.<img src="plus_sign.png" width="20"/> </td>
 		</tr>
 		<tr>
             <td rowspan="3" style="width:30%;">Immunization</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Immunization profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).<img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Immunization.status, Immunization.statusReason, Immunization.vaccineCode, Immunization.patient and Immunization.occurence[x]. </td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Immunization.status, Immunization.statusReason, Immunization.vaccineCode, Immunization.patient and Immunization.occurence[x].<img src="arrow_up.png" width="20"/></td>
 		</tr>
 		<tr>
             <td rowspan="3" style="width:30%;">Medication</td>
             <td style="width: 70%;"><strong>SHALL</strong> support the IPA Medication profile and conformance expectations.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).<img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Medication.code. (UP)</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Medication.code.<img src="arrow_up.png" width="20"/></td>
 		</tr>
         <tr>
             <td rowspan="5" style="width: 30%;">MedicationRequest</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA MedicationRequest profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr> 
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.<img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support for category and code search parameters.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support for category and code search parameters.<img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).<img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle MedicationRequest.status, MedicationRequest.doNotPerform, MedicationRequest.reported[x], MedicationRequest.medication[x], MedicationRequest.subject, MedicationRequest.encounter, MedicationRequest.requester, MedicationRequest.dosageInstruction, MedicationRequest.dosageInstruction.text. (UP)</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle MedicationRequest.status, MedicationRequest.doNotPerform, MedicationRequest.reported[x], MedicationRequest.medication[x], MedicationRequest.subject, MedicationRequest.encounter, MedicationRequest.requester, MedicationRequest.dosageInstruction, MedicationRequest.dosageInstruction.text.<img src="arrow_up.png" width="20"/></td>
 		</tr>
 		<tr>
             <td rowspan="4" style="width:30%;">MedicationStatement</td>
            <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA MedicationStatement profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr> 
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.<img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support for category and code search parameters.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support for <code>category</code> and <code>code</code> search parameters.<img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle MedicationStatement.status, MedicationStatement.statusReason, MedicationStatement.medication[x], MedicationStatement.subject, MedicationStatement.effective[x], MedicationStatement.dosage, and MedicationStatement.dosage.text. (UP)</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle MedicationStatement.status, MedicationStatement.statusReason, MedicationStatement.medication[x], MedicationStatement.subject, MedicationStatement.effective[x], MedicationStatement.dosage, and MedicationStatement.dosage.text. <img src="arrow_up.png" width="20"/></td>
 		</tr>
         <tr>
             <td rowspan="5" style="width: 30%;">Observation</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Observation profile.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support the Vital Signs Profile.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the Vital Signs Profile. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>patient</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>patient</code> search parameter. <img src="arrow_up.png" width="20"/></td>
         </tr>   
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).<img src="plus_sign.png" width="20"/></td>
         </tr> 
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Observation.status, Observation.category, Observation.code, Observation.subject, Observation.effective[x], Observation.value[x], and Observation.dataAbsentReason. (UP)</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Observation.status, Observation.category, Observation.code, Observation.subject, Observation.effective[x], Observation.value[x], and Observation.dataAbsentReason. <img src="arrow_up.png" width="20"/></td>
 		</tr>
         <tr>
             <td rowspan="8" style="width: 30%;">Patient</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Patient profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
-			<td style="width: 70%;">Client <strong>SHALL</strong> be able to follow Patient.link(s) to other Patient resources and understand direction of the link.</td>
+			<td style="width: 70%;">Client <strong>SHALL</strong> be able to follow Patient.link(s) to other Patient resources and understand direction of the link. <img src="plus_sign.png" width="20"/></td>
 		</tr>
 		<tr>
-			<td style="width: 70%;">Client <strong>SHALL</strong> understand the Patient.link.type code.</td>
+			<td style="width: 70%;">Client <strong>SHALL</strong> understand the Patient.link.type code. <img src="plus_sign.png" width="20"/></td>
 		</tr>
 		<tr>
-			<td style="width: 70%;">Client <strong>SHALL</strong> be aware of the linked Patient's <code>active</code> flag and that inactive patients may have relevant information.</td>
+			<td style="width: 70%;">Client <strong>SHALL</strong> be aware of the linked Patient's <code>active</code> flag and that inactive patients may have relevant information. <img src="plus_sign.png" width="20"/></td>
 		</tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support Patient.link processing.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support Patient.link processing. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters. <img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Patient.identifier, Patient.gender, Patient.birthDate, and Patient.link.(UP)</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Patient.identifier, Patient.gender, Patient.birthDate, and Patient.link. <img src="arrow_up.png" width="20"/></td>
 		</tr>
 		<tr>
             <td rowspan="3" style="width:30%;">Practitioner</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Practitioner profile.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
         </tr> 
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Practitioner.name. (UP)</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle Practitioner.name. <img src="arrow_up.png" width="20"/></td>
 		</tr>
 		<tr>
             <td rowspan="3" style="width:30%;">PractitionerRole</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA PractitionerRole profile.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
         </tr> 
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle PractitionerRole.practitioner. (UP)</td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong>:handle PractitionerRole.practitioner. <img src="arrow_up.png" width="20"/></td>
 		</tr>
   </tbody>
 </table>
@@ -1486,7 +1486,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
     <tbody>
 		<tr>
             <td style="width:30%;">Supported implementation guides</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>. <img src="plus_sign.png" width="20"/> </td>
         </tr>
 		<tr>
             <td style="width:30%;">FHIR resource support</td>
@@ -1494,144 +1494,141 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%">Security</td>
-            <td style="width: 70%"><strong>SHALL</strong> follow <a href="https://hl7.org/fhir/R4/security.html">FHIR Security</a> requirements.</td>
+            <td style="width: 70%"><strong>SHALL</strong> follow <a href="https://hl7.org/fhir/R4/security.html">FHIR Security</a> requirements. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%"><strong>SHOULD</strong> follow the security best practices outlined in <a href="https://hl7.org/fhir/R4/security.html">FHIR Security</a> and elsewhere.</td>
+            <td style="width: 70%"><strong>SHOULD</strong> follow the security best practices outlined in <a href="https://hl7.org/fhir/R4/security.html">FHIR Security</a> and elsewhere. <img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="2" style="width:30%;">AllergyIntolerance</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA AllergyIntolerance profile.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="4" style="width:30%;">Condition</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Condition profile.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> populate Condition.code.coding.display and/or Condition.code.text</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> populate Condition.code.coding.display and/or Condition.code.text. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Servers <strong>SHOULD</strong> avoid leaving clinicalStatus and verificationStatus missing.</td>
+            <td style="width: 70%;">Servers <strong>SHOULD</strong> avoid leaving clinicalStatus and verificationStatus missing. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="8" style="width: 30%;">DocumentReference</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA DocumentReference profile. (TODO: point to IPA profile comparison Additional profiles)</td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>patient</code> and <code>_id</code> search parameters.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>patient</code> and <code>_id</code> search parameters. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-           <td style="width: 70%;"><strong>SHALL</strong> support <code>patient+category</code>, <code>patient+category+date</code>, and <code>patient+type</code> search parameters. (UP)</td>
+           <td style="width: 70%;"><strong>SHALL</strong> support <code>patient+category</code>, <code>patient+category+date</code>, and <code>patient+type</code> search parameters. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-           <td style="width: 70%;"><strong>SHALL</strong> support <code>$docref</code> operation.</td>
+           <td style="width: 70%;"><strong>SHALL</strong> support <code>$docref</code> operation. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-           <td style="width: 70%;"><strong>SHOULD</strong> support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters combination.</td>
-        </tr>
-		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
-        </tr>
-		<tr>
-            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.contentType, DocumentReference.content.data, DocumentReference.content.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. </td>
+            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.contentType, DocumentReference.content.data, DocumentReference.content.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. <img src="plus_sign.png" width="20"/></td>
 		</tr>
+		<tr>
+           <td style="width: 70%;"><strong>SHOULD</strong> support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters combination. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
+        </tr>
 		<tr>
             <td rowspan="2" style="width:30%;">Immunization</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Immunization profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="2" style="width:30%;">Medication</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Medication profile.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="5" style="width: 30%;">MedicationRequest</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA MedicationRequest profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Servers <strong>SHOULD</strong> use codings at the level of a clinical drug.</td>
+            <td style="width: 70%;">Servers <strong>SHOULD</strong> use codings at the level of a clinical drug. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>category</code> and <code>code</code> search parameters.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>category</code> and <code>code</code> search parameters. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known MedicationRequest.reported[x]. (UP)</td>
+            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known MedicationRequest.reported[x]. <img src="plus_sign.png" width="20"/></td>
 		</tr>
 		<tr>
             <td rowspan="3" style="width:30%;">MedicationStatement</td>
            <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA MedicationStatement profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr> 
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated)</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known MedicationStatement.context and MedicationStatement.informationSource. (UP)</td>
+            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known MedicationStatement.context and MedicationStatement.informationSource. <img src="plus_sign.png" width="20"/></td>
 		</tr>
         <tr>
-            <td rowspan="4" style="width: 30%;">Observation</td>
+            <td rowspan="3" style="width: 30%;">Observation</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Observation profile.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support the Vital Signs Profile.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the Vital Signs Profile. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
         </tr> 
-		<tr>
-            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known MedicationStatement.statusReason, MedicationStatement.context, and MedicationStatement.informationSource. (UP)</td>
-		</tr>
         <tr>
             <td rowspan="7" style="width: 30%;">Patient</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Patient profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Server <strong>SHALL</strong> have no more than one Patient.active = true for the same patient on the server.</td>
+            <td style="width: 70%;">Server <strong>SHALL</strong> have no more than one Patient.active = true for the same patient on the server. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Server <strong>SHALL</strong> use Patient.link cross-link multiple Patient resources for the same person in search Bundles.</td>
+            <td style="width: 70%;">Server <strong>SHALL</strong> use Patient.link cross-link multiple Patient resources for the same person in search Bundles. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters. <img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
         </tr> 
 		<tr>
-            <td style="width: 70%;">Servers <strong>SHALL</strong>:explain Patient.identifier. (UP)</td>
+            <td style="width: 70%;">Servers <strong>SHALL</strong>:explain Patient.identifier. <img src="arrow_up.png" width="20"/></td>
 		</tr>
 		<tr>
-            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known Patient.identifier.value, Patient.active, and Patient.link. (UP)</td>
+            <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known Patient.identifier.value, Patient.active, and Patient.link. <img src="plus_sign.png" width="20"/></td>
 		</tr>
 		<tr>
             <td rowspan="2" style="width:30%;">Practitioner</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Practitioner profile.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
         </tr> 
 		<tr>
             <td rowspan="2" style="width:30%;">PractitionerRole</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA PractitionerRole profile.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated).</td>
+            <td style="width: 70%;">IPA declares support for <code>_revinclude=Provenance:target</code> (no conformance level stated). <img src="plus_sign.png" width="20"/></td>
         </tr> 
   </tbody>
 </table>
