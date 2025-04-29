@@ -36,147 +36,147 @@ The table below provides a profile only comparison from AU Core to profiles in k
     <tbody>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-bloodpressure.html">AU Core Blood Pressure</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-bodyheight.html">AU Core Body Height</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-bodytemp.html">AU Core Body Temperature</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-bodyweight.html">AU Core Body Weight</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
          <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-relatedperson.html">AU Core RelatedPerson</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-resprate.html">AU Core Respiration Rate</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
     </tbody>
 </table>
@@ -1596,6 +1596,22 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
 		<tr>
             <td style="width: 70%;">Servers <strong>SHALL</strong>:populate-if-known Patient.identifier.value, Patient.active, and Patient.link. <img src="plus_sign.png" width="20"/></td>
 		</tr>
+    <tr>
+            <td rowspan="5" style="width: 30%;">Organization</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>address</code> search parameter. <img src="arrow_up.png" width="20"/><img src="green_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> support the use of a National Provider Identifier (NPI) in Organization.identifier. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support the use of Clinical Laboratory Improvement Amendments (CLIA) identifiers in Organization.identifier. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for populating Organization.address.line and Organization.address.city. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+        </tr>
 		<tr>
             <td rowspan="2" style="width:30%;">Practitioner</td>
             <td style="width: 70%;"><strong>SHALL</strong> meet the requirements of the IPA Practitioner profile.</td>
@@ -1632,7 +1648,11 @@ The [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl
     <tbody>
         <tr>
             <td style="width: 30%;">DocumentReference</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>$docref</code> operation.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>$docref</code> operation. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 30%;">Patient</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>$summary</code> operation. <img src="plus_sign.png" width="20"/></td>
         </tr>
     </tbody>
 </table>    
@@ -1699,231 +1719,281 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         </tr>
 		<tr>
             <td rowspan="7" style="width:30%;">Security</td>
-            <td style="width: 70%;"><strong>SHALL</strong> establish a risk analysis and management regime conforming with HIPAA.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> establish a risk analysis and management regime conforming with HIPAA. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> use a single time source for audit and logging.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> use a single time source for audit and logging. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> maintain audit logs of the various transactions.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> maintain audit logs of the various transactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> conform to FHIR Communications Security requirements.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> conform to FHIR Communications Security requirements. <img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support SMART App Launch for authentication and authorisation.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support SMART App Launch for authentication and authorisation. <img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> implement consent according to local, institutional, and legal policy.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> implement consent according to local, institutional, and legal policy. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> provide Provenance statements using the US Core Provenance Profile resource and associated requirements.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> provide Provenance statements using the US Core Provenance Profile resource and associated requirements. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 30%;">AllergyIntolerance</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
+            <td rowspan="2" style="width: 30%;">AllergyIntolerance</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td rowspan="6" style="width: 30%;">Condition</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support assertedDate Extension, Condition.onsetDateTime, or Condition.recordedDate elements. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+clinical-status</code> search parameter combination.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 30%;">Condition</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
-        </tr>
-        <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> search parameters combination.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> search parameters combination. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">When Condition.category is a "problems-list-item", the Condition.clinicalStatus <strong>SHOULD NOT</strong> be unknown. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> reference Condition.encounter when category is "encounter-diagnosis". <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="7" style="width: 30%;">DiagnosticReport</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>patient</code>, <code>code</code>, <code>category</code>, <code>date</code>, <code>_lastUpdated</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>patient</code>, <code>code</code>, <code>category</code>, <code>date</code>, <code>_lastUpdated</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions, and <strong>SHALL</strong> support <code>create</code> if using the Report and Note Exchange profile.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions, and <strong>SHALL</strong> support <code>create</code> if using the Report and Note Exchange profile. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>resolves</code> reference policy.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>resolves</code> reference policy. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>status</code>, <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameters and search parameter combinations.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>status</code>, <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameters and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
 		</tr>
         <tr>
             <td rowspan="11" style="width: 30%;">DocumentReference</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support for GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support for GET by id: <code>GET [base]/DocumentReference/[id]</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>create</code>, <code>read</code> and <code>search-type</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>create</code>, <code>read</code> and <code>search-type</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support both DocumentReference.attachment.url and DocumentReference.attachment.data representations of content.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support both DocumentReference.attachment.url and DocumentReference.attachment.data representations of content. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> handle multiple DocumentReference.content repetitions as alternative formats of the same document, not different versions.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> handle multiple DocumentReference.content repetitions as alternative formats of the same document, not different versions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> be capable of processing a responsible organization from either DocumentReference.custodian, or a Provenance resource pointing to the DocumentReference via agent.who or agent.onBehalfOf.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> be capable of processing a responsible organization from either DocumentReference.custodian, or a Provenance resource pointing to the DocumentReference via agent.who or agent.onBehalfOf. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>resolves</code> reference policy.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>resolves</code> reference policy. <img src="plus_sign.png" width="20"/></td>
         </tr>
          <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>$docref</code> operation.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>$docref</code> operation. <img src="plus_sign.png" width="20"/></td>
         </tr>
          <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support for <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support for <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 30%;">Encounter</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code> search parameter.</td>
+            <td rowspan="7" style="width: 30%;">Encounter</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">Clients <strong>SHALL</strong> support both Encounter.location.location and Encounter.serviceProvider.<img src="plus_sign.png" width="20"/></td>
+        <tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>identifier</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameters and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>identifier</code>, <code>class</code>, <code>date</code>, <code>location</code>, <code>status</code>, <code>type</code>, <code>discharge-disposition</code>, <code>_lastUpdated</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameters and search parameter combinations.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">Encounter.reasonReference Observation reference <strong>SHOULD</strong> conform to a US Core Observation if applicable. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in Encounter.location. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td rowspan="3" style="width: 30%;">Immunization</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 30%;">Immunization</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support NDC vaccine codes as translations to CVX vaccine codes, which are required based on the ONC U.S. Core Data for Interoperability (USCDI) requirements. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td rowspan="2" style="width: 30%;">Location</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
-            <td style="width: 30%;">Location</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> format Location.address.line and Location.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 30%;">Medication</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td rowspan="6" style="width: 30%;">MedicationRequest</td>
+            <td rowspan="9" style="width: 30%;">MedicationRequest</td>
             <td style="width: 70%;"><strong>SHALL</strong> support <code>patient+intent</code>, <code>patient+intent+status</code>, and <code>patient+intent+encounter</code> search parameter combinations.</td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference. <img src="plus_sign.png" width="20"/></td>
         </tr> 
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support all potential target resource types for MedicationRequest.reasonReference.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support all potential target resource types for MedicationRequest.reasonReference. <img src="plus_sign.png" width="20"/></td>
         </tr>  
-        <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference elements. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> populate MedicationRequest.requester with a Patient or RelatedPerson resource when recording self-prescribed medication. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support all target resource types referenced by MedicationRequest.reasonReference. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> have referenced resources in MedicationRequest.reasonReference conform to US Core profiles.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> have referenced resources in MedicationRequest.reasonReference conform to US Core profiles. <img src="plus_sign.png" width="20"/></td>
         </tr> 
         <tr>
-            <td rowspan="3" style="width: 30%;">Observation</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td rowspan="7" style="width: 30%;">Observation</td>
+            <td style="width: 70%;"><strong>SHALL</strong> ensure that an Observation without a value includes a reason for absence using Observation.dataAbsentReason unless there are component observations, or references to other Observations. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> ensure that an Observation.component without a value includes a reason for absence using Observation.component.dataAbsentReason. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> update Observation.meta.lastUpdated when new laboratory results are available, or status of laboratory results changes. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+        </tr>        
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr> 
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+category+_lastUpdated</code> search parameter combination. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support Observation.effectivePeriod. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 30%;">Organization</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>name</code> search parameter.</td>
+            <td rowspan="5" style="width: 30%;">Organization</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>address</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> support the use of a National Provider Identifier (NPI) in Organization.identifier. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support the use of Clinical Laboratory Improvement Amendments (CLIA) identifiers in Organization.identifier. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for populating Organization.address.line and Organization.address.city. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 30%;">Patient</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations. <img src="arrow_up.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">Practitioner</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>name</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>name</code> search parameter. <img src="arrow_up.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 30%;">PractitionerRole</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>specialty</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>specialty</code> search parameter. <img src="arrow_up.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_include=PractitionerRole:endpoint</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_include=PractitionerRole:endpoint</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">Procedure</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 30%;">RelatedPerson</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="arrow_up.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>name</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>name</code> search parameter. <img src="arrow_up.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="5" style="width: 30%;">Specimen</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support GET by id: <code>GET [base]/Specimen/[id]</code>.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support GET by id: <code>GET [base]/Specimen/[id]</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support both Specimen.identifier and Specimen.accessionIdentifier.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support both Specimen.identifier and Specimen.accessionIdentifier. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support the <code>_id</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support the <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient</code> search parameter. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
     </tbody>
 </table>  
@@ -2007,225 +2077,253 @@ US Core introduces additional capability requirements in both capability stateme
         </tr>
 		<tr>
             <td rowspan="7" style="width:30%;">Security</td>
-            <td style="width: 70%;"><strong>SHALL</strong> establish a risk analysis and management regime conforming with HIPAA.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> establish a risk analysis and management regime conforming with HIPAA. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> use a single time source for audit and logging.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> use a single time source for audit and logging. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> maintain audit logs of the various transactions.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> maintain audit logs of the various transactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> conform to FHIR Communications Security requirements.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> conform to FHIR Communications Security requirements. <img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support SMART App Launch for authentication and authorisation.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support SMART App Launch for authentication and authorisation. <img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> implement consent according to local, institutional, and legal policy.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> implement consent according to local, institutional, and legal policy. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> provide Provenance statements using the US Core Provenance Profile resource and associated requirements.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> provide Provenance statements using the US Core Provenance Profile resource and associated requirements. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">AllergyIntolerance</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 30%;">Condition</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
+            <td rowspan="6" style="width: 30%;">Condition</td>
+            <td style="width: 70%;">Servers <strong>SHALL</strong> support Condition.recordedDate. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">Servers <strong>SHALL</strong> support at least one of assertedDate Extension and Condition.onsetDateTime. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> search parameters combination.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> search parameters combination. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;">When Condition.category is a "problems-list-item", the Condition.clinicalStatus <strong>SHOULD NOT</strong> be unknown. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> reference Condition.encounter when category is "encounter-diagnosis". <img src="plus_sign.png" width="20"/></td>
         </tr>
        <tr>
             <td rowspan="7" style="width: 30%;">DiagnosticReport</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>resolves</code> reference policy.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>resolves</code> reference policy. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="11" style="width: 30%;">DocumentReference</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support GET by id: <code>GET [base]/DocumentReference/[id]</code>.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support GET by id: <code>GET [base]/DocumentReference/[id]</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>$docref</code> operation. </td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>$docref</code> operation. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>        
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>create</code>, <code>search-type</code> and <code>read</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>create</code>, <code>search-type</code> and <code>read</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>	
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support either both DocumentReference.attachment.url or DocumentReference.attachment.data representations of content.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support either both DocumentReference.attachment.url or DocumentReference.attachment.data representations of content. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support multiple DocumentReference.content elements represent the same document in different formats.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support multiple DocumentReference.content elements represent the same document in different formats. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support inclusion of the responsible organisation present in DocumentReference.custodian or via Provenance.agent.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support inclusion of the responsible organisation present in DocumentReference.custodian or via Provenance.agent. <img src="plus_sign.png" width="20"/></td>
         </tr>	
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+type+period</code> and <code>patient+status</code> search parameter and search parameter combinations.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+type+period</code> and <code>patient+status</code> search parameter and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>resolves</code> reference policy.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support the <code>resolves</code> reference policy. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="6" style="width: 30%;">Encounter</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code> search parameter.</td>
+            <td rowspan="7" style="width: 30%;">Encounter</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support either Encounter.location.location or Encounter.serviceProvider.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support either Encounter.location.location or Encounter.serviceProvider. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>identifier</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameter and search parameter combinations.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>identifier</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameter and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> ensure that if Encounter.reasonReference references an Observation, it <strong>SHOULD</strong> conform to a US Core Observation profile.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> ensure that if Encounter.reasonReference references an Observation, it <strong>SHOULD</strong> conform to a US Core Observation profile. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in Encounter.location. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+
+        <tr>
+            <td rowspan="3" style="width: 30%;">Immunization</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 30%;">Immunization</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support NDC vaccine codes as translations to CVX vaccine codes, which are required based on the ONC U.S. Core Data for Interoperability (USCDI) requirements. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td rowspan="2" style="width: 30%;">Location</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
-            <td style="width: 30%;">Location</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> format Location.address.line and Location.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 30%;">Medication</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="5" style="width: 30%;">MedicationRequest</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations.</td>
+            <td rowspan="7" style="width: 30%;">MedicationRequest</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations. <img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
-        </tr>  
-        <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> supportat least one of MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
+        </tr> 
+		<tr>
+            <td style="width: 70%;"><strong>SHALL</strong> support at least one of MedicationRequest.reportedBoolean and MedicationRequest.reportedReference elements. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support at least one target resource types referenced by MedicationRequest.reasonReference. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+         <tr>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>	
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 30%;">Observation</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr> 
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+category+_lastUpdated</code> search parameter combination. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 30%;">Organization</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 30%;">Patient</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameters and search parameter combinations.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameters and search parameter combinations. <img src="arrow_up.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>death-date+family</code> search parameter combination.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>death-date+family</code> search parameter combination. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">Practitioner</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>name</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>name</code> search parameter. <img src="arrow_up.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 30%;">PractitionerRole</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>specialty</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>specialty</code> search parameter. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_include=PractitionerRole:endpoint</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_include=PractitionerRole:endpoint</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 30%;">Procedure</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 30%;">RelatedPerson</td>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="arrow_up.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>name</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>name</code> search parameter. <img src="arrow_up.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="5" style="width: 30%;">Specimen</td>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>read</code> interaction.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>read</code> interaction. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support either Specimen.identifier or Specimen.accessionIdentifier.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support either Specimen.identifier or Specimen.accessionIdentifier. <img src="plus_sign.png" width="20"/></td>
         </tr>        
 		<tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient</code> search parameter.</td>
+            <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient</code> search parameter. <img src="plus_sign.png" width="20"/></td>
         </tr>  
     </tbody>
 </table>     
