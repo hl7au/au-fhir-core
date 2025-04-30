@@ -942,14 +942,23 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core Specimen Profile
 
 ### Capability statement comparison
-As part of capability statement comparison, the supported resource types, interactions (e.g. <code>read</code>, <code>search-type</code>), search parameters, combined search parameter support, operations, and other conformance expectations for requesters (clients) or responders (servers) are evaluated. 
+As part of capability statement comparison, FHIR RESTful  the supported resource types, interactions, search parameters, combined search parameter support, operations, and other conformance expectations for requesters (clients) or responders (servers) are evaluated. 
 
 #### CapabilityStatement mapping
-The capability statements used for comparison are defined in the AU Core, International Patient Access, International Patient Summary, and US Core specifications. Each CapabilityStatement defines the conformance requirements and expectations of systems acting as either requsters (clients) ot responders (servers). 
+A CapabilityStatement describes the conformance requirements for systems acting in specific roles, typically as a requester (client) that initiates access requests or a responder (server) that responds to those requests.
 
-The AU Core Requester defines the conformance requirements and expectations of a client system responsible for initiating queries for information from an AU Core Responder. The AU Core Responder defines the conformance requirements and expectations of a server system responsible for providing responses to queries submitted by an AU Core Requester. Other implementation guides, including International Patient Access, International Patient Summary, and US Core, define similar client and server actors and capabilities. 
- 
-For the purpose of comparison, CapabilityStatements are mapped from the AU Core Requester or AU Core Responder to the corresponding CapabilityStatement in other specifications that describe actors with similar roles and responsibilies. CapabilityStatements are considered comparable where they define actors with similar responsibilities in the exchange of healthcare information. Where no equivalent capability statement exists, this is indicated using the ï¿½No equivalent capability statementï¿½ icon in the table below.
+AU Core defines two actors:
+- AU Core Requester - A system that creates and initiates a data access request to retrieve core digital health and administrative information. The AU Core Requestor is the client in a client-server interaction.
+- AU Core Responder – A system that responds to the data access request submitted by requesters, providing responses to requests for core digital health and administrative information. The AU Core Responder is the server in a client-server interaction.
+
+CapabilityStatements from other implementation guides (IPA, IPS, and US Core) are included in the comparison when they define actors that serve similar roles and purposes. Only actors with comparable responsibilities for data access and exchange are mapped for comparison. Where no equivalent capability statement exists, this is indicated using the <img src="minus_symbol.png" width="20"/> icon in the table below.
+
+CapabilityStatements from other implementation guides (IPA, IPS, US Core) are included in the comparison where they describe systems with roles similar to the AU Core Requester or AU Core Responder actors. Mapping is based on alignment in actor role and responsibilities for accessing or exchanging health information.
+
+If no comparable CapabilityStatement exists in another guide, this is indicated with the <img src="minus_symbol.png" width="20"/> icon.
+
+
+
 
 <table border="1" style="width: 100%; margin-left: 0; margin-right: auto; border-collapse: collapse;">
     <thead>
@@ -978,15 +987,15 @@ For the purpose of comparison, CapabilityStatements are mapped from the AU Core 
 
 #### CapabilityStatement comparison details
 
-The table below provides a comparison of capability statements from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system that meets the expectations of an International Patient Access capability statement **MAY NOT** meet the expectations defined in AU Core. The comparison is based on '<strong>SHALL</strong> (mandatory) and '<strong>SHOULD</strong>' (recommended) conformance expectations. Expectations marked as '<strong>MAY</strog>' (optional) are excluded from consideration in this comparison. 
+The table below provides a comparison of capability statements from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system conforming to International Patient Access Client CapabilityStatement **MAY NOT** meet the conformance requirements of the AU Core Client.The comparison is based on **SHALL** and **SHOULD** conformance requirements. **MAY** requirements are not considered in this comparison.
 
 **Legend:**
 
-<img src="green_checkmark.png" width="20"/> **Compliant**: A system conforming to the AU Core requester/ responder expectations meets all mandatory (<strong>SHALL</strong>) requirements of the compared implementation guide capability statement. While the implementation guide may include '<strong>SHOULD</strong>' (recommended) and 'MAY' (optional) expectations, these do not impact the compliant status. Where '<strong>SHOULD</strong>' additional expectations are identified, more details are provided in the sections below.  
+<img src="green_checkmark.png" width="20"/> **Compliant**: A system conforming to the AU Core capability statement meets all **SHALL** requirements defined in the compared capability statement. Additional **SHOULD** requirements do not affect compliance. Where additional requirements are identified, more information is provided in the sections below.
 
-<img src="orange_checkmark.png" width="20"/> **Additional requirements**: A system conforming to the AU Core capability statement aligns with but may require additional modifications to meet the stricter requirements of the compared capability statement. Where additional requirements are identified, more details are provided in the sections below.
+<img src="orange_checkmark.png" width="20"/> **Additional requirements**: A system conforming to the AU Core capability statement aligns with the compared capability statement but may require additional functionality to meet its stricter or broader requirements. Where additional requirements are identified, more information is provided in the sections below.
 
-<img src="cross_red_circle.png" width="20"/> **Incompatible**: A system conforming to the AU Core capability statement has conformance expectations that conflict with the mandatory requirements of the compared implementation guide, making full conformance to both impossible. Where incompatible requirements are identified, more details are provided in the sections below.
+<img src="cross_red_circle.png" width="20"/> **Incompatible**: A system conforming to the AU Core capability statement cannot meet one or more **SHALL** conformance requirements of the compared capabilty statement due to conflictin requirements. Full conformance to both is not possible. Where incompatible requirements are identified, more information is provided in the sections below.
 
 <img src="minus_symbol.png" width="20"/> **No equivalent capability statement**: No equivalent capability statement for comparison.
 
@@ -1261,7 +1270,7 @@ The table below provides a comparison of capability statements from AU Core to t
 [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) defines the expected capabilities of systems enabling patient authorised access to clinical records via a FHIR-based API. 
 
 ##### IPA Client CapabilityStatement additional requirements 
-The [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-client.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+The [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-client.html) introduces additional conformance expectations not required by AU Core. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -1460,7 +1469,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
 None.
 
 ##### IPA Server CapabilityStatement additional requirements 
-The [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+The [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html) introduces additional conformance expectations not required by AU Core. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -1642,7 +1651,7 @@ None.
 [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) defines the expected capabilities of systems that represent the International Patient Summary (IPS) using HL7 FHIR. An IPS document is an electronic health record extract containing essential healthcare information about a subject of care. 
 
 ##### IPA Server CapabilityStatement additional requirements 
-The [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+The [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) introduces additional conformance expectations not required by AU Core. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -1663,7 +1672,7 @@ The [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl
     </tbody>
 </table>    
 
-##### Additional resources
+##### Additional resource types
 The following table lists resource types that are supported by [IPS Server CapabilityStatement](https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html) but are not currently supported by the AU Core Responder CapabilityStatement. These differences may have implications for systems aiming to be interoperable across both specifications.
     
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -1709,7 +1718,7 @@ The following table lists resource types that are supported by [IPS Server Capab
 [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/) defines the expected capabilities of systems to support interoperability and clinical data exchange in the US healthcare context. 
 
 ##### US Core Client CapabilityStatement additional requirements
-The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) introduces additional conformance expectations not required by AU Core. These expectations are listed in the table below. Implementers are advised to note that some code changes may be required to ensure full compliance.
+The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) introduces additional conformance expectations not required by AU Core. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -1832,7 +1841,8 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td style="width: 70%;"><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;">Clients <strong>SHALL</strong> support both Encounter.location.location and Encounter.serviceProvider.<img src="plus_sign.png" width="20"/></td>
+            <td style="width: 70%;">Clients <strong>SHALL</strong> support both Encounter.location.location and Encounter.serviceProvider. <img src="plus_sign.png" width="20"/></td>
+		</tr>
         <tr>
             <td style="width: 70%;"><strong>SHOULD</strong> support <code>identifier</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameters and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>
@@ -1870,7 +1880,7 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td style="width: 70%;"><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td rowspan="9" style="width: 30%;">MedicationRequest</td>
+            <td rowspan="8" style="width: 30%;">MedicationRequest</td>
             <td style="width: 70%;"><strong>SHALL</strong> support <code>patient+intent</code>, <code>patient+intent+status</code>, and <code>patient+intent+encounter</code> search parameter combinations.</td>
         </tr>
 		<tr>
@@ -1879,9 +1889,6 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td style="width: 70%;"><strong>SHALL</strong> support all potential target resource types for MedicationRequest.reasonReference. <img src="plus_sign.png" width="20"/></td>
         </tr>  
-		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference elements. <img src="plus_sign.png" width="20"/></td>
-        </tr>
 		<tr>
             <td style="width: 70%;"><strong>SHOULD</strong> populate MedicationRequest.requester with a Patient or RelatedPerson resource when recording self-prescribed medication. <img src="plus_sign.png" width="20"/></td>
         </tr>
@@ -2067,7 +2074,7 @@ The following table lists resource types that are supported by [US Core Client C
 </table>
 
 ##### US Core Server CapabilityStatement additional requirements
-US Core introduces additional capability requirements in both capability statements that are not required in AU Core. Implementers are advised that some code changes may be required to ensure full compliance.
+The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html) introduces additional conformance expectations not required by AU Core. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -2130,7 +2137,7 @@ US Core introduces additional capability requirements in both capability stateme
             <td style="width: 70%;"><strong>SHOULD</strong> reference Condition.encounter when category is "encounter-diagnosis". <img src="plus_sign.png" width="20"/></td>
         </tr>
        <tr>
-            <td rowspan="7" style="width: 30%;">DiagnosticReport</td>
+            <td rowspan="6" style="width: 30%;">DiagnosticReport</td>
             <td style="width: 70%;"><strong>SHALL</strong> support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
@@ -2144,9 +2151,6 @@ US Core introduces additional capability requirements in both capability stateme
         </tr>
         <tr>
             <td style="width: 70%;"><strong>SHOULD</strong> support <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameter combinations. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 70%;"><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 70%;"><strong>SHOULD</strong> support the <code>resolves</code> reference policy. <img src="plus_sign.png" width="20"/></td>
@@ -2165,7 +2169,7 @@ US Core introduces additional capability requirements in both capability stateme
             <td style="width: 70%;"><strong>SHALL</strong> support <code>create</code>, <code>search-type</code> and <code>read</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>	
         <tr>
-            <td style="width: 70%;"><strong>SHALL</strong> support either both DocumentReference.attachment.url or DocumentReference.attachment.data representations of content. <img src="plus_sign.png" width="20"/></td>
+            <td style="width: 70%;"><strong>SHALL</strong> support either DocumentReference.attachment.url or DocumentReference.attachment.data representations of content. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 70%;"><strong>SHALL</strong> support multiple DocumentReference.content elements represent the same document in different formats. <img src="plus_sign.png" width="20"/></td>
@@ -2234,7 +2238,7 @@ US Core introduces additional capability requirements in both capability stateme
             <td style="width: 70%;"><strong>SHALL</strong> support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations. <img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
-            <td style="width: 70%;"><strong>SHALL</strong> supportat least one of MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
+            <td style="width: 70%;"><strong>SHALL</strong> support at least one of MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
         </tr> 
 		<tr>
             <td style="width: 70%;"><strong>SHALL</strong> support at least one of MedicationRequest.reportedBoolean and MedicationRequest.reportedReference elements. <img src="plus_sign.png" width="20"/></td>
