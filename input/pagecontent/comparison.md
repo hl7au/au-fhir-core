@@ -83,6 +83,12 @@ The table below provides a profile only comparison from AU Core to profiles in k
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-healthcareservice.html">AU Core HealthcareService</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+        </tr>
+        <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
@@ -108,9 +114,9 @@ The table below provides a profile only comparison from AU Core to profiles in k
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/><img src="cross_red_circle.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
@@ -943,7 +949,7 @@ The capability statements used for comparison are defined in the AU Core, Intern
 
 The AU Core Requester defines the conformance requirements and expectations of a client system responsible for initiating queries for information from an AU Core Responder. The AU Core Responder defines the conformance requirements and expectations of a server system responsible for providing responses to queries submitted by an AU Core Requester. Other implementation guides, including International Patient Access, International Patient Summary, and US Core, define similar client and server actors and capabilities. 
  
-For the purpose of comparison, CapabilityStatements are mapped from the AU Core Requester or AU Core Responder to the corresponding CapabilityStatement in other specifications that describe actors with similar roles and responsibilies. CapabilityStatements are considered comparable where they define actors with similar responsibilities in the exchange of healthcare information. Where no equivalent capability statement exists, this is indicated using the ‘No equivalent capability statement’ icon in the table below.
+For the purpose of comparison, CapabilityStatements are mapped from the AU Core Requester or AU Core Responder to the corresponding CapabilityStatement in other specifications that describe actors with similar roles and responsibilies. CapabilityStatements are considered comparable where they define actors with similar responsibilities in the exchange of healthcare information. Where no equivalent capability statement exists, this is indicated using the ï¿½No equivalent capability statementï¿½ icon in the table below.
 
 <table border="1" style="width: 100%; margin-left: 0; margin-right: auto; border-collapse: collapse;">
     <thead>

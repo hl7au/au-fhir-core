@@ -207,6 +207,12 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-healthcareservice"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
 		<!--LIFESTYLE FACTOR-->
 		<resource>
 			<reference>
@@ -734,6 +740,23 @@
 			<name value="Specimen - Naso swab (COVID test)"/>
 			<description value="Shows an example of a nasopharyngeal swab specimen referenced by the [Observation - COVID Pathology Result (Not detected)](Observation-pathresult-covid-1.html) example for the *AU Core Pathology Result Observation* profile. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
+		</resource>
+		<!--HEALTHCARESERVICE EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="HealthcareService/physiotherapy"/>
+			</reference>
+			<name value="HealthcareService - CoreStrength Physiotherapy"/>
+			<description value="Shows an example of a physiotherapy healthcare service, CoreStrength Physiotherapy, for the *AU Core HealthcareService* profile, with type and contact details."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="HealthcareService/murrabit-crisis-hotline"/>
+			</reference>
+			<name value="HealthcareService - Murrabit Crisis Hotline"/>
+			<description value="Shows an example of a 24/7 telephone counselling service, Murrabit Crisis Hotline, for the *AU Core HealthcareService* profile, with healthcare service types, identifier and a telephone contact number."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
 		</resource>
 		<!--PAGES-->
 		<page>
