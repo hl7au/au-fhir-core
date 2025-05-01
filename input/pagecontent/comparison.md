@@ -114,7 +114,7 @@ The table below provides a profile only comparison from AU Core to profiles in k
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/><img src="cross_red_circle.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
@@ -949,7 +949,7 @@ A CapabilityStatement describes the conformance requirements for systems acting 
 
 AU Core defines two actors:
 - AU Core Requester - A system that creates and initiates a data access request to retrieve core digital health and administrative information. The AU Core Requestor is the client in a client-server interaction.
-- AU Core Responder – A system that responds to the data access request submitted by requesters, providing responses to requests for core digital health and administrative information. The AU Core Responder is the server in a client-server interaction.
+- AU Core Responder ï¿½ A system that responds to the data access request submitted by requesters, providing responses to requests for core digital health and administrative information. The AU Core Responder is the server in a client-server interaction.
 
 CapabilityStatements from other implementation guides (IPA, IPS, and US Core) are included in the comparison when they define actors that serve similar roles and purposes. Only actors with comparable responsibilities for data access and exchange are mapped for comparison. Where no equivalent capability statement exists, this is indicated using the <img src="minus_symbol.png" width="20"/> icon in the table below.
 
