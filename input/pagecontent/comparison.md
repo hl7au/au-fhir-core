@@ -942,9 +942,22 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core Specimen Profile
 
 ### Capability statement comparison
+<span style="color: red; font-weight: bold;">TODO</span>
 As part of capability statement comparison, FHIR RESTful  the supported resource types, interactions, search parameters, combined search parameter support, operations, and other conformance expectations for requesters (clients) or responders (servers) are evaluated. 
 
+- Capabilities by resourse/profile including:
+- The relevant profiles
+- The interactions supported by each resource 
+- The required and recommended search parameters
+- The linked resources enabled for `_include`
+- The other resources enabled for `_revinclude`
+- The operations on the resource
+
+
+
 #### CapabilityStatement mapping
+<span style="color: red; font-weight: bold;">TODO</span>
+
 A CapabilityStatement describes the conformance requirements for systems acting in specific roles, typically as a requester (client) that initiates access requests or a responder (server) that responds to those requests.
 
 AU Core defines two actors:
@@ -956,8 +969,6 @@ CapabilityStatements from other implementation guides (IPA, IPS, and US Core) ar
 CapabilityStatements from other implementation guides (IPA, IPS, US Core) are included in the comparison where they describe systems with roles similar to the AU Core Requester or AU Core Responder actors. Mapping is based on alignment in actor role and responsibilities for accessing or exchanging health information.
 
 If no comparable CapabilityStatement exists in another guide, this is indicated with the <img src="minus_symbol.png" width="20"/> icon.
-
-
 
 
 <table border="1" style="width: 100%; margin-left: 0; margin-right: auto; border-collapse: collapse;">
@@ -1295,12 +1306,12 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
     </thead>
     <tbody>
 		<tr>
+            <td>FHIR resource support</td>
+            <td>Clients <strong>SHALL</strong> support the IPA conformance expectations for the Patient profile and for each IPA resource type they support. <img src="arrow_up.png" width="20"/></td>
+        </tr>
+		<tr>
             <td>Supported implementation guides</td>
             <td><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>. <img src="arrow_up.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td>FHIR resource support</td>
-            <td><strong>SHALL</strong> support the IPA conformance expectations for the Patient resource profile and for each IPA resource type they support.</td>
         </tr>
         <tr>
             <td rowspan="3">Security</td>
@@ -1314,7 +1325,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
         </tr>
 		<tr>
             <td rowspan="3">AllergyIntolerance</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA AllergyIntolerance profile. <img src="arrow_up.png" width="20"/></td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-AllergyIntolerance profile.</td>
         </tr>
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
@@ -1324,7 +1335,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
 		</tr>
 		<tr>
             <td rowspan="6">Condition</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA Condition profile.</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-Condition profile.</td>
         </tr>
 		<tr>
             <td><strong>SHALL NOT</strong> treat all Condition resources as entries in the current problem list. <img src="plus_sign.png" width="20"/></td>
@@ -1342,8 +1353,8 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td>Clients <strong>SHALL</strong>:handle Condition.clinicalStatus, Condition.verificationStatus, and Condition.code. <img src="arrow_up.png" width="20"/></td>
 		</tr>
 		<tr>
-            <td rowspan="8">DocumentReference</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA DocumentReference profile. (TODO: point to IPA profile comparison Additional profiles)</td>
+            <td rowspan="9">DocumentReference</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-DocumentReference profile, which has no equivalent profile in AU Core, as noted in <a href="comparison.html#profile-comparison">Profile comparison</a>. <img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
             <td><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions. <img src="plus_sign.png" width="20"/></td>
@@ -1352,8 +1363,9 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td><strong>SHALL</strong> support the <code>patient</code> search parameter. <img src="plus_sign.png" width="20"/></td> 
         </tr>
 		<tr>
-            <td>Clients <strong>SHALL</strong>:handle DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.contentType, DocumentReference.content.data, DocumentReference.content.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. <img src="plus_sign.png" width="20"/> </td>
+            <td>Clients <strong>SHALL</strong> handle: DocumentReference.status, DocumentReference.type, DocumentReference.subject, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.attachment.contentType, DocumentReference.content.attachment.data, DocumentReference.content.attachment.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. <img src="plus_sign.png" width="20"/></td>
 		</tr>
+		<td><td>Clients <strong>SHOULD</strong> handle DocumentReference.category and DocumentReference.author. <img src="plus_sign.png" width="20"/></td>
         <tr>
             <td><strong>SHOULD</strong> support <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
         </tr>
@@ -1368,72 +1380,74 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
         </tr>
 		<tr>
             <td rowspan="3">Immunization</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA Immunization profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
+		<tr>
+            <td>Clients <strong>SHALL</strong> handle Immunization.status, Immunization.vaccineCode, Immunization.patient and Immunization.occurence[x]. <img src="arrow_up.png" width="20"/></td>
+		</tr>		
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
         </tr>
-		<tr>
-            <td>Clients <strong>SHALL</strong>:handle Immunization.status, Immunization.statusReason, Immunization.vaccineCode, Immunization.patient and Immunization.occurence[x]. <img src="arrow_up.png" width="20"/></td>
-		</tr>
 		<tr>
             <td rowspan="3">Medication</td>
-            <td><strong>SHALL</strong> support the IPA Medication profile and conformance expectations.</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-Medication profile.</td>
         </tr>
+		<tr>
+            <td>Clients <strong>SHALL</strong> handle Medication.code. <img src="arrow_up.png" width="20"/></td>
+		</tr>		
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td>Clients <strong>SHALL</strong>:handle Medication.code. <img src="arrow_up.png" width="20"/></td>
-		</tr>
-        <tr>
-            <td rowspan="5">MedicationRequest</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA MedicationRequest profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td rowspan="6">MedicationRequest</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr> 
 		<tr>
             <td>Clients <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td>Clients <strong>SHALL</strong>:handle MedicationRequest.status, MedicationRequest.doNotPerform, MedicationRequest.reported[x], MedicationRequest.medication[x], MedicationRequest.subject, MedicationRequest.encounter, MedicationRequest.requester, MedicationRequest.dosageInstruction, MedicationRequest.dosageInstruction.text. <img src="arrow_up.png" width="20"/></td>
+            <td>Clients <strong>SHALL</strong> handle: MedicationRequest.status, MedicationRequest.doNotPerform, MedicationRequest.medication[x], MedicationRequest.subject, MedicationRequest.requester, MedicationRequest.dosageInstruction, and MedicationRequest.dosageInstruction.text. <img src="arrow_up.png" width="20"/></td>
 		</tr>
 		<tr>
-            <td><strong>SHOULD</strong> support for category and code search parameters. <img src="plus_sign.png" width="20"/></td>
+            <td>Clients <strong>SHOULD</strong> handle MedicationRequest.reported[x]. <img src="arrow_up.png" width="20"/></td>
+		</tr>
+		<tr>
+            <td><strong>SHOULD</strong> support <code>category</code> and <code>code</code> search parameters. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="4">MedicationStatement</td>
-           <td><strong>SHALL</strong> meet the requirements of the IPA MedicationStatement profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+           <td><strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr> 
 		<tr>
             <td>Clients <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td>Clients <strong>SHALL</strong>:handle MedicationStatement.status, MedicationStatement.statusReason, MedicationStatement.medication[x], MedicationStatement.subject, MedicationStatement.effective[x], MedicationStatement.dosage, and MedicationStatement.dosage.text. <img src="arrow_up.png" width="20"/></td>
-		</tr>
+            <td>Clients <strong>SHALL</strong> handle: MedicationStatement.status, MedicationStatement.medication[x], and MedicationStatement.subject. <img src="arrow_up.png" width="20"/></tr>
 		<tr>
-            <td><strong>SHOULD</strong> support for <code>category</code> and <code>code</code> search parameters. <img src="plus_sign.png" width="20"/></td>
-        </tr>
+            <td>Clients <strong>SHOULD</strong> handle: MedicationStatement.effective[x], MedicationStatement.dosage, and MedicationStatement.dosage.text. <img src="arrow_up.png" width="20"/></td>
+		</tr>
         <tr>
             <td rowspan="5">Observation</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA Observation profile.</td>
-        </tr>
-		<tr>
-            <td><strong>SHALL</strong> support the Vital Signs Profile. <img src="plus_sign.png" width="20"/></td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-Observation profile.</td>
         </tr>
 		<tr>
             <td><strong>SHALL</strong> support <code>patient</code> search parameter. <img src="arrow_up.png" width="20"/></td>
         </tr>   
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
-        </tr> 
-		<tr>
-            <td>Clients <strong>SHALL</strong>:handle Observation.status, Observation.category, Observation.code, Observation.subject, Observation.effective[x], Observation.value[x], and Observation.dataAbsentReason. <img src="arrow_up.png" width="20"/></td>
+            <td>Clients <strong>SHALL</strong> handle: Observation.status, Observation.code, Observation.subject, Observation.effective[x], Observation.value[x], and Observation.dataAbsentReason. <img src="arrow_up.png" width="20"/></td>
 		</tr>
+		<tr>
+            <td>Clients <strong>SHOULD</strong> handle Observation.category. <img src="arrow_up.png" width="20"/></td>
+		</tr>
+		<tr>
+            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+        </tr>
         <tr>
             <td rowspan="8">Patient</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA Patient profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
 			<td>Client <strong>SHALL</strong> be able to follow Patient.link(s) to other Patient resources and understand direction of the link. <img src="plus_sign.png" width="20"/></td>
@@ -1457,18 +1471,15 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td rowspan="3">Practitioner</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA Practitioner profile.</td>
+            <td rowspan="2">Practitioner</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-Practitioner profile.</td>
         </tr>
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
         </tr> 
 		<tr>
-            <td>Clients <strong>SHALL</strong>:handle Practitioner.name. <img src="arrow_up.png" width="20"/></td>
-		</tr>
-		<tr>
             <td rowspan="3">PractitionerRole</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA PractitionerRole profile.</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-PractitionerRole profile.</td>
         </tr>
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
@@ -1498,12 +1509,16 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
     </thead>
     <tbody>
 		<tr>
+            <td>FHIR resource support</td>
+            <td>Servers <strong>SHALL</strong> support the IPA conformance expectations for the Patient profile and for each IPA resource type they support. <img src="arrow_up.png" width="20"/></td>
+        </tr>
+		<tr>
             <td>Supported implementation guides</td>
             <td><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>. <img src="plus_sign.png" width="20"/> </td>
         </tr>
 		<tr>
             <td>FHIR resource support</td>
-            <td><strong>SHALL</strong> support the IPA Patient resource profile and at least one additional resource profile from the list of IPA profiles.</td>
+            <td><strong>SHALL</strong> support the IPA-Patient resource profile and at least one additional resource profile from the list of IPA profiles.</td>
         </tr>
         <tr>
             <td rowspan="2">Security</td>
@@ -1514,14 +1529,14 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
         </tr>
 		<tr>
             <td rowspan="2">AllergyIntolerance</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA AllergyIntolerance profile.</td>
+              <td><strong>SHALL</strong> meet the requirements of the IPA-AllergyIntolerance profile.</td>
         </tr>
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="4">Condition</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA Condition profile.</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-Condition profile.</td>
         </tr>
 		<tr>
             <td><strong>SHOULD</strong> populate Condition.code.coding.display and/or Condition.code.text. <img src="plus_sign.png" width="20"/></td>
@@ -1534,7 +1549,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
         </tr>
         <tr>
             <td rowspan="8">DocumentReference</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA DocumentReference profile. (TODO: point to IPA profile comparison Additional profiles)</td>
+			<td><strong>SHALL</strong> meet the requirements of the IPA-DocumentReference profile, which has no equivalent profile in AU Core, as noted in <a href="comparison.html#profile-comparison">Profile comparison</a>. <img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
             <td><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions. <img src="plus_sign.png" width="20"/></td>
@@ -1549,7 +1564,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
            <td><strong>SHALL</strong> support <code>$docref</code> operation. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td>Servers <strong>SHALL</strong>:populate-if-known DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.contentType, DocumentReference.content.data, DocumentReference.content.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. <img src="plus_sign.png" width="20"/></td>
+            <td>Servers <strong>SHALL</strong> populate-if-known: DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.date, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.attachment.contentType, DocumentReference.content.attachment.data, DocumentReference.content.attachment.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. <img src="plus_sign.png" width="20"/></td>
 		</tr>
 		<tr>
            <td><strong>SHOULD</strong> support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters combination. <img src="plus_sign.png" width="20"/></td>
@@ -1559,24 +1574,27 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
         </tr>
 		<tr>
             <td rowspan="2">Immunization</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA Immunization profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="2">Medication</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA Medication profile.</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-Medication profile.</td>
         </tr>
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="5">MedicationRequest</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA MedicationRequest profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td rowspan="6">MedicationRequest</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
-            <td>Servers <strong>SHALL</strong>:populate-if-known MedicationRequest.reported[x]. <img src="plus_sign.png" width="20"/></td>
+            <td>Servers <strong>SHALL</strong> populate-if-known: MedicationRequest.reported[x]. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+            <td>Servers <strong>SHOULD</strong> populate MedicationRequest.doNotPerform. <img src="plus_sign.png" width="20"/></td>
 		</tr>
 		<tr>
             <td>Servers <strong>SHOULD</strong> use codings at the level of a clinical drug. <img src="plus_sign.png" width="20"/></td>
@@ -1589,27 +1607,24 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
         </tr>
 		<tr>
             <td rowspan="3">MedicationStatement</td>
-           <td><strong>SHALL</strong> meet the requirements of the IPA MedicationStatement profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+           <td><strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr> 
+		<tr>
+            <td>Servers <strong>SHALL</strong> populate-if-known: MedicationStatement.context and MedicationStatement.informationSource. <img src="plus_sign.png" width="20"/></td>
+		</tr>		
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td>Servers <strong>SHALL</strong>:populate-if-known MedicationStatement.context and MedicationStatement.informationSource. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-        <tr>
-            <td rowspan="3">Observation</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA Observation profile.</td>
-        </tr>
-		<tr>
-            <td><strong>SHALL</strong> support the Vital Signs Profile. <img src="plus_sign.png" width="20"/></td>
+            <td rowspan="2">Observation</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-Observation profile.</td>
         </tr>
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
         </tr> 
         <tr>
             <td rowspan="7">Patient</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA Patient profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
             <td>Server <strong>SHALL</strong> have no more than one Patient.active = true for the same patient on the server. <img src="plus_sign.png" width="20"/></td>
@@ -1629,32 +1644,16 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
         </tr> 
-	    <tr>
-            <td rowspan="5">Organization</td>
-            <td><strong>SHALL</strong> support <code>address</code> search parameter. <img src="arrow_up.png" width="20"/></td>
-        </tr>
-		<tr>
-            <td><strong>SHALL</strong> support the use of a National Provider Identifier (NPI) in Organization.identifier. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-		<tr>
-            <td><strong>SHOULD</strong> support the use of Clinical Laboratory Improvement Amendments (CLIA) identifiers in Organization.identifier. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-		<tr>
-            <td><strong>SHOULD</strong> follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for populating Organization.address.line and Organization.address.city. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
-        </tr>
 		<tr>
             <td rowspan="2">Practitioner</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA Practitioner profile.</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-Practitioner profile.</td>
         </tr>
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
         </tr> 
 		<tr>
             <td rowspan="2">PractitionerRole</td>
-            <td><strong>SHALL</strong> meet the requirements of the IPA PractitionerRole profile.</td>
+            <td><strong>SHALL</strong> meet the requirements of the IPA-PractitionerRole profile.</td>
         </tr>
 		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
