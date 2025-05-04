@@ -942,34 +942,33 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core Specimen Profile
 
 ### Capability statement comparison
-<span style="color: red; font-weight: bold;">TODO</span>
-As part of capability statement comparison, FHIR RESTful  the supported resource types, interactions, search parameters, combined search parameter support, operations, and other conformance expectations for requesters (clients) or responders (servers) are evaluated. 
+This section compares AU Core conformance expectations with those defined in other key international implementation guides, focusing on systems acting in similar roles (requesters and responders). The comparison is based on **SHALL** and **SHOULD** conformance requirements and does not consider **MAY** requirements. 
 
+As part of the comparison, both system-level and resource-level capabilities are evaluated:
+- System-level capabilities including:
+  - Supported FHIR versions and formats
+  - Supported implementation guides 	
+  - Overall conformance expectations (**SHALL**, **SHOULD**)
+  - Support for FHIR RESTful interactions (e.g. `batch`, `batch`)
+  - Declared security services and requirements (e.g. SMART App Launch)
 - Capabilities by resourse/profile including:
-- The relevant profiles
-- The interactions supported by each resource 
-- The required and recommended search parameters
-- The linked resources enabled for `_include`
-- The other resources enabled for `_revinclude`
-- The operations on the resource
-
-
+  - Supported resource types
+  - Relevant profiles and compliance expectations	
+  - Supported interactions for  each resource (e.g. `read`, `search-type`)
+  - Required and recommended search parameters
+  - Support for combinations of search paramaters
+  - Support for `_include` and `_revinclude`
+  - Reference resolution and support for reference policies (e.g. `resolves`)	
+  - Defined operations on the resource
 
 #### CapabilityStatement mapping
-<span style="color: red; font-weight: bold;">TODO</span>
+A CapabilityStatement describes the conformance requirements for systems acting in defined roles. 
 
-A CapabilityStatement describes the conformance requirements for systems acting in specific roles, typically as a requester (client) that initiates access requests or a responder (server) that responds to those requests.
-
-AU Core defines two actors:
-- AU Core Requester - A system that creates and initiates a data access request to retrieve core digital health and administrative information. The AU Core Requestor is the client in a client-server interaction.
-- AU Core Responder � A system that responds to the data access request submitted by requesters, providing responses to requests for core digital health and administrative information. The AU Core Responder is the server in a client-server interaction.
+AU Core defines two actor roles:
+- AU Core Requester - a system that initiates a FHIR RESTful request to access digital health and administrative information
+- AU Core Responder - a system that receives and responds to those requests, returning data in accordance with AU Core conformance requirements
 
 CapabilityStatements from other implementation guides (IPA, IPS, and US Core) are included in the comparison when they define actors that serve similar roles and purposes. Only actors with comparable responsibilities for data access and exchange are mapped for comparison. Where no equivalent capability statement exists, this is indicated using the <img src="minus_symbol.png" width="20"/> icon in the table below.
-
-CapabilityStatements from other implementation guides (IPA, IPS, US Core) are included in the comparison where they describe systems with roles similar to the AU Core Requester or AU Core Responder actors. Mapping is based on alignment in actor role and responsibilities for accessing or exchanging health information.
-
-If no comparable CapabilityStatement exists in another guide, this is indicated with the <img src="minus_symbol.png" width="20"/> icon.
-
 
 <table border="1" style="width: 100%; margin-left: 0; margin-right: auto; border-collapse: collapse;">
     <thead>
@@ -1002,13 +1001,13 @@ The table below provides a comparison of capability statements from AU Core to t
 
 **Legend:**
 
-<img src="green_checkmark.png" width="20"/> **Compliant**: A system conforming to the AU Core capability statement meets all **SHALL** requirements defined in the compared capability statement. Additional **SHOULD** requirements do not affect compliance. Where additional requirements are identified, more information is provided in the sections below.
+<img src="green_checkmark.png" width="20"/> **Compliant**: A system conforming to the AU Core capability statement meets all **SHALL** requirements defined in the compared capability statement. Additional **SHOULD** requirements do not affect compliance. Where additional requirements are identified, more information is provided in the sections below.*
 
-<img src="orange_checkmark.png" width="20"/> **Additional requirements**: A system conforming to the AU Core capability statement aligns with the compared capability statement but may require additional functionality to meet its stricter or broader requirements. Where additional requirements are identified, more information is provided in the sections below.
+<img src="orange_checkmark.png" width="20"/> **Additional requirements**: A system conforming to the AU Core capability statement aligns with the compared capability statement but may require additional functionality to meet its stricter or broader requirements. Where additional requirements are identified, more information is provided in the sections below.*
 
-<img src="cross_red_circle.png" width="20"/> **Incompatible**: A system conforming to the AU Core capability statement cannot meet one or more **SHALL** conformance requirements of the compared capabilty statement due to conflictin requirements. Full conformance to both is not possible. Where incompatible requirements are identified, more information is provided in the sections below.
+<img src="cross_red_circle.png" width="20"/> **Incompatible**: A system conforming to the AU Core capability statement cannot meet one or more **SHALL** conformance requirements of the compared capabilty statement due to conflictin requirements. Full conformance to both is not possible. Where incompatible requirements are identified, more information is provided in the sections below.*
 
-<img src="minus_symbol.png" width="20"/> **No equivalent capability statement**: No equivalent capability statement for comparison.
+<img src="minus_symbol.png" width="20"/> **No equivalent capability statement**: No equivalent capability statement for comparison.*
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <colgroup>
@@ -1287,6 +1286,11 @@ The table below provides a comparison of capability statements from AU Core to t
     </tbody>
 </table>
 
+
+\* The sections below list additional or incompatible requirements using the following icons:
+- <img src="arrow_up.png" width="16"/> Indicates the compared CapabilityStatement defines a stronger conformance requirement than AU Core (e.g., AU Core uses **SHOULD**, but the compared CapabilityStatement uses **SHALL**).
+- <img src="plus_sign.png" width="16"/> Indicates the requirement is only present in the compared CapabilityStatement and does not exist in AU Core.
+
 #### International Patient Access
 [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) defines the expected capabilities of systems enabling patient authorised access to clinical records via a FHIR-based API. 
 
@@ -1365,7 +1369,9 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
 		<tr>
             <td>Clients <strong>SHALL</strong> handle: DocumentReference.status, DocumentReference.type, DocumentReference.subject, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.attachment.contentType, DocumentReference.content.attachment.data, DocumentReference.content.attachment.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period. <img src="plus_sign.png" width="20"/></td>
 		</tr>
-		<td><td>Clients <strong>SHOULD</strong> handle DocumentReference.category and DocumentReference.author. <img src="plus_sign.png" width="20"/></td>
+		<tr>
+			<td>Clients <strong>SHOULD</strong> handle DocumentReference.category and DocumentReference.author. <img src="plus_sign.png" width="20"/></td>
+		</tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
         </tr>
@@ -1425,7 +1431,8 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td>Clients <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td>Clients <strong>SHALL</strong> handle: MedicationStatement.status, MedicationStatement.medication[x], and MedicationStatement.subject. <img src="arrow_up.png" width="20"/></tr>
+            <td>Clients <strong>SHALL</strong> handle: MedicationStatement.status, MedicationStatement.medication[x], and MedicationStatement.subject. <img src="arrow_up.png" width="20"/></td>
+		</tr>
 		<tr>
             <td>Clients <strong>SHOULD</strong> handle: MedicationStatement.effective[x], MedicationStatement.dosage, and MedicationStatement.dosage.text. <img src="arrow_up.png" width="20"/></td>
 		</tr>
@@ -1482,12 +1489,12 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td><strong>SHALL</strong> meet the requirements of the IPA-PractitionerRole profile.</td>
         </tr>
 		<tr>
+            <td>Clients <strong>SHALL</strong>:handle PractitionerRole.practitioner. <img src="arrow_up.png" width="20"/></td>
+		</tr>	
+		<tr>
             <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
         </tr> 
-		<tr>
-            <td>Clients <strong>SHALL</strong>:handle PractitionerRole.practitioner. <img src="arrow_up.png" width="20"/></td>
-		</tr>
-  </tbody>
+	</tbody>
 </table>
 
 ##### Additional resource types
@@ -1682,14 +1689,69 @@ The [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl
         </tr>
     </thead> 
     <tbody>
+		<tr>
+			<td>AllergyIntolerance</td>
+			<td>Servers <strong>SHOULD</strong> support the IPS AllergyIntolerance profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+		</tr>
+		<tr>
+			<td>Condition</td>
+			<td>Servers <strong>SHOULD</strong> support the IPS Condition profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+		</tr>
+		<tr>
+			<td>DiagnosticReport</td>
+			<td>Servers <strong>SHOULD</strong> support the IPS DiagnosticReport profile.</td>
+		</tr>
         <tr>
-            <td>DocumentReference</td>
-            <td><strong>SHOULD</strong> support <code>$docref</code> operation. <img src="plus_sign.png" width="20"/></td>
+            <td>Immunization</td>
+            <td>Servers <strong>SHOULD</strong> support the IPS Immunization profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
-            <td>Patient</td>
-            <td><strong>SHOULD</strong> support <code>$summary</code> operation. <img src="plus_sign.png" width="20"/></td>
+            <td>Medication</td>
+            <td>Servers <strong>SHOULD</strong> support the IPS Medication profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
+		<tr>
+            <td>MedicationRequest</td>
+            <td>Servers <strong>SHOULD</strong> support the IPS MedicationRequest profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+        </tr>
+		<tr>
+            <td>MedicationStatement</td>
+            <td>Servers <strong>SHOULD</strong> support the IPS MedicationStatement profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+        </tr>
+		<tr>
+			<td>Observation</td>
+			<td><strong>SHOULD</strong> support the following IPS Observation profiles: Observation - Pregnancy: EDD, Observation - Pregnancy: status, Observation - SH: alcohol use, Observation - SH: tobacco use, Observation Results: laboratory/pathology (IPS), Observation Results: radiology (IPS). <img src="arrow_up.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td>Organization</td>
+			<td>Servers <strong>SHOULD</strong> support the Organization (IPS) profile.</td>
+		</tr>
+		<tr>
+            <td rowspan="2">Patient</td>
+            <td>Servers <strong>SHALL</strong> support the IPS Patient profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+        </tr>
+		<tr>
+			<td><strong>SHOULD</strong> support <code>$summary</code> operation. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td>Practitioner</td>
+			<td>Servers <strong>SHOULD</strong> support the Practitioner (IPS) profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+		</tr>
+		<tr>
+			<td>PractitionerRole</td>
+			<td>Servers <strong>SHOULD</strong> support the PractitionerRole (IPS) profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+		</tr>
+		<tr>
+			<td>Procedure</td>
+			<td>Servers <strong>SHOULD</strong> support the Procedure (IPS) profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+		</tr>
+		<tr>
+			<td>Specimen</td>
+			<td>Servers <strong>SHOULD</strong> support the Specimen (IPS) profile. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td>DocumentReference</td>
+			<td><strong>SHOULD</strong> support <code>$docref</code> operation. <img src="plus_sign.png" width="20"/></td>
+		</tr>
     </tbody>
 </table>    
 
@@ -1759,7 +1821,7 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
     <tbody>
 		<tr>
             <td>FHIR resource support</td>
-            <td>US Core Client <strong>SHALL</strong> support fetching and querying of one or more US Core profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement.</td>
+            <td>Clients <strong>SHALL</strong> support fetching and querying of one or more US Core profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement.</td>
         </tr>
 		<tr>
             <td rowspan="7">Security</td>
@@ -1784,16 +1846,22 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td><strong>SHOULD</strong> provide Provenance statements using the US Core Provenance Profile resource and associated requirements. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="2">AllergyIntolerance</td>
+            <td rowspan="3">AllergyIntolerance</td>
+            <td>Clients <strong>SHALL</strong> support the US Core AllergyIntolerance Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+        </tr>
+		<tr>
             <td><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="6">Condition</td>
-            <td><strong>SHALL</strong> support assertedDate Extension, Condition.onsetDateTime, or Condition.recordedDate elements. <img src="plus_sign.png" width="20"/></td>
+            <td rowspan="7">Condition</td>
+            <td><strong>SHALL</strong> support both US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile, which have additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
+		<tr>
+			<td><strong>SHALL</strong> support assertedDate Extension, Condition.onsetDateTime, or Condition.recordedDate elements. <img src="plus_sign.png" width="20"/></td>
+		</tr>
 		<tr>
             <td><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
@@ -1807,17 +1875,23 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td>When Condition.category is a "problems-list-item", the Condition.clinicalStatus <strong>SHOULD NOT</strong> be unknown. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> reference Condition.encounter when category is "encounter-diagnosis". <img src="plus_sign.png" width="20"/></td>
+            <td><strong>SHOULD</strong> reference encounter in Condition.encounter when category is "encounter-diagnosis". <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="7">DiagnosticReport</td>
-            <td><strong>SHALL</strong> support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>. <img src="plus_sign.png" width="20"/></td>
+            <td rowspan="9">DiagnosticReport</td>
+            <td>Clients <strong>SHALL</strong> support at least one of US Core DiagnosticReport Profile for Laboratory Results Reporting  or US Core DiagnosticReport Profile for Report and Note Exchange profiles. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
-            <td><strong>SHALL</strong> support <code>patient</code>, <code>code</code>, <code>category</code>, <code>date</code>, <code>_lastUpdated</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
+		<tr>
+			<td><strong>SHALL</strong> support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+       <tr>
+            <td><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
-            <td><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions, and <strong>SHALL</strong> support <code>create</code> if using the Report and Note Exchange profile. <img src="plus_sign.png" width="20"/></td>
+		<tr>
+			<td><strong>SHALL</strong> support <code>create</code> for the US Core DiagnosticReport Profile for Report and Note exchange profile. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			  <td><strong>SHALL</strong> support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td><strong>SHOULD</strong> support the <code>resolves</code> reference policy. <img src="plus_sign.png" width="20"/></td>
@@ -1829,26 +1903,32 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support <code>status</code>, <code>patient+code+date</code>, <code>patient+status</code>, <code>patient+category+_lastUpdated</code> search parameters and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
+            <td><strong>SHOULD</strong> support <code>patient+code+date</code>, <code>patient+status</code>, and <code>patient+category+_lastUpdated</code> search parameter combinations. <img src="plus_sign.png" width="20"/></td>
 		</tr>
         <tr>
-            <td rowspan="11">DocumentReference</td>
-            <td><strong>SHALL</strong> support for GET by id: <code>GET [base]/DocumentReference/[id]</code>. <img src="plus_sign.png" width="20"/></td>
+            <td rowspan="15">DocumentReference</td>
+             <td>Clients <strong>SHALL</strong> support US Core DocumentReference Profile.</td>
         </tr>
+		<tr>
+		  <td><strong>SHALL</strong> support the five <a href="https://hl7.org/fhir/us/core/ValueSet-us-core-clinical-note-type.html">Common Clinical Notes</a> in the DocumentReference.type <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+		  <td>Clients <strong>SHALL</strong> support both <code>DocumentReference.content.attachment.url</code> and <code>DocumentReference.content.attachment.data</code> for document retrieval. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+		  <td>If there are multiple <code>DocumentReference.content</code> repetitions, these <strong>SHALL</strong> represent the same document in different formats or attachment metadata, and <strong>SHALL NOT</strong> represent different document versions; versioning is handled using multiple DocumentReferences with <code>DocumentReference.relatesTo</code>. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+		  <td>Responsible Organisation <strong>SHALL</strong> be either be present in <code>DocumentReference.custodian</code> or accessible via a Provenance resource using <code>Provenance.agent.who</code> or <code>Provenance.agent.onBehalfOf</code>. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td><strong>SHALL</strong> support GET by id: <code>GET [base]/DocumentReference/[id]</code>. <img src="plus_sign.png" width="20"/></td>
+		</tr>
         <tr>
             <td><strong>SHALL</strong> support <code>create</code>, <code>read</code> and <code>search-type</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td><strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-		<tr>
-            <td><strong>SHALL</strong> support both DocumentReference.attachment.url and DocumentReference.attachment.data representations of content. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td><strong>SHALL</strong> handle multiple DocumentReference.content repetitions as alternative formats of the same document, not different versions. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td><strong>SHALL</strong> be capable of processing a responsible organization from either DocumentReference.custodian, or a Provenance resource pointing to the DocumentReference via agent.who or agent.onBehalfOf. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td><strong>SHOULD</strong> support the <code>resolves</code> reference policy. <img src="plus_sign.png" width="20"/></td>
@@ -1857,7 +1937,13 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support the <code>$docref</code> operation. <img src="plus_sign.png" width="20"/></td>
+            <td><strong>SHOULD</strong> support <code>$docref</code> operation. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td><strong>SHOULD</strong> be capable of receiving at least a reference to a CCD document. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td><strong>SHOULD</strong> be capable of receiving documents as included resources in response to the $docref operation. <img src="plus_sign.png" width="20"/></td>
         </tr>
          <tr>
             <td><strong>SHOULD</strong> support for <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
@@ -1866,14 +1952,17 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td><strong>SHOULD</strong> support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="7">Encounter</td>
-            <td><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
+            <td rowspan="8">Encounter</td>
+            <td><strong>SHALL</strong> support the US Core Encounter profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
+		<tr>
+            <td><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
+		</tr>
 		<tr>
             <td>Clients <strong>SHALL</strong> support both Encounter.location.location and Encounter.serviceProvider. <img src="plus_sign.png" width="20"/></td>
 		</tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>identifier</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameters and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
+            <td><strong>SHOULD</strong> support <code>identifier</code>, <code>patient+type</code>, <code>patient+_lastUpdated</code>, and <code>patient+discharge-disposition</code> search parameters and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
@@ -1887,8 +1976,15 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
 		<tr>
             <td><strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in Encounter.location. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
-            <td rowspan="3">Immunization</td>
+		 <tr>
+            <td>HealthcareService</td>
+            <td><strong>SHOULD</strong> support <code>vread</code> interaction. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td rowspan="4">Immunization</td>
+            <td>Clients <strong>SHALL</strong> support the US Core Immunization Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+        </tr>
+		<tr>
             <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
@@ -1898,50 +1994,64 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td><strong>SHOULD</strong> support NDC vaccine codes as translations to CVX vaccine codes, which are required based on the ONC U.S. Core Data for Interoperability (USCDI) requirements. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="2">Location</td>
+            <td rowspan="4">Location</td>
+            <td>Clients <strong>SHALL</strong> support the US Core Location Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+        </tr>
+		<tr>
+            <td><strong>SHALL</strong> support the <code>address</code> search parameter.<img src="arrow_up.png" width="20"/></td>
+        </tr>
+		<tr>
             <td><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td><strong>SHOULD</strong> format Location.address.line and Location.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td>Medication</td>
+            <td rowspan="2">Medication</td>
+            <td>Clients <strong>SHALL</strong> support the US Core Medication Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+        </tr>
+		<tr>
             <td><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td rowspan="8">MedicationRequest</td>
-            <td><strong>SHALL</strong> support <code>patient+intent</code>, <code>patient+intent+status</code>, and <code>patient+intent+encounter</code> search parameter combinations.</td>
+            <td rowspan="9">MedicationRequest</td>
+            <td><strong>SHALL</strong> support the US Core Observation profiles. Profiles with equivalent AU Core profiles are compliant, as noted in the <a href="comparison.html#profile-comparison">Profile comparison</a>. Profiles without an equivalent are considered <strong>additional requirements</strong>. <img src="plus_sign.png" width="20"/></td>
         </tr>
+		<tr>
+			<td>Clients <strong>SHALL</strong> support the US Core MedicationRequest Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+		</tr>
+		<tr>
+			<td><strong>SHALL</strong> support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations. <img src="arrow_up.png" width="20"/></td>
+		</tr>
 		<tr>
             <td><strong>SHALL</strong> support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference. <img src="plus_sign.png" width="20"/></td>
         </tr> 
         <tr>
-            <td><strong>SHALL</strong> support all potential target resource types for MedicationRequest.reasonReference. <img src="plus_sign.png" width="20"/></td>
+            <td><strong>SHALL</strong> support all target resource types for MedicationRequest.reasonReference. <img src="plus_sign.png" width="20"/></td>
         </tr>  
 		<tr>
-            <td><strong>SHOULD</strong> populate MedicationRequest.requester with a Patient or RelatedPerson resource when recording self-prescribed medication. <img src="plus_sign.png" width="20"/></td>
+            <td>Clients <strong>SHOULD</strong> interpret the use of MedicationRequest.requester with Patient or RelatedPerson indicates a self-prescribed medication. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support all target resource types referenced by MedicationRequest.reasonReference. <img src="plus_sign.png" width="20"/></td>
-        </tr>
+			<td><strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combinations <img src="arrow_up.png" width="20"/></td>
+		</tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
-            <td><strong>SHOULD</strong> have referenced resources in MedicationRequest.reasonReference conform to US Core profiles. <img src="plus_sign.png" width="20"/></td>
-        </tr> 
-        <tr>
-            <td rowspan="7">Observation</td>
-            <td><strong>SHALL</strong> ensure that an Observation without a value includes a reason for absence using Observation.dataAbsentReason unless there are component observations, or references to other Observations. <img src="plus_sign.png" width="20"/></td>
+            <td rowspan="8">Observation</td>
+            <td><strong>SHALL</strong> support all US Core Observation profiles listed in the specification, including those compared in the <a href="comparison.html#profile-comparison">Profile comparison</a> and additional profiles not included in the comparison.</td>
         </tr>
 		<tr>
-            <td><strong>SHALL</strong> ensure that an Observation.component without a value includes a reason for absence using Observation.component.dataAbsentReason. <img src="plus_sign.png" width="20"/></td>
+			<td><strong>SHALL</strong> ensure that an Observation without a value includes a reason for absence using Observation.dataAbsentReason unless there are component observations, or references to other Observations. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+            <td>Systems <strong>SHALL</strong> support Observation.dataAbsentReason when an Observation has no value. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> update Observation.meta.lastUpdated when new laboratory results are available, or status of laboratory results changes. <img src="plus_sign.png" width="20"/></td>
+            <td>Systems <strong>SHALL</strong> support Observation.component.dataAbsentReason when component values are missing. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
@@ -1953,12 +2063,15 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td><strong>SHOULD</strong> support <code>patient+category+_lastUpdated</code> search parameter combination. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support Observation.effectivePeriod. <img src="plus_sign.png" width="20"/></td>
-        </tr>
+			<td>Systems <strong>SHOULD</strong> support Observation.effectivePeriod for time-based tests. <img src="plus_sign.png" width="20"/></td>
+		</tr>
         <tr>
-            <td rowspan="5">Organization</td>
-            <td><strong>SHALL</strong> support <code>address</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+            <td rowspan="6">Organization</td>
+            <td><strong>SHALL</strong> support the US Core Organization Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
+		<tr>
+			<td><strong>SHALL</strong> support <code>address</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+		</tr>
 		<tr>
             <td><strong>SHALL</strong> support the use of a National Provider Identifier (NPI) in Organization.identifier. <img src="plus_sign.png" width="20"/></td>
         </tr>
@@ -1972,26 +2085,50 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="3">Patient</td>
-            <td><strong>SHALL</strong> support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations. <img src="arrow_up.png" width="20"/></td>
+            <td rowspan="8">Patient</td>
+            <td><strong>SHALL</strong> support the US Core Patient Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
+		<tr>
+			<td><strong>SHALL</strong> support US Core specific patient demographics: contact detail, communication language, race, ethnicity, birth sex, previous name, and name suffix. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td><strong>SHALL</strong> support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations. <img src="arrow_up.png" width="20"/></td>
+		</tr>
         <tr>
             <td><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
+		<tr>
+			<td>Patient.deceased[x] is used, at least Patient.deceasedDateTime <strong>SHALL</strong> be supported. at least Patient.deceasedDateTime if Patient.deceased[x] is used. <img src="plus_sign.png" width="20"/></td>
+		</tr>	
+		<tr>
+			<td>Systems <strong>SHALL</strong> follow the Project US@ Technical Specification for Patient.address formatting. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td><strong>SHOULD NOT</strong> use a Social Security Number in Patient.identifier.value. <img src="plus_sign.png" width="20"/></td>
+		</tr>	
         <tr>
-            <td rowspan="2">Practitioner</td>
-            <td><strong>SHALL</strong> support <code>name</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+            <td rowspan="4">Practitioner</td>
+            <td><strong>SHALL</strong> support the US Core Practitioner which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
+		<tr>
+			<td><strong>SHALL</strong> support <code>name</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td>Clients <strong>SHALL</strong> support <code>Practitioner.address</code> whether location/contact information is provided via <code>Practitioner</code> or <code>PractitionerRole</code>. <img src="plus_sign.png" width="20"/></td>
+		</tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="4">PractitionerRole</td>
-            <td><strong>SHALL</strong> support <code>specialty</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+            <td rowspan="5">PractitionerRole</td>
+            <td><strong>SHALL</strong> support the US Core PractitionerRole which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
+		<tr>
+			<td><strong>SHALL</strong> support <code>specialty</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+		</tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
@@ -2002,14 +2139,29 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="2">Procedure</td>
-            <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+            <td rowspan="6">Procedure</td>
+            <td><strong>SHALL</strong> support the US Core Procedure.</td>
         </tr>
+		<tr>
+			<td>Clients <strong>SHALL</strong> support all target resource types in Procedure.reasonReference. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td>Clients <strong>SHALL</strong> support both US Core Procedure and US Core ServiceRequest profiles. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td>Systems <strong>SHOULD</strong> support <code>Procedure.focalDevice</code> referencing the US Core Implantable Device Profile when applicable. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+		</tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="4">RelatedPerson</td>
+            <td rowspan="6">RelatedPerson</td>
+           <td><strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+        </tr>
+		 <tr>
             <td><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="arrow_up.png" width="20"/></td>
         </tr>
         <tr>
@@ -2021,15 +2173,30 @@ The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td><strong>SHOULD</strong> support <code>name</code> search parameter. <img src="arrow_up.png" width="20"/></td>
         </tr>
-        <tr>
-            <td rowspan="5">Specimen</td>
-            <td><strong>SHALL</strong> support GET by id: <code>GET [base]/Specimen/[id]</code>. <img src="plus_sign.png" width="20"/></td>
+		<tr>
+            <td><strong>SHOULD</strong> format RelatedPerson.address.line and RelatedPerson.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0. <img src="plus_sign.png" width="20"/></td>
         </tr>
+		<tr>
+            <td rowspan="9">Specimen</td>
+            <td><strong>SHALL</strong> support the US Core Specimen Profile.</td>
+        </tr>
+		<tr>
+			<td><strong>SHALL</strong> support GET by id: <code>GET [base]/Specimen/[id]</code>. <img src="plus_sign.png" width="20"/></td>
+		</tr>
         <tr>
             <td><strong>SHALL</strong> support both Specimen.identifier and Specimen.accessionIdentifier. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
+		<tr>
+			<td>Clients <strong>SHALL</strong> support both Specimen.identifier and Specimen.accessionIdentifier. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
             <td><strong>SHALL</strong> support the <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td><strong>SHOULD</strong> support <code>resolves</code> reference policy. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td><strong>SHOULD</strong> support <code>read</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>patient</code> search parameter. <img src="plus_sign.png" width="20"/></td>
@@ -2148,19 +2315,25 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td><strong>SHOULD</strong> provide Provenance statements using the US Core Provenance Profile resource and associated requirements. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="2">AllergyIntolerance</td>
+            <td rowspan="3">AllergyIntolerance</td>
+            <td>Clients <strong>SHALL</strong> support the US Core AllergyIntolerance Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+        </tr>
+		<tr>
             <td><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
-            <td rowspan="6">Condition</td>
-            <td>Servers <strong>SHALL</strong> support Condition.recordedDate. <img src="plus_sign.png" width="20"/></td>
+		<tr>
+            <td rowspan="8">Condition</td>
+             <td><strong>SHALL</strong> support both US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile, which have additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
-            <td>Servers <strong>SHALL</strong> support at least one of assertedDate Extension and Condition.onsetDateTime. <img src="plus_sign.png" width="20"/></td>
-        </tr>
+			<td>Servers <strong>SHALL</strong> support Condition.recordedDate elements. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td>Servers <strong>SHALL</strong> support at least one of the assertedDate Extension and Condition.onsetDateTime. <img src="plus_sign.png" width="20"/></td>
+		</tr>
 		<tr>
             <td><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
@@ -2168,10 +2341,13 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td><strong>SHOULD</strong> support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> search parameters combination. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
+            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
             <td>When Condition.category is a "problems-list-item", the Condition.clinicalStatus <strong>SHOULD NOT</strong> be unknown. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> reference Condition.encounter when category is "encounter-diagnosis". <img src="plus_sign.png" width="20"/></td>
+            <td><strong>SHOULD</strong> reference encounter in Condition.encounter when category is "encounter-diagnosis". <img src="plus_sign.png" width="20"/></td>
         </tr>
        <tr>
             <td rowspan="6">DiagnosticReport</td>
@@ -2226,15 +2402,18 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td><strong>SHOULD</strong> support the <code>resolves</code> reference policy. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
-            <td rowspan="7">Encounter</td>
-            <td><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td><strong>SHALL</strong> support either Encounter.location.location or Encounter.serviceProvider. <img src="plus_sign.png" width="20"/></td>
+		<tr>
+            <td rowspan="8">Encounter</td>
+            <td><strong>SHALL</strong> support the US Core Encounter profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support <code>identifier</code>, <code>patient+type</code>, <code>patient+discharge-disposition</code>, and <code>patient+_lastUpdated</code> search parameter and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
+            <td><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+            <td>Clients <strong>SHALL</strong> support both Encounter.location.location and Encounter.serviceProvider. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+        <tr>
+            <td><strong>SHOULD</strong> support <code>identifier</code>, <code>patient+type</code>, <code>patient+_lastUpdated</code>, and <code>patient+discharge-disposition</code> search parameters and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
@@ -2242,15 +2421,17 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
         <tr>
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
-            <td><strong>SHOULD</strong> ensure that if Encounter.reasonReference references an Observation, it <strong>SHOULD</strong> conform to a US Core Observation profile. <img src="plus_sign.png" width="20"/></td>
+		<tr>
+            <td>Encounter.reasonReference Observation reference <strong>SHOULD</strong> conform to a US Core Observation if applicable. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td><strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in Encounter.location. <img src="plus_sign.png" width="20"/></td>
         </tr>
-
-        <tr>
-            <td rowspan="3">Immunization</td>
+<tr>
+            <td rowspan="4">Immunization</td>
+            <td>Clients <strong>SHALL</strong> support the US Core Immunization Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+        </tr>
+		<tr>
             <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
@@ -2260,124 +2441,223 @@ The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/Capab
             <td><strong>SHOULD</strong> support NDC vaccine codes as translations to CVX vaccine codes, which are required based on the ONC U.S. Core Data for Interoperability (USCDI) requirements. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="2">Location</td>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td rowspan="4">Location</td>
+            <td>Clients <strong>SHALL</strong> support the US Core Location Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+        </tr>
+		<tr>
+            <td><strong>SHALL</strong> support the <code>address</code> search parameter.<img src="arrow_up.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td><strong>SHOULD</strong> format Location.address.line and Location.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
-            <td>Medication</td>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td rowspan="7">Medication</td>
-            <td><strong>SHALL</strong> support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations. <img src="arrow_up.png" width="20"/></td>
+<tr>
+            <td rowspan="2">Medication</td>
+            <td>Clients <strong>SHALL</strong> support the US Core Medication Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
-            <td><strong>SHALL</strong> support at least one of MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
+            <td><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td rowspan="9">MedicationRequest</td>
+            <td><strong>SHALL</strong> support the US Core MedicationRequest Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+          </tr>
+		<tr>
+			<td><strong>SHALL</strong> support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations. <img src="arrow_up.png" width="20"/></td>
+		</tr>
+		<tr>
+             <td><strong>SHALL</strong> support at least one target resource type for MedicationRequest.reasonReference. <img src="plus_sign.png" width="20"/></td>
         </tr> 
+        <tr>
+            <td><strong>SHALL</strong> support all target resource types for MedicationRequest.reasonReference. <img src="plus_sign.png" width="20"/></td>
+        </tr>  
 		<tr>
-            <td><strong>SHALL</strong> support at least one of MedicationRequest.reportedBoolean and MedicationRequest.reportedReference elements. <img src="plus_sign.png" width="20"/></td>
+            <td>Servers <strong>SHOULD</strong> use MedicationRequest.requester to indicate Patient or RelatedPerson when representing self-prescribed medications. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support at least one target resource types referenced by MedicationRequest.reasonReference. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-         <tr>
+			<td><strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combinations <img src="arrow_up.png" width="20"/></td>
+		</tr>
+        <tr>
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
-        </tr>	
-        <tr>
-            <td><strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="3">Observation</td>
+            <td><strong>SHOULD</strong> ensure that referenced resources in MedicationRequest.reasonReference conform to US Core profiles. <img src="plus_sign.png" width="20"/></td>
+        </tr> 
+        <tr>
+            <td rowspan="9">Observation</td>
+            <td><strong>SHALL</strong> support all US Core Observation profiles listed in the specification, including those compared in the <a href="comparison.html#profile-comparison">Profile comparison</a> and additional profiles not included in the comparison.</td>
+        </tr>
+		<tr>
+			<td><strong>SHALL</strong> ensure that an Observation without a value includes a reason for absence using Observation.dataAbsentReason unless there are component observations, or references to other Observations. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+            <td>Systems <strong>SHALL</strong> support Observation.dataAbsentReason when an Observation has no value. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td>Systems <strong>SHALL</strong> support Observation.component.dataAbsentReason when component values are missing. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
             <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
+        </tr>        
+		<tr>
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr> 
         <tr>
             <td><strong>SHOULD</strong> support <code>patient+category+_lastUpdated</code> search parameter combination. <img src="plus_sign.png" width="20"/></td>
         </tr>
+		<tr>
+			<td>Systems <strong>SHOULD</strong> support Observation.effectivePeriod for time-based tests. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td>For Observation.category 'laboratory', updates to meta.lastUpdated <strong>SHOULD</strong> reflect result or status changes. <img src="plus_sign.png" width="20"/></td>
+		</tr>
         <tr>
-            <td>Organization</td>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+			<td rowspan="5">Organization</td>
+            <td><strong>SHALL</strong> support the US Core Organization Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+        </tr>
+		<tr>
+			<td><strong>SHALL</strong> support <code>address</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+		</tr>
+		<tr>
+            <td><strong>SHALL</strong> support the use of a National Provider Identifier (NPI) in Organization.identifier. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td><strong>SHOULD</strong> support the use of Clinical Laboratory Improvement Amendments (CLIA) identifiers in Organization.identifier. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td><strong>SHOULD</strong> follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for populating Organization.address.line and Organization.address.city. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="4">Patient</td>
-            <td><strong>SHALL</strong> support <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameters and search parameter combinations. <img src="arrow_up.png" width="20"/></td>
+			<td rowspan="8">Patient</td>
+            <td><strong>SHALL</strong> support the US Core Patient Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
+		<tr>
+			<td><strong>SHALL</strong> support US Core specific patient demographics: contact detail, communication language, race, ethnicity, birth sex, previous name, and name suffix. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td><strong>SHALL</strong> support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations. <img src="arrow_up.png" width="20"/></td>
+		</tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
-            <td><strong>SHOULD</strong> support <code>death-date+family</code> search parameter combination. <img src="plus_sign.png" width="20"/></td>
+		<tr>
+			<td>Patient.deceased[x] is used, at least Patient.deceasedDateTime <strong>SHALL</strong> be supported. at least Patient.deceasedDateTime if Patient.deceased[x] is used. <img src="plus_sign.png" width="20"/></td>
+		</tr>	
+		<tr>
+			<td>Systems <strong>SHALL</strong> follow the Project US@ Technical Specification for Patient.address formatting. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td><strong>SHOULD NOT</strong> use a Social Security Number in Patient.identifier.value. <img src="plus_sign.png" width="20"/></td>
+		</tr>	
+		<tr>
+            <td rowspan="5">Practitioner</td>
+            <td><strong>SHALL</strong> support the US Core Practitioner which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
+		<tr>
+			<td><strong>SHALL</strong> support <code>name</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td>Servers <strong>SHALL</strong> support <code>Practitioner.address</code> if PractitionerRole is not implemented. <img src="plus_sign.png" width="20"/></td>
+ 		</tr>
         <tr>
-            <td rowspan="2">Practitioner</td>
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
+		<tr>
+			<td>Systems <strong>SHOULD</strong> follow the Project US@ Technical Specification for Practitioner.address. <img src="plus_sign.png" width="20"/></td>
+		</tr>
         <tr>
-            <td><strong>SHALL</strong> support <code>name</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+            <td rowspan="5">PractitionerRole</td>
+            <td><strong>SHALL</strong> support the US Core PractitionerRole which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
+		<tr>
+			<td><strong>SHALL</strong> support <code>specialty</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+		</tr>
         <tr>
-            <td rowspan="3">PractitionerRole</td>
-            <td><strong>SHALL</strong> support <code>specialty</code> search parameter. <img src="plus_sign.png" width="20"/></td>
+            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>_include=PractitionerRole:endpoint</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td rowspan="2">Procedure</td>
             <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
+            <td rowspan="6">Procedure</td>
+            <td><strong>SHALL</strong> support the US Core Procedure.</td>
+        </tr>
+		<tr>
+			<td>Servers <strong>SHALL</strong> support at least one target resource types in Procedure.reasonReference. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td>Servers <strong>SHALL</strong> support both US Core Procedure and US Core ServiceRequest profiles. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td>Systems <strong>SHOULD</strong> support <code>Procedure.focalDevice</code> referencing the US Core Implantable Device Profile when applicable. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+			<td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+        <tr>
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
         </tr>
-        <tr>
-            <td rowspan="4">RelatedPerson</td>
-            <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+		<tr>
+            <td rowspan="6">RelatedPerson</td>
+           <td><strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
-        <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
+		 <tr>
             <td><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>name</code> search parameter. <img src="arrow_up.png" width="20"/></td>
         </tr>
+		<tr>
+            <td><strong>SHOULD</strong> format RelatedPerson.address.line and RelatedPerson.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td rowspan="9">Specimen</td>
+            <td><strong>SHALL</strong> support the US Core Specimen Profile.</td>
+        </tr>
+		<tr>
+			<td><strong>SHALL</strong> support GET by id: <code>GET [base]/Specimen/[id]</code>. <img src="plus_sign.png" width="20"/></td>
+		</tr>
         <tr>
-            <td rowspan="5">Specimen</td>
-            <td><strong>SHALL</strong> support <code>read</code> interaction. <img src="plus_sign.png" width="20"/></td>
+            <td><strong>SHALL</strong> support both Specimen.identifier and Specimen.accessionIdentifier. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+			<td>Servers <strong>SHALL</strong> support at least one of Specimen.identifier or Specimen.accessionIdentifier. <img src="plus_sign.png" width="20"/></td>
+		</tr>
+		<tr>
+            <td><strong>SHALL</strong> support the <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td><strong>SHOULD</strong> support <code>resolves</code> reference policy. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+		<tr>
+            <td><strong>SHOULD</strong> support <code>read</code> interactions. <img src="plus_sign.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td><strong>SHOULD</strong> support <code>patient</code> search parameter. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-		<tr>
-            <td><strong>SHALL</strong> support either Specimen.identifier or Specimen.accessionIdentifier. <img src="plus_sign.png" width="20"/></td>
-        </tr>        
-		<tr>
-            <td><strong>SHOULD</strong> support <code>patient</code> search parameter. <img src="plus_sign.png" width="20"/></td>
-        </tr>  
+        </tr> 
     </tbody>
 </table>   
 
-
-
- 
 ##### Additional resource types
 The following table lists resource types that are supported by [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html) but are not currently supported by the AU Core Client CapabilityStatement. These differences may have implications for systems aiming to be interoperable across both specifications.
     
