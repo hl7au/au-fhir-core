@@ -5,6 +5,8 @@ AU Core aligns to, and leverages, international standards and other national sta
 
 Relationships between AU Core, AUCDI, and the above key implementation guides is described in [Relationship with other IGs](relationship.html). 
 
+International Patient Access (IPA) and International Patient Summary (IPS) are specifically referenced, as many of the profiles defined in AU Core are expected in future to be adopted in Australian localisations of these international standards.
+
 Corresponding profiles, conformance requirements, and capability statements included in the key FHIR implementation guides were reviewed and considered during AU Core's development to ensure alignment, and to facilitate adoption of, this standard.
 
 The below comparison evaluates AU Core conformance requirements with the key implementation guides identifying where compliance with AU Core satisfies the expectations established by the referenced implementation guide. 
