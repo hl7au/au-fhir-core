@@ -191,17 +191,16 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
     </tbody>
 </table>
 
-#### International Patient Access
+#### International Patient Access profile additional requirements
 [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
 
-##### Additional requirements <a id="ipa-additional-requirements"></a>
 The following IPA profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
             <th style="width: 25%;">AU Core</th>
-            <th style="width: 25%;">International Patient Access 1.1.0</th>
+            <th style="width: 25%;">IPA 1.1.0</th>
             <th style="width: 25%;">Element</th>
             <th style="width: 25%;">Additional requirements</th>
         </tr>
@@ -262,10 +261,9 @@ IPA does not include requirements for Suppressed Data.
 This version of AU Core has no equivalent profile for the following IPA profiles:
 - IPA-DocumentReference
 
-#### International Patient Summary
+#### International Patient Summary profile additional requirements
 [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) describes how to represent the International Patient Summary (IPS) using HL7 FHIR. An International Patient Summary  document is an electronic health record extract containing essential healthcare information about a subject of care.
 
-##### Additional requirements <a id="ips-additional-requirements"></a>
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -512,10 +510,9 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - Specimen (IPS)
 
 
-#### US Core
+#### US Core profile additional requirements
 [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/) serves as the foundation for FHIR implementation guides in the US Realm. It establishes the minimum constraints on FHIR resources to define US Core Profiles, specifying the required elements, extensions, vocabularies, and value sets, as well as their usage. It also outlines the minimum FHIR RESTful interactions needed to access patient data for each US Core Profile.
 
-##### Additional requirements <a id="uscore-additional-requirements"></a>
 The following US Core profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -966,7 +963,7 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core Specimen Profile
 
 ### Capability statement comparison
-This section compares AU Core conformance expectations with those defined in other key international implementation guides, focusing on systems acting in similar roles (requesters and responders). The comparison is based on **SHALL** and **SHOULD** conformance requirements and does not consider **MAY** requirements. 
+This section compares AU Core conformance expectations with those defined in other key international implementation guides, focusing on systems acting in similar roles (requesters and responders). 
 
 As part of the comparison, both system-level and resource-level capabilities are evaluated:
 - System-level capabilities including:
@@ -1017,17 +1014,17 @@ The table below provides a mapping of AU Core capability statements to capabilit
     </tr>
 	<tr>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-        <td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.png" width="20"/><sup>1</sup>(<a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html">IPA Server</a>)</td>
-		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html">IPS Server</a></td>
+        <td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.png" width="20"/><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><sup>1</sup>(<a href="https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html">IPS Server</a>)</td>
 		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
     </tr>
   </tbody>
 </table>
 
-*1. Note:* The IPS Server CapabilityStatement is not directly comparable as the role and purpose is not similar. It is included for comparison anyway as both IPS Server and AU Core Responder are 'server' capability statements.
+*<sup>1</sup>The IPS Server CapabilityStatement is not directly comparable as the role and purpose is not similar. It is included for comparison for information as both IPS Server and AU Core Responder are 'server' capability statements and the comparison may be of interest to implementers.*
 
 
-#### CapabilityStatement comparison details
+#### CapabilityStatement comparison
 
 The table below provides a comparison of capability statements from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system conforming to International Patient Access Client CapabilityStatement **MAY NOT** meet the conformance requirements of the AU Core Client. 
 
@@ -1041,7 +1038,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
 
 <img src="cross_red_circle.png" width="20"/> **Incompatible**: A system conforming to an AU Core CapabilityStatement is incompatible with the compared capability statement. A system cannot be compliant to both. Where incompatible requirements are identified, more information is provided in the sections below.
 
-<img src="minus_symbol.png" width="20"/> **No equivalent capability statement**: No equivalent CapabilityStatement mapped for comparison.
+<img src="minus_symbol.png" width="20"/> **No equivalent capability statement or resource type**: No equivalent CapabilityStatement mapped for comparison or no equivalent support for that resource type.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <colgroup>
@@ -1057,14 +1054,13 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
     <thead>
         <tr>
             <th colspan="2" style="text-align: center; vertical-align: middle;">AU Core</th>
-            <th colspan="3" style="text-align: center; vertical-align: middle;">Requester CapabilityStatement</th>
-            <th colspan="3" style="text-align: center; vertical-align: middle;">Responder CapabilityStatement</th>
+            <th colspan="3" style="text-align: center; vertical-align: middle;">AU Core Requester CapabilityStatement</th>
+            <th colspan="3" style="text-align: center; vertical-align: middle;">AU Core Responder CapabilityStatement</th>
         </tr>
     </thead>
     <tbody>
 		<tr>
-            <td style="text-align: center; vertical-align: middle;"><strong>CapabilityStatement requirement</strong></td>
-            <td style="text-align: center; vertical-align: middle;"><strong>Requirement</strong></td>
+            <td colspan="2" style="text-align: center; vertical-align: middle;"><strong>CapabilityStatement Requirement</strong></td>
             <td style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></td>
             <td style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0-ballot</strong></td>
             <td style="text-align: center; vertical-align: middle;"><strong>US Core 7.0.0</strong></td>
@@ -1097,7 +1093,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -1106,7 +1102,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
 		<tr>
@@ -1124,7 +1120,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -1133,7 +1129,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
 		<tr>
@@ -1142,7 +1138,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -1323,7 +1319,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
 
 #### International Patient Access CapabilityStatement additional requirements
 
-The IPA CapabilityStatements introduce additional conformance expectations not required by AU Core. Implementers are advised to note that some code changes may be required to ensure full compliance.
+A system conforming to an AU Core CapabilityStatement aligns with IPA CapabilityStatements but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in IPA CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 
 **Legend:**
@@ -1340,9 +1336,9 @@ The IPA CapabilityStatements introduce additional conformance expectations not r
 	</colgroup>     
 	<thead>
         <tr>
-            <th>Resource/Section</th>
-            <th>Client additional requirements</th>
-			<th>Server additional requirements</th>
+            <th>CapabilityStatement requirement</th>
+            <th>IPA 1.1.0 Client CapabilityStatement additional requirements</th>
+			<th>IPA 1.1.0 Server CapabilityStatement additional requirements</th>
         </tr>
     </thead>
     <tbody>
@@ -1578,7 +1574,8 @@ The IPA CapabilityStatements introduce additional conformance expectations not r
 ##### Additional resource types
 None.
 
-#### International Patient Summary
+#### International Patient Summary CapabilityStatement additional requirements
+
 [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) defines the expected capabilities of systems that represent the International Patient Summary (IPS) using HL7 FHIR. An IPS document is an electronic health record extract containing essential healthcare information about a subject of care. 
 
 ##### IPS Server CapabilityStatement additional requirements 
@@ -1714,11 +1711,9 @@ The following table lists resource types that are supported by [IPS Server Capab
 	</tbody>
 </table>
 
-#### US Core
-[US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/) defines the expected capabilities of systems to support interoperability and clinical data exchange in the US healthcare context. 
+#### US Core CapabilityStatement additional requirements
 
-##### US Core Client CapabilityStatement additional requirements
-The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) introduces additional conformance expectations not required by AU Core. Implementers are advised to note that some code changes may be required to ensure full compliance.
+A system conforming to an AU Core CapabilityStatement aligns with US Core CapabilityStatements but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in US Core CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 **Legend:**
 
