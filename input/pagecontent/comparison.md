@@ -1389,9 +1389,8 @@ The IPA CapabilityStatements introduce additional conformance expectations not r
         </tr>
 		<tr>
             <td rowspan="9">DocumentReference</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-DocumentReference profile.
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-DocumentReference profile.
-		<td></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-DocumentReference profile.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-DocumentReference profile.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
@@ -1554,7 +1553,7 @@ The IPA CapabilityStatements introduce additional conformance expectations not r
         </tr>
 		<tr>
             <td rowspan="2">PractitionerRole</td>
-            <td><img src="arrow_up.png" width="20"/> Clients <strong>SHALL</strong>:handle PractitionerRole.practitioner.</td>
+            <td><img src="arrow_up.png" width="20"/> Clients <strong>SHALL</strong> handle PractitionerRole.practitioner.</td>
 			<td></td>
         </tr>
 		<tr>
