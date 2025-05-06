@@ -1357,7 +1357,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td><strong>SHALL</strong> meet the requirements of the IPA-AllergyIntolerance profile.</td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td>Clients <strong>SHALL</strong>:handle AllergyIntolerance.clinicalStatus, AllergyIntolerance.verificationStatus, and AllergyIntolerance.code. <img src="arrow_up.png" width="20"/></td>
@@ -1376,7 +1376,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td><strong>SHALL</strong> continue to function safely when some expected search parameters are not supported. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td>Clients <strong>SHALL</strong>:handle Condition.clinicalStatus, Condition.verificationStatus, and Condition.code. <img src="arrow_up.png" width="20"/></td>
@@ -1407,7 +1407,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
            <td><strong>SHOULD</strong> support the <code>$docref</code> operation. <img src="plus_sign.png" width="20"/></td>
         </tr> 
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="3">Immunization</td>
@@ -1417,7 +1417,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td>Clients <strong>SHALL</strong> handle Immunization.status, Immunization.vaccineCode, Immunization.patient and Immunization.occurence[x]. <img src="arrow_up.png" width="20"/></td>
 		</tr>		
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="3">Medication</td>
@@ -1427,7 +1427,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td>Clients <strong>SHALL</strong> handle Medication.code. <img src="arrow_up.png" width="20"/></td>
 		</tr>		
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="6">MedicationRequest</td>
@@ -1446,7 +1446,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td><strong>SHOULD</strong> support <code>category</code> and <code>code</code> search parameters. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="4">MedicationStatement</td>
@@ -1475,7 +1475,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td>Clients <strong>SHOULD</strong> handle Observation.category. <img src="arrow_up.png" width="20"/></td>
 		</tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="8">Patient</td>
@@ -1500,14 +1500,14 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td><strong>SHOULD</strong> support the <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters. <img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="2">Practitioner</td>
             <td><strong>SHALL</strong> meet the requirements of the IPA-Practitioner profile.</td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr> 
 		<tr>
             <td rowspan="3">PractitionerRole</td>
@@ -1517,7 +1517,7 @@ The [International Patient Access Client CapabilityStatement](https://hl7.org/fh
             <td>Clients <strong>SHALL</strong>:handle PractitionerRole.practitioner. <img src="arrow_up.png" width="20"/></td>
 		</tr>	
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr> 
 	</tbody>
 </table>
@@ -1564,7 +1564,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
               <td><strong>SHALL</strong> meet the requirements of the IPA-AllergyIntolerance profile.</td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="4">Condition</td>
@@ -1577,7 +1577,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
             <td>Servers <strong>SHOULD</strong> avoid leaving clinicalStatus and verificationStatus missing. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="8">DocumentReference</td>
@@ -1602,21 +1602,21 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
            <td><strong>SHOULD</strong> support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters combination. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="2">Immunization</td>
             <td><strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="2">Medication</td>
             <td><strong>SHALL</strong> meet the requirements of the IPA-Medication profile.</td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="6">MedicationRequest</td>
@@ -1635,7 +1635,7 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
             <td><strong>SHOULD</strong> support <code>category</code> and <code>code</code> search parameters. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="3">MedicationStatement</td>
@@ -1645,14 +1645,14 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
             <td>Servers <strong>SHALL</strong> populate-if-known: MedicationStatement.context and MedicationStatement.informationSource. <img src="plus_sign.png" width="20"/></td>
 		</tr>		
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr>
 		<tr>
             <td rowspan="2">Observation</td>
             <td><strong>SHALL</strong> meet the requirements of the IPA-Observation profile.</td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr> 
         <tr>
             <td rowspan="7">Patient</td>
@@ -1674,21 +1674,21 @@ The [International Patient Access Server CapabilityStatement](https://hl7.org/fh
             <td><strong>SHOULD</strong> support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters. <img src="arrow_up.png" width="20"/></td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr> 
 		<tr>
             <td rowspan="2">Practitioner</td>
             <td><strong>SHALL</strong> meet the requirements of the IPA-Practitioner profile.</td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr> 
 		<tr>
             <td rowspan="2">PractitionerRole</td>
             <td><strong>SHALL</strong> meet the requirements of the IPA-PractitionerRole profile.</td>
         </tr>
 		<tr>
-            <td>IPA declares support for <code>_revinclude=Provenance:target</code> (FHIR-50351). <img src="plus_sign.png" width="20"/></td>
+            <td>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code>  is under discussion, see <a href=” https://jira.hl7.org/browse/FHIR-50351”>FHIR-50351</a>.. <img src="plus_sign.png" width="20"/></td>
         </tr> 
   </tbody>
 </table>
