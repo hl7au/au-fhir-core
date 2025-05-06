@@ -16,6 +16,8 @@ As part of profile comparison, the requirements, constraints, and standards spec
 
 The table below provides a profile only comparison from AU Core to profiles in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an International Patient Access profile **MAY NOT** be compliant with AU Core.
 
+The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirements are not compared.
+
 **Legend:**
 
 <img src="green_checkmark.png" width="20"/> **Compliant**: An AU Core compliant resource meets all requirements of the compared profile.
@@ -984,17 +986,18 @@ As part of the comparison, both system-level and resource-level capabilities are
   - Defined operations on the resource
 
 #### CapabilityStatement mapping
-A CapabilityStatement describes the conformance requirements for systems acting in defined roles. 
 
-AU Core defines two actor roles:
+AU Core defines capability statements that describe the conformance requirements and expectations of a corresponding AU Core system actor:
+ the capabilities of systems conformance requirements for systems acting in the corresponding AU Core role of:
 - AU Core Requester - a system that initiates a FHIR RESTful request to access digital health and administrative information
 - AU Core Responder - a system that receives and responds to those requests, returning data in accordance with AU Core conformance requirements
 
-CapabilityStatements from other implementation guides (IPA, IPS, and US Core) are included in the comparison when they define actors that serve similar roles and purposes. Only actors with comparable responsibilities for data access and exchange are mapped for comparison. 
+The table below provides a mapping of AU Core capability statements to capability statements in IPA, IPS, and US Core. A capability statement is considered mapped where the actors defined serve similar roles and purposes.
+
 
 **Legend:**
 
-<img src="minus_symbol.png" width="20"/> **No equivalent capability statement**: No equivalent CapabilityStatement for comparison.
+<img src="minus_symbol.png" width="20"/> **No similar capability statement**: No similar actor in terms of role and purpose is defined.
 
 <table border="1" style="width: 100%; margin-left: 0; margin-right: auto; border-collapse: collapse;">
     <thead>
@@ -1014,30 +1017,31 @@ CapabilityStatements from other implementation guides (IPA, IPS, and US Core) ar
     </tr>
 	<tr>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-        <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
-		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html">IPS Server</a><sup>1</sup></td>
+        <td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.png" width="20"/><sup>1</sup>(<a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html">IPA Server</a>)</td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html">IPS Server</a></td>
 		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
     </tr>
   </tbody>
 </table>
 
+*1. Note:* The IPS Server CapabilityStatement is not directly comparable as the role and purpose is not similar. It is included for comparison anyway as both IPS Server and AU Core Responder are 'server' capability statements.
 
-Notes: 
-1. Although the IPS Server CapabilityStatement is included for comparison, it is not directly comparable, as it does not define behavioral expectations for responding to requests.
 
 #### CapabilityStatement comparison details
 
-The table below provides a comparison of capability statements from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system conforming to International Patient Access Client CapabilityStatement **MAY NOT** meet the conformance requirements of the AU Core Client.The comparison is based on **SHALL** and **SHOULD** conformance requirements. **MAY** requirements are not considered in this comparison.
+The table below provides a comparison of capability statements from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system conforming to International Patient Access Client CapabilityStatement **MAY NOT** meet the conformance requirements of the AU Core Client. 
+
+The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirements are not compared.
 
 **Legend:**
 
-<img src="green_checkmark.png" width="20"/> **Compliant**: A system conforming to an AU Core CapabilityStatement meets all of the requirements defined in the compared capability statement. Additional **SHOULD** requirements do not affect compliance. Where additional requirements are identified, more information is provided in the sections below.
+<img src="green_checkmark.png" width="20"/> **Compliant**: A system conforming to an AU Core CapabilityStatement meets all of the requirements of the compared capability statement.
 
 <img src="orange_checkmark.png" width="20"/> **Additional requirements**: A system conforming to an AU Core CapabilityStatement aligns with the compared capability statement but may require additional functionality to meet its stricter or broader requirements. Where additional requirements are identified, more information is provided in the sections below.
 
 <img src="cross_red_circle.png" width="20"/> **Incompatible**: A system conforming to an AU Core CapabilityStatement is incompatible with the compared capability statement. A system cannot be compliant to both. Where incompatible requirements are identified, more information is provided in the sections below.
 
-<img src="minus_symbol.png" width="20"/> **No equivalent capability statement**: No equivalent CapabilityStatement for comparison.
+<img src="minus_symbol.png" width="20"/> **No equivalent capability statement**: No equivalent CapabilityStatement mapped for comparison.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <colgroup>
