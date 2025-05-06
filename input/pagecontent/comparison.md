@@ -1336,8 +1336,8 @@ The IPA CapabilityStatements introduce additional conformance expectations not r
     <tbody>
 		<tr>
             <td>FHIR resource support</td>
-            <td><img src="arrow_up.png" width="20"/> Clients <strong>SHALL</strong> support the IPA conformance expectations for the Patient profile and for each IPA resource type they support.</td>
-			<td><img src="arrow_up.png" width="20"/> Clients <strong>SHALL</strong> support the IPA conformance expectations for the Patient profile and for each IPA resource type they support.</td>
+            <td><img src="arrow_up.png" width="20"/> Clients <strong>SHALL</strong> support the IPA conformance expectations for the Patient profile and for each IPA resource type they support, see additional requirements below.</td>
+			<td><img src="arrow_up.png" width="20"/> Clients <strong>SHALL</strong> support the IPA conformance expectations for the Patient profile and for each IPA resource type they support, see additional requirements below.</td>
         </tr>
 		<tr>
             <td>Supported implementation guides</td>
