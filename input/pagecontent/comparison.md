@@ -1311,7 +1311,7 @@ The table below provides a comparison of capability statements from AU Core to t
 
 #### International Patient Access CapabilityStatement additional requirements
 
-The IPA Client and Server CapabilityStatements introduce additional conformance expectations not required by AU Core. Implementers are advised to note that some code changes may be required to ensure full compliance.
+The IPA CapabilityStatements introduce additional conformance expectations not required by AU Core. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 
 **Legend:**
@@ -1342,7 +1342,7 @@ The IPA Client and Server CapabilityStatements introduce additional conformance 
 		<tr>
             <td>Supported implementation guides</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>.</td>
-			<td><strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>. <img src="plus_sign.png" width="20"/> </td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>.</td>
     </tr>
         <tr>
             <td rowspan="3">Security</td>
