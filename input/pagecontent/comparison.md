@@ -985,11 +985,10 @@ As part of the comparison, both system-level and resource-level capabilities are
 #### CapabilityStatement mapping
 
 AU Core defines capability statements that describe the conformance requirements and expectations of a corresponding AU Core system actor:
- the capabilities of systems conformance requirements for systems acting in the corresponding AU Core role of:
-- AU Core Requester - a system that initiates a FHIR RESTful request to access digital health and administrative information
-- AU Core Responder - a system that receives and responds to those requests, returning data in accordance with AU Core conformance requirements
+- AU Core Requester - a system that creates and initiates a data access request to retrieve core digital health and administrative information
+- AU Core Responder - a system that receives and responds to data access requests from AU Core Requesters
 
-The table below provides a mapping of AU Core capability statements to capability statements in IPA, IPS, and US Core. A capability statement is considered mapped where the actors defined serve similar roles and purposes.
+The table below provides a mapping of AU Core capability statements to capability statements in IPA, IPS, or US Core. A capability statement is considered mapped where the corresponding actor serves a similar role and purpose.
 
 
 **Legend:**
@@ -1014,8 +1013,8 @@ The table below provides a mapping of AU Core capability statements to capabilit
     </tr>
 	<tr>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
-        <td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.png" width="20"/><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
-		<td style="width: 25%; text-align: left; vertical-align: middle;"><sup>1</sup>(<a href="https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html">IPS Server</a>)</td>
+        <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.png" width="20"/><sup>1</sup> (<a href="https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html">IPS Server</a>)</td>
 		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
     </tr>
   </tbody>
@@ -1026,7 +1025,7 @@ The table below provides a mapping of AU Core capability statements to capabilit
 
 #### CapabilityStatement comparison
 
-The table below provides a comparison of capability statements from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system conforming to International Patient Access Client CapabilityStatement **MAY NOT** meet the conformance requirements of the AU Core Client. 
+The table below provides a comparison of capability statements from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system conforming to International Patient Access Client CapabilityStatement **MAY NOT** meet the conformance requirements of the AU Core Requester CapabilityStatement. 
 
 The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirements are not compared.
 
@@ -1062,7 +1061,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
 		<tr>
             <td colspan="2" style="text-align: center; vertical-align: middle;"><strong>CapabilityStatement Requirement</strong></td>
             <td style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></td>
-            <td style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0-ballot</strong></td>
+            <td style="text-align: center; vertical-align: middle;"><strong>=IPS 2.0.0-ballot</strong></td>
             <td style="text-align: center; vertical-align: middle;"><strong>US Core 7.0.0</strong></td>
 			<td style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></td>
             <td style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0-ballot</strong></td>
@@ -1326,7 +1325,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 
 <img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -1585,7 +1584,7 @@ The [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl
 
 <img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -1719,7 +1718,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 
 <img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the maped AU Core CapabilityStatement.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
