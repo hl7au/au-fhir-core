@@ -1023,13 +1023,13 @@ The table below provides a comparison of capability statements from AU Core to t
 
 **Legend:**
 
-<img src="green_checkmark.png" width="20"/> **Compliant**: A system conforming to the AU Core capability statement meets all **SHALL** requirements defined in the compared capability statement. Additional **SHOULD** requirements do not affect compliance. Where additional requirements are identified, more information is provided in the sections below.*
+<img src="green_checkmark.png" width="20"/> **Compliant**: A system conforming to an AU Core CapabilityStatement meets all of the requirements defined in the compared capability statement. Additional **SHOULD** requirements do not affect compliance. Where additional requirements are identified, more information is provided in the sections below.
 
-<img src="orange_checkmark.png" width="20"/> **Additional requirements**: A system conforming to the AU Core capability statement aligns with the compared capability statement but may require additional functionality to meet its stricter or broader requirements. Where additional requirements are identified, more information is provided in the sections below.*
+<img src="orange_checkmark.png" width="20"/> **Additional requirements**: A system conforming to an AU Core CapabilityStatement aligns with the compared capability statement but may require additional functionality to meet its stricter or broader requirements. Where additional requirements are identified, more information is provided in the sections below.
 
-<img src="cross_red_circle.png" width="20"/> **Incompatible**: A system conforming to the AU Core capability statement cannot meet one or more **SHALL** conformance requirements of the compared capabilty statement due to conflictin requirements. Full conformance to both is not possible. Where incompatible requirements are identified, more information is provided in the sections below.*
+<img src="cross_red_circle.png" width="20"/> **Incompatible**: A system conforming to an AU Core CapabilityStatement is incompatible with the compared capability statement. A system cannot be compliant to both. Where incompatible requirements are identified, more information is provided in the sections below.
 
-<img src="minus_symbol.png" width="20"/> **No equivalent capability statement**: No equivalent capability statement for comparison.*
+<img src="minus_symbol.png" width="20"/> **No equivalent capability statement**: No equivalent CapabilityStatement for comparison.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <colgroup>
@@ -1309,15 +1309,18 @@ The table below provides a comparison of capability statements from AU Core to t
 </table>
 
 
-\* The sections below list additional or incompatible requirements using the following icons:
-- <img src="arrow_up.png" width="16"/> Indicates the compared CapabilityStatement defines a stronger conformance requirement than AU Core (e.g., AU Core uses **SHOULD**, but the compared CapabilityStatement uses **SHALL**).
-- <img src="plus_sign.png" width="16"/> Indicates the requirement is only present in the compared CapabilityStatement and does not exist in AU Core.
-
 #### International Patient Access
 [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) defines the expected capabilities of systems enabling patient authorised access to clinical records via a FHIR-based API. 
 
 ##### IPA Client CapabilityStatement additional requirements 
 The [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-client.html) introduces additional conformance expectations not required by AU Core. Implementers are advised to note that some code changes may be required to ensure full compliance.
+
+
+**Legend:**
+
+<img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
+
+<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the AU Core CapabilityStatement.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -1699,6 +1702,12 @@ None.
 ##### IPS Server CapabilityStatement additional requirements 
 The [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) introduces additional conformance expectations not required by AU Core. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
+**Legend:**
+
+<img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
+
+<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the AU Core CapabilityStatement.
+
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
 		<col style="width: 20%;">
@@ -1828,6 +1837,12 @@ The following table lists resource types that are supported by [IPS Server Capab
 
 ##### US Core Client CapabilityStatement additional requirements
 The [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) introduces additional conformance expectations not required by AU Core. Implementers are advised to note that some code changes may be required to ensure full compliance.
+
+**Legend:**
+
+<img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
+
+<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the AU Core CapabilityStatement.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
