@@ -990,7 +990,11 @@ AU Core defines two actor roles:
 - AU Core Requester - a system that initiates a FHIR RESTful request to access digital health and administrative information
 - AU Core Responder - a system that receives and responds to those requests, returning data in accordance with AU Core conformance requirements
 
-CapabilityStatements from other implementation guides (IPA, IPS, and US Core) are included in the comparison when they define actors that serve similar roles and purposes. Only actors with comparable responsibilities for data access and exchange are mapped for comparison. Where no equivalent capability statement exists, this is indicated using the <img src="minus_symbol.png" width="20"/> icon in the table below.
+CapabilityStatements from other implementation guides (IPA, IPS, and US Core) are included in the comparison when they define actors that serve similar roles and purposes. Only actors with comparable responsibilities for data access and exchange are mapped for comparison. 
+
+**Legend:**
+
+<img src="minus_symbol.png" width="20"/> **No equivalent capability statement**: No equivalent CapabilityStatement for comparison.
 
 <table border="1" style="width: 100%; margin-left: 0; margin-right: auto; border-collapse: collapse;">
     <thead>
@@ -1011,11 +1015,15 @@ CapabilityStatements from other implementation guides (IPA, IPS, and US Core) ar
 	<tr>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
-		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html">IPS Server</a></td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html">IPS Server</a><sup>1</sup></td>
 		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
     </tr>
   </tbody>
-</table>       
+</table>
+
+
+Notes: 
+1. Although the IPS Server CapabilityStatement is included for comparison, it is not directly comparable, as it does not define behavioral expectations for responding to requests.
 
 #### CapabilityStatement comparison details
 
