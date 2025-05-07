@@ -1052,21 +1052,20 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
     </colgroup>
     <thead>
         <tr>
-            <th colspan="2" style="text-align: center; vertical-align: middle;">AU Core</th>
+            <th rowspan="2" colspan="2" style="text-align: center; vertical-align: middle;">AU Core CapabilityStatement Requirement</th>
             <th colspan="3" style="text-align: center; vertical-align: middle;">AU Core Requester CapabilityStatement</th>
             <th colspan="3" style="text-align: center; vertical-align: middle;">AU Core Responder CapabilityStatement</th>
         </tr>
+		<tr>
+            <th style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></th>
+            <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0-ballot</strong></th>
+            <th style="text-align: center; vertical-align: middle;"><strong>US Core 7.0.0</strong></th>
+			<th style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></th>
+            <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0-ballot</strong></th>
+            <th style="text-align: center; vertical-align: middle;"><strong>US Core 7.0.0</strong></th>
+        </tr>
     </thead>
     <tbody>
-		<tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"><strong>CapabilityStatement Requirement</strong></td>
-            <td style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></td>
-            <td style="text-align: center; vertical-align: middle;"><strong>=IPS 2.0.0-ballot</strong></td>
-            <td style="text-align: center; vertical-align: middle;"><strong>US Core 7.0.0</strong></td>
-			<td style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></td>
-            <td style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0-ballot</strong></td>
-            <td style="text-align: center; vertical-align: middle;"><strong>US Core 7.0.0</strong></td>
-        </tr>
         <tr>
             <td rowspan="8" style="text-align: left; vertical-align: middle;">FHIR RESTful Capabilities (system wide)</td>
             <td style="text-align: left; vertical-align: middle;">FHIR version</td>
