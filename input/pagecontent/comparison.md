@@ -1445,7 +1445,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr> 
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Clients <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
-            <td>Servers <strong>SHOULD</strong> use codings at the level of a clinical drug. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> Servers <strong>SHOULD</strong> use codings at the level of a clinical drug.</td>
         </tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> Clients <strong>SHALL</strong> handle: MedicationRequest.status, MedicationRequest.doNotPerform, MedicationRequest.medication[x], MedicationRequest.subject, MedicationRequest.requester, MedicationRequest.dosageInstruction, and MedicationRequest.dosageInstruction.text.</td>
@@ -1708,72 +1708,97 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
 		<col style="width: 20%;">
-		<col style="width: 80%;">
+		<col style="width: 40%;">
+		<col style="width: 40%;">
 	</colgroup>     
 	<thead>
         <tr>
-            <th>Resource type</th>
-            <th>Additional requirements</th>
+            <th>CapabilityStatement requirement</th>
+            <th>US Core 7.0.0 Client CapabilityStatement additional requirements</th>
+			<th>US Core 7.0.0 Server CapabilityStatement additional requirements</th>
         </tr>
     </thead>
     <tbody>
 		<tr>
             <td>FHIR resource support</td>
-            <td>Clients <strong>SHALL</strong> support fetching and querying of one or more US Core profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement.</td>
+            <td><img src="arrow_up.png" width="20"/> Clients <strong>SHALL</strong> support fetching and querying of one or more US Core profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement, see additional requirements below.</td>
+		<td><img src="arrow_up.png" width="20"/> Servers <strong>SHALL</strong> support US Core Patient profile and at least one additional resource profile from the list of US Core Profiles and all Must Support US Core Profiles and resources it references, see additional requirements below.</td>
         </tr>
 		<tr>
             <td rowspan="7">Security</td>
-            <td><strong>SHALL</strong> establish a risk analysis and management regime conforming with HIPAA. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> establish a risk analysis and management regime conforming with HIPAA security regulatory requirements. </td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> establish a risk analysis and management regime conforming with HIPAA security regulatory requirements.</td>
         </tr>
 		<tr>
-            <td><strong>SHALL</strong> use a single time source for audit and logging. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> use a single time source for audit and logging. The selected time service <strong>SHOULD</strong> be documented in the Business Associate Agreement when available.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> use a single time source for audit and logging. The selected time service <strong>SHOULD</strong> be documented in the Business Associate Agreement when available.</td>
         </tr>
 		<tr>
-            <td><strong>SHALL</strong> maintain audit logs of the various transactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> maintain audit logs of transactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> maintain audit logs of transactions.</td>
         </tr>
 		<tr>
-            <td><strong>SHALL</strong> conform to FHIR Communications Security requirements. <img src="arrow_up.png" width="20"/></td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> conform to FHIR Communications Security requirements.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> conform to FHIR Communications Security requirements.</td>
         </tr>
 		<tr>
-            <td><strong>SHALL</strong> support SMART App Launch for authentication and authorisation. <img src="arrow_up.png" width="20"/></td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support any SMART App Launch version.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support any SMART App Launch version.</td>
         </tr>
 		<tr>
-            <td><strong>SHALL</strong> implement consent according to local, institutional, and legal policy. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> implement consent according to local, institutional, and legal policy.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> implement consent according to local, institutional, and legal policy.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> provide Provenance statements using the US Core Provenance Profile resource and associated requirements. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> define risk management and security/privacy controls in a Business Associate Agreement (BAA) when available.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> define risk management and security/privacy controls in a Business Associate Agreement (BAA) when available..</td>
+        </tr>
+		<tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> provide Provenance statements using the US Core Provenance Profile.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> provide Provenance statements using the US Core Provenance Profile.</td>
         </tr>
         <tr>
-            <td rowspan="3">AllergyIntolerance</td>
-            <td>Clients <strong>SHALL</strong> support the US Core AllergyIntolerance Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td rowspan="4">AllergyIntolerance</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core AllergyIntolerance Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core AllergyIntolerance Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> Servers <strong>SHALL</strong> support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td rowspan="7">Condition</td>
-            <td><strong>SHALL</strong> support both US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile, which have additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-			<td><strong>SHALL</strong> support assertedDate Extension, Condition.onsetDateTime, or Condition.recordedDate elements. <img src="plus_sign.png" width="20"/></td>
+            <td></td>
+			<td>Servers <img src="arrow_up.png" width="20"/> Servers <strong>SHALL</strong> support <code>AllergyIntolerance</code> resource.</td>
+        </tr>
+        <tr>
+            <td rowspan="8">Condition</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support both US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support assertedDate Extension, Condition.onsetDateTime, or Condition.recordedDate elements.</td>
 		</tr>
 		<tr>
-            <td><strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> search parameters combination. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> search parameters combination.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td>When Condition.category is a "problems-list-item", the Condition.clinicalStatus <strong>SHOULD NOT</strong> be unknown. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <img src="plus_sign.png" width="20"/> When Condition.category is a "problems-list-item", the Condition.clinicalStatus <strong>SHOULD NOT</strong> be unknown.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> reference encounter in Condition.encounter when category is "encounter-diagnosis". <img src="plus_sign.png" width="20"/></td>
+            <td><strong>SHOULD</strong> reference encounter in Condition.encounter when category is "encounter-diagnosis".</td>
+        </tr>
+		<tr>
+            <td></td>
+			<td>Servers <img src="arrow_up.png" width="20"/> Servers <strong>SHALL</strong> support <code>Condition</code> resource.</td>
         </tr>
         <tr>
             <td rowspan="9">DiagnosticReport</td>
