@@ -191,7 +191,8 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
     </tbody>
 </table>
 
-#### International Patient Access profile additional requirements
+#### International Patient Access profile additional requirements <a id="ipa-additional-requirements"></a>
+
 [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
 
 The following IPA profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
@@ -251,7 +252,7 @@ The following IPA profile(s) contain additional requirements. Implementers are a
     </tbody>
 </table>
 
-##### Missing Data <a id="ipa-missing-data-data"></a>
+##### Missing Data
 AU Core compliant resources are compliant with IPA requirements for Missing Data.
 
 ##### Suppressed Data 
@@ -261,7 +262,7 @@ IPA does not include requirements for Suppressed Data.
 This version of AU Core has no equivalent profile for the following IPA profiles:
 - IPA-DocumentReference
 
-#### International Patient Summary profile additional requirements
+#### International Patient Summary profile additional requirements <a id="ips-additional-requirements"></a>
 [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) describes how to represent the International Patient Summary (IPS) using HL7 FHIR. An International Patient Summary  document is an electronic health record extract containing essential healthcare information about a subject of care.
 
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
@@ -510,7 +511,7 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - Specimen (IPS)
 
 
-#### US Core profile additional requirements
+#### US Core profile additional requirements <a id="uscore-additional-requirements"></a>
 [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/) serves as the foundation for FHIR implementation guides in the US Realm. It establishes the minimum constraints on FHIR resources to define US Core Profiles, specifying the required elements, extensions, vocabularies, and value sets, as well as their usage. It also outlines the minimum FHIR RESTful interactions needed to access patient data for each US Core Profile.
 
 The following US Core profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
@@ -1417,16 +1418,16 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
             <td rowspan="3">Immunization</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA Additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA Additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> Clients <strong>SHALL</strong> handle Immunization.status, Immunization.vaccineCode, Immunization.patient and Immunization.occurence[x].</td>
 			<td></td>
 		</tr>		
 		<tr>
-            <td><img src="plus_sign.png" width="20"/>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>. </td>
-			<td><img src="plus_sign.png" width="20"/>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>. </td>
+            <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>. </td>
+			<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>. </td>
         </tr>
 		<tr>
             <td rowspan="2">Medication</td>
@@ -1439,8 +1440,8 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
             <td rowspan="6">MedicationRequest</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA Additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA Additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
         </tr> 
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Clients <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
@@ -1452,7 +1453,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		</tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> Clients <strong>SHOULD</strong> handle MedicationRequest.reported[x].</td>
-			<td><img src="plus_sign.png" width="20"/> Servers <strong>SHALL</strong> populate-if-known: MedicationRequest.reported[x].</td>
+			<td><img src="plus_sign.png" width="20"/> Servers <strong>SHALL</strong> populate-if-known MedicationRequest.reported[x].</td>
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>category</code> and <code>code</code> search parameters.</td>
@@ -1464,8 +1465,8 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
 			<td rowspan="5">MedicationStatement</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA Additional requirements</a>.</td>
-		   <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA Additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
+		   <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
         </tr> 
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Clients <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
@@ -1497,13 +1498,13 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		    <td></td>
 		</tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-		<td><img src="plus_sign.png" width="20"/>Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+            <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+		<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
         <tr>
             <td rowspan="9">Patient</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA Additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA Additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> Client <strong>SHALL</strong> be able to follow Patient.link(s) to other Patient resources and understand direction of the link.</td>
@@ -1938,6 +1939,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         <tr>
             <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
         </tr>
+		<tr>
             <td rowspan="8">Observation</td>
             <td><strong>SHALL</strong> support all US Core Observation profiles listed in the specification, including those compared in the <a href="comparison.html#profile-comparison">Profile comparison</a> and additional profiles not included in the comparison.</td>
         </tr>
