@@ -1093,10 +1093,10 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: left; vertical-align: middle;">FHIR capabilities</td>
             <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="text-align: left; vertical-align: middle;">FHIR resource support</td>
