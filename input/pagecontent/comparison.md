@@ -965,22 +965,7 @@ This version of AU Core has no equivalent profile for the following US Core prof
 ### Capability statement comparison
 This section compares AU Core conformance expectations with those defined in other key international implementation guides, focusing on systems acting in similar roles (requesters and responders). 
 
-As part of the comparison, both system-level and resource-level capabilities are evaluated:
-- System-level capabilities including:
-  - Supported FHIR versions and formats
-  - Supported implementation guides 	
-  - Overall conformance expectations (**SHALL**, **SHOULD**)
-  - Support for FHIR RESTful interactions (e.g. `batch`, `batch`)
-  - Declared security services and requirements (e.g. SMART App Launch)
-- Capabilities by resourse/profile including:
-  - Supported resource types
-  - Relevant profiles and compliance expectations	
-  - Supported interactions for  each resource (e.g. `read`, `search-type`)
-  - Required and recommended search parameters
-  - Support for combinations of search paramaters
-  - Support for `_include` and `_revinclude`
-  - Reference resolution and support for reference policies (e.g. `resolves`)	
-  - Defined operations on the resource
+As part of the comparison, both system-level and resource-level capabilities are evaluated, including FHIR version and format support, implementation guides, conformance expectations, RESTful interactions, security requirements, supported resource types and profiles, interaction support per resource, required search parameters, parameter combinations, `_include`/ `_revinclude`, reference resolution policies, and defined operations.
 
 #### CapabilityStatement mapping
 
