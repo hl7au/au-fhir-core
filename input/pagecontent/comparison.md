@@ -938,7 +938,7 @@ AU Core compliant resources are compliant with US Core requirements for Missing 
 ##### Suppressed Data
 AU Core compliant resources are compliant with US Core requirements for Suppressed Data.
 
-##### Additional profiles 
+##### Additional profiles <a id="uscore-additional-profiles"></a>
 This version of AU Core has no equivalent profile for the following US Core profiles:
 - US Core CarePlan Profile
 - US Core CareTeam Profile
@@ -1175,10 +1175,10 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: left; vertical-align: middle;">HealthcareService</td>
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="text-align: left; vertical-align: middle;">Immunization</td>
@@ -1308,9 +1308,9 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 
 **Legend:**
 
-<img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
+<img src="arrow_up.png" width="16"/> **Stronger**: The IPA CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The IPA CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -1567,9 +1567,9 @@ The [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl
 
 **Legend:**
 
-<img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
+<img src="arrow_up.png" width="16"/> **Stronger**: The IPS CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The IPS CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -1701,9 +1701,9 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 
 **Legend:**
 
-<img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
+<img src="arrow_up.png" width="16"/> **Stronger**: The US Core CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the maped AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The US Core CapabilityStatement includes a conformance requirement that is NOT present in the maped AU Core CapabilityStatement.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -1721,11 +1721,11 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
     <tbody>
 		<tr>
             <td>FHIR resource support</td>
-            <td><img src="arrow_up.png" width="20"/> Clients <strong>SHALL</strong> support fetching and querying of one or more US Core profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement, see additional requirements below.</td>
-		<td><img src="arrow_up.png" width="20"/> Servers <strong>SHALL</strong> support US Core Patient profile and at least one additional resource profile from the list of US Core Profiles and all Must Support US Core Profiles and resources it references, see additional requirements below.</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> support fetching and querying of one or more US Core profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement, see additional requirements below.</td>
+		<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support US Core Patient profile and at least one additional resource profile from the list of US Core Profiles and all Must Support US Core Profiles and resources it references, see additional requirements below.</td>
         </tr>
 		<tr>
-            <td rowspan="7">Security</td>
+            <td rowspan="8">Security</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> establish a risk analysis and management regime conforming with HIPAA security regulatory requirements. </td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> establish a risk analysis and management regime conforming with HIPAA security regulatory requirements.</td>
         </tr>
@@ -1764,7 +1764,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
-			<td><img src="plus_sign.png" width="20"/> Servers <strong>SHALL</strong> support <code>_revinclude: Provenance:target</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
@@ -1772,361 +1772,532 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
 		<tr>
             <td></td>
-			<td>Servers <img src="arrow_up.png" width="20"/> Servers <strong>SHALL</strong> support <code>AllergyIntolerance</code> resource.</td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support <code>AllergyIntolerance</code> resource.</td>
         </tr>
         <tr>
             <td rowspan="8">Condition</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support both US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support at least one of US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support both US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support assertedDate Extension, Condition.onsetDateTime, or Condition.recordedDate elements.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Condition.recordedDate elements and at least one of the assertedDate Extension and Condition.onsetDateTime</td>
 		</tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude: Provenance:target</code>.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> search parameters combination.</td>
+		<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+abatement-date</code>, <code>patient+asserted-date</code>, <code>patient+category+encounter</code>, <code>patient+_lastUpdated</code>, and <code>patient+recorded-date</code> search parameters combination.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <img src="plus_sign.png" width="20"/> When Condition.category is a "problems-list-item", the Condition.clinicalStatus <strong>SHOULD NOT</strong> be unknown.</td>
+            <td><img src="plus_sign.png" width="20"/> When Condition.category is a "problems-list-item", the Condition.clinicalStatus <strong>SHOULD NOT</strong> be unknown.</td>
+			<td><img src="plus_sign.png" width="20"/> When Condition.category is a "problems-list-item", the Condition.clinicalStatus <strong>SHOULD NOT</strong> be unknown.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> reference encounter in Condition.encounter when category is "encounter-diagnosis".</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> reference encounter in Condition.encounter when category is "encounter-diagnosis".</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> reference encounter in Condition.encounter when category is "encounter-diagnosis".</td>
         </tr>
 		<tr>
             <td></td>
-			<td>Servers <img src="arrow_up.png" width="20"/> Servers <strong>SHALL</strong> support <code>Condition</code> resource.</td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support <code>Condition</code> resource.</td>
         </tr>
         <tr>
-            <td rowspan="9">DiagnosticReport</td>
-            <td>Clients <strong>SHALL</strong> support at least one of US Core DiagnosticReport Profile for Laboratory Results Reporting  or US Core DiagnosticReport Profile for Report and Note Exchange profiles. <img src="plus_sign.png" width="20"/></td>
+            <td rowspan="10">DiagnosticReport</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support at least one of US Core DiagnosticReport Profile for Laboratory Results Reporting  or US Core DiagnosticReport Profile for Report and Note Exchange profiles. <img src="plus_sign.png" width="20"/></td>
+		<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DiagnosticReport Profile for Laboratory Results Reporting  and US Core DiagnosticReport Profile for Report and Note Exchange profiles. <img src="plus_sign.png" width="20"/></td>	
         </tr>
 		<tr>
-			<td><strong>SHALL</strong> support GET by id: <code>GET [base]/DiagnosticReport/[id]</code>. <img src="plus_sign.png" width="20"/></td>
+			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> be capable of fetching a DiagnosticReport resource using: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> be capable of returning a DiagnosticReport resource using: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
 		</tr>
        <tr>
-            <td><strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
 		<tr>
-			<td><strong>SHALL</strong> support <code>create</code> for the US Core DiagnosticReport Profile for Report and Note exchange profile. <img src="plus_sign.png" width="20"/></td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>create</code> for the US Core DiagnosticReport Profile for Report and Note exchange profile.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>create</code> for the US Core DiagnosticReport Profile for Report and Note exchange profile.</td>
 		</tr>
 		<tr>
-			  <td><strong>SHALL</strong> support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
+			  <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
+			  <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support the <code>resolves</code> reference policy. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>resolves</code> reference policy.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>resolves</code> reference policy.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support <code>patient+code+date</code>, <code>patient+status</code>, and <code>patient+category+_lastUpdated</code> search parameter combinations. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+code+date</code>, <code>patient+status</code>, and <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+code+date</code>, <code>patient+status</code>, and <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
+		</tr>
+		<tr>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support DiagnosticReport resource.</td>
+        </tr>
+        <tr>
+            <td rowspan="18">DocumentReference</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile.</td>
+        </tr>
+		<tr>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at minimum the five <a href="https://hl7.org/fhir/us/core/ValueSet-us-core-clinical-note-type.html">Common Clinical Notes</a> in the DocumentReference.type.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at minimum the five <a href="https://hl7.org/fhir/us/core/ValueSet-us-core-clinical-note-type.html">Common Clinical Notes</a> in the DocumentReference.type.</td>
+		</tr>
+		<tr>
+		  <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support both <code>DocumentReference.content.attachment.url</code> and <code>DocumentReference.content.attachment.data</code>.</td>
+		  <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of <code>DocumentReference.content.attachment.url</code> and <code>DocumentReference.content.attachment.data</code>.</td>
+		</tr>
+		<tr>
+		  <td><img src="plus_sign.png" width="20"/> If there are multiple <code>DocumentReference.content</code> repetitions, these <strong>SHALL</strong> represent the same document in different formats or attachment metadata, and <strong>SHALL NOT</strong> represent different document versions.</td>
+		<td><img src="plus_sign.png" width="20"/> If there are multiple <code>DocumentReference.content</code> repetitions, these <strong>SHALL</strong> represent the same document in different formats or attachment metadata, and <strong>SHALL NOT</strong> represent different document versions.</td>
+		</tr>
+		<tr>
+		  <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> be capable of handling a responsible organisation, either direclty in <code>DocumentReference.custodian</code> or via <code>Provenance.agent.who</code> or <code>Provenance.agent.onBehalfOf</code>.</td>
+		<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> ansure that the responsible organisation is present either in <code>DocumentReference.custodian</code> or accesible via <code>Provenance.agent.who</code> or <code>Provenance.agent.onBehalfOf</code>.</td>
+		</tr>
+		<tr>
+			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> be capable of fetching a DocumentReference resource using: <code>GET [base]/DocumentReference/[id]</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> be capable of returning a DocumentReference resource using: <code>GET [base]/DocumentReference/[id]</code>.</td>
 		</tr>
         <tr>
-            <td rowspan="15">DocumentReference</td>
-             <td>Clients <strong>SHALL</strong> support US Core DocumentReference Profile.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>create</code>, <code>read</code> and <code>search-type</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>create</code>, <code>read</code> and <code>search-type</code> interactions.</td>
         </tr>
 		<tr>
-		  <td><strong>SHALL</strong> support the five <a href="https://hl7.org/fhir/us/core/ValueSet-us-core-clinical-note-type.html">Common Clinical Notes</a> in the DocumentReference.type <img src="plus_sign.png" width="20"/></td>
-		</tr>
-		<tr>
-		  <td>Clients <strong>SHALL</strong> support both <code>DocumentReference.content.attachment.url</code> and <code>DocumentReference.content.attachment.data</code> for document retrieval. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-		<tr>
-		  <td>If there are multiple <code>DocumentReference.content</code> repetitions, these <strong>SHALL</strong> represent the same document in different formats or attachment metadata, and <strong>SHALL NOT</strong> represent different document versions; versioning is handled using multiple DocumentReferences with <code>DocumentReference.relatesTo</code>. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-		<tr>
-		  <td>Responsible Organisation <strong>SHALL</strong> be either be present in <code>DocumentReference.custodian</code> or accessible via a Provenance resource using <code>Provenance.agent.who</code> or <code>Provenance.agent.onBehalfOf</code>. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-		<tr>
-			<td><strong>SHALL</strong> support GET by id: <code>GET [base]/DocumentReference/[id]</code>. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-        <tr>
-            <td><strong>SHALL</strong> support <code>create</code>, <code>read</code> and <code>search-type</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
+		 <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
         </tr>
 		<tr>
-            <td><strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-		<tr>
-            <td><strong>SHOULD</strong> support the <code>resolves</code> reference policy. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support the <code>resolves</code> reference policy.</td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> support the <code>resolves</code> reference policy.</td>
         </tr>
          <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td><strong>SHOULD</strong> support <code>$docref</code> operation. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> be capable of receiving at least a reference to a CCD document. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support $docref operation.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support $docref operation.</td>
+        </tr>        
+		<tr>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> be capable of transacting the $docref operation.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> be capable of responding to a $docref operation.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> be capable of receiving documents as included resources in response to the $docref operation. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-         <tr>
-            <td><strong>SHOULD</strong> support for <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td><strong>SHOULD</strong> support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td rowspan="8">Encounter</td>
-            <td><strong>SHALL</strong> support the US Core Encounter profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> be capable of receiving at least a reference to a CCD document.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> return at least a reference to a CCD document, if available.</td>
         </tr>
 		<tr>
-            <td><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> be capable of receiving included resources returned in the operation response.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> document what resources (if any) are returned as included resources.</td>
+        </tr>
+		<tr>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations.</td>
+        </tr>
+		<tr>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support DocumentReference resource.</td>
+        </tr>
+		<tr>
+            <td></td>
+			<td><img src="plus_sign.png" width="20"/> If a <code>period</code> parameter is supplied to the <code>$docref</code> operation, a server <strong>SHOULD</strong> return references to documents within the specified date range; if not supplied, servers <strong>SHALL</strong> return the most recent or current document(s).</td>
+        </tr>
+        <tr>
+            <td rowspan="9">Encounter</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code> search parameter.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code> search parameter.</td>
 		</tr>
 		<tr>
-            <td>Clients <strong>SHALL</strong> support both Encounter.location.location and Encounter.serviceProvider. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support both Encounter.location.location and Encounter.serviceProvider.</td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of Encounter.location.location and Encounter.serviceProvider.</td>
 		</tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>identifier</code>, <code>patient+type</code>, <code>patient+_lastUpdated</code>, and <code>patient+discharge-disposition</code> search parameters and search parameter combinations. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>identifier</code>, <code>patient+type</code>, <code>patient+_lastUpdated</code>, and <code>patient+discharge-disposition</code> search parameters and search parameter combinations.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>identifier</code>, <code>patient+type</code>, <code>patient+_lastUpdated</code>, and <code>patient+discharge-disposition</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td>Encounter.reasonReference Observation reference <strong>SHOULD</strong> conform to a US Core Observation if applicable. <img src="plus_sign.png" width="20"/></td>
+            <td> <img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform to US Core Observation profile if Encounter.reasonReference points to an Observation.</td>
+			<td> <img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform to US Core Observation profile if Encounter.reasonReference points to an Observation.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in Encounter.location. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in Encounter.location.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in Encounter.location.</td>
+        </tr>
+		<tr>
+			<td></td>
+            <td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Encounter resource.</td>
         </tr>
 		 <tr>
             <td>HealthcareService</td>
-            <td><strong>SHOULD</strong> support <code>vread</code> interaction. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> interaction.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> interaction.</td>
         </tr>
 		<tr>
-            <td rowspan="4">Immunization</td>
-            <td>Clients <strong>SHALL</strong> support the US Core Immunization Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td rowspan="5">Immunization</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Immunization Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Immunization Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support NDC vaccine codes as translations to CVX vaccine codes, which are required based on the ONC U.S. Core Data for Interoperability (USCDI) requirements. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support NDC vaccine codes as translations to CVX vaccine codes, which are required based on the ONC U.S. Core Data for Interoperability (USCDI) requirements.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support NDC vaccine codes as translations to CVX vaccine codes, which are required based on the ONC U.S. Core Data for Interoperability (USCDI) requirements.</td>
+        </tr>
+		<tr>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Immunization resource.</td>
         </tr>
         <tr>
-            <td rowspan="4">Location</td>
-            <td>Clients <strong>SHALL</strong> support the US Core Location Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td rowspan="5">Location</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Location Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Location Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
-            <td><strong>SHALL</strong> support the <code>address</code> search parameter.<img src="arrow_up.png" width="20"/></td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the <code>address</code> search parameter.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the <code>address</code> search parameter.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> format Location.address.line and Location.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> format Location.address.line and Location.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> format Location.address.line and Location.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0.</td>
+        </tr>
+		<tr>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Location resource.</td>
         </tr>
         <tr>
-            <td rowspan="2">Medication</td>
-            <td>Clients <strong>SHALL</strong> support the US Core Medication Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td rowspan="3">Medication</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Medication Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Medication Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td rowspan="9">MedicationRequest</td>
-            <td><strong>SHALL</strong> support the US Core Observation profiles. Profiles with equivalent AU Core profiles are compliant, as noted in the <a href="comparison.html#profile-comparison">Profile comparison</a>. Profiles without an equivalent are considered <strong>additional requirements</strong>. <img src="plus_sign.png" width="20"/></td>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Medication resource.</td>
         </tr>
 		<tr>
-			<td>Clients <strong>SHALL</strong> support the US Core MedicationRequest Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td rowspan="10">MedicationRequest</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationRequest Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationRequest Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations.</td>
 		</tr>
 		<tr>
-			<td><strong>SHALL</strong> support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations. <img src="arrow_up.png" width="20"/></td>
-		</tr>
-		<tr>
-            <td><strong>SHALL</strong> support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
         </tr> 
         <tr>
-            <td><strong>SHALL</strong> support all target resource types for MedicationRequest.reasonReference. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support all target resource types for MedicationRequest.reasonReference.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one target resource type in MedicationRequest.reasonReference.</td>
         </tr>  
 		<tr>
-            <td>Clients <strong>SHOULD</strong> interpret the use of MedicationRequest.requester with Patient or RelatedPerson indicates a self-prescribed medication. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform referenced resources in MedicationRequest.reasonReference to appropriate US Core profiles.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform referenced resources in MedicationRequest.reasonReference to appropriate US Core profiles.</td>
+        </tr>  
+		<tr>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> interpret the use of MedicationRequest.requester with Patient or RelatedPerson indicates a self-prescribed medication.</td>
+			<td></td>
         </tr>
 		<tr>
-			<td><strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combinations <img src="arrow_up.png" width="20"/></td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination.</td>
 		</tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
 		<tr>
-            <td rowspan="8">Observation</td>
-            <td><strong>SHALL</strong> support all US Core Observation profiles listed in the specification, including those compared in the <a href="comparison.html#profile-comparison">Profile comparison</a> and additional profiles not included in the comparison.</td>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support MedicationRequest resource.</td>
         </tr>
 		<tr>
-			<td><strong>SHALL</strong> ensure that an Observation without a value includes a reason for absence using Observation.dataAbsentReason unless there are component observations, or references to other Observations. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-		<tr>
-            <td>Systems <strong>SHALL</strong> support Observation.dataAbsentReason when an Observation has no value. <img src="plus_sign.png" width="20"/></td>
+            <td rowspan="6">Observation</td>
+            <td>A client <strong>SHALL</strong> support at least one Observation, including profiles with <a href="#uscore-additional-requirements">additional requirements</a> and <a href="#uscore-additional-profiles">additional profiles</a>.</td>
+			<td>A client <strong>SHALL</strong> support Observation profiles, including profiles with <a href="#uscore-additional-requirements">additional requirements</a> and <a href="#uscore-additional-profiles">additional profiles</a>.</td>
         </tr>
 		<tr>
-            <td>Systems <strong>SHALL</strong> support Observation.component.dataAbsentReason when component values are missing. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-		<tr>
-            <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>        
 		<tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr> 
         <tr>
-            <td><strong>SHOULD</strong> support <code>patient+category+_lastUpdated</code> search parameter combination. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
         </tr>
 		<tr>
-			<td>Systems <strong>SHOULD</strong> support Observation.effectivePeriod for time-based tests. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-        <tr>
-            <td rowspan="6">Organization</td>
-            <td><strong>SHALL</strong> support the US Core Organization Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
-        </tr>
-		<tr>
-			<td><strong>SHALL</strong> support <code>address</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Observation.effectivePeriod for time-based tests.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Observation.effectivePeriod for time-based tests.</td>
 		</tr>
 		<tr>
-            <td><strong>SHALL</strong> support the use of a National Provider Identifier (NPI) in Organization.identifier. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-		<tr>
-            <td><strong>SHOULD</strong> support the use of Clinical Laboratory Improvement Amendments (CLIA) identifiers in Organization.identifier. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-		<tr>
-            <td><strong>SHOULD</strong> follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for populating Organization.address.line and Organization.address.city. <img src="plus_sign.png" width="20"/></td>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Observation resource.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td rowspan="7">Organization</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Organization Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Organization Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>address</code> search parameter.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>address</code> search parameter.</td>
+		</tr>
+		<tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support National Provider Identifier (NPI) for organisations.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support National Provider Identifier (NPI) for organisations.</td>
+        </tr>
+		<tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Clinical Laboratory Improvement Amendments (CLIA) identifier for organisations.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Clinical Laboratory Improvement Amendments (CLIA) identifier for organisations.</td>
+        </tr>
+		<tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for populating Organization.address.line and Organization.address.city.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for populating Organization.address.line and Organization.address.city.</td>
+        </tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+		<tr>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Organization resource.</td>
         </tr>
         <tr>
             <td rowspan="8">Patient</td>
-            <td><strong>SHALL</strong> support the US Core Patient Profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+          	<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Patient Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Patient Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
-			<td><strong>SHALL</strong> support US Core specific patient demographics: contact detail, communication language, race, ethnicity, birth sex, previous name, and name suffix. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-		<tr>
-			<td><strong>SHALL</strong> support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations. <img src="arrow_up.png" width="20"/></td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations.</td>
 		</tr>
         <tr>
-            <td><strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
 		<tr>
-			<td>Patient.deceased[x] is used, at least Patient.deceasedDateTime <strong>SHALL</strong> be supported. at least Patient.deceasedDateTime if Patient.deceased[x] is used. <img src="plus_sign.png" width="20"/></td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least Patient.deceasedDateTime if supporting Patient.deceased[x].</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least Patient.deceasedDateTime if supporting Patient.deceased[x].</td>
 		</tr>	
 		<tr>
-			<td>Systems <strong>SHALL</strong> follow the Project US@ Technical Specification for Patient.address formatting. <img src="plus_sign.png" width="20"/></td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> (certifying systems)/ <strong>SHALL</strong> (non-certifying systems) follow the Project US@ Technical Specification for Patient.address.line and Patient.address.city formatting.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> (certifying systems)/ <strong>SHALL</strong> (non-certifying systems) follow the Project US@ Technical Specification for Patient.address.line and Patient.address.city formatting.</td>
 		</tr>
 		<tr>
-			<td><strong>SHOULD NOT</strong> use a Social Security Number in Patient.identifier.value. <img src="plus_sign.png" width="20"/></td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD NOT</strong> use a Social Security Number in Patient.identifier.value.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD NOT</strong> use a Social Security Number in Patient.identifier.value.</td>
 		</tr>	
+		<tr>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Patient resource.</td>
+        </tr>
         <tr>
-            <td rowspan="4">Practitioner</td>
-            <td><strong>SHALL</strong> support the US Core Practitioner which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td rowspan="7">Practitioner</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Practitioner which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Practitioner which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
-			<td><strong>SHALL</strong> support <code>name</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>name</code> search parameter.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>name</code> search parameter.</td>
 		</tr>
 		<tr>
-			<td>Clients <strong>SHALL</strong> support <code>Practitioner.address</code> whether location/contact information is provided via <code>Practitioner</code> or <code>PractitionerRole</code>. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-        <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td rowspan="5">PractitionerRole</td>
-            <td><strong>SHALL</strong> support the US Core PractitionerRole which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
-        </tr>
-		<tr>
-			<td><strong>SHALL</strong> support <code>specialty</code> search parameter. <img src="arrow_up.png" width="20"/></td>
-		</tr>
-        <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td><strong>SHOULD</strong> support <code>_include=PractitionerRole:endpoint</code>. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td rowspan="6">Procedure</td>
-            <td><strong>SHALL</strong> support the US Core Procedure.</td>
-        </tr>
-		<tr>
-			<td>Clients <strong>SHALL</strong> support all target resource types in Procedure.reasonReference. <img src="plus_sign.png" width="20"/></td>
+			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support <code>Practitioner.address</code>, regardless of whether the server supports the PractitionerRole resource.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>Practitioner.address</code> if the server does not support the PractitionerRole resource.</td>
 		</tr>
 		<tr>
-			<td>Clients <strong>SHALL</strong> support both US Core Procedure and US Core ServiceRequest profiles. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-		<tr>
-			<td>Systems <strong>SHOULD</strong> support <code>Procedure.focalDevice</code> referencing the US Core Implantable Device Profile when applicable. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-		<tr>
-			<td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+			<td></td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> provide implementation-specific guidance for accessing a provider’s location and contact information when only the Practitioner resource is supported.</td>
 		</tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+		<tr>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Practitioner.address.line and Practitioner.address.city formatting.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Practitioner.address.line and Practitioner.address.city formatting.</td>
+		</tr>
+		<tr>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Practitioner resource.</td>
         </tr>
         <tr>
-            <td rowspan="6">RelatedPerson</td>
-           <td><strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+            <td rowspan="6">PractitionerRole</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core PractitionerRole which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core PractitionerRole which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>specialty</code> search parameter.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>specialty</code> search parameter.</td>
+		</tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_include=PractitionerRole:endpoint</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_include=PractitionerRole:endpoint</code>.</td>
+        </tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+        </tr>
+		<tr>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support PractitionerRole resource.</td>
+        </tr>
+        <tr>
+            <td rowspan="8">Procedure</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support all target resource types in Procedure.reasonReference.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of target resource types in Procedure.reasonReference.</td>
+        </tr>
+		<tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> ensure that referenced resources in Procedure.reasonReference conform to US Core profiles</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> ensure that referenced resources in Procedure.reasonReference conform to US Core profiles.</td>
+        </tr>
+		<tr>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both the US Core Procedure and US Core ServiceRequest profiles for communicating the reason for referral or consultation via Procedure.basedOn.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both the US Core Procedure and US Core ServiceRequest profiles for communicating the reason for referral or consultation via Procedure.basedOn.</td>
+		</tr>
+		<tr>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use <code>Procedure.focalDevice</code> with reference to the US Core Implantable Device Profile when applicable.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use <code>Procedure.focalDevice</code> with reference to the US Core Implantable Device Profile when applicable.</td>
+		</tr>
+		<tr>
+			<td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
+		</tr>
+		<tr>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> only use LOINC codes that reflect the actual procedures.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> only use LOINC codes that reflect the actual procedures.</td>
+		</tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+		<tr>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Procedure resource.</td>
+        </tr>
+        <tr>
+            <td rowspan="7">RelatedPerson</td>
+           <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>>
+           <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>>
         </tr>
 		 <tr>
-            <td><strong>SHALL</strong> support <code>_id</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code> search parameter.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code> search parameter.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>name</code> search parameter. <img src="arrow_up.png" width="20"/></td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>name</code> search parameter.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>name</code> search parameter.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> format RelatedPerson.address.line and RelatedPerson.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0. <img src="plus_sign.png" width="20"/></td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for RelatedPerson.address.line and RelatedPerson.address.city formatting.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for RelatedPerson.address.line and RelatedPerson.address.city formatting.</td>
+		</tr>
+		<tr>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support RelatedPerson resource.</td>
         </tr>
 		<tr>
             <td rowspan="9">Specimen</td>
-            <td><strong>SHALL</strong> support the US Core Specimen Profile.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Specimen Profile.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Specimen Profile.</td>
         </tr>
 		<tr>
-			<td><strong>SHALL</strong> support GET by id: <code>GET [base]/Specimen/[id]</code>. <img src="plus_sign.png" width="20"/></td>
+			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> be capable of fetching a Specimen resource using: <code>GET [base]/Specimen/[id]</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> be capable of returning a Specimen resource using: <code>GET [base]/Specimen/[id]</code>.</td>
 		</tr>
         <tr>
-            <td><strong>SHALL</strong> support both Specimen.identifier and Specimen.accessionIdentifier. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support both Specimen.identifier and Specimen.accessionIdentifier.</td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of Specimen.identifier and Specimen.accessionIdentifier.</td>
         </tr>
 		<tr>
-			<td>Clients <strong>SHALL</strong> support both Specimen.identifier and Specimen.accessionIdentifier. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-		<tr>
-            <td><strong>SHALL</strong> support the <code>_id</code> search parameter. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support the <code>_id</code> search parameter.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support the <code>_id</code> search parameter.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support <code>resolves</code> reference policy. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>resolves</code> reference policy.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>resolves</code> reference policy.</td>
         </tr>
 		<tr>
-            <td><strong>SHOULD</strong> support <code>read</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code> interactions.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>patient</code> search parameter. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient</code> search parameter.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient</code> search parameter.</td>
         </tr>
         <tr>
-            <td><strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+		<tr>
+            <td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support RelatedPerson resource.</td>
         </tr>
     </tbody>
 </table>  
