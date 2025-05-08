@@ -1558,18 +1558,18 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 ##### Additional resource types
 None.
 
+
 #### International Patient Summary CapabilityStatement additional requirements
 
-[International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) defines the expected capabilities of systems that represent the International Patient Summary (IPS) using HL7 FHIR. An IPS document is an electronic health record extract containing essential healthcare information about a subject of care. 
+A system conforming to an AU Core CapabilityStatement aligns with IPS CapabilityStatements but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in IPS CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
-##### IPS Server CapabilityStatement additional requirements 
-The [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) introduces additional conformance expectations not required by AU Core. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 **Legend:**
 
-<img src="arrow_up.png" width="16"/> **Stronger**: The IPS CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
+<img src="arrow_up.png" width="16"/> **Stronger**: The IPA CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The IPS CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The IPA CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
+
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -1579,121 +1579,39 @@ The [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl
 	<thead>
         <tr>
             <th>Resource type</th>
-            <th>Additional requirements</th>
+            <th>IPS 2.0.0 Server CapabilityStatement additional requirements</th>
         </tr>
     </thead> 
     <tbody>
 		<tr>
-			<td>AllergyIntolerance</td>
-			<td>Servers <strong>SHOULD</strong> support the IPS AllergyIntolerance profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+			<td rowspan="2">Bundle</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Bundle resource.</td>
 		</tr>
 		<tr>
-			<td>Condition</td>
-			<td>Servers <strong>SHOULD</strong> support the IPS Condition profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Bundle (IPS) profile.</td>
 		</tr>
 		<tr>
-			<td>DiagnosticReport</td>
-			<td>Servers <strong>SHOULD</strong> support the IPS DiagnosticReport profile.</td>
+			<td rowspan="2">Composition</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Composition resource.</td>
 		</tr>
-        <tr>
-            <td>Immunization</td>
-            <td>Servers <strong>SHOULD</strong> support the IPS Immunization profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
+		<tr>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Composition (IPS) profile.</td>
+		</tr>
+		<tr>
+            <td rowspan="3">Patient</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the Patient resource. </td>
         </tr>
 		<tr>
-            <td>Medication</td>
-            <td>Servers <strong>SHOULD</strong> support the IPS Medication profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
-        </tr>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+		</tr>	
 		<tr>
-            <td>MedicationRequest</td>
-            <td>Servers <strong>SHOULD</strong> support the IPS MedicationRequest profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
-        </tr>
-		<tr>
-            <td>MedicationStatement</td>
-            <td>Servers <strong>SHOULD</strong> support the IPS MedicationStatement profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
-        </tr>
-		<tr>
-			<td>Observation</td>
-			<td><strong>SHOULD</strong> support the following IPS Observation profiles: Observation - Pregnancy: EDD, Observation - Pregnancy: status, Observation - SH: alcohol use, Observation - SH: tobacco use, Observation Results: laboratory/pathology (IPS), Observation Results: radiology (IPS). <img src="arrow_up.png" width="20"/></td>
-		</tr>
-		<tr>
-			<td>Organization</td>
-			<td>Servers <strong>SHOULD</strong> support the Organization (IPS) profile.</td>
-		</tr>
-		<tr>
-            <td rowspan="2">Patient</td>
-            <td>Servers <strong>SHALL</strong> support the IPS Patient profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
-        </tr>
-		<tr>
-			<td><strong>SHOULD</strong> support <code>$summary</code> operation. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-		<tr>
-			<td>Practitioner</td>
-			<td>Servers <strong>SHOULD</strong> support the Practitioner (IPS) profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
-		</tr>
-		<tr>
-			<td>PractitionerRole</td>
-			<td>Servers <strong>SHOULD</strong> support the PractitionerRole (IPS) profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
-		</tr>
-		<tr>
-			<td>Procedure</td>
-			<td>Servers <strong>SHOULD</strong> support the Procedure (IPS) profile which has additional requirements as detailed in the <a href="comparison.html#profile-comparison">Profile comparison</a>.</td>
-		</tr>
-		<tr>
-			<td>Specimen</td>
-			<td>Servers <strong>SHOULD</strong> support the Specimen (IPS) profile. <img src="plus_sign.png" width="20"/></td>
-		</tr>
-		<tr>
-			<td>DocumentReference</td>
-			<td><strong>SHOULD</strong> support <code>$docref</code> operation. <img src="plus_sign.png" width="20"/></td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>$summary</code> operation.</td>
 		</tr>
     </tbody>
 </table>    
 
 ##### Additional resource types
-The following table lists resource types that are supported by [IPS Server CapabilityStatement](https://hl7.org/fhir/uv/ips/2024Sep/CapabilityStatement-ips-server.html) but are not currently supported by the AU Core Responder CapabilityStatement. These differences may have implications for systems aiming to be interoperable across both specifications.
-    
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
- 	<colgroup>
-		<col style="width: 20%;">
-		<col style="width: 80%;">
-	</colgroup>     
-	<thead>
-        <tr>
-            <th>Additional resource type</th>
-            <th>Resource conformance</th>
-        </tr>
-    </thead> 
-    <tbody>
-        <tr>
-            <td>Bundle</td>
-            <td><strong>supported</strong></td>
-        </tr>
-        <tr>
-            <td>Composition</td>
-            <td><strong>supported</strong></td>
-        </tr>
-        <tr>
-            <td>Device</td>
-            <td><strong>supported</strong></td>
-        </tr>
-        <tr>
-            <td>DeviceUseStatement</td>
-            <td><strong>supported</strong></td>
-        </tr>
-        <tr>
-            <td>ImagingStudy</td>
-            <td><strong>supported</strong></td>
-        </tr>
-        <tr>
-            <td>Flag</td>
-            <td><strong>supported</strong></td>
-        </tr>
-        <tr>
-            <td>OperationDefinition</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-	</tbody>
-</table>
+None.
 
 #### US Core CapabilityStatement additional requirements
 
