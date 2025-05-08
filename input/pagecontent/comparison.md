@@ -2235,8 +2235,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="7">RelatedPerson</td>
-           <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>>
-           <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>>
+           <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+           <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		 <tr>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code> search parameter.</td>
@@ -2297,144 +2297,87 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
 		<tr>
             <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support RelatedPerson resource.</td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Specimen resource.</td>
         </tr>
     </tbody>
 </table>  
   
 ##### Additional resource types
-The following table lists resource types that are supported by [US Core Client CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html) but are not currently supported by the AU Core Requester CapabilityStatement. These differences may have implications for systems aiming to be interoperable across both specifications.
+This version of AU Core has no equivalent CapabilityStatement expectations for the following resource types included in US Core CapabilityStatements.
     
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
 		<col style="width: 20%;">
-		<col style="width: 80%;">
-	</colgroup>    
+		<col style="width: 40%;">
+		<col style="width: 40%;">
+	</colgroup> 
 	<thead>
         <tr>
             <th>Additional resource type</th>
-            <th>Resource conformance</th>
+            <th>US Core 7.0.0 Client CapabilityStatement resource conformance</th>
+			<th>US Core 7.0.0 Server CapabilityStatement resource conformance</th>
         </tr>
     </thead> 
     <tbody>
 		<tr>
             <td>CarePlan</td>
             <td><strong>SHOULD</strong></td>
+			<td><strong>SHALL</strong></td>
         </tr>
         <tr>
             <td>CareTeam</td>
             <td><strong>SHOULD</strong></td>
+			<td><strong>SHALL</strong></td>
         </tr>
         <tr>
             <td>Coverage</td>
             <td><strong>SHOULD</strong></td>
+			<td><strong>SHALL</strong></td>
         </tr>
         <tr>
             <td>Device</td>
             <td><strong>SHOULD</strong></td>
+			<td><strong>SHALL</strong></td>
         </tr>
         <tr>
             <td>Endpoint</td>
             <td><strong>SHOULD</strong></td>
+			<td><strong>SHALL</strong></td>
         </tr>
         <tr>
             <td>Goal</td>
             <td><strong>SHOULD</strong></td>
+			<td><strong>SHALL</strong></td>
         </tr>
 		<tr>
             <td>Media</td>
             <td><strong>SHOULD</strong></td>
+			<td><strong>SHALL</strong></td>
         </tr>
 		<tr>
             <td>MedicationDispense</td>
             <td><strong>SHOULD</strong></td>
+			<td><strong>SHALL</strong></td>
         </tr>
 		<tr>
             <td>Provenance</td>
             <td><strong>SHOULD</strong></td>
+			<td><strong>SHALL</strong></td>
         </tr>
 		<tr>
             <td>Questionnaire</td>
             <td><strong>SHOULD</strong></td>
+			<td><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td>QuestionnaireResponse</td>
             <td><strong>SHOULD</strong></td>
+			<td><strong>SHOULD</strong></td>
         </tr>
 		<tr>
             <td>ValueSet</td>
             <td><strong>SHOULD</strong></td>
+			<td><strong>SHOULD</strong></td>
         </tr>
 	</tbody>
 </table>
-
-##### Additional resource types
-The following table lists resource types that are supported by [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html) but are not currently supported by the AU Core Client CapabilityStatement. These differences may have implications for systems aiming to be interoperable across both specifications.
-    
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
- 	<colgroup>
-		<col style="width: 20%;">
-		<col style="width: 80%;">
-	</colgroup>  
-	<thead>
-        <tr>
-            <th>Additional resource type</th>
-            <th>Resource conformance</th>
-        </tr>
-    </thead> 
-    <tbody>
-        <tr>
-            <td>CarePlan</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-        <tr>
-            <td>CareTeam</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-        <tr>
-            <td>Coverage</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-        <tr>
-            <td>Device</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-        <tr>
-            <td>Endpoint</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-        <tr>
-            <td>Goal</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-        <tr>
-            <td>HealthcareService</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-		<tr>
-            <td>Media</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-		<tr>
-            <td>MedicationDispense</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-		<tr>
-            <td>Provenance</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-		<tr>
-            <td>Questionnaire</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-		<tr>
-            <td>QuestionnaireResponse</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-		<tr>
-            <td>ValueSet</td>
-            <td><strong>SHOULD</strong></td>
-        </tr>
-	</tbody>
-</table>
-
