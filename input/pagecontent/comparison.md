@@ -1528,7 +1528,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		</tr>
 		<tr>
             <td></td>
-            <td><img src="plus_sign" width="20"/> A server <strong>SHALL</strong>:populate-if-known Patient.identifier.value, Patient.active, and Patient.link. <img src="plus_sign.png" width="20"/></td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known Patient.identifier.value, Patient.active, and Patient.link.</td>
 		</tr>
         <tr>
             <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
@@ -1561,15 +1561,19 @@ None.
 
 #### International Patient Summary CapabilityStatement additional requirements
 
-A system conforming to an AU Core CapabilityStatement aligns with IPS CapabilityStatements but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in IPS CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
+A system conforming to an AU Core CapabilityStatement aligns with IPS CapabilityStatement but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in IPS CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 
 **Legend:**
 
-<img src="arrow_up.png" width="16"/> **Stronger**: The IPA CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
+<img src="arrow_up.png" width="16"/> **Stronger**: The IPS CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The IPA CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The IPS CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
 
+<div class="note-to-contributors">
+Many requirements in the IPS current build (version 2.0.0) have changed since version 2.0.0-ballot, including updated conformance expectations for resources like Bundle, Composition and Patient from <strong>supported</strong> to <strong>SHALL</strong>.
+These updates are not reflected in this comparison. 
+</div>
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -1579,39 +1583,116 @@ A system conforming to an AU Core CapabilityStatement aligns with IPS Capability
 	<thead>
         <tr>
             <th>Resource type</th>
-            <th>IPS 2.0.0 Server CapabilityStatement additional requirements</th>
+            <th>IPS 2.0.0-ballot Server CapabilityStatement additional requirements</th>
         </tr>
     </thead> 
     <tbody>
 		<tr>
-			<td rowspan="2">Bundle</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Bundle resource.</td>
-		</tr>
-		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Bundle (IPS) profile.</td>
-		</tr>
-		<tr>
-			<td rowspan="2">Composition</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Composition resource.</td>
-		</tr>
-		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Composition (IPS) profile.</td>
-		</tr>
-		<tr>
-            <td rowspan="3">Patient</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the Patient resource. </td>
+            <td rowspan="2">Patient</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
         </tr>
 		<tr>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
-		</tr>	
-		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>$summary</code> operation.</td>
+		</tr>
+		<tr>
+            <td>AllergyIntolerance</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support AllergyIntolerance (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+            <td>Condition</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Condition (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+            <td>DiagnosticReport</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support DiagnosticReport (IPS) profile.</td>
+        </tr>
+		<tr>
+            <td>Immunization</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Immunization (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+            <td>Medication</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Medication (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+            <td>MedicationRequest</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationRequest (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+            <td>MedicationStatement</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationStatement (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+            <td>Observation</td>
+            <td>TODO, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+            <td>Practitioner</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Practitioner (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+            <td>Procedure</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Procedure (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+        </tr>
+		<tr>
+            <td>Specimen</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Specimen (IPS) profile.</td>
+        </tr>
+		<tr>
+            <td rowspan="2" rowspan="3">DocumentReference</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support DocumentReference (IPS) profile.</td>
+        </tr>
+		<tr>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>$docref</code> operation.</td>
 		</tr>
     </tbody>
 </table>    
 
 ##### Additional resource types
-None.
+This version of AU Core has no equivalent CapabilityStatement expectations for the following resource types included in IPS Server CapabilityStatements.
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+ 	<colgroup>
+		<col style="width: 20%;">
+		<col style="width: 40%;">
+	</colgroup> 
+	<thead>
+        <tr>
+            <th>Additional resource type</th>
+            <th>IPS 2.0.0-ballot Server CapabilityStatement resource conformance</th>
+		</tr>
+    </thead> 
+    <tbody>
+		<tr>
+            <td>Bundle</td>
+            <td><strong>supported</strong></td>
+		</tr>
+        <tr>
+            <td>Composition</td>
+            <td><strong>supported</strong></td>
+		</tr>
+        <tr>
+            <td>Device</td>
+            <td><strong>supported</strong></td>
+		</tr>
+        <tr>
+            <td>DeviceUseStatement</td>
+            <td><strong>supported</strong></td>
+		</tr>
+		<tr>
+            <td>ImagingStudy</td>
+            <td><strong>supported</strong></td>
+		</tr>
+		<tr>
+            <td>Flag</td>
+            <td><strong>supported</strong></td>
+		</tr>
+		<tr>
+            <td>OperationDefinition</td>
+            <td><strong>SHOULD</strong></td>
+		</tr>
+	</tbody>
+</table>
 
 #### US Core CapabilityStatement additional requirements
 
