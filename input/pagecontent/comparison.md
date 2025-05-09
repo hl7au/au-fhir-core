@@ -492,7 +492,7 @@ AU Core compliant resources are compliant with IPS requirements for Missing Data
 ##### Suppressed Data
 IPS does not include requirements for Suppressed Data.
 
-##### Additional profiles
+##### Additional profiles <a id="ips-additional-profiles"></a>
 This version of AU Core has no equivalent profile for the following IPS profiles:
 - Bundle - IPS
 - Composition (IPS)
@@ -1624,7 +1624,7 @@ These updates are not reflected in this comparison.
         </tr>
 		<tr>
             <td>Observation</td>
-            <td>TODO, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+            <td><strong>SHOULD</strong> support Observation Results: laboratory/pathology (IPS) or Observation - SH: tobacco use which have additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Practitioner</td>
