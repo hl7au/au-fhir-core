@@ -8,7 +8,7 @@
     <name value="AUCoreClinicalPatient"/>
     <derivedFrom value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
     <status value="active"/>
-    <description value="A clinical patient **SHOULD** support patient.identifier. This AU Core SearchParameter extends the usage context of the&#xA;clinical-patient parameter&#xA; - multipleAnd&#xA; - multipleOr&#xA; - chain"/>
+    <description value="This SearchParameter describes the rules on the clinical-patient search parameter in AU Core. It is based on the core FHIR [clinical-patient](https://hl7.org/fhir/R4/searchparameter-registry.html#clinical-patient) search parameter and identifies the additional requirements when conforming to AU Core."/>
     <code value="patient"/>
     <base value="AllergyIntolerance"/>
     <base value="CarePlan"/>
