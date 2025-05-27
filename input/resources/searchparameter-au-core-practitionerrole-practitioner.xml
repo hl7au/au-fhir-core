@@ -8,7 +8,7 @@
     <name value="AUCorePractitionerRolePractitioner"/>
     <derivedFrom value="http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner"/>
     <status value="active"/>
-    <description value="A practitioner role practitioner **SHOULD** support practitioner.identifier. NOTE: This AU Core SearchParameter extends the usage context of the&#xA;PractitionerRole-practitioner parameter&#xA; - multipleAnd&#xA; - multipleOr&#xA; - chain"/>
+    <description value="This SearchParameter describes the rules on the PractitionerRole-practitioner search parameter in AU Core. It is based on the core FHIR [PractitionerRole-practitioner](https://hl7.org/fhir/R4/practitionerrole.html#search) search parameter and identifies the additional requirements when conforming to AU Core."/>
     <code value="practitioner"/>
     <base value="PractitionerRole"/>
     <type value="reference"/>
