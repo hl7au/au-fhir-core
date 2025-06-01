@@ -11,10 +11,10 @@ Corresponding profiles, conformance requirements, and capability statements incl
 
 The below comparison evaluates AU Core conformance requirements with the key implementation guides identifying where compliance with AU Core satisfies the expectations established by the referenced implementation guide. 
 
-### Profile comparison
+## Profile comparison
 As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. 
 
-The table below provides a profile only comparison from AU Core to profiles in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an International Patient Access profile **MAY NOT** be compliant with AU Core.
+The table below provides a profile only comparison from AU Core to profiles in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an IPA profile **MAY NOT** be compliant with AU Core.
 
 The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirements are not compared.
 
@@ -191,9 +191,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
     </tbody>
 </table>
 
-#### International Patient Access profile additional requirements <a id="ipa-additional-requirements"></a>
-
-[International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
+### International Patient Access profile additional requirements <a id="ipa-additional-requirements"></a>
 
 The following IPA profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
@@ -252,18 +250,17 @@ The following IPA profile(s) contain additional requirements. Implementers are a
     </tbody>
 </table>
 
-##### Missing Data
+#### Missing Data
 AU Core compliant resources are compliant with IPA requirements for Missing Data.
 
-##### Suppressed Data 
+#### Suppressed Data 
 IPA does not include requirements for Suppressed Data.
 
-##### Additional profiles
+#### Additional profiles
 This version of AU Core has no equivalent profile for the following IPA profiles:
 - IPA-DocumentReference
 
-#### International Patient Summary profile additional requirements <a id="ips-additional-requirements"></a>
-[International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) describes how to represent the International Patient Summary (IPS) using HL7 FHIR. An International Patient Summary  document is an electronic health record extract containing essential healthcare information about a subject of care.
+### International Patient Summary profile additional requirements <a id="ips-additional-requirements"></a>
 
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
@@ -486,13 +483,13 @@ The following IPS profile(s) contain additional requirements. Implementers are a
     </tbody>
 </table>
 
-##### Missing Data
+#### Missing Data
 AU Core compliant resources are compliant with IPS requirements for Missing Data.
 
-##### Suppressed Data
+#### Suppressed Data
 IPS does not include requirements for Suppressed Data.
 
-##### Additional profiles <a id="ips-additional-profiles"></a>
+#### Additional profiles <a id="ips-additional-profiles"></a>
 This version of AU Core has no equivalent profile for the following IPS profiles:
 - Bundle - IPS
 - Composition (IPS)
@@ -511,8 +508,7 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - Specimen (IPS)
 
 
-#### US Core profile additional requirements <a id="uscore-additional-requirements"></a>
-[US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/) serves as the foundation for FHIR implementation guides in the US Realm. It establishes the minimum constraints on FHIR resources to define US Core Profiles, specifying the required elements, extensions, vocabularies, and value sets, as well as their usage. It also outlines the minimum FHIR RESTful interactions needed to access patient data for each US Core Profile.
+### US Core profile additional requirements <a id="uscore-additional-requirements"></a>
 
 The following US Core profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
@@ -785,7 +781,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Patient.name</td>
-            <td style="width: 25%;">US Core requires all name to have family or given or Data Absent Reason extension.</td>
+            <td style="width: 25%;">US Core requires all name to have family or given or Data Absent Reason extension.</td><i>Must Support</i>
         </tr>
         <tr>
             <td style="width: 25%;">Gender identity</td>
@@ -932,13 +928,13 @@ The following US Core profile(s) contain additional requirements. Implementers a
     </tbody>
 </table>
 
-##### Missing Data
+#### Missing Data
 AU Core compliant resources are compliant with US Core requirements for Missing Data.
 
-##### Suppressed Data
+#### Suppressed Data
 AU Core compliant resources are compliant with US Core requirements for Suppressed Data.
 
-##### Additional profiles <a id="uscore-additional-profiles"></a>
+#### Additional profiles <a id="uscore-additional-profiles"></a>
 This version of AU Core has no equivalent profile for the following US Core profiles:
 - US Core CarePlan Profile
 - US Core CareTeam Profile
@@ -963,12 +959,11 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core ServiceRequest Profile 
 - US Core Specimen Profile
 
-### Capability statement comparison
-This section compares AU Core conformance expectations with those defined in other key international implementation guides, focusing on systems acting in similar roles (requesters and responders). 
+## Capability statement comparison
 
 As part of the comparison, both system and resource level capabilities are compared, including FHIR version, supported formats and guides, conformance expectations, RESTful interactions, security, resource types and profiles, search parameters, reference handling, and operations.
 
-#### CapabilityStatement mapping
+### CapabilityStatement mapping
 
 AU Core defines capability statements that describe the conformance requirements and expectations of a corresponding AU Core system actor:
 - AU Core Requester - a system that creates and initiates a data access request to retrieve core digital health and administrative information
@@ -1006,20 +1001,20 @@ The table below provides a mapping of AU Core capability statements to capabilit
   </tbody>
 </table>
 
-*<sup>1</sup>The IPS Server CapabilityStatement is not directly comparable as the role and purpose is not similar. It is included for comparison for information as both IPS Server and AU Core Responder are 'server' capability statements and the comparison may be of interest to implementers.*
+*<sup>1</sup>The IPS Server CapabilityStatement is not directly comparable as the role and purpose is inexact; the IPS server actor overlaps with the AU Core Responder actor, but actors cover additional meaning.*
 
 
-#### CapabilityStatement comparison
+### CapabilityStatement comparison
 
-The table below provides a comparison of capability statements from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system conforming to International Patient Access Client CapabilityStatement **MAY NOT** meet the conformance requirements of the AU Core Requester CapabilityStatement. 
+The table below provides a capability statements comparison from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system conforming to International Patient Access Client CapabilityStatement **MAY NOT** meet the conformance requirements of the AU Core Requester CapabilityStatement. 
 
 The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirements are not compared.
 
 **Legend:**
 
-<img src="green_checkmark.png" width="20"/> **Compliant**: A system conforming to an AU Core CapabilityStatement meets all of the requirements of the compared capability statement.
+<img src="green_checkmark.png" width="20"/> **Compliant**: A system conforming to an AU Core CapabilityStatement requirements meets all of the equivalent requirements of the compared capability statement.
 
-<img src="orange_checkmark.png" width="20"/> **Additional requirements**: A system conforming to an AU Core CapabilityStatement aligns with the compared capability statement but may require additional functionality to meet its stricter or broader requirements. Where additional requirements are identified, more information is provided in the sections below.
+<img src="orange_checkmark.png" width="20"/> **Additional requirements**: A system conforming to an AU Core CapabilityStatement requirement is compatible with the compared capability statement but may require additional functionality to meet its stricter or broader requirements. Where additional requirements are identified, more information is provided in the sections below.
 
 <img src="cross_red_circle.png" width="20"/> **Incompatible**: A system conforming to an AU Core CapabilityStatement is incompatible with the compared capability statement. A system cannot be compliant to both. Where incompatible requirements are identified, more information is provided in the sections below.
 
@@ -1091,7 +1086,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
         </tr>
 		<tr>
             <td style="text-align: left; vertical-align: middle;">FHIR capabilities</td>
-            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
@@ -1301,16 +1296,16 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
 </table>
 
 
-#### International Patient Access CapabilityStatement additional requirements
+### International Patient Access CapabilityStatement additional requirements
 
 A system conforming to an AU Core CapabilityStatement aligns with IPA CapabilityStatements but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in IPA CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 
 **Legend:**
 
-<img src="arrow_up.png" width="16"/> **Stronger**: The IPA CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
+<img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The IPA CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -1320,12 +1315,17 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 	</colgroup>     
 	<thead>
         <tr>
-            <th>CapabilityStatement requirement</th>
+            <th>AU Core CapabilityStatement requirement</th>
             <th>IPA 1.1.0 Client CapabilityStatement additional requirements</th>
 			<th>IPA 1.1.0 Server CapabilityStatement additional requirements</th>
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td>FHIR capabilities</td>
+            <td>A slient <strong>SHOULD</strong> specify the patient id when performing searches on other resources.</td>
+            <td></td>
+        </tr>
 		<tr>
             <td>FHIR resource support</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the IPA conformance expectations for the Patient profile and for each IPA resource type they support, see additional requirements below.</td>
@@ -1351,16 +1351,16 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
             <td rowspan="2">AllergyIntolerance</td>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong>:handle AllergyIntolerance.clinicalStatus, AllergyIntolerance.verificationStatus, and AllergyIntolerance.code.</td>
-			<td></td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: AllergyIntolerance.clinicalStatus, AllergyIntolerance.verificationStatus, and AllergyIntolerance.code.</td>
+			<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-		<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+		<td></td>
         </tr>
 		<tr>
             <td rowspan="5">Condition</td>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong>:handle Condition.clinicalStatus, Condition.verificationStatus, and Condition.code.</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: Condition.clinicalStatus, Condition.verificationStatus, and Condition.code.</td>
 			<td><img src="arrow_up.png" width="20"/> A server <strong>SHOULD</strong> populate Condition.code.coding.display and/or Condition.code.text.</td>
         </tr>
 		<tr>
@@ -1369,7 +1369,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> correctly process and display clinicalStatus and verificationStatus.</td>
-			<td></td>
+			<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> continue to function safely when some expected search parameters are not supported.</td>
@@ -1377,10 +1377,10 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-		<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+		<td></td>
         </tr>
 		<tr>
-            <td rowspan="9">DocumentReference</td>
+            <td rowspan="8">DocumentReference</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-DocumentReference profile.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-DocumentReference profile.</td>
         </tr>
@@ -1390,7 +1390,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support the <code>patient</code> search parameter.</td> 
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support the <code>_id</code> and <code>patient</code> search parameters.</td> 
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>,<code>patient+category</code>, <code>patient+category+date</code>, and <code>patient+type</code> search parameters and search parameter combinations.</td> 
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> handle: DocumentReference.status, DocumentReference.type, DocumentReference.subject, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.attachment.contentType, DocumentReference.content.attachment.data, DocumentReference.content.attachment.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period.</td>
@@ -1398,24 +1398,20 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		</tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> handle DocumentReference.category and DocumentReference.author.</td>
-            <td></td>	
+           <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>$docref</code> operation.</td>
 		</tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_id</code> search parameter.</td>
-           <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>patient+category</code>, <code>patient+category+date</code>, and <code>patient+type</code> search parameters.</td>
-        </tr>
-        <tr>
-           <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameter combinations.</td>
-           <td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters combination.</td>
-        </tr>
-        <tr>
-			<td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support the <code>$docref</code> operation.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>$docref</code> operation.</td>	
-        </tr> 
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_id</code>, <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameter combinations.</td>
+           <td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters and search parameters combinations.</td>
+       </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
 		<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
+        <tr>
+			<td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support the <code>$docref</code> operation.</td>
+			<td></td>	
+        </tr> 
 		<tr>
             <td rowspan="3">Immunization</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
@@ -1426,17 +1422,17 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 			<td></td>
 		</tr>		
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>. </td>
-			<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>. </td>
+            <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+			<td></td>
         </tr>
 		<tr>
             <td rowspan="2">Medication</td>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle Medication.code.</td>
-			<td></td>
+			<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>. </td>
-		<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>. </td>
+		<td></td>
         </tr>
 		<tr>
             <td rowspan="6">MedicationRequest</td>
@@ -1470,11 +1466,11 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr> 
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
-			<td></td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known: MedicationStatement.context and MedicationStatement.informationSource.</td>
         </tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: MedicationStatement.status, MedicationStatement.medication[x], and MedicationStatement.subject.</td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known: MedicationStatement.context and MedicationStatement.informationSource.</td>
+            <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
 		</tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHOULD</strong> handle: MedicationStatement.effective[x], MedicationStatement.dosage, and MedicationStatement.dosage.text.</td>
@@ -1482,12 +1478,12 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-		<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+		<td></td>
         </tr>
         <tr>
             <td rowspan="4">Observation</td>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> support <code>patient</code> search parameter.</td>
-		<td></td>
+		    <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: Observation.status, Observation.code, Observation.subject, Observation.effective[x], Observation.value[x], and Observation.dataAbsentReason.</td>
@@ -1499,10 +1495,10 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-		<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+		<td></td>
         </tr>
         <tr>
-            <td rowspan="9">Patient</td>
+            <td rowspan="8">Patient</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
         </tr>
@@ -1512,7 +1508,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		</tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> understand the Patient.link.type code.</td>
-            <td></td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known Patient.identifier.value, Patient.active, and Patient.link.</td>
 		</tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> be aware of the linked Patient's <code>active</code> flag and that inactive patients may have relevant information.</td>
@@ -1520,23 +1516,19 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support Patient.link processing.</td>
-			<td></td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> explain Patient.identifier.</td>
         </tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: Patient.identifier, Patient.gender, Patient.birthDate, and Patient.link.</td>
-            <td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> explain Patient.identifier.</td>
-		</tr>
-		<tr>
-            <td></td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known Patient.identifier.value, Patient.active, and Patient.link.</td>
-		</tr>
-        <tr>
             <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
-        </tr>
+		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
 		<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+        </tr>
+        <tr>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
+            <td></td>
         </tr>
 		<tr>
             <td>Practitioner</td>
@@ -1546,29 +1538,28 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		<tr>
             <td rowspan="2">PractitionerRole</td>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle PractitionerRole.practitioner.</td>
-			<td></td>
+			<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-			<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+			<td></td>
         </tr> 
 	</tbody>
 </table>
 
-##### Additional resource types
+#### Additional resource types
 None.
 
-
-#### International Patient Summary CapabilityStatement additional requirements
+### International Patient Summary CapabilityStatement additional requirements
 
 A system conforming to an AU Core CapabilityStatement aligns with IPS CapabilityStatement but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in IPS CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 
 **Legend:**
 
-<img src="arrow_up.png" width="16"/> **Stronger**: The IPS CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
+<img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The IPS CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
 
 <div class="note-to-contributors">
 Many requirements in the IPS current build (version 2.0.0) have changed since version 2.0.0-ballot, including updated conformance expectations for resources like Bundle, Composition and Patient from <strong>supported</strong> to <strong>SHALL</strong>.
@@ -1582,7 +1573,7 @@ These updates are not reflected in this comparison.
 	</colgroup>     
 	<thead>
         <tr>
-            <th>Resource type</th>
+            <th>AU Core CapabilityStatement requirement</th>
             <th>IPS 2.0.0-ballot Server CapabilityStatement additional requirements</th>
         </tr>
     </thead> 
@@ -1648,7 +1639,7 @@ These updates are not reflected in this comparison.
     </tbody>
 </table>    
 
-##### Additional resource types
+#### Additional resource types
 This version of AU Core has no equivalent CapabilityStatement expectations for the following resource types included in IPS Server CapabilityStatements.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -1694,15 +1685,15 @@ This version of AU Core has no equivalent CapabilityStatement expectations for t
 	</tbody>
 </table>
 
-#### US Core CapabilityStatement additional requirements
+### US Core CapabilityStatement additional requirements
 
 A system conforming to an AU Core CapabilityStatement aligns with US Core CapabilityStatements but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in US Core CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
 **Legend:**
 
-<img src="arrow_up.png" width="16"/> **Stronger**: The US Core CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
+<img src="arrow_up.png" width="16"/> **Stronger**: The Core CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The US Core CapabilityStatement includes a conformance requirement that is NOT present in the maped AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The Core CapabilityStatement includes a conformance requirement that is NOT present in the maped AU Core CapabilityStatement.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -1712,7 +1703,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 	</colgroup>     
 	<thead>
         <tr>
-            <th>CapabilityStatement requirement</th>
+            <th>AU Core CapabilityStatement requirement</th>
             <th>US Core 7.0.0 Client CapabilityStatement additional requirements</th>
 			<th>US Core 7.0.0 Server CapabilityStatement additional requirements</th>
         </tr>
@@ -1721,7 +1712,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 		<tr>
             <td>FHIR resource support</td>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> support fetching and querying of one or more US Core profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement, see additional requirements below.</td>
-		<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support US Core Patient profile and at least one additional resource profile from the list of US Core Profiles and all Must Support US Core Profiles and resources it references, see additional requirements below.</td>
+		<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support US Core Patient profile and at least one additional resource profile from the list of US Core Profiles and all <i>Must Support</i> US Core Profiles and resources it references, see additional requirements below.</td>
         </tr>
 		<tr>
             <td rowspan="8">Security</td>
@@ -1804,7 +1795,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
 		<tr>
             <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support <code>Condition</code> resource.</td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Condition resource.</td>
         </tr>
         <tr>
             <td rowspan="10">DiagnosticReport</td>
@@ -1889,12 +1880,12 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support $docref operation.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support $docref operation.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>$docref</code> operation.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support  <code>$docref</code> operation.</td>
         </tr>        
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> be capable of transacting the $docref operation.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> be capable of responding to a $docref operation.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> be capable of transacting the <code>$docref</code> operation.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> be capable of responding to a <code>$docref</code> operation.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> be capable of receiving at least a reference to a CCD document.</td>
@@ -2040,21 +2031,21 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>  
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> interpret the use of MedicationRequest.requester with Patient or RelatedPerson indicates a self-prescribed medication.</td>
-			<td></td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination.</td>
         </tr>
-		<tr>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination.</td>
-		</tr>
-        <tr>
+         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-        <tr>
+		 <tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
             <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
 		<tr>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination.</td>
+			<td></td>
+		</tr>
+        <tr>
             <td></td>
 			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support MedicationRequest resource.</td>
         </tr>
@@ -2159,17 +2150,17 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>Practitioner.address</code> if the server does not support the PractitionerRole resource.</td>
 		</tr>
 		<tr>
-			<td></td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
 			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> provide implementation-specific guidance for accessing a provider's location and contact information when only the Practitioner resource is supported.</td>
 		</tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
-        </tr>
-		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Practitioner.address.line and Practitioner.address.city formatting.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Practitioner.address.line and Practitioner.address.city formatting.</td>
 		</tr>
+		<tr>
+            <td></td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
 		<tr>
             <td></td>
 			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Practitioner resource.</td>
@@ -2301,7 +2292,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
     </tbody>
 </table>  
   
-##### Additional resource types
+#### Additional resource types
 This version of AU Core has no equivalent CapabilityStatement expectations for the following resource types included in US Core CapabilityStatements.
     
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
