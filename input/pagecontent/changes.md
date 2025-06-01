@@ -15,9 +15,11 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support to Immunization.lotNumber [FHIR-47331](https://jira.hl7.org/browse/FHIR-47331)
 - [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html):
   - added Must Support to MedicationRequest.dosageInstruction.text [FHIR-50101](https://jira.hl7.org/browse/FHIR-50101)
+  - removed duplication of obligation flag added by error to MedicationRequest.medicationReference [FHIR-50800](https://jira.hl7.org/browse/FHIR-50800)
 - [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html):
   - added the new profile, including interaction support and adding the DiagnosticReport resource to AU Core CapabilityStatements [FHIR-45091](https://jira.hl7.org/browse/FHIR-45091), [FHIR-49954](https://jira.hl7.org/browse/FHIR-49954), [FHIR-49955](https://jira.hl7.org/browse/FHIR-49955), [FHIR-49956](https://jira.hl7.org/browse/FHIR-49956), [FHIR-49957](https://jira.hl7.org/browse/FHIR-49957), [FHIR-49958](https://jira.hl7.org/browse/FHIR-49958), [FHIR-49959](https://jira.hl7.org/browse/FHIR-49959).
   - added Must Support to MedicationStatement.dosage.text [FHIR-50101](https://jira.hl7.org/browse/FHIR-50101)
+  - removed duplication of obligation flag added by error to MedicationRequest.medicationReference [FHIR-50800](https://jira.hl7.org/browse/FHIR-50800)
 - [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html): 
   - Added profile-specific implementation guidance to see AU Core Diagnostic Result Observation profile for non imaging or pathology results  [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
 - [AU Core Patient](StructureDefinition-au-core-patient.html): 
