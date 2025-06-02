@@ -151,6 +151,26 @@
       </type>
       <mustSupport value="true"/>
     </element>
+        <element id="AllergyIntolerance.note">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.note"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="AllergyIntolerance.reaction">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">

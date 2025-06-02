@@ -7,6 +7,8 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 - updated AUCDI mapping Date of assertion to be MedicationStatement.dateAsserted [FHIR-49960](https://jira.hl7.org/browse/FHIR-49960).
+- [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html):
+  - added Must Support to AllergyIntolerance.note [FHIR-46940](https://jira.hl7.org/browse/FHIR-46940)
 - [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html): 
   - clarified that this profile is for specialist and other (non imaging or pathology) results, and added profile-specific implementation guidance to see AU Core Pathology Result Observation profile for pathology results [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
 - [AU Core HealthcareService](StructureDefinition-au-core-healthcareservice.html):
