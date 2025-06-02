@@ -1352,11 +1352,10 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		<tr>
             <td rowspan="2">AllergyIntolerance</td>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: AllergyIntolerance.clinicalStatus, AllergyIntolerance.verificationStatus, and AllergyIntolerance.code.</td>
-			<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+			<td rowspan="2"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-		<td></td>
         </tr>
 		<tr>
             <td rowspan="5">Condition</td>
@@ -1748,7 +1747,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> provide Provenance statements using the US Core Provenance Profile.</td>
         </tr>
         <tr>
-            <td rowspan="4">AllergyIntolerance</td>
+            <td rowspan="3">AllergyIntolerance</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core AllergyIntolerance Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core AllergyIntolerance Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -1760,12 +1759,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support <code>AllergyIntolerance</code> resource.</td>
-        </tr>
         <tr>
-            <td rowspan="8">Condition</td>
+            <td rowspan="7">Condition</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support at least one of US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support both US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -1793,12 +1788,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> reference encounter in Condition.encounter when category is "encounter-diagnosis".</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> reference encounter in Condition.encounter when category is "encounter-diagnosis".</td>
         </tr>
-		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Condition resource.</td>
-        </tr>
         <tr>
-            <td rowspan="10">DiagnosticReport</td>
+            <td rowspan="9">DiagnosticReport</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support at least one of US Core DiagnosticReport Profile for Laboratory Results Reporting  or US Core DiagnosticReport Profile for Report and Note Exchange profiles. <img src="plus_sign.png" width="20"/></td>
 		<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DiagnosticReport Profile for Laboratory Results Reporting  and US Core DiagnosticReport Profile for Report and Note Exchange profiles. <img src="plus_sign.png" width="20"/></td>	
         </tr>
@@ -1834,12 +1825,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+code+date</code>, <code>patient+status</code>, and <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+code+date</code>, <code>patient+status</code>, and <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
 		</tr>
-		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support DiagnosticReport resource.</td>
-        </tr>
         <tr>
-            <td rowspan="18">DocumentReference</td>
+            <td rowspan="17">DocumentReference</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile.</td>
         </tr>
@@ -1905,14 +1892,10 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
 		<tr>
             <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support DocumentReference resource.</td>
-        </tr>
-		<tr>
-            <td></td>
 			<td><img src="plus_sign.png" width="20"/> If a <code>period</code> parameter is supplied to the <code>$docref</code> operation, a server <strong>SHOULD</strong> return references to documents within the specified date range; if not supplied, a server <strong>SHALL</strong> return the most recent or current document(s).</td>
         </tr>
         <tr>
-            <td rowspan="9">Encounter</td>
+            <td rowspan="8">Encounter</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -1944,17 +1927,13 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in Encounter.location.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in Encounter.location.</td>
         </tr>
-		<tr>
-			<td></td>
-            <td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Encounter resource.</td>
-        </tr>
 		 <tr>
             <td>HealthcareService</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> interaction.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> interaction.</td>
         </tr>
 		<tr>
-            <td rowspan="5">Immunization</td>
+            <td rowspan="4">Immunization</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Immunization Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Immunization Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -1970,12 +1949,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support NDC vaccine codes as translations to CVX vaccine codes, which are required based on the ONC U.S. Core Data for Interoperability (USCDI) requirements.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support NDC vaccine codes as translations to CVX vaccine codes, which are required based on the ONC U.S. Core Data for Interoperability (USCDI) requirements.</td>
         </tr>
-		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Immunization resource.</td>
-        </tr>
         <tr>
-            <td rowspan="5">Location</td>
+            <td rowspan="4">Location</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Location Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Location Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -1991,12 +1966,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> format Location.address.line and Location.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> format Location.address.line and Location.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0.</td>
         </tr>
-		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Location resource.</td>
-        </tr>
         <tr>
-            <td rowspan="3">Medication</td>
+            <td rowspan="2">Medication</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Medication Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Medication Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -2005,11 +1976,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Medication resource.</td>
-        </tr>
-		<tr>
-            <td rowspan="10">MedicationRequest</td>
+            <td rowspan="9">MedicationRequest</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationRequest Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationRequest Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -2045,12 +2012,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination.</td>
 			<td></td>
 		</tr>
-        <tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support MedicationRequest resource.</td>
-        </tr>
 		<tr>
-            <td rowspan="6">Observation</td>
+            <td rowspan="5">Observation</td>
             <td>A client <strong>SHALL</strong> support at least one Observation, including profiles with <a href="#uscore-additional-requirements">additional requirements</a> and <a href="#uscore-additional-profiles">additional profiles</a>.</td>
 			<td>A client <strong>SHALL</strong> support Observation profiles, including profiles with <a href="#uscore-additional-requirements">additional requirements</a> and <a href="#uscore-additional-profiles">additional profiles</a>.</td>
         </tr>
@@ -2070,12 +2033,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Observation.effectivePeriod for time-based tests.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Observation.effectivePeriod for time-based tests.</td>
 		</tr>
-		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Observation resource.</td>
-        </tr>
         <tr>
-            <td rowspan="7">Organization</td>
+            <td rowspan="6">Organization</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Organization Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Organization Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -2099,12 +2058,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Organization resource.</td>
-        </tr>
         <tr>
-            <td rowspan="8">Patient</td>
+            <td rowspan="7">Patient</td>
           	<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Patient Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Patient Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -2132,12 +2087,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD NOT</strong> use a Social Security Number in Patient.identifier.value.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD NOT</strong> use a Social Security Number in Patient.identifier.value.</td>
 		</tr>	
-		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Patient resource.</td>
-        </tr>
         <tr>
-            <td rowspan="7">Practitioner</td>
+            <td rowspan="6">Practitioner</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Practitioner which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Practitioner which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -2161,12 +2112,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td></td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Practitioner resource.</td>
-        </tr>
         <tr>
-            <td rowspan="6">PractitionerRole</td>
+            <td rowspan="5">PractitionerRole</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core PractitionerRole which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core PractitionerRole which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -2186,12 +2133,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
-		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support PractitionerRole resource.</td>
-        </tr>
         <tr>
-            <td rowspan="8">Procedure</td>
+            <td rowspan="7">Procedure</td>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support all target resource types in Procedure.reasonReference.</td>
 			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of target resource types in Procedure.reasonReference.</td>
         </tr>
@@ -2219,12 +2162,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Procedure resource.</td>
-        </tr>
         <tr>
-            <td rowspan="7">RelatedPerson</td>
+            <td rowspan="6">RelatedPerson</td>
            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -2249,11 +2188,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for RelatedPerson.address.line and RelatedPerson.address.city formatting.</td>
 		</tr>
 		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support RelatedPerson resource.</td>
-        </tr>
-		<tr>
-            <td rowspan="9">Specimen</td>
+            <td rowspan="8">Specimen</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Specimen Profile.</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Specimen Profile.</td>
         </tr>
@@ -2284,10 +2219,6 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
-        </tr>
-		<tr>
-            <td></td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Specimen resource.</td>
         </tr>
     </tbody>
 </table>  
