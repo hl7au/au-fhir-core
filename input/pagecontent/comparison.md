@@ -155,7 +155,7 @@ The table below provides a profile only comparison from AU Core to profiles in k
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
@@ -459,6 +459,12 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         <tr>
             <td style="width: 25%;">Practitioner.address</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core PractitionerRole</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-PractitionerRole-uv-ips.html">PractitionerRole (IPS)</a></td>
+            <td style="width: 25%;">PractitionerRole.code</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
