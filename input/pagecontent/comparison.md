@@ -1323,7 +1323,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
     <tbody>
         <tr>
             <td>FHIR capabilities</td>
-            <td>A slient <strong>SHOULD</strong> specify the patient id when performing searches on other resources.</td>
+            <td>A client <strong>SHOULD</strong> specify the patient id when performing searches on other resources.</td>
             <td></td>
         </tr>
 		<tr>
@@ -1688,11 +1688,14 @@ This version of AU Core has no equivalent CapabilityStatement expectations for t
 
 A system conforming to an AU Core CapabilityStatement aligns with US Core CapabilityStatements but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in US Core CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
+Requirements that apply to servers certified under the 21st Century Cures Act for accessing patient data are excluded from this comparison.
+
+
 **Legend:**
 
-<img src="arrow_up.png" width="16"/> **Stronger**: The Core CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
+<img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The Core CapabilityStatement includes a conformance requirement that is NOT present in the maped AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatement includes a conformance requirement that is NOT present in the maped AU Core CapabilityStatement.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
