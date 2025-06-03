@@ -1368,16 +1368,14 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> correctly process and display clinicalStatus and verificationStatus.</td>
-			<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+			<td rowspan="3"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> continue to function safely when some expected search parameters are not supported.</td>
-			<td></td>
-        </tr>
+		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-		<td></td>
-        </tr>
+		</tr>
 		<tr>
             <td rowspan="8">DocumentReference</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-DocumentReference profile.</td>
@@ -1401,37 +1399,33 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		</tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_id</code>, <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameter combinations.</td>
-           <td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> support for <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters and search parameters combinations.</td>
+           <td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> support <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters and search parameters combinations.</td>
        </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-		<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+		<td rowspan="2"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
         <tr>
-			<td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support the <code>$docref</code> operation.</td>
-			<td></td>	
+			<td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>$docref</code> operation.</td>
         </tr> 
 		<tr>
             <td rowspan="3">Immunization</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
+			<td rowspan="3"><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle Immunization.status, Immunization.vaccineCode, Immunization.patient and Immunization.occurence[x].</td>
-			<td></td>
 		</tr>		
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-			<td></td>
         </tr>
 		<tr>
             <td rowspan="2">Medication</td>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle Medication.code.</td>
-			<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+			<td rowspan="2"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>. </td>
-		<td></td>
         </tr>
 		<tr>
             <td rowspan="6">MedicationRequest</td>
@@ -1469,32 +1463,27 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: MedicationStatement.status, MedicationStatement.medication[x], and MedicationStatement.subject.</td>
-            <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+            <td rowspan="3"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
 		</tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHOULD</strong> handle: MedicationStatement.effective[x], MedicationStatement.dosage, and MedicationStatement.dosage.text.</td>
-			<td></td>
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-		<td></td>
         </tr>
         <tr>
             <td rowspan="4">Observation</td>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> support <code>patient</code> search parameter.</td>
-		    <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+		    <td rowspan="4"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: Observation.status, Observation.code, Observation.subject, Observation.effective[x], Observation.value[x], and Observation.dataAbsentReason.</td>
-			<td></td>
 		</tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHOULD</strong> handle Observation.category.</td>
-		    <td></td>
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-		<td></td>
         </tr>
         <tr>
             <td rowspan="8">Patient</td>
@@ -1523,11 +1512,10 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-		<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+		<td rowspan="2"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
         <tr>
             <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
-            <td></td>
         </tr>
 		<tr>
             <td>Practitioner</td>
@@ -1537,11 +1525,10 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		<tr>
             <td rowspan="2">PractitionerRole</td>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle PractitionerRole.practitioner.</td>
-			<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+			<td rowspan="2"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-			<td></td>
         </tr> 
 	</tbody>
 </table>
@@ -1890,11 +1877,10 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
 			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations.</td>
+            <td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations.</td>
         </tr>
 		<tr>
-            <td></td>
 			<td><img src="plus_sign.png" width="20"/> If a <code>period</code> parameter is supplied to the <code>$docref</code> operation, a server <strong>SHOULD</strong> return references to documents within the specified date range; if not supplied, a server <strong>SHALL</strong> return the most recent or current document(s).</td>
         </tr>
         <tr>
@@ -2009,11 +1995,10 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
         </tr>
 		 <tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
+            <td rowspan="2"><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
 		<tr>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination.</td>
-			<td></td>
 		</tr>
 		<tr>
             <td rowspan="5">Observation</td>
@@ -2108,11 +2093,10 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
 			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> provide implementation-specific guidance for accessing a provider's location and contact information when only the Practitioner resource is supported.</td>
 		</tr>
         <tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Practitioner.address.line and Practitioner.address.city formatting.</td>
+			<td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Practitioner.address.line and Practitioner.address.city formatting.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Practitioner.address.line and Practitioner.address.city formatting.</td>
 		</tr>
 		<tr>
-            <td></td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
