@@ -1464,8 +1464,8 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		   <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
         </tr> 
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> query both `MedicationRequest` and `MedicationStatemen`t when fetching patient Medication information.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known: `MedicationStatement.context` and `MedicationStatement.informationSource`.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known: <code>MedicationStatement.context</code> and <code>MedicationStatement.informationSource</code>.</td>
         </tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: <code>MedicationStatement.status</code>, <code>MedicationStatement.medication[x]</code>, and <code>MedicationStatement.subject</code>.</td>
