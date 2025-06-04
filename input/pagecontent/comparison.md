@@ -1774,8 +1774,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> When `Condition.category` is a "problems-list-item", the <code>Condition.clinicalStatus</code> <strong>SHOULD NOT</strong> be unknown.</td>
-			<td><img src="plus_sign.png" width="20"/> When `Condition.category` is a "problems-list-item", the <code>Condition.clinicalStatus</code> <strong>SHOULD NOT</strong> be unknown.</td>
+            <td><img src="plus_sign.png" width="20"/> When <code>Condition.category</code> is a "problems-list-item", the <code>Condition.clinicalStatus</code> <strong>SHOULD NOT</strong> be unknown.</td>
+			<td><img src="plus_sign.png" width="20"/> When <code>Condition.category</code> is a "problems-list-item", the <code>Condition.clinicalStatus</code> <strong>SHOULD NOT</strong> be unknown.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> reference encounter in <code>Condition.encounter</code> when category is "encounter-diagnosis".</td>
