@@ -191,7 +191,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
     </tbody>
 </table>
 
-### International Patient Access profile additional requirements <a id="ipa-additional-requirements"></a>
+### IPA profile additional requirements <a id="ipa-additional-requirements"></a>
 
 The following IPA profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
@@ -260,7 +260,7 @@ IPA does not include requirements for Suppressed Data.
 This version of AU Core has no equivalent profile for the following IPA profiles:
 - IPA-DocumentReference
 
-### International Patient Summary profile additional requirements <a id="ips-additional-requirements"></a>
+### IPS profile additional requirements <a id="ips-additional-requirements"></a>
 
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
@@ -1302,7 +1302,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
 </table>
 
 
-### International Patient Access CapabilityStatement additional requirements
+### IPA CapabilityStatement additional requirements
 
 A system conforming to an AU Core CapabilityStatement aligns with IPA CapabilityStatements but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in IPA CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
@@ -1357,7 +1357,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
             <td rowspan="2">AllergyIntolerance</td>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: AllergyIntolerance.clinicalStatus, AllergyIntolerance.verificationStatus, and AllergyIntolerance.code.</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: <code>AllergyIntolerance.clinicalStatus</code>, <code>AllergyIntolerance.verificationStatus</code>, and <code>AllergyIntolerance.code</code>.</td>
 			<td rowspan="2"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
@@ -1365,15 +1365,15 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
             <td rowspan="5">Condition</td>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: Condition.clinicalStatus, Condition.verificationStatus, and Condition.code.</td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHOULD</strong> populate Condition.code.coding.display and/or Condition.code.text.</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: <code>Condition.clinicalStatus</code>, <code>Condition.verificationStatus</code>, and <code>Condition.code</code>.</td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHOULD</strong> populate: <code>Condition.code.coding.display</code> and/or <code>Condition.code.text</code>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL NOT</strong> treat all Condition resources as entries in the current problem list.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> avoid leaving clinicalStatus and verificationStatus missing.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> avoid leaving <code>Condition.clinicalStatus</code> and <code>Condition.verificationStatus</code> missing.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> correctly process and display clinicalStatus and verificationStatus.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> correctly process and display <code>Condition.clinicalStatus</code> and <code>Condition.verificationStatus</code>.</td>
 			<td rowspan="3"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
@@ -1396,11 +1396,11 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>,<code>patient+category</code>, <code>patient+category+date</code>, and <code>patient+type</code> search parameters and search parameter combinations.</td> 
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> handle: DocumentReference.status, DocumentReference.type, DocumentReference.subject, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.attachment.contentType, DocumentReference.content.attachment.data, DocumentReference.content.attachment.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period.</td>
-		<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known: DocumentReference.status, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.date, DocumentReference.author, DocumentReference.content, DocumentReference.content.attachment, DocumentReference.content.attachment.contentType, DocumentReference.content.attachment.data, DocumentReference.content.attachment.url, DocumentReference.format, DocumentReference.context, DocumentReference.context.encounter, and DocumentReference.context.period.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> handle: <code>DocumentReference.status</code>, <code>DocumentReference.type</code>, <code>DocumentReference.subject</code>, <code>DocumentReference.content</code>, <code>DocumentReference.content.attachment</code>, <code>DocumentReference.content.attachment.contentType</code>, <code>DocumentReference.content.attachment.data</code>, <code>DocumentReference.content.attachment.url</code>, <code>DocumentReference.format</code>, <code>DocumentReference.context</code>, <code>DocumentReference.context.encounter</code>, and <code>DocumentReference.context.period</code>.</td>
+		<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known: <code>DocumentReference.status</code>, <code>DocumentReference.type</code>, `DocumentReference.category`, <code>DocumentReference.subject</code>, `DocumentReference.date`, `DocumentReference.author`, <code>DocumentReference.content</code>, <code>DocumentReference.content.attachment</code>, <code>DocumentReference.content.attachment.contentType</code>, <code>DocumentReference.content.attachment.data</code>, <code>DocumentReference.content.attachment.url</code>, <code>DocumentReference.format</code>, <code>DocumentReference.context</code>, <code>DocumentReference.context.encounter</code>, and <code>DocumentReference.context.period</code>.</td>
 		</tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> handle DocumentReference.category and DocumentReference.author.</td>
+			<td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> handle: <code>DocumentReference.category</code> and <code>DocumentReference.author</code>.</td>
            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>$docref</code> operation.</td>
 		</tr>
         <tr>
@@ -1420,14 +1420,14 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 			<td rowspan="3"><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
         </tr>
 		<tr>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle Immunization.status, Immunization.vaccineCode, Immunization.patient and Immunization.occurence[x].</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: <code>Immunization.status</code>, <code>Immunization.vaccineCode</code>, <code>Immunization.patient</code> and <code>Immunization.occurence[x]</code>.</td>
 		</tr>		
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
             <td rowspan="2">Medication</td>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle Medication.code.</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle <code>Medication.code</code>.</td>
 			<td rowspan="2"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
@@ -1443,12 +1443,12 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
             <td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> use codings at the level of a clinical drug.</td>
         </tr>
 		<tr>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: MedicationRequest.status, MedicationRequest.doNotPerform, MedicationRequest.medication[x], MedicationRequest.subject, MedicationRequest.requester, MedicationRequest.dosageInstruction, and MedicationRequest.dosageInstruction.text.</td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> populate MedicationRequest.doNotPerform.</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: <code>MedicationRequest.status</code>, <code>MedicationRequest.doNotPerform</code>, <code>MedicationRequest.medication[x]</code>, <code>MedicationRequest.subject</code>, <code>MedicationRequest.requester</code>, <code>MedicationRequest.dosageInstruction</code>, and <code>MedicationRequest.dosageInstruction.text</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> populate <code>MedicationRequest.doNotPerform</code>.</td>
 		</tr>
 		<tr>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHOULD</strong> handle MedicationRequest.reported[x].</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known MedicationRequest.reported[x].</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHOULD</strong> handle <code>MedicationRequest.reported[x]</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known <code>MedicationRequest.reported[x]</code>.</td>
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>category</code> and <code>code</code> search parameters.</td>
@@ -1464,15 +1464,15 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		   <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
         </tr> 
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known: MedicationStatement.context and MedicationStatement.informationSource.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> query both `MedicationRequest` and `MedicationStatemen`t when fetching patient Medication information.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known: `MedicationStatement.context` and `MedicationStatement.informationSource`.</td>
         </tr>
 		<tr>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: MedicationStatement.status, MedicationStatement.medication[x], and MedicationStatement.subject.</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: <code>MedicationStatement.status</code>, <code>MedicationStatement.medication[x]</code>, and <code>MedicationStatement.subject</code>.</td>
             <td rowspan="3"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
 		</tr>
 		<tr>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHOULD</strong> handle: MedicationStatement.effective[x], MedicationStatement.dosage, and MedicationStatement.dosage.text.</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHOULD</strong> handle: <code>MedicationStatement.effective[x]</code>, <code>MedicationStatement.dosage</code>, and <code>MedicationStatement.dosage.text</code>.</td>
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
@@ -1483,10 +1483,10 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 		    <td rowspan="4"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: Observation.status, Observation.code, Observation.subject, Observation.effective[x], Observation.value[x], and Observation.dataAbsentReason.</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: <code>Observation.status</code>, <code>Observation.code</code>, <code>Observation.subject</code>, <code>Observation.effective[x]</code>, <code>Observation.value[x]</code>, and <code>Observation.dataAbsentReason</code>.</td>
 		</tr>
 		<tr>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHOULD</strong> handle Observation.category.</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHOULD</strong> handle <code>Observation.category</code>.</td>
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
@@ -1497,23 +1497,23 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> be able to follow Patient.link(s) to other Patient resources and understand direction of the link.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> use Patient.link cross-link multiple Patient resources for the same person in search Bundles.</td>
+			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> be able to follow <code>Patient.link</code> to other Patient resources and understand direction of the link.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> use <code>Patient.link</code> cross-link multiple Patient resources for the same person in search Bundles.</td>
 		</tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> understand the Patient.link.type code.</td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known Patient.identifier.value, Patient.active, and Patient.link.</td>
+			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> understand the <code>Patient.link.type</code> code.</td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known <code>Patient.identifier.value</code>, <code>Patient.active</code>, and <code>Patient.link</code>.</td>
 		</tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> be aware of the linked Patient's <code>active</code> flag and that inactive patients may have relevant information.</td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> have no more than one Patient.active = true for the same patient on the server.</td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> have no more than one Patient with a status of active = "true" for the same patient on the server.</td>
 		</tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support Patient.link processing.</td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> explain Patient.identifier.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support <code>Patient.link</code> processing.</td>
+			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> explain <code>Patient.identifier</code>.</td>
         </tr>
 		<tr>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: Patient.identifier, Patient.gender, Patient.birthDate, and Patient.link.</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: <code>Patient.identifier</code>, <code>Patient.gender</code>, <code>Patient.birthDate</code>, and <code>Patient.link</code>.</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>given</code>, <code>birthdate</code>, and <code>gender</code> search parameters.</td>
 		</tr>
 		<tr>
@@ -1530,7 +1530,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
             <td rowspan="2">PractitionerRole</td>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle PractitionerRole.practitioner.</td>
+            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle <code>PractitionerRole.practitioner</code>.</td>
 			<td rowspan="2"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
 		<tr>
@@ -1542,7 +1542,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 #### Additional resource types
 None.
 
-### International Patient Summary CapabilityStatement additional requirements
+### IPS CapabilityStatement additional requirements
 
 A system conforming to an AU Core CapabilityStatement aligns with IPS CapabilityStatement but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in IPS CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
@@ -1681,9 +1681,6 @@ This version of AU Core has no equivalent CapabilityStatement expectations for t
 
 A system conforming to an AU Core CapabilityStatement aligns with US Core CapabilityStatements but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in US Core CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
-Requirements that apply to servers certified under the 21st Century Cures Act for accessing patient data are excluded from this comparison.
-
-
 **Legend:**
 
 <img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
@@ -1700,7 +1697,7 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
         <tr>
             <th>AU Core CapabilityStatement requirement</th>
             <th>US Core 7.0.0 Client CapabilityStatement additional requirements</th>
-			<th>US Core 7.0.0 Server CapabilityStatement additional requirements</th>
+			<th>US Core 7.0.0 Server CapabilityStatement additional requirements<sup>2</sup></th>
         </tr>
     </thead>
     <tbody>
@@ -1761,8 +1758,8 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support both US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support assertedDate Extension, Condition.onsetDateTime, or Condition.recordedDate elements.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Condition.recordedDate elements and at least one of the assertedDate Extension and Condition.onsetDateTime</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>assertedDate Extension</code>, <code>Condition.onsetDateTime</code>, or <code>Condition.recordedDate</code> elements.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>Condition.recordedDate</code> elements and at least one of the <code>assertedDate Extension</code> and <code>Condition.onsetDateTime</code>.</td>
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
@@ -1777,12 +1774,12 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> When Condition.category is a "problems-list-item", the Condition.clinicalStatus <strong>SHOULD NOT</strong> be unknown.</td>
-			<td><img src="plus_sign.png" width="20"/> When Condition.category is a "problems-list-item", the Condition.clinicalStatus <strong>SHOULD NOT</strong> be unknown.</td>
+            <td><img src="plus_sign.png" width="20"/> When `Condition.category` is a "problems-list-item", the <code>Condition.clinicalStatus</code> <strong>SHOULD NOT</strong> be unknown.</td>
+			<td><img src="plus_sign.png" width="20"/> When `Condition.category` is a "problems-list-item", the <code>Condition.clinicalStatus</code> <strong>SHOULD NOT</strong> be unknown.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> reference encounter in Condition.encounter when category is "encounter-diagnosis".</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> reference encounter in Condition.encounter when category is "encounter-diagnosis".</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> reference encounter in <code>Condition.encounter</code> when category is "encounter-diagnosis".</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> reference encounter in <code>Condition.encounter</code> when category is "encounter-diagnosis".</td>
         </tr>
         <tr>
             <td rowspan="9">DiagnosticReport</td>
@@ -1899,8 +1896,8 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code> search parameter.</td>
 		</tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support both Encounter.location.location and Encounter.serviceProvider.</td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of Encounter.location.location and Encounter.serviceProvider.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support both <code>Encounter.location.location</code> and <code>Encounter.serviceProvider</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of <code>Encounter.location.location</code> and <code>Encounter.serviceProvider</code>.</td>
 		</tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>identifier</code>, <code>patient+type</code>, <code>patient+_lastUpdated</code>, and <code>patient+discharge-disposition</code> search parameters and search parameter combinations.</td>
@@ -1915,12 +1912,12 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td> <img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform to US Core Observation profile if Encounter.reasonReference points to an Observation.</td>
-			<td> <img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform to US Core Observation profile if Encounter.reasonReference points to an Observation.</td>
+            <td> <img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform to US Core Observation profile if <code>Encounter.reasonReference</code> points to an Observation.</td>
+			<td> <img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform to US Core Observation profile if <code>Encounter.reasonReference</code> points to an Observation.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in Encounter.location.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in Encounter.location.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in <code>Encounter.location</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in <code>Encounter.location</code>.</td>
         </tr>
 		 <tr>
             <td>HealthcareService</td>
@@ -1958,8 +1955,8 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> format Location.address.line and Location.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> format Location.address.line and Location.address.city according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> format <code>Location.address.line</code> and <code>Location.address.city</code> according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> format <code>Location.address.line</code> and <code>Location.address.city</code> according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0.</td>
         </tr>
         <tr>
             <td rowspan="2">Medication</td>
@@ -1980,19 +1977,19 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations.</td>
 		</tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support both MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of MedicationRequest.reportedBoolean and MedicationRequest.reportedReference.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support both <code>MedicationRequest.reportedBoolean</code> and <code>MedicationRequest.reportedReference</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of <code>MedicationRequest.reportedBoolean</code> and <code>MedicationRequest.reportedReference</code>.</td>
         </tr> 
         <tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support all target resource types for MedicationRequest.reasonReference.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one target resource type in MedicationRequest.reasonReference.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support all target resource types for <code>MedicationRequest.reasonReference</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one target resource type in <code>MedicationRequest.reasonReference</code>.</td>
         </tr>  
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform referenced resources in MedicationRequest.reasonReference to appropriate US Core profiles.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform referenced resources in MedicationRequest.reasonReference to appropriate US Core profiles.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform referenced resources in <code>MedicationRequest.reasonReference</code> to appropriate US Core profiles.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform referenced resources in <code>MedicationRequest.reasonReference</code> to appropriate US Core profiles.</td>
         </tr>  
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> interpret the use of MedicationRequest.requester with Patient or RelatedPerson indicates a self-prescribed medication.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> interpret the use of <code>MedicationRequest.requester</code> with Patient or RelatedPerson indicates a self-prescribed medication.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination.</td>
         </tr>
          <tr>
@@ -2024,8 +2021,8 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Observation.effectivePeriod for time-based tests.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Observation.effectivePeriod for time-based tests.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>Observation.effectivePeriod</code> for time-based tests.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>Observation.effectivePeriod</code> for time-based tests.</td>
 		</tr>
         <tr>
             <td rowspan="6">Organization</td>
@@ -2070,16 +2067,16 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
             <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least Patient.deceasedDateTime if supporting Patient.deceased[x].</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least Patient.deceasedDateTime if supporting Patient.deceased[x].</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least <code>Patient.deceasedDateTime</code> if supporting <code>Patient.deceased[x]</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least <code>Patient.deceasedDateTime</code> if supporting <code>Patient.deceased[x]</code>.</td>
 		</tr>	
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> (certifying systems)/ <strong>SHALL</strong> (non-certifying systems) follow the Project US@ Technical Specification for Patient.address.line and Patient.address.city formatting.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> (certifying systems)/ <strong>SHALL</strong> (non-certifying systems) follow the Project US@ Technical Specification for Patient.address.line and Patient.address.city formatting.</td>
 		</tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD NOT</strong> use a Social Security Number in Patient.identifier.value.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD NOT</strong> use a Social Security Number in Patient.identifier.value.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD NOT</strong> use a Social Security Number in <code>Patient.identifier.value</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD NOT</strong> use a Social Security Number in <code>Patient.identifier.value</code>.</td>
 		</tr>	
         <tr>
             <td rowspan="6">Practitioner</td>
@@ -2099,8 +2096,8 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
 			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> provide implementation-specific guidance for accessing a provider's location and contact information when only the Practitioner resource is supported.</td>
 		</tr>
         <tr>
-			<td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Practitioner.address.line and Practitioner.address.city formatting.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Practitioner.address.line and Practitioner.address.city formatting.</td>
+			<td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for <code>Practitioner.address.line</code> and <code>Practitioner.address.city</code> formatting.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for <code>Practitioner.address.line</code> and <code>Practitioner.address.city</code> formatting.</td>
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
@@ -2128,16 +2125,16 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
         </tr>
         <tr>
             <td rowspan="7">Procedure</td>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support all target resource types in Procedure.reasonReference.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of target resource types in Procedure.reasonReference.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support all target resource types in <code>Procedure.reasonReference</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of target resource types in <code>Procedure.reasonReference</code>.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> ensure that referenced resources in Procedure.reasonReference conform to US Core profiles</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> ensure that referenced resources in Procedure.reasonReference conform to US Core profiles.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> ensure that referenced resources in <code>Procedure.reasonReference</code> conform to US Core profiles</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> ensure that referenced resources in <code>Procedure.reasonReference</code> conform to US Core profiles.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both the US Core Procedure and US Core ServiceRequest profiles for communicating the reason for referral or consultation via Procedure.basedOn.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both the US Core Procedure and US Core ServiceRequest profiles for communicating the reason for referral or consultation via Procedure.basedOn.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both the US Core Procedure and US Core ServiceRequest profiles for communicating the reason for referral or consultation via <code>Procedure.basedOn</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both the US Core Procedure and US Core ServiceRequest profiles for communicating the reason for referral or consultation via <code>Procedure.basedOn</code>.</td>
 		</tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use <code>Procedure.focalDevice</code> with reference to the US Core Implantable Device Profile when applicable.</td>
@@ -2177,11 +2174,11 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
 			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>name</code> search parameter.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for RelatedPerson.address.line and RelatedPerson.address.city formatting.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for RelatedPerson.address.line and RelatedPerson.address.city formatting.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for <code>RelatedPerson.address.line</code> and <code>RelatedPerson.address.city</code> formatting.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for <code>RelatedPerson.address.line</code> and <code>RelatedPerson.address.city</code> formatting.</td>
 		</tr>
 		<tr>
-            <td rowspan="8">Specimen</td>
+            <td rowspan="7">Specimen</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Specimen Profile.</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Specimen Profile.</td>
         </tr>
@@ -2190,8 +2187,8 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
 			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> be capable of returning a Specimen resource using: <code>GET [base]/Specimen/[id]</code>.</td>
 		</tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support both Specimen.identifier and Specimen.accessionIdentifier.</td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of Specimen.identifier and Specimen.accessionIdentifier.</td>
+            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support both <code>Specimen.identifier</code> and <code>Specimen.accessionIdentifier</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of <code>Specimen.identifier</code> and <code>Specimen.accessionIdentifier</code>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support the <code>_id</code> search parameter.</td>
@@ -2202,20 +2199,18 @@ Requirements that apply to servers certified under the 21st Century Cures Act fo
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>resolves</code> reference policy.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code>, <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code>, <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient</code> search parameter.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient</code> search parameter.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
     </tbody>
 </table>  
-  
+
+*<sup>2</sup>Servers certified under the 21st Century Cures Act for accessing patient data apply additional requirements including requirements to support ALL resources with the conformance expectation SHALL. These additional requirements are excluded from comparison.*
+
 #### Additional resource types
 This version of AU Core has no equivalent CapabilityStatement expectations for the following resource types included in US Core CapabilityStatements.
     
