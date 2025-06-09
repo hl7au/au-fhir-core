@@ -22,10 +22,19 @@ This change log documents the significant updates and resolutions implemented fr
   - added the new profile, including interaction support and adding the DiagnosticReport resource to AU Core CapabilityStatements [FHIR-45091](https://jira.hl7.org/browse/FHIR-45091), [FHIR-49954](https://jira.hl7.org/browse/FHIR-49954), [FHIR-49955](https://jira.hl7.org/browse/FHIR-49955), [FHIR-49956](https://jira.hl7.org/browse/FHIR-49956), [FHIR-49957](https://jira.hl7.org/browse/FHIR-49957), [FHIR-49958](https://jira.hl7.org/browse/FHIR-49958), [FHIR-49959](https://jira.hl7.org/browse/FHIR-49959).
   - added Must Support to MedicationStatement.dosage.text [FHIR-50101](https://jira.hl7.org/browse/FHIR-50101)
   - removed duplication of obligation flag added by error to MedicationRequest.medicationReference [FHIR-50800](https://jira.hl7.org/browse/FHIR-50800)
+- [AU Core Organization](StructureDefinition-au-core-organization.html): 
+  - added _Must Support_ on Organization.telecom.system [FHIR-51042](https://jira.hl7.org/browse/FHIR-51042)
+  - added _Must Support_ on Organization.telecom.value [FHIR-51042](https://jira.hl7.org/browse/FHIR-51042)
 - [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html): 
   - Added profile-specific implementation guidance to see AU Core Diagnostic Result Observation profile for non imaging or pathology results  [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
 - [AU Core Patient](StructureDefinition-au-core-patient.html): 
   - removed the cardinality constraint on AU Medicare Card Number identifier, changing it from 0..1 to 0..*  [FHIR-46268](https://jira.hl7.org/browse/FHIR-46268).
+  - added _Must Support_ on Patient.telecom.system [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
+  - added _Must Support_ on Patient.telecom.value [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
+  - added _Must Support_ on Patient.telecom.use [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
+- [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html): 
+  - added _Must Support_ on PractitionerRole.telecom.system [FHIR-51034](https://jira.hl7.org/browse/FHIR-51034)
+  - added _Must Support_ on PractitionerRole.telecom.value [FHIR-51034](https://jira.hl7.org/browse/FHIR-51034)
 - [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html):
   - added the new profile, including interaction support and replacing references to AU Base Related Person with AU Core RelatedPerson [FHIR-49745](https://jira.hl7.org/browse/FHIR-49745), [FHIR-49746](https://jira.hl7.org/browse/FHIR-49746), [FHIR-44600](https://jira.hl7.org/browse/FHIR-44600), [FHIR-49747](https://jira.hl7.org/browse/FHIR-49747).
 
