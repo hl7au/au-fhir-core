@@ -718,14 +718,10 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
-            <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td>
+            <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
+            <td rowspan="8" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td>
             <td style="width: 25%;">Organization.active</td>
             <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Organization.telecom.system</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.telecom.system</td>
@@ -816,19 +812,19 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Patient.telecom.line</td>
+            <td style="width: 25%;">Patient.address.line</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Patient.telecom.city</td>
+            <td style="width: 25%;">Patient.address.city</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Patient.telecom.state</td>
+            <td style="width: 25%;">Patient.address.state</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Patient.telecom.postalCode</td>
+            <td style="width: 25%;">Patient.address.postalCode</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
