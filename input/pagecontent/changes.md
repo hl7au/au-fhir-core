@@ -1,9 +1,26 @@
-###  Release TBD
+###  Release 2.0.0-draft
 - Publication date: TBD
-- Publication status: TBD
+- Publication status: Draft
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to TBD.
+This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to 2.0.0-draft.
+
+#### Changes from AU Base inherited from [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/index.html)
+Note: The breaking change listed below applies to an element that is not flagged as *Must Support* in AU Core. Other inherited changes may affect elements that are *Must Support*.
+
+##### Breaking changes
+- [AU Base HealthcareService](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-healthcareservice.html)
+  - Added HealthcareService.communication binding to Common Languages in Australia (extensible) (<a href="https://jira.hl7.org/browse/FHIR-46322">FHIR-46322</a>)
+
+##### Other inherited changes
+- [AU Base Encounter](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-encounter.html)
+  - Changed Encounter.reasonCode binding to Reason for Encounter (preferred) (<a href="https://jira.hl7.org/browse/FHIR-50996">FHIR-50996</a>)
+- [AU Base Immunization](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-immunization.html)
+  - Immunization.extension changed to add Vaccine Vial Serial Number  (<a href="https://jira.hl7.org/browse/FHIR-46317">FHIR-46317</a>)
+- [AU Base Pathology Result](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-pathologyresult.html)
+  - Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>)
+- [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html):
+  - Added AU Patient Internal Identifier to the Patient.identifier list of allowed types (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)
 
 #### Changes in this version
 - updated AUCDI mapping Date of assertion to be MedicationStatement.dateAsserted [FHIR-49960](https://jira.hl7.org/browse/FHIR-49960).
