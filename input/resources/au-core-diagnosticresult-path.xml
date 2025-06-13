@@ -203,7 +203,6 @@
         </extension>
       </extension>
       <path value="Observation.effective[x]"/>
-      <short value="Time of specimen collection"/>
       <condition value="au-core-obs-02"/>
       <constraint>
         <key value="au-core-obs-02"/>
