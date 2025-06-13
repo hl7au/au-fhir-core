@@ -43,6 +43,9 @@ Note: The breaking change listed below applies to an element that is not flagged
   - Added profile-specific implementation guidance to see AU Core Diagnostic Result Observation profile for non imaging or pathology results  [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
 - [AU Core Patient](StructureDefinition-au-core-patient.html): 
   - removed the cardinality constraint on AU Medicare Card Number identifier, changing it from 0..1 to 0..*  [FHIR-46268](https://jira.hl7.org/browse/FHIR-46268).
+  - added Must Support on Patient.telecom.system [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
+  - added Must Support on Patient.telecom.value [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
+  - added Must Support on Patient.telecom.use [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
 - [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html):
   - added the new profile, including interaction support and replacing references to AU Base Related Person with AU Core RelatedPerson [FHIR-49745](https://jira.hl7.org/browse/FHIR-49745), [FHIR-49746](https://jira.hl7.org/browse/FHIR-49746), [FHIR-44600](https://jira.hl7.org/browse/FHIR-44600), [FHIR-49747](https://jira.hl7.org/browse/FHIR-49747).
 
