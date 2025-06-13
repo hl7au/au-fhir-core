@@ -12,7 +12,7 @@ This change log documents the significant updates and resolutions implemented fr
 - [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html): 
   - clarified that this profile is for specialist and other (non imaging or pathology) results, and added profile-specific implementation guidance to see AU Core Pathology Result Observation profile for pathology results [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
 - [AU Core Encounter](StructureDefinition-au-core-encounter.html)
-  - changed Encounter.reasonCode binding to Reason for Encounter (preferred) [FHIR-50996](https://jira.hl7.org/browse/FHIR-50996)
+  - changed Encounter.reasonCode binding to Reason for Encounter (preferred) [AU Base: FHIR-50996](https://jira.hl7.org/browse/FHIR-50996)
 - [AU Core HealthcareService](StructureDefinition-au-core-healthcareservice.html):
   - added new profile, including interaction support to the AU Core CapabilityStatements [FHIR-49934](https://jira.hl7.org/browse/FHIR-49934), [FHIR-50406](https://jira.hl7.org/browse/FHIR-50406), [FHIR-50405](https://jira.hl7.org/browse/FHIR-50405), [AU Base: FHIR-46322](https://jira.hl7.org/browse/FHIR-46322).
 - [AU Core Immunization](StructureDefinition-au-core-immunization.html):
