@@ -77,6 +77,22 @@
       <mustSupport value="true"/>
     </element>
     <element id="Observation.category:socialHistory">
+    <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
       <path value="Observation.category"/>
       <sliceName value="socialHistory"/>
       <min value="1"/>
@@ -87,6 +103,7 @@
           <code value="social-history"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
