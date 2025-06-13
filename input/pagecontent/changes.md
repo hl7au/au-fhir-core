@@ -5,33 +5,19 @@
 
 This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to TBD.
 
-#### Changes from AU Base inherited from [AU Base CI Build](https://build.fhir.org/ig/hl7au/au-fhir-base/index.html)
-Note: The breaking change listed below applies to an element that is not flagged as *Must Support* in AU Core. Other inherited changes may affect elements that are *Must Support*.
-
-##### Breaking changes
-- [AU Base HealthcareService](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-healthcareservice.html)
-  - Added HealthcareService.communication binding to Common Languages in Australia (extensible) (<a href="https://jira.hl7.org/browse/FHIR-46322">FHIR-46322</a>)
-
-##### Other inherited changes
-- [AU Base Encounter](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-encounter.html)
-  - Changed Encounter.reasonCode binding to Reason for Encounter (preferred) (<a href="https://jira.hl7.org/browse/FHIR-50996">FHIR-50996</a>)
-- [AU Base Immunization](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-immunization.html)
-  - Immunization.extension changed to add Vaccine Vial Serial Number  (<a href="https://jira.hl7.org/browse/FHIR-46317">FHIR-46317</a>)
-- [AU Base Pathology Result](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-pathologyresult.html)
-  - Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>)
-- [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html):
-  - Added AU Patient Internal Identifier to the Patient.identifier list of allowed types (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)
-
 #### Changes in this version
 - updated AUCDI mapping Date of assertion to be MedicationStatement.dateAsserted [FHIR-49960](https://jira.hl7.org/browse/FHIR-49960).
 - [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html):
   - added Must Support to AllergyIntolerance.note [FHIR-46940](https://jira.hl7.org/browse/FHIR-46940)
 - [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html): 
   - clarified that this profile is for specialist and other (non imaging or pathology) results, and added profile-specific implementation guidance to see AU Core Pathology Result Observation profile for pathology results [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
+- [AU Core Encounter](StructureDefinition-au-core-encounter.html)
+  - changed Encounter.reasonCode binding to Reason for Encounter (preferred) [FHIR-50996](https://jira.hl7.org/browse/FHIR-50996)
 - [AU Core HealthcareService](StructureDefinition-au-core-healthcareservice.html):
-  - added new profile, including interaction support to the AU Core CapabilityStatements [FHIR-49934](https://jira.hl7.org/browse/FHIR-49934), [FHIR-50406](https://jira.hl7.org/browse/FHIR-50406), [FHIR-50405](https://jira.hl7.org/browse/FHIR-50405).
+  - added new profile, including interaction support to the AU Core CapabilityStatements [FHIR-49934](https://jira.hl7.org/browse/FHIR-49934), [FHIR-50406](https://jira.hl7.org/browse/FHIR-50406), [FHIR-50405](https://jira.hl7.org/browse/FHIR-50405), [FHIR-46322](https://jira.hl7.org/browse/FHIR-46322).
 - [AU Core Immunization](StructureDefinition-au-core-immunization.html):
   - added Must Support to Immunization.lotNumber [FHIR-47331](https://jira.hl7.org/browse/FHIR-47331)
+  - changed Immunization.extension to add Vaccine Vial Serial Number (not marked as *Must Support*) [FHIR-46317](https://jira.hl7.org/browse/FHIR-46317)
 - [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html):
   - added Must Support to MedicationRequest.dosageInstruction.text [FHIR-50101](https://jira.hl7.org/browse/FHIR-50101)
   - removed duplication of obligation flag added by error to MedicationRequest.medicationReference [FHIR-50800](https://jira.hl7.org/browse/FHIR-50800)
@@ -40,9 +26,11 @@ Note: The breaking change listed below applies to an element that is not flagged
   - added Must Support to MedicationStatement.dosage.text [FHIR-50101](https://jira.hl7.org/browse/FHIR-50101)
   - removed duplication of obligation flag added by error to MedicationRequest.medicationReference [FHIR-50800](https://jira.hl7.org/browse/FHIR-50800)
 - [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html): 
-  - Added profile-specific implementation guidance to see AU Core Diagnostic Result Observation profile for non imaging or pathology results  [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
+  - added profile-specific implementation guidance to see AU Core Diagnostic Result Observation profile for non imaging or pathology results  [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889)
+  - changed Observation.effective[x] type to remove type constraint [FHIR-49189](https://jira.hl7.org/browse/FHIR-49189)
 - [AU Core Patient](StructureDefinition-au-core-patient.html): 
-  - removed the cardinality constraint on AU Medicare Card Number identifier, changing it from 0..1 to 0..*  [FHIR-46268](https://jira.hl7.org/browse/FHIR-46268).
+  - removed the cardinality constraint on AU Medicare Card Number identifier, changing it from 0..1 to 0..*  [FHIR-46268](https://jira.hl7.org/browse/FHIR-46268)
+  - added AU Patient Internal Identifier to the Patient.identifier list of allowed types [FHIR-48671](https://jira.hl7.org/browse/FHIR-48671)
 - [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html):
   - added the new profile, including interaction support and replacing references to AU Base Related Person with AU Core RelatedPerson [FHIR-49745](https://jira.hl7.org/browse/FHIR-49745), [FHIR-49746](https://jira.hl7.org/browse/FHIR-49746), [FHIR-44600](https://jira.hl7.org/browse/FHIR-44600), [FHIR-49747](https://jira.hl7.org/browse/FHIR-49747).
 
