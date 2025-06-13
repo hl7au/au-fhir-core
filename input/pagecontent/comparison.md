@@ -792,19 +792,19 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">US Core requires all telecom to have system and value.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Patient.telecom.line</td>
+            <td style="width: 25%;">Patient.address.line</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Patient.telecom.city</td>
+            <td style="width: 25%;">Patient.address.city</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Patient.telecom.state</td>
+            <td style="width: 25%;">Patient.address.state</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Patient.telecom.postalCode</td>
+            <td style="width: 25%;">Patient.address.postalCode</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
