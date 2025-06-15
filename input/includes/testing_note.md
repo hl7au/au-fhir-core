@@ -2,7 +2,7 @@
 
 #### AU Core 2.0.0-draft draft for testing 
 
-This July 2025 draft snapshot supports testing of AU Core prior to Ballot of AU Core R2.
+This June 2025 draft snapshot supports testing of AU Core prior to Ballot of AU Core R2.
 
 Testing plays a crucial role in the development of AU Core. It helps to build an AU Core that is aligned with its intended purpose and is practical, and responsive to the diverse needs of various stakeholders.  
 
