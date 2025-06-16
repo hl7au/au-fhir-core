@@ -60,7 +60,7 @@ Column attribute descriptions are as follows:
 |[Immunization Status Codes](https://hl7.org/fhir/R4/valueset-immunization-status.html)|[AU Core Immunization](StructureDefinition-au-core-immunization.html)|FHIR|
 |[Indicator of Hypersensitivity or Intolerance to Substance](https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2)|[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)|NCTS|
 |[Individual Healthcare Identifier Record Status](https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1)|[AU Core Patient](StructureDefinition-au-core-patient.html)|NCTS|
-|[Individual Healthcare Identifier Status](https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1)|[AU Core Patient](StructureDefinition-au-ps-patient.html)|NCTS|
+|[Individual Healthcare Identifier Status](https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1)|[AU Core Patient](StructureDefinition-au-core-patient.html)|NCTS|
 |[Location Type (Physical) - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-location-physical-type-extended.html)|[AU Core Location](StructureDefinition-au-core-location.html)|AU Base|
 |[Medication Reason Taken](https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1)|[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|NCTS|
 |[Medication request intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html)|[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|FHIR|
