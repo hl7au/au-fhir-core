@@ -38,7 +38,7 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support on Patient.telecom.use [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
 - [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html):
   - added the new profile, including interaction support and replacing references to AU Base Related Person with AU Core RelatedPerson [FHIR-49745](https://jira.hl7.org/browse/FHIR-49745), [FHIR-49746](https://jira.hl7.org/browse/FHIR-49746), [FHIR-44600](https://jira.hl7.org/browse/FHIR-44600), [FHIR-49747](https://jira.hl7.org/browse/FHIR-49747).
-- [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus-path.html): 
+- [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html): 
   - applied technical correction to add Must Support and obligation flag to slice socialHistory on Observation.category to align with Must Support on the sliced element [FHIR-51083](https://jira.hl7.org/browse/FHIR-51083) 
 
 ### Release 1.0.0
