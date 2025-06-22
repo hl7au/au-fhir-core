@@ -7,26 +7,39 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 - updated AUCDI mapping Date of assertion to be MedicationStatement.dateAsserted [FHIR-49960](https://jira.hl7.org/browse/FHIR-49960).
+- [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html):
+  - added Must Support to AllergyIntolerance.note [FHIR-46940](https://jira.hl7.org/browse/FHIR-46940)
 - [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html): 
   - clarified that this profile is for specialist and other (non imaging or pathology) results, and added profile-specific implementation guidance to see AU Core Pathology Result Observation profile for pathology results [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
+- [AU Core Encounter](StructureDefinition-au-core-encounter.html)
+  - changed Encounter.reasonCode binding to Reason for Encounter (preferred) [AU Base: FHIR-50996](https://jira.hl7.org/browse/FHIR-50996)
 - [AU Core HealthcareService](StructureDefinition-au-core-healthcareservice.html):
-  - added new profile, including interaction support to the AU Core CapabilityStatements [FHIR-49934](https://jira.hl7.org/browse/FHIR-49934), [FHIR-50406](https://jira.hl7.org/browse/FHIR-50406), [FHIR-50405](https://jira.hl7.org/browse/FHIR-50405).
+  - added new profile, including interaction support to the AU Core CapabilityStatements [FHIR-49934](https://jira.hl7.org/browse/FHIR-49934), [FHIR-50406](https://jira.hl7.org/browse/FHIR-50406), [FHIR-50405](https://jira.hl7.org/browse/FHIR-50405), [AU Base: FHIR-46322](https://jira.hl7.org/browse/FHIR-46322).
 - [AU Core Immunization](StructureDefinition-au-core-immunization.html):
   - added Must Support to Immunization.lotNumber [FHIR-47331](https://jira.hl7.org/browse/FHIR-47331)
+  - changed Immunization.extension to add Vaccine Vial Serial Number (not marked as *Must Support*) [AU Base: FHIR-46317](https://jira.hl7.org/browse/FHIR-46317)
 - [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html):
   - added Must Support to MedicationRequest.dosageInstruction.text [FHIR-50101](https://jira.hl7.org/browse/FHIR-50101)
   - removed duplication of obligation flag added by error to MedicationRequest.medicationReference [FHIR-50800](https://jira.hl7.org/browse/FHIR-50800)
+  - applied technical correction to add Must Support and obligation flag to slices medicationCodeableConcept and medicationReference on MedicationRequest.medication[x] to align with Must Support on the sliced element [FHIR-51083](https://jira.hl7.org/browse/FHIR-51083) 
 - [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html):
   - added the new profile, including interaction support and adding the DiagnosticReport resource to AU Core CapabilityStatements [FHIR-45091](https://jira.hl7.org/browse/FHIR-45091), [FHIR-49954](https://jira.hl7.org/browse/FHIR-49954), [FHIR-49955](https://jira.hl7.org/browse/FHIR-49955), [FHIR-49956](https://jira.hl7.org/browse/FHIR-49956), [FHIR-49957](https://jira.hl7.org/browse/FHIR-49957), [FHIR-49958](https://jira.hl7.org/browse/FHIR-49958), [FHIR-49959](https://jira.hl7.org/browse/FHIR-49959).
   - added Must Support to MedicationStatement.dosage.text [FHIR-50101](https://jira.hl7.org/browse/FHIR-50101)
-  - removed duplication of obligation flag added by error to MedicationRequest.medicationReference [FHIR-50800](https://jira.hl7.org/browse/FHIR-50800)
+  - applied technical correction to add Must Support and obligation flag to slices medicationCodeableConcept and medicationReference on MedicationStatement.medication[x] to align with Must Support on the sliced element [FHIR-51083](https://jira.hl7.org/browse/FHIR-51083)
 - [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html): 
-  - Added profile-specific implementation guidance to see AU Core Diagnostic Result Observation profile for non imaging or pathology results  [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
+  - added profile-specific implementation guidance to see AU Core Diagnostic Result Observation profile for non imaging or pathology results  [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889)
+  - changed Observation.effective[x] type to remove type constraint [AU Base: FHIR-49189](https://jira.hl7.org/browse/FHIR-49189)
+  - applied technical correction to add Must Support and obligation flag to slices lab and specificDiscipline on Observation.category to align with Must Support on the sliced element [FHIR-51083](https://jira.hl7.org/browse/FHIR-51083) 
 - [AU Core Patient](StructureDefinition-au-core-patient.html): 
-  - removed the cardinality constraint on AU Medicare Card Number identifier, changing it from 0..1 to 0..*  [FHIR-46268](https://jira.hl7.org/browse/FHIR-46268).
+  - removed the cardinality constraint on AU Medicare Card Number identifier, changing it from 0..1 to 0..*  [FHIR-46268](https://jira.hl7.org/browse/FHIR-46268)
+  - added AU Patient Internal Identifier to the Patient.identifier list of allowed types [AU Base: FHIR-48671](https://jira.hl7.org/browse/FHIR-48671)
+  - added Must Support on Patient.telecom.system [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
+  - added Must Support on Patient.telecom.value [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
+  - added Must Support on Patient.telecom.use [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
 - [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html):
   - added the new profile, including interaction support and replacing references to AU Base Related Person with AU Core RelatedPerson [FHIR-49745](https://jira.hl7.org/browse/FHIR-49745), [FHIR-49746](https://jira.hl7.org/browse/FHIR-49746), [FHIR-44600](https://jira.hl7.org/browse/FHIR-44600), [FHIR-49747](https://jira.hl7.org/browse/FHIR-49747).
-
+- [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html): 
+  - applied technical correction to add Must Support and obligation flag to slice socialHistory on Observation.category to align with Must Support on the sliced element [FHIR-51083](https://jira.hl7.org/browse/FHIR-51083) 
 
 ### Release 1.0.0
 - Publication date: 2025-01-29
