@@ -1400,8 +1400,8 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr> 
 		<tr>
             <td rowspan="3">Immunization</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
-			<td rowspan="3"><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
+			<td rowspan="3"><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: <code>Immunization.status</code>, <code>Immunization.vaccineCode</code>, <code>Immunization.patient</code> and <code>Immunization.occurence[x]</code>.</td>
@@ -1419,8 +1419,8 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
             <td rowspan="6">MedicationRequest</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
         </tr> 
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
@@ -1435,8 +1435,8 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> populate-if-known <code>MedicationRequest.reported[x]</code>.</td>
 		</tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>category</code> and <code>code</code> search parameters.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>category</code> and <code>code</code> search parameters.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>category</code> and <code>code</code> search parameters.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>category</code> and <code>code</code> search parameters.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
@@ -1444,8 +1444,8 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
 			<td rowspan="5">MedicationStatement</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
-		   <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
+		   <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
         </tr> 
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
@@ -1477,8 +1477,8 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
         <tr>
             <td rowspan="8">Patient</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-additional-requirements">International Patient Access profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> be able to follow <code>Patient.link</code> to other Patient resources and understand direction of the link.</td>
@@ -1556,18 +1556,18 @@ These updates are not reflected in this comparison.
     <tbody>
 		<tr>
             <td rowspan="2">Patient</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>$summary</code> operation.</td>
 		</tr>
 		<tr>
             <td>AllergyIntolerance</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support AllergyIntolerance (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support AllergyIntolerance (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Condition</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Condition (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Condition (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>DiagnosticReport</td>
@@ -1575,19 +1575,19 @@ These updates are not reflected in this comparison.
         </tr>
 		<tr>
             <td>Immunization</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Immunization (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Immunization (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Medication</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Medication (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Medication (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>MedicationRequest</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationRequest (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationRequest (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>MedicationStatement</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationStatement (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationStatement (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Observation</td>
@@ -1595,11 +1595,11 @@ These updates are not reflected in this comparison.
         </tr>
 		<tr>
             <td>Practitioner</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Practitioner (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Practitioner (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Procedure</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Procedure (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Procedure (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Specimen</td>
@@ -1742,7 +1742,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support both US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>assertedDate Extension</code>, <code>Condition.onsetDateTime</code>, or <code>Condition.recordedDate</code> elements.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>assertedDate Extension</code> or <code>Condition.recordedDate</code> elements.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>Condition.recordedDate</code> elements and at least one of the <code>assertedDate Extension</code> and <code>Condition.onsetDateTime</code>.</td>
 		</tr>
 		<tr>
@@ -1961,11 +1961,10 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations.</td>
 		</tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support both <code>MedicationRequest.reportedBoolean</code> and <code>MedicationRequest.reportedReference</code>.</td>
+            <td rowspan="2"><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support both <code>MedicationRequest.reportedBoolean</code> and <code>MedicationRequest.reportedReference</code>.</td>
 			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of <code>MedicationRequest.reportedBoolean</code> and <code>MedicationRequest.reportedReference</code>.</td>
         </tr> 
         <tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support all target resource types for <code>MedicationRequest.reasonReference</code>.</td>
 			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one target resource type in <code>MedicationRequest.reasonReference</code>.</td>
         </tr>  
 		<tr>
@@ -2109,15 +2108,14 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="7">Procedure</td>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support all target resource types in <code>Procedure.reasonReference</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both the US Core Procedure and US Core ServiceRequest profiles for communicating the reason for referral or consultation via <code>Procedure.basedOn</code>.</td>
 			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support at least one of target resource types in <code>Procedure.reasonReference</code>.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> ensure that referenced resources in <code>Procedure.reasonReference</code> conform to US Core profiles</td>
+            <td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> ensure that referenced resources in <code>Procedure.reasonReference</code> conform to US Core profiles</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> ensure that referenced resources in <code>Procedure.reasonReference</code> conform to US Core profiles.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both the US Core Procedure and US Core ServiceRequest profiles for communicating the reason for referral or consultation via <code>Procedure.basedOn</code>.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both the US Core Procedure and US Core ServiceRequest profiles for communicating the reason for referral or consultation via <code>Procedure.basedOn</code>.</td>
 		</tr>
 		<tr>
