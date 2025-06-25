@@ -32,8 +32,8 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
     <thead>
         <tr>
             <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Access 1.1.0</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Summary 2.0.0-ballot</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">IPA 1.1.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">IPS 2.0.0-ballot</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">US Core 7.0.0</th>
         </tr>
     </thead>
@@ -268,7 +268,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
     <thead>
         <tr>
             <th style="width: 25%;">AU Core</th>
-            <th style="width: 25%;">International Patient Summary 2.0.0-ballot</th>
+            <th style="width: 25%;">IPS 2.0.0-ballot</th>
             <th style="width: 25%;">Element</th>
             <th style="width: 25%;">Additional requirements</th>
         </tr>
@@ -970,8 +970,8 @@ The table below provides a mapping of AU Core capability statements to capabilit
     <thead>
     <tr>
         <th style="width: 25%; text-align: left; vertical-align: middle;">AU Core</th>
-        <th style="width: 25%; text-align: left; vertical-align: middle;">International Patient Access 1.1.0</th>
-        <th style="width: 25%; text-align: left; vertical-align: middle;">International Patient Summary 2.0.0-ballot</th>
+        <th style="width: 25%; text-align: left; vertical-align: middle;">IPA 1.1.0</th>
+        <th style="width: 25%; text-align: left; vertical-align: middle;">IPS 2.0.0-ballot</th>
 		<th style="width: 25%; text-align: left; vertical-align: middle;">US Core 7.0.0</th>
     </tr>
   </thead>
@@ -996,7 +996,7 @@ The table below provides a mapping of AU Core capability statements to capabilit
 
 ### CapabilityStatement comparison
 
-The table below provides a capability statements comparison from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system conforming to International Patient Access Client CapabilityStatement **MAY NOT** meet the conformance requirements of the AU Core Requester CapabilityStatement. 
+The table below provides a capability statements comparison from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system conforming to the IPA Client CapabilityStatement **MAY NOT** meet the conformance requirements of the AU Core Requester CapabilityStatement. 
 
 The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirements are not compared.
 
@@ -1591,7 +1591,7 @@ These updates are not reflected in this comparison.
         </tr>
 		<tr>
             <td>Observation</td>
-            <td><strong>SHOULD</strong> support Observation Results: laboratory/pathology (IPS) or Observation - SH: tobacco use which have additional requirements, see <a href="#ips-additional-requirements">International Patient Summary profile additional requirements</a>.</td>
+            <td><strong>SHOULD</strong> support Observation Results: laboratory/pathology (IPS) or Observation - SH: tobacco use which have additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Practitioner</td>
