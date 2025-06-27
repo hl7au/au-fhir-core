@@ -269,7 +269,7 @@ The following IPS profile(s) contain incompatible requirements with the equivale
     <thead>
         <tr>
             <th style="width: 25%;">AU Core</th>
-            <th style="width: 25%;">IPS 2.0.0-ballot</th>
+            <th style="width: 25%;">IPS 2.0.0</th>
             <th style="width: 25%;">Element</th>
             <th style="width: 25%;">Incompatible requirements</th>
         </tr>
@@ -298,7 +298,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
     <thead>
         <tr>
             <th style="width: 25%;">AU Core</th>
-            <th style="width: 25%;">IPS 2.0.0-ballot</th>
+            <th style="width: 25%;">IPS 2.0.0</th>
             <th style="width: 25%;">Element</th>
             <th style="width: 25%;">Additional requirements</th>
         </tr>
@@ -455,7 +455,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
-            <td style=""width: 25%>Observation.effective[x]</td>
+            <td style="width: 25%">Observation.effective[x]</td>
             <td style="width: 25%">Type dateTime is flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
@@ -474,14 +474,14 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">Observation.value[x]</td>
             <td style="width: 25%;">Types string, Quantity and CodeableConceptIPS are flagged as <i>Must Support</i> in IPS.</td>
         </tr>
-        <tr>
-            <td style="width: 25%">Observation.interpretation</td>
-            <td style="width: 25%">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
-      </tr>
          <tr>
             <td style="width: 25%;">Observation.value[x]:valueCodeableConcept</td>
             <td style="width: 25%;">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
+                <tr>
+            <td style="width: 25%">Observation.interpretation</td>
+            <td style="width: 25%">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+      </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
             <td rowspan="3" style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Patient-uv-ips.html">Patient (IPS)</a></td>
@@ -1609,7 +1609,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPS Capability
     <tbody>
 		<tr>
             <td rowspan="2">Patient</td>
-            <td rowspan="2"><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>$summary</code> operation.</td>
@@ -1657,7 +1657,7 @@ This version of AU Core has no equivalent CapabilityStatement expectations for t
             <td><strong>SHALL</strong></td>
 		</tr>
         <tr>
-            <td>CarePlan<td>
+            <td>CarePlan</td>
             <td>MAY</td>
         </tr>
         <tr>
