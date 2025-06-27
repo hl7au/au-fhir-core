@@ -12,7 +12,7 @@ Corresponding profiles, conformance requirements, and capability statements incl
 The below comparison evaluates AU Core conformance requirements with the key implementation guides identifying where compliance with AU Core satisfies the expectations established by the referenced implementation guide. 
 
 ## Profile comparison
-As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. 
+As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, <i>Must Support</i> elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. 
 
 The table below provides a profile only comparison from AU Core to profiles in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an IPA profile **MAY NOT** be compliant with AU Core.
 
@@ -137,7 +137,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/><img src="cross_red_circle" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -179,7 +179,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/><img src="cross_red_circle" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -261,7 +261,37 @@ This version of AU Core has no equivalent profile for the following IPA profiles
 - IPA-DocumentReference
 
 
+### IPS profile incompatible requirements <a id="ips-incompatible-requirements"></a>
+
+The following IPS profile(s) contain incompatible requirements with the equivalent AU Core profile. Implementers are advised to note that some code changes may be required to support these profiles.
+
+
 ### IPS profile additional requirements <a id="ips-additional-requirements"></a>
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 25%;">AU Core</th>
+            <th style="width: 25%;">IPS 2.0.0-ballot</th>
+            <th style="width: 25%;">Element</th>
+            <th style="width: 25%;">Incompatible requirements</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html">Observation Results - Laboratory/Pathology (IPS)</a></td>
+            <td style="width: 25%;">Observation.effective[x]</td>
+            <td style="width: 25%;">IPS prohibits types Timing and instant.</td>
+        </tr>
+        <tr>
+            <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation Social History - Tobacco Use (IPS)</a></td>
+            <td style="width: 25%;">Observation.component</td>
+            <td style="width: 25%;">Prohibited element in IPS.</td>
+        </tr>
+    </tbody>
+</table>    
 
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
