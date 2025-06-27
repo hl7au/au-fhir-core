@@ -74,7 +74,7 @@ The guidance for how to support coded or text identification of medicinal produc
               ],
               "system": "http://snomed.info/sct", 
               "code": "32686011000036108",
-              "display": "benzylpenicillin 3 g injection, vial"
+              "display": "Benzylpenicillin 3 g injection, vial"
             },
           ]
         }
