@@ -479,7 +479,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
       </tr>
          <tr>
-            <td style="width: 25%;">Observation.valueCodeableConcept</td>
+            <td style="width: 25%;">Observation.value[x]:valueCodeableConcept</td>
             <td style="width: 25%;">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
@@ -541,7 +541,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">IPS requires LOINC code 72166-2. Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
-            <td style="width: 25%">Observation.valueCodeableConcept</td>
+            <td style="width: 25%">Observation.value[x]:valueCodeableConcept</td>
             <td style="width: 25%">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
     </tbody>
@@ -1029,7 +1029,7 @@ The table below provides a mapping of AU Core capability statements to capabilit
     <tr>
         <th style="width: 25%; text-align: left; vertical-align: middle;">AU Core</th>
         <th style="width: 25%; text-align: left; vertical-align: middle;">IPA 1.1.0</th>
-        <th style="width: 25%; text-align: left; vertical-align: middle;">IPS 2.0.0-ballot</th>
+        <th style="width: 25%; text-align: left; vertical-align: middle;">IPS 2.0.0</th>
 		<th style="width: 25%; text-align: left; vertical-align: middle;">US Core 7.0.0</th>
     </tr>
   </thead>
@@ -1087,10 +1087,10 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
         </tr>
 		<tr>
             <th style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></th>
-            <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0-ballot</strong></th>
+            <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0</strong></th>
             <th style="text-align: center; vertical-align: middle;"><strong>US Core 7.0.0</strong></th>
 			<th style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></th>
-            <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0-ballot</strong></th>
+            <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0</strong></th>
             <th style="text-align: center; vertical-align: middle;"><strong>US Core 7.0.0</strong></th>
         </tr>
     </thead>
@@ -1283,7 +1283,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -1595,11 +1595,6 @@ A system conforming to an AU Core CapabilityStatement aligns with IPS Capability
 
 <img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
 
-<div class="note-to-contributors">
-Many requirements in the IPS current build (version 2.0.0) have changed since version 2.0.0-ballot, including updated conformance expectations for resources like Bundle, Composition and Patient from <strong>supported</strong> to <strong>SHALL</strong>.
-These updates are not reflected in this comparison. 
-</div>
-
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
 		<col style="width: 20%;">
@@ -1608,68 +1603,33 @@ These updates are not reflected in this comparison.
 	<thead>
         <tr>
             <th>AU Core CapabilityStatement requirement</th>
-            <th>IPS 2.0.0-ballot Server CapabilityStatement additional requirements</th>
+            <th>IPS 2.0.0 Server CapabilityStatement additional requirements</th>
         </tr>
     </thead> 
     <tbody>
 		<tr>
             <td rowspan="2">Patient</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td rowspan="2"><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>$summary</code> operation.</td>
 		</tr>
 		<tr>
             <td>AllergyIntolerance</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support AllergyIntolerance (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> Conformance level not stated for AllergyIntolerance (IPS) profile support; the profile has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Condition</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Condition (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
-        </tr>
-		<tr>
-            <td>DiagnosticReport</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support DiagnosticReport (IPS) profile.</td>
-        </tr>
-		<tr>
-            <td>Immunization</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Immunization (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
-        </tr>
-		<tr>
-            <td>Medication</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Medication (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> Conformance level not stated for Condition (IPS) profile support; the profile has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>MedicationRequest</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationRequest (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> Conformance level not stated for MedicationRequest (IPS) profile support; the profile has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>MedicationStatement</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationStatement (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> Conformance level not stated for MedicationStatement (IPS) profile support; the profile has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
-		<tr>
-            <td>Observation</td>
-            <td><strong>SHOULD</strong> support Observation Results: laboratory/pathology (IPS) or Observation - SH: tobacco use which have additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
-        </tr>
-		<tr>
-            <td>Practitioner</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Practitioner (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
-        </tr>
-		<tr>
-            <td>Procedure</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Procedure (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
-        </tr>
-		<tr>
-            <td>Specimen</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Specimen (IPS) profile.</td>
-        </tr>
-		<tr>
-            <td rowspan="2" rowspan="3">DocumentReference</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support DocumentReference (IPS) profile.</td>
-        </tr>
-		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>$docref</code> operation.</td>
-		</tr>
     </tbody>
 </table>    
 
@@ -1684,37 +1644,53 @@ This version of AU Core has no equivalent CapabilityStatement expectations for t
 	<thead>
         <tr>
             <th>Additional resource type</th>
-            <th>IPS 2.0.0-ballot Server CapabilityStatement resource conformance</th>
+            <th>IPS 2.0.0 Server CapabilityStatement resource conformance</th>
 		</tr>
     </thead> 
     <tbody>
 		<tr>
             <td>Bundle</td>
-            <td><strong>supported</strong></td>
+            <td><strong>SHALL</strong></td>
 		</tr>
         <tr>
             <td>Composition</td>
-            <td><strong>supported</strong></td>
+            <td><strong>SHALL</strong></td>
 		</tr>
         <tr>
+            <td>CarePlan<td>
+            <td>MAY</td>
+        </tr>
+        <tr>
+            <td>ClinicalImpression</td>
+            <td>MAY</td>
+        </tr>
+        <tr>
+            <td>Consent</td>
+            <td>MAY</td>
+        </tr>
+        <tr>
             <td>Device</td>
-            <td><strong>supported</strong></td>
+            <td><strong>MAY</strong></td>
 		</tr>
         <tr>
             <td>DeviceUseStatement</td>
-            <td><strong>supported</strong></td>
-		</tr>
-		<tr>
-            <td>ImagingStudy</td>
-            <td><strong>supported</strong></td>
+            <td><strong>MAY</strong></td>
 		</tr>
 		<tr>
             <td>Flag</td>
-            <td><strong>supported</strong></td>
+            <td><strong>MAY</strong></td>
 		</tr>
 		<tr>
-            <td>OperationDefinition</td>
-            <td><strong>SHOULD</strong></td>
+            <td>ImagingStudy</td>
+            <td><strong>MAY</strong></td>
+		</tr>
+		<tr>
+            <td>MedicationAdministration</td>
+            <td><strong>MAY</strong></td>
+		</tr>
+		<tr>
+            <td>MedicationDispense</td>
+            <td><strong>MAY</strong></td>
 		</tr>
 	</tbody>
 </table>
