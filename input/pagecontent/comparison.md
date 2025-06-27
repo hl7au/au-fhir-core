@@ -265,9 +265,6 @@ This version of AU Core has no equivalent profile for the following IPA profiles
 
 The following IPS profile(s) contain incompatible requirements with the equivalent AU Core profile. Implementers are advised to note that some code changes may be required to support these profiles.
 
-
-### IPS profile additional requirements <a id="ips-additional-requirements"></a>
-
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
@@ -288,10 +285,12 @@ The following IPS profile(s) contain incompatible requirements with the equivale
             <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
             <td rowspan="7" style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation Social History - Tobacco Use (IPS)</a></td>
             <td style="width: 25%;">Observation.component</td>
-            <td style="width: 25%;">Prohibited element in IPS.</td>
+            <td style="width: 25%;">Prohibited element in IPSs.</td>
         </tr>
     </tbody>
-</table>    
+</table>
+
+### IPS profile additional requirements <a id="ips-additional-requirements"></a>
 
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
@@ -429,7 +428,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">MedicationStatement.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
-<tr>   
+        <tr>   
             <td style="width: 25%;">MedicationStatement.effective[x]</td>
             <td style="width: 25%;">Type choice dateTime is flagged as <i>Must Support</i> in IPS.</td>
         </tr>
