@@ -1,18 +1,25 @@
 == Suppressed Messages ==
 
 # =========================================================================================
+# === Errors ====
+# =========================================================================================
+
+# === PBS terminology content is not published in FHIR format, validation is not expected. This issue was accepted by the HL7 AU FHIR Working Group in AU Base v5.0.0. ===
+ERROR: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept).coding[1].code: Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'
+
+# =========================================================================================
 # === Warnings ====
 # =========================================================================================
 
-# === WARNING: These are warnings for publication artefacts not used in HL7 AU specifications at this time and are accepted by the AU FHIR WG. (These warnings were accepted in v1.0.0.)) ===  
+# === WARNING: These are warnings for publication artefacts not used in HL7 AU specifications at this time and are accepted by the AU FHIR WG. These warnings were accepted in AU Core v1.0.0. ===  
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 
-# === WARNING: The following warnings flag aspects of FHIR implementation of best practice. These warnings do not indicate an error in the specification, and ignore profiled requirements. (These warnings were accepted in v1.0.0.) ===
+# === WARNING: The following warnings flag aspects of FHIR implementation of best practice. These warnings do not indicate an error in the specification, and ignore profiled requirements. These warnings were accepted in AU Core v1.0.0.+==
 Best Practice Recommendation: In general, all observations should have a performer
 
-# === WARNING: Artefacts inherit multiple profiles for certain data types (e.g., Address, Identifier) from AU Base. The IG Publisher cannot match example instances to a single profile and generates these warnings. This behaviour is expected and consistent with the design of AU Core and AU Base. (These warnings were accepted in v1.0.0.) ===
+# === WARNING: Artefacts inherit multiple profiles for certain data types (e.g., Address, Identifier) from AU Base. The IG Publisher cannot match example instances to a single profile and generates these warnings. This behaviour is expected and consistent with the design of AU Core and AU Base. These warnings were accepted in AU Core v1.0.0. ===
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
@@ -23,15 +30,17 @@ Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/Structu
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicareprovidernumber, http://hl7.org/fhir/StructureDefinition/Identifier
 
-# === WARNING: Examples with PBS concepts have this warning as there is no publicly available instance of the PBS code system and therefore IG Publisher cannot validate the concept. This is known, accepted behaviour for IG Publisher (These warnings were accepted in v1.0.0.and carried forward to 2.0.0 with only the dependency version updated (from v5.0.0 to v6.0.0-ci-build)) ===
-Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
+# === WARNING: Examples with PBS concepts have this warning as there is no publicly available instance of the PBS code system and therefore IG Publisher cannot validate the concept. This is known, accepted behaviour for IG Publisher. These warnings were accepted in AU Core v1.0.0. ===
+== C:\work\git\au-fhir-core\input\examples\medication-2active-ingredients.xml ==
 A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://pbs.gov.au/code/item was not found
-A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found; Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://pbs.gov.au/code/item was not found
-Resolved system http://pbs.gov.au/code/item (v6.0.0-ci-build), but the definition doesn't include any codes, so the code has not been validated
-
-# === WARNING: This example demonstrates how to represent missing data and therefore uses the Data Absent Reason extension as per AU Core rules. The IG Publisher triggers a warning because of this, but the example is intentionally designed to show the correct handling of missing data and does not indicate any issues with the IG. (These warnings were accepted in v1.0.0.) ===
-WARNING: MedicationRequest/paracetamol-codeine: MedicationRequest.requester: A Reference without an actual reference or identifier should have a display
+WARNING: Medication/2active-ingredients: Medication.code: Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
+WARNING: Medication/2active-ingredients: Medication.code: Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://pbs.gov.au/code/item was not found
+WARNING: Medication/2active-ingredients: Medication.code: A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found; Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://pbs.gov.au/code/item was not found
+WARNING: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept): Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://snomed.info/sct, http://pbs.gov.au/code/item was not found
+WARNING: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept): 'Bactrim DS tablet' is the default display; the code system http://snomed.info/sct has no Display Names for the language en-AU; A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated; The provided code 'http://snomed.info/sct#6632011000036102 ('Bactrim DS tablet')' was not found in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build'; Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found; Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://snomed.info/sct, http://pbs.gov.au/code/item was not found
+WARNING: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept).coding[1]: Resolved system http://pbs.gov.au/code/item (v6.0.0-ci-build), but the definition doesn't include any codes, so the code has not been validated
+WARNING: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept): Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#2951H' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
+WARNING: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept): Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
 
 
 # =========================================================================================
@@ -59,6 +68,3 @@ Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-mi
 
 # === INFORMATION: This is HL7 Terminology managed content. IG Publisher generated a message when it detects artefacts with a status of 'draft' or 'deprecated'. This is known, accepted behaviour for IG Publisher. ===
 Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
-
-# === INFORMATION: Information about the AU Core use of the discriminator type 'pattern,' which is fully valid and supported in FHIR R4 but deprecated in R5+. This does not affect the functionality or conformance in R4. Future updates will consider transitioning to the recommended 'type=value' approach to ensure compatibility with R5+. ===
-The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
