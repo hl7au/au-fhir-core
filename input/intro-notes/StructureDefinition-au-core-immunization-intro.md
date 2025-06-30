@@ -7,3 +7,4 @@ The following are supported usage scenarios for this profile:
 - Query for a patient's immunisations
 - Record or update an immunisation record for a patient
 
+{% include imm-occurencedatetime-note.md -%}
