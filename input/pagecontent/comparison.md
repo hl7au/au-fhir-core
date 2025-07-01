@@ -193,7 +193,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
     </tbody>
 </table>
 
-#### IPA profile additional requirements <a id="ipa-additional-requirements"></a>
+#### IPA profile additional requirements
 
 The following IPA profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
@@ -262,7 +262,7 @@ IPA does not include requirements for Suppressed Data.
 This version of AU Core has no equivalent profile for the following IPA profiles:
 - IPA-DocumentReference
 
-#### IPS profile additional requirements <a id="ips-additional-requirements"></a>
+#### IPS profile additional requirements
 
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
@@ -516,7 +516,7 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - Specimen (IPS)
 
 
-#### US Core profile additional requirements <a id="uscore-additional-requirements"></a>
+#### US Core profile additional requirements
 
 The following US Core profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
@@ -1402,8 +1402,8 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr> 
 		<tr>
             <td rowspan="3">Immunization</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
-			<td rowspan="3"><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-profile-additional-requirements">IPA profile additional requirements</a>.</td>
+			<td rowspan="3"><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-profile-additional-requirements">IPA profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> handle: <code>Immunization.status</code>, <code>Immunization.vaccineCode</code>, <code>Immunization.patient</code> and <code>Immunization.occurence[x]</code>.</td>
@@ -1421,8 +1421,8 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
             <td rowspan="6">MedicationRequest</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements, see <a href="#ipa-profile-additional-requirements">IPA profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationRequest profile which has additional requirements, see <a href="#ipa-profile-additional-requirements">IPA profile additional requirements</a>.</td>
         </tr> 
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
@@ -1446,8 +1446,8 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
 		<tr>
 			<td rowspan="5">MedicationStatement</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
-		   <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-profile-additional-requirements">IPA profile additional requirements</a>.</td>
+		   <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-MedicationStatement profile which has additional requirements, see <a href="#ipa-profile-additional-requirements">IPA profile additional requirements</a>.</td>
         </tr> 
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> query both MedicationRequest and MedicationStatement when fetching patient Medication information.</td>
@@ -1479,8 +1479,8 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
         <tr>
             <td rowspan="8">Patient</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-additional-requirements">IPA profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-profile-additional-requirements">IPA profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Patient profile which has additional requirements, see <a href="#ipa-profile-additional-requirements">IPA profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> be able to follow <code>Patient.link</code> to other Patient resources and understand direction of the link.</td>
@@ -1558,18 +1558,18 @@ These updates are not reflected in this comparison.
     <tbody>
 		<tr>
             <td rowspan="2">Patient</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>$summary</code> operation.</td>
 		</tr>
 		<tr>
             <td>AllergyIntolerance</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support AllergyIntolerance (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support AllergyIntolerance (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Condition</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Condition (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Condition (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>DiagnosticReport</td>
@@ -1577,31 +1577,31 @@ These updates are not reflected in this comparison.
         </tr>
 		<tr>
             <td>Immunization</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Immunization (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Immunization (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Medication</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Medication (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Medication (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>MedicationRequest</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationRequest (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationRequest (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>MedicationStatement</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationStatement (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationStatement (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Observation</td>
-            <td><strong>SHOULD</strong> support Observation Results: laboratory/pathology (IPS) or Observation - SH: tobacco use which have additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><strong>SHOULD</strong> support Observation Results: laboratory/pathology (IPS) or Observation - SH: tobacco use which have additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Practitioner</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Practitioner (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Practitioner (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Procedure</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Procedure (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Procedure (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td>Specimen</td>
@@ -1727,8 +1727,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="3">AllergyIntolerance</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core AllergyIntolerance Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core AllergyIntolerance Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core AllergyIntolerance Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core AllergyIntolerance Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude: Provenance:target</code>.</td>
@@ -1740,8 +1740,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="7">Condition</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support at least one of US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support both US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support at least one of US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support both US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>assertedDate Extension</code> or <code>Condition.recordedDate</code> elements.</td>
@@ -1874,8 +1874,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="8">Encounter</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code> search parameter.</td>
@@ -1912,8 +1912,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
 		<tr>
             <td rowspan="4">Immunization</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Immunization Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Immunization Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Immunization Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Immunization Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
@@ -1929,8 +1929,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="4">Location</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Location Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Location Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Location Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Location Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the <code>address</code> search parameter.</td>
@@ -1946,8 +1946,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="2">Medication</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Medication Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Medication Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Medication Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Medication Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
@@ -1955,8 +1955,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
 		<tr>
             <td rowspan="9">MedicationRequest</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationRequest Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationRequest Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationRequest Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationRequest Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>patient+intent</code> and <code>patient+intent+status</code> search parameter combinations.</td>
@@ -1990,8 +1990,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 		</tr>
 		<tr>
             <td rowspan="5">Observation</td>
-            <td>A client <strong>SHALL</strong> support at least one Observation, including profiles with <a href="#uscore-additional-requirements">additional requirements</a> and <a href="#uscore-additional-profiles">additional profiles</a>.</td>
-			<td>A client <strong>SHALL</strong> support Observation profiles, including profiles with <a href="#uscore-additional-requirements">additional requirements</a> and <a href="#uscore-additional-profiles">additional profiles</a>.</td>
+            <td>A client <strong>SHALL</strong> support at least one Observation, including profiles with <a href="#us-core-profile-additional-requirements">additional requirements</a> and <a href="#uscore-additional-profiles">additional profiles</a>.</td>
+			<td>A client <strong>SHALL</strong> support Observation profiles, including profiles with <a href="#us-core-profile-additional-requirements">additional requirements</a> and <a href="#uscore-additional-profiles">additional profiles</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
@@ -2011,8 +2011,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 		</tr>
         <tr>
             <td rowspan="6">Organization</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Organization Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Organization Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Organization Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Organization Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>address</code> search parameter.</td>
@@ -2036,8 +2036,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="7">Patient</td>
-          	<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Patient Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Patient Profile which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+          	<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Patient Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Patient Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations.</td>
@@ -2065,8 +2065,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 		</tr>	
         <tr>
             <td rowspan="6">Practitioner</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Practitioner which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Practitioner which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Practitioner which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Practitioner which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>name</code> search parameter.</td>
@@ -2089,8 +2089,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="5">PractitionerRole</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core PractitionerRole which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core PractitionerRole which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core PractitionerRole which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core PractitionerRole which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>specialty</code> search parameter.</td>
@@ -2138,8 +2138,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="6">RelatedPerson</td>
-           <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
-           <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements, see <a href="#uscore-additional-requirements">US Core profile additional requirements</a>.</td>
+           <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+           <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core RelatedPerson which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		 <tr>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code> search parameter.</td>
