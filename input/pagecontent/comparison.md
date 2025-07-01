@@ -263,7 +263,7 @@ This version of AU Core has no equivalent profile for the following IPA profiles
 - IPA-DocumentReference
 
 
-### IPS profile incompatible requirements <a id="ips-incompatible-requirements"></a>
+#### IPS profile incompatible requirements <a id="ips-incompatible-requirements"></a>
 
 The following IPS profile(s) contain incompatible requirements with the equivalent AU Core profile. Implementers are advised to note that some code changes may be required to support these profiles.
 
