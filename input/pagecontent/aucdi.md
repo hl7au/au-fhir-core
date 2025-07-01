@@ -4,7 +4,7 @@ AUCDI defines data groups comprising one or more data elements and references cl
 
 AU Core is a technical specification that addresses constraints and obligations on data representation for exchange. AU Core enables system data to be mapped to an agreed FHIR format and defines capability requirements to share data via FHIR RESTful API interactions. 
 
-AUCDI and AU Core are updated periodically, and each expand upon the initial core set. AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases. 
+AUCDI and AU Core are updated periodically, and each expand upon the initial core set. AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases: 
 
 AUCDI Version | AU Core Version
 ---|---
