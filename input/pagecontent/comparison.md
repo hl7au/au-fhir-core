@@ -1195,7 +1195,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -1204,7 +1204,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -1231,7 +1231,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -1249,7 +1249,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -1276,7 +1276,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -1303,7 +1303,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -1312,7 +1312,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -1321,7 +1321,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -1339,7 +1339,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
     </tbody>
@@ -1611,26 +1611,26 @@ A system conforming to an AU Core CapabilityStatement aligns with IPS Capability
     <tbody>
 		<tr>
             <td rowspan="2">Patient</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>$summary</code> operation.</td>
 		</tr>
 		<tr>
             <td>AllergyIntolerance</td>
-            <td><img src="arrow_up.png" width="20"/> Conformance level not stated for AllergyIntolerance (IPS) profile support; the profile has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> suport AllergyIntolerance (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>. IPS sets this profile as a supported profile for the AllergyIntolerance resource, we interpret this as a conformance expectation of <strong>SHOULD</strong>.</td>
         </tr>
 		<tr>
             <td>Condition</td>
-            <td><img src="arrow_up.png" width="20"/> Conformance level not stated for Condition (IPS) profile support; the profile has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support Condition (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>. IPS sets this profile as a supported profile for the Condition resource, we interpret this as a conformance expectation of <strong>SHOULD</strong>.</td>
         </tr>
 		<tr>
             <td>MedicationRequest</td>
-            <td><img src="arrow_up.png" width="20"/> Conformance level not stated for MedicationRequest (IPS) profile support; the profile has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationRequest (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>. IPS sets this profile as a supported profile for the MedicationRequest resource, we interpret this as a conformance expectation of <strong>SHOULD</strong>.</td>
         </tr>
 		<tr>
             <td>MedicationStatement</td>
-            <td><img src="arrow_up.png" width="20"/> Conformance level not stated for MedicationStatement (IPS) profile support; the profile has additional requirements, see <a href="#ips-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationStatement (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>. IPS sets this profile as a supported profile for the MedicationStatement resource, we interpret this as a conformance expectation of <strong>SHOULD</strong>.</td>
         </tr>
     </tbody>
 </table>    
@@ -1660,15 +1660,15 @@ This version of AU Core has no equivalent CapabilityStatement expectations for t
 		</tr>
         <tr>
             <td>CarePlan</td>
-            <td>MAY</td>
+            <td><strong>MAY</strong></td>
         </tr>
         <tr>
             <td>ClinicalImpression</td>
-            <td>MAY</td>
+            <td><strong>MAY</strong></td>
         </tr>
         <tr>
             <td>Consent</td>
-            <td>MAY</td>
+            <td><strong>MAY</strong></td>
         </tr>
         <tr>
             <td>Device</td>
