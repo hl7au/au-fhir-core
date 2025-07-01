@@ -202,11 +202,11 @@ AU Core Diagnostic Result Observation|Observation.performer|AU Core Practitioner
 AU Core Diagnostic Result Observation|Observation.hasMember|AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
 AU Core Encounter|Encounter.participant.individual|AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
 AU Core Encounter|Encounter.reasonReference|AU Core Condition, Observation, AU Core Procedure
-AU Core Pathology Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
-AU Core Procedure|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
 AU Core MedicationRequest|MedicationRequest.requester|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 AU Core MedicationRequest|MedicationRequest.reasonReference|AU Core Condition, Observation
 AU Core MedicationStatement|MedicationStatement.reasonReference|AU Core Condition, Observation, AU Base Diagnostic Report
+AU Core Pathology Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
+AU Core Procedure|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
 {:.grid}
 
 
@@ -227,7 +227,12 @@ AU Core Pathology Result Observation|Observation.effective[x]|dateTime, Period, 
 AU Core Diagnostic Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU Core Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU Core Diagnostic Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU Core Immunization|Immunization.occurrence[x]|dateTime, string
+AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
+AU Core MedicationStatement|MedicationStatement.medication[x]|CodeableConcept, Reference
+AU Core MedicationStatement|MedicationStatement.effective[x]|dateTime, Period
 AU Core Pathology Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
 AU Core Blood Pressure|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU Core Body Height|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU Core Body Temperature|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
@@ -235,10 +240,6 @@ AU Core Body Weight|Observation.component.value[x]|Quantity, CodeableConcept, st
 AU Core Heart Rate|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU Core Respiration Rate|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU Core Waist Circumference|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Immunization|Immunization.occurrence[x]|dateTime, string
-AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
-AU Core MedicationStatement|MedicationStatement.medication[x]|CodeableConcept, Reference
-AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
 {:.grid}
 
 ##### Must Support - Choice of Identifiers
@@ -273,9 +274,9 @@ The table below lists the applicable profiles and elements in AU Core.
 AU Core Profile |Must Support Choice Elements
 ---|---
 AU Core Encounter|Encounter.reasonCode, Encounter.reasonReference
-AU Core Procedure|Procedure.reasonCode, Procedure.reasonReference
 AU Core MedicationRequest|MedicationRequest.reasonCode, MedicationRequest.reasonReference
 AU Core MedicationStatement|MedicationStatement.reasonCode, MedicationStatement.reasonReference
+AU Core Procedure|Procedure.reasonCode, Procedure.reasonReference
 {:.grid}
 
 
