@@ -1,3 +1,5 @@
+{::options toc_levels="1..4"/}
+
 AU Core aligns to, and leverages, international standards and other national standards, in particular:
 - [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/)
 - [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/)
@@ -11,7 +13,7 @@ Corresponding profiles, conformance requirements, and capability statements incl
 
 The below comparison evaluates AU Core conformance requirements with the key implementation guides identifying where compliance with AU Core satisfies the expectations established by the referenced implementation guide. 
 
-## Profile comparison
+### Profile comparison
 As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. 
 
 The table below provides a profile only comparison from AU Core to profiles in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an IPA profile **MAY NOT** be compliant with AU Core.
@@ -191,7 +193,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
     </tbody>
 </table>
 
-### IPA profile additional requirements <a id="ipa-additional-requirements"></a>
+#### IPA profile additional requirements <a id="ipa-additional-requirements"></a>
 
 The following IPA profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
@@ -250,17 +252,17 @@ The following IPA profile(s) contain additional requirements. Implementers are a
     </tbody>
 </table>
 
-#### Missing Data
+##### Missing Data
 AU Core compliant resources are compliant with IPA requirements for Missing Data.
 
-#### Suppressed Data 
+##### Suppressed Data 
 IPA does not include requirements for Suppressed Data.
 
-#### Additional profiles
+##### Additional profiles
 This version of AU Core has no equivalent profile for the following IPA profiles:
 - IPA-DocumentReference
 
-### IPS profile additional requirements <a id="ips-additional-requirements"></a>
+#### IPS profile additional requirements <a id="ips-additional-requirements"></a>
 
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
@@ -485,13 +487,13 @@ The following IPS profile(s) contain additional requirements. Implementers are a
     </tbody>
 </table>
 
-#### Missing Data
+##### Missing Data
 AU Core compliant resources are compliant with IPS requirements for Missing Data.
 
-#### Suppressed Data
+##### Suppressed Data
 IPS does not include requirements for Suppressed Data.
 
-#### Additional profiles <a id="ips-additional-profiles"></a>
+##### Additional profiles <a id="ips-additional-profiles"></a>
 This version of AU Core has no equivalent profile for the following IPS profiles:
 - Bundle - IPS
 - Composition (IPS)
@@ -510,7 +512,7 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - Specimen (IPS)
 
 
-### US Core profile additional requirements <a id="uscore-additional-requirements"></a>
+#### US Core profile additional requirements <a id="uscore-additional-requirements"></a>
 
 The following US Core profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
@@ -914,13 +916,13 @@ The following US Core profile(s) contain additional requirements. Implementers a
     </tbody>
 </table>
 
-#### Missing Data
+##### Missing Data
 AU Core compliant resources are compliant with US Core requirements for Missing Data.
 
-#### Suppressed Data
+##### Suppressed Data
 AU Core compliant resources are compliant with US Core requirements for Suppressed Data.
 
-#### Additional profiles <a id="uscore-additional-profiles"></a>
+##### Additional profiles <a id="uscore-additional-profiles"></a>
 This version of AU Core has no equivalent profile for the following US Core profiles:
 - US Core CarePlan Profile
 - US Core CareTeam Profile
@@ -945,11 +947,11 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core ServiceRequest Profile 
 - US Core Specimen Profile
 
-## Capability statement comparison
+### Capability statement comparison
 
 As part of the comparison, both system and resource level capabilities are compared, including FHIR version, supported formats and guides, conformance expectations, RESTful interactions, security, resource types and profiles, search parameters, reference handling, and operations.
 
-### CapabilityStatement mapping
+#### CapabilityStatement mapping
 
 AU Core defines capability statements that describe the conformance requirements and expectations of a corresponding AU Core system actor:
 - AU Core Requester - a system that creates and initiates a data access request to retrieve core digital health and administrative information
@@ -990,7 +992,7 @@ The table below provides a mapping of AU Core capability statements to capabilit
 *<sup>1</sup>The IPS Server CapabilityStatement is not directly comparable as the role and purpose is inexact; the IPS server actor overlaps with the AU Core Responder actor, but actors cover additional meaning.*
 
 
-### CapabilityStatement comparison
+#### CapabilityStatement comparison
 
 The table below provides a capability statements comparison from AU Core to those in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a system conforming to the IPA Client CapabilityStatement **MAY NOT** meet the conformance requirements of the AU Core Requester CapabilityStatement. 
 
@@ -1282,7 +1284,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
 </table>
 
 
-### IPA CapabilityStatement additional requirements
+#### IPA CapabilityStatement additional requirements
 
 A system conforming to an AU Core CapabilityStatement aligns with IPA CapabilityStatements but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in IPA CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
@@ -1519,10 +1521,10 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 	</tbody>
 </table>
 
-#### Additional resource types
+##### Additional resource types
 None.
 
-### IPS CapabilityStatement additional requirements
+#### IPS CapabilityStatement additional requirements
 
 A system conforming to an AU Core CapabilityStatement aligns with IPS CapabilityStatement but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in IPS CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
@@ -1611,7 +1613,7 @@ These updates are not reflected in this comparison.
     </tbody>
 </table>    
 
-#### Additional resource types
+##### Additional resource types
 This version of AU Core has no equivalent CapabilityStatement expectations for the following resource types included in IPS Server CapabilityStatements.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -1657,7 +1659,7 @@ This version of AU Core has no equivalent CapabilityStatement expectations for t
 	</tbody>
 </table>
 
-### US Core CapabilityStatement additional requirements
+#### US Core CapabilityStatement additional requirements
 
 A system conforming to an AU Core CapabilityStatement aligns with US Core CapabilityStatements but will require additional functionality to meet its stricter or broader requirements. The table below identifies additional requirements included in US Core CapabilityStatements. Implementers are advised to note that some code changes may be required to ensure full compliance.
 
@@ -2189,7 +2191,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 
 *<sup>2</sup>Servers certified under the 21st Century Cures Act for accessing patient data apply additional requirements including requirements to support ALL resources with the conformance expectation SHALL. These additional requirements are excluded from comparison.*
 
-#### Additional resource types
+##### Additional resource types
 This version of AU Core has no equivalent CapabilityStatement expectations for the following resource types included in US Core CapabilityStatements.
     
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
