@@ -262,7 +262,7 @@ IPA does not include requirements for Suppressed Data.
 This version of AU Core has no equivalent profile for the following IPA profiles:
 - IPA-DocumentReference
 
-#### IPS profile additional requirements <a id="ips-additional-requirements"></a>
+#### IPS profile additional requirements
 
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
@@ -1627,42 +1627,6 @@ This version of AU Core has no equivalent CapabilityStatement expectations for t
         <tr>
             <td>Composition</td>
             <td><strong>SHALL</strong></td>
-		</tr>
-        <tr>
-            <td>CarePlan</td>
-            <td><strong>MAY</strong></td>
-        </tr>
-        <tr>
-            <td>ClinicalImpression</td>
-            <td><strong>MAY</strong></td>
-        </tr>
-        <tr>
-            <td>Consent</td>
-            <td><strong>MAY</strong></td>
-        </tr>
-        <tr>
-            <td>Device</td>
-            <td><strong>MAY</strong></td>
-		</tr>
-        <tr>
-            <td>DeviceUseStatement</td>
-            <td><strong>MAY</strong></td>
-		</tr>
-		<tr>
-            <td>Flag</td>
-            <td><strong>MAY</strong></td>
-		</tr>
-		<tr>
-            <td>ImagingStudy</td>
-            <td><strong>MAY</strong></td>
-		</tr>
-		<tr>
-            <td>MedicationAdministration</td>
-            <td><strong>MAY</strong></td>
-		</tr>
-		<tr>
-            <td>MedicationDispense</td>
-            <td><strong>MAY</strong></td>
 		</tr>
 	</tbody>
 </table>
