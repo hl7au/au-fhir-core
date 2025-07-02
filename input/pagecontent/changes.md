@@ -10,6 +10,9 @@ This change log documents the significant updates and resolutions implemented fr
 - updated AUCDI mapping Date of assertion to be MedicationStatement.dateAsserted [FHIR-49960](https://jira.hl7.org/browse/FHIR-49960).
 - [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html):
   - added Must Support to AllergyIntolerance.note [FHIR-46940](https://jira.hl7.org/browse/FHIR-46940)
+  - added Must Support and obligation SHOULD:populate to AllergyIntolerance.onsetDateTime for the AU Core Responder [FHIR-45187](https://jira.hl7.org/browse/FHIR-45187)
+- [AU Core Condition](StructureDefinition-au-core-condition.html):
+  - added Must Support and obligation SHOULD:populate to Condition.onsetDateTime for the AU Core Responder [FHIR-45040](https://jira.hl7.org/browse/FHIR-45040)  
 - [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html): 
   - clarified that this profile is for specialist and other (non imaging or pathology) results, and added profile-specific implementation guidance to see AU Core Pathology Result Observation profile for pathology results [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
 - [AU Core Encounter](StructureDefinition-au-core-encounter.html)
@@ -19,6 +22,7 @@ This change log documents the significant updates and resolutions implemented fr
 - [AU Core Immunization](StructureDefinition-au-core-immunization.html):
   - added Must Support to Immunization.lotNumber [FHIR-47331](https://jira.hl7.org/browse/FHIR-47331)
   - changed Immunization.extension to add Vaccine Vial Serial Number (not marked as *Must Support*) [AU Base: FHIR-46317](https://jira.hl7.org/browse/FHIR-46317)
+  - added Must Support and obligation SHOULD:populate to Immunization.occurrenceDateTime for the AU Core Responder [FHIR-45216](https://jira.hl7.org/browse/FHIR-45216)
 - [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html):
   - added Must Support to MedicationRequest.dosageInstruction.text [FHIR-50101](https://jira.hl7.org/browse/FHIR-50101)
   - removed duplication of obligation flag added by error to MedicationRequest.medicationReference [FHIR-50800](https://jira.hl7.org/browse/FHIR-50800)
@@ -37,6 +41,8 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support on Patient.telecom.system [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
   - added Must Support on Patient.telecom.value [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
   - added Must Support on Patient.telecom.use [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
+- [AU Core Procedure](StructureDefinition-au-core-procedure.html):
+  - added Must Support and obligation SHOULD:populate to Procedure.performedDateTime for the AU Core Responder [FHIR-45145](https://jira.hl7.org/browse/FHIR-45145)
 - [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html):
   - added the new profile, including interaction support and replacing references to AU Base Related Person with AU Core RelatedPerson [FHIR-49745](https://jira.hl7.org/browse/FHIR-49745), [FHIR-49746](https://jira.hl7.org/browse/FHIR-49746), [FHIR-44600](https://jira.hl7.org/browse/FHIR-44600), [FHIR-49747](https://jira.hl7.org/browse/FHIR-49747).
 - [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html): 
