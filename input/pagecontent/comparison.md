@@ -277,8 +277,8 @@ The following IPS profile(s) contain additional requirements. Implementers are a
     </thead>
     <tbody>
         <tr>
-            <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
-            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-AllergyIntolerance-uv-ips.html">Allergy Intolerance (IPS)</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-AllergyIntolerance-uv-ips.html">Allergy Intolerance (IPS)</a></td>
             <td style="width: 25%;">AllergyIntolerance.patient.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
@@ -303,18 +303,10 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">AllergyIntolerance.onset[x]</td>
-            <td style="width: 25%;">Type choice dateTime is flagged as <i>Must Support</i> in IPS.</td>
-        </tr>
-        <tr>
-            <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
             <td style="width: 25%;">Condition.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Condition.onset[x]</td>
-            <td style="width: 25%;">Type choice dateTime is flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.clinicalStatus</td>
