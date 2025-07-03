@@ -1,3 +1,5 @@
+{::options toc_levels="1..4"/}
+
 ### Conforming to AU Core
 
 There are two different ways to implement AU Core:
