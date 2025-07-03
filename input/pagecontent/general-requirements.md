@@ -1,3 +1,5 @@
+{::options toc_levels="1..4"/}
+
 ### Conforming to AU Core
 
 There are two different ways to implement AU Core:
@@ -244,7 +246,7 @@ AU Core Waist Circumference|Observation.component.value[x]|Quantity, CodeableCon
 
 ##### Must Support - Choice of Identifiers
 A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
-- AU Core Responders **SHALL** correctly populate the element with identifiers from any supported identifier type where the identifier is known.
+- AU Core Responders **SHALL** correctly populate the element with identifiers from at least one supported identifier type where the identifier is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any identifier type allowed by the element definition.
 
 The table below provides a list of AU Core profile elements that allow multiple identifier types.
@@ -258,7 +260,7 @@ AU Core PractitionerRole|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
 For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) requires support for the following choices `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU Core Patient Profile:
-- AU Core Responders **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Care Number, or DVA Number, or any combination of them.
+- AU Core Responders **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Care Number, or DVA Number, or any combination of them where the identifier is known.
 - AU Core Requesters **SHALL** accept Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an IHI, Medicare Care Number, or DVA Number identifier, or may be some other allowed identifier.
 
 Systems **MAY** support populating and processing other identifiers, but this is not a requirement of AU Core.
@@ -290,7 +292,7 @@ The table below lists the applicable profiles and elements in AU Core that suppo
 
 AU Core Profile |Must Support Sub-Element|Terminology Choices
 ---|---
-AU Core Immunization|Immunization.code.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
+AU Core Immunization|Immunization.vaccineCode.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
 AU Core Medication|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 AU Core MedicationRequest|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 AU Core MedicationStatement|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
