@@ -31,6 +31,10 @@ This change log documents the significant updates and resolutions implemented fr
   - added the new profile, including interaction support and adding the DiagnosticReport resource to AU Core CapabilityStatements [FHIR-45091](https://jira.hl7.org/browse/FHIR-45091), [FHIR-49954](https://jira.hl7.org/browse/FHIR-49954), [FHIR-49955](https://jira.hl7.org/browse/FHIR-49955), [FHIR-49956](https://jira.hl7.org/browse/FHIR-49956), [FHIR-49957](https://jira.hl7.org/browse/FHIR-49957), [FHIR-49958](https://jira.hl7.org/browse/FHIR-49958), [FHIR-49959](https://jira.hl7.org/browse/FHIR-49959).
   - added Must Support to MedicationStatement.dosage.text [FHIR-50101](https://jira.hl7.org/browse/FHIR-50101)
   - applied technical correction to add Must Support and obligation flag to slices medicationCodeableConcept and medicationReference on MedicationStatement.medication[x] to align with Must Support on the sliced element [FHIR-51083](https://jira.hl7.org/browse/FHIR-51083)
+  - removed duplication of obligation flag added by error to MedicationRequest.medicationReference [FHIR-50800](https://jira.hl7.org/browse/FHIR-50800)
+- [AU Core Organization](StructureDefinition-au-core-organization.html): 
+  - added Must Support on Organization.telecom.system [FHIR-51042](https://jira.hl7.org/browse/FHIR-51042)
+  - added Must Support on Organization.telecom.value [FHIR-51042](https://jira.hl7.org/browse/FHIR-51042)
 - [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html): 
   - added profile-specific implementation guidance to see AU Core Diagnostic Result Observation profile for non imaging or pathology results  [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889)
   - changed Observation.effective[x] type to remove type constraint [AU Base: FHIR-49189](https://jira.hl7.org/browse/FHIR-49189)
@@ -41,6 +45,9 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support on Patient.telecom.system [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
   - added Must Support on Patient.telecom.value [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
   - added Must Support on Patient.telecom.use [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
+- [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html): 
+  - added Must Support on PractitionerRole.telecom.system [FHIR-51034](https://jira.hl7.org/browse/FHIR-51034)
+  - added Must Support on PractitionerRole.telecom.value [FHIR-51034](https://jira.hl7.org/browse/FHIR-51034)
 - [AU Core Procedure](StructureDefinition-au-core-procedure.html):
   - added Must Support and obligation SHOULD:populate to Procedure.performedDateTime for the AU Core Responder [FHIR-45145](https://jira.hl7.org/browse/FHIR-45145)
 - [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html):

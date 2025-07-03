@@ -706,18 +706,10 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
-            <td rowspan="8" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td>
             <td style="width: 25%;">Organization.active</td>
             <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Organization.telecom.system</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Organization.telecom.value</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.address.line</td>
@@ -854,8 +846,8 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
-            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole Profile</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole Profile</a></td>
             <td style="width: 25%;">PractitionerRole.telecom, PractitionerRole.endpoint</td>
             <td style="width: 25%;">US Core requires telecom or endpoint to be present (pd-1).</td>
         </tr>
@@ -866,14 +858,6 @@ The following US Core profile(s) contain additional requirements. Implementers a
         <tr>
             <td style="width: 25%;">PractitionerRole.telecom</td>
             <td style="width: 25%;">US Core requires all telecom to have system and value.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">PractitionerRole.telecom.system</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">PractitionerRole.telecom.value</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">PractitionerRole.endpoint</td>
