@@ -11,7 +11,7 @@ The following are supported usage scenarios for this profile:
 - Read information about a patient referenced by another resource
 
 ### Profile specific implementation guidance
-- When populating `Patient.identifier`, responders are not required to populate all known patient identifiers from the source system. Producers:
+- When populating `Patient.identifier`, responders are not required to populate all known patient identifiers from the source system. Responders:
   - **SHALL** populate with at least one identifier
   - **SHALL** populate with at least one of the supported identifier types if known
   - **SHOULD** populate an IHI in preference to Medicare or DVA numbers where the IHI is known and **MAY** also provide a Medicare, DVA number, other identifier type or any combination of them
