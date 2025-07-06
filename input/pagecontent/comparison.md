@@ -200,10 +200,10 @@ The following IPA profile(s) contain additional requirements. Implementers are a
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 25%;">AU Core</th>
-            <th style="width: 25%;">IPA 1.1.0</th>
+            <th style="width: 25%;">AU Core Profile</th>
+            <th style="width: 25%;">IPA 1.1.0 Profile </th>
             <th style="width: 25%;">Element</th>
-            <th style="width: 25%;">Additional requirements</th>
+            <th style="width: 25%;">IPA Profile Additional requirements</th>
         </tr>
     </thead>
     <tbody>
@@ -269,10 +269,10 @@ The following IPS profile(s) contain additional requirements. Implementers are a
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 25%;">AU Core</th>
-            <th style="width: 25%;">IPS 2.0.0-ballot</th>
+            <th style="width: 25%;">AU Core Profile</th>
+            <th style="width: 25%;">IPS 2.0.0-ballot Profile</th>
             <th style="width: 25%;">Element</th>
-            <th style="width: 25%;">Additional requirements</th>
+            <th style="width: 25%;">IPS Profile Additional requirements</th>
         </tr>
     </thead>
     <tbody>
@@ -515,10 +515,10 @@ The following US Core profile(s) contain additional requirements. Implementers a
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 25%;">AU Core</th>
-            <th style="width: 25%;">US Core 7.0.0</th>
+            <th style="width: 25%;">AU Core Profile</th>
+            <th style="width: 25%;">US Core 7.0.0 Profile </th>
             <th style="width: 25%;">Element</th>
-            <th style="width: 25%;">Additional requirements</th>
+            <th style="width: 25%;">US Core Profile Additional requirements</th>
         </tr>
     </thead>
     <tbody>
