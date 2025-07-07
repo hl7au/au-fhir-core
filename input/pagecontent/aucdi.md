@@ -4,13 +4,6 @@ AUCDI defines data groups comprising one or more data elements and references cl
 
 AU Core is a technical specification that addresses constraints and obligations on data representation for exchange. AU Core enables system data to be mapped to an agreed FHIR format and defines capability requirements to share data via FHIR RESTful API interactions. 
 
-AUCDI and AU Core are updated periodically, and each expand upon the initial core set. AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases: 
-
-AUCDI Version | AU Core Version
----|---
-R1|1.0.0
-R2 (Core)|2.0.0
-{:.grid}
 
   <div> 
     <img src="aucdi2core.png" alt="AUCDI and AU Core Development Approach" style="width:45%"/>
@@ -24,6 +17,15 @@ An interpretation of AUCDI clinical information requirements through community c
 * AU Core includes exchange for clinical concepts not yet included in AUCDI e.g. MedicationRequest
 * AU Core includes data elements not included in AUCDI that are required to make FHIR implementable e.g. Observation.status, MedicationRequest.intent, Provenance.
 * Neither AUCDI nor AU Core are required to be implemented as a whole single product. Parts can be implemented as required for specific use cases.
+
+AUCDI and AU Core are updated periodically, and each expand upon the initial core set. AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases: 
+
+AUCDI Version | AU Core Version
+---|---
+R1|1.0.0
+R2 (Core)|2.0.0
+{:.grid}
+
 
 ### AUCDI (Core) mappings into AU Core
 
