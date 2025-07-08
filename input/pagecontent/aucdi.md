@@ -18,6 +18,8 @@ An interpretation of AUCDI clinical information requirements through community c
 * AU Core includes data elements not included in AUCDI that are required to make FHIR implementable e.g. Observation.status, MedicationRequest.intent, Provenance.
 * Neither AUCDI nor AU Core are required to be implemented as a whole single product. Parts can be implemented as required for specific use cases.
 
+### AUCDI and AU Core versions
+
 AUCDI and AU Core are updated periodically, and each expand upon the initial core set. AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases: 
 
 AUCDI Version | AU Core Version
@@ -105,7 +107,7 @@ Column attribute descriptions are as follows:
     <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>. Future versions of AU Core will develop and test approaches to addressing Last Updated.</td>
   </tr>
   <tr>
-    <td rowspan="5">Procedure completed event</td>
+    <td rowspan="5">Procedure</td>
     <td colspan="2">Procedure name</td>
     <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
     <td>Procedure.code</td>
@@ -136,7 +138,7 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td rowspan="4">Vaccination administered event</td>
+    <td rowspan="4">Vaccination</td>
     <td colspan="2">Vaccine name</td>
     <td><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
     <td>Immunization.vaccineCode</td>
