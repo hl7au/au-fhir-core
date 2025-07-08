@@ -1,3 +1,5 @@
+{::options toc_levels="1..4"/}
+
 ### Conforming to AU Core
 
 There are two different ways to implement AU Core:
@@ -68,6 +70,7 @@ In AU Core, the meaning of *Must Support* is specified in terms of [Obligation C
 Actor | Code | Display | Definition | Notes
 --- | --- | --- | --- | ---
 [AU Core Responder](ActorDefinition-au-core-actor-responder.html) | [SHALL:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate-if-known) | SHALL populate if known | Conformant applications producing resources SHALL correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance.
+[AU Core Responder](ActorDefinition-au-core-actor-responder.html) | [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate) | SHOULD populate | Conformant applications producing resources SHOULD include this element if a value is known and allowed to be shared.| This implementation obligation means that whenever the producer knows the correct value for an element, it should populate it.
 [AU Core Requester](ActorDefinition-au-core-actor-requester.html) | [SHALL:no-error](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58no-error) | SHALL not error if present | Conformant applications SHALL accept resources containing any valid value for the element without error. | Applications are still able to inform the user that a value cannot be processed correctly and may ignore the data, but applications aren't able to reject an instance merely because the element is present (which would be allowed for elements that do not have this obligation). A system MAY raise an error if the value provided is not valid or violates specific business rules. This obligation also applies to elements that only contain an extension in place of a value where (or equivalent), should either of these be allowed on the consumer obligations
 
 *Must Support* elements are treated differently between [AU Core Responder](ActorDefinition-au-core-actor-responder.html) and [AU Core Requester](ActorDefinition-au-core-actor-requester.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
@@ -243,7 +246,7 @@ AU Core Waist Circumference|Observation.component.value[x]|Quantity, CodeableCon
 
 ##### Must Support - Choice of Identifiers
 A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
-- AU Core Responders **SHALL** correctly populate the element with identifiers from any supported identifier type where the identifier is known.
+- AU Core Responders **SHALL** correctly populate the element with identifiers from at least one supported identifier type where the identifier is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any identifier type allowed by the element definition.
 
 The table below provides a list of AU Core profile elements that allow multiple identifier types.
@@ -257,7 +260,7 @@ AU Core PractitionerRole|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
 For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) requires support for the following choices `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU Core Patient Profile:
-- AU Core Responders **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Care Number, or DVA Number, or any combination of them.
+- AU Core Responders **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Care Number, or DVA Number, or any combination of them where the identifier is known.
 - AU Core Requesters **SHALL** accept Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an IHI, Medicare Care Number, or DVA Number identifier, or may be some other allowed identifier.
 
 Systems **MAY** support populating and processing other identifiers, but this is not a requirement of AU Core.
@@ -289,7 +292,7 @@ The table below lists the applicable profiles and elements in AU Core that suppo
 
 AU Core Profile |Must Support Sub-Element|Terminology Choices
 ---|---
-AU Core Immunization|Immunization.code.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
+AU Core Immunization|Immunization.vaccineCode.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
 AU Core Medication|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 AU Core MedicationRequest|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 AU Core MedicationStatement|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)

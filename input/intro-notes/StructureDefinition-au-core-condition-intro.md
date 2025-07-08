@@ -16,3 +16,10 @@ The following are supported usage scenarios for this profile:
   - For indicating no known conditions or problems of any type `Condition.code` **SHOULD** use the code SNOMED CT 160245001 \|No current problems or disability (situation)\|
 - Refutation is not expected to be handled except as above - an appropriate negation code in `Condition.code` and `Condition.verificationStatus` of "confirmed" or "unconfirmed"
 
+<div class="stu-note" markdown="1">
+
+The additional obligation for `Condition.onsetDateTime` for [AU Core Responder](ActorDefinition-au-core-actor-responder.html) is [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate). There is no additional obligation for [AU Core Requester](ActorDefinition-au-core-actor-requester.html), the obligation of [SHALL:no-error](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58no-error) applies.
+
+This obligation is present in the underlying structure but due to a tooling limitation is not currently rendered in the profile view. See [Zulip discussion](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Obligation.20on.20ElementDefinition.2Etype) for more information.
+
+</div><!-- stu-note -->
