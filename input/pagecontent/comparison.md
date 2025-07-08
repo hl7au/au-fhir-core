@@ -262,6 +262,35 @@ IPA does not include requirements for Suppressed Data.
 This version of AU Core has no equivalent profile for the following IPA profiles:
 - IPA-DocumentReference
 
+### IPS profile incompatible requirements <a id="ips-incompatible-requirements"></a>
+
+The following IPS profile(s) contain incompatible requirements with the equivalent AU Core profile. Implementers are advised to note that some code changes may be required to support these profiles.
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 25%;">AU Core Profile</th>
+            <th style="width: 25%;">IPS 2.0.0 Profile </th>
+            <th style="width: 25%;">Element</th>
+            <th style="width: 25%;">IPS Profile Incompatible requirements</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+            <td style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html">Observation Results - Laboratory/Pathology (IPS)</a></td>
+            <td style="width: 25%;">Observation.effective[x]</td>
+            <td style="width: 25%;">IPS prohibits types Timing and instant.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+            <td style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation Social History - Tobacco Use (IPS)</a></td>
+            <td style="width: 25%;">Observation.component</td>
+            <td style="width: 25%;">Prohibited element in IPS.</td>
+        </tr>
+    </tbody>
+</table>
+
 #### IPS profile additional requirements
 
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
@@ -269,8 +298,8 @@ The following IPS profile(s) contain additional requirements. Implementers are a
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 25%;">AU Core</th>
-            <th style="width: 25%;">IPS 2.0.0</th>
+            <th style="width: 25%;">AU Core Profile</th>
+            <th style="width: 25%;">IPS 2.0.0 Profile</th>
             <th style="width: 25%;">Element</th>
             <th style="width: 25%;">IPS Profile Additional requirements</th>
         </tr>
