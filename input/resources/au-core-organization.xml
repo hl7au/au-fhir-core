@@ -140,7 +140,8 @@
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
-      </extension><path value="Organization.name"/>
+      </extension>
+      <path value="Organization.name"/>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
@@ -160,7 +161,48 @@
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
-      </extension><path value="Organization.telecom"/>
+      </extension>
+      <path value="Organization.telecom"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.telecom.system">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
+      <path value="Organization.telecom.system"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.telecom.value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
+      <path value="Organization.telecom.value"/>
       <mustSupport value="true"/>
     </element>
     <element id="Organization.address">

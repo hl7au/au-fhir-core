@@ -11,7 +11,10 @@ The following are supported usage scenarios for this profile:
 - Read information about a patient referenced by another resource
 
 ### Profile specific implementation guidance
-- An individual's IHI **SHOULD** be used in `Patient.identifier` if available, in preference to Medicare or DVA numbers.
+- When populating `Patient.identifier`, responders are not required to populate all known patient identifiers from the source system. Responders:
+  - **SHALL** populate with at least one identifier
+  - **SHALL** populate with at least one of the supported identifier types if known
+  - **SHOULD** populate an IHI in preference to Medicare or DVA numbers where the IHI is known and **MAY** also provide a Medicare, DVA number, other identifier type or any combination of them
 - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#business-identifiers) in AU Base.
 - This profile supports the sex, gender, and related concepts of: Name to Use, Gender Identity, and Individual Pronouns. See the [Sex and Gender](sex-and-gender.html) page for guidance on exchanging sex and gender related concepts conformant to AU Core.
   - Sex Assigned at Birth is not marked as *Must Support* but may be exchanged using the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) as profiled by [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html)
