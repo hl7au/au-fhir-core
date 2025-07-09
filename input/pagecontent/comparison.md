@@ -239,11 +239,11 @@ The following IPA profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">Patient.name.text</td>
-            <td style="width: 25%;">Element SHOULD be present (ipa-pat-3).</td>
+            <td style="width: 25%;">Sub-element SHOULD be present (ipa-pat-3).</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.active</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
+            <td style="width: 25%;">Element SHOULD be present if Patient.link is present (ipa-pat-4). Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.link</td>
