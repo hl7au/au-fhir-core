@@ -409,8 +409,8 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td  style="width: 25%;">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
-            <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-            <td rowspan="9" style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html">Observation Results - Laboratory/Pathology (IPS)</a></td>
+            <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+            <td rowspan="8" style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html">Observation Results - Laboratory/Pathology (IPS)</a></td>
             <td style="width: 25%;">Observation.status</td>
             <td style="width: 25%;">IPS requires value from <a href="https://build.fhir.org/ig/HL7/fhir-ips/ValueSet-results-status-uv-ips.html">Results Status Codes - IPS</a>.</td>
         </tr>
@@ -436,13 +436,9 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]</td>
-            <td style="width: 25%;">Types string, Quantity and CodeableConceptIPS are flagged as <i>Must Support</i> in IPS.</td>
+            <td style="width: 25%;">Types string, Quantity and CodeableConceptIPS are flagged as <i>Must Support</i> in IPS. IPS preferred additional binding to <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html">Results Coded Values Laboratory/Pathology - IPS</a>.</td>
         </tr>
-         <tr>
-            <td style="width: 25%;">Observation.value[x]:valueCodeableConcept</td>
-            <td style="width: 25%;">IPS preferred additional binding to <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html">Results Coded Values Laboratory/Pathology - IPS</a>. Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
-        </tr>
-                <tr>
+        <tr>
             <td style="width: 25%">Observation.interpretation</td>
             <td style="width: 25%">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
       </tr>
