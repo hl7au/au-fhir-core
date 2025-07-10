@@ -1,13 +1,6 @@
 == Suppressed Messages ==
 
 # =========================================================================================
-# === Errors ====
-# =========================================================================================
-
-# === PBS terminology content is not published in FHIR format, validation is not expected. This issue was accepted by the HL7 AU FHIR Working Group in AU Base v5.0.0. ===
-ERROR: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept).coding[1].code: Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'
-
-# =========================================================================================
 # === Warnings ====
 # =========================================================================================
 
@@ -29,42 +22,3 @@ Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/Structu
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpii, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicareprovidernumber, http://hl7.org/fhir/StructureDefinition/Identifier
-
-# === WARNING: Examples with PBS concepts have this warning as there is no publicly available instance of the PBS code system and therefore IG Publisher cannot validate the concept. This is known, accepted behaviour for IG Publisher. These warnings were accepted in AU Core v1.0.0. ===
-== C:\work\git\au-fhir-core\input\examples\medication-2active-ingredients.xml ==
-A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
-WARNING: Medication/2active-ingredients: Medication.code: Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
-WARNING: Medication/2active-ingredients: Medication.code: Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://pbs.gov.au/code/item was not found
-WARNING: Medication/2active-ingredients: Medication.code: A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found; Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://pbs.gov.au/code/item was not found
-WARNING: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept): Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://snomed.info/sct, http://pbs.gov.au/code/item was not found
-WARNING: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept): 'Bactrim DS tablet' is the default display; the code system http://snomed.info/sct has no Display Names for the language en-AU; A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated; The provided code 'http://snomed.info/sct#6632011000036102 ('Bactrim DS tablet')' was not found in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build'; Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found; Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://snomed.info/sct, http://pbs.gov.au/code/item was not found
-WARNING: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept).coding[1]: Resolved system http://pbs.gov.au/code/item (v6.0.0-ci-build), but the definition doesn't include any codes, so the code has not been validated
-WARNING: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept): Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#2951H' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
-WARNING: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept): Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
-
-
-# =========================================================================================
-# === Information ====
-# =========================================================================================
-
-# === INFORMATION: These messages highlight the usage of additional codes or identifiers in examples that are not defined in AU Core profiles. === 
-This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication|2.0.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient|2.0.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-heartrate|2.0.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole|2.0.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus|2.0.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice)
-
-# === INFORMATION: Generated due to inherited slicing in the base profile. The AU Core profile remains valid without redeclaring the slicing discriminator. === 
-This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
-
-# === INFORMATION: Information about the use of standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities; see FHIR-12419. ===
-This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-
-# === INFORMATION: This is NCTS managed content on behalf of the RCPA. IG Publisher generated a message when it detects artefacts with a status of `experimental`. This is known, accepted behaviour for IG Publisher. ===
-Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3|3.0.1
-Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3|3.0.1
-Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3|3.0.1
-Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3|3.0.1
-
-# === INFORMATION: This is HL7 Terminology managed content. IG Publisher generated a message when it detects artefacts with a status of 'draft' or 'deprecated'. This is known, accepted behaviour for IG Publisher. ===
-Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
