@@ -244,6 +244,19 @@ AU Core Respiration Rate|Observation.component.value[x]|Quantity, CodeableConcep
 AU Core Waist Circumference|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 {:.grid}
 
+Some data type choices are labelled as *Must Support* and apply an additional obligation of [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate). In such cases:
+- AU Core Responders **SHOULD** be capable of correctly populating the element with this data type if a value is known and allowed to be shared. This implementation obligation means that whenever the producer knows the correct value for an element, it should populate it.
+
+The table below provides a list of AU Core profile elements where the data type choice is labelled [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate).
+
+Profile |Must Support Data Type
+---|---
+AU Core AllergyIntolerance|AllergyIntolerance.onsetDateTime
+AU Core Condition|Condition.onsetDateTime
+AU Core Immunization|Immunization.occurrenceDateTime
+AU Core Procedure|Procedure.performedDateTime
+{:.grid}
+
 ##### Must Support - Choice of Identifiers
 A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
 - AU Core Responders **SHALL** correctly populate the element with identifiers from at least one supported identifier type where the identifier is known.
