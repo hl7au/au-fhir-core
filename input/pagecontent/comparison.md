@@ -1763,7 +1763,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> update <code>Condition.meta.lastUpdated</code> to reflect new problems and health concerns, and changes in clinical status or verification status.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> update <code>Condition.meta.lastUpdated</code> to reflect new problems and health concerns, and changes in clinical status or verification status.</td> </td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> update <code>Condition.meta.lastUpdated</code> to reflect new problems and health concerns, and changes in clinical status or verification status.</td>
         </tr>
         <tr>
             <td rowspan="11">DiagnosticReport</td>
