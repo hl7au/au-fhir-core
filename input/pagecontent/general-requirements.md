@@ -65,7 +65,7 @@ Labelling an element *[Must Support](https://www.hl7.org/fhir/conformance-rules.
 
 Because AU Core is a foundational standard, *Must Support* needs to be defined in a way that does not impede or prescribe what a system does with the data, so as not to impede each implementation’s ability to tighten and define expectations for use under their own business rules, regulations, policies, etc. There is also a challenge that comes from inheritance of *Must Support* flags into implementation guides that have strict definitions for *Must Support* (e.g., must be able to display this value to an end user). AU Core will only apply the *Must Support* flag on the elements that are necessary to support _minimum_ requirements and are expected to be flagged as *Must Support* across the majority of Australian FHIR implementation guides.
 
-In AU Core, the meaning of *Must Support* is specified in terms of [Obligation Codes](https://hl7.org/fhir/extensions/CodeSystem-obligation.html) in [obligation extensions](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition. The obligation codes used to define the minimum obligations of *Must Support* elements in this implementation guide are reiterated below.
+In AU Core, the meaning of *Must Support* is specified in terms of [Obligation Codes](https://hl7.org/fhir/extensions/CodeSystem-obligation.html) in [obligation extensions](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition. These obligations may also be applied at more granular levels such as individual data type choices. The obligation codes used to define the minimum obligations of *Must Support* elements in this implementation guide are reiterated below.
 
 Actor | Code | Display | Definition | Notes
 --- | --- | --- | --- | ---
@@ -77,11 +77,11 @@ Actor | Code | Display | Definition | Notes
 
 #### AU Core Responder
 An AU Core Responder:
-- **SHALL** correctly populate all *Must Support* elements for which a value is known.
+- **SHALL** correctly populate all *Must Support* elements for which a value is known, in accordance with the obligation specified in the profile.
 - **SHALL** implement the requirements on [Suppressed Data](general-requirements.html#suppressed-data) when an element is NOT allowed to be shared.
 - **SHALL** implement the requirements on [Missing Data](general-requirements.html#missing-data) when an element value is not known.
 
-When a *Must Support* element requires a more tightly stated obligation, this obligation is specified in the AU Core Responder [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition.
+When a *Must Support* element or one of its data type choices requires a more tightly stated obligation, this obligation is specified in the AU Core Responder [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition.
 
 #### AU Core Requester
 An AU Core Requester:
@@ -95,6 +95,12 @@ When a *Must Support* element requires a more tightly stated obligation, this ob
 #### Presentation of Must Support and obligation in profiles
 
 All elements with *Must Support* in AU Core are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements flagged with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
+
+<div class="stu-note" markdown="1">
+
+AU Core defines additional obligations on data types choices of <i>Must Support</i> elements across multiple profiles. These obligations are present in the underlying profile definitions but, due to tooling limitations, are not currently rendered in the profile views. See [Zulip discussion](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Obligation.20on.20ElementDefinition.2Etype) for more information.
+
+</div><!-- stu-note -->
 
  <div> 
     <img src="allergyintolerance-keyelementstable.png" alt="AU Core AllergyIntolerance Key Elements Table" style="width:100%"/>
@@ -244,12 +250,12 @@ AU Core Respiration Rate|Observation.component.value[x]|Quantity, CodeableConcep
 AU Core Waist Circumference|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 {:.grid}
 
-Some data type choices are labelled as *Must Support* and apply an additional obligation of [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate). In such cases:
-- AU Core Responders **SHOULD** be capable of correctly populating the element with this data type if a value is known and allowed to be shared. This implementation obligation means that whenever the producer knows the correct value for an element, it should populate it.
+In addition, some data type choices are labelled as *Must Support* and apply an additional obligation of [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate) for AU Core Responders. In such cases:
+- AU Core Responders **SHOULD** populate the specified data type when it is appropriate and the value is known and allowed to be shared. This is in addition to the **SHALL** correctly requirement to populate the element. The obligation means that whenever the responder knows the correct value for that type and it is permitted to be shared, the element should be populated accordingly.
 
-The table below provides a list of AU Core profile elements where the data type choice is labelled [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate).
+The table below provides a list of AU Core profile elements where a specific data type choice is labelled as *Must Support*.
 
-Profile |Must Support Data Type
+Profile | Must Support Data Type
 ---|---
 AU Core AllergyIntolerance|AllergyIntolerance.onsetDateTime
 AU Core Condition|Condition.onsetDateTime
