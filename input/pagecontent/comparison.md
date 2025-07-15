@@ -3,7 +3,7 @@
 AU Core aligns to, and leverages, international standards and other national standards, in particular:
 - [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/)
 - [International Patient Summary Implementation Guide 2.0.0](https://build.fhir.org/ig/HL7/fhir-ips/)
-- [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU8/)
+- [US Core Implementation Guide 8.0.0](https://hl7.org/fhir/us/core/STU8/)
 
 Relationships between AU Core, AUCDI, and the above key implementation guides is described in [Relationship with other IGs](relationship.html). 
 
@@ -907,7 +907,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address.state</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="http://terminology.hl7.org/ValueSet/USPS-State">USPS Two Letter Alphabetic Codes</a>. Sub-element flaggedas <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="http://terminology.hl7.org/ValueSet/USPS-State">USPS Two Letter Alphabetic Codes</a>. Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address.postalCode</td>
@@ -982,7 +982,7 @@ AU Core compliant resources are compliant with US Core requirements for Missing 
 ##### Suppressed Data
 AU Core compliant resources are compliant with US Core requirements for Suppressed Data.
 
-##### Additional profiles <a id="uscore-additional-profiles"></a>
+##### Additional profiles
 This version of AU Core has no equivalent profile for the following US Core profiles:
 - US Core CarePlan Profile
 - US Core CareTeam Profile
@@ -1004,6 +1004,11 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core Observation Sexual Orientation Profile
 - US Core Simple Observation Profile
 - US Core Treatment Intervention Preference Profile
+- US Core Pediatric BMI for Age Observation Profile
+- US Core Pediatric Weight for Height Observation Profile
+- US Core BMI Profile
+- US Core Pulse Oximetry Profile
+- US Core Pediatric Head Occipital Frontal Circumference Percentile Profile
 - US Core Provenance Profile
 - US Core QuestionnaireResponse Profile  
 - US Core ServiceRequest Profile 
