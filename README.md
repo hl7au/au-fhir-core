@@ -28,7 +28,7 @@ If you've found an issue with this repository or it's contents then you please [
 
 ## Contributing to AU Core Development
 
-AU Core R2 is in currently in development. Ballot for Comment is scheduled for August 2025.
+AU Core R2 is in currently in development. The AU Core R2 Ballot is scheduled for August 2025.
 
 ### 1. Join the AU Core Technical Design Group
 
