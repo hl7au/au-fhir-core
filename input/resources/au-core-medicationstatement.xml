@@ -192,7 +192,6 @@
         </extension>
       </extension>
       <path value="MedicationStatement.subject"/>
-            <min value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile
