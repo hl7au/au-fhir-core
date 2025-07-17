@@ -1317,9 +1317,14 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
     </thead>
     <tbody>
+		<tr>
+            <td>Supported implementation guides</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>.</td>
+        </tr>
         <tr>
             <td>FHIR capabilities</td>
-            <td>A client <strong>SHOULD</strong> specify the patient id when performing searches on other resources.</td>
+            <td><img src="plus_sign.png" width="20"/>A client <strong>SHOULD</strong> specify the patient id when performing searches on other resources.</td>
             <td></td>
         </tr>
 		<tr>
@@ -1327,11 +1332,6 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the IPA conformance expectations for the Patient profile and for each IPA resource type they support, see additional requirements below.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the IPA conformance expectations for the Patient profile and for each IPA resource type they support, see additional requirements below.</td>
         </tr>
-		<tr>
-            <td>Supported implementation guides</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <a href="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch">http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch</a>.</td>
-    </tr>
         <tr>
             <td rowspan="3">Security</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> follow <a href="https://hl7.org/fhir/R4/security.html">FHIR Security</a> requirements.</td>
