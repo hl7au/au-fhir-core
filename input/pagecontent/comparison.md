@@ -561,8 +561,8 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion">Common substances for allergy and intolerance documentation including refutations</a>.</td>
         </tr>
         <tr>
-           <td style="width: 25%;">AllergyIntolerance.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/R4/valueset-clinical-findings.html">SNOMED CT Clinical Findings</a>.</td>
+           <td style="width: 25%;">AllergyIntolerance.manifestation</td>
+           <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/R4/valueset-clinical-findings.html">SNOMED CT Clinical Findings</a>.</td>
         </tr>
         <tr>
             <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
@@ -975,7 +975,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]</td>
-            <td style="widt: 25%;">US core requires minimum of 1. Type choices CodeableConcept and Quantity are flagged as <i>Must Support</i> in US Core. AU Core only allows CodeableConcept.</td>
+            <td style="widt: 25%;">US core requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]:valueCodeableConcept</td>
@@ -983,7 +983,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]:valueQuantity</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://terminology.hl7.org/5.5.0/ValueSet-v3-UnitsOfMeasureCaseSensitive.html">UnitsOfMeasureCaseSensitive</a>.</td>
+            <td style="width: 25%;">US Core allows alternative representation of smoking status as understood by AU Core, and supports capture of tobacco smoking consumption, which the AU Core profile is not intended to support. When this information is included, it is considered part of an additional profile (us-core-25). Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
@@ -1021,6 +1021,7 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core Goal Profile
 - US Core MedicationDispense Profile
 - US Core Average Blood Pressure Profile
+- US Core BMI Profile
 - US Core Care Experience Preference Profile
 - US Core Observation ADI Document Profile
 - US Core Observation Occupation Profile
@@ -1028,13 +1029,12 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core Observation Pregnancy Status Profile
 - US Core Observation Screening Assessment Profile
 - US Core Observation Sexual Orientation Profile
+- US Core Pediatric BMI for Age Observation Profile
+- US Core Pediatric Head Occipital Frontal Circumference Percentile Profile
+- US Core Pediatric Weight for Height Observation Profile
+- US Core Pulse Oximetry Profile
 - US Core Simple Observation Profile
 - US Core Treatment Intervention Preference Profile
-- US Core Pediatric BMI for Age Observation Profile
-- US Core Pediatric Weight for Height Observation Profile
-- US Core BMI Profile
-- US Core Pulse Oximetry Profile
-- US Core Pediatric Head Occipital Frontal Circumference Percentile Profile
 - US Core Provenance Profile
 - US Core QuestionnaireResponse Profile  
 - US Core ServiceRequest Profile 
