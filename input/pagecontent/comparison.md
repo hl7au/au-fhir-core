@@ -983,7 +983,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]:valueQuantity</td>
-            <td style="width: 25%;">US Core allows alternative representation of smoking status as understood by AU Core, and supports capture of tobacco smoking consumption, which the AU Core profile is not intended to support. When this information is included, it is considered part of an additional profile (us-core-25). Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">This US Core profile supports capture of tobacco smoking consumption as well as smoking status; AU Core does not. An instantiation of Tobacco smoking consumption is considered an 'additional profile' not an additional requirement.</td>
         </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
