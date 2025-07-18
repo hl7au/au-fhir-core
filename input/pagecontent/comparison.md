@@ -3,7 +3,7 @@
 AU Core aligns to, and leverages, international standards and other national standards, in particular:
 - [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/)
 - [International Patient Summary Implementation Guide 2.0.0](https://build.fhir.org/ig/HL7/fhir-ips/)
-- [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/STU7/)
+- [US Core Implementation Guide 8.0.0](https://hl7.org/fhir/us/core/STU8/)
 
 Relationships between AU Core, AUCDI, and the above key implementation guides is described in [Relationship with other IGs](relationship.html). 
 
@@ -36,7 +36,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">IPA 1.1.0</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">IPS 2.0.0</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">US Core 7.0.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">US Core 8.0.0</th>
         </tr>
     </thead>
     <tbody>
@@ -44,7 +44,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-bloodpressure.html">AU Core Blood Pressure</a></td>
@@ -373,10 +373,14 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Ratio-uv-ips.html">Ratio (IPS)</a> are flagged as <i>Must Support</i>. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-MedicationRequest-uv-ips.html">MedicationRequest (IPS)</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-MedicationRequest-uv-ips.html">MedicationRequest (IPS)</a></td>
             <td style="width: 25%;">MedicationRequest.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>   
+            <td style="width: 25%;">MedicationRequest.reasonCode</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://www.hl7.org/fhir/us/core/ValueSet-us-core-condition-code.html">US Core Condition Codes</a>.</td>
         </tr>
         <tr>   
             <td style="width: 25%;">MedicationRequest.dosageInstruction.timing</td>
@@ -384,7 +388,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dosageInstruction.route</td>
-            <td  style="width: 25%;">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td  style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.22/expansion">Route of Administration of Therapeutic Agents</a>.Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
@@ -544,15 +548,25 @@ The following US Core profile(s) contain additional requirements. Implementers a
     <thead>
         <tr>
             <th style="width: 25%;">AU Core Profile</th>
-            <th style="width: 25%;">US Core 7.0.0 Profile </th>
+            <th style="width: 25%;">US Core 8.0.0 Profile </th>
             <th style="width: 25%;">Element</th>
             <th style="width: 25%;">US Core Profile Additional requirements</th>
         </tr>
     </thead>
     <tbody>
         <tr>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></td>
+            <td style="width: 25%;">AllergyIntolerance.code</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion">Common substances for allergy and intolerance documentation including refutations</a>.</td>
+        </tr>
+        <tr>
+           <td style="width: 25%;">AllergyIntolerance.manifestation</td>
+           <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/R4/valueset-clinical-findings.html">SNOMED CT Clinical Findings</a>.</td>
+        </tr>
+        <tr>
             <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
             <td style="width: 25%;">Condition.category</td>
             <td style="width: 25%;">US Core requires category of 'problem-list-item' or 'health-concern'.</td>
         </tr>
@@ -562,22 +576,22 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Condition.meta.lastUpdated</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.assertedDate</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.abatement[x]</td>
+            <td style="width: 25%;">Type choice dateTime is flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.recordedDate</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a></td>
-            <td style="width: 25%;">Condition.assertedDate</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
-        </tr>
-        <tr>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a></td>
             <td style="width: 25%;">Condition.encounter</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
@@ -586,24 +600,32 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core Diagnostic Result Observation</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result Profile</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core Diagnostic Result Observation</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result Profile</a></td>
             <td style="width: 25%;">Observation.code</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/R4/valueset-observation-codes.html">LOINC Codes</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]</td>
-            <td style="width: 25%;">US Core requires UCUM for coded quantity units.</td>
+            <td style="width: 25%;">US Core requires UCUM for coded quantity units (us-core-3). Type choices Quantity, CodeableConcept and string are flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.encounter</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
+            <td style="width: 25%;">Observation.effective[x]</td>
+            <td style="width: 25%;">Type choice dateTime is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.performer</td>
+            <td style="width: 25%;">Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
             <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
-            <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
+            <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
             <td style="width: 25%;">Encounter.type</td>
-            <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.23/expansion">Encounter Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.meta</td>
@@ -611,19 +633,19 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.meta.lastUpdated</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.identifier</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">US Core requires all identifiers to have system and value. Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.identifier.system</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.identifier.value</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.participant.period</td>
@@ -638,8 +660,8 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-immunization.html">US Core Immunization Profile</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-immunization.html">US Core Immunization Profile</a></td>
             <td style="width: 25%;">Immunization.vaccineCode</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.6/expansion">CVX Vaccines Administered Vaccine Set</a>.</td>
         </tr>
@@ -656,8 +678,16 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
-            <td rowspan="8" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-location.html">US Core Location Profile</a></td>
+            <td style="width: 25%;">Immunization.performer</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Immunization.performer.actor</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td rowspan="11" style="width: 25%;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
+            <td rowspan="11" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-location.html">US Core Location Profile</a></td>
             <td style="width: 25%;">Location.name</td>
             <td style="width: 25%;">US Core requires minimum of 1.</td>
         </tr>
@@ -670,34 +700,46 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
+            <td style="width: 25%;">Location.type.coding</td>
+            <td style="width: 25%;">US Core requires minimum of 1 and each coding to have system and code. Sub-element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Location.type.coding.system</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Location.type.coding.code</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">Location.telecom</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Location.address.line</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Location.address.city</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Location.address.state</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="http://terminology.hl7.org/ValueSet/USPS-State">USPS Two Letter Alphabetic Codes</a>. Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Location.address.postalCode</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-medication.html">US Core Medication Profile</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-medication.html">US Core Medication Profile</a></td>
             <td style="width: 25%;">Medication.code</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
-            <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
+            <td rowspan="11" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td rowspan="11" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
             <td style="width: 25%;">MedicationRequest.medicationCodeableConcept</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
@@ -707,19 +749,27 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.reported[x]</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Type choice boolean and reference target Practitioner are flagged as <i>Must Support</i> in US Core. Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationRequest.requester</td>
+            <td style="width: 25%;">Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dosageInstruction.timing</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationRequest.dosageInstruction.route</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dosageInstruction.doseAndRate</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dosageInstruction.doseAndRate.dose[x]</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Type choice Quantity is flagged as <i>Must Support</i> in US Core. Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dispenseRequest</td>
@@ -735,39 +785,39 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
-            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td>
             <td style="width: 25%;">Organization.active</td>
             <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.address.line</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">US Core allows maximum of 4. Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.address.city</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.address.state</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="http://terminology.hl7.org/ValueSet/USPS-State">USPS Two Letter Alphabetic Codes</a>. Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.address.postalCode</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.address.country</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a></td>
+            <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
+            <td rowspan="8" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a></td>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-laboratory-test-codes.html">US Core Laboratory Test Codes</a>. </td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-laboratory-test-codes.html">US Core Laboratory Test Codes</a>. </td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.referenceRange</td>
-            <td style="width: 25%;">US Core requires UCUM for coded quantity units.</td>
+            <td style="width: 25%;">US Core requires UCUM for coded quantity units (us-core-22).</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.meta</td>
@@ -775,33 +825,41 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.meta.lastUpdated</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.encounter</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="10" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td rowspan="10" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></td>
+            <td style="width: 25%;">Observation.performer</td>
+            <td style="width: 25%;">Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.effective</td>
+            <td style="width: 25%;">Type choice dateTime flagged as <i>Must Support</i> in US Core.</td>
+        </tr> 
+        <tr>
+            <td style="width: 25%;">Observation.value[x]</td>
+            <td style="width: 25%;">US Core requires UCUM for coded quantity units (us-core-3). Type choices Quantity, CodeableConcept and string are flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
+            <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></td>
             <td style="width: 25%;">Patient.identifier</td>
             <td style="width: 25%;">US Core requires all identifiers to have system and value.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.identifier.system</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.identifier.value</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.name</td>
-            <td style="width: 25%;">US Core requires all name to have family or given or Data Absent Reason extension.</td><i>Must Support</i>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Gender identity</td>
-            <td style="width: 25%;">US Core requires US Core Gender Identity extension.</td>
+            <td style="width: 25%;">US Core requires all name to have family or given or Data Absent Reason extension (us-core-6).</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.telecom</td>
@@ -809,33 +867,33 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Patient.address.line</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.address.city</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.address.state</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://terminology.hl7.org/6.4.0/ValueSet-USPS-State.html">USPS Two Letter Alphabetic Codes</a>. Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.address.postalCode</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="12" style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
-            <td rowspan="12" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></td>
+            <td rowspan="12" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></td>
             <td style="width: 25%;">Practitioner.identifier</td>
              <td style="width: 25%;">US Core requires minimum of 1, and all identifiers to have system and value.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.identifier.system</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.identifier.value</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.telecom</td>
@@ -843,11 +901,11 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.telecom.system</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-lement flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.telecom.value</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address</td>
@@ -855,27 +913,27 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address.line</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">US Core allows maximum of 4. Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address.city</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address.state</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="http://terminology.hl7.org/ValueSet/USPS-State">USPS Two Letter Alphabetic Codes</a>. Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address.postalCode</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.address.country</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole Profile</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole Profile</a></td>
             <td style="width: 25%;">PractitionerRole.telecom, PractitionerRole.endpoint</td>
             <td style="width: 25%;">US Core requires telecom or endpoint to be present (pd-1).</td>
         </tr>
@@ -892,14 +950,22 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
+            <td style="width: 25%;">PractitionerRole.code</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.30/expansion">Care Team Member Function</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">PractitionerRole.specialty</td>
+            <td style="width: 25%;"> US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.1066/expansion">Healthcare Provider Taxonomy</a>.</td>
+        </tr>
+        <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-relatedperson.html">AU Core RelatedPerson</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-relatedperson.html">US Core RelatedPerson Profile</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-relatedperson.html">US Core RelatedPerson Profile</a></td>
             <td style="width: 25%;">RelatedPerson.active</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core and requires minimum of 1.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a></td>
             <td style="width: 25%;">Observation.status</td>
             <td style="width: 25%;">US Core requires status of 'final' or 'entered-in-error'.</td>
         </tr>
@@ -908,18 +974,30 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.6/expansion">Smoking Status Type</a>.</td>
         </tr>
         <tr>
+            <td style="width: 25%;">Observation.value[x]</td>
+            <td style="widt: 25%;">US core requires minimum of 1.</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">Observation.value[x]:valueCodeableConcept</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.3/expansion">Smoking status comprehensive</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.3/expansion">Smoking status comprehensive</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]:valueQuantity</td>
+            <td style="width: 25%;">This US Core profile supports capture of tobacco smoking consumption as well as smoking status; AU Core does not. An instantiation of Tobacco smoking consumption is considered an 'additional profile' not an additional requirement.</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html">US Core Vital Signs Profile</a></td>
+            <td style="width: 25%;">Observation.performer</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-simple-observation.html">US Core Simple Observation Profile</a></td>
-            <td style="width: 25%;">Observation.performer</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Observation.code</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.value[x]</td>
+            <td style="width: 25%;">Type choice Quantity is flagged as <i>Must Support</i> in US Core.</td>
         </tr> 
     </tbody>
 </table>
@@ -930,7 +1008,7 @@ AU Core compliant resources are compliant with US Core requirements for Missing 
 ##### Suppressed Data
 AU Core compliant resources are compliant with US Core requirements for Suppressed Data.
 
-##### Additional profiles <a id="uscore-additional-profiles"></a>
+##### Additional profiles
 This version of AU Core has no equivalent profile for the following US Core profiles:
 - US Core CarePlan Profile
 - US Core CareTeam Profile
@@ -938,16 +1016,23 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core Implantable Device Profile
 - US Core DiagnosticReport Profile for Laboratory Results Reporting Profile
 - US Core DiagnosticReport Profile for Report and Note Exchange Profile
+- US Core ADI DocumentReference Profile
 - US Core DocumentReference Profile
 - US Core Goal Profile
 - US Core MedicationDispense Profile
 - US Core Average Blood Pressure Profile
+- US Core BMI Profile
 - US Core Care Experience Preference Profile
+- US Core Observation ADI Document Profile
 - US Core Observation Occupation Profile
 - US Core Observation Pregnancy Intent Profile
 - US Core Observation Pregnancy Status Profile
 - US Core Observation Screening Assessment Profile
 - US Core Observation Sexual Orientation Profile
+- US Core Pediatric BMI for Age Observation Profile
+- US Core Pediatric Head Occipital Frontal Circumference Percentile Profile
+- US Core Pediatric Weight for Height Observation Profile
+- US Core Pulse Oximetry Profile
 - US Core Simple Observation Profile
 - US Core Treatment Intervention Preference Profile
 - US Core Provenance Profile
@@ -978,7 +1063,7 @@ The table below provides a mapping of AU Core capability statements to capabilit
         <th style="width: 25%; text-align: left; vertical-align: middle;">AU Core</th>
         <th style="width: 25%; text-align: left; vertical-align: middle;">IPA 1.1.0</th>
         <th style="width: 25%; text-align: left; vertical-align: middle;">IPS 2.0.0</th>
-		<th style="width: 25%; text-align: left; vertical-align: middle;">US Core 7.0.0</th>
+		<th style="width: 25%; text-align: left; vertical-align: middle;">US Core 8.0.0</th>
     </tr>
   </thead>
   <tbody>
@@ -986,13 +1071,13 @@ The table below provides a mapping of AU Core capability statements to capabilit
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-client.html">IPA Client</a></td>
 		<td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-client.html">US Core Client</a></td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU8/CapabilityStatement-us-core-client.html">US Core Client</a></td>
     </tr>
 	<tr>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
 		<td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.png" width="20"/><sup>1</sup> (<a href="https://build.fhir.org/ig/HL7/fhir-ips/CapabilityStatement-ips-server.html">IPS Server</a>)</td>
-		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU7/CapabilityStatement-us-core-server.html">US Core Server</a></td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU8/CapabilityStatement-us-core-server.html">US Core Server</a></td>
     </tr>
   </tbody>
 </table>
@@ -1036,10 +1121,10 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
 		<tr>
             <th style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></th>
             <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0</strong></th>
-            <th style="text-align: center; vertical-align: middle;"><strong>US Core 7.0.0</strong></th>
+            <th style="text-align: center; vertical-align: middle;"><strong>US Core 8.0.0</strong></th>
 			<th style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></th>
             <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0</strong></th>
-            <th style="text-align: center; vertical-align: middle;"><strong>US Core 7.0.0</strong></th>
+            <th style="text-align: center; vertical-align: middle;"><strong>US Core 8.0.0</strong></th>
         </tr>
     </thead>
     <tbody>
@@ -1626,8 +1711,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 	<thead>
         <tr>
             <th>AU Core CapabilityStatement requirement</th>
-            <th>US Core 7.0.0 Client CapabilityStatement additional requirements</th>
-			<th>US Core 7.0.0 Server CapabilityStatement additional requirements<sup>2</sup></th>
+            <th>US Core 8.0.0 Client CapabilityStatement additional requirements</th>
+			<th>US Core 8.0.0 Server CapabilityStatement additional requirements<sup>2</sup></th>
         </tr>
     </thead>
     <tbody>
@@ -1654,8 +1739,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> conform to FHIR Communications Security requirements.</td>
         </tr>
 		<tr>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support any SMART App Launch version.</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support any SMART App Launch version.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support SMART App Launch version 2.0.0.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support SMART App Launch version 2.0.0.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> implement consent according to local, institutional, and legal policy.</td>
@@ -1683,9 +1768,9 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="7">Condition</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support at least one of US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support both US Core Condition Encounter Diagnosis Profile US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td rowspan="8">Condition</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core Condition Encounter Diagnosis Profile and US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support both US Core Condition Encounter Diagnosis Profile and US Core Condition Problems and Health Concerns Profile which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>assertedDate Extension</code> or <code>Condition.recordedDate</code> elements.</td>
@@ -1704,17 +1789,21 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> When <code>Condition.category</code> is a "problems-list-item", the <code>Condition.clinicalStatus</code> <strong>SHOULD NOT</strong> be unknown.</td>
-			<td><img src="plus_sign.png" width="20"/> When <code>Condition.category</code> is a "problems-list-item", the <code>Condition.clinicalStatus</code> <strong>SHOULD NOT</strong> be unknown.</td>
+            <td><img src="plus_sign.png" width="20"/> When <code>Condition.category</code> is a "problems-list-item", the <code>Condition.clinicalStatus</code> <strong>SHOULD</strong> be present.</td>
+			<td><img src="plus_sign.png" width="20"/> When <code>Condition.category</code> is a "problems-list-item", the <code>Condition.clinicalStatus</code> <strong>SHOULD</strong> be present.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> reference encounter in <code>Condition.encounter</code> when category is "encounter-diagnosis".</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> reference encounter in <code>Condition.encounter</code> when category is "encounter-diagnosis".</td>
         </tr>
         <tr>
-            <td rowspan="9">DiagnosticReport</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support at least one of US Core DiagnosticReport Profile for Laboratory Results Reporting  or US Core DiagnosticReport Profile for Report and Note Exchange profiles. <img src="plus_sign.png" width="20"/></td>
-		<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DiagnosticReport Profile for Laboratory Results Reporting  and US Core DiagnosticReport Profile for Report and Note Exchange profiles. <img src="plus_sign.png" width="20"/></td>	
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> update <code>Condition.meta.lastUpdated</code> to reflect new problems and health concerns, and changes in clinical status or verification status.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> update <code>Condition.meta.lastUpdated</code> to reflect new problems and health concerns, and changes in clinical status or verification status.</td>
+        </tr>
+        <tr>
+            <td rowspan="11">DiagnosticReport</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DiagnosticReport Profile for Laboratory Results Reporting  and US Core DiagnosticReport Profile for Report and Note Exchange profiles.</td>
+		<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DiagnosticReport Profile for Laboratory Results Reporting  and US Core DiagnosticReport Profile for Report and Note Exchange profiles.</td>	
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> be capable of fetching a DiagnosticReport resource using: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
@@ -1732,10 +1821,6 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			  <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
 			  <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
         </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>resolves</code> reference policy.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>resolves</code> reference policy.</td>
-        </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
             <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
@@ -1748,14 +1833,26 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+code+date</code>, <code>patient+status</code>, and <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+code+date</code>, <code>patient+status</code>, and <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
 		</tr>
+        <tr>    
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use <code>DiagnosticReport.media.link</code> to suppport links to images</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use <code>DiagnosticReport.media.link</code> to suppport links to images</td>
+        </tr>
         <tr>
-            <td rowspan="17">DocumentReference</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile.</td>
+            <td><img src="plus_sign.png"/> <strong>SHOULD</strong> use <code>DiagnosticReport.imagingStudy</code> to reference DICOM imaging studies.</td>
+            <td><img src="plus_sign.png"/> <strong>SHOULD</strong> use <code>DiagnosticReport.imagingStudy</code> to reference DICOM imaging studies.</td>
+        </tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> update <code>DiagnosticReport.meta.lastUpdated</code> to reflect new laboratory reports, and changes in the status of laboratory report.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> update <code>DiagnosticReport.meta.lastUpdated</code> to reflect new laboratory reports, and changes in the status of laboratory report.</td>
+        </tr>
+        <tr>
+            <td rowspan="16">DocumentReference</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile and US Core ADI DocumentReference Profile.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at minimum the five <a href="https://hl7.org/fhir/us/core/ValueSet-us-core-clinical-note-type.html">Common Clinical Notes</a> in the DocumentReference.type.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at minimum the five <a href="https://hl7.org/fhir/us/core/ValueSet-us-core-clinical-note-type.html">Common Clinical Notes</a> in the DocumentReference.type.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at minimum the ten <a href="https://hl7.org/fhir/us/core/ValueSet-us-core-clinical-note-type.html">Common Clinical Notes</a> in the DocumentReference.type.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at minimum the ten <a href="https://hl7.org/fhir/us/core/ValueSet-us-core-clinical-note-type.html">Common Clinical Notes</a> in the DocumentReference.type.</td>
 		</tr>
 		<tr>
 		  <td><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong> support both <code>DocumentReference.content.attachment.url</code> and <code>DocumentReference.content.attachment.data</code>.</td>
@@ -1781,11 +1878,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
 		 <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
         </tr>
-		<tr>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support the <code>resolves</code> reference policy.</td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> support the <code>resolves</code> reference policy.</td>
-        </tr>
-         <tr>
+        <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
@@ -1817,7 +1910,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> If a <code>period</code> parameter is supplied to the <code>$docref</code> operation, a server <strong>SHOULD</strong> return references to documents within the specified date range; if not supplied, a server <strong>SHALL</strong> return the most recent or current document(s).</td>
         </tr>
         <tr>
-            <td rowspan="8">Encounter</td>
+            <td rowspan="9">Encounter</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -1849,6 +1942,10 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in <code>Encounter.location</code>.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of representing the event facility or location directly when it differs from the location referenced in <code>Encounter.location</code>.</td>
         </tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> update Encounter.meta.lastUpdated to reflect new encounters and changes in the status of encounters.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> update Encounter.meta.lastUpdated to reflect new encounters, and changes in the status of encounters.</td>
+        </tr>
 		 <tr>
             <td>HealthcareService</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> interaction.</td>
@@ -1868,8 +1965,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support NDC vaccine codes as translations to CVX vaccine codes, which are required based on the ONC U.S. Core Data for Interoperability (USCDI) requirements.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support NDC vaccine codes as translations to CVX vaccine codes, which are required based on the ONC U.S. Core Data for Interoperability (USCDI) requirements.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support NDC vaccine codes as additional codes to CVX vaccine codes, which are required based on the ASTP U.S. Core Data for Interoperability (USCDI) requirements.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support NDC vaccine codes as additional codes to CVX vaccine codes, which are required based on the ASTP U.S. Core Data for Interoperability (USCDI) requirements.</td>
         </tr>
         <tr>
             <td rowspan="4">Location</td>
@@ -1935,7 +2032,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 		<tr>
             <td rowspan="5">Observation</td>
             <td>A client <strong>SHALL</strong> support at least one Observation, including profiles with <a href="#us-core-profile-additional-requirements">additional requirements</a> and <a href="#uscore-additional-profiles">additional profiles</a>.</td>
-			<td>A client <strong>SHALL</strong> support Observation profiles, including profiles with <a href="#us-core-profile-additional-requirements">additional requirements</a> and <a href="#uscore-additional-profiles">additional profiles</a>.</td>
+			<td>A server <strong>SHALL</strong> support Observation profiles, including profiles with <a href="#us-core-profile-additional-requirements">additional requirements</a> and <a href="#uscore-additional-profiles">additional profiles</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
@@ -1979,13 +2076,13 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="7">Patient</td>
+            <td rowspan="8">Patient</td>
           	<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Patient Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Patient Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>name</code>, <code>birthdate+name</code> and <code>gender+name</code> search parameter and search parameter combinations.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>name</code> and <code>birthdate+name</code> search parameter and search parameter combinations.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>name</code> and <code>birthdate+name</code> search parameter and search parameter combinations.</td>
 		</tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
@@ -2000,15 +2097,19 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least <code>Patient.deceasedDateTime</code> if supporting <code>Patient.deceased[x]</code>.</td>
 		</tr>	
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> (certifying systems)/ <strong>SHALL</strong> (non-certifying systems) follow the Project US@ Technical Specification for Patient.address.line and Patient.address.city formatting.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> (certifying systems)/ <strong>SHALL</strong> (non-certifying systems) follow the Project US@ Technical Specification for Patient.address.line and Patient.address.city formatting.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Patient.address.line and Patient.address.city formatting.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Patient.address.line and Patient.address.city formatting.</td>
 		</tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD NOT</strong> use a Social Security Number in <code>Patient.identifier.value</code>.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD NOT</strong> use a Social Security Number in <code>Patient.identifier.value</code>.</td>
+		</tr>
+        <tr>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> include a text description when using the Race and Ethnicity complex extensions.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> include a text description when using the Race and Ethnicity complex extensions.</td>
 		</tr>	
         <tr>
-            <td rowspan="6">Practitioner</td>
+            <td rowspan="7">Practitioner</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Practitioner which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Practitioner which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -2030,6 +2131,10 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> expose only professional or work contact information to patients.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> expose only professional or work contact information to patients.</td>
         </tr>
         <tr>
             <td rowspan="5">PractitionerRole</td>
@@ -2123,12 +2228,12 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support the <code>_id</code> search parameter.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>resolves</code> reference policy.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>resolves</code> reference policy.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> inteaction.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> interaction.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code>, <code>vread</code> and <code>history-instance</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code>, <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient</code> search parameter.</td>
@@ -2151,8 +2256,8 @@ This version of AU Core has no equivalent CapabilityStatement expectations for t
 	<thead>
         <tr>
             <th>Additional resource type</th>
-            <th>US Core 7.0.0 Client CapabilityStatement resource conformance</th>
-			<th>US Core 7.0.0 Server CapabilityStatement resource conformance</th>
+            <th>US Core 8.0.0 Client CapabilityStatement resource conformance</th>
+			<th>US Core 8.0.0 Server CapabilityStatement resource conformance</th>
         </tr>
     </thead> 
     <tbody>
@@ -2210,6 +2315,11 @@ This version of AU Core has no equivalent CapabilityStatement expectations for t
             <td>QuestionnaireResponse</td>
             <td><strong>SHOULD</strong></td>
 			<td><strong>SHOULD</strong></td>
+        </tr>
+        <tr>
+            <td>ServiceRequest</td>
+            <td><strong>SHOULD</strong></td>
+            <td><strong>SHALL</strong></td>
         </tr>
 		<tr>
             <td>ValueSet</td>
