@@ -10,7 +10,7 @@ The following are supported usage scenarios for this profile:
 
 ### Profile specific implementation guidance
 - See the [Medicine Information](medicine-information.html) page for guidance on how medicinal product identification can be structured in FHIR conformant to AU Core.
-- MedicationStatement resources can represent a medication using either a code as `MedicationRequest.medicationCodeableConcept`, or reference a [Medication](http://hl7.org/fhir/R4/medication.html) resource using `MedicationRequest.medicationReference`.
+- MedicationStatement resources can represent a medication using either a code as `MedicationStatement.medicationCodeableConcept`, or reference a [Medication](http://hl7.org/fhir/R4/medication.html) resource using `MedicationStatement.medicationReference`.
   - Responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these methods
   - When referencing a Medication resource, it is preferred the resource is [contained](http://hl7.org/fhir/R4/references.html#contained) but it may be an external resource
   - If an external reference to a Medication resource is used, the responder **SHALL** support the `_include` parameter for searching this element
