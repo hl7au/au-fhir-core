@@ -11,6 +11,8 @@ This change log documents the significant updates and resolutions implemented fr
 - [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html):
   - added Must Support to AllergyIntolerance.note [FHIR-46940](https://jira.hl7.org/browse/FHIR-46940)
   - added Must Support and obligation SHOULD:populate to AllergyIntolerance.onsetDateTime for the AU Core Responder [FHIR-45187](https://jira.hl7.org/browse/FHIR-45187)
+- [AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html): 
+  - added guidance on potentially apppropriate blood pressure specific additional concepts for sitting, lying, and standing measurements [FHIR-49951](https://jira.hl7.org/browse/FHIR-49951).
 - [AU Core Condition](StructureDefinition-au-core-condition.html):
   - added Must Support and obligation SHOULD:populate to Condition.onsetDateTime for the AU Core Responder [FHIR-45040](https://jira.hl7.org/browse/FHIR-45040)  
 - [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html): 
