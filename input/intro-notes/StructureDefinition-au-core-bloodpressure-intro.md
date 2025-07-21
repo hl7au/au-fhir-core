@@ -11,7 +11,7 @@ The following are supported usage scenarios for this profile:
 - `Observation.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
 - Observations **MAY** have additional codes that translate or map to the Observation code or category codes. For example:
    -  providing a local code
-   -  providing more specific codes, for example
+   -  providing more specific codes, such as
       - sitting blood pressure can be represented by adding additional qualifying codes to `Observation.code` (163035008 \|*Sitting blood pressure*\|) and `Observation.component.code` (407554009 \|*Sitting systolic blood pressure*\|, 407555005 \|*Sitting diastolic blood pressure*\|)
       - standing blood pressure can be represented by adding additional qualifying codes to `Observation.code` (163034007 \|*Standing blood pressure*\|) and `Observation.component.code` (400974009 \|*Standing systolic blood pressure*\|, 400975005 \|*Standing diastolic blood pressure*\|)
       - lying blood pressure can be represented by adding additional qualifying codes to `Observation.code` (163033001 \|*Lying blood pressure*\|) and `Observation.component.code` (407556006 \|*Lying systolic blood pressure*\|, 407557002 \|*Lying diastolic blood pressure*\|)
