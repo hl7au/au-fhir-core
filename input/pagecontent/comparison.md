@@ -1637,6 +1637,20 @@ A system conforming to an AU Core CapabilityStatement aligns with IPS Capability
         </tr>
     </thead> 
     <tbody>
+    	<tr>
+            <td rowspan="2">Bundle</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Bundle resource.</td>
+        </tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/><strong>SHALL</strong> support Bundle (IPS) profile.</td>
+        </tr>
+		<tr>
+            <td rowspan="2">Composition</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Composition resource.</td>
+        </tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/><strong>SHALL</strong> support Composition (IPS) profile.</td>
+        </tr>
 		<tr>
             <td rowspan="2">Patient</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Patient (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
@@ -1656,20 +1670,6 @@ A system conforming to an AU Core CapabilityStatement aligns with IPS Capability
             <td>MedicationRequest</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support MedicationRequest (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>. IPS sets this profile as a supported profile for the MedicationRequest resource, we interpret this as a conformance expectation of <strong>SHOULD</strong>.</td>
         </tr>
-		<tr>
-            <td rowspan="2">Bundle</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Bundle resource.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/><strong>SHALL</strong> support Bundle (IPS) profile.</td>
-        </tr>
-		<tr>
-            <td rowspan="2">Composition</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Composition resource.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/><strong>SHALL</strong> support Composition (IPS) profile.</td>
-        </tr>
     </tbody>
 </table>    
 
@@ -1682,6 +1682,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 <img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
 <img src="plus_sign.png" width="16"/> **New**: The CapabilityStatement includes a conformance requirement that is NOT present in the maped AU Core CapabilityStatement.
+
+*<sup>2</sup>Servers certified under the 21st Century Cures Act for accessing patient data apply additional requirements including requirements to support ALL resources defined in this capability statement with resource conformance SHALL. These additional requirements are excluded from comparison.*
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -1750,12 +1752,12 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="8">CarePlan</td>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support CarePlan resource.</td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support CarePlan resource.</td> 
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support CarePlan resource.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support CarePlan resource.</td> 
         </tr>
         <tr>
            <td><img src="plus_sign.png" width="20"/>  <strong>SHALL</strong> support US Core CarePlan Profile.</td>
-            <td><img src="plus_sign.png" width="20"/>  <strong>SHALL</strong> support US Core CarePlan Profile.</td> 
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core CarePlan Profile.</td> 
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
@@ -1783,8 +1785,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="12">CareTeam</td>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support CareTeam resource.</td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support CareTeam resource.</td> 
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support CareTeam resource.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support CareTeam resource.</td> 
         </tr>
         <tr>
            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core CareTeam Profile.</td>
@@ -1804,7 +1806,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
           <td rowspan="3"><img src="plus_sign.png" width="20"/> A client <strong>SHALL</strong>  support references to US Core Practitioner Profile, US Core PractitionerRole Profile, US Core Patient Profile, and US Core RelatedPerson Profile.</td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support refernces to at least one of US Core Practitioner Profile or US Core PractitionerRole Profile.</td>
+            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support references to at least one of US Core Practitioner Profile or US Core PractitionerRole Profile.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> reference US Core PractitionerRole Profile instead of US Core Practitioner Profile.</td>
@@ -1863,8 +1865,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="6">Coverage</td>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support Coverage resource.</td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support Coverage resource.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Coverage resource.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support Coverage resource.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core Coverage Profile.</td>
@@ -1888,8 +1890,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>  
         <tr>
             <td rowspan="11">Device</td>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support Device resource.</td>
-            <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support Device resource.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Device resource.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support Device resource.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core Implantable Device Profile.</td>
@@ -2078,8 +2080,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="4">Endpoint</td>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support Endpoint resource.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support Endpoint resource.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Endpoint resource.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support Endpoint resource.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code> and <code>vread</code> interactions.</td>
@@ -2095,8 +2097,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="10">Goal</td>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support Goal resource.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support Goal resource.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Goal resource.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support Goal resource.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core Goal Profile.</td>
@@ -2175,8 +2177,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="4">Media</td>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support Media resource.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support Media resource.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Media resource.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support Media resource.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code> and <code>vread</code> interactions.</td>
@@ -2201,8 +2203,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="11">MedicatioDispense</td>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support MedicatioDispense resource.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support support MedicatioDispense resource.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support MedicatioDispense resource.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support support MedicatioDispense resource.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core MedicatioDispense Profile.</td>
@@ -2436,12 +2438,12 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
        <tr>
             <td rowspan="7">Provenance</td>
-            <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support Provenance resource.</td>
-			<td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support Provenance resource.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Provenance resource.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support Provenance resource.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core Provenance Profile.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core Provenance Profile</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core Provenance Profile.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> interaction.</td>
@@ -2542,8 +2544,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 		</tr>
         <tr>
             <td rowspan="17">ServiceRequest</td>
-           <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support ServiceRequest resource.</td>
-           <td><img src="plus_sign.png" width="20"/> A server <strong>SHALL</strong> support ServiceRequest resource.</td>
+           <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support ServiceRequest resource.</td>
+           <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support ServiceRequest resource.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core ServiceRequest Profile.</td>
@@ -2651,6 +2653,4 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> A server <strong>SHOULD</strong> support the <code>context</code> and <code>contextdirection</code> parameters of the <code>$expand</code> operation when supporting DocumentReference for clinical notes.</td>
         </tr>
     </tbody>
-</table>  
-
-*<sup>2</sup>Servers certified under the 21st Century Cures Act for accessing patient data apply additional requirements including requirements to support ALL resources with the conformance expectation SHALL. These additional requirements are excluded from comparison.*
+</table>
