@@ -77,7 +77,7 @@ Actor | Code | Display | Definition | Notes
 
 #### AU Core Responder
 An AU Core Responder:
-- **SHALL** correctly populate all *Must Support* elements for which a value is known, in accordance with the obligation specified in the profile.
+- **SHALL** correctly populate all *Must Support* elements for which a value is known.
 - **SHALL** implement the requirements on [Suppressed Data](general-requirements.html#suppressed-data) when an element is NOT allowed to be shared.
 - **SHALL** implement the requirements on [Missing Data](general-requirements.html#missing-data) when an element value is not known.
 
