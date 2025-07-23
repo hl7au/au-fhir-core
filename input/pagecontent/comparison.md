@@ -1008,7 +1008,7 @@ AU Core compliant resources are compliant with US Core requirements for Missing 
 ##### Suppressed Data
 AU Core compliant resources are compliant with US Core requirements for Suppressed Data.
 
-##### Additional profiles
+##### Additional profiles <a id="us-core-profile-additional-profiles">
 This version of AU Core has no equivalent profile for the following US Core profiles:
 - US Core CarePlan Profile
 - US Core CareTeam Profile
@@ -1683,7 +1683,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 
 <img src="plus_sign.png" width="16"/> **New**: The CapabilityStatement includes a conformance requirement that is NOT present in the maped AU Core CapabilityStatement.
 
-*<sup>2</sup>Servers certified under the 21st Century Cures Act for accessing patient data apply additional requirements including requirements to support ALL resources defined in this capability statement with resource conformance SHALL. These additional requirements are excluded from comparison.*
+*<sup>2</sup>Servers certified under the 21st Century Cures Act for accessing patient data apply additional requirements including requirements to support ALL resources defined in this capability statement with resource conformance SHALL. These additional requirements are excluded from comparison, i.e. with the exception of the Patient resource, resource conformance SHALL is considered SHOULD.*
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -2202,13 +2202,13 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="11">MedicatioDispense</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support MedicatioDispense resource.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support support MedicatioDispense resource.</td>
+            <td rowspan="11">MedicationDispense</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support MedicationDispense resource.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support support MedicationDispense resource.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core MedicatioDispense Profile.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core MedicatioDispense Profile.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core MedicationDispense Profile.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core MedicationDispense Profile.</td>
 		</tr>
          <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>search-type</code> and <code>read</code> interactions.</td>
@@ -2282,8 +2282,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 		</tr>
 		<tr>
             <td rowspan="5">Observation</td>
-            <td><img src="arrow_up.png" width="20"/> A client <strong>SHALL</strong> support at least one Observation, including profiles with <a href="#us-core-profile-additional-requirements">additional requirements</a> and <a href="#uscore-additional-profiles">additional profiles</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> A server <strong>SHALL</strong> support Observation profiles, including profiles with <a href="#us-core-profile-additional-requirements">additional requirements</a> and <a href="#uscore-additional-profiles">additional profiles</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support Observation profiles, including profiles with <a href="#us-core-profile-additional-requirements">additional requirements</a> and <a href="#us-core-profile-additional-profiles">additional profiles</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support Observation profiles, including profiles with <a href="#us-core-profile-additional-requirements">additional requirements</a> and <a href="#us-core-profile-additional-profiles">additional profiles</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> A client <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
