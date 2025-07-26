@@ -1,4 +1,6 @@
 
+This guide is built on top of the FHIR standard and, where available, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/). 
+
 ### Relationship to HL7 AU Base
 
 **AU Base:**
@@ -6,7 +8,6 @@
 - provides ‘Base’ profiles to inform a reader of which added concepts are considered relevant to a particular resource type. 
 - does not apply cardinality constraints or required binding strengths that enforce conformance to those concepts except in rare circumstances. Must support flags are not utilised in AU Base profiles.
 - does not recommend or mandate any particular resource, element, or interactions.
-
 
 **AU Core:**
 - defines a set of conformance requirements that enforce a set of 'minimum requirements' on the local concepts from AU Base, specifying rules for the elements, extensions, vocabularies, and value sets, and the RESTful API interactions. 
@@ -37,9 +38,9 @@ See the [AUCDI](aucdi.html) page for the relationship between the "Core" AUCDI d
 
 AU Core aligns to, and leverages, international standards and other national standards. Corresponding profiles included in relevant FHIR implementation guides were reviewed and considered during the development process to ensure alignment and to facilitate adoption of this standard. These implementation guides include:
 - [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)
-- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/)
-- [International Patient Summary Implementation Guide 1.1.0](https://hl7.org/fhir/uv/ips/STU1.1/)
-- [US Core Implementation Guide 7.0.0](https://hl7.org/fhir/us/core/2024Jan/)
+- [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/)
+- [International Patient Summary 2.0.0](https://build.fhir.org/ig/HL7/fhir-ips/)
+- [US Core 7.0.0](https://hl7.org/fhir/us/core/2024Jan/)
 
 The relationship of AU Core to AUCDI and other implementation guides is shown in the figure below.
 
