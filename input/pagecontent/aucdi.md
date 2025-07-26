@@ -43,7 +43,7 @@ Column attribute descriptions are as follows:
 <thead>
   <tr style="background-color: #f2f2f2;">
     <th>AUCDI Data Group</th>
-    <th colspan="2">AUCDI Data Element</th>
+    <th>AUCDI Data Element</th>
     <th>AU Core Profile(s)</th>
     <th>FHIR Path</th>
     <th>Comment</th>
@@ -52,25 +52,25 @@ Column attribute descriptions are as follows:
 <tbody>
   <tr>
     <td rowspan="4">Adverse reaction risk summary</td>
-    <td colspan="2">Substance name</td>
+    <td>Substance name</td>
     <td><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
     <td><code>AllergyIntolerance.code</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Manifestation</td>
+    <td>Manifestation</td>
     <td><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
     <td><code>AllergyIntolerance.reaction</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Comment</td>
+    <td>Comment</td>
     <td><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
     <td><code>AllergyIntolerance.note</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Last updated</td>
+    <td>Last updated</td>
     <td>-</td>
     <td>-</td>
     <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>. Future versions of AU Core will develop and test approaches to addressing Last Updated.</td>
@@ -135,13 +135,13 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td rowspan="2">Encounter</td>
-    <td colspan="2">Reason for encounter</td>
+    <td>Reason for encounter</td>
     <td><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
     <td><code>Encounter.reasonCode</code> | <code>Encounter.reasonReference</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Modality</td>
+    <td>Modality</td>
     <td><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
     <td><code>Encounter.class</code></td>
     <td></td>
@@ -205,109 +205,109 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td rowspan="9">Medication use statement</td>
-    <td colspan="2">Medication name</td>
+    <td>Medication name</td>
     <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
     <td><code>MedicationStatement.medication[x]</code> | <code>Medication.code</code></td>
     <td rowspan="9">See <a href="medicine-information.html">Medicine Information</a> guidance.</td>
   </tr>
   <tr>
-    <td colspan="2">Clinical indication</td>
+    <td>Clinical indication</td>
     <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
     <td><code>MedicationStatement.reasonCode</code> | <code>MedicationStatement.reasonReference</code></td>
   </tr>
   <tr>
-    <td colspan="2">Strength</td>
+    <td>Strength</td>
     <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
     <td><code>MedicationStatement.medication[x]</code> | <code>Medication.code</code> | <code>Medication.ingredient</code></td>
   </tr>
   <tr>
-    <td colspan="2">Form</td>
+    <td>Form</td>
     <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
     <td><code>MedicationStatement.medication[x]</code> | <code>Medication.form</code></td>
   </tr>
   <tr>
-    <td colspan="2">Dose amount</td>
+    <td>Dose amount</td>
     <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
     <td><code>MedicationStatement.dosage.doseAndRate</code></td>
   </tr>
   <tr>
-    <td colspan="2">Route of administration</td>
+    <td>Route of administration</td>
     <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
     <td><code>MedicationStatement.dosage.route</code></td>
   </tr>
   <tr>
-    <td colspan="2">Dose timing</td>
+    <td>Dose timing</td>
     <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
     <td><code>MedicationStatement.dosage.timing</code></td>
   </tr>
   <tr>
-    <td colspan="2">Comment</td>
+    <td>Comment</td>
     <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
     <td><code>MedicationStatement.note</code></td>
   </tr>
   <tr>
-    <td colspan="2">Date of assertion</td>
+    <td>Date of assertion</td>
     <td><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
-    <td><code>MedicationStatement.dateAsserted</td>
+    <td><code>MedicationStatement.dateAsserted</code></td>
   </tr>
   <tr>
     <td rowspan="5">Problem/Diagnosis summary</td>
-    <td colspan="2">Problem / Diagnosis name</td>
+    <td>Problem / Diagnosis name</td>
     <td><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
     <td><code>Condition.code</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Body site/laterality</td>
+    <td>Body site/laterality</td>
     <td><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
     <td><code>Condition.code</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Status</td>
+    <td>Status</td>
     <td><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
     <td><code>Condition.clinicalStatus</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Comment</td>
+    <td>Comment</td>
     <td><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
     <td><code>Condition.note</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Last updated</td>
+    <td>Last updated</td>
     <td>-</td>
     <td>-</td>
     <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>. Future versions of AU Core will develop and test approaches to addressing Last Updated.</td>
   </tr>
   <tr>
     <td rowspan="5">Procedure</td>
-    <td colspan="2">Procedure name</td>
+    <td>Procedure name</td>
     <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
     <td><code>Procedure.code</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Clinical indication</td>
+    <td>Clinical indication</td>
     <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
     <td><code>Procedure.reasonCode</code> | <code>Procedure.reasonReference[x]</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Body site/laterality</td>
+    <td>Body site/laterality</td>
     <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
     <td><code>Procedure.code</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Date performed</td>
+    <td>Date performed</td>
     <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
-    <td><code>Procedure.performed[x]</code> | Procedure.performedDateTime</code></td>
+    <td><code>Procedure.performed[x]</code> | <code>Procedure.performedDateTime</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Comment</td>
+    <td>Comment</td>
     <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
     <td><code>Procedure.note</code></td>
     <td></td>
@@ -340,38 +340,38 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td rowspan="4">Sex and gender summary</td>
-    <td colspan="2">Sex assigned at birth</td>
+    <td>Sex assigned at birth</td>
     <td><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
     <td><code>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender')</code></td>
     <td>The <a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex or Gender extension</a> is profiled by <a href="StructureDefinition-au-core-rsg-sexassignedab.html">AU Core Sex Assigned At Birth (RSG)</a> to represent the concept of Sex assigned at birth.</td>
   </tr>
   <tr>
-    <td colspan="2">Gender identity</td>
+    <td>Gender identity</td>
     <td><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
     <td><code>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-genderIdentity')</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Pronoun/s</td>
+    <td>Pronoun/s</td>
     <td><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
     <td><code>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-pronouns')</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Last updated</td>
+    <td>Last updated</td>
     <td>-</td>
     <td>-</td>
     <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>. Future versions of AU Core will develop and test approaches to addressing Last Updated.</td>
   </tr>
   <tr>
     <td rowspan="2">Tobacco smoking summary</td>
-    <td colspan="2">Overall status</td>
+    <td>Overall status</td>
     <td><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
     <td><code>Observation</code></td>
     <td></td>
   </tr>
     <tr>
-    <td colspan="2">Last updated</td>
+    <td>Last updated</td>
     <td>-</td>
     <td>-</td>
     <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>. Future versions of AU Core will develop and test approaches to addressing Last Updated.</td>
@@ -391,25 +391,25 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td rowspan="4">Vaccination</td>
-    <td colspan="2">Vaccine name</td>
+    <td>Vaccine name</td>
     <td><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
     <td><code>Immunization.vaccineCode</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Sequence number</td>
+    <td>Sequence number</td>
     <td><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
     <td><code>Immunization.protocolApplied.doseNumber[x]</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Date of administration</td>
+    <td>Date of administration</td>
     <td><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
     <td><code>Immunization.occurenceDateTime</code></td>
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Comment</td>
+    <td>Comment</td>
     <td><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
     <td><code>Immunization.note</code></td>
     <td></td>
