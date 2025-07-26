@@ -24,7 +24,6 @@ This change log documents the significant updates and resolutions implemented fr
   - added new profile, including interaction support to the AU Core CapabilityStatements [FHIR-49934](https://jira.hl7.org/browse/FHIR-49934), [FHIR-50406](https://jira.hl7.org/browse/FHIR-50406), [FHIR-50405](https://jira.hl7.org/browse/FHIR-50405), [AU Base: FHIR-46322](https://jira.hl7.org/browse/FHIR-46322).
 - [AU Core Immunization](StructureDefinition-au-core-immunization.html):
   - added Must Support to Immunization.lotNumber [FHIR-47331](https://jira.hl7.org/browse/FHIR-47331)
-  - changed Immunization.extension to add Vaccine Vial Serial Number (not marked as *Must Support*) [AU Base: FHIR-46317](https://jira.hl7.org/browse/FHIR-46317)
   - added Must Support and obligation SHOULD:populate to Immunization.occurrenceDateTime for the AU Core Responder [FHIR-45216](https://jira.hl7.org/browse/FHIR-45216)
 - [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html):
   - added Must Support to MedicationRequest.dosageInstruction.text [FHIR-50101](https://jira.hl7.org/browse/FHIR-50101)
