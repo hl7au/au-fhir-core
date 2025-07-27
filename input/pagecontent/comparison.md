@@ -14,7 +14,7 @@ Corresponding profiles, conformance requirements, and capability statements incl
 The below comparison evaluates AU Core conformance requirements with the key implementation guides identifying where compliance with AU Core satisfies the expectations established by the referenced implementation guide. 
 
 ### Profile comparison
-As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. 
+As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, and rules on missing or suppressed data. 
 
 The table below provides a profile only comparison from AU Core to profiles in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an IPA profile **MAY NOT** be compliant with AU Core.
 
@@ -187,7 +187,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
     </tbody>
@@ -231,7 +231,7 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
             <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
             <td style="width: 25%;">Patient.identifier</td>     
-            <td style="width: 25%;">IPA requires all identifiers to have system, type or assigner (ipa-pat-1).</td>
+            <td style="width: 25%;">IPA requires all identifiers to have value (1..1), and at least one of system, type or assigner (ipa-pat-1).</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.identifier.value</td>
@@ -248,6 +248,12 @@ The following IPA profile(s) contain additional requirements. Implementers are a
         <tr>
             <td style="width: 25%;">Patient.link</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/StructureDefinition-ipa-practitioner.html">IPA-Practitioner</a></td>
+            <td style="width: 25%;">Practitioner.name.text</td>     
+            <td style="width: 25%;">Sub-element SHOULD be present (ipa-pract-1).</td>
         </tr>
     </tbody>
 </table>
@@ -373,14 +379,10 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Ratio-uv-ips.html">Ratio (IPS)</a> are flagged as <i>Must Support</i>. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-MedicationRequest-uv-ips.html">MedicationRequest (IPS)</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-MedicationRequest-uv-ips.html">MedicationRequest (IPS)</a></td>
             <td style="width: 25%;">MedicationRequest.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
-        </tr>
-        <tr>   
-            <td style="width: 25%;">MedicationRequest.reasonCode</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://www.hl7.org/fhir/us/core/ValueSet-us-core-condition-code.html">US Core Condition Codes</a>.</td>
         </tr>
         <tr>   
             <td style="width: 25%;">MedicationRequest.dosageInstruction.timing</td>
@@ -388,12 +390,12 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dosageInstruction.route</td>
-            <td  style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.22/expansion">Route of Administration of Therapeutic Agents</a>.Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td  style="width: 25%;">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
             <td rowspan="5" style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-MedicationStatement-uv-ips.html">MedicationStatement (IPS)</a></td>
-            <td style="width: 25%;">MedicationStatement.code</td>
+            <td style="width: 25%;">MedicationStatement.medication[x]</td>
             <td style="width: 25%;">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>   
@@ -738,8 +740,8 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
-            <td rowspan="11" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td rowspan="11" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
+            <td rowspan="12" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td rowspan="12" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
             <td style="width: 25%;">MedicationRequest.medicationCodeableConcept</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
@@ -755,13 +757,17 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">MedicationRequest.requester</td>
             <td style="width: 25%;">Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
         </tr>
+        <tr>   
+            <td style="width: 25%;">MedicationRequest.reasonCode</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://www.hl7.org/fhir/us/core/ValueSet-us-core-condition-code.html">US Core Condition Codes</a>.</td>
+        </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dosageInstruction.timing</td>
             <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dosageInstruction.route</td>
-            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.22/expansion">Route of Administration of Therapeutic Agents</a>. Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dosageInstruction.doseAndRate</td>
