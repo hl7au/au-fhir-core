@@ -21,7 +21,7 @@ The context of AU Core within the set of HL7 AU standards is shown in the figure
 *Figure 1: Context of AU Core within the set of HL7 AU FHIR standards*
 <br/>
 
-### Relationship to AUCDI and other IGs
+### Relationship to AUCDI and Other IGs
 The primary intent of the [AUCDI](https://sparked.csiro.au/index.php/sparked-products-resources/aucdi/) is to design and govern a collection of coherent, reusable building blocks known as data groups. These data groups specify “what” the clinical requirements of the clinical information that should be included for data entry, data use, and sharing of information supporting healthcare delivery. However, it does not specify "how" the data is exchanged; this is the role fulfilled by the FHIR standard. AUCDI is not required to be implemented as a whole single product. Parts can be
 implemented as required for specific use cases.
 
