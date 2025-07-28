@@ -10,54 +10,176 @@ The table below provides an overview of the sex and gender concepts that are inc
 
 <img src="orange_checkmark.png" width="20"/> **Localised**: The sex or gender related concept is localised for use in an Australian context but is not marked as *Must Support*.
 
-<img src="minus_symbol.png" width="20"/> **Not localised**: The sex or gender related concept is not localised for use in an Australian context.
+<img src="blue_checkmark.png" width="20"/> **Not Localised**: The sex or gender related concept is relevant and not yet localised for use in an Australian context.
+
+<img src="minus_symbol.png" width="20"/> **Not Applicable**: This sex or gender related concept is not applicable for use with this resource type.
 
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">Sex and Gender Concept</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-core-relatedperson.html">AU Core RelatedPerson</a></th>
+            <th style="width: 12%; text-align: center; vertical-align: middle;">
+                Sex and<br/>Gender Concept
+            </th>
+            <th style="width: 12%; text-align: center; vertical-align: middle;">
+                <a href="sexgender.html#administrative-gender-patientgender">Administrative Gender</a>
+            </th>
+            <th style="width: 12%; text-align: center; vertical-align: middle;">
+                <a href="sexgender.html#name-to-use-ntu">Name to Use</a>
+            </th>
+            <th style="width: 12%; text-align: center; vertical-align: middle;">
+                <a href="sexgender.html#pronouns">Pronouns</a>
+            </th>
+            <th style="width: 12%; text-align: center; vertical-align: middle;">
+                <a href="sexgender.html#gender-identity-gi">Gender Identity</a>
+            </th>
+            <th style="width: 12%; text-align: center; vertical-align: middle;">
+                <a href="sexgender.html#recorded-sex-or-gender">
+                    Recorded Sex <br/>or Gender
+                </a>
+            </th>
+            <th style="width: 12%; text-align: center; vertical-align: middle;">
+                <a href="sexgender.html#sex-assigned-at-birth">
+                    Sex Assigned <br/>at Birth
+                </a>
+            </th>
+            <th style="width: 12%; text-align: center; vertical-align: middle;">
+                <a href="sexgender.html#sex-parameter-for-clinical-use-spcu">
+                    Sex Parameter<br/>for Clinical Use<br/>(SPCU)
+                </a>
+            </th>
         </tr>
     </thead>
     <tbody>
-          <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sex-and-gender.html#administrative-gender-patientgender">Administrative Gender (Patient.gender)</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+        <tr>
+            <td style=" text-align: center; vertical-align: middle;">
+                <a href="StructureDefinition-au-core-patient.html">AU Core<br/>Patient</a>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="green_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="green_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="green_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="green_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sex-and-gender.html#name-to-use">Name to Use</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <a href="StructureDefinition-au-core-practitioner.html">AU Core <br/>Practitioner</a>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="blue_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sex-and-gender.html#pronouns">Pronouns</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <a href="StructureDefinition-au-core-relatedperson.html">AU Core<br/> RelatedPerson</a>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="green_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sex-and-gender.html#gender-identity">Gender Identity</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <a href="StructureDefinition-au-core-medicationrequest.html">AU Core <br/>MedicationRequest</a>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#recorded-sex-or-gender">Recorded Sex or Gender</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sex-and-gender.html#sex-assigned-at-birth">Sex Assigned at Birth</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <a href="StructureDefinition-au-core-procedure.html">AU Core <br/>Procedure</a>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="minus_symbol.png" width="20"/>
+            </td>
+            <td style=" text-align: center; vertical-align: middle;">
+                <img src="orange_checkmark.png" width="20"/>
+            </td>
         </tr>
     </tbody>
 </table>
