@@ -98,7 +98,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
@@ -404,7 +404,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>   
             <td style="width: 25%;">MedicationStatement.effective[x]</td>
-            <td style="width: 25%;">Type choice dateTime is flagged as <i>Must Support</i> in IPS.</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Type choice dateTime is flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>   
             <td style="width: 25%;">MedicationStatement.dosage.timing</td>
@@ -533,7 +533,6 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - DiagnosticReport (IPS)
 - Flag - Alert (IPS)
 - ImagingStudy (IPS)
-- Media observation (Results: laboratory, media)
 - Observation Pregnancy - Expected Delivery Date (IPS) 
 - Observation Pregnancy - Outcome (IPS)
 - Observation Pregnancy- Status (IPS)
@@ -660,6 +659,24 @@ The following US Core profile(s) contain additional requirements. Implementers a
         <tr>
             <td style="width: 25%;">Encounter.hospitalization.dischargeDisposition</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-heart-rate.html">US Core Heart Rate Profile</a></td>
+            <td style="width: 25%;">Observation.code</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.performer</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.component.code</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.component.value[x]</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
@@ -967,17 +984,21 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;"><a href="StructureDefinition-au-core-relatedperson.html">AU Core RelatedPerson</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-relatedperson.html">US Core RelatedPerson Profile</a></td>
             <td style="width: 25%;">RelatedPerson.active</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core and requires minimum of 1.</td>
+            <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a></td>
             <td style="width: 25%;">Observation.status</td>
             <td style="width: 25%;">US Core requires status of 'final' or 'entered-in-error'.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.6/expansion">Smoking Status Type</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Observation.performer</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]</td>
