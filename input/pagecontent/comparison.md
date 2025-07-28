@@ -1820,7 +1820,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 		<tr>
             <td>FHIR resource support</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support fetching and querying of one or more US Core profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement, see additional requirements below.</td>
-		<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core Patient profile and at least one additional resource profile from the list of US Core Profiles and all <i>Must Support</i> US Core Profiles and resources it references, see additional requirements below.</td>
+		    <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core Patient profile and at least one additional resource profile from the list of US Core Profiles and all <i>Must Support</i> US Core Profiles and resources it references, see additional requirements below.</td>
         </tr>
 		<tr>
             <td rowspan="8">Security</td>
@@ -2259,8 +2259,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>patient</code> search parameter.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+lifecycle-status</code>, <code>patient+description</code> and <code>patient+ target-date</code> search parameter combinations.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+lifecycle-status</code>, <code>patient+description</code> and <code>patient+ target-date</code> search parameter combinations.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+lifecycle-status</code>, <code>patient+description</code> and <code>patient+target-date</code> search parameter combinations.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+lifecycle-status</code>, <code>patient+description</code> and <code>patient+target-date</code> search parameter combinations.</td>
         </tr>
 		<tr>
             <td>HealthcareService</td>
@@ -2326,7 +2326,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         <tr>
             <td rowspan="11">MedicationDispense</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support MedicationDispense resource.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support support MedicationDispense resource.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support MedicationDispense resource.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core MedicationDispense Profile.</td>
@@ -2361,7 +2361,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of fetching a MedicationDispense resource using <code>GET [base]/MedicationDispense/[id]</code>.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of returning a Media resource using <code>GET [base]/MedicationDispense/[id]</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of returning a MedicationDispense resource using <code>GET [base]/MedicationDispense/[id]</code>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> and <code>patient+status</code> search parameter combinations.</td>
@@ -2687,7 +2687,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 		</tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+category</code>, <code>patient+category+authored</code>, and <code>patient+code</code> search parameters and search parameter combinations.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+category</code>, <code>patient+category+authored</code>, and <code>patient+code</code> search parameters and search parameter combinations</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+category</code>, <code>patient+category+authored</code>, and <code>patient+code</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
@@ -2751,7 +2751,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support the <code>_id</code> search parameter.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> inteaction.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> interaction.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> interaction.</td>
         </tr>
 		<tr>
