@@ -8,6 +8,7 @@ This change log documents the significant updates and resolutions implemented fr
 #### Changes in this version
 - moved general guidance on representing communication preferences for a patient or related person to AU Base [FHIR-46877](https://jira.hl7.org/browse/FHIR-46877).
 - added to general guidance, reference to AU Base guidance on SNOMED CT Australian Edition [FHIR-51473](https://jira.hl7.org/browse/FHIR-51473).
+- added Recorded Sex or Gender and Sex Parameter for Clinical Use to the Sex and Gender page [AU Base: 51408](https://jira.hl7.org/browse/FHIR-51408).</li>
 - updated AUCDI mapping Date of assertion to be MedicationStatement.dateAsserted [FHIR-49960](https://jira.hl7.org/browse/FHIR-49960).
 - [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html):
   - added Must Support to AllergyIntolerance.note [FHIR-46940](https://jira.hl7.org/browse/FHIR-46940)
