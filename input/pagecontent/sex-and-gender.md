@@ -22,29 +22,29 @@ The table below provides an overview of the sex and gender concepts that are inc
                 Sex and<br/>Gender Concept
             </th>
             <th style="width: 12%; text-align: center; vertical-align: middle;">
-                <a href="sexgender.html#administrative-gender-patientgender">Administrative Gender</a>
+                <a href="sex-and-gender.html#administrative-gender-patientgender">Administrative Gender</a>
             </th>
             <th style="width: 12%; text-align: center; vertical-align: middle;">
-                <a href="sexgender.html#name-to-use-ntu">Name to Use</a>
+                <a href="sex-and-gender.html#name-to-use-ntu">Name to Use</a>
             </th>
             <th style="width: 12%; text-align: center; vertical-align: middle;">
-                <a href="sexgender.html#pronouns">Pronouns</a>
+                <a href="sex-and-gender.html#pronouns">Pronouns</a>
             </th>
             <th style="width: 12%; text-align: center; vertical-align: middle;">
-                <a href="sexgender.html#gender-identity-gi">Gender Identity</a>
+                <a href="sex-and-gender.html#gender-identity-gi">Gender Identity</a>
             </th>
             <th style="width: 12%; text-align: center; vertical-align: middle;">
-                <a href="sexgender.html#recorded-sex-or-gender">
+                <a href="sex-and-gender.html#recorded-sex-or-gender">
                     Recorded Sex <br/>or Gender
                 </a>
             </th>
             <th style="width: 12%; text-align: center; vertical-align: middle;">
-                <a href="sexgender.html#sex-assigned-at-birth">
+                <a href="sex-and-gender.html#sex-assigned-at-birth">
                     Sex Assigned <br/>at Birth
                 </a>
             </th>
             <th style="width: 12%; text-align: center; vertical-align: middle;">
-                <a href="sexgender.html#sex-parameter-for-clinical-use-spcu">
+                <a href="sex-and-gender.html#sex-parameter-for-clinical-use-spcu">
                     Sex Parameter<br/>for Clinical Use<br/>(SPCU)
                 </a>
             </th>
