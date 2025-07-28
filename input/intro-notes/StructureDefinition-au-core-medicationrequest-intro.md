@@ -1,7 +1,7 @@
 See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
 
 
-### Usage scenarios
+### Usage Scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -9,7 +9,7 @@ The following are supported usage scenarios for this profile:
 - Record or update medication orders or prescriptions for a patient
 
 
-### Profile specific implementation guidance
+### Profile Specific Implementation Guidance
 - See the [Medicine Information](medicine-information.html) page for guidance on how medicinal product identification can be structured in FHIR conformant to AU Core.
 - When recording "self-prescribed" medication, `MedicationRequest.requester` references the Patient or RelatedPerson as the prescriber.
 - MedicationRequest resources can represent a medication using either a code as `MedicationRequest.medicationCodeableConcept`, or reference a [Medication](http://hl7.org/fhir/R4/medication.html) resource using `MedicationRequest.medicationReference`.

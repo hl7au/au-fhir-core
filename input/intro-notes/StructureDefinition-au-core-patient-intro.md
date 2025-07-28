@@ -1,6 +1,6 @@
 See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
 
-### Usage scenarios
+### Usage Scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -10,7 +10,7 @@ The following are supported usage scenarios for this profile:
 - Record or update basic demographics and other administrative information about a patient
 - Read information about a patient referenced by another resource
 
-### Profile specific implementation guidance
+### Profile Specific Implementation Guidance
 - When populating `Patient.identifier`, responders are not required to populate all known patient identifiers from the source system. Responders:
   - **SHALL** populate with at least one identifier
   - **SHALL** populate with at least one of the supported identifier types if known
