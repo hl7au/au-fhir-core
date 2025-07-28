@@ -266,6 +266,10 @@ This version of AU Core has no equivalent profile for the following IPA profiles
 
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
+<div class="stu-note">
+This comparison is based on the approved version of the IPS specification as of 10 July 2025. The IPS CI Build includes changes that are ahead of that version, so there may be differences between the CI Build and the specification compared here.
+</div>
+
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
