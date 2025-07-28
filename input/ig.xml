@@ -809,12 +809,12 @@
 				</page>
 				<page>
 					<nameUrl value="relationship.html"/>
-					<title value="Relationship with other IGs"/>
+					<title value="Relationship With Other IGs"/>
 					<generation value="markdown"/>
 				</page>
 				<page>
 					<nameUrl value="comparison.html"/>
-					<title value="Comparison with other national and international IGs"/>
+					<title value="Comparison With Other National and International IGs"/>
 					<generation value="markdown"/>
 				</page>
 				<page>

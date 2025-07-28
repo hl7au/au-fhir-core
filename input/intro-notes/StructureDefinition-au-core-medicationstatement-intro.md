@@ -1,6 +1,6 @@
 See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
 
-### Usage scenarios
+### Usage Scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -8,7 +8,7 @@ The following are supported usage scenarios for this profile:
 - Record or update stated medication usage for a patient
 
 
-### Profile specific implementation guidance
+### Profile Specific Implementation Guidance
 - See the [Medicine Information](medicine-information.html) page for guidance on how medicinal product identification can be structured in FHIR conformant to AU Core.
 - MedicationStatement resources can represent a medication using either a code as `MedicationStatement.medicationCodeableConcept`, or reference a [Medication](http://hl7.org/fhir/R4/medication.html) resource using `MedicationStatement.medicationReference`.
   - Responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these methods

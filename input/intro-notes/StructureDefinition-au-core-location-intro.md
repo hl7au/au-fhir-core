@@ -1,6 +1,6 @@
 See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
 
-### Usage scenarios
+### Usage Scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -8,7 +8,7 @@ The following are supported usage scenarios for this profile:
 - Read information about a location referenced by another resource
 
 
-### Profile specific implementation guidance
+### Profile Specific Implementation Guidance
 - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#business-identifiers) in AU Base.
 - See the [AU Base Location](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-location.html) profile for guidance on using a Location resource as part of defining a type of mobile or remotely delivered service.
 - When constructing an address
