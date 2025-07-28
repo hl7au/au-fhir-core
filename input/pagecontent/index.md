@@ -94,7 +94,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Medicine Information](medicine-information.html): This page provides guidance on constructing medication related resources.
   - [Sex and Gender](sex-and-gender.html): This page provides guidance on the representation of sex, gender, and related concepts.
   - [AUCDI](aucdi.html): This page maps AUCDI data groups and elements to FHIR artefacts in AU Core.
-  - [Relationship with Other IGs](relationship.html): This page provides guidance on the relationship between AU Core, AUCDI, and other implementation guides.
+  - [Relationship With Other IGs](relationship.html): This page provides guidance on the relationship between AU Core, AUCDI, and other implementation guides.
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base.
   - [Comparison With Other National and International IGs](comparison.html): This page provides comparison between AU Core profiles and other national, or international implementation guides.
   - [Future of AU Core](future.html): This page outlines the approach to developing AU Core and yearly update cycle.
