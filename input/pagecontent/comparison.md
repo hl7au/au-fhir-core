@@ -5,6 +5,10 @@ AU Core aligns to, and leverages, international standards and other national sta
 - [International Patient Summary Implementation Guide 2.0.0](https://build.fhir.org/ig/HL7/fhir-ips/)
 - [US Core Implementation Guide 8.0.0](https://hl7.org/fhir/us/core/STU8/)
 
+<div class="stu-note">
+The comparison in this guide is against the approved set of changes for IPS 2.0.0 as of 10 July 2025. Work on IPS 2.0.0 is ongoing; the CI Build for IPS reflects the latest proposed changes and as such differences to the compared baseline are expected.
+</div>
+
 Relationships between AU Core, AUCDI, and the above key implementation guides is described in [Relationship with other IGs](relationship.html). 
 
 International Patient Access (IPA) and International Patient Summary (IPS) are specifically referenced, as many of the profiles defined in AU Core are expected in future to be adopted in Australian localisations of these international standards.
@@ -265,10 +269,6 @@ This version of AU Core has no equivalent profile for the following IPA profiles
 #### IPS Profile Additional Requirements
 
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
-
-<div class="stu-note">
-This comparison is based on the approved version of the IPS specification as of 10 July 2025. The IPS CI Build includes changes that are ahead of that version, so there may be differences between the CI Build and the specification compared here.
-</div>
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
