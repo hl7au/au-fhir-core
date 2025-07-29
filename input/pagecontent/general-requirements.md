@@ -92,7 +92,7 @@ How the system processes the resource depends on local requirements that could a
 
 When a *Must Support* element requires additional or stronger obligation, this obligation is specified in the AU Core Requester [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition.
 
-#### Presentation of Must Support and obligation in profiles
+#### Presentation of Must Support and Obligation in Profiles
 
 All elements with *Must Support* in AU Core are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements flagged with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
 
@@ -104,7 +104,7 @@ All elements with *Must Support* in AU Core are accompanied by an explicit oblig
 
 Implementers need to refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support* with obligations, and the full set of terminology requirements.  Implementers need to be aware that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile.
 
-##### Presentation of Must Support and obligation in raw representations
+##### Presentation of Must Support and Obligation in Raw Representations
 
 When viewing the raw representation (e.g. XML or JSON) of a profile, elements with *Must Support* are denoted by `mustSupport` set to "true", and obligations are defined in the [Obligation Extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) as shown in the example below.
 
@@ -147,7 +147,7 @@ Example: AU Core AllergyIntolerance profile with *Must Support* and obligations 
 }
 ~~~
 
-#### Interpreting profile elements labelled Must Support
+#### Interpreting Profile Elements Labelled Must Support
 
 Profiles defined in this implementation publication flag *Must Support* on elements (e.g. `Patient.name`) and sub-elements of a data type (e.g. `Patient.name.use`). 
 The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element.
