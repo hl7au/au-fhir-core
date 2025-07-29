@@ -44,7 +44,7 @@ This change log documents the significant updates and resolutions implemented fr
   - applied technical correction to add Must Support and obligation flag to slices lab and specificDiscipline on Observation.category to align with Must Support on the sliced element [FHIR-51083](https://jira.hl7.org/browse/FHIR-51083) 
 - [AU Core Patient](StructureDefinition-au-core-patient.html): 
   - removed the cardinality constraint on AU Medicare Card Number identifier, changing it from 0..1 to 0..*  [FHIR-46268](https://jira.hl7.org/browse/FHIR-46268)
-  - added AU Patient Internal Identifier to the Patient.identifier list of allowed types [AU Base: FHIR-48671](https://jira.hl7.org/browse/FHIR-48671)
+  - added AU Patient Internal Identifier as an allowed type for Patient.identifier [AU Base: FHIR-48671](https://jira.hl7.org/browse/FHIR-48671)
   - added Must Support on Patient.telecom.system [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
   - added Must Support on Patient.telecom.value [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
   - added Must Support on Patient.telecom.use [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
