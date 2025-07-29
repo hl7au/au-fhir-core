@@ -13,17 +13,17 @@ AU Core will be published yearly. Yearly AU Core updates reflect changes to:
 
 
 ### AU Core Development Process
-The first release of AU Core was an 18 month process from HL7 AU proposal to publication, this subsequent release follows a  of the first release, outlined in the figure below:
+The first release of AU Core was an 18 month process from HL7 AU proposal to publication, this subsequent release follows an ongoing maintenance release process, outlined in the figure below:
 
 
  <div> 
-    <img src="R2Process.png" alt="AU Core R1 Development Process" style="width:100%"/>
+    <img src="R2Process.png" alt="AU Core R2 Development Process" style="width:100%"/>
   </div>
-*Figure 2: AU Core R1 development process*
+*Figure 2: AU Core R2 development process*
 <br/>
 
 #### Maturing the Baseline
-The approach to develop and mature AU Core is outlined in the figure below making reference to the [Australian FHIR Maturity Level (AFMM) levels](https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#maturity-levels).
+The approach to develop and mature AU Core is outlined in the figure below making reference to the [Australian FHIR Maturity Level (AFMM) levels](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#maturity-levels).
 
  <div> 
     <img src="maturing.png" alt="Maturing the AU Core Baseline" style="width:80%"/>
