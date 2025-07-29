@@ -20,7 +20,7 @@ Implementers are advised to be familiar with the requirements of the FHIR standa
 #### AU Core Profiles and Extensions
 The [Profiles and Extensions](profiles-and-extensions.html) page lists the AU Core profiles and AU Core extensions defined for this implementation guide. An AU Core profile [StructureDefinition](http://hl7.org/fhir/R4/structuredefinition.html) defines the minimum elements, extensions, vocabularies and value sets that **SHALL** be present and constrains the way elements are used when conforming to the profile.
 
-AU Core profile elements include mandatory and *Must Support* requirements. [Mandatory elements](#mandatory-elements) are required and have a minimum cardinality of 1 (min=1). [Must Support](#must-support-and-obligation) elements have defined conformance obligations in AU Core based on actor roles.
+AU Core profile elements include mandatory and *Must Support* requirements. [Mandatory Elements](#mandatory-elements) are required and have a minimum cardinality of 1 (min=1). [Must Support](#must-support-and-obligation) elements have defined conformance obligations in AU Core based on actor roles.
 
 Systems may implement AU Core as: 
 - [Profile Only Support](#profile-only-support) for a system declaring conformance to one or more AU Core profiles
@@ -86,7 +86,7 @@ When a *Must Support* element requires additional or stronger obligation, this o
 #### AU Core Requester
 An AU Core Requester:
 - **SHALL** accept resources containing any valid value for *Must Support* elements without error.
-- **SHALL** accept resources containing *Must Support* elements with [Missing Data](#missing-data) or [Suppressed data](#suppressed-data) without error.
+- **SHALL** accept resources containing *Must Support* elements with [Missing Data](#missing-data) or [Suppressed Data](#suppressed-data) without error.
 
 How the system processes the resource depends on local requirements that could align with obligation terms such as [reject invalid](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-reject-invalid), [correctly handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-handle), [persist](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-persist), [display](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-display), or [ignore](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-ignore).
 

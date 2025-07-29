@@ -13,7 +13,7 @@ In this regard it is similar in nature to other national core specifications suc
 
 For a detailed description of the different ways to implement AU Core see the [Conformance Requirements](general-requirements.html) page.
 
-### Project background
+### Project Background
 
 This implementation guide is under development through the AU Core project as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au/). The Sparked AU FHIR Accelerator is a community comprising government, technology vendors, provider organisations, peak bodies, practitioners, and domain experts, to accelerate the creation and use of national FHIR standards in health care information exchange.
 
@@ -21,7 +21,7 @@ The AU Core Sparked project includes:
 - AUCDI - clinician focussed data requirements project.
 - AU Core FHIR Implementation Guide - HL7 Australia technical data access and exchange specification.
 
-The [AUCDI](https://sparked.csiro.au/index.php/sparked-products-resources/aucdi/) aims to define requirements underlying the standardisation of the capture, structure, usage, and exchange of health data to counteract the current fragmentation of Australia’s health data systems. The AUCDI forms a basis for clinical data requirements for AU Core.
+[AUCDI](https://sparked.csiro.au/index.php/sparked-products-resources/aucdi/) aims to define requirements underlying the standardisation of the capture, structure, usage, and exchange of health data to counteract the current fragmentation of Australia’s health data systems. The AUCDI forms a basis for clinical data requirements for AU Core.
 
 ### Dependencies
 
@@ -56,7 +56,7 @@ A system that creates and initiates a data access request to retrieve core digit
 A system that responds to the data access request submitted by requesters, providing responses to requests for core digital health and administrative information. The AU Core Responder is the server in a client-server interaction.  
 <br/>
 
-### AU Core FHIR RESTful interactions
+### AU Core FHIR RESTful Interactions
 
 For systems that support AU Core FHIR RESTful interactions ([Profile Support + Interaction Support](general-requirements.html#profile-support--interaction-support)), the interaction requirements, such as read and search operations, are detailed in the AU Core Requester and AU Core Responder [CapabilityStatements](capability-statements.html).
 
@@ -81,7 +81,7 @@ The following are simple examples of AU Core FHIR RESTful interactions between A
 *Figure 2: Search for patients that match a family name*
 <br/>
 
-### How to read this guide
+### How to Read This Guide
 
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
