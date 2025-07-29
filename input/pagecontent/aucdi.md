@@ -8,7 +8,7 @@ AU Core is a technical specification that addresses constraints and obligations 
   <div> 
     <img src="aucdi2core.png" alt="AUCDI and AU Core Development Approach" style="width:45%"/>
   </div>
-*Figure 1: AUCDI and AU Core Development Approach*
+*Figure 1: AUCDI and AU Core development approach*
 <br/><br/>
 
 An interpretation of AUCDI clinical information requirements through community consensus is undertaken to define support for the exchange of clinical and administrative data within technical constraints. Note that:
@@ -18,7 +18,7 @@ An interpretation of AUCDI clinical information requirements through community c
 * AU Core includes data elements not included in AUCDI that are required to make FHIR implementable e.g. `Observation.status`, `MedicationRequest.intent`, Provenance.
 * Neither AUCDI nor AU Core are required to be implemented as a whole single product. Parts can be implemented as required for specific use cases.
 
-### AUCDI and AU Core versions
+### AUCDI and AU Core Versions
 
 AUCDI and AU Core are updated periodically, and each expand upon the initial core set. AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases: 
 
@@ -29,7 +29,7 @@ R2 (Core)|2.0.0
 {:.grid}
 
 
-### AUCDI (Core) mappings into AU Core
+### AUCDI (Core) Mappings Into AU Core
 
 The table below shows the relationship between data defined in the "Core" AUCDI Data Groups and Elements and expected usage in AU Core profiles.<br/>
 Column attribute descriptions are as follows:
