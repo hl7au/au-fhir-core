@@ -883,10 +883,14 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
-            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td>
             <td style="width: 25%;">Organization.active</td>
             <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Organization.identifier</td>
+            <td style="width: 25%;">Sub-elements flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Organization.address.line</td>
@@ -2682,7 +2686,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core ServiceRequest Profile.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> interaction.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>search-type</code> and <code>read</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> interaction.</td>
         </tr>
         <tr>
