@@ -1,9 +1,9 @@
-###  Release TBD
-- Publication date: TBD
-- Publication status: TBD
+###  2.0.0-ballot
+- Publication date: 2025-07-31
+- Publication status: Ballot for Working Standard
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to TBD.
+This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to 2.0.0-ballot.
 
 #### Changes in this version
 - moved general guidance on representing communication preferences for a patient or related person to AU Base [FHIR-46877](https://jira.hl7.org/browse/FHIR-46877).

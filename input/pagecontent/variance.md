@@ -6,7 +6,7 @@ HL7 Australia published FHIR implementation guides are required to follow specif
 - **SHALL** include an AU Variance Statement page
 
 ### Variance from AU Base
-This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 6.0.0-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-base/)).
+This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 6.0.0-ballot ([6.0.0-ballot](https://hl7.org.au/fhir/6.0.0-ballot/index.html)).
 
 #### Additionally Profiled Resources
 
