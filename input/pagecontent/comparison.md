@@ -17,7 +17,7 @@ Corresponding profiles, conformance requirements, and capability statements incl
 
 The below comparison evaluates AU Core conformance requirements with the key implementation guides identifying where compliance with AU Core satisfies the expectations established by the referenced implementation guide. 
 
-### Profile comparison
+### Profile Comparison
 As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, and rules on missing or suppressed data. 
 
 The table below provides a profile only comparison from AU Core to profiles in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an IPA profile **MAY NOT** be compliant with AU Core.
