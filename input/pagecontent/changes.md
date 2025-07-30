@@ -5,7 +5,15 @@
 
 This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to 2.0.0-ballot.
 
-#### Changes in this version
+<div class="note-to-balloters" markdown="1">
+**Changes Not Applied**
+- [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html):
+  - change AllergyIntolerance.reaction.manifestation binding to an NCTS Clinical Manifestation value set <a href="https://jira.hl7.org/browse/FHIR-47076">AU Base: FHIR-47076</a>
+- [AU Core Medication](StructureDefinition-au-core-medication.html):
+  - Change Medication.ingredient.item[x] binding to an NCTS managed value set equivalent to the AU Base AMT Medicinal Product and Substances value set <a href="https://jira.hl7.org/browse/FHIR-44781">AU Base: FHIR-44781</a>
+</div>
+
+#### Changes in This Version
 - moved general guidance on representing communication preferences for a patient or related person to AU Base [FHIR-46877](https://jira.hl7.org/browse/FHIR-46877).
 - added to general guidance, reference to AU Base guidance on SNOMED CT Australian Edition [FHIR-51473](https://jira.hl7.org/browse/FHIR-51473).
 - added Recorded Sex or Gender and Sex Parameter for Clinical Use to the Sex and Gender page [AU Base: 51408](https://jira.hl7.org/browse/FHIR-51408).

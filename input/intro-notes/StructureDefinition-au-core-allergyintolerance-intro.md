@@ -1,5 +1,14 @@
-See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
+<div class="note-to-balloters" markdown="1">
+**Upcoming NCTS ValueSet Availability**
 
+Balloters should note that AU Base has submitted a request to NCTS to add a specific value set with agreed changed terminology defined for binding to <code>AllergyIntolerance.reaction.manifestation</code>. This request is pending release and the value set is not available in this guide at the time of publishing.
+
+Balloters should consider the content of the <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/sctau-reference-set-142341000036103">indicative reference set</a> available now that the new NCTS ValueSet will be based on.
+
+Related JIRA issue with details is <a href="https://jira.hl7.org/browse/FHIR-47076">AU Base: FHIR-47076</a>.
+</div>
+
+See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
 
 ### Usage Scenarios
 
