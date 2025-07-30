@@ -3,14 +3,14 @@
 - Publication status: Ballot for Working Standard
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to 2.0.0-ballot.
+This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to [2.0.0-ballot](https://hl7.org.au/fhir/core/2.0.0-ballot/index.html). The changes in this update are for ballot.
 
 <div class="note-to-balloters" markdown="1">
 **Changes Not Applied**
 - [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html):
   - change AllergyIntolerance.reaction.manifestation binding to an NCTS Clinical Manifestation value set <a href="https://jira.hl7.org/browse/FHIR-47076">AU Base: FHIR-47076</a>
 - [AU Core Medication](StructureDefinition-au-core-medication.html):
-  - Change Medication.ingredient.item[x] binding to an NCTS managed value set equivalent to the AU Base AMT Medicinal Product and Substances value set <a href="https://jira.hl7.org/browse/FHIR-44781">AU Base: FHIR-44781</a>
+  - Change Medication.ingredient.item[x] binding to update when the AU Base AMT Medicinal Product and Substances value set moves to be an NCTS managed value set <a href="https://jira.hl7.org/browse/FHIR-44781">AU Base: FHIR-44781</a>
 </div>
 
 #### Changes in This Version
