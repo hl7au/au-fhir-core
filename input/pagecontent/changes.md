@@ -10,7 +10,7 @@ This change log documents the significant updates and resolutions implemented fr
 - added to general guidance, reference to AU Base guidance on SNOMED CT Australian Edition [FHIR-51473](https://jira.hl7.org/browse/FHIR-51473).
 - added Recorded Sex or Gender and Sex Parameter for Clinical Use to the Sex and Gender page [AU Base: 51408](https://jira.hl7.org/browse/FHIR-51408).
 - updated AUCDI mapping Date of assertion to be MedicationStatement.dateAsserted [FHIR-49960](https://jira.hl7.org/browse/FHIR-49960).
-- updated dependency on SMART App Launch from version 2.1.0 to 2.2.0 [FHIR-46398](https://jira.hl7.org/browse/FHIR-46398)
+- updated dependency on SMART App Launch from version 2.1.0 to 2.2.0 [FHIR-46398](https://jira.hl7.org/browse/FHIR-46398).
 - [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html):
   - added Must Support to AllergyIntolerance.note [FHIR-46940](https://jira.hl7.org/browse/FHIR-46940)
   - added Must Support and obligation SHOULD:populate to AllergyIntolerance.onsetDateTime for the AU Core Responder [FHIR-45187](https://jira.hl7.org/browse/FHIR-45187)
