@@ -200,15 +200,15 @@ The table below provides a list of AU Core profile elements that allow multiple 
 
 AU Core Profile |Must Support Element|Reference
 ---|---|---
-AU Core Diagnostic Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
-AU Core Diagnostic Result Observation|Observation.hasMember|AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
-AU Core Encounter|Encounter.participant.individual|AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
-AU Core Encounter|Encounter.reasonReference|AU Core Condition, Observation, AU Core Procedure
-AU Core MedicationRequest|MedicationRequest.requester|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
-AU Core MedicationRequest|MedicationRequest.reasonReference|AU Core Condition, Observation
-AU Core MedicationStatement|MedicationStatement.reasonReference|AU Core Condition, Observation, AU Base Diagnostic Report
-AU Core Pathology Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
-AU Core Procedure|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
+[AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
+[AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.hasMember|AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
+[AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.participant.individual|AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
+[AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.reasonReference|AU Core Condition, Observation, AU Core Procedure
+[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.requester|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
+[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.reasonReference|AU Core Condition, Observation
+[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.reasonReference|AU Core Condition, Observation, AU Base Diagnostic Report
+[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
+[AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
 {:.grid}
 
 
@@ -221,27 +221,27 @@ The table below provides a list of AU Core profile elements that allow multiple 
 
 AU Core Profile |Must Support Element|Data Types
 ---|---|---
-AU Core AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
-AU Core Condition|Condition.onset[x]|dateTime, age, Period, Range
-AU Core Condition|Condition.abatement[x]|dateTime, age, Period, Range
-AU Core Diagnostic Result Observation|Observation.effective[x]|dateTime, Period, Timing, instant
-AU Core Pathology Result Observation|Observation.effective[x]|dateTime, Period, Timing, instant
-AU Core Diagnostic Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Diagnostic Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Immunization|Immunization.occurrence[x]|dateTime, string
-AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
-AU Core MedicationStatement|MedicationStatement.medication[x]|CodeableConcept, Reference
-AU Core MedicationStatement|MedicationStatement.effective[x]|dateTime, Period
-AU Core Pathology Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
-AU Core Blood Pressure|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Body Height|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Body Temperature|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Body Weight|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Heart Rate|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Respiration Rate|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Waist Circumference|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
+[AU Core Condition](StructureDefinition-au-core-condition.html)|Condition.onset[x]|dateTime, age, Period, Range
+[AU Core Condition](StructureDefinition-au-core-condition.html)|Condition.abatement[x]|dateTime, age, Period, Range
+[AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.effective[x]|dateTime, Period, Timing, instant
+[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.effective[x]|dateTime, Period, Timing, instant
+[AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Immunization](StructureDefinition-au-core-immunization.html)|Immunization.occurrence[x]|dateTime, string
+[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.medication[x]|CodeableConcept, Reference
+[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.medication[x]|CodeableConcept, Reference
+[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.effective[x]|dateTime, Period
+[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.performed[x]|dateTime, Period, string, Age, Range
+[AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Body Height](StructureDefinition-au-core-bodyheight.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Body Temperature](StructureDefinition-au-core-bodytemp.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Heart Rate](StructureDefinition-au-core-heartrate.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Respiration Rate](StructureDefinition-au-core-resprate.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 {:.grid}
 
 In addition, some data type choices are labelled as *Must Support* and apply an additional obligation of [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate) for AU Core Responders. In such cases:
@@ -251,10 +251,10 @@ The table below provides a list of AU Core profile elements where a data type ch
 
 Profile | Must Support Data Type
 ---|---
-AU Core AllergyIntolerance|AllergyIntolerance.onsetDateTime
-AU Core Condition|Condition.onsetDateTime
-AU Core Immunization|Immunization.occurrenceDateTime
-AU Core Procedure|Procedure.performedDateTime
+[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)|AllergyIntolerance.onsetDateTime
+[AU Core Condition](StructureDefinition-au-core-condition.html)|Condition.onsetDateTime
+[AU Core Immunization](StructureDefinition-au-core-immunization.html)|Immunization.occurrenceDateTime
+[AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.performedDateTime
 {:.grid}
 
 ##### Must Support - Choice of Identifiers
@@ -266,10 +266,10 @@ The table below provides a list of AU Core profile elements that allow multiple 
 
 AU Core Profile |Must Support Element|Supported Identifiers
 ---|---|---
-AU Core Organization|Organization.identifier|HPI-O, Australian Business Number
-AU Core Patient|Patient.identifier|IHI, Medicare Card Number, DVA Number
-AU Core Practitioner|Practitioner.identifier|HPI-I
-AU Core PractitionerRole|PractitionerRole.identifier|Medicare Provider Number
+[AU Core Organization](StructureDefinition-au-core-organization.html)|Organization.identifier|HPI-O, Australian Business Number
+[AU Core Patient](StructureDefinition-au-core-patient.html)|Patient.identifier|IHI, Medicare Card Number, DVA Number
+[AU Core Practitioner](StructureDefinition-au-core-practitioner.html)|Practitioner.identifier|HPI-I
+[AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
 For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) requires support for the following choices `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU Core Patient Profile:
@@ -288,10 +288,10 @@ The table below lists the applicable profiles and elements in AU Core.
 
 AU Core Profile |Must Support Choice Elements
 ---|---
-AU Core Encounter|Encounter.reasonCode, Encounter.reasonReference
-AU Core MedicationRequest|MedicationRequest.reasonCode, MedicationRequest.reasonReference
-AU Core MedicationStatement|MedicationStatement.reasonCode, MedicationStatement.reasonReference
-AU Core Procedure|Procedure.reasonCode, Procedure.reasonReference
+[AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.reasonCode, Encounter.reasonReference
+[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.reasonCode, MedicationRequest.reasonReference
+[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.reasonCode, MedicationStatement.reasonReference
+[AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.reasonCode, Procedure.reasonReference
 {:.grid}
 
 
@@ -305,10 +305,10 @@ The table below lists the applicable profiles and elements in AU Core that suppo
 
 AU Core Profile |Must Support Sub-Element|Terminology Choices
 ---|---
-AU Core Immunization|Immunization.vaccineCode.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
-AU Core Medication|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
-AU Core MedicationRequest|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
-AU Core MedicationStatement|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+[AU Core Immunization](StructureDefinition-au-core-immunization.html)|Immunization.vaccineCode.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
+[AU Core Medication](StructureDefinition-au-core-medication.html)|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 {:.grid}
 
 For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) requires support for the following terminology choices `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging *Must Support* on those two terminology slices.
