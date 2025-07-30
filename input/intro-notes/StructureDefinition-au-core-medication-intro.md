@@ -1,7 +1,7 @@
 <div class="note-to-balloters" markdown="1">
 **Upcoming NCTS ValueSet Availability**
 
-<code>Medication.ingredient.item[x]</code> inherits preferred binding <a href="http://terminology.hl7.org.au/ValueSet/amt-mp-codes">AMT Medicinal Product and Substances</a> from AU Base. A request has been submitted to NCTS to publish an equivalent value set, but it is not yet available at the time of publication.
+<code>Medication.ingredient.item[x]</code> inherits preferred binding <a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a> from AU Base. A request has been submitted to NCTS to publish an equivalent value set, but it is not yet available at the time of publication.
 
 In the interim, the AU Base value set remains in use and is expected to be deprecated upon release of the NCTS value set.
 
