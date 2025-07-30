@@ -60,7 +60,6 @@ jobs:
     - name: Update Publisher
       run: |
         echo "Updating Publisher"
-        mv publish-setup.json ./webroot/
         curl -sSL https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh | bash -s -- -f -y # uses the latest update script from the ig-publisher-scripts repository
 
     - name: Download past versions
@@ -75,6 +74,7 @@ jobs:
     - name: Create directories
       run: |
         mkdir -p webroot/fhir/core
+        mv publish-setup.json ./webroot/
 
     - name: Download package-list.json
       run: |
