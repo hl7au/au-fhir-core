@@ -258,7 +258,7 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td>Body site/laterality</td>
+    <td>Body site</td>
     <td><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
     <td><code>Condition.code</code></td>
     <td></td>
@@ -301,7 +301,7 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td>Date performed</td>
+    <td>Date/time performed</td>
     <td><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
     <td><code>Procedure.performed[x]</code> | <code>Procedure.performedDateTime</code></td>
     <td></td>
@@ -397,7 +397,7 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td>Sequence number</td>
+    <td>Sequence</td>
     <td><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
     <td><code>Immunization.protocolApplied.doseNumber[x]</code></td>
     <td></td>
