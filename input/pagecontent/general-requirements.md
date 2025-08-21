@@ -179,9 +179,9 @@ If a complex element is labelled as *Must Support*:
 - AU Core Responders **SHALL** correctly populate the element with at least one of the sub-element values if the value is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid sub-element.
 
-For example, the AU Core MedicationRequest Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
+For example, the AU Core AllergyIntolerance Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
 - AU Core Responders **SHALL** correctly populate a value in any valid `AllergyIntolerance.note` sub-element if a value is known e.g. `AllergyIntolerance.note.text`.
-- AU Core Requesters **SHALL** accept the MedicationRequest resource without error if `AllergyIntolerance.note` is present and containing any valid sub-elements.
+- AU Core Requesters **SHALL** accept the AllergyIntolerance resource without error if `AllergyIntolerance.note` is present and containing any valid sub-elements.
 
 If a sub-element is labelled as *Must Support*: 
 - AU Core Responders **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
@@ -189,7 +189,7 @@ If a sub-element is labelled as *Must Support*:
 
 For example, in the AU Core Practitioner Profile, the `name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
 - AU Core Responders **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
-- AU Core Requesters **SHALL** accept a Patient resource without error if `Practitioner.name` is present and contains valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements.
+- AU Core Requesters **SHALL** accept a Practitioner resource without error if `Practitioner.name` is present and contains valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements.
 
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
