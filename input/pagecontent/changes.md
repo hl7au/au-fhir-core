@@ -9,6 +9,7 @@ This change log documents the significant updates and resolutions implemented fr
 Publication date: 2025-07-31
 Publication status: Ballot for Working Standard
 Based on FHIR version: 4.0.1
+
 This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to [2.0.0-ballot](https://hl7.org.au/fhir/core/2.0.0-ballot/index.html). The changes in this update are for ballot.
 
 #### Changes in this version
