@@ -1,14 +1,14 @@
-###  Release TBD
+### Release TBD
 - Publication date: TBD
 - Publication status: TBD
 - Based on FHIR version: 4.0.1
 
 This change log documents the significant updates and resolutions implemented from version [2.0.0-ballot](https://hl7.org.au/fhir/core/2.0.0-ballot/changes.html) to TBD.
 
-###  2.0.0-ballot
-Publication date: 2025-07-31
-Publication status: Ballot for Working Standard
-Based on FHIR version: 4.0.1
+### 2.0.0-ballot
+- Publication date: 2025-07-31
+- Publication status: Ballot for Working Standard
+- Based on FHIR version: 4.0.1
 
 This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to [2.0.0-ballot](https://hl7.org.au/fhir/core/2.0.0-ballot/index.html). The changes in this update are for ballot.
 
@@ -22,7 +22,7 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support to AllergyIntolerance.note [FHIR-46940](https://jira.hl7.org/browse/FHIR-46940)
   - added Must Support and obligation SHOULD:populate to AllergyIntolerance.onsetDateTime for the AU Core Responder [FHIR-45187](https://jira.hl7.org/browse/FHIR-45187)
 - [AU Core Blood Pressure](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-bloodpressure.html): 
-  - added guidance on more specific blood pressure specific concepts for sitting, lying, and standing measurements [FHIR-49951](https://jira.hl7.org/browse/FHIR-49951).
+  - added guidance on more blood pressure specific concepts for sitting, lying, and standing measurements [FHIR-49951](https://jira.hl7.org/browse/FHIR-49951).
 - [AU Core Condition](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-condition.html):
   - added Must Support and obligation SHOULD:populate to Condition.onsetDateTime for the AU Core Responder [FHIR-45040](https://jira.hl7.org/browse/FHIR-45040)  
 - [AU Core Diagnostic Result Observation](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-diagnosticresult.html): 
