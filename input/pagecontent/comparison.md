@@ -497,7 +497,7 @@ IPS does not include requirements for Suppressed Data.
 
 ##### Additional Profiles <a id="ips-additional-profiles"></a>
 This version of AU Core has no equivalent profile for the following IPS profiles:
-- Bundle - IPS
+- Bundle (IPS)
 - Composition (IPS)
 - Device (IPS)
 - Device - Performer or Observer (IPS)
