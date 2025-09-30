@@ -360,7 +360,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">Medication.ingredient.strength</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Ratio-uv-ips.html">Ratio (IPS)</a> are flagged as <i>Must Support</i>. Element flagged as <i>Must Support</i> in IPS.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
