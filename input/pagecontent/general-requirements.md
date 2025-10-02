@@ -262,7 +262,7 @@ A profile may support one or more than one identifier type and will include the 
 - AU Core Responders **SHALL** correctly populate the element with identifiers from at least one supported identifier type where the identifier is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any identifier type allowed by the element definition.
 
-The table below provides a list of AU Core profile elements that allow multiple identifier types.
+The table below provides a list of AU Core profile elements with one or more supported identifier types.
 
 AU Core Profile |Must Support Element|Supported Identifiers
 ---|---|---
