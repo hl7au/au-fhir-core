@@ -245,7 +245,7 @@ AU Core Profile |Must Support Element|Data Types
 {:.grid}
 
 In addition, some data type choices are labelled as *Must Support* and apply an additional obligation of [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate) for AU Core Responders. In such cases:
-- AU Core Responders **SHALL** populate the element when the value is known and allowed to be shared, and **SHOULD** be capable of correctly populating the element using this data type. Typically, this means that an application should demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value of that data type.
+- AU Core Responders **SHALL** populate the element when the value is known and **SHOULD** be capable of correctly populating the element using this data type. Typically, this means that an application should demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value of that data type.
 
 The table below provides a list of AU Core profile elements where a data type choice is labelled as *Must Support*.
 
