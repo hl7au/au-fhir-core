@@ -6,7 +6,7 @@
 This change log documents the significant updates and resolutions implemented from version [2.0.0-ballot](https://hl7.org.au/fhir/core/2.0.0-ballot/changes.html) to TBD.
 
 #### Changes in this version
-- moved general guidance on representing body site and laterality to AU Base [FHIR-52372](https://jira.hl7.org/browse/FHIR-52372).
+- moved substantive guidance on representing body site and laterality to the AU Base [Genera Guidance](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html) page, with AU Core specific content retained [FHIR-52372](https://jira.hl7.org/browse/FHIR-52372).
 
 ### 2.0.0-ballot
 - Publication date: 2025-07-31

@@ -22,7 +22,11 @@ When exchanging `Procedure` and `Condition` resources using AU Core profiles the
 * The `bodySite` element is not *Must Support* in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
 * The `CodeableConcept.text` element is system populated and may reflect more specific detail than the `CodeableConcept.coding` concepts provided.
 
-See the guidance defined in AU Base [Representing Body Site, Which May Include Laterality](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#representing-body-site-which-may-include-laterality) for more information.
+See the guidance in AU Base [Representing Body Site, Which May Include Laterality](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#representing-body-site-which-may-include-laterality) for what to do in each of the following scenarios:
+1. Primary finding/procedure code with body site and laterality as a pre-coordinated code.
+1. Primary finding/procedure code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
+1. Coded body site with laterality and separate primary finding/procedure code.
+1. Coded body site without laterality and separate coded laterality qualifier and a primary finding/procedure code.
 
 
 ### Read/Search Syntax
