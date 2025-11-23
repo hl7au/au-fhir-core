@@ -6,13 +6,13 @@
 This change log documents the significant updates and resolutions implemented from version [2.0.0-ballot](https://hl7.org.au/fhir/core/2.0.0-ballot/changes.html) to TBD.
 
 #### Changes in this version
-- moved substantive guidance on representing body site and laterality from [Representing Body Site, Which May Include Laterality](general-guidance.html#representing-body-site-which-may-include-laterality) section in [General Guidance](general-guidance.html) to the AU Base [General Guidance](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html) page, with AU Core specific content retained [FHIR-52372](https://jira.hl7.org/browse/FHIR-52372).
+- moved substantive guidance on representing body site and laterality from [Representing Body Site, Which May Include Laterality](general-guidance.html#representing-body-site-which-may-include-laterality) section in [General Guidance](general-guidance.html) to the AU Base [General Guidance](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html) page, with AU Core specific content retained [AU Core: FHIR-52372](https://jira.hl7.org/browse/FHIR-52372).
 - [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)
-  - changed Observation.hasMember to restore reference to AU Base Diagnostic Imaging Result profile inherited from AU Base [FHIR-52164](https://jira.hl7.org/browse/FHIR-52164)  
+  - changed Observation.hasMember to restore reference to AU Base Diagnostic Imaging Result profile inherited from AU Base [AU Core: FHIR-52164](https://jira.hl7.org/browse/FHIR-52164)  
 - [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) 
-  - added AU Base Diagnostic Imaging Result to the supported profiles for Observation as a SHALL [FHIR-52164](https://jira.hl7.org/browse/FHIR-52164) 
+  - added AU Base Diagnostic Imaging Result to the supported profiles for Observation as a SHALL [AU Core: FHIR-52164](https://jira.hl7.org/browse/FHIR-52164) 
 - [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html)
-  - added AU Base Diagnostic Imaging Result to the supported profiles for Observation as a SHALL [FHIR-52164](https://jira.hl7.org/browse/FHIR-52164)  
+  - added AU Base Diagnostic Imaging Result to the supported profiles for Observation as a SHALL [AU Core: FHIR-52164](https://jira.hl7.org/browse/FHIR-52164)  
 
 ### 2.0.0-ballot
 - Publication date: 2025-07-31
