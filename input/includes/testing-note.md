@@ -2,7 +2,7 @@
 
 #### Preview of AU Core 2.0.0 for testing
 
-This December 2025 preview snapshot incorporates the normative changes from AU Core 2.0.0-ballot. This snapshot supports testing of AU Core 2.0.0 prior to publication.
+This November 2025 preview snapshot incorporates the normative changes from AU Core 2.0.0-ballot. This snapshot supports testing of AU Core 2.0.0 prior to publication.
 
 Key updates and changes in this version are shown in the AU Core [Change Log](changes.html).
 
