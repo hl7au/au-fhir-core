@@ -8,7 +8,9 @@ This change log documents the significant updates and resolutions implemented fr
 #### Changes in this version
 - moved substantive guidance on representing body site and laterality from [Representing Body Site, Which May Include Laterality](general-guidance.html#representing-body-site-which-may-include-laterality) section in [General Guidance](general-guidance.html) to the AU Base [General Guidance](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html) page, with AU Core specific content retained [AU Core: FHIR-52372](https://jira.hl7.org/browse/FHIR-52372).
 - [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)
-  - changed Observation.hasMember to restore reference to AU Base Diagnostic Imaging Result profile inherited from AU Base [AU Core: FHIR-52164](https://jira.hl7.org/browse/FHIR-52164)  
+  - changed Observation.hasMember to restore reference to AU Base Diagnostic Imaging Result profile inherited from AU Base [AU Core: FHIR-52164](https://jira.hl7.org/browse/FHIR-52164) 
+- [AU Core Patient](StructureDefinition-au-core-patient.html)
+  - applied technical correction to invariants inv-pat-1 and inv-pat-2 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present [AU Base: FHIR-53536](https://jira.hl7.org/browse/FHIR-53536)  
 - [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) 
   - added AU Base Diagnostic Imaging Result to the supported profiles for Observation as a SHALL [AU Core: FHIR-52164](https://jira.hl7.org/browse/FHIR-52164) 
 - [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html)
