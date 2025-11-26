@@ -1,6 +1,6 @@
 <div class="stu-note" markdown="1">
 
-#### Preview of AU Core 2.0.0 for testing
+#### Preview of AU Core 2.0.0 for Testing
 
 This November 2025 preview snapshot incorporates the normative changes from AU Core 2.0.0-ballot. This snapshot supports testing of AU Core 2.0.0 prior to publication.
 

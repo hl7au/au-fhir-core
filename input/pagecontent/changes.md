@@ -16,7 +16,7 @@ This change log documents the significant updates and resolutions implemented fr
 - [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html)
   - added AU Base Diagnostic Imaging Result to the supported profiles for Observation as a SHALL [AU Core: FHIR-52164](https://jira.hl7.org/browse/FHIR-52164)  
 
-### 2.0.0-ballot
+### Release 2.0.0-ballot
 - Publication date: 2025-07-31
 - Publication status: Ballot for Working Standard
 - Based on FHIR version: 4.0.1
