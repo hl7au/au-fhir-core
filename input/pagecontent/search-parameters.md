@@ -14,10 +14,10 @@ The complete list of search parameters supported by AU Core and the rules for us
 
 The FHIR specification provides more information on the use of search parameters in the [FHIR RESTful search API](http://hl7.org/fhir/R4/http.html#search) and the [Search Parameter Registry](http://hl7.org/fhir/R4/searchparameter-registry.html).
 
-### Common search parameters
+### Common Search Parameters
 
 - [clinical-patient](SearchParameter-au-core-clinical-patient.html)
 
-### PractitionerRole search parameters
+### PractitionerRole Search Parameters
 
 - [practitionerrole-practitioner](SearchParameter-au-core-practitionerrole-practitioner.html)

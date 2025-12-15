@@ -1,61 +1,80 @@
-###  Release TBD
+### Release TBD
 - Publication date: TBD
 - Publication status: TBD
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to TBD.
+This change log documents the significant updates and resolutions implemented from version [2.0.0-ballot](https://hl7.org.au/fhir/core/2.0.0-ballot/changes.html) to TBD.
+
+#### Changes in this version
+- moved substantive guidance on representing body site and laterality from [Representing Body Site, Which May Include Laterality](general-guidance.html#representing-body-site-which-may-include-laterality) section in [General Guidance](general-guidance.html) to the AU Base [General Guidance](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html) page, with AU Core specific content retained [AU Core: FHIR-52372](https://jira.hl7.org/browse/FHIR-52372).
+- [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)
+  - changed Observation.hasMember to restore reference to AU Base Diagnostic Imaging Result profile inherited from AU Base [AU Core: FHIR-52164](https://jira.hl7.org/browse/FHIR-52164) 
+- [AU Core Patient](StructureDefinition-au-core-patient.html)
+  - applied technical correction to invariants inv-pat-1 and inv-pat-2 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present [AU Base: FHIR-53536](https://jira.hl7.org/browse/FHIR-53536)  
+- [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) 
+  - added AU Base Diagnostic Imaging Result to the supported profiles for Observation as a SHALL [AU Core: FHIR-52164](https://jira.hl7.org/browse/FHIR-52164) 
+- [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html)
+  - added AU Base Diagnostic Imaging Result to the supported profiles for Observation as a SHALL [AU Core: FHIR-52164](https://jira.hl7.org/browse/FHIR-52164)  
+
+### 2.0.0-ballot
+- Publication date: 2025-07-31
+- Publication status: Ballot for Working Standard
+- Based on FHIR version: 4.0.1
+
+This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html) to [2.0.0-ballot](https://hl7.org.au/fhir/core/2.0.0-ballot/index.html). The changes in this update are for ballot.
 
 #### Changes in this version
 - moved general guidance on representing communication preferences for a patient or related person to AU Base [FHIR-46877](https://jira.hl7.org/browse/FHIR-46877).
 - added to general guidance, reference to AU Base guidance on SNOMED CT Australian Edition [FHIR-51473](https://jira.hl7.org/browse/FHIR-51473).
+- added Recorded Sex or Gender and Sex Parameter for Clinical Use to the Sex and Gender page [AU Base: 51408](https://jira.hl7.org/browse/FHIR-51408).
 - updated AUCDI mapping Date of assertion to be MedicationStatement.dateAsserted [FHIR-49960](https://jira.hl7.org/browse/FHIR-49960).
-- [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html):
+- updated dependency on SMART App Launch from version 2.1.0 to 2.2.0 [FHIR-46398](https://jira.hl7.org/browse/FHIR-46398).
+- [AU Core AllergyIntolerance](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-allergyintolerance.html):
   - added Must Support to AllergyIntolerance.note [FHIR-46940](https://jira.hl7.org/browse/FHIR-46940)
   - added Must Support and obligation SHOULD:populate to AllergyIntolerance.onsetDateTime for the AU Core Responder [FHIR-45187](https://jira.hl7.org/browse/FHIR-45187)
-- [AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html): 
-  - added guidance on more specific blood pressure specific concepts for sitting, lying, and standing measurements [FHIR-49951](https://jira.hl7.org/browse/FHIR-49951).
-- [AU Core Condition](StructureDefinition-au-core-condition.html):
+- [AU Core Blood Pressure](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-bloodpressure.html): 
+  - added guidance on more blood pressure specific concepts for sitting, lying, and standing measurements [FHIR-49951](https://jira.hl7.org/browse/FHIR-49951).
+- [AU Core Condition](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-condition.html):
   - added Must Support and obligation SHOULD:populate to Condition.onsetDateTime for the AU Core Responder [FHIR-45040](https://jira.hl7.org/browse/FHIR-45040)  
-- [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html): 
+- [AU Core Diagnostic Result Observation](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-diagnosticresult.html): 
   - clarified that this profile is for specialist and other (non imaging or pathology) results, and added profile-specific implementation guidance to see AU Core Pathology Result Observation profile for pathology results [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
-- [AU Core Encounter](StructureDefinition-au-core-encounter.html)
+- [AU Core Encounter](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-encounter.html)
   - changed Encounter.reasonCode binding to Reason for Encounter (preferred) [AU Base: FHIR-50996](https://jira.hl7.org/browse/FHIR-50996)
-- [AU Core HealthcareService](StructureDefinition-au-core-healthcareservice.html):
+- [AU Core HealthcareService](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-healthcareservice.html):
   - added new profile, including interaction support to the AU Core CapabilityStatements [FHIR-49934](https://jira.hl7.org/browse/FHIR-49934), [FHIR-50406](https://jira.hl7.org/browse/FHIR-50406), [FHIR-50405](https://jira.hl7.org/browse/FHIR-50405), [AU Base: FHIR-46322](https://jira.hl7.org/browse/FHIR-46322).
-- [AU Core Immunization](StructureDefinition-au-core-immunization.html):
+- [AU Core Immunization](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-immunization.html):
   - added Must Support to Immunization.lotNumber [FHIR-47331](https://jira.hl7.org/browse/FHIR-47331)
-  - changed Immunization.extension to add Vaccine Vial Serial Number (not marked as *Must Support*) [AU Base: FHIR-46317](https://jira.hl7.org/browse/FHIR-46317)
   - added Must Support and obligation SHOULD:populate to Immunization.occurrenceDateTime for the AU Core Responder [FHIR-45216](https://jira.hl7.org/browse/FHIR-45216)
-- [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html):
+- [AU Core MedicationRequest](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-medicationrequest.html):
   - added Must Support to MedicationRequest.dosageInstruction.text [FHIR-50101](https://jira.hl7.org/browse/FHIR-50101)
   - removed duplication of obligation flag added by error to MedicationRequest.medicationReference [FHIR-50800](https://jira.hl7.org/browse/FHIR-50800)
   - applied technical correction to add Must Support and obligation flag to slices medicationCodeableConcept and medicationReference on MedicationRequest.medication[x] to align with Must Support on the sliced element [FHIR-51083](https://jira.hl7.org/browse/FHIR-51083) 
-- [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html):
+- [AU Core MedicationStatement](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-medicationstatement.html):
   - added the new profile, including interaction support and adding the DiagnosticReport resource to AU Core CapabilityStatements [FHIR-45091](https://jira.hl7.org/browse/FHIR-45091), [FHIR-49954](https://jira.hl7.org/browse/FHIR-49954), [FHIR-49955](https://jira.hl7.org/browse/FHIR-49955), [FHIR-49956](https://jira.hl7.org/browse/FHIR-49956), [FHIR-49957](https://jira.hl7.org/browse/FHIR-49957), [FHIR-49958](https://jira.hl7.org/browse/FHIR-49958), [FHIR-49959](https://jira.hl7.org/browse/FHIR-49959).
   - added Must Support to MedicationStatement.dosage.text [FHIR-50101](https://jira.hl7.org/browse/FHIR-50101)
   - applied technical correction to add Must Support and obligation flag to slices medicationCodeableConcept and medicationReference on MedicationStatement.medication[x] to align with Must Support on the sliced element [FHIR-51083](https://jira.hl7.org/browse/FHIR-51083)
   - removed duplication of obligation flag added by error to MedicationRequest.medicationReference [FHIR-50800](https://jira.hl7.org/browse/FHIR-50800)
-- [AU Core Organization](StructureDefinition-au-core-organization.html): 
+- [AU Core Organization](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-organization.html): 
   - added Must Support on Organization.telecom.system [FHIR-51042](https://jira.hl7.org/browse/FHIR-51042)
   - added Must Support on Organization.telecom.value [FHIR-51042](https://jira.hl7.org/browse/FHIR-51042)
-- [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html): 
+- [AU Core Pathology Result Observation](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-diagnosticresult-path.html): 
   - added profile-specific implementation guidance to see AU Core Diagnostic Result Observation profile for non imaging or pathology results  [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889)
   - changed Observation.effective[x] type to remove type constraint [AU Base: FHIR-49189](https://jira.hl7.org/browse/FHIR-49189)
   - applied technical correction to add Must Support and obligation flag to slices lab and specificDiscipline on Observation.category to align with Must Support on the sliced element [FHIR-51083](https://jira.hl7.org/browse/FHIR-51083) 
-- [AU Core Patient](StructureDefinition-au-core-patient.html): 
+- [AU Core Patient](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-patient.html): 
   - removed the cardinality constraint on AU Medicare Card Number identifier, changing it from 0..1 to 0..*  [FHIR-46268](https://jira.hl7.org/browse/FHIR-46268)
-  - added AU Patient Internal Identifier to the Patient.identifier list of allowed types [AU Base: FHIR-48671](https://jira.hl7.org/browse/FHIR-48671)
+  - added AU Patient Internal Identifier as an allowed type for Patient.identifier [AU Base: FHIR-48671](https://jira.hl7.org/browse/FHIR-48671)
   - added Must Support on Patient.telecom.system [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
   - added Must Support on Patient.telecom.value [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
   - added Must Support on Patient.telecom.use [FHIR-51033](https://jira.hl7.org/browse/FHIR-51033)
-- [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html): 
+- [AU Core PractitionerRole](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-practitionerrole.html): 
   - added Must Support on PractitionerRole.telecom.system [FHIR-51034](https://jira.hl7.org/browse/FHIR-51034)
   - added Must Support on PractitionerRole.telecom.value [FHIR-51034](https://jira.hl7.org/browse/FHIR-51034)
-- [AU Core Procedure](StructureDefinition-au-core-procedure.html):
+- [AU Core Procedure](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-procedure.html):
   - added Must Support and obligation SHOULD:populate to Procedure.performedDateTime for the AU Core Responder [FHIR-45145](https://jira.hl7.org/browse/FHIR-45145)
-- [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html):
+- [AU Core RelatedPerson](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-relatedperson.html):
   - added the new profile, including interaction support and replacing references to AU Base Related Person with AU Core RelatedPerson [FHIR-49745](https://jira.hl7.org/browse/FHIR-49745), [FHIR-49746](https://jira.hl7.org/browse/FHIR-49746), [FHIR-44600](https://jira.hl7.org/browse/FHIR-44600), [FHIR-49747](https://jira.hl7.org/browse/FHIR-49747).
-- [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html): 
+- [AU Core Smoking Status](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-smokingstatus.html): 
   - applied technical correction to add Must Support and obligation flag to slice socialHistory on Observation.category to align with Must Support on the sliced element [FHIR-51083](https://jira.hl7.org/browse/FHIR-51083) 
 
 ### Release 1.0.0

@@ -1,6 +1,6 @@
 See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
 
-### Usage scenarios
+### Usage Scenarios
 
 The following are supported usage scenarios for this profile:
 
@@ -10,7 +10,7 @@ The following are supported usage scenarios for this profile:
 - Record or update basic demographics and other administrative information about a patient
 - Read information about a patient referenced by another resource
 
-### Profile specific implementation guidance
+### Profile Specific Implementation Guidance
 - When populating `Patient.identifier`, responders are not required to populate all known patient identifiers from the source system. Responders:
   - **SHALL** populate with at least one identifier
   - **SHALL** populate with at least one of the supported identifier types if known
@@ -26,4 +26,4 @@ The following are supported usage scenarios for this profile:
   - In this profile, the following sub-elements of `name` are marked as *Must Support*: `name.use`, `name.text`, `name.family`, and `name.given`
     - responders are required to support at least one of the following sub-elements: `name.text`, `name.family`, and `name.given`
     - requesters are required to support all sub-elements marked *Must Support*: `name.use`, `name.text`, `name.family`, and `name.given`
-- See the section on [Representing communication preferences](http://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#representing-communication-preferences) for guidance on how to represent languages that may be used to communicate with the patient about their health including preferred language and if an interpreter is required.
+- See the section on [Representing Communication Preferences](http://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#representing-communication-preferences) for guidance on how to represent languages that may be used to communicate with the patient about their health including preferred language and if an interpreter is required.

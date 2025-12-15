@@ -32,7 +32,7 @@
 <valueCode value="SHALL"/>
 </extension>
 </implementationGuide>
-<implementationGuide value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch|2.1.0">
+<implementationGuide value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch|2.2.0">
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>
 </extension>
@@ -939,7 +939,12 @@
 <valueCode value="SHALL"/>
 </extension>
 </supportedProfile>
-<documentation value="If the requester supports the Observation resource, the requester **SHALL** support the AU Core profiles and the conformance expectations for the Observation resource."/>
+<supportedProfile value="http://hl7.org.au/fhir/StructureDefinition/au-imagingresult">
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHALL"/>
+</extension>
+</supportedProfile>
+<documentation value="If the requester supports the Observation resource, the requester **SHALL** support the AU Core and AU Base profiles and the conformance expectations for the Observation resource."/>
 <interaction>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHALL"/>

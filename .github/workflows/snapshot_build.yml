@@ -3,8 +3,10 @@ name: Au Core IG Profiles publish->go-publish
 on:
   push:
     tags:
-      - '**'
-
+      - '**-ballot'
+      - '**-snapshot'
+      - '**-preview'
+      - '**-draft'
 
 permissions:
   id-token: write # This is required for requesting the JWT
@@ -60,12 +62,7 @@ jobs:
     - name: Update Publisher
       run: |
         echo "Updating Publisher"
-        # ./_updatePublisher.sh -f -y # uses built in update script native to the hl7fhir/ig-publisher-base image
         curl -sSL https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh | bash -s -- -f -y # uses the latest update script from the ig-publisher-scripts repository
-
-    - name: Download past versions
-      run: |  
-        aws s3 cp s3://hl7au-fhir-ig/fhir/core ./webroot/fhir/core --recursive --exclude "*" --include "*/package.tgz"
           
     - name: Basic Publish for Aucore
       run: |
@@ -75,24 +72,21 @@ jobs:
     - name: Create directories
       run: |
         mkdir -p webroot/fhir/core
+        mv publish-setup.json ./webroot/
 
     - name: Download package-list.json
       run: |
         rm -rf hl7au/au-fhir-core/package-list.json
-        URL="https://hl7.org.au/fhir"
-        FULL_URL="$URL/core/package-list.json"
-        curl --output webroot/fhir/core/package-list.json --url $FULL_URL
+        curl --output webroot/fhir/core/package-list.json --url "https://hl7.org.au/fhir/core/package-list.json"
 
     - name: Download package-feed.xml
       run: |
           curl --output webroot/fhir/package-feed.xml --url https://hl7.org.au/fhir/package-feed.xml
-          curl --output webroot/fhir/package-feed.bak.xml --url https://hl7.org.au/fhir/package-feed.xml
-
+      
     - name: Download publication-feed.xml
       run: |
         curl --output webroot/fhir/publication-feed.xml --url https://hl7.org.au/fhir/publication-feed.xml
-        curl --output webroot/fhir/publication-feed.bak.xml --url https://hl7.org.au/fhir/publication-feed.xml
-
+     
     - name: Generate Package Registry
       run: |
         java -jar input-cache/publisher.jar -generate-package-registry webroot
@@ -100,29 +94,12 @@ jobs:
     - name: Run Aucore Go Publisher build
       run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-core -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
 
-    - name: Run Aucore Go Publisher build
+    - name: Assets
       run: |
        cp -r fhir-history/assets-hist/ ./webroot/fhir/core/assets-hist/
        cp -r fhir-history/dist-hist/ ./webroot/fhir/core/dist-hist/
-
-    - name: Zip Release
-      uses: TheDoctor0/zip-release@0.7.6
-      with:
-        type: 'zip'
-        filename: 'output.zip'
-        path: './webroot/fhir'
-        exclusions: '**/full-ig.zip'
-      
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: ig-output
-        path: ./output.zip
   
     - name: Upload Core Webroot to S3
       run: |
-        aws s3 cp ./webroot/fhir/core s3://hl7au-fhir-ig/fhir/staging/core --recursive --only-show-errors #core/${{ steps.get_tag.outputs.tag }}
-        aws s3 cp ./webroot/fhir/package-feed.bak.xml s3://hl7au-fhir-ig/fhir/staging/package-feed.bak.xml
-        aws s3 cp ./webroot/fhir/publication-feed.bak.xml s3://hl7au-fhir-ig/fhir/staging/publication-feed.bak.xml
-        aws s3 cp ./webroot/fhir/package-feed.xml s3://hl7au-fhir-ig/fhir/staging/package-feed.xml
-        aws s3 cp ./webroot/fhir/publication-feed.xml s3://hl7au-fhir-ig/fhir/staging/publication-feed.xml
+        aws s3 cp ./webroot/fhir s3://action-runner-working/fhir --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
+       

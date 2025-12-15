@@ -1,13 +1,13 @@
 See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
 
-### Usage scenarios
+### Usage Scenarios
 
 The following are supported usage scenarios for this profile:
 
 - Query for observations of blood pressure associated with a patient
 - Record or update an observation of blood pressure associated with a patient
 
-### Profile specific implementation guidance
+### Profile Specific Implementation Guidance
 - `Observation.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
 - Observations **MAY** have additional codes that translate or map to the Observation code or category codes. For example:
    -  providing a local code

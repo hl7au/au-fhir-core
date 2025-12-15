@@ -40,7 +40,7 @@
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
 		<packageId value="hl7.fhir.uv.smart-app-launch"/>
-		<version value="2.1.0"/>
+		<version value="2.2.0"/>
 	</dependsOn>
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa"/>
@@ -376,7 +376,7 @@
 			<reference>
 				<reference value="MedicationRequest/paracetamol-codeine"/>
 			</reference>
-			<name value="MedicationRequest - prescription, paracetamol 500 mg + codeine phosphate hemihydrate 30 mg (missing data for status and requester)"/>
+			<name value="MedicationRequest - prescription, paracetamol 500 mg + codeine phosphate hemihydrate 30 mg"/>
 			<description value="Shows an example of an order for paracetamol 500 mg + codeine phosphate hemihydrate 30 mg tablet for pain management for the *AU Core MedicationRequest* profile illustrating missing data for status and requester. Patient:  Mrs. Anne Bennelong."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
 		</resource>
@@ -596,8 +596,8 @@
 			<reference>
 				<reference value="Patient/ronny-irvine"/>
 			</reference>
-			<name value="Patient - Ronny Lawrence Irvine (missing data for birth date)"/>
-			<description value="Shows an example of a patient resource for Mr. Ronny Lawrence Irvine for the *AU Core Patient* profile. The patient identifies as Torres Strait Islander but not of Aboriginal origin, with an unknown birth date documented using the Data Absent Reason extension."/>
+			<name value="Patient - Ronny Lawrence Irvine"/>
+			<description value="Shows an example of a patient resource for Mr. Ronny Lawrence Irvine for the *AU Core Patient* profile. The patient identifies as Torres Strait Islander but not of Aboriginal origin, with an unknown birth date represented using the Data Absent Reason extension."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
 		</resource>
 		<resource>
@@ -809,12 +809,12 @@
 				</page>
 				<page>
 					<nameUrl value="relationship.html"/>
-					<title value="Relationship with other IGs"/>
+					<title value="Relationship With Other IGs"/>
 					<generation value="markdown"/>
 				</page>
 				<page>
 					<nameUrl value="comparison.html"/>
-					<title value="Comparison with other national and international IGs"/>
+					<title value="Comparison With Other National and International IGs"/>
 					<generation value="markdown"/>
 				</page>
 				<page>

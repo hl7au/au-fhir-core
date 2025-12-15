@@ -1,4 +1,4 @@
-### Profile specific implementation guidance
+### Profile Specific Implementation Guidance
 - See the [Sex and Gender](sex-and-gender.html) page for guidance on exchanging sex and gender related concepts conformant to AU Core.
 
 **Examples:**

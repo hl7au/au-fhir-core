@@ -20,7 +20,7 @@ Implementers are advised to be familiar with the requirements of the FHIR standa
 #### AU Core Profiles and Extensions
 The [Profiles and Extensions](profiles-and-extensions.html) page lists the AU Core profiles and AU Core extensions defined for this implementation guide. An AU Core profile [StructureDefinition](http://hl7.org/fhir/R4/structuredefinition.html) defines the minimum elements, extensions, vocabularies and value sets that **SHALL** be present and constrains the way elements are used when conforming to the profile.
 
-AU Core profile elements include mandatory and *Must Support* requirements. [Mandatory elements](#mandatory-elements) are required and have a minimum cardinality of 1 (min=1). [Must Support](#must-support-and-obligation) elements have defined conformance obligations in AU Core based on actor roles.
+AU Core profile elements include mandatory and *Must Support* requirements. [Mandatory Elements](#mandatory-elements) are required and have a minimum cardinality > 0. [Must Support](#must-support-and-obligation) elements have defined conformance obligations in AU Core based on actor roles.
 
 Systems may implement AU Core as: 
 - [Profile Only Support](#profile-only-support) for a system declaring conformance to one or more AU Core profiles
@@ -86,15 +86,15 @@ When a *Must Support* element requires additional or stronger obligation, this o
 #### AU Core Requester
 An AU Core Requester:
 - **SHALL** accept resources containing any valid value for *Must Support* elements without error.
-- **SHALL** accept resources containing *Must Support* elements with [Missing Data](#missing-data) or [Suppressed data](#suppressed-data) without error.
+- **SHALL** accept resources containing *Must Support* elements with [Missing Data](#missing-data) or [Suppressed Data](#suppressed-data) without error.
 
 How the system processes the resource depends on local requirements that could align with obligation terms such as [reject invalid](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-reject-invalid), [correctly handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-handle), [persist](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-persist), [display](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-display), or [ignore](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-ignore).
 
 When a *Must Support* element requires additional or stronger obligation, this obligation is specified in the AU Core Requester [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition.
 
-#### Presentation of Must Support and obligation in profiles
+#### Presentation of Must Support and Obligation in Profiles
 
-All elements with *Must Support* in AU Core are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements flagged with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
+All elements with *Must Support* in AU Core are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements flagged with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
 
 <div> 
     <img src="allergyintolerance-keyelementstable.png" alt="AU Core AllergyIntolerance Key Elements Table" style="width:100%"/>
@@ -104,7 +104,7 @@ All elements with *Must Support* in AU Core are accompanied by an explicit oblig
 
 Implementers need to refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support* with obligations, and the full set of terminology requirements.  Implementers need to be aware that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile.
 
-##### Presentation of Must Support and obligation in raw representations
+##### Presentation of Must Support and Obligation in Raw Representations
 
 When viewing the raw representation (e.g. XML or JSON) of a profile, elements with *Must Support* are denoted by `mustSupport` set to "true", and obligations are defined in the [Obligation Extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) as shown in the example below.
 
@@ -147,7 +147,7 @@ Example: AU Core AllergyIntolerance profile with *Must Support* and obligations 
 }
 ~~~
 
-#### Interpreting profile elements labelled Must Support
+#### Interpreting Profile Elements Labelled Must Support
 
 Profiles defined in this implementation publication flag *Must Support* on elements (e.g. `Patient.name`) and sub-elements of a data type (e.g. `Patient.name.use`). 
 The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element.
@@ -179,9 +179,9 @@ If a complex element is labelled as *Must Support*:
 - AU Core Responders **SHALL** correctly populate the element with at least one of the sub-element values if the value is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid sub-element.
 
-For example, the AU Core MedicationRequest Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
-- AU Core Responders **SHALL** correctly populate a value in any valid `MedicationRequest.note` sub-element if a value is known e.g. `MedicationRequest.note.text`.
-- AU Core Requesters **SHALL** accept the MedicationRequest resource without error if `MedicationRequest.note` is present and containing any valid sub-elements.
+For example, the AU Core AllergyIntolerance Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
+- AU Core Responders **SHALL** correctly populate a value in any valid `AllergyIntolerance.note` sub-element if a value is known e.g. `AllergyIntolerance.note.text`.
+- AU Core Requesters **SHALL** accept the AllergyIntolerance resource without error if `AllergyIntolerance.note` is present and containing any valid sub-elements.
 
 If a sub-element is labelled as *Must Support*: 
 - AU Core Responders **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
@@ -189,7 +189,7 @@ If a sub-element is labelled as *Must Support*:
 
 For example, in the AU Core Practitioner Profile, the `name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
 - AU Core Responders **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
-- AU Core Requesters **SHALL** accept a Patient resource without error if `Practitioner.name` is present and contains valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements.
+- AU Core Requesters **SHALL** accept a Practitioner resource without error if `Practitioner.name` is present and contains valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements.
 
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
@@ -200,15 +200,15 @@ The table below provides a list of AU Core profile elements that allow multiple 
 
 AU Core Profile |Must Support Element|Reference
 ---|---|---
-AU Core Diagnostic Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
-AU Core Diagnostic Result Observation|Observation.hasMember|AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
-AU Core Encounter|Encounter.participant.individual|AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
-AU Core Encounter|Encounter.reasonReference|AU Core Condition, Observation, AU Core Procedure
-AU Core MedicationRequest|MedicationRequest.requester|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
-AU Core MedicationRequest|MedicationRequest.reasonReference|AU Core Condition, Observation
-AU Core MedicationStatement|MedicationStatement.reasonReference|AU Core Condition, Observation, AU Base Diagnostic Report
-AU Core Pathology Result Observation|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
-AU Core Procedure|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
+[AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
+[AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.hasMember|AU Base Diagnostic Imaging Result, AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
+[AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.participant.individual|AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
+[AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.reasonReference|AU Core Condition, Observation, AU Core Procedure
+[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.requester|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
+[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.reasonReference|AU Core Condition, Observation
+[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.reasonReference|AU Core Condition, Observation, AU Base Diagnostic Report
+[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
+[AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
 {:.grid}
 
 
@@ -221,62 +221,62 @@ The table below provides a list of AU Core profile elements that allow multiple 
 
 AU Core Profile |Must Support Element|Data Types
 ---|---|---
-AU Core AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
-AU Core Condition|Condition.onset[x]|dateTime, age, Period, Range
-AU Core Condition|Condition.abatement[x]|dateTime, age, Period, Range
-AU Core Diagnostic Result Observation|Observation.effective[x]|dateTime, Period, Timing, instant
-AU Core Pathology Result Observation|Observation.effective[x]|dateTime, Period, Timing, instant
-AU Core Diagnostic Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Diagnostic Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Immunization|Immunization.occurrence[x]|dateTime, string
-AU Core MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
-AU Core MedicationStatement|MedicationStatement.medication[x]|CodeableConcept, Reference
-AU Core MedicationStatement|MedicationStatement.effective[x]|dateTime, Period
-AU Core Pathology Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
-AU Core Blood Pressure|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Body Height|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Body Temperature|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Body Weight|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Heart Rate|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Respiration Rate|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU Core Waist Circumference|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
+[AU Core Condition](StructureDefinition-au-core-condition.html)|Condition.onset[x]|dateTime, age, Period, Range
+[AU Core Condition](StructureDefinition-au-core-condition.html)|Condition.abatement[x]|dateTime, age, Period, Range
+[AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.effective[x]|dateTime, Period, Timing, instant
+[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.effective[x]|dateTime, Period, Timing, instant
+[AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Immunization](StructureDefinition-au-core-immunization.html)|Immunization.occurrence[x]|dateTime, string
+[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.medication[x]|CodeableConcept, Reference
+[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.medication[x]|CodeableConcept, Reference
+[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.effective[x]|dateTime, Period
+[AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.performed[x]|dateTime, Period, string, Age, Range
+[AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Body Height](StructureDefinition-au-core-bodyheight.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Body Temperature](StructureDefinition-au-core-bodytemp.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Heart Rate](StructureDefinition-au-core-heartrate.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Respiration Rate](StructureDefinition-au-core-resprate.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 {:.grid}
 
 In addition, some data type choices are labelled as *Must Support* and apply an additional obligation of [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate) for AU Core Responders. In such cases:
-- AU Core Responders **SHALL** populate the element when the value is known and allowed to be shared, and **SHOULD** be capable of correctly populating the element using this data type. Typically, this means that an application should demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value of that data type.
+- AU Core Responders **SHALL** populate the element when the value is known and **SHOULD** be capable of correctly populating the element using this data type. Typically, this means that an application should demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value of that data type.
 
 The table below provides a list of AU Core profile elements where a data type choice is labelled as *Must Support*.
 
 Profile | Must Support Data Type
 ---|---
-AU Core AllergyIntolerance|AllergyIntolerance.onsetDateTime
-AU Core Condition|Condition.onsetDateTime
-AU Core Immunization|Immunization.occurrenceDateTime
-AU Core Procedure|Procedure.performedDateTime
+[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)|AllergyIntolerance.onsetDateTime
+[AU Core Condition](StructureDefinition-au-core-condition.html)|Condition.onsetDateTime
+[AU Core Immunization](StructureDefinition-au-core-immunization.html)|Immunization.occurrenceDateTime
+[AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.performedDateTime
 {:.grid}
 
 ##### Must Support - Choice of Identifiers
 A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
-- AU Core Responders **SHALL** correctly populate the element with identifiers from at least one supported identifier type where the identifier is known.
+- AU Core Responders **SHALL** correctly populate the element with identifiers from at least one supported identifier type where the identifier is known, or any known identifier when no supported identifier type is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any identifier type allowed by the element definition.
 
-The table below provides a list of AU Core profile elements that allow multiple identifier types.
+The table below provides a list of AU Core profile elements with one or more supported identifier types.
 
 AU Core Profile |Must Support Element|Supported Identifiers
 ---|---|---
-AU Core Organization|Organization.identifier|HPI-O, Australian Business Number
-AU Core Patient|Patient.identifier|IHI, Medicare Card Number, DVA Number
-AU Core Practitioner|Practitioner.identifier|HPI-I
-AU Core PractitionerRole|PractitionerRole.identifier|Medicare Provider Number
+[AU Core Organization](StructureDefinition-au-core-organization.html)|Organization.identifier|HPI-O, Australian Business Number
+[AU Core Patient](StructureDefinition-au-core-patient.html)|Patient.identifier|IHI, Medicare Card Number, DVA Number
+[AU Core Practitioner](StructureDefinition-au-core-practitioner.html)|Practitioner.identifier|HPI-I
+[AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
 For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) requires support for the following choices `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU Core Patient Profile:
-- AU Core Responders **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Care Number, or DVA Number, or any combination of them where the identifier is known.
-- AU Core Requesters **SHALL** accept Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an IHI, Medicare Care Number, or DVA Number identifier, or may be some other allowed identifier.
+- AU Core Responders **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Card Number, or DVA Number, or any combination of them where the identifier is known, or any other identifier (e.g. Medical Record Number) when none of IHI, or Medicare Card Number, or DVA Number are known.
+- AU Core Requesters **SHALL** accept Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an IHI, Medicare Card Number, or DVA Number identifier, or may be some other allowed identifier.
 
-Systems **MAY** support populating and processing other identifiers, but this is not a requirement of AU Core.
+Systems **MAY** support populating and accepting other identifiers, but this is not a requirement of AU Core.
 
 ##### Must Support - Choice of Profile Elements
 
@@ -288,10 +288,10 @@ The table below lists the applicable profiles and elements in AU Core.
 
 AU Core Profile |Must Support Choice Elements
 ---|---
-AU Core Encounter|Encounter.reasonCode, Encounter.reasonReference
-AU Core MedicationRequest|MedicationRequest.reasonCode, MedicationRequest.reasonReference
-AU Core MedicationStatement|MedicationStatement.reasonCode, MedicationStatement.reasonReference
-AU Core Procedure|Procedure.reasonCode, Procedure.reasonReference
+[AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.reasonCode, Encounter.reasonReference
+[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.reasonCode, MedicationRequest.reasonReference
+[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.reasonCode, MedicationStatement.reasonReference
+[AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.reasonCode, Procedure.reasonReference
 {:.grid}
 
 
@@ -305,10 +305,10 @@ The table below lists the applicable profiles and elements in AU Core that suppo
 
 AU Core Profile |Must Support Sub-Element|Terminology Choices
 ---|---
-AU Core Immunization|Immunization.vaccineCode.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
-AU Core Medication|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
-AU Core MedicationRequest|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
-AU Core MedicationStatement|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+[AU Core Immunization](StructureDefinition-au-core-immunization.html)|Immunization.vaccineCode.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
+[AU Core Medication](StructureDefinition-au-core-medication.html)|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+[AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 {:.grid}
 
 For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) requires support for the following terminology choices `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging *Must Support* on those two terminology slices.
