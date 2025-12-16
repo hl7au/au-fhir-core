@@ -572,7 +572,7 @@
 				<reference value="Organization/bobrester-medical-center"/>
 			</reference>
 			<name value="Organization - Bobrester Medical Centre"/>
-			<description value="Shows an example of an organisation, Bobrester Medical Center, for the *AU Core Organization* profile, with ABN identifier, type as Medical Center, and contact details including email and phone number. "/>
+			<description value="Shows an example of an organisation, Bobrester Medical Centre, for the *AU Core Organization* profile, with ABN identifier, type as Medical Centre, and contact details including email and phone number. "/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<resource>
