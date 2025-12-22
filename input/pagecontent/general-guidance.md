@@ -1,3 +1,44 @@
+### Approach of this Implementation Guide
+
+#### Scope of AU Core FHIR Artefacts
+
+HL7 AU Core, as the ...,hnn profiles (but does not define)..:
+* Extensions that define 'minimum' support expectations for local use concepts e.g. Sex Assigned at Birth
+* Search parameters that define support expectations for AU Core profiles
+* Core profiles for use in an Australian context:
+  * Definitional data type profiles e.g. Australian address, Australian time zone, Identifier such as National patient and provider identifiers
+  * Base resource profiles e.g. AU Base Patient, AU Base MedicationStatement
+  * Generic use case profiles, where there is no existing project to undertake the work e.g. AU Medicines List, AU Base Diagnostic Imaging Result (definitional constraints; no conformance or support obligations)
+
+
+#### Profile Approach
+
+
+#### Extension Approach
+
+Repeat with slight wording change the AU Base content.
+
+any extension intended for use in an Australian healthcare context that is not restricted to one IG is to be defined in AU Base. 
+
+Practically this means for example that AU Core will not define extensions - AU Core profiles are intended for multiple use cases so all extensions for use in AU Core are defined in AU Base.
+
+As part of profiling, AU Core: profiles indicate the minimum support:
+* for individual extensions in AU Core resource profiles
+* for individual elements in complext extensions e.g. Sex Assigned at Birth
+
+#### Search Parameter Approach
+
+Repeat with slight wording change the AU Base content.
+
+any search parameter intended for use in an Australian healthcare context that is not restricted to one IG is to be defined in AU Base. 
+
+Practically this means for example that AU Core will not define new search parameters. Definition of search parameters for native FHIR elements or extensions is to be done in AU Base, and AU Core will 'profile' the search parameter to describe additional constraints relevant for that context such as mandating support for chaining. 
+
+#### Terminology Approach
+
+AU Core will not define new terminology resources - as part of profiling AU Core indicates the support expectations for terminology. For example in AU Core medication profiles, slicing is used to indicate Must Support for two terminologies that are defined as additional bindings in the underlying AU Base profile.
+
+
 ### SNOMED CT Australian (SNOMED CT-AU) Edition
 For guidance on SNOMED CT-AU in FHIR, see the guidance defined in AU Base [SNOMED CT Australian Edition](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition).
 
