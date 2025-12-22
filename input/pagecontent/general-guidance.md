@@ -1,4 +1,16 @@
 ### Approach of this Implementation Guide
+TBD - do we put in principles for inclusion in AU Core? Sort of mimic intent content of AU Base?
+
+Some repeat of AU Base with wording change.
+
+Australian realm IGs and implementers are expected to use the AU Base recognised/defined concept where one exists instead of redefining locally. AU Core introduces a required level of element support for local usage on top of AU Base that gives a core set of capability that can be implemented and assumed. 
+
+When implementing FHIR in AU implementers are recommended to:
+* something something the use case IG
+* implement AU Core
+* where a concept is unavailable look to AU Base
+
+There's actually wider implication stuffs here - look to your slidepack, i.e. that IGs are encouraged to depend on AU Base so that the universe of AU concepts is 'recognised'. Do we say that somewhere? Both in AU Base and in AU Core? This is the big driver of why AU Base is a SHALL support in capability statements.
 
 #### Scope of AU Core FHIR Artefacts
 
@@ -10,6 +22,7 @@ HL7 AU Core, as the ...,hnn profiles (but does not define)..:
   * Base resource profiles e.g. AU Base Patient, AU Base MedicationStatement
   * Generic use case profiles, where there is no existing project to undertake the work e.g. AU Medicines List, AU Base Diagnostic Imaging Result (definitional constraints; no conformance or support obligations)
 
+TBD - what / how do we mention interactions... is there a way to write this without having to talk about them?
 
 #### Profile Approach
 
