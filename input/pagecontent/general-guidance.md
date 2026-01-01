@@ -1,3 +1,5 @@
+{::options toc_levels="1..4"/}
+
 ### Approach of this Implementation Guide
 TBD - do we put in principles for inclusion in AU Core? Sort of mimic intent content of AU Base?
 
