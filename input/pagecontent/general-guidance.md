@@ -17,11 +17,11 @@ There's actually wider implication stuffs here - look to your slidepack, i.e. th
 #### Scope of AU Core FHIR Artefacts
 
 HL7 AU Core profiles:
-* Extensions defining 'minimum' support expectations for local use concepts e.g. Sex Assigned at Birth
-* Search parameters that define 'minimum' support expectations for AU Core actors
-* Core resource profiles define 'minimum' support expectations for use in the Australian healthcare context
-* Actors define systems that play a role in AU Core data exchange
-* Capability statements that define 'minimum' support expectations of FHIR capabilities of AU Core actors.
+* Extensions to define 'minimum' support expectations for local use concepts e.g. Sex Assigned at Birth
+* Search parameters to define 'minimum' support expectations for AU Core actors
+* Core resource profiles to define 'minimum' support expectations for use in the Australian healthcare context
+* Actors to define systems that play a role in AU Core data exchange
+* Capability statements to define 'minimum' support expectations of FHIR capabilities of AU Core actors.
 
 #### Extension Approach
 All extensions used in AU Core are defined in the FHIR Extensions Pack or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions).
@@ -30,27 +30,14 @@ AU Core profiles some extensions to define minimum support requirements e.g. [AU
 
 Therefore, when modelling AU Core extension profiles:
 * Open: profiles are defined as open, i.e. allowing additional extensions and rules which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile. 
-
+* Cardinality: cardinality is only constrained where there is an  expectation of a minimum data quality requirement e.g. the patient is made mandatory in all AU Core profiles
+* Terminology Binding: where possible, elements are bound to the nationally recognised value set inherited from AU Base. which is either inherited from the FHIR specification or a localised value set. Localisation occurs through a number of mechanisms including nationally maintained clinical reference sets in the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/), terminology published by government agencies such as the [Australian Bureau of Statistics](https://www.abs.gov.au/), [Australian Institute of Health and Welfare](https://www.aihw.gov.au/), [Services Australia](https://www.servicesaustralia.gov.au/), and use case projects that dcontribute additional concepts as needed for use in implementation.
 
 #### Search Parameter Approach
-
-Repeat with slight wording change the AU Base content.
-
-any search parameter intended for use in an Australian healthcare context that is not restricted to one IG is to be defined in AU Base. 
-
-Practically this means for example that AU Core will not define new search parameters. Definition of search parameters for native FHIR elements or extensions is to be done in AU Base, and AU Core will 'profile' the search parameter to describe additional constraints relevant for that context such as mandating support for chaining. 
-
-AU Base acts like the AU extension to the FHIR search registry. Search parameters are defined in AU Base when:
-* there is no available search parameter in the core FHIR specification
-* the use is not specific to searching a downstream IG extension
-
-AU Base defined search parameters are definitional, and intend to be as expansive as possible to avoid limiting downstream use case decisions. For this reason, search parameters are defined as open and aspects such as chaining, modifiers, comparators are not specified (i.e. that means that these are MAY).
-
-This approach means that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of search parameters for native FHIR elements or core FHIR extensions is to be done in AU Base, and the downstream IG profiles the search parameter to describe additional constraints relevant for that context such as mandating 
+AU Core does not define any new search parameters. AU Core SearchParameters are derived from existing FHIR SearchParameters or AU Base SearchParameters to specify additional minimum support requirements for AU Core actors including support for chaining, modifiers, and comparators.
 
 #### Terminology Approach
-
-AU Core will not define new terminology resources - as part of profiling AU Core indicates the support expectations for terminology. For example in AU Core medication profiles, slicing is used to indicate Must Support for two terminologies that are defined as additional bindings in the underlying AU Base profile.
+AU Core does not define any new terminology FHIR artefacts. Terminology supported in AU Core are published in AU Base, the base FHIR specification, HL7 Terminology (THO), or the National Clinical Terminology Service (NCTS). As part of profiling, AU Core indicates the support expectations for terminology for that resource for an AU Core actor using _Must Support_ and Obligations. 
 
 #### Profile Approach
 AU Base Resource Profiles define FHIR structures that localises core concepts, including terminology, for use in an Australian context. AU Core Resource Profiles set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. These AU Core profiles are based on the AU Base resource profile, where available, and identify the additional mandatory core elements, extensions, vocabularies and value sets that SHALL be present in the resource when conforming to AU Core. These profiles provide the floor for standards development for specific uses cases in an Australian context.
@@ -58,15 +45,18 @@ AU Base Resource Profiles define FHIR structures that localises core concepts, i
 Therefore, when modelling AU Core resource profiles:
 * Open: profiles are defined as open, i.e. allowing additional elements and rules which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile. 
 * Extensions: extensions are inherited from the underlying AU Base resource profile and those extensions agreed to form part of the 'minimum' support requirements are marked with Must Support and the applicable Obligations. 
-* Cardinality: cardinality is only constrained where there is an  expectation of a minimum data quality requirement e.g. the patient is made mandatory in all AU Core profiles
+* Cardinality: cardinality is only constrained where there is an agreed minimum data quality requirement e.g. the patient is made mandatory in all AU Core profiles
 * Terminology Binding: typically underlying AU Base terminology is inherited and, where agreed, the binding strength is strengthened. This strengthening is applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules.
   ** while AU Core inherits but does not define additional bindings, where multiple terminologies have support expectatations slicing is used. 
-* Slice Constraints: slicing is avoided as much as possible to avoid limiting the opportunities for downstream IGs and applications to define their own business rules. Slicing in AU Core is used to:
+* Slice Constraints: slicing is avoided as much as possible to avoid limiting the opportunities for downstream IGs and applications to define their own business rules. Slicing in AU Core resource profiles are used to:
    * define support for mutiple terminologies e.g. [AU Core Medication](StructureDefinition-au-core-medication.html) support for Australian Medicines Terminology (AMT) and PBS Item Codes
-   * define support for particular business identifiers e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) support for IHI, Medicare Card Number, DVA Number
-* type choices: types are restricted only where there is national agreement to restrict that usage in Australia. Additionally, AU Base data type profiles suitable for usage for that particular element are added. 
+   * define support for business identifiers e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) defines support for IHI, Medicare Card Number, DVA Number
+* Type choices: types are restricted only where there is national agreement to restrict that usage in Australia. Unlike in AU Base, no additional Additionally, AU Base data type profiles suitable for usage for that particular element are added. 
 * Must Support and Obligations: _Must Support_ or Obligation is not present as there is no assertion of required support for any of the elements profiled in this guide for a particular usage.
-
+* References: references are constrained to support validation in the following order of precedence:
+  * AU Core profile where available
+  * AU Base profile
+  * core FHIR resource
 
 #### Actor Approach
 
