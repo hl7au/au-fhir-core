@@ -1,25 +1,23 @@
 {::options toc_levels="1..4"/}
 
 ### Approach of this Implementation Guide
-TBD - do we put in principles for inclusion in AU Core? Sort of mimic intent content of AU Base?
+AU Core is provided to support the use of HL7® FHIR®© in an Australian context. AU Core defines the data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information.
 
-Some repeat of AU Base with wording change.
+AU Core promotes interoperability and adoption through common implementation and provides the basis for further implementation guide development for specific use cases.
 
-Australian realm IGs and implementers are expected to use the AU Base recognised/defined concept where one exists instead of redefining locally. AU Core introduces a required level of element support for local usage on top of AU Base that gives a core set of capability that can be implemented and assumed. 
-
-When implementing FHIR in AU implementers are recommended to:
-* something something the use case IG
-* implement AU Core
-* where a concept is unavailable look to AU Base
-
-There's actually wider implication stuffs here - look to your slidepack, i.e. that IGs are encouraged to depend on AU Base so that the universe of AU concepts is 'recognised'. Do we say that somewhere? Both in AU Base and in AU Core? This is the big driver of why AU Base is a SHALL support in capability statements.
+For representation and use of local concepts, Australian realm IGs and implementers are expected to (in order of precedence):
+* comply with AU Base and AU Core
+* use the core FHIR extension, search parameter, or operation where available, otherwise
+* use the AU Base defined extension, search parameter, or operation where available, otherwise
+* use the domain-specific IG (e.g. AU Patient Summary or AU eRequesting) defined extension, search parameter, or operation, otherwise
+* define locally, the necessary extensions, search parameters, and operations in an IG and make available
 
 #### Scope of AU Core FHIR Artefacts
 
 HL7 AU Core profiles:
 * Extensions to define 'minimum' support expectations for local use concepts e.g. Sex Assigned at Birth
 * Search parameters to define 'minimum' support expectations for AU Core actors
-* Core resource profiles to define 'minimum' support expectations for use in the Australian healthcare context
+* Resources to define 'minimum' support expectations for use in the Australian healthcare context
 * Actors to define systems that play a role in AU Core data exchange
 * Capability statements to define 'minimum' support expectations of FHIR capabilities of AU Core actors.
 
@@ -53,16 +51,17 @@ Therefore, when modelling AU Core resource profiles:
    * define support for business identifiers e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) defines support for IHI, Medicare Card Number, DVA Number
 * Type choices: types are restricted only where there is national agreement to restrict that usage in Australia. Unlike in AU Base, no additional Additionally, AU Base data type profiles suitable for usage for that particular element are added. 
 * Must Support and Obligations: _Must Support_ or Obligation is not present as there is no assertion of required support for any of the elements profiled in this guide for a particular usage.
-* References: references are constrained to support validation in the following order of precedence:
-  * AU Core profile where available
-  * AU Base profile
-  * core FHIR resource
+* References: references are constrained to the AU Core profile, or where not available, the AU Base profile (where it exists) to support validation 
 
 #### Actor Approach
-
+AU Core Actors are defined to describe the specific sets of functionality supported by systems that play a role in AU Core data exchange. Each actor is defined by:
+* an ActorDefiniition that includes reference to support expectations (narrative conformance requirements and capability statements)
+* a capability statement that describes the requirements for the system and resource support
 
 #### Capability Statement Approach
+AU Core Capability Statements are defined to describe the specific capabilities of a system when playing a particular role (i.e. actor) and includes the complete list of FHIR profiles, RESTful operations, and search parameters supported by that actor.
 
+AU Core Capability Statements are defined as open, i.e. allowing additional resources, profiles, operations, and search parameters to be defined.
 
 ### SNOMED CT Australian (SNOMED CT-AU) Edition
 For guidance on SNOMED CT-AU in FHIR, see the guidance defined in AU Base [SNOMED CT Australian Edition](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition).
