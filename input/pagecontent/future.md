@@ -8,7 +8,7 @@ AU Core will be published yearly. Yearly AU Core updates reflect changes to:
  The yearly update approach is outlined in the figure below:
 
  <div> 
-    <img src="yearlyupdate.png" alt="Yearly update of AU Core" style="width:0%"/>
+    <img src="yearlyupdate.png" alt="Yearly update of AU Core" style="width:90%"/>
   </div>
 *Figure 1: Yearly update of AU Core*
 <br/>
