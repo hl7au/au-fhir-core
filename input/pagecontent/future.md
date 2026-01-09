@@ -2,7 +2,7 @@
 AU Core will be published yearly. Yearly AU Core updates reflect changes to:
  - AUCDI
  - AU Base
- - requests from the AU FHIR community
+ - requests from the Australian FHIR community
  - requests from downstream IG projects e.g. AU eRequesting or AU Patient Summary
  
  The yearly update approach is outlined in the figure below:
@@ -47,7 +47,7 @@ The following items are under consideration to add to AU Core ([Link to Deferred
 * **Additional Diagnostic Information**: Additional AU Core profiles to support common implementation of additional aspects of diagnostic results including imaging, specimen, and reports are expected to be developed and tested in future versions of AU Core.
 * **Additional Medicinal Information**: Additional AU Core profiles to support common implementation of additional aspects of medicinal information and workflow including administration and dispense are expected to be developed and tested in future versions of AU Core.
 * **Pregnancy Information**: Additional AU Core profiles to support common implementation of widely shared pregnancy information used in multiple use cases including pregnancy assertion (sometimes referred to as pregnancy status), last menstrual period and estimated date of delivery, may be developed and tested in future versions of AU Core.
-* **No Known X**: Additional work to be clear on how a system can affirmatively state that a patient has no known current medicines, no history of immunisation, no history of relevant procedures, or other relevant concepts of "no known x" or "no history of x" is expected to be undertaken in future releases. 
+* **No Known X**: Additional work to clarify how a system can represent an affirmative state that a patient has no known current medicines, no history of immunisation, no history of relevant procedures, or other relevant concepts of "no known x" or "no history of x" is expected to be undertaken in future releases. 
 * **Key clinical elements and Missing Data requirements**: It is not clear at this point whether there is a case for prohibiting 'missing data' on resource.code e.g. AllergyIntolerance.code, Condition.code, or Medication.code. At this time it is not clear how prohibition could be structured in AU Core noting there is no equivalent obligation code for 'don't allow missing data' and as the data type for these elements is CodeableConcept, preadoption of R5 mustHaveValue is not applicable (only for primitive types). 
 * **Record or Update Data**: Systems may use operations that create and update resources for any of the profiles in this IG. However, more guidance and minimum requirements need to be developed and tested on writing and updating data in the context of AU Core implementations.
 * **Profile Only implementation clarity**: Additional clarification on how to implement AU Core as Profile Only may be useful as a Profile Only Server CapabilityStatement.
