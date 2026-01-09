@@ -37,30 +37,33 @@ Therefore, when modelling AU Core extension profiles:
 * Terminology Binding: where possible, elements are bound to the nationally recognised value set inherited from AU Base. which is either inherited from the FHIR specification or a localised value set. Localisation occurs through a number of mechanisms including nationally maintained clinical reference sets in the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/), terminology published by government agencies such as the [Australian Bureau of Statistics](https://www.abs.gov.au/), [Australian Institute of Health and Welfare](https://www.aihw.gov.au/), [Services Australia](https://www.servicesaustralia.gov.au/), and use case projects that dcontribute additional concepts as needed for use in implementation.
 
 #### Search Parameter Approach
-AU Core does not define any new search parameters. AU Core SearchParameters are derived from existing FHIR SearchParameters or AU Base SearchParameters to specify additional minimum support requirements for AU Core actors including support for chaining, modifiers, and comparators.
+AU Core does not define any new search parameters. All search parameters included in AU Core are defined in the [FHIR Search Parmeter Registry](https://hl7.org/fhir/R4/searchparameter-registry.html) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/search-parameters.html).
+
+AU Core profiles these search parameters to describe the additional minimum support requirements for AU Core actors including support for chaining, modifiers, and comparators, e.g. [AU Core clinical-patient](https://build.fhir.org/ig/hl7au/au-fhir-core/SearchParameter-au-core-clinical-patient.html) that defines support for chained identifiers.
 
 #### Terminology Approach
-AU Core does not define any new terminology FHIR artefacts. Terminology supported in AU Core are published in AU Base, the base FHIR specification, HL7 Terminology (THO), or the National Clinical Terminology Service (NCTS). As part of profiling, AU Core indicates the support expectations for terminology for that resource for an AU Core actor using _Must Support_ and Obligations. 
+AU Core does not define any new terminology FHIR artefacts. Terminology supported in AU Core are are published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), the base FHIR specification, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/). As part of profiling, AU Core indicates the support expectations for terminology for that resource for an AU Core actor using _Must Support_ and Obligations. 
 
 #### Profile Approach
 AU Base Resource Profiles define FHIR structures that localises core concepts, including terminology, for use in an Australian context. AU Core Resource Profiles set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. These AU Core profiles are based on the AU Base resource profile, where available, and identify the additional mandatory core elements, extensions, vocabularies and value sets that SHALL be present in the resource when conforming to AU Core. These profiles provide the floor for standards development for specific uses cases in an Australian context.
 
-Therefore, when modelling AU Core resource profiles:
-* Minimum support requirements: Only elements that form part of the 'minimum' support requirements (i.e. marked with _Must Support_) are further constrained in AU Core; in some special cases determined by the responsible work group will a data quality requirement be placed on an element that is not marked with 'must support'.
+When modelling minimum expectations, only elements that form part of the 'minimum' support requirements (i.e. marked with _Must Support_) are further constrained in AU Core; in some special cases determined by the responsible work group will a data quality requirement be placed on an element that is not marked with 'must support'.
+
+Additionally, when modelling AU Core resource profiles:
 * Open: profiles are defined as open, i.e. allowing additional elements and rules which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile. 
-* Extensions: extensions are inherited from the underlying AU Base resource profile and those extensions agreed to form part of the 'minimum' support requirements are marked with Must Support and the applicable Obligations. Additional extensions are not added, unless there is no underlying AU Base resource profile is available.
-* Cardinality: cardinality is only constrained where there is an agreed minimum data quality requirement e.g. the patient is made mandatory in all AU Core profiles
-* Terminology Binding: typically the underlying AU Base terminology is inherited and, where agreed, the binding strength is strengthened from preferred to extensible. This strengthening is applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules. New terminologies are not added unless there is no underlying AU Base resource profile available.
+* Extensions: extensions are inherited from the underlying AU Base resource profile and those extensions agreed to form part of the 'minimum' support requirements are marked with _Must Support_. Additional extensions are not added, unless there is no underlying AU Base resource profile is available.
+* Cardinality: cardinality is only constrained where there is an agreed minimum data quality requirement for a supported element e.g. reference to the patient is mandatory in all AU Core profiles
+* Terminology Binding: typically the underlying AU Base terminology is inherited and, where agreed, on supported elements the binding strength is strengthened from preferred to extensible. This strengthening is applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules. New terminologies are not added unless there is no underlying AU Base resource profile available.
   * additional bindings: AU Core does not define new additional bindings but does inherit additional bindings from the underlying AU Base resource profile where they exist. 
   * multiple terminologies: where multiple terminologies are supported these are modelled using slicing and are selected from the set of additional bindings defined in AU Base to indicate which of those are to be supported for AU Core actors. For a 'minimum' approach, the intention is to slice by value set as this allows to indicate obligation but does not limit the set of codes that can be supplied.
 * Slice Constraints: slicing is avoided as much as possible to avoid limiting the opportunities for downstream IGs and applications to define their own business rules. Slicing in AU Core resource profiles is used to:
    * define support for mutiple terminologies e.g. [AU Core Medication](StructureDefinition-au-core-medication.html) support for Australian Medicines Terminology (AMT) and PBS Item Codes
    * define support for specific business identifiers e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) defines support for IHI, Medicare Card Number, DVA Number
    * slices are open to allow for additional content to be supplied
-* References: references are constrained to the AU Core profile, or where not available, the AU Base profile (where it exists) to support validation 
-* Type choices: types are restricted only where there is national agreement to restrict that usage in Australia. The types from the underlying AU Base profile are inherited, and no new data type profiles are added unless there is no underlying AU Base resource profile available.
-* Must Support and Obligations: _Must Support_ or Obligation are used to indicate the support requirements for each element (and extension) that form part of the 'minimum' requirements for support for AU Core actors. The obligation extension is used to describe the expectation for an actor, and where further ... a narrative statement is present .
-* Invariants:
+* References: references for supported elements are constrained to the AU Core profile, or where not available, the AU Base profile (where it exists) to support validation 
+* Type choices: types for supported elements are restricted only where there is national agreement to restrict that usage in Australia. The types from the underlying AU Base profile are inherited, and no new data type profiles are added unless there is no underlying AU Base resource profile available.
+* Must Support and Obligations: _Must Support_ is used to indicate the elements or parts of elements that form the minimum requirements to support for systems. Obligations are used to describe those support requirements for each element for AU Core actors. The obligation extension is used to describe the expectation for an actor, and where further ... a narrative statement is present .
+* Invariants: 
 
 TBD: We have narrative relaxation of obligations - but its not in the StructureDefs though it is in the CapStats. Is that sufficient? The CapStats are the description of an actors capabilties. And if this is sufficient then what about AU PS that doesn't have CapStats?
 
@@ -73,6 +76,8 @@ AU Core Actors are defined to describe the specific sets of functionality suppor
 AU Core Capability Statements are defined to describe the specific capabilities of a system when playing a particular role (i.e. actor) and includes the complete list of FHIR profiles, RESTful operations, and search parameters supported by that actor.
 
 AU Core Capability Statements are defined as open, i.e. allowing additional resources, profiles, operations, and search parameters to be defined.
+
+a Profile has a Must Support reference to other profiles or resources (i.e., Target Profiles). This list is provided to clarify where additional profiles or resources may need to be supported if a requester supports a particular resource.
 
 ### SNOMED CT Australian (SNOMED CT-AU) Edition
 For guidance on SNOMED CT-AU in FHIR, see the guidance defined in AU Base [SNOMED CT Australian Edition](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition).
