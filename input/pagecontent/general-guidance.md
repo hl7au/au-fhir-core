@@ -1,30 +1,35 @@
 {::options toc_levels="1..4"/}
 
-### Approach of this Implementation Guide
+### Implementation Guide Approach
 AU Core is provided to support the use of HL7® FHIR®© in an Australian context. AU Core defines the data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information.
 
 AU Core promotes interoperability and adoption through common implementation and provides the basis for further implementation guide development for specific use cases.
 
-For representation and use of local concepts, Australian realm IGs and implementers are expected to (in order of precedence):
-* comply with AU Base and AU Core
-* use the core FHIR extension, search parameter, or operation where available, otherwise
-* use the AU Base defined extension, search parameter, or operation where available, otherwise
-* use the domain-specific IG (e.g. AU Patient Summary or AU eRequesting) defined extension, search parameter, or operation, otherwise
-* define locally, the necessary extensions, search parameters, and operations in an IG and make available
+AU Core uses [AU Base representations as the base layer](https://build.fhir.org/ig/hl7au/au-fhir-base/branches/ft_profilingapproach/generalguidance.html#implementation-guide-approach), where available, as the basis for the FHIR structures and describes the minimum expectations for support for systems in Australia across use cases. 
+
+The approach to describing 'minimum' requirements in AU Core means modelling in such a way that 'at least' what is to be supported is described without limiting meaningful options for use cases and business rules. AU Core artefacts are therefore modelled as 'open' templates allowing for additional content including elements, extensions, resources, search parameters, operations, and terminology as long as the 'minimum' requirements are met.
+
+Australian realm IGs and implementers are expected to comply with AU Base and AU Core and to define extensions, search parameters or operations (in order of precedence):
+* in the FHIR standard i.e. FHIR Extensions Pack
+* in AU Base
+* in a downstream IG (e.g. AU eRequesting or AU Patient Summary)
+* in a local IG only if necessary
 
 #### Scope of AU Core FHIR Artefacts
 
-HL7 AU Core profiles:
+AU Core profiles:
 * Extensions to define 'minimum' support expectations for local use concepts e.g. Sex Assigned at Birth
 * Search parameters to define 'minimum' support expectations for AU Core actors
 * Resources to define 'minimum' support expectations for use in the Australian healthcare context
 * Actors to define systems that play a role in AU Core data exchange
 * Capability statements to define 'minimum' support expectations of FHIR capabilities of AU Core actors.
 
-#### Extension Approach
-All extensions used in AU Core are defined in the FHIR Extensions Pack or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions).
+AU Core does not define new extensions, search parameters, or operations; these artefacts are defined in AU Base and AU Core 'profiles' these AU Base artefacts to describe minimum expectations for support in Australia. 
 
-AU Core profiles some extensions to define minimum support requirements e.g. [AU Core Sex Assigned At Birth](http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sexassignedab) which profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html).
+#### Extension Approach
+A limited set of extensions are indicated as _Must Support_ in AU Core resource profiles. All extensions included in AU Core are defined in the FHIR Extensions Pack or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions).
+
+AU Core profiles some complex extensions to define minimum support requirements e.g. [AU Core Sex Assigned At Birth](http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sexassignedab) which profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) to indicate which parts of the extension are _Must Support_ and the Obligations for AU Core actors.
 
 Therefore, when modelling AU Core extension profiles:
 * Open: profiles are defined as open, i.e. allowing additional extensions and rules which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile. 
@@ -41,17 +46,23 @@ AU Core does not define any new terminology FHIR artefacts. Terminology supporte
 AU Base Resource Profiles define FHIR structures that localises core concepts, including terminology, for use in an Australian context. AU Core Resource Profiles set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. These AU Core profiles are based on the AU Base resource profile, where available, and identify the additional mandatory core elements, extensions, vocabularies and value sets that SHALL be present in the resource when conforming to AU Core. These profiles provide the floor for standards development for specific uses cases in an Australian context.
 
 Therefore, when modelling AU Core resource profiles:
+* Minimum support requirements: Only elements that form part of the 'minimum' support requirements (i.e. marked with _Must Support_) are further constrained in AU Core; in some special cases determined by the responsible work group will a data quality requirement be placed on an element that is not marked with 'must support'.
 * Open: profiles are defined as open, i.e. allowing additional elements and rules which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile. 
-* Extensions: extensions are inherited from the underlying AU Base resource profile and those extensions agreed to form part of the 'minimum' support requirements are marked with Must Support and the applicable Obligations. 
+* Extensions: extensions are inherited from the underlying AU Base resource profile and those extensions agreed to form part of the 'minimum' support requirements are marked with Must Support and the applicable Obligations. Additional extensions are not added, unless there is no underlying AU Base resource profile is available.
 * Cardinality: cardinality is only constrained where there is an agreed minimum data quality requirement e.g. the patient is made mandatory in all AU Core profiles
-* Terminology Binding: typically underlying AU Base terminology is inherited and, where agreed, the binding strength is strengthened. This strengthening is applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules.
-  ** while AU Core inherits but does not define additional bindings, where multiple terminologies have support expectatations slicing is used. 
-* Slice Constraints: slicing is avoided as much as possible to avoid limiting the opportunities for downstream IGs and applications to define their own business rules. Slicing in AU Core resource profiles are used to:
+* Terminology Binding: typically the underlying AU Base terminology is inherited and, where agreed, the binding strength is strengthened from preferred to extensible. This strengthening is applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules. New terminologies are not added unless there is no underlying AU Base resource profile available.
+  * additional bindings: AU Core does not define new additional bindings but does inherit additional bindings from the underlying AU Base resource profile where they exist. 
+  * multiple terminologies: where multiple terminologies are supported these are modelled using slicing and are selected from the set of additional bindings defined in AU Base to indicate which of those are to be supported for AU Core actors. For a 'minimum' approach, the intention is to slice by value set as this allows to indicate obligation but does not limit the set of codes that can be supplied.
+* Slice Constraints: slicing is avoided as much as possible to avoid limiting the opportunities for downstream IGs and applications to define their own business rules. Slicing in AU Core resource profiles is used to:
    * define support for mutiple terminologies e.g. [AU Core Medication](StructureDefinition-au-core-medication.html) support for Australian Medicines Terminology (AMT) and PBS Item Codes
-   * define support for business identifiers e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) defines support for IHI, Medicare Card Number, DVA Number
-* Type choices: types are restricted only where there is national agreement to restrict that usage in Australia. Unlike in AU Base, no additional Additionally, AU Base data type profiles suitable for usage for that particular element are added. 
-* Must Support and Obligations: _Must Support_ or Obligation is not present as there is no assertion of required support for any of the elements profiled in this guide for a particular usage.
+   * define support for specific business identifiers e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) defines support for IHI, Medicare Card Number, DVA Number
+   * slices are open to allow for additional content to be supplied
 * References: references are constrained to the AU Core profile, or where not available, the AU Base profile (where it exists) to support validation 
+* Type choices: types are restricted only where there is national agreement to restrict that usage in Australia. The types from the underlying AU Base profile are inherited, and no new data type profiles are added unless there is no underlying AU Base resource profile available.
+* Must Support and Obligations: _Must Support_ or Obligation are used to indicate the support requirements for each element (and extension) that form part of the 'minimum' requirements for support for AU Core actors. The obligation extension is used to describe the expectation for an actor, and where further ... a narrative statement is present .
+* Invariants:
+
+TBD: We have narrative relaxation of obligations - but its not in the StructureDefs though it is in the CapStats. Is that sufficient? The CapStats are the description of an actors capabilties. And if this is sufficient then what about AU PS that doesn't have CapStats?
 
 #### Actor Approach
 AU Core Actors are defined to describe the specific sets of functionality supported by systems that play a role in AU Core data exchange. Each actor is defined by:
