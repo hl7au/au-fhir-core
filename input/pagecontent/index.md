@@ -26,6 +26,7 @@ The AU Core Sparked project includes:
 ### Dependencies
 
 {% include dependency-table.xhtml %}
+{% include expansion-params.xhtml %}
 
 ### Usage
 
