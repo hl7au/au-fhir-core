@@ -12,7 +12,7 @@ The set of AU Core SearchParameters defined in this release of AU Core include s
 
 The complete list of search parameters supported by AU Core and the rules for use are defined in [AU Core CapabilityStatements](capability-statements.html).
 
-The FHIR specification provides more information on the use of search parameters in the [FHIR RESTful search API](http://hl7.org/fhir/R4/http.html#search) and the [Search Parameter Registry](http://hl7.org/fhir/R4/searchparameter-registry.html).
+The FHIR standard provides more information on the use of search parameters in the [FHIR RESTful search API](http://hl7.org/fhir/R4/http.html#search) and the [Search Parameter Registry](http://hl7.org/fhir/R4/searchparameter-registry.html).
 
 ### Common Search Parameters
 
