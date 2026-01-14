@@ -8,7 +8,7 @@ Implementers are advised to take note that expansions of value sets visible in t
 
 ### Value Sets
 
-The following value sets are supported in AU Core, i.e bound as [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) or stronger to a supported element, element slice, or extension in an AU Core profile.
+The following value sets are supported in AU Core, i.e. bound as [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) or stronger to a supported element, element slice, or extension in an AU Core profile.
 
 Column attribute descriptions are as follows:
 <ul>
