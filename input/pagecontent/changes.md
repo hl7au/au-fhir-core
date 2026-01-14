@@ -37,7 +37,7 @@ This change log documents the significant updates and resolutions implemented fr
 - [AU Core Condition](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-condition.html):
   - added Must Support and obligation SHOULD:populate to Condition.onsetDateTime for the AU Core Responder [FHIR-45040](https://jira.hl7.org/browse/FHIR-45040)  
 - [AU Core Diagnostic Result Observation](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-diagnosticresult.html): 
-  - clarified that this profile is for specialist and other (non imaging or pathology) results, and added profile-specific implementation guidance to see AU Core Pathology Result Observation profile for pathology results [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
+  - clarified that this profile is for specialist and other (non-imaging or non-pathology) results, and added profile-specific implementation guidance to see AU Core Pathology Result Observation profile for pathology results [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889).
 - [AU Core Encounter](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-encounter.html)
   - changed Encounter.reasonCode binding to Reason for Encounter (preferred) [AU Base: FHIR-50996](https://jira.hl7.org/browse/FHIR-50996)
 - [AU Core HealthcareService](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-healthcareservice.html):
@@ -58,7 +58,7 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support on Organization.telecom.system [FHIR-51042](https://jira.hl7.org/browse/FHIR-51042)
   - added Must Support on Organization.telecom.value [FHIR-51042](https://jira.hl7.org/browse/FHIR-51042)
 - [AU Core Pathology Result Observation](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-diagnosticresult-path.html): 
-  - added profile-specific implementation guidance to see AU Core Diagnostic Result Observation profile for non imaging or pathology results  [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889)
+  - added profile-specific implementation guidance to see AU Core Diagnostic Result Observation profile for non-imaging or non-pathology results  [FHIR-46889](https://jira.hl7.org/browse/FHIR-46889)
   - changed Observation.effective[x] type to remove type constraint [AU Base: FHIR-49189](https://jira.hl7.org/browse/FHIR-49189)
   - applied technical correction to add Must Support and obligation flag to slices lab and specificDiscipline on Observation.category to align with Must Support on the sliced element [FHIR-51083](https://jira.hl7.org/browse/FHIR-51083) 
 - [AU Core Patient](https://hl7.org.au/fhir/core/2.0.0-ballot/StructureDefinition-au-core-patient.html): 

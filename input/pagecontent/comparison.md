@@ -962,7 +962,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.telecom.system</td>
-            <td style="width: 25%;">Sub-lement flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Practitioner.telecom.value</td>
@@ -1058,7 +1058,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]</td>
-            <td style="widt: 25%;">US core requires minimum of 1.</td>
+            <td style="width: 25%;">US core requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]:valueCodeableConcept</td>
@@ -1473,7 +1473,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 
 <img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatement includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -1707,7 +1707,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPS Capability
 
 <img src="arrow_up.png" width="16"/> **Stronger**: The CapabilityStatement strengthens a conformance requirement that is present in the AU Core CapabilityStatement (e.g. **SHOULD** to **SHALL**).
 
-<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatment includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
+<img src="plus_sign.png" width="16"/> **New**: The CapabilityStatement includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
@@ -1744,7 +1744,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPS Capability
 		</tr>
 		<tr>
             <td>AllergyIntolerance</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> suport AllergyIntolerance (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>. IPS sets this profile as a supported profile for the AllergyIntolerance resource, we interpret this as a conformance expectation of <strong>SHOULD</strong>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support AllergyIntolerance (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>. IPS sets this profile as a supported profile for the AllergyIntolerance resource, we interpret this as a conformance expectation of <strong>SHOULD</strong>.</td>
         </tr>
 		<tr>
             <td>Condition</td>

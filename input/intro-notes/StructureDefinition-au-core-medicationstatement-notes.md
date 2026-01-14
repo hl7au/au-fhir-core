@@ -69,7 +69,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationstatement.html#search)** and **[`status`](https://hl7.org/fhir/R4/medicationstatement.html#search)** search parameters:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationStatement:medication`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
-    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
+    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g. `status={system|}[code],{system|}[code],...`)
 
 
     `GET [base]/MedicationStatement?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
@@ -103,7 +103,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationStatement:medication`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHALL** support these `effective` comparators: `gt,lt,ge,le`
-    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `effective` (e.g.`effective=[date]&effective=[date]&...`)
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `effective` (e.g. `effective=[date]&effective=[date]&...`)
     
 
     `GET [base]/MedicationStatement?patient={Type/}[id]&effective={gt|lt|ge|le}[date]{&effective={gt|lt|ge|le}[date]&...}`
