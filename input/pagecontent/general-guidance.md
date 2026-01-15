@@ -41,7 +41,7 @@ All the search interaction examples in this guide use the HTTP GET method with t
 -   Variables surrounded by "\[\]" are mandatory *for the client* to supply and will be replaced by the string literal identified.
 -   Variables surrounded by "\{\}" are optional *for the client* to supply and will be replaced by the string literal identified.
 -   Variables:
-    -   base: The Service Root URL (e.g., "<https://fhir-open-api-dstu2.smarthealthit.org>”)
+    -   base: The Service Root URL (e.g., "https://fhir-open-api-dstu2.smarthealthit.org”)
     -  Resource-type: The name of a resource type (e.g., "Patient")
     -  parameter: The search parameters as defined for the particular interaction (e.g.,"?patient=Patient/123")
     -  value: The search parameter value for a particular search
