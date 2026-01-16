@@ -257,9 +257,9 @@ Profile | Must Support Data Type
 [AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.performedDateTime
 {:.grid}
 
-##### Must Support - Choice of Identifiers
-A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
-- AU Core Responders **SHALL** correctly populate the element with identifiers from at least one supported identifier type where the identifier is known, or any known identifier when no supported identifier type is known.
+##### Must Support - Choice of Multiple Identifiers
+A profile may support one or more than one identifier type and will include the supported identifier(s) in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
+- AU Core Responders **SHALL** correctly populate the element with identifiers from *at least one* supported identifier type where an identifier of that type is known, or any known identifier when no supported identifier type is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any identifier type allowed by the element definition.
 
 The table below provides a list of AU Core profile elements with one or more supported identifier types.
@@ -272,9 +272,9 @@ AU Core Profile |Must Support Element|Supported Identifiers
 [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
-For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) requires support for the following choices `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU Core Patient Profile:
-- AU Core Responders **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Card Number, or DVA Number, or any combination of them where the identifier is known, or any other identifier (e.g. Medical Record Number) when none of IHI, or Medicare Card Number, or DVA Number are known.
-- AU Core Requesters **SHALL** accept Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an IHI, Medicare Card Number, or DVA Number identifier, or may be some other allowed identifier.
+For example, the profile [AU Core Organization](StructureDefinition-au-core-organization.html) requires support for the following choices `Organization.identifier` defined in [AU Base Organization](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organization.html) to support Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN). When claiming conformance to the AU Core Organization Profile:
+- AU Core Responders **SHALL** correctly populate `Organization.identifier` with *at least one* of HPI-O or ABN if an identifier of either of those types is known, or any other identifier (e.g. NATA Accredication Number) when neither HPI-O or ABN are known.
+- AU Core Requesters **SHALL** accept Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an HPI-O or ABN, or may be any other allowed identifier (e.g. NATA Accredication Number).
 
 Systems **MAY** support populating and accepting other identifiers, but this is not a requirement of AU Core.
 
@@ -295,10 +295,10 @@ AU Core Profile |Must Support Choice Elements
 {:.grid}
 
 
-##### Must Support - Choice of Terminology
+##### Must Support - Choice of Multiple Terminology
 
 In AU Core, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases:
-- AU Core Responders **SHALL** correctly populate the element with concepts from each supported value set where the applicable concept is known.
+- AU Core Responders **SHALL** correctly populate the element with concepts from both supported value sets if the applicable concept is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid value. 
 
 The table below lists the applicable profiles and elements in AU Core that support multiple value sets.
