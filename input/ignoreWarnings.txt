@@ -3,7 +3,7 @@
 # === ERROR 01: Expected error as the CodeSystem is defined without content included. ===
 Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'
 
-# === ERROR 02: This issue will be fixed in a later version of the IG Publisher (see: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build) ===
+# === ERROR 02: This issue will be fixed in a later version of the IG Publisher (see: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build). ===
 No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters' 
 
 # === WARNING 01: These are warnings for publication artefacts not used in HL7 AU specifications at this time and are accepted by the AU FHIR WG. ===
@@ -123,5 +123,5 @@ This element does not match any known slice defined in the profile http://hl7.or
 # === INFORMATION 10: Information about the use of standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities; see FHIR-12419. ===
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# === INFORMATION 11: TBD. ===
+# === INFORMATION 11: The use of the obligation extension generates multiple slicing information messages in the snapshot. This extension is reused across many resources in leading to repeated validation messages that do not appear to indicate an actual problem. Other IGs that are using obligations (e.g. IPS, IPA, EPS) show the same set of QA "element does not match any known slice" slicing information messages that have been accepted for publication. (see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Obligations.20extension.20does.20not.20meet.20slice/with/553529895). ===
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
