@@ -87,7 +87,7 @@ In AU Core profiles:
 - If referencing a contained resource, both the contained resource and the referencing resource **SHALL** conform to the applicable AU Core profile.
 - Otherwise, it is recommended that an AU Core Responder avoids the use of contained resources unless the referenced resource does not have an independent existence apart from the resource that contains it and cannot be identified independently.
 
-Further guidance about the general use case for [contained resources](http://hl7.org/fhir/R4/references.html#contained) can be found in the base FHIR standard.
+Further guidance about the general use case for [contained resources](http://hl7.org/fhir/R4/references.html#contained) can be found in the FHIR standard.
 
 ### Extensibility – “Additional” Elements
 A responder can send "additional" elements beyond those flagged with *Must Support* in an AU Core profile. Additional elements are often required by other profiles the system may conform to, allowing local requirements, including technical and workflow context for the resource, to be reflected and extending the health information supported in exchanges. For this reason, extensibility is generally encouraged and expected in AU Core profiles. Only in some exceptionally rare use case profiles are rules tightened to limit the nature of additional information that can be sent. Specification authors are encouraged to enable greater interoperability and software re-use by avoiding reductions in an element's cardinality.
@@ -119,9 +119,15 @@ All the search interaction examples in this guide use the HTTP GET method with t
 -   Variables surrounded by "\[\]" are mandatory *for the client* to supply and will be replaced by the string literal identified.
 -   Variables surrounded by "\{\}" are optional *for the client* to supply and will be replaced by the string literal identified.
 -   Variables:
+<<<<<<< HEAD
     -   base: The Service Root URL (e.g. "<https://fhir-open-api-dstu2.smarthealthit.org>”)
     -  Resource-type: The name of a resource type (e.g. "Patient")
     -  parameter: The search parameters as defined for the particular interaction (e.g."?patient=Patient/123")
+=======
+    -   base: The Service Root URL (e.g., "https://fhir-open-api-dstu2.smarthealthit.org”)
+    -  Resource-type: The name of a resource type (e.g., "Patient")
+    -  parameter: The search parameters as defined for the particular interaction (e.g.,"?patient=Patient/123")
+>>>>>>> master
     -  value: The search parameter value for a particular search
        - When searching using the `token` type SearchParameter [(how to search by token)](https://hl7.org/fhir/R4/search.html#token), the syntax `{system|}[code]` means that the system value is optional *for the client* to supply.
        - When searching using the `reference` type SearchParameter [(how to search by reference)](https://hl7.org/fhir/R4/search.html#reference), the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply.

@@ -13,7 +13,7 @@ The following are supported usage scenarios for this profile:
 ### Profile Specific Implementation Guidance
 - When populating `Patient.identifier`, responders are not required to populate all known patient identifiers from the source system. Responders:
   - **SHALL** populate with at least one identifier
-  - **SHALL** populate with at least one of the supported identifier types if known
+  - **SHALL** populate with at least one of the supported identifier types if known, or any known identifier when no supported identifier type is known
   - **SHOULD** populate an IHI in preference to Medicare or DVA numbers where the IHI is known and **MAY** also provide a Medicare, DVA number, other identifier type or any combination of them
 - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#business-identifiers) in AU Base.
 - This profile supports the sex, gender, and related concepts of: Name to Use, Gender Identity, and Individual Pronouns. See the [Sex and Gender](sex-and-gender.html) page for guidance on exchanging sex and gender related concepts conformant to AU Core.
@@ -26,4 +26,4 @@ The following are supported usage scenarios for this profile:
   - In this profile, the following sub-elements of `name` are marked as *Must Support*: `name.use`, `name.text`, `name.family`, and `name.given`
     - responders are required to support at least one of the following sub-elements: `name.text`, `name.family`, and `name.given`
     - requesters are required to support all sub-elements marked *Must Support*: `name.use`, `name.text`, `name.family`, and `name.given`
-- See the section on [Representing Communication Preferences](http://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#representing-communication-preferences) for guidance on how to represent languages that may be used to communicate with the patient about their health including preferred language and if an interpreter is required.
+- See the section on [Representing Communication Preferences](http://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#representing-communication-preferences) for guidance on how to represent languages that can be used to communicate with the patient about their health including preferred language and if an interpreter is required.
