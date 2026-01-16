@@ -7,9 +7,9 @@
   <code>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="320000009"/>
-      <display value="Simvastatin 40 mg oral tablet"/>
+      <code value="23525011000036109"/>
+      <display value="Simvastatin 40 mg tablet"/>
     </coding>
-    <text value="Simvastatin 40 MG Disintegrating Oral Tablet"/>
+    <text value="Simvastatin 40 MG Oral Tablet"/>
   </code>
 </Medication>
