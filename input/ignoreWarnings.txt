@@ -11,7 +11,7 @@ The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 
-# === WARNING 02: Artefacts inherit multiple profiles for certain data types (e.g., Address, Identifier). The IG Publisher cannot match example instances to a single profile and generates these warnings. This behaviour is expected and consistent with the design of AU Base. ===
+# === WARNING 02: INHERITED FROM AU BASE: Artefacts inherit multiple profiles for certain data types (e.g., Address, Identifier). The IG Publisher cannot match example instances to a single profile and generates these warnings. This behaviour is expected and consistent with the design of AU Base. ===
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
@@ -25,7 +25,7 @@ Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/Structu
 # === WARNING 03: Flags aspects of FHIR implementation of best practice. These warnings do not indicate an error in the specification, and ignore profiled requirements. These warnings were accepted in AU Core v1.0.0. ===
 Best Practice Recommendation: In general, all observations should have a performer 
 
-# === WARNING 04: AU Base does not pin the version of these standard FHIR extensions sourced from the FHIR Extensions Pack. ===
+# === WARNING 04: INHERITED FROM AU BASE: AU Base does not pin the version of these standard FHIR extensions sourced from the FHIR Extensions Pack. ===
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/bodySite'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 1.0.0 (from hl7.fhir.uv.extensions.r4#1.0.0), 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.1.0 (from hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/bodySite' to 'http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0'
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 1.0.0 (from hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0 (from hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse' to 'http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse|5.2.0'
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 1.0.0 (from hl7.fhir.uv.extensions.r4#1.0.0), 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.1.0 (from hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace' to 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace|5.2.0'
@@ -48,37 +48,37 @@ The definition for the element 'Observation.code' binds to the value set 'https:
 The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3' which is experimental, but this structure is not labeled as experimental
 
-# === WARNING 07: Expected warning as the CodeSystem is defined without content included. ===
+# === WARNING 07: Expected warning as the AU Base PBS CodeSystem is defined without content included. ===
 Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#2951H' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
 
-# === WARNING 08: Known CodeSystem URLs without definitions. ===
+# === WARNING 08: INHERITED FROM AU BASE: Known CodeSystem URLs without definitions. ===
 A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://www.mims.com.au/codes' could not be found, so the code cannot be validated
 
 # === WARNING 09: The canonical URL for following identifier types currently resolves to a html page and not a FHIR artefact. See the list of AU Base identifier profiles for the corresponding data type profile. ===
-No definition could be found for URL value 'http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/12345678901'
 No definition could be found for URL value 'http://pca.digitalhealth.gov.au/id/pca-healthcare-service'
 No definition could be found for URL value 'http://hl7.org.au/id/abn'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hi/hpio/1.0'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/dva'
-No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0/8003626566699734'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hi/hpii/1.0'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/medicare-provider-number'
 
-# === WARNING 10 - APPROVED IN AU BASE 6.0.0: Example codes are tested against bound terminology (MIMS/PBS). These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
+# === WARNING 10: Examples of ABN or HPIO scoped identifier system URLs do not have formal definition as they are examples. ===
+No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0/8003626566699734'
+No definition could be found for URL value 'http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/12345678901'
+
+# === WARNING 11: INHERITED FROM AU BASE: Example codes are tested against bound terminology (MIMS/PBS). These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
 Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://snomed.info/sct was not found
 Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/mims|6.0.0-ci-build' because the code system http://snomed.info/sct was not found
 
-# === WARNING 11: Example codes from the code systems supplied are tested against an example binding terminology. IG publisher identifies this as '' (no ValueSet); and the code can not be validated.  ===
+# === WARNING 12: Example codes from the code systems supplied are tested against an example binding terminology. IG publisher identifies this as '' (no ValueSet); and the code can not be validated.  ===
 Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
 
-# === WARNING 12: TBD  ===
+# === WARNING 13: TBD  ===
 WARNING: Medication/2active-ingredients: Medication.code.coding[0]: Resolved system http://pbs.gov.au/code/item (v6.0.0-ci-build), but the definition doesn't include any codes, so the code has not been validated
 WARNING: Observation/pulserate-1: Observation.code: The provided code 'http://snomed.info/sct#78564009' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'; The provided code 'http://snomed.info/sct#364075005' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'
 WARNING: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept): Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://pbs.gov.au/code/item was not found
 WARNING: MedicationStatement/completed-bactrim: MedicationStatement.medication.ofType(CodeableConcept).coding[1]: Resolved system http://pbs.gov.au/code/item (v6.0.0-ci-build), but the definition doesn't include any codes, so the code has not been validated
-
-
 
 # === INFORMATION 01: Some FHIR standard ValueSets are published as draft. ===
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/device-action|4.0.1
@@ -92,7 +92,6 @@ Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-ch
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3|3.20251231.0
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3|3.20251231.0
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3|3.20251231.0
-
 
 # === INFORMATION 03: These issues are known FHIR standard and Extension Pack future version and current deprecations. ===
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing) 
@@ -118,8 +117,5 @@ This element does not match any known slice defined in the profile http://hl7.or
 # === INFORMATION 07: Information about the use of standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities; see FHIR-12419. ===
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-
 # === INFORMATION 08: TBD. ===
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-
-
