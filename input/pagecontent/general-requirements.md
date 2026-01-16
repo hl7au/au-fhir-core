@@ -257,7 +257,7 @@ Profile | Must Support Data Type
 [AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.performedDateTime
 {:.grid}
 
-##### Must Support - Choice of Multiple Identifiers
+##### Must Support - Choice of Identifiers
 A profile may support one or more than one identifier type and will include the supported identifier(s) in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
 - AU Core Responders **SHALL** correctly populate the element with identifiers from *at least one* supported identifier type where an identifier of that type is known, or any known identifier when no supported identifier type is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any identifier type allowed by the element definition.
