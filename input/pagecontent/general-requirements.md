@@ -295,13 +295,17 @@ AU Core Profile |Must Support Choice Elements
 {:.grid}
 
 
-##### Must Support - Choice of Multiple Terminology
+##### Must Support - Choice of Multiple Terminologies
 
-In AU Core, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases:
+In AU Core, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. Profiles that supported multiple terminologies include them in a profile by slicing the coding part of the element and placing *Must Support* on each terminology slice.
+
+In such cases:
 - AU Core Responders **SHALL** correctly populate the element with concepts from both supported value sets if the applicable concept is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid value. 
 
-The table below lists the applicable profiles and elements in AU Core that support multiple value sets.
+Most *Must Support* elements with terminology in AU Core are do not define support for multiple terminologies. For these elements the section on [Must Support - Complex Elements](general-requirements.html#must-support---complex-elements) applies.
+
+The table below lists the applicable profiles and elements in AU Core that define support for multiple value sets.
 
 AU Core Profile |Must Support Sub-Element|Terminology Choices
 ---|---
@@ -314,10 +318,10 @@ AU Core Profile |Must Support Sub-Element|Terminology Choices
 For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) requires support for the following terminology choices `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging *Must Support* on those two terminology slices.
 
 When claiming conformance to the AU Core Medication profile: 
-- AU Core Responders **SHALL** correctly populate `Medication.code.coding` with either a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, if a coded value is known.
+- AU Core Responders **SHALL** correctly populate `Medication.code.coding` with codes from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) if both coded values are known, or from either if only one is known, or from another terminology if neither is known but a code is available, or text only if no coded value is known.
 - AU Core Requesters **SHALL** accept a Medication resource without error if `Medication.code.coding` is present and containing any valid value. A valid value may be text, or may be a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, or some other code.
 
-Systems **MAY** populate and accept other code systems but this is not a requirement of AU Core.
+Systems **MAY** populate and accept concepts from other value sets but this is not a requirement of AU Core.
 
 ### Missing Data
 
