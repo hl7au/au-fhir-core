@@ -173,7 +173,7 @@ For example, the AU Core Organization Profile `name` element is a primitive stri
 - AU Core Requesters **SHALL** accept the Organization resource without error if `Organization.name` is present and containing any valid value.
 
 ##### Must Support - Complex Elements
-Complex elements are composed of primitive and/or other complex elements. Elements may have additional rules defined in the profile that also apply, e.g. terminology binding, or invariants. 
+Complex elements are composed of primitive and other complex elements. Elements may have additional rules defined in the profile that also apply, e.g. invariants. Coded elements ([CodeableConcept](https://hl7.org/fhir/R4/datatypes.html#CodeableConcept), [Coding](https://hl7.org/fhir/R4/datatypes.html#Coding), and [code](https://hl7.org/fhir/R4/datatypes.html#code) datatypes) have additional rules defined by the [terminology binding](https://hl7.org/fhir/R4/terminologies.html#strength) in the profile.
 
 If a complex element is labelled as *Must Support*:
 - AU Core Responders **SHALL** correctly populate the element with at least one of the sub-element values if the value is known.
@@ -257,10 +257,12 @@ Profile | Must Support Data Type
 [AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.performedDateTime
 {:.grid}
 
-##### Must Support - Choice of Identifiers
-A profile may support one, none, or many identifier types. Supported identifier types are included in a profile by slicing the identifier element and placing *Must Support* on each identifier slice. In such cases:
+##### Must Support - Identifiers
+A profile may support one, none, or many identifier types. Supported identifier types are included in a profile by slicing the identifier element and placing *Must Support* on each identifier slice. Where one or more identifier types are supported:
 - AU Core Responders **SHALL** correctly populate the identifier element with identifiers from at least one supported identifier type where an identifier of that type is known, or any identifier type when an identifier is known but it is not one of the supported identifier types.
 - AU Core Requesters **SHALL** accept resources without error if the identifier element is present and containing any identifier type allowed by the element definition.
+
+I
 
 The table below provides a list of AU Core profile elements with one or more supported identifier types.
 
