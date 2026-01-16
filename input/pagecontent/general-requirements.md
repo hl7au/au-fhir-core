@@ -295,15 +295,14 @@ AU Core Profile |Must Support Choice Elements
 {:.grid}
 
 
-##### Must Support - Choice of Multiple Terminologies
+##### Must Support - Multiple Terminologies
+Most *Must Support* elements with terminology in AU Core define support for one terminology which is bound to the element as a value set. For these elements, the section on [Must Support - Complex Elements](general-requirements.html#must-support---complex-elements) and the terminology binding applies.
 
-In AU Core, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. Profiles that supported multiple terminologies include them in a profile by slicing the coding part of the element and placing *Must Support* on each terminology slice.
+Elements that define support for more than one value set only include them in a profile by slicing the coding part of the element and placing *Must Support* on each terminology slice. The [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and not the element is slices so that systemc can supply a text value only where.
 
-In such cases:
-- AU Core Responders **SHALL** correctly populate the element with concepts from both supported value sets if the applicable concept is known.
+Where multiple value sets are supported:
+- AU Core Responders **SHALL** correctly populate the element with concepts from all supported value sets where the applicable concept is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid value. 
-
-Most *Must Support* elements with terminology in AU Core are do not define support for multiple terminologies. For these elements the section on [Must Support - Complex Elements](general-requirements.html#must-support---complex-elements) applies.
 
 The table below lists the applicable profiles and elements in AU Core that define support for multiple value sets.
 
