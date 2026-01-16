@@ -276,7 +276,7 @@ AU Core Profile |Must Support Element|Supported Identifiers
 [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
-For example, the profile [AU Core Organization](StructureDefinition-au-core-organization.html) defines support for the following choices `Organization.identifier` defined in [AU Base Organization](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organization.html) to support Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN). When claiming conformance to the AU Core Organization Profile:
+For example, the profile [AU Core Organization](StructureDefinition-au-core-organization.html) defines support for the Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN) identifier types as slices of `Organization.identifier`flagged with *Must Support*. When claiming conformance to the AU Core Organization Profile:
 - AU Core Responders **SHALL** correctly populate `Organization.identifier` with at least one of HPI-O or ABN if known, or any other identifier when neither HPI-O or ABN are known but some other identifier is (e.g. NATA Accredication Number).
 - AU Core Requesters **SHALL** accept Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an HPI-O or ABN, or may be any other valid identifier (e.g. NATA Accredication Number).
 
@@ -300,17 +300,15 @@ AU Core Profile |Must Support Choice Elements
 
 
 ##### Must Support - Multiple Terminologies
-A coded element can have support defined for one or many value sets. 
+A coded element can have support defined for one or many value sets. Coded elements that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing *Must Support* on each value set slice. These value set slices are not intended to prevent systems from supplying only a text value.
 
-Most coded *Must Support* elements in AU Core define support for one value set, which is bound to the element. For these elements, the section on [Must Support - Complex Elements](general-requirements.html#must-support---complex-elements) and the terminology binding applies.
-
-Coded elements that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing *Must Support* on each value set slice. These value set slices are not intended to prevent systems from supplying only a text value.
+Most coded *Must Support* elements in AU Core define support for one value set, which is bound to the element, no value set slice is present. For these elements, the section on [Must Support - Complex Elements](general-requirements.html#must-support---complex-elements) and the terminology binding applies.
 
 Where multiple value sets are supported:
 - AU Core Responders **SHALL** correctly populate the element with concepts from all supported value sets where the applicable concept is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid value. 
 
-The table below lists the applicable profiles and elements in AU Core that define support for multiple value sets.
+The table below lists the AU Core profile elements that define support for multiple value sets.
 
 AU Core Profile |Must Support Sub-Element|Terminology Choices
 ---|---
@@ -320,7 +318,7 @@ AU Core Profile |Must Support Sub-Element|Terminology Choices
 [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.medicationCodeableConcept.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 {:.grid}
 
-For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) defines support for [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by two terminology slices of `Medication.code.coding` flagged with *Must Support*.
+For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) defines support for [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) value sets as slices of `Medication.code.coding` flagged with *Must Support*.
 
 When claiming conformance to the AU Core Medication profile: 
 - AU Core Responders **SHALL** correctly populate `Medication.code.coding` with codes from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) if both coded values are known, or from either if only one is known, or from another terminology if neither is known but a code is available, or text only if no coded value is known.
