@@ -258,9 +258,9 @@ Profile | Must Support Data Type
 {:.grid}
 
 ##### Must Support - Choice of Identifiers
-A profile may support one or more than one identifier type and will include the supported identifier(s) in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
-- AU Core Responders **SHALL** correctly populate the element with identifiers from *at least one* supported identifier type where an identifier of that type is known, or any known identifier when no supported identifier type is known.
-- AU Core Requesters **SHALL** accept resources without error if the element is present and containing any identifier type allowed by the element definition.
+A profile may support one, none, or many identifier types. Supported identifier types are included in a profile by slicing the identifier element and placing *Must Support* on each identifier slice. In such cases:
+- AU Core Responders **SHALL** correctly populate the identifier element with identifiers from at least one supported identifier type where an identifier of that type is known, or any identifier type when an identifier is known but it is not one of the supported identifier types.
+- AU Core Requesters **SHALL** accept resources without error if the identifier element is present and containing any identifier type allowed by the element definition.
 
 The table below provides a list of AU Core profile elements with one or more supported identifier types.
 
@@ -273,8 +273,8 @@ AU Core Profile |Must Support Element|Supported Identifiers
 {:.grid}
 
 For example, the profile [AU Core Organization](StructureDefinition-au-core-organization.html) requires support for the following choices `Organization.identifier` defined in [AU Base Organization](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organization.html) to support Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN). When claiming conformance to the AU Core Organization Profile:
-- AU Core Responders **SHALL** correctly populate `Organization.identifier` with *at least one* of HPI-O or ABN if an identifier of either of those types is known, or any other identifier (e.g. NATA Accredication Number) when neither HPI-O or ABN are known.
-- AU Core Requesters **SHALL** accept Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an HPI-O or ABN, or may be any other allowed identifier (e.g. NATA Accredication Number).
+- AU Core Responders **SHALL** correctly populate `Organization.identifier` with at least one of HPI-O or ABN if known, or any other identifier when neither HPI-O or ABN are known but some other identifier is (e.g. NATA Accredication Number).
+- AU Core Requesters **SHALL** accept Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an HPI-O or ABN, or may be any other valid identifier (e.g. NATA Accredication Number).
 
 Systems **MAY** support populating and accepting other identifiers, but this is not a requirement of AU Core.
 
