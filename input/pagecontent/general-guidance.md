@@ -1,59 +1,70 @@
 {::options toc_levels="1..4"/}
 
 ### Implementation Guide Approach
-AU Core uses [AU Base representations as the base layer](relationship.html#relationship-to-hl7-au-base), where available, as the basis for the FHIR structures and describes the minimum expectations for support for systems in Australia across use cases. AU Core defines the data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information.
-
 AU Core promotes interoperability and adoption through common implementation and provides the basis for further implementation guide development for specific use cases.
 
-The approach to describing minimum requirements in AU Core means modelling in such a way that 'at least' what is to be supported is defined without limiting meaningful options for use cases and business rules. AU Core artefacts are therefore modelled as open templates allowing for additional content including elements, extensions, resources, search parameters, operations, and terminology whilst ensuring the minimum requirements are met.
+AU Core uses [AU Base representations as the base layer](relationship.html#relationship-to-hl7-au-base), where available, as the basis for the FHIR structures and describes the minimum expectations for support for systems in Australia across use cases across jurisdictions, organisations, and digital health initiatives nationwide. 
+
+AU Core defines the data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information.
+
+The approach to describing the 'minimum' in AU Core means modelling in such a way that 'at least' what is to be supported is defined without limiting meaningful options for use cases and business rules. AU Core artefacts are therefore modelled as open templates allowing for additional content including elements, extensions, resources, search parameters, operations, and terminology whilst ensuring the minimum requirements are met.
 
 Australian realm IGs and implementers are expected to comply with AU Base and AU Core and to define extensions, search parameters or operations (in order of precedence):
 * in the FHIR standard (incl. FHIR Extensions Pack)
-* in AU Base (this IG)
+* in AU Base
 * in a downstream IG (e.g. AU eRequesting or AU Patient Summary)
 * in a local IG only if necessary
 
 #### Scope of AU Core FHIR Artefacts
 
 AU Core profiles:
-* [Extensions](general-guidance.html#extension-approach) to define minimum support expectations for local use concepts
-* [Search parameters](general-guidance.html#search-parameter-approach) to define minimum support expectations for AU Core actors
-* [Resources](general-guidance.html#resource-profile-approach) to define minimum support expectations for use in the Australian healthcare context
+* [Extensions](general-guidance.html#extension-approach) to define minimum support expectations for complex extensions (e.g. )
+* [Search parameters](general-guidance.html#search-parameter-approach) to define minimum support expectations for supported search parameters (e.g. support for chaining)
+* [Resources](general-guidance.html#resource-profile-approach) to define minimum support expectations for use of FHIR resources in the Australian healthcare context across 
 
 AU Core defines:
 * [Actors](general-guidance.html#actor-approach) to define systems that play a role in AU Core data exchange
 * [Capability statements](general-guidance.html#capability-statement-approach) to define minimum support expectations of FHIR capabilities of AU Core actors.
 
-AU Core does not define new extensions, search parameters, operations or [terminology](general-guidance.html#terminology-approach); these artefacts are [defined in AU Base](generalguidance.html#implementation-guide-approach) and AU Core profiles these AU Base artefacts to describe minimum expectations for support in Australia. For more information on the definitional nature of AU Base see the guidance on [AU Base Implementation Guide Approach](https://build.fhir.org/ig/hl7au/au-fhir-base/branches/ft_profilingapproach/generalguidance.html#implementation-guide-approach).
+AU Core does not define new extensions, search parameters, operations or [terminology](general-guidance.html#terminology-approach); these artefacts are [defined in AU Base](generalguidance.html#implementation-guide-approach) and AU Core profiles these AU Base artefacts to describe minimum expectations for support in Australia. For more information on the definitional nature of AU Base see the guidance in [AU Base Implementation Guide Approach](https://build.fhir.org/ig/hl7au/au-fhir-base/branches/ft_profilingapproach/generalguidance.html#implementation-guide-approach).
 
 #### Extension Approach
-A limited set of extensions are indicated as _Must Support_ in AU Core resource profiles. All extensions included in AU Core are defined in the [FHIR Extensions Pack](https://hl7.org/fhir/extensions/) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions).
+A limited set of extensions are indicated as _Must Support_ in AU Core resource profiles. AU Core does define new extensions, all extensions included in AU Core are defined in the [FHIR Extensions Pack](https://hl7.org/fhir/extensions/) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions).
 
 AU Core profiles some complex extensions to define minimum support requirements, for example [AU Core Sex Assigned At Birth](http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sexassignedab) profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) to indicate which parts of the extension are _Must Support_ and the Obligations for AU Core actors.
 
 When modelling AU Core extension profiles, the [AU Core resource profile approach](general-guidance.html#resource-profile-approach) is followed.
 
-AU Core does not prohibit extensions or constrain them to 0..0, and downstream IGs can introduce additional extension requirements as needed for their use case.
+AU Core does not prohibit extensions or constrain them to 0..0, and downstream IGs can introduce additional extension requirements as needed for their use case. TBD - this is profiling, when we include extensions in resource profiles not about extensions themselves.
 
 #### Search Parameter Approach
-AU Core does not define any new search parameters. All search parameters included in AU Core are defined in the [FHIR Search Parameter Registry](https://hl7.org/fhir/R4/searchparameter-registry.html) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/search-parameters.html).
+AU Core does not define new search parameters. All search parameters included in AU Core are defined in the [FHIR Search Parameter Registry](https://hl7.org/fhir/R4/searchparameter-registry.html) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/search-parameters.html).
 
 AU Core profiles these search parameters to describe the additional minimum support requirements for AU Core actors including support for chaining, modifiers, and comparators, e.g. [AU Core clinical-patient](https://build.fhir.org/ig/hl7au/au-fhir-core/SearchParameter-au-core-clinical-patient.html) that defines support for chained identifiers.
+
+<div class="stu-note" markdown="1">
+The set of AU Core SearchParameters defined in this release of AU Core include search parameters with support for chained search. Future releases of AU Core will define the complete list of search parameters supported by AU Core.
+</div>
 
 #### Terminology Approach
 AU Core does not define new terminology FHIR artefacts. Terminology supported in AU Core are are published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), the FHIR standard, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/). 
 
 As part of profiling, AU Core indicates the support expectations for terminology for that resource for an AU Core actor using _Must Support_ and Obligations. 
 
-For a list of the terminology supported in AU Core refer to the [Terminology](terminology.html) page.
+For a list of the terminology supported in AU Core refer to the [Terminology](terminology.html) page. See AU Base for guidance on [Terminology Selection](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection) in HL7 AU implementation guides.
 
 #### Resource Profile Approach
 AU Core resource profiles set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. AU Core profiles are derived from AU Base resource profile, where available, and identify the additional mandatory core elements, extensions, vocabularies and value sets that SHALL be present in the resource when conforming to AU Core. These profiles define the minimum conformance requorements that downstream profiles are expected to comply with and can derive from.
 
-If an appropriate AU Base profile does not yet exists, AU Core profile can temporarily include the profile until a coresponding AU Base profile is defined so that AU Core can derive from it.
+TBD - not agreed - it is the constraints that are to be promoted to Base that can temporarily appear in Core. "If an appropriate AU Base profile does not yet exists, AU Core profile can temporarily include the profile until a coresponding AU Base profile is defined so that AU Core can derive from it."
 
-AU Core profiles are only constrained (e.g. cardinality) where the constraint is agreed as applicable nationwide and across use cases to avoid limiting options for downstream use case decisions and business rules. These constraints are applied only to elements that form part of the minimum support requirements (i.e. elements labelled _Must Support_). In some special cases determined by the responsible work group a data quality requirement (e.g. invariant, terminology) is placed on an element that is not labelled _Must Support_ (e.g. Procedure.bodySite in [AU Core Procedure](StructureDefinition-au-core-procedure.html)). 
+AU Core profiles are:
+* only constrained (e.g. cardinality) where the constraint is agreed as applicable nationwide and across use cases to avoid limiting options for downstream use case decisions and business rules. 
+* elements that form the minimum requirements (and are constrained) are labelled _Must Support_. 
+* while elements that are not labelled _Must Support_ are not to be further constrained in AU Core, an exception has been agreed for body site elements to represent the nationally agreed terminology
+  * in an AU Core resource profile an invariant is present to enforce that if a coded body site is provided, at least one coding is from SNOMED CT
 
+-- TO DELETE THE BELOW, AU Core DOES NOT do use case profiles. These would be 'abstract concept' profiles - though their use is the same as the 'generic' profiles. Unlike in AU Base where the existence and use of generic and use case is different.
 Types of AU Core profiles:
 * generic profiles (e.g. [AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Condition](StructureDefinition-au-core-condition.html))
   * define the national minimum expectations for representing foundational administrative and clinical information
@@ -68,7 +79,7 @@ Types of AU Core profiles:
      * uses Observation.category to define nationally agreed categories requied to support consistent system interactions, such as search and filtering
 
 ##### Modelling AU Core resource profiles
-The following principles describe how AU Core resource profiles are modelled to define national minimum expectations while preserving flexibility for downstream implementation guides and system-specific business rules.
+The following principles (TBD - these are not principles) describe how AU Core resource profiles are modelled to define national minimum expectations while preserving flexibility for downstream implementation guides and system-specific business rules.
 
 * Open: profiles are defined as open, allowing additional elements and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.
 * Extensions: extensions are inherited from the underlying AU Base resource profile, and those agreed to form part of the minimum support requirements are marked with _Must Support_. Additional extensions are not added, unless there is no underlying AU Base resource profile is available. Extensions are not prohibited or constrained to 0..0.
