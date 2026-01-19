@@ -80,10 +80,9 @@ AU Core profiles include conditional cardinality constraints (defined using [inv
 
 Extensions are inherited from the underlying AU Base resource profile, where available, and those agreed to form part of the minimum support expectations are marked with _Must Support_. 
 
-Additional extensions are not added directly to an AU Core profile, unless there is no underlying AU Base resource profile is available. Some FHIR resource types are not profiled in AU Base as the resource type is too abstract to support meaningful localisation across use cases in a base resource profile (e.g. Basic, Observation, and Device). For these resource types, AU Core or a downstream use case IG can profile directly instead of inheriting from an AU Base profile.  
+Additional extensions are not added directly to an AU Core profile, unless there is no underlying AU Base resource profile to derive from. Some FHIR resource types are not profiled in AU Base as the resource type is too abstract to support meaningful localisation across use cases in a base resource profile (e.g. Basic, Observation, or Device).
 
-TBD - not agreed - it is the constraints that are to be promoted to Base that can temporarily appear in Core. "If an appropriate AU Base profile does not yet exists, AU Core profile can temporarily include the profile until a corresponding AU Base profile is defined so that AU Core can derive from it."
-
+While the work to include a new extension in the underlying AU Base profile is progressing, extensions can be added (but not defined) temporarily in an AU Core profile to support development and testing in a release.
 
 ##### Use of Terminology Bindings
 
@@ -99,11 +98,15 @@ TBD - not agreed - it is the constraints that are to be promoted to Base that ca
  * the patient
  * dates in clinical resources
 
+New terminoloy bindings:
+* are not added unless there is no underlying AU Base resource profile available.
 
-  * New terminologies are not added unless there is no underlying AU Base resource profile available.
   
   * additional bindings: additional bindings are inherited from the underlying AU Base resource profile where they exist. AU Core only adds additional bindings to candidate value sets that are being considered as potential replacements for the current terminology (e.g. the additional bindings on `AllergyIntolerance.code` in [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)). The additional bindings are represented using the [additional bindings extension](https://build.fhir.org/ig/FHIR/fhir-tools-ig/StructureDefinition-additional-binding.html) with the binding purpose set to [candidate](https://build.fhir.org/ig/FHIR/fhir-tools-ig/ValueSet-additional-binding-purpose.html). Candidate bindings do not introduce conformance requirements and are provided to support forward planning and terminology alignment.
   * multiple terminologies: where multiple terminologies are supported, these are modelled using slicing and are selected from the set of additional bindings defined in AU Base to indicate which of those are to be supported for AU Core actors. For a minimum approach, the slices are defined by value set as this allows to indicate obligations without limiting the set of codes that can be supplied.
+
+  New terminology bindings can be added temporarily in an AU Core profile to support development in a release while the work to include that terminology binding in the underlying AU Base profile is progressing. 
+
 
   TBD - not agreed - it is the constraints that are to be promoted to Base that can temporarily appear in Core. "If an appropriate AU Base profile does not yet exists, AU Core profile can temporarily include the profile until a corresponding AU Base profile is defined so that AU Core can derive from it."
 
