@@ -78,13 +78,14 @@ Types of AU Core profiles:
      * defines the agreed LOINC and SNOMED CT codes representing the concept in `Observation.code`. LOINC is included to align with international usage for representing Observation concepts. SNOMED CT is included because it is the preferred terminology for clinical use in Australia.
      * uses Observation.category to define nationally agreed categories requied to support consistent system interactions, such as search and filtering
 
-##### Modelling AU Core resource profiles
+##### Modelling AU Core resource profiles - no need for a single sub heading with a giant list of bullets
 The following principles (TBD - these are not principles) describe how AU Core resource profiles are modelled to define national minimum expectations while preserving flexibility for downstream implementation guides and system-specific business rules.
 
 * Open: profiles are defined as open, allowing additional elements and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.
+* Prohibition: AU Core does not prohibit elements or extensions (e.g. via 0..0), as removing elements restricts the opportunities for downstream IGs and applications to define their own business rules.
 * Extensions: extensions are inherited from the underlying AU Base resource profile, and those agreed to form part of the minimum support requirements are marked with _Must Support_. Additional extensions are not added, unless there is no underlying AU Base resource profile is available. Extensions are not prohibited or constrained to 0..0.
 * Cardinality: cardinality is only constrained where there is an agreed minimum data quality requirement for a supported element (e.g. reference to the patient is mandatory in all AU Core profiles).
-  * AU Core does not prohibit elements (e.g. via 0..0), as removing elements restricts the opportunities for downstream IGs and applications to define their own business rules.
+ * TBD - most of the below are about invariants that belong in a different section on data quality. Good example of conditional cardinality is AU Core Location, and those inherited from FHIR. Point to invariant section? Or just have one single example, most of this is duplicative.
   * AU Core uses invariants instead of cardinality where conditional rules are required (e.g. "at least one of" or "an element is required if another element is present). AU Core defines several invariants including: 
    * One invariant on [AU Core Location](StructureDefinition-au-core-location.html) enforcing that a location has at least one identifying property - a valid identifier, an address, or a type.
    * One invariant on [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html) requiring that authored on dates are precise to at least the day, or that a Data Absent Reason is supplied when this is not possible.
@@ -119,19 +120,15 @@ The following principles (TBD - these are not principles) describe how AU Core r
   * AU Core invariants are intentionally written to allow for missing data rules to be met
   * all AU Core invariants are set to `error` severity and are expressed in testable FHIRPath that can be validated using standard FHIR tooling
 * Fixed Values vs Patterns: Patterns (`pattern[x]`) is the primary mechanism for constraining element values within AU Core, rather than using fixed values, to alllow additional data to be supplied (e.g. ensuring that Observation.category or Observation.code contains an agreed code while allowing additional codings).   
-* Profile specific implementation guidance: AU Core profiles include profile specific implementation guidance where narrative context is required to describe expected behaviour or use that cannot be fully expressed in constraints. The guidance is intended to be read together with the profile itself, the actor obligations, conformance rules defined in capability statements and any other referenced/relevant AU Core and AU Base guidance pages. Profile specific implementatuon guidance in AU Core is typically used to:
-  * clarify how Must Support applies in practice, for example stating an expectation for responders to support at least one of Observation.value[x], Observation.component.value, or Observation.hasMember, while requesters are expected to support all of them.
-  * describe expected behavior for AU Core actors that cannot be expressed directly in the profile, for example responders obligations when populating `Patient.identifier` 
+* Profile specific implementation guidance: AU Core profiles include profile specific implementation guidance where narrative context is required to describe expected behaviour or use that cannot be fully expressed in constraints. The guidance is intended to be read together with the profile itself, the actor obligations, conformance rules defined in capability statements and any other referenced/relevant AU Core and AU Base guidance pages. Profile specific implementatuon guidance in AU Core is typically used to: 
   * provide qualification of an obligation in narrative that is not present in the obligation. 
+    * describe expected behavior for AU Core actors that cannot be expressed directly in the profile, for example responders obligations when populating `Patient.identifier` 
+    * dewscribe Meds
   * explain coding behaviour and handling of unknown codes, for examp
   * document conventions for common clinical patterns, for example AU Core Condition and AU Core Diagnostic Result Observation include guidance on how systems should populate and consume coded data when terminologies differ across systems, for example guidance on populating `code.text` and/or `coding.display` for responders and how these are handled by requesters 
     * representing body site, including laterality, using the guidance page
-    * representing sex, gender, and related concepts using AU Core Sex and Gender guidance
     * representing no known condition for a patient using agreed SNOMED CT negation concepts in Condition.code 
-   * clarify use of categories and classification fields in profiles that use classification element such as `Observation.category` 
-   * clarify alternative structure representations allowed by the profile, for example representing addresses using either the Address data type or the AUstralian address data type profile, and when each is expected to be used
-   * direct implementers to related AU Core and AU Base guidance, for example Identifier data type profiles and business identifiers in AU Base, representing communication preferences and languages, Observation grouping guidance in the core FHIR standard.
-   * Profile specific implementation guidance is only included where it is needed to support consistent use of the profile across AU Core implementations. Downstream implementation guides may add further implementation guidance for their own use cases but are expected to remain consistent with the AU Core guidance for the underlying profile.
+   * Profile specific implementation guidance is only included where it is needed to support consistent use of the profile across AU Core implementations. Downstream implementation guides may add further implementation guidance for their own use cases but are expected to remain consistent with the AU Core guidance for the underlying profile when claiming compliance to that AU Core profile.
 
 #### Actor Approach
 AU Core Actors are defined to describe the specific sets of functionality supported by systems that play a role in AU Core data exchange. Each actor is defined by:
