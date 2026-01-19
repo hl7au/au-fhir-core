@@ -263,7 +263,7 @@ A profile may define support for one, none, or many identifier types. Supported 
 Where no identifier slice is included in a profile, there is no expectation that a specific identifier type is supported and the section on [Must Support - Complex Elements](general-requirements.html#must-support---complex-elements) applies.
 
 Where one or more identifier types are supported:
-- AU Core Responders **SHALL** correctly populate the identifier element with identifiers from at least one supported identifier type where an identifier of that type is known, or any identifier type when an identifier is known but it is not one of the supported identifier types.
+- AU Core Responders **SHALL** correctly populate the identifier element with identifiers from at least one supported identifier type where an identifier of that type is known, or any other identifier type when an identifier is known but it is not one of the supported identifier types.
 - AU Core Requesters **SHALL** accept resources without error if the identifier element is present and contains any identifier type allowed by the element definition.
 
 The table below provides a list of AU Core profile elements with one or more supported identifier types.
@@ -276,9 +276,9 @@ AU Core Profile |Must Support Element|Supported Identifiers
 [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
-For example, the profile [AU Core Organization](StructureDefinition-au-core-organization.html) defines support for the Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN) identifier types as slices of `Organization.identifier`flagged with *Must Support*. When claiming conformance to the AU Core Organization Profile:
-- AU Core Responders **SHALL** correctly populate `Organization.identifier` with at least one of HPI-O or ABN if known, or any other identifier when neither HPI-O or ABN are known but some other identifier is (e.g. NATA Accredication Number).
-- AU Core Requesters **SHALL** accept the Organization resource if `Organization.identifier` is present and containins any valid value. A valid value may be an HPI-O or ABN, or may be any other valid identifier (e.g. NATA Accredication Number).
+For example, the profile [AU Core Organization](StructureDefinition-au-core-organization.html) defines support for the Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN) identifier types as slices of `Organization.identifier` flagged with *Must Support*. When claiming conformance to the AU Core Organization Profile:
+- AU Core Responders **SHALL** correctly populate `Organization.identifier` with at least one of HPI-O or ABN if known, or any other identifier type when neither HPI-O or ABN are known but some other identifier is known (e.g. NATA Accredication Number).
+- AU Core Requesters **SHALL** accept the Organization resource if `Organization.identifier` is present and containins any valid value. A valid value may be an HPI-O or ABN, or may be any other valid identifier type allowed by the element definition (e.g. NATA Accredication Number).
 
 Systems **MAY** support populating and accepting other identifiers, but this is not a requirement of AU Core.
 
@@ -302,7 +302,7 @@ AU Core Profile |Must Support Choice Elements
 ##### Must Support - Multiple Terminologies
 A coded element can have support defined for one or many value sets. Coded elements that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing *Must Support* on each value set slice. These value set slices are not intended to prevent systems from supplying only a text value.
 
-Most coded *Must Support* elements in AU Core define support for one value set, which is bound to the element, no value set slice is present. For these elements, the section on [Must Support - Complex Elements](general-requirements.html#must-support---complex-elements) and the terminology binding applies.
+Most coded *Must Support* elements in AU Core define support for one value set, which is bound to the element and no value set slice is present. For these elements, the section on [Must Support - Complex Elements](general-requirements.html#must-support---complex-elements) and the terminology binding applies.
 
 Where multiple value sets are supported:
 - AU Core Responders **SHALL** correctly populate the element with concepts from all supported value sets where the applicable concept is known.
