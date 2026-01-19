@@ -42,7 +42,7 @@ There are multiple different potential matches for the url 'http://terminology.h
 # === WARNING 05: This example demonstrates how to represent missing data and therefore uses the Data Absent Reason extension as per AU Core rules. The IG Publisher triggers a warning because of this, but the example is intentionally designed to show the correct handling of missing data and does not indicate any issues with the IG. ===
 A Reference without an actual reference or identifier should have a display
 
-# === WARNING 06: INHERITED FROM AU BASE: Known ValueSet published as experimental. ===
+# === WARNING 06: INHERITED FROM AU BASE:  Known NCTS published RCPA ValueSets published as experimental. ===
 The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3' which is experimental, but this structure is not labeled as experimental
@@ -51,7 +51,7 @@ The definition for the element 'Observation.code' binds to the value set 'https:
 # === WARNING 07: Expected warning as the AU Base PBS CodeSystem is defined without content included. ===
 Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#2951H' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
 
-# === WARNING 08: INHERITED FROM AU BASE: Known CodeSystem URLs without definitions. ===
+# === WARNING 08: INHERITED FROM AU BASE: These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
 A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://www.mims.com.au/codes' could not be found, so the code cannot be validated
 
@@ -79,7 +79,7 @@ Unable to check whether the code is in the value set 'http://terminology.hl7.org
 # === WARNING 13 (NEW + TO BE ACKNOWLEDGED BY TDG): Example intentionally demonstrates inclusion of an allowed value that is not part of the defined slices.  ===
 The provided code 'http://snomed.info/sct#78564009' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'; The provided code 'http://snomed.info/sct#364075005' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'
 
-# === INFORMATION 01 (NEW + ACCEPTED BY FHIR WG + TO BE ACKNOWLEDGED BY TDG): INHERITED FROM FHIR STANDARD: Some FHIR standard ValueSets are published as draft. ===
+# === INFORMATION 01 (NEW + TO BE ACKNOWLEDGED BY TDG): INHERITED FROM FHIR STANDARD: Some FHIR standard ValueSets are published as draft. ===
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/device-action|4.0.1
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/condition-severity|4.0.1
 
