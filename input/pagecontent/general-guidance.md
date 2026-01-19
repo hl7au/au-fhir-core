@@ -65,21 +65,7 @@ AU Core profiles are:
   * In AU Core resource profile with a body site element, an invariant is present to enforce that if a coded body site is provided, at least one coding is from SNOMED CT.
 * are defined as open, allowing additional elements and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.  
 
--- TO DELETE THE BELOW, AU Core DOES NOT do use case profiles. These would be 'abstract concept' profiles - though their use is the same as the 'generic' profiles. Unlike in AU Base where the existence and use of generic and use case is different.
-Types of AU Core profiles:
-* generic profiles (e.g. [AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Condition](StructureDefinition-au-core-condition.html))
-  * define the national minimum expectations for representing foundational administrative and clinical information
-  * define the required identifiers, extensions, terminology, and structural expectations that all AU Core implementations SHALL support
-  * provide the baseline from which downstream IGs may introduce additional constraints as required for their use cases
-* Use case profiles (e.g. vital signs, laboratory results, smoking status) 
-   * define the minimum elements, structure, and terminology expectations required to represent an agreed clinical concept consistently across implementations
-   * describe the minimum elements, terminology, and structure required to represent the agreed concept consistently, while allowing downstream IGs to introduce additional constraints where required  
-   * support the exchange of specific clinical measurements, assessments, and findings that are recognised as core digital health information in an Australian context  
-   * All AU Core use case profiles are Observation profiles and AU Core
-     * defines the agreed LOINC and SNOMED CT codes representing the concept in `Observation.code`. LOINC is included to align with international usage for representing Observation concepts. SNOMED CT is included because it is the preferred terminology for clinical use in Australia.
-     * uses Observation.category to define nationally agreed categories requied to support consistent system interactions, such as search and filtering
-
-##### Cardinality
+##### Cardinality Constraints
 
 Cardinality is only constrained where there is an agreed minimum data quality requirement for a supported element (e.g. reference to the patient is mandatory in all AU Core profiles).
 
@@ -89,13 +75,13 @@ Conditional cardinality constraints are:
 * inherited fromt the FHIR standard e.g. [AU Core Condition](StructureDefinition-au-core-condition.html) inherits invariant con-5 Condition.clinicalStatus SHALL NOT be present if verification Status is entered-in-error
 * applied in AU Base to apply data quality requirements e.g. [AU Core Location](StructureDefinition-au-core-location.html) invariant au-core-loc-01: The location shall at least have a valid identifier or address or type.
 
-##### Extensions
+##### Use of Extensions
 
 Extensions are inherited from the underlying AU Base resource profile, and those agreed to form part of the minimum support requirements are marked with _Must Support_. 
 
 Additional extensions are not added, unless there is no underlying AU Base resource profile is available. Extensions are not prohibited or constrained to 0..0.
 
-##### Terminology Binding
+##### Use of Terminology Binding
 
  Typically the underlying AU Base terminology is inherited and, where agreed, AU Core strengthens bindings on supported elements from [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible). This strengthening is applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules.
  
@@ -112,27 +98,14 @@ Additional extensions are not added, unless there is no underlying AU Base resou
   * multiple terminologies: where multiple terminologies are supported, these are modelled using slicing and are selected from the set of additional bindings defined in AU Base to indicate which of those are to be supported for AU Core actors. For a minimum approach, the slices are defined by value set as this allows to indicate obligations without limiting the set of codes that can be supplied.
 
 
- ##### Invariants
-* Cardinality: .
- * TBD - most of the below are about invariants that belong in a different section on data quality. Good example of conditional cardinality is AU Core Location, and those inherited from FHIR. Point to invariant section? Or just have one single example, most of this is duplicative.
-  * AU Core uses invariants instead of cardinality where conditional rules are required (e.g. "at least one of" or "an element is required if another element is present). AU Core defines several invariants including: 
-   * One invariant on .
-   * One invariant on [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html) requiring that authored on dates are precise to at least the day, or that a Data Absent Reason is supplied when this is not possible.
-   * Invariants in [AU Core Observation use case profiles](profiles-and-extensions.html#observation) to ensure that either a value or a Data Absent Reason is present, and, where a coded body site is provided, that at least one coding comes from SNOMED CT. [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html) also include additional invariants to ensure that components, hasMember, or values are populated appropriately, and that effective[x] dates meet the agreed level of precision.
-     * Additional invariant in [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)requiring that a result is represented using at least a value, a component, or a hasMember reference.
-   * One invariant in [AU Core Organization](StructureDefinition-au-core-organization.html) requiring that National Organisation Identifiers (NOI) are valid HPI-O or PAI-O identifiers.
-   * Invariants in [AU Core Patient](StructureDefinition-au-core-patient.html) ensuring that at least one valid identifier is present or otherwise a Data Absent Reason where an identifier is not available, and that the patient name has at least text, family, or given populated, or a Data Absent Reason.
-   * One invariant in  [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html) ensuring that practitioner details include at least a reference, identifier, or display value.
-   * One invariant in  [AU Core Procedure](StructureDefinition-au-core-procedure.html) requiring that a bodySite element includes a value or Data Absent Reason.
-   * One invariant in [AU Core RelatedPerson](StructureDefinition-au-core-procedure.html) requiring that at least a relationship or name is present, and that names include text, family, or given (or a Data Absent Reason).
+ ##### Use of Invariants
+AU Core resource profiles include invariants when a minimum data quality requirement requires logic that cannot be represented through other profiling techniques (e.g. cardinality or terminology binding). 
 
-* Invariants: AU Core defines invariants only where a data quality rule requires logic that cannot be represented through other constraints. Typically, invariants in AU Core are used to:
-  * mandate data precision or provide structural alternative such as 'at least one` for example `au-core-obs-01` in AU Core Smoking Status
-  * define precision rules, for example au-core-medreq-01 in AU Core MedicationRequest
-  * enforce identifier integrity based on national standard, for example au-core-org-01 (TBD: list profiles that have au core invariants)
-  * AU Core invariants are intentionally written to allow for missing data rules to be met
-  * all AU Core invariants are set to `error` severity and are expressed in testable FHIRPath that can be validated using standard FHIR tooling
+Typically, the invariants defined in AU Core resource profiles are used to:
+  * define date precision rules (e.g. [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html) invariant au-core-obs-01 Date shall be at least to day)
+  * define conditional cardinality rules such as "at least one of" (e.g. [AU Core Location](StructureDefinition-au-core-location.html) invariant au-core-loc-01: The location shall at least have a valid identifier or address or type)
 
+AU Core invariants are intentionally written to allow for the AU Core requirements on [Missing Data](general-requirements.html#missing-data) to be met
 
 ##### Slicing  
 * Slicing: slicing is avoided as much as possible to avoid limiting the opportunities for downstream IGs and applications to define their own business rules and is only used where needed to define specific rules to data patterns. In AU Core most slices are defined as open (i.e. `slicing.rules` is not `closed`) so that downstream IGs and applications can add additional patterns where required provided they still meet the overall profile constraints. Slicing in AU Core resource profiles is used to:
@@ -140,7 +113,7 @@ Additional extensions are not added, unless there is no underlying AU Base resou
    * define support for specific identifiers, for example [AU Core Patient](StructureDefinition-au-core-patient.html) defines support for IHI, Medicare Card Number, DVA Number
    * define support for recognised clinical concepts, for example AU Core Observation profiles such as vital signs and smoking status use slicing on `Observation.code` to identify the agreed LOINC and SNOMED CT codes that represent the concept, and on 'Observation.category` to support system interactions such as restricting searches.
 
-##### TBD
+##### References and Types
 * References (target profiles and resources): references for supported elements are constrained to the AU Core profile, or where not available, the AU Base profile (where it exists) to support validation .
 * Type choices: types for supported elements are restricted only where there is national agreement to restrict that usage in Australia. The types from the underlying AU Base profile are inherited, and no new data type profiles are added unless there is no underlying AU Base resource profile available. 
   * AU Core can mark a specific type within a choice element as _Must Support_  to indicate the agreed minimum system capability and population expectations for that type. For example, in [AU Core Condition](StructureDefinition-au-core-condition.html), `Condition.onset[x]` is labelled as _Must Support_ with a further obligation that the `onsetDateTime` TBD "The additional obligation for Condition.onsetDateTime for AU Core Responder is SHOULD:populate"
@@ -156,7 +129,14 @@ _[Must Support](general-requirements.html#must-support-and-obligation)_ is used 
   
 ##### Fixed Values vs Patterns: 
 
-Patterns (`pattern[x]`) is the primary mechanism for constraining element values within AU Core, rather than using fixed values, to alllow additional data to be supplied (e.g. ensuring that Observation.category or Observation.code contains an agreed code while allowing additional codings).   
+Patterns (`pattern[x]`) is the primary mechanism for constraining element values within AU Core, rather than using fixed values, to alllow additional data to be supplied (e.g. ensuring that Observation.category or Observation.code contains an agreed code while allowing additional codings).  
+
+support the exchange of specific clinical measurements, assessments, and findings that are recognised as core digital health information in an Australian context
+
+
+All AU Core use case profiles are Observation profiles and AU Core
+     * defines the agreed LOINC and SNOMED CT codes representing the concept in `Observation.code`. LOINC is included to align with international usage for representing Observation concepts. SNOMED CT is included because it is the preferred terminology for clinical use in Australia.
+     * uses Observation.category to define nationally agreed categories requied to support consistent system interactions, such as search and filtering
 
 
 
