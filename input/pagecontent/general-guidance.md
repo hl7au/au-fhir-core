@@ -74,7 +74,7 @@ Some aspects of the approach to [profiling](https://hl7.org/fhir/R4/profiling.ht
 
 ##### Restricting Cardinality
 
-Cardinality is only restricted where there is an agreed minimum data quality requirement for a supported element. For example, in AU Core profiles of clinical resources the following are made mandatory (minimum cardinality is > 0):
+Cardinality is only restricted where there is an agreed minimum data quality requirement for a supported element (i.e. element labelled _Must Support_) . For example, in AU Core profiles of clinical resources the following are made mandatory (minimum cardinality is > 0):
 * reference to the patient
 * the core clinical concept e.g. `AllergyIntolerance.code`, `Procedure.code`, `Condition.code`
 
@@ -102,11 +102,11 @@ New terminology bindings are not added unless there is no underlying AU Base res
 * where there is a limited implementation of the standardised terminology
 * downstream variation to support use cases is expected
 
- [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) bindings are applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules. In some cases, AU Core strengthens the binding on supported elements from [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) where there is national agreement across use cases, e.g. core clinical concepts such as `AllergyIntolerance.code`, `Procedure.code`, `Condition.code`.
+ [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) bindings are applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules. In some cases, AU Core strengthens the binding on supported elements (i.e. elements labelled _Must Support_) from [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) where there is national agreement across use cases, e.g. core clinical concepts such as `AllergyIntolerance.code`, `Procedure.code`, `Condition.code`.
 
  [required](https://hl7.org/fhir/R4/terminologies.html#required) bindings are inherited from the FHIR standard. AU Core does not strengthen bindings to required so that systems can supply text only where coded data is not available, and downstream IGs can introduce tighter terminology requirements appropriate to their use case. 
  
-New additional bindings in AU Core profiles are added to when there is a candidate stricter value set for an element that is under consideration by community for adoption (e.g. the value set [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1) is a candidate binding for `Observation.value.code` in [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)). These are represented using the [additional bindings extension](https://build.fhir.org/ig/FHIR/fhir-tools-ig/StructureDefinition-additional-binding.html) with the binding purpose set to [candidate](https://build.fhir.org/ig/FHIR/fhir-tools-ig/ValueSet-additional-binding-purpose.html).
+New additional bindings in AU Core profiles are added when there is a candidate stricter value set for an element that is under consideration by community for adoption (e.g. the value set [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1) is a candidate binding for `Observation.value.code` in [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)). These are represented using the [additional bindings extension](https://build.fhir.org/ig/FHIR/fhir-tools-ig/StructureDefinition-additional-binding.html) with the binding purpose set to [candidate](https://build.fhir.org/ig/FHIR/fhir-tools-ig/ValueSet-additional-binding-purpose.html).
 
 Coded elements in AU Core profiles that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing _Must Support_ on each value set slice. These value set slices are not intended to prevent systems from supplying only a text value.
 
@@ -135,17 +135,21 @@ Slices are defined as open (i.e. `slicing.rules` is `open`) so that downstream I
 
 ##### Restricting References and Type Choices
 
-References for supported elements (i.e. labelled _Must Support_) are constrained to the AU Core profile, or where not available, the AU Base profile (where it exists) to support validation.
+To support validation, resource references for supported elements (i.e. elements labelled _Must Support_) are constrained to target AU Core profiles, or where not available, AU Base profiles (where they exist).
 
-Types for supported elements are restricted only where there is national agreement to restrict that usage in Australia. The types from the underlying AU Base profile are inherited, and no new data type profiles are added unless there is no underlying AU Base resource profile available. 
-  * AU Core can mark a specific type within a choice element as _Must Support_  to indicate the agreed minimum system capability and population expectations for that type. For example, in [AU Core Condition](StructureDefinition-au-core-condition.html), `Condition.onset[x]` is labelled as _Must Support_ with a further obligation that the `onsetDateTime` TBD "The additional obligation for Condition.onsetDateTime for AU Core Responder is SHOULD:populate"
-  * Identifier types are inherited from AU Base. AU Core indicates support for specific nationally recognised identifiers by marking the relevant identifier types as _Must Support_
-  * AU Core removes a type from a choice element where only where there is a national agreement that the type is not used in Australian systems for example `onsetString` is removed in [AU Core AllergyIntolerance], and `onsetString` and `abatementString` are removed in [AU Core Condition](StructureDefinition-au-core-condition.html) because free text timing is not supported in national implementations.
+Types for supported elements (i.e. elements labelled _Must Support_) are restricted only where there is national agreement to restrict that usage. This is rare as AU Core profiles are modelled intentionally to not restrict meanginful use case options. Some examples where a restriction is applied are:
+* [AU Core Condition](StructureDefinition-au-core-condition.html) `Condition.onset[x]` does not allow `onsetString` 
+* [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) `Observation.value` is constrained to only allow `valueCodeableConcept`
   * tbd identifier types
-  *  Where no national agreement exists to restrict a type choice, all inherited types remain allowed, e.g. in [AU Core Patient](StructureDefinition-au-core-patient.html), `Patient.address` supports both the generic Address and Australian Address types as defined in AU Base.
+
+Where no national agreement exists to restrict a type choice, all inherited types are allowed. For example in [AU Core Patient](StructureDefinition-au-core-patient.html) the `Patient.address` inherits the FHIR data type [Address](http://hl7.org/fhir/R4/datatypes.html#Address) and the [AU Base Australian Address](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-address.html) data type profile from [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html).
+
+New data type profiles are not added as an allowed type choice unless there is no underlying AU Base resource profile available to derive from (e.g. profiles of Observation, Device, Basic).
 
 ##### Use of Must Support and Obligations
 _[Must Support](general-requirements.html#must-support-and-obligation)_ is used to indicate the elements or parts of elements that form the minimum requirements to support for systems. Obligations are used to describe the expectations for support for each element for AU Core actors using the [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html). 
+
+ * AU Core can mark a specific type within a choice element as _Must Support_  to indicate the agreed minimum system capability and population expectations for that type. For example, in [AU Core Condition](StructureDefinition-au-core-condition.html), `Condition.onset[x]` is labelled as _Must Support_ with a further obligation that the `onsetDateTime` TBD "The additional obligation for Condition.onsetDateTime for AU Core Responder is SHOULD:populate"
 
 Profile specific implementatuon guidance in AU Core is typically used to: 
   * provide qualification of an obligation in narrative that is not present in the obligation. 
