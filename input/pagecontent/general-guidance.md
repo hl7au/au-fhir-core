@@ -85,24 +85,23 @@ Additional extensions are not added directly to an AU Core profile, unless there
 While the work to include a new extension in the underlying AU Base profile is progressing, extensions can be added (but not defined) temporarily in an AU Core profile to support development and testing in a release.
 
 ##### Use of Terminology Bindings
+ Where the AU Core profile is derived, the underlying AU Base terminology binding is inherited. Terminology for a resource is [localised in AU Base]((https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection)). In some cases this is represented as a preferred binding to an element, and in other cases the set of terminology recognised for use in Australia is represented as a set of additional bindings.
 
- Where the AU Core profile is derived  the underlying AU Base terminology binding is inherited 
- 
- and, where agreed, AU Core strengthens the binding on supported elements from [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible). The use of [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) is applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules.
+New terminoloy bindings are not added unless there is no underlying AU Base resource profile available to derive from (e.g. profiles of Observation, Device, Basic).
+
+[preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) bindings are more common on many elements to accommodate:
+* legacy systems
+* where there is a limited implementation of the standardised terminology
+* downstream variation to support use cases is expected
+
+ [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) bindings are applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules. In some cases, AU Core strengthens the binding on supported elements from [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible), e.g. core clinical concepts such as `AllergyIntolerance.code`, `Procedure.code`, `Condition.code`.
 
  [required](https://hl7.org/fhir/R4/terminologies.html#required) bindings are inherited from the FHIR standard. AU Core does not strengthen bindings to required so that systems can supply text only where coded data is not available, and downstream IGs can introduce tighter terminology requirements appropriate to their use case. Where a stricter coding expectation is needed, AU Core uses invariants to require that if coded data is supplied, at last one coding uses agreed terminology for example the invariant applied to `Condition.bodySite` in [AU Core Condition](StructureDefinition-au-core-condition.html).
 
-
- Strengthening of is related to x and x and therefore is typically applied to:
- * the core clinical concept in a resource e.g. clinical concepts such as `AllergyIntolerance.code`, `Procedure.code`, `Condition.code`.
- * the patient
- * dates in clinical resources
-
-New terminoloy bindings:
-* are not added unless there is no underlying AU Base resource profile available.
-
-  
+New additional bindings in AU Core profiles are added to 
   * additional bindings: additional bindings are inherited from the underlying AU Base resource profile where they exist. AU Core only adds additional bindings to candidate value sets that are being considered as potential replacements for the current terminology (e.g. the additional bindings on `AllergyIntolerance.code` in [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)). The additional bindings are represented using the [additional bindings extension](https://build.fhir.org/ig/FHIR/fhir-tools-ig/StructureDefinition-additional-binding.html) with the binding purpose set to [candidate](https://build.fhir.org/ig/FHIR/fhir-tools-ig/ValueSet-additional-binding-purpose.html). Candidate bindings do not introduce conformance requirements and are provided to support forward planning and terminology alignment.
+
+
   * multiple terminologies: where multiple terminologies are supported, these are modelled using slicing and are selected from the set of additional bindings defined in AU Base to indicate which of those are to be supported for AU Core actors. For a minimum approach, the slices are defined by value set as this allows to indicate obligations without limiting the set of codes that can be supplied.
 
   New terminology bindings can be added temporarily in an AU Core profile to support development in a release while the work to include that terminology binding in the underlying AU Base profile is progressing. 
