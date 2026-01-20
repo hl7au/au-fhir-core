@@ -67,10 +67,9 @@ Some aspects of the approach to [profiling](https://hl7.org/fhir/R4/profiling.ht
 * [Use of Extensions](general-guidance.html#use-of-extensions)
 * [Use of Terminology Bindings](general-guidance.html#use-of-terminology-bindings)
 * [Use of Invariants](general-guidance.html#use-of-invariants)
-* [Use of Slicing](general-guidance.html#use-of-slicing)
+* [Use of Slicing, Pattern, and Fixed Value ](general-guidance.html#use-of-slicing)
 * [Restricting References and Type Choices](general-guidance.html#restricting-references-and-type-choices)
 * [Use of Must Support and Obligations](general-guidance.html#use-of-must-support-and-obligations)
-* [Use of Fixed Values and Pattern](general-guidance.html#use-of-fixed-values-and-pattern)
 
 ##### Restricting Cardinality
 
@@ -124,14 +123,24 @@ Typically, invariants defined in AU Core are used to:
 
 AU Core invariants are intentionally written to allow for the AU Core requirements on [Missing Data](general-requirements.html#missing-data) to be met (e.g.[AU Core Patient](StructureDefinition-au-core-patient.html) invariant au-core-pat-01: At least one patient identifier shall be valid, or if not available, the Data Absent Reason extension shall be present).
 
-##### Use of Slicing  
+##### Use of Slicing, Pattern, and Fixed Value  
 
 Slicing is avoided where possible to avoid limiting the opportunities for downstream IGs and applications to define their own business rules. Slicing is used to:
    * define support for multiple terminologies, for example [AU Core Medication](StructureDefinition-au-core-medication.html) support for Australian Medicines Terminology (AMT) and PBS Item Codes
    * define support for specific identifiers, for example [AU Core Patient](StructureDefinition-au-core-patient.html) defines support for IHI, Medicare Card Number, DVA Number
-   * define support for recognised clinical concepts, for example AU Core Observation profiles slicing on `Observation.code` to identify the agreed LOINC and SNOMED CT codes that represent the concept,
+   * define support for recognised clinical concepts, for example AU Core Observation profiles slicing on `Observation.code` to identify the agreed LOINC and SNOMED CT codes that represent the concept
 
 Slices are defined as open (i.e. `slicing.rules` is `open`) so that downstream IGs and applications can add additional patterns where required provided they still meet the overall profile constraints.
+
+Patterns are used to represent "At least the following"; fixed values are included as slices.  they are 
+Patterns (`pattern[x]`) is the primary mechanism for constraining element values within AU Core, rather than using fixed values, to alllow additional data to be supplied (e.g. ensuring that Observation.category or Observation.code contains an agreed code while allowing additional codings).  
+
+support the exchange of specific clinical measurements, assessments, and findings that are recognised as core digital health information in an Australian context
+
+
+All AU Core use case profiles are Observation profiles and AU Core
+     * defines the agreed LOINC and SNOMED CT codes representing the concept in `Observation.code`. LOINC is included to align with international usage for representing Observation concepts. SNOMED CT is included because it is the preferred terminology for clinical use in Australia.
+     * uses Observation.category to define nationally agreed categories requied to support consistent system interactions, such as search and filtering
 
 ##### Restricting References and Type Choices
 
@@ -157,18 +166,6 @@ Profile specific implementatuon guidance in AU Core is typically used to:
     * describe Meds
 
     AU Core profiles include profile specific implementation guidance where narrative context is required to describe expected behaviour or use that cannot be fully expressed in constraints. The guidance is intended to be read together with the profile itself, the actor obligations, conformance rules defined in capability statements and any other referenced/relevant AU Core and AU Base guidance pages. 
-
-  
-##### Use of Fixed Values and Pattern
-
-Patterns (`pattern[x]`) is the primary mechanism for constraining element values within AU Core, rather than using fixed values, to alllow additional data to be supplied (e.g. ensuring that Observation.category or Observation.code contains an agreed code while allowing additional codings).  
-
-support the exchange of specific clinical measurements, assessments, and findings that are recognised as core digital health information in an Australian context
-
-
-All AU Core use case profiles are Observation profiles and AU Core
-     * defines the agreed LOINC and SNOMED CT codes representing the concept in `Observation.code`. LOINC is included to align with international usage for representing Observation concepts. SNOMED CT is included because it is the preferred terminology for clinical use in Australia.
-     * uses Observation.category to define nationally agreed categories requied to support consistent system interactions, such as search and filtering
 
 #### Actor Approach
 AU Core Actors are defined to describe the specific sets of functionality supported by systems that play a role in AU Core data exchange. Each actor is defined by:
