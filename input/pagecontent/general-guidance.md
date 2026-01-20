@@ -132,7 +132,9 @@ Slicing is avoided where possible to avoid limiting the opportunities for downst
 
 Slices are defined as open (i.e. `slicing.rules` is `open`) so that downstream IGs and applications can add additional patterns where required provided they still meet the overall profile constraints.
 
-Patterns and fixed values are used to define support for recognised clinical concepts. Pattern is the preferred primary mechanism to represent "at least the following" for coded repeating elements (e.g. [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) applies pattern to specify `Observation.code` to be at least `Observation.code.coding.code`="1747861000168109" and `Observation.code.coding.system`="http://snomed.info/sct"). Fixed are used in slices to define support for an additional recognised clinican concept (e.g. [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) defines an optional slice of `Observation.code` as `Observation.code.coding.code`="72166-2" and `Observation.code.coding.system`="http://loinc.org"). 
+Patterns and fixed values are used to define support for recognised clinical concepts:
+* Pattern is the preferred primary mechanism to represent "at least the following" for coded repeating elements (e.g. [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) applies pattern to specify that at least one instance of `Observation.code` needs to have `Observation.code.coding.code`="1747861000168109" and `Observation.code.coding.system`="http://snomed.info/sct"):
+* Fixed values are used in slices to define an additional recognised clinican concept (e.g. [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) defines an optional slice of `Observation.code` as `Observation.code.coding.code`="72166-2" and `Observation.code.coding.system`="http://loinc.org"). 
 
 <div class="stu-note" markdown="1">
 Some AU Core profiles include slicing with a discriminator of type 'pattern' which is deprecated in R5+. For future compatibility, it is under consideration to use type=value with a pattern[x] instead.
@@ -145,7 +147,6 @@ To support validation, resource references for supported elements (i.e. elements
 Types for supported elements (i.e. elements labelled _Must Support_) are restricted only where there is national agreement to restrict that usage. This is rare as AU Core profiles are modelled intentionally to not restrict meanginful use case options. Some examples where a restriction is applied are:
 * [AU Core Condition](StructureDefinition-au-core-condition.html) `Condition.onset[x]` does not allow `onsetString` 
 * [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) `Observation.value` is constrained to only allow `valueCodeableConcept`
-  * tbd identifier types
 
 Where no national agreement exists to restrict a type choice, all inherited types are allowed. For example in [AU Core Patient](StructureDefinition-au-core-patient.html) the `Patient.address` inherits the FHIR data type [Address](http://hl7.org/fhir/R4/datatypes.html#Address) and the [AU Base Australian Address](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-address.html) data type profile from [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html).
 
