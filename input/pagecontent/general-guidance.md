@@ -58,8 +58,8 @@ AU Core profiles:
 * are derived from AU Base, where available, to inherit the nationally agreed localised terminology, identifiers, and extensions.
 * are only constrained (e.g. cardinality) where the constraint is agreed as minimum, nationally relevant and applicable across use cases to avoid limiting options for downstream use case decisions and business rules. 
 * elements and extensions that form the minimum requirements are labelled _Must Support_. 
-* elements that are not labelled _Must Support_ are not to be further constrained in AU Core.
-  * an exception has been agreed for body site elements to ensure nationally agreed terminology. In AU Core resource profiles with a body site element, an invariant is present to enforce that if a coded body site is provided, at least one coding is from SNOMED CT.
+* elements that are not labelled _Must Support_ are not part of the minimum requirements and are therefore not further constrained in AU Core.
+  * an exception to this rule has been agreed for body site elements to ensure nationally agreed terminology. In AU Core resource profiles with a body site element, an invariant is present to enforce that if a coded body site is provided, at least one coding is from SNOMED CT.
 * are defined as open, allowing additional elements and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.  
 
 Some aspects of the approach to [profiling](https://hl7.org/fhir/R4/profiling.html) resources in AU Core are described in further detail in the subsections below:
@@ -129,7 +129,7 @@ AU Core invariants are intentionally written to allow for the AU Core requiremen
 Slicing is avoided where possible to avoid limiting the opportunities for downstream IGs and applications to define their own business rules. Slicing is used to:
    * define support for multiple terminologies, for example [AU Core Medication](StructureDefinition-au-core-medication.html) support for Australian Medicines Terminology (AMT) and PBS Item Codes
    * define support for specific identifiers, for example [AU Core Patient](StructureDefinition-au-core-patient.html) defines support for IHI, Medicare Card Number, DVA Number
-   * define support for recognised clinical concepts, for example AU Core Observation profiles such as vital signs and smoking status use slicing on `Observation.code` to identify the agreed LOINC and SNOMED CT codes that represent the concept,
+   * define support for recognised clinical concepts, for example AU Core Observation profiles slicing on `Observation.code` to identify the agreed LOINC and SNOMED CT codes that represent the concept,
 
 Slices are defined as open (i.e. `slicing.rules` is `open`) so that downstream IGs and applications can add additional patterns where required provided they still meet the overall profile constraints.
 
