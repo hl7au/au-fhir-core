@@ -1,5 +1,5 @@
 ### Release 2.0.0
-- Publication date: 22-01-2026
+- Publication date: {{ site.data.fhir.genDate | date: "%Y-%m-%d" }}
 - Publication status: Publication status: Working Standard (Trial Use)
 - Based on FHIR version: 4.0.1
 
