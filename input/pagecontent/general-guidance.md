@@ -87,7 +87,7 @@ While the work to include a new extension in the underlying AU Base profile is p
 ##### Use of Terminology Bindings
  Where the AU Core profile is derived, the underlying AU Base terminology binding is inherited. Terminology for a resource is [localised in AU Base]((https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection)). In some cases this is represented as a preferred binding to an element, and in other cases the set of terminology recognised for use in Australia is represented as a set of additional bindings.
 
-New terminoloy bindings are not added unless there is no underlying AU Base resource profile available to derive from (e.g. profiles of Observation, Device, Basic).
+New terminology bindings are not added unless there is no underlying AU Base resource profile available to derive from (e.g. profiles of Observation, Device, Basic).
 
 [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) bindings are more common on many elements to accommodate:
 * legacy systems
@@ -98,7 +98,7 @@ New terminoloy bindings are not added unless there is no underlying AU Base reso
 
  [required](https://hl7.org/fhir/R4/terminologies.html#required) bindings are inherited from the FHIR standard. AU Core does not strengthen bindings to required so that systems can supply text only where coded data is not available, and downstream IGs can introduce tighter terminology requirements appropriate to their use case. Where a stricter coding expectation is needed, AU Core uses invariants to require that if coded data is supplied, at last one coding uses agreed terminology for example the invariant applied to `Condition.bodySite` in [AU Core Condition](StructureDefinition-au-core-condition.html).
 
-New additional bindings in AU Core profiles are added to when there is a candidate stricter value set for an element that is under consideration by community for adoptin (e.g. the value set [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1) is a candidate binding for `Observation.value.code` in [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)). These are represented using the [additional bindings extension](https://build.fhir.org/ig/FHIR/fhir-tools-ig/StructureDefinition-additional-binding.html) with the binding purpose set to [candidate](https://build.fhir.org/ig/FHIR/fhir-tools-ig/ValueSet-additional-binding-purpose.html).
+New additional bindings in AU Core profiles are added to when there is a candidate stricter value set for an element that is under consideration by community for adoption (e.g. the value set [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1) is a candidate binding for `Observation.value.code` in [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)). These are represented using the [additional bindings extension](https://build.fhir.org/ig/FHIR/fhir-tools-ig/StructureDefinition-additional-binding.html) with the binding purpose set to [candidate](https://build.fhir.org/ig/FHIR/fhir-tools-ig/ValueSet-additional-binding-purpose.html).
 
 Coded elements in AU Core profiles that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing _Must Support_ on each value set slice. These value set slices are not intended to prevent systems from supplying only a text value.
 
@@ -116,7 +116,7 @@ AU Core invariants are intentionally written to allow for the AU Core requiremen
 ##### Use of Slicing  
 
 Slicing is avoided as much as possible to avoid limiting the opportunities for downstream IGs and applications to define their own business rules and is only used where needed to define specific rules to data patterns. In AU Core most slices are defined as open (i.e. `slicing.rules` is not `closed`) so that downstream IGs and applications can add additional patterns where required provided they still meet the overall profile constraints. Slicing in AU Core resource profiles is used to:
-   * define support for mutiple terminologies, for example [AU Core Medication](StructureDefinition-au-core-medication.html) support for Australian Medicines Terminology (AMT) and PBS Item Codes
+   * define support for multiple terminologies, for example [AU Core Medication](StructureDefinition-au-core-medication.html) support for Australian Medicines Terminology (AMT) and PBS Item Codes
    * define support for specific identifiers, for example [AU Core Patient](StructureDefinition-au-core-patient.html) defines support for IHI, Medicare Card Number, DVA Number
    * define support for recognised clinical concepts, for example AU Core Observation profiles such as vital signs and smoking status use slicing on `Observation.code` to identify the agreed LOINC and SNOMED CT codes that represent the concept, and on 'Observation.category` to support system interactions such as restricting searches.
 
@@ -136,8 +136,8 @@ _[Must Support](general-requirements.html#must-support-and-obligation)_ is used 
 
 Profile specific implementatuon guidance in AU Core is typically used to: 
   * provide qualification of an obligation in narrative that is not present in the obligation. 
-    * describe expected behavior for AU Core actors that cannot be expressed directly in the profile, for example responders obligations when populating `Patient.identifier` 
-    * dewscribe Meds
+    * describe expected behaviour for AU Core actors that cannot be expressed directly in the profile, for example responders obligations when populating `Patient.identifier` 
+    * describe Meds
 
     AU Core profiles include profile specific implementation guidance where narrative context is required to describe expected behaviour or use that cannot be fully expressed in constraints. The guidance is intended to be read together with the profile itself, the actor obligations, conformance rules defined in capability statements and any other referenced/relevant AU Core and AU Base guidance pages. 
 

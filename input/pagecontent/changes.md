@@ -7,7 +7,7 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 - moved substantive guidance on representing body site and laterality from [Representing Body Site, Which May Include Laterality](general-guidance.html#representing-body-site-which-may-include-laterality) section in [General Guidance](general-guidance.html) to the AU Base [General Guidance](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html) page, with AU Core specific content retained [AU Core: FHIR-52372](https://jira.hl7.org/browse/FHIR-52372).
-- Added guidance on profiling approach, extension approach, terminology approach, search parameter approach, actor approach and capability statement approach in the [General Guidance](generalguidance.html#implementation-guide-approach) page [AU Core: FHIR-52393](https://jira.hl7.org/browse/FHIR-52393).
+- Added guidance on profiling approach, extension approach, terminology approach, search parameter approach, actor approach and capability statement approach in the [General Guidance](general-guidance.html#implementation-guide-approach) page [AU Core: FHIR-52393](https://jira.hl7.org/browse/FHIR-52393).
 - [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html):
   - changed AllergyIntolerance.reaction.manifestation binding to Adverse Reaction Clinical Manifestation (preferred) [AU Base: FHIR-47076](https://jira.hl7.org/browse/FHIR-47076)
 - [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)
