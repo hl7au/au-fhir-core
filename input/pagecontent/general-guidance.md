@@ -18,9 +18,9 @@ Australian realm IGs and implementers are expected to comply with AU Base and AU
 #### Scope of AU Core FHIR Artefacts
 
 AU Core profiles:
-* [Extensions](general-guidance.html#extension-approach) to define minimum support expectations for complex extensions
-* [Search parameters](general-guidance.html#search-parameter-approach) to define minimum support expectations for supported search parameters (e.g. support for chaining)
-* [Resources](general-guidance.html#resource-profile-approach) to define minimum support expectations for the use of FHIR resources in the Australian healthcare context across 
+* [Extensions](general-guidance.html#extension-approach) to define minimum support expectations for complex extensions.
+* [Search parameters](general-guidance.html#search-parameter-approach) to define minimum support expectations for supported search parameters (e.g. support for chaining).
+* [Resources](general-guidance.html#resource-profile-approach) to define minimum support expectations for the use of FHIR resources in the Australian healthcare context across.
 
 AU Core defines:
 * [Actors](general-guidance.html#actor-approach) to define systems that play a role in AU Core data exchange.
@@ -56,7 +56,7 @@ AU Core resource profiles set minimum expectations for a system to record, updat
 
 AU Core profiles:
 * are derived from AU Base, where available, to inherit the nationally agreed localised terminology, identifiers, and extensions.
-* are only constrained (e.g. cardinality) where the constraint is agreed as minimum, nationally relevant and applicable across use cases to avoid limiting options for downstream use case decisions and business rules. 
+* are only constrained (e.g. cardinality) where the constraint is agreed to be a minimum requirement that is nationally relevant and applicable across use cases to avoid limiting options for downstream use case decisions and business rules. 
 * elements and extensions that form the minimum requirements are labelled _Must Support_. 
 * elements that are not labelled _Must Support_ are not part of the minimum requirements and are therefore not further constrained in AU Core.
   * an exception to this rule has been agreed for body site elements to ensure nationally agreed terminology. In AU Core resource profiles with a body site element, an invariant is present to enforce that if a coded body site is provided, at least one coding is from SNOMED CT.
@@ -166,7 +166,7 @@ See [Must Support and Obligation](general-requirements.html#must-support-and-obl
 
 #### Actor Approach
 AU Core Actors are defined to describe the specific sets of functionality supported by systems that play a role in AU Core data exchange. Each actor is defined by:
-* an ActorDefiniition that includes reference to support expectations (narrative conformance requirements and capability statements)
+* an ActorDefinition that includes reference to support expectations (narrative conformance requirements and capability statements)
 * a capability statement that describes the requirements for the system and resource support
 
 #### Capability Statement Approach
