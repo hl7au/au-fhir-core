@@ -152,16 +152,16 @@ Where no national agreement exists to restrict a type choice, all inherited type
 New data type profiles are not added as an allowed type choice unless there is no underlying AU Base resource profile available to derive from (e.g. profiles of Observation, Device, Basic).
 
 ##### Use of Must Support and Obligations
-_[Must Support](general-requirements.html#must-support-and-obligation)_ is used to indicate the elements or parts of elements that form the minimum requirements to support for systems. Obligations are used to describe the expectations for support for each element for AU Core actors using the [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html). 
+_[Must Support](general-requirements.html#must-support-and-obligation)_ is used to indicate the elements or parts of elements that form the minimum requirements of AU Core. Labelling an element Must Support means that systems that produce or consume resources are to provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile needs to make clear exactly what kind of support is required when an element is labelled as Must Support.
 
- * AU Core can mark a specific type within a choice element as _Must Support_  to indicate the agreed minimum system capability and population expectations for that type. For example, in [AU Core Condition](StructureDefinition-au-core-condition.html), `Condition.onset[x]` is labelled as _Must Support_ with a further obligation that the `onsetDateTime` TBD "The additional obligation for Condition.onsetDateTime for AU Core Responder is SHOULD:populate"
+When defining the meaning of _Must Support_ in AU Core:
+* [Profile only support](general-requirements.html#profile-only-support) is defined in narrative in the IG (e.g. [Missing Data](general-requirements.html#missing-data) requirements)
+* [Profile Support + Interaction Support](general-requirements.html#profile-support--interaction-support) is defined in:
+  * narrative in the IG (e.g. [Missing Data](general-requirements.html#missing-data) requirements)
+  * the [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on each supported element
+  * narrative qualification of element obligations present in the profile specific implementation guidance
 
-Profile specific implementatuon guidance in AU Core is typically used to: 
-  * provide qualification of an obligation in narrative that is not present in the obligation. 
-    * describe expected behaviour for AU Core actors that cannot be expressed directly in the profile, for example responders obligations when populating `Patient.identifier` 
-    * describe Meds
-
-    AU Core profiles include profile specific implementation guidance where narrative context is required to describe expected behaviour or use that cannot be fully expressed in constraints. The guidance is intended to be read together with the profile itself, the actor obligations, conformance rules defined in capability statements and any other referenced/relevant AU Core and AU Base guidance pages. 
+See [Must Support and Obligation](general-requirements.html#must-support-and-obligation) for a detailed description of how this is used in AU Core profiles. 
 
 #### Actor Approach
 AU Core Actors are defined to describe the specific sets of functionality supported by systems that play a role in AU Core data exchange. Each actor is defined by:
