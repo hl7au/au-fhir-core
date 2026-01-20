@@ -62,7 +62,15 @@ AU Core profiles:
   * an exception has been agreed for body site elements to ensure nationally agreed terminology. In AU Core resource profiles with a body site element, an invariant is present to enforce that if a coded body site is provided, at least one coding is from SNOMED CT.
 * are defined as open, allowing additional elements and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.  
 
-Some aspects of the approach to [profiling](https://hl7.org/fhir/R4/profiling.html) resources in AU Core are described in further detail in the subsections below.
+Some aspects of the approach to [profiling](https://hl7.org/fhir/R4/profiling.html) resources in AU Core are described in further detail in the subsections below:
+* [Restricting Cardinality](general-guidance.html#restricting-cardinality)
+* [Use of Extensions](general-guidance.html#use-of-extensions)
+* [Use of Terminology Bindings](general-guidance.html#use-of-terminology-bindings)
+* [Use of Invariants](general-guidance.html#use-of-invariants)
+* [Use of Slicing](general-guidance.html#use-of-slicing)
+* [Restricting References and Type Choices](general-guidance.html#restricting-references-and-type-choices)
+* [Use of Must Support and Obligations](general-guidance.html#use-of-must-support-and-obligations)
+* [Use of Fixed Values and Pattern](general-guidance.html#use-of-fixed-values-and-pattern)
 
 ##### Restricting Cardinality
 
@@ -102,16 +110,17 @@ New additional bindings in AU Core profiles are added to when there is a candida
 
 Coded elements in AU Core profiles that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing _Must Support_ on each value set slice. These value set slices are not intended to prevent systems from supplying only a text value.
 
-New terminology bindings can be added temporarily in an AU Core profile to support development in a release while the work to include that terminology binding in the underlying AU Base profile is progressing. 
+While the work to include that terminology binding in the underlying AU Base profile is progressing, new terminology bindings can be added temporarily in an AU Core profile to support development and testing in a release.
 
 ##### Use of Invariants
-AU Core resource profiles include invariants when a minimum data quality requirement requires logic that cannot be represented through other profiling techniques (e.g. cardinality or terminology binding). 
+AU Core resource profiles include invariants when a minimum data quality requirement requires logic that cannot be represented through other profiling techniques (e.g. cardinality or terminology binding). These invariants are formally defined using FHIRPath so that the constraint can be computationally evaluated.
 
-Typically, the invariants defined in AU Core resource profiles are used to:
-  * define date precision rules (e.g. [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html) invariant au-core-obs-01 Date shall be at least to day)
+Typically, invariants defined in AU Core are used to:
+  * define data precision rules (e.g. [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html) invariant au-core-obs-01: Date shall be at least to day)
   * define conditional cardinality rules such as "at least one of" (e.g. [AU Core Location](StructureDefinition-au-core-location.html) invariant au-core-loc-01: The location shall at least have a valid identifier or address or type)
+  * define terminology rules (e.g. [AU Core Procedure](StructureDefinition-au-core-procedure.html) invariant au-core-pro-01: If a coded body site is provided, at least one coding shall be from SNOMED CT)
 
-AU Core invariants are intentionally written to allow for the AU Core requirements on [Missing Data](general-requirements.html#missing-data) to be met.
+AU Core invariants are intentionally written to allow for the AU Core requirements on [Missing Data](general-requirements.html#missing-data) to be met (e.g.[AU Core Patient](StructureDefinition-au-core-patient.html) invariant au-core-pat-01: At least one patient identifier shall be valid, or if not available, the Data Absent Reason extension shall be present).
 
 ##### Use of Slicing  
 
@@ -120,7 +129,7 @@ Slicing is avoided as much as possible to avoid limiting the opportunities for d
    * define support for specific identifiers, for example [AU Core Patient](StructureDefinition-au-core-patient.html) defines support for IHI, Medicare Card Number, DVA Number
    * define support for recognised clinical concepts, for example AU Core Observation profiles such as vital signs and smoking status use slicing on `Observation.code` to identify the agreed LOINC and SNOMED CT codes that represent the concept, and on 'Observation.category` to support system interactions such as restricting searches.
 
-##### Referencing AU Core Profiles and Type Choices
+##### Restricting References and Type Choices
 
 References for supported elements (i.e. labelled _Must Support_) are constrained to the AU Core profile, or where not available, the AU Base profile (where it exists) to support validation.
 
@@ -131,7 +140,7 @@ Types for supported elements are restricted only where there is national agreeme
   * tbd identifier types
   *  Where no national agreement exists to restrict a type choice, all inherited types remain allowed, e.g. in [AU Core Patient](StructureDefinition-au-core-patient.html), `Patient.address` supports both the generic Address and Australian Address types as defined in AU Base.
 
-##### Must Support and Obligations
+##### Use of Must Support and Obligations
 _[Must Support](general-requirements.html#must-support-and-obligation)_ is used to indicate the elements or parts of elements that form the minimum requirements to support for systems. Obligations are used to describe the expectations for support for each element for AU Core actors using the [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html). 
 
 Profile specific implementatuon guidance in AU Core is typically used to: 
