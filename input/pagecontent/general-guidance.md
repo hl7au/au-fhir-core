@@ -132,15 +132,11 @@ Slicing is avoided where possible to avoid limiting the opportunities for downst
 
 Slices are defined as open (i.e. `slicing.rules` is `open`) so that downstream IGs and applications can add additional patterns where required provided they still meet the overall profile constraints.
 
-Patterns are used to represent "At least the following"; fixed values are included as slices.  they are 
-Patterns (`pattern[x]`) is the primary mechanism for constraining element values within AU Core, rather than using fixed values, to alllow additional data to be supplied (e.g. ensuring that Observation.category or Observation.code contains an agreed code while allowing additional codings).  
+Patterns and fixed values are used to define support for recognised clinical concepts. Pattern is the preferred primary mechanism to represent "at least the following" for coded repeating elements (e.g. [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) applies pattern to specify `Observation.code` to be at least `Observation.code.coding.code`="1747861000168109" and `Observation.code.coding.system`="http://snomed.info/sct"). Fixed are used in slices to define support for an additional recognised clinican concept (e.g. [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) defines an optional slice of `Observation.code` as `Observation.code.coding.code`="72166-2" and `Observation.code.coding.system`="http://loinc.org"). 
 
-support the exchange of specific clinical measurements, assessments, and findings that are recognised as core digital health information in an Australian context
-
-
-All AU Core use case profiles are Observation profiles and AU Core
-     * defines the agreed LOINC and SNOMED CT codes representing the concept in `Observation.code`. LOINC is included to align with international usage for representing Observation concepts. SNOMED CT is included because it is the preferred terminology for clinical use in Australia.
-     * uses Observation.category to define nationally agreed categories requied to support consistent system interactions, such as search and filtering
+<div class="stu-note" markdown="1">
+Some AU Core profiles include slicing with a discriminator of type 'pattern' which is deprecated in R5+. For future compatibility, it is under consideration to use type=value with a pattern[x] instead.
+</div>
 
 ##### Restricting References and Type Choices
 
