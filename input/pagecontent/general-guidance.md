@@ -173,11 +173,9 @@ AU Core capability statements are defined to describe the specific capabilities 
 
 AU Core capability statements are defined as open, allowing additional resources, profiles, operations, and search parameters to be defined.
 
-AU Core capability statements include qualifying narrative where further clarification for _Must Support_  behaviour is required or where agreed relaxations apply. This narrative is used when actor behaviour caboot be represented through constraints or obligations. In Au Core, all current relaxations apply to responde actors and allow support for at least one of permitted structures. The current agreed relaxations allow a responder to support either `reasonCode` or `reasonReference` (rather than requiring both) in the following AU Core profiles:
-* AU Core Encounter
-* AU Core MedicationRequest
-* AU Core MedicationStatement
-* AU Core Procedure
+Every resource type that is the target of a _Must Support_ element in a profile is modelled, with the agreed support expectations, in the the AU Core capability statement to ensure a complete description of the requirements for implementation. 
+
+AU Core capability statements include profile specific implementation guidance including the qualifying narrative where further clarification for _Must Support_  behaviour is required or where agreed relaxations apply. 
 
 ### SNOMED CT Australian (SNOMED CT-AU) Edition
 For guidance on SNOMED CT-AU in FHIR, see the guidance defined in AU Base [SNOMED CT Australian Edition](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition).
