@@ -8,7 +8,7 @@
   <name value="AUCoreCondition"/>
   <title value="AU Core Condition"/>
   <status value="active"/>
-  <description value="This profile sets minimum expectations for a Condition resource to record, search, and fetch problems, diagnoses, and health concerns associated with a patient. It is based on the [AU Base Condition](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-condition.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Condition resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
+  <description value="This profile sets minimum expectations for a Condition resource to record, search, and fetch problems, diagnoses, and health concerns associated with a patient. It is based on the [AU Base Condition](https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-condition.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Condition resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Condition"/>

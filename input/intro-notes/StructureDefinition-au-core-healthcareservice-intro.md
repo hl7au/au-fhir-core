@@ -9,4 +9,4 @@ The following are supported usage scenarios for this profile:
 - Read information about a healthcare service referenced by another resource
 
 ### Profile Specific Implementation Guidance
-- See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#business-identifiers) in AU Base.
+- See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://hl7.org.au/fhir/6.0.0/generalguidance.html#business-identifiers) in AU Base.

@@ -35,7 +35,7 @@
 	<dependsOn id="aubaser4">
 		<uri value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"/>
 		<packageId value="hl7.fhir.au.base"/>
-		<version value="current"/>
+		<version value="6.0.0"/>
 	</dependsOn>
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
@@ -45,7 +45,7 @@
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa"/>
 		<packageId value="hl7.fhir.uv.ipa"/>
-		<version value="current"/>
+		<version value="1.1.0"/>
 	</dependsOn>
 	<definition>
 		<resource>
@@ -948,7 +948,7 @@
 		</parameter>
 		<parameter>
 			<code value="fmm-definition"/>
-			<value value="https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#maturity-levels"/>
+			<value value="https://hl7.org.au/fhir/6.0.0/generalguidance.html#maturity-levels"/>
 		</parameter>
 		<parameter>
 			<code value="version-comparison-master"/>
