@@ -92,7 +92,7 @@ Additional extensions are not added directly to an AU Core profile, unless there
 While the work to include a new extension in the underlying AU Base resource profile is progressing, extensions can be added (but not defined) temporarily in an AU Core profile to support development and testing in a release.
 
 ##### Use of Terminology Bindings
- Where the AU Core profile is derived, the underlying AU Base terminology binding is inherited. Terminology for a resource is [localised in AU Base]((https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection)). In some cases that localised terminology is represented in the binding for a coded element, and in other cases it is represented as additional bindings that list the set of terminology recognised for use in Australia for that element.
+ Where the AU Core profile is derived, the underlying AU Base terminology binding is inherited. Terminology for a resource is [localised in AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection). In some cases that localised terminology is represented in the binding for a coded element, and in other cases it is represented as additional bindings that list the set of terminology recognised for use in Australia for that element.
 
 New terminology bindings are not added in an AU Core profile unless there is no AU Base resource profile available to derive from (e.g. profiles of Observation, Device, Basic).
 
