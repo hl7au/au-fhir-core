@@ -166,26 +166,26 @@ The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot
 ##### Must Support - Primitive Elements
 Primitive elements are single elements with a primitive value. If a primitive element is labelled as *Must Support*: 
 - AU Core Responders **SHALL** correctly populate the element if a value is known. 
-- AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid value.
+- AU Core Requesters **SHALL** accept resources without error if the element is present and contains any valid value.
 
 For example, the AU Core Organization Profile `name` element is a primitive string datatype. Therefore, when claiming conformance to this profile:
 - AU Core Responders **SHALL** correctly populate a value in `Organization.name` if a value is known.
-- AU Core Requesters **SHALL** accept the Organization resource without error if `Organization.name` is present and containing any valid value.
+- AU Core Requesters **SHALL** accept the Organization resource without error if `Organization.name` is present and contains any valid value.
 
 ##### Must Support - Complex Elements
-Complex elements are composed of primitive and/or other complex elements. Elements may have additional rules defined in the profile that also apply, e.g. terminology binding, or invariants. 
+Complex elements are composed of primitive and other complex elements. Elements may have additional rules defined in the profile that also apply, e.g. invariants. Coded elements ([CodeableConcept](https://hl7.org/fhir/R4/datatypes.html#CodeableConcept), [Coding](https://hl7.org/fhir/R4/datatypes.html#Coding), and [code](https://hl7.org/fhir/R4/datatypes.html#code) datatypes) have additional rules defined by the [terminology binding](https://hl7.org/fhir/R4/terminologies.html#strength) in the profile.
 
 If a complex element is labelled as *Must Support*:
 - AU Core Responders **SHALL** correctly populate the element with at least one of the sub-element values if the value is known.
-- AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid sub-element.
+- AU Core Requesters **SHALL** accept resources without error if the element is present and contains any valid sub-element.
 
 For example, the AU Core AllergyIntolerance Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
 - AU Core Responders **SHALL** correctly populate a value in any valid `AllergyIntolerance.note` sub-element if a value is known e.g. `AllergyIntolerance.note.text`.
-- AU Core Requesters **SHALL** accept the AllergyIntolerance resource without error if `AllergyIntolerance.note` is present and containing any valid sub-elements.
+- AU Core Requesters **SHALL** accept the AllergyIntolerance resource without error if `AllergyIntolerance.note` is present and contains any valid sub-elements.
 
 If a sub-element is labelled as *Must Support*: 
 - AU Core Responders **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
-- AU Core Requesters **SHALL** accept resources without error if *Must Support* sub-elements are present and containing any valid value.
+- AU Core Requesters **SHALL** accept resources without error if *Must Support* sub-elements are present and contains any valid value.
 
 For example, in the AU Core Practitioner Profile, the `name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
 - AU Core Responders **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
@@ -194,7 +194,7 @@ For example, in the AU Core Practitioner Profile, the `name` element is labelled
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
 - AU Core Responders **SHALL** correctly populate the element with at least one referenced resource or allowed profile if the value is known. 
-- AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid referenced resource or profiles.
+- AU Core Requesters **SHALL** accept resources without error if the element is present and contains any valid referenced resource or profiles.
 
 The table below provides a list of AU Core profile elements that allow multiple referenced resource types or profiles.
 
@@ -206,7 +206,7 @@ AU Core Profile |Must Support Element|Reference
 [AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.reasonReference|AU Core Condition, Observation, AU Core Procedure
 [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.requester|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.reasonReference|AU Core Condition, Observation
-[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.reasonReference|AU Core Condition, Observation, AU Base Diagnostic Report
+[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.reasonReference|AU Core Condition, Observation, AU Base DiagnosticReport
 [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 [AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
 {:.grid}
@@ -215,7 +215,7 @@ AU Core Profile |Must Support Element|Reference
 ##### Must Support - Choice of Data Types
 Some elements labelled as *Must Support* allow different data types such as `Observation.effective[x]`. In such cases:
 - AU Core Responders **SHALL** correctly populate the element with at least one data type allowed by the element definition if the value is known.
-- AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid data type allowed by the element definition.
+- AU Core Requesters **SHALL** accept resources without error if the element is present and contains any valid data type allowed by the element definition.
 
 The table below provides a list of AU Core profile elements that allow multiple data types.
 
@@ -257,10 +257,14 @@ Profile | Must Support Data Type
 [AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.performedDateTime
 {:.grid}
 
-##### Must Support - Choice of Identifiers
-A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
-- AU Core Responders **SHALL** correctly populate the element with identifiers from at least one supported identifier type where the identifier is known, or any known identifier when no supported identifier type is known.
-- AU Core Requesters **SHALL** accept resources without error if the element is present and containing any identifier type allowed by the element definition.
+##### Must Support - Identifiers
+A profile may define support for one, none, or many identifier types. Supported identifier types are included in a profile by slicing the identifier element and placing *Must Support* on each identifier slice. 
+
+Where no identifier slice is included in a profile, there is no expectation that a specific identifier type is supported and the section on [Must Support - Complex Elements](general-requirements.html#must-support---complex-elements) applies.
+
+Where one or more identifier types are supported:
+- AU Core Responders **SHALL** correctly populate the identifier element with identifiers from at least one supported identifier type where an identifier of that type is known, or any other identifier type when an identifier is known but it is not one of the supported identifier types.
+- AU Core Requesters **SHALL** accept resources without error if the identifier element is present and contains any identifier type allowed by the element definition.
 
 The table below provides a list of AU Core profile elements with one or more supported identifier types.
 
@@ -272,9 +276,9 @@ AU Core Profile |Must Support Element|Supported Identifiers
 [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
-For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) requires support for the following choices `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU Core Patient Profile:
-- AU Core Responders **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Card Number, or DVA Number, or any combination of them where the identifier is known, or any other identifier (e.g. Medical Record Number) when none of IHI, or Medicare Card Number, or DVA Number are known.
-- AU Core Requesters **SHALL** accept Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an IHI, Medicare Card Number, or DVA Number identifier, or may be some other allowed identifier.
+For example, the profile [AU Core Organization](StructureDefinition-au-core-organization.html) defines support for the Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN) identifier types as slices of `Organization.identifier` flagged with *Must Support*. When claiming conformance to the AU Core Organization Profile:
+- AU Core Responders **SHALL** correctly populate `Organization.identifier` with at least one of HPI-O or ABN if known, or any other identifier type when neither HPI-O or ABN are known but some other identifier is known (e.g. NATA Accredication Number).
+- AU Core Requesters **SHALL** accept the Organization resource if `Organization.identifier` is present and containins any valid value. A valid value may be an HPI-O or ABN, or may be any other valid identifier type allowed by the element definition (e.g. NATA Accredication Number).
 
 Systems **MAY** support populating and accepting other identifiers, but this is not a requirement of AU Core.
 
@@ -282,7 +286,7 @@ Systems **MAY** support populating and accepting other identifiers, but this is 
 
 A resource may support two elements that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU Core Encounter](StructureDefinition-au-core-encounter.html). In such cases:
 - AU Core Responders **SHALL** correctly populate at least one element choice if the value is known.
-- AU Core Requesters **SHALL** accept resources without error if any element allowed by the profile is present and containing any valid value. 
+- AU Core Requesters **SHALL** accept resources without error if any element allowed by the profile is present and contains any valid value. 
 
 The table below lists the applicable profiles and elements in AU Core.
 
@@ -295,13 +299,16 @@ AU Core Profile |Must Support Choice Elements
 {:.grid}
 
 
-##### Must Support - Choice of Terminology
+##### Must Support - Multiple Terminologies
+A coded element can have support defined for one or many value sets. Coded elements that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing *Must Support* on each value set slice. These value set slices are not intended to prevent systems from supplying only a text value.
 
-In AU Core, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases:
-- AU Core Responders **SHALL** correctly populate the element with concepts from each supported value set where the applicable concept is known.
-- AU Core Requesters **SHALL** accept resources without error if the element is present and containing any valid value. 
+Most coded *Must Support* elements in AU Core define support for one value set, which is bound to the element and no value set slice is present. For these elements, the section on [Must Support - Complex Elements](general-requirements.html#must-support---complex-elements) and the terminology binding applies.
 
-The table below lists the applicable profiles and elements in AU Core that support multiple value sets.
+Where multiple value sets are supported:
+- AU Core Responders **SHALL** correctly populate the element with concepts from all supported value sets where the applicable concept is known.
+- AU Core Requesters **SHALL** accept resources without error if the element is present and contains any valid value. 
+
+The table below lists the AU Core profile elements that define support for multiple value sets.
 
 AU Core Profile |Must Support Sub-Element|Terminology Choices
 ---|---
@@ -311,13 +318,13 @@ AU Core Profile |Must Support Sub-Element|Terminology Choices
 [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.medicationCodeableConcept.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 {:.grid}
 
-For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) requires support for the following terminology choices `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging *Must Support* on those two terminology slices.
+For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) defines support for [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) value sets as slices of `Medication.code.coding` flagged with *Must Support*.
 
 When claiming conformance to the AU Core Medication profile: 
-- AU Core Responders **SHALL** correctly populate `Medication.code.coding` with either a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, if a coded value is known.
-- AU Core Requesters **SHALL** accept a Medication resource without error if `Medication.code.coding` is present and containing any valid value. A valid value may be text, or may be a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, or some other code.
+- AU Core Responders **SHALL** correctly populate `Medication.code.coding` with codes from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) if both coded values are known, or from either if only one is known, or from another terminology if neither is known but a code is available, or text only if no coded value is known.
+- AU Core Requesters **SHALL** accept a Medication resource without error if `Medication.code.coding` is present and contains any valid value. A valid value may be text, or may be a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, or some other code.
 
-Systems **MAY** populate and accept other code systems but this is not a requirement of AU Core.
+Systems **MAY** populate and accept concepts from other value sets but this is not a requirement of AU Core.
 
 ### Missing Data
 
