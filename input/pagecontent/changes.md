@@ -1,9 +1,9 @@
 ### Release 2.0.0
-- Publication date: 2026-01-22
-- Publication status: Publication status: Working Standard (Trial Use)
+- Publication date: 2026-01-28
+- Publication status: Working Standard (Trial Use)
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [2.0.0-ballot](https://hl7.org.au/fhir/core/2.0.0-ballot/changes.html) to [2.0.0](https://hl7.org.au/fhir/core/2.0.0/changes.html). The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
+This change log documents the significant updates and resolutions implemented from version [2.0.0-ballot](https://hl7.org.au/fhir/core/2.0.0-ballot/index.html) to [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html). The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
 - moved substantive guidance on representing body site and laterality from [Representing Body Site, Which May Include Laterality](general-guidance.html#representing-body-site-which-may-include-laterality) section in [General Guidance](general-guidance.html) to the AU Base [General Guidance](https://hl7.org.au/fhir/6.0.0/generalguidance.html) page, with AU Core specific content retained [AU Core: FHIR-52372](https://jira.hl7.org/browse/FHIR-52372).
