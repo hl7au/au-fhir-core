@@ -67,7 +67,7 @@ Some aspects of the approach to [profiling](https://hl7.org/fhir/R4/profiling.ht
 * [Use of Extensions](general-guidance.html#use-of-extensions)
 * [Use of Terminology Bindings](general-guidance.html#use-of-terminology-bindings)
 * [Use of Invariants](general-guidance.html#use-of-invariants)
-* [Use of Slicing, Pattern, and Fixed Value ](general-guidance.html#use-of-slicing)
+* [Use of Slicing, Pattern, and Fixed Value ](general-guidance.html#use-of-slicing-pattern-and-fixed-value)
 * [Restricting References and Type Choices](general-guidance.html#restricting-references-and-type-choices)
 * [Use of Must Support and Obligations](general-guidance.html#use-of-must-support-and-obligations)
 
@@ -106,7 +106,7 @@ Terminology binding strength used in AU Core profiles:
  
 New additional bindings are added to AU Core profiles when there is a candidate value set for consideration by the community that is stricter than the currently bound value set for an element (e.g. the value set [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1) is a candidate binding for `Observation.value.code` in [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)). These candidate value sets are included in a profile using the [additional bindings extension](https://build.fhir.org/ig/FHIR/fhir-tools-ig/StructureDefinition-additional-binding.html) with the binding purpose set to [candidate](https://build.fhir.org/ig/FHIR/fhir-tools-ig/ValueSet-additional-binding-purpose.html).
 
-Coded elements in AU Core profiles that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing _Must Support_ on each value set slice. Modelling optional slices of Coding allows systems to supply a text only value. See [Use of Slicing, Pattern, and Fixed Value](general-guidance.html#use-of-slicing).
+Coded elements in AU Core profiles that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing _Must Support_ on each value set slice. Modelling optional slices of Coding allows systems to supply a text only value. See [Use of Slicing, Pattern, and Fixed Value](general-guidance.html#use-of-slicing-pattern-and-fixed-value).
 
 Additional terminology rules that cannot be represented using a binding are applied with the [use of invariants](general-guidance.html#use-of-invariants) (e.g. [AU Core Procedure](StructureDefinition-au-core-procedure.html) invariant **au-core-pro-01:** If a coded body site is provided, at least one coding shall be from SNOMED CT).
 
