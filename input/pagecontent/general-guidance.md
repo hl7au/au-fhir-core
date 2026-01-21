@@ -92,21 +92,21 @@ Additional extensions are not added directly to an AU Core profile, unless there
 While the work to include a new extension in the underlying AU Base resource profile is progressing, extensions can be added (but not defined) temporarily in an AU Core profile to support development and testing in a release.
 
 ##### Use of Terminology Bindings
- Where the AU Core profile is derived, the underlying AU Base terminology binding is inherited. Terminology for a resource is [localised in AU Base]((https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection)). In some cases the localised terminology is represented in the binding for a coded element, and in other cases the set of terminology recognised for use in Australia is represented as additional bindings.
+ Where the AU Core profile is derived, the underlying AU Base terminology binding is inherited. Terminology for a resource is [localised in AU Base]((https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection)). In some cases that localised terminology is represented in the binding for a coded element, and in other cases the set of terminology recognised for use in Australia is represented as additional bindings.
 
 New terminology bindings are not added in an AU Core profile unless there is no AU Base resource profile available to derive from (e.g. profiles of Observation, Device, Basic).
 
 Terminology binding strength used in AU Core profiles:
-* [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) bindings are more common on many elements to accommodate:
+* [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) bindings are commonly used on many elements to accommodate:
   * legacy systems and data
   * where there is a limited implementation of the standardised terminology
-  * downstream variation to support use cases is expected
+  * expected downstream variation to support use cases
 * [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) bindings are applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules. In some cases, AU Core strengthens the binding inherited from AU Base or the FHIR standard on supported elements (i.e. elements labelled _Must Support_) from [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) where there is national agreement across use cases (e.g. core clinical concepts such as `AllergyIntolerance.code`, `Procedure.code`, `Condition.code`).
 * [required](https://hl7.org/fhir/R4/terminologies.html#required) bindings are inherited from the FHIR standard. AU Core does not strengthen bindings to required to allow for systems to supply text only values where coded data is not available. Downstream IGs can introduce tighter terminology requirements appropriate to their use case. 
  
-New additional bindings in AU Core profiles are added when there is a candidate value set for consideration by the community that is stricter than the currently bound value set for an element (e.g. the value set [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1) is a candidate binding for `Observation.value.code` in [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)). These candidate value sets are included in a profile using the [additional bindings extension](https://build.fhir.org/ig/FHIR/fhir-tools-ig/StructureDefinition-additional-binding.html) with the binding purpose set to [candidate](https://build.fhir.org/ig/FHIR/fhir-tools-ig/ValueSet-additional-binding-purpose.html).
+New additional bindings are added to AU Core profiles when there is a candidate value set for consideration by the community that is stricter than the currently bound value set for an element (e.g. the value set [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1) is a candidate binding for `Observation.value.code` in [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)). These candidate value sets are included in a profile using the [additional bindings extension](https://build.fhir.org/ig/FHIR/fhir-tools-ig/StructureDefinition-additional-binding.html) with the binding purpose set to [candidate](https://build.fhir.org/ig/FHIR/fhir-tools-ig/ValueSet-additional-binding-purpose.html).
 
-Coded elements in AU Core profiles that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing _Must Support_ on each value set slice. Modelling optional slices of Coding allows systems to supply a text only value.
+Coded elements in AU Core profiles that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing _Must Support_ on each value set slice. Modelling optional slices of Coding allows systems to supply a text only value. See [Use of Slicing, Pattern, and Fixed Value ](general-guidance.html#use-of-slicing).
 
 Additional terminology rules that cannot be represented using a binding are applied with the [use of invariants](general-guidance.html#use-of-invariants) (e.g. [AU Core Procedure](StructureDefinition-au-core-procedure.html) invariant au-core-pro-01: If a coded body site is provided, at least one coding shall be from SNOMED CT).
 
@@ -120,7 +120,7 @@ Typically, invariants defined in AU Core are used to:
   * define conditional cardinality rules such as "at least one of" (e.g. [AU Core Location](StructureDefinition-au-core-location.html) invariant au-core-loc-01: The location shall at least have a valid identifier or address or type)
   * define terminology rules (e.g. [AU Core Procedure](StructureDefinition-au-core-procedure.html) invariant au-core-pro-01: If a coded body site is provided, at least one coding shall be from SNOMED CT)
 
-AU Core invariants are intentionally written to allow for the AU Core requirements on [Missing Data](general-requirements.html#missing-data) to be met (e.g.[AU Core Patient](StructureDefinition-au-core-patient.html) invariant au-core-pat-01: At least one patient identifier shall be valid, or if not available, the Data Absent Reason extension shall be present).
+AU Core invariants are intentionally written to allow for the AU Core requirements on [Missing Data](general-requirements.html#missing-data) to be met (e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) invariant au-core-pat-01: At least one patient identifier shall be valid, or if not available, the Data Absent Reason extension shall be present).
 
 ##### Use of Slicing, Pattern, and Fixed Value  
 
@@ -129,11 +129,11 @@ Slicing is avoided where possible to avoid limiting the opportunities for downst
    * define support for specific identifiers, (e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) `Patient.identifier` is sliced to define support for IHI, Medicare Card Number, and DVA Number)
    * define support for recognised clinical concepts, (e.g. [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html) `Observation.code` is sliced to identify the agreed LOINC and SNOMED CT codes that identify the concept)
 
-Slices are defined as open (i.e. `slicing.rules` is `open`) so that downstream IGs and applications can add additional patterns where required provided they still meet the overall profile constraints.
+Slices are defined as open (i.e. `slicing.rules` is `open`) so that downstream IGs and applications can add additional patterns where required, provided the AU Core profile constraints are met.
 
 Patterns and fixed values are used to define support for recognised clinical concepts:
 * Pattern is the preferred primary mechanism to represent "at least the following" for coded repeating elements (e.g. [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) applies pattern to specify that at least one instance of `Observation.code` needs to have `Observation.code.coding.code`="1747861000168109" and `Observation.code.coding.system`="http://snomed.info/sct").
-* Fixed values are used in slices to define an additional recognised clinican concept (e.g. [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) defines an optional slice of `Observation.code` as `Observation.code.coding.code`="72166-2" and `Observation.code.coding.system`="http://loinc.org"). 
+* Fixed values are used in slices to define an additional recognised clinical concept (e.g. [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) defines an optional slice of `Observation.code` as `Observation.code.coding.code`="72166-2" and `Observation.code.coding.system`="http://loinc.org"). 
 
 <div class="stu-note" markdown="1">
 Some AU Core profiles include slicing with a discriminator of type 'pattern' which is deprecated in R5+. For future compatibility, it is under consideration to use type=value with a pattern[x] instead.
