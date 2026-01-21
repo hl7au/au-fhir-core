@@ -9,7 +9,7 @@ The following are supported usage scenarios for this profile:
 - Record or update a specialist or other diagnostic result for a patient
 
 <div class="stu-note">
-There is currently no profile for diagnostic imaging results in AU Core. Implementers can refer to the  <a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a> profile for guidance on exchanging diagnostic imaging results. Support for imaging result observations may be added to AU Core in the future.
+There is currently no profile for diagnostic imaging results in AU Core. Implementers can refer to the  <a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a> profile for guidance on exchanging diagnostic imaging results. Support for imaging result observations may be added to AU Core in the future.
 </div>
 
 ### Profile Specific Implementation Guidance

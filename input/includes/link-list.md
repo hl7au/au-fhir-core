@@ -273,7 +273,7 @@
 [clinical safety]:  {{site.data.fhir.path}}safety.html
 [Mandatory]: must-support.html
 [Using multiple codes with CodeableConcept Datatype]: general-requirements.html#translations
-[Maturity Level]: https://build.fhir.org/ig/hl7au/au-fhir-base/guidance.html#maturity-levels
+[Maturity Level]: https://hl7.org.au/fhir/6.0.0/guidance.html#maturity-levels
 [slicing]: {{site.data.fhir.path}}profiling.html#slicing
 [Change Log]: changes.html
 [Deletion Safety Checks]: http://hl7.org/fhir/R4/safety.html#conformance

@@ -25,7 +25,7 @@ The first release of AU Core was an [18 month process](https://hl7.org.au/fhir/c
 <br/>
 
 #### Maturing the Baseline
-The approach to develop and mature AU Core is outlined in the figure below making reference to the [Australian FHIR Maturity Level (AFMM) levels](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#maturity-levels).
+The approach to develop and mature AU Core is outlined in the figure below making reference to the [Australian FHIR Maturity Level (AFMM) levels](https://hl7.org.au/fhir/6.0.0/generalguidance.html#maturity-levels).
 
  <div> 
     <img src="maturing.png" alt="Maturing the AU Core Baseline" style="width:80%"/>

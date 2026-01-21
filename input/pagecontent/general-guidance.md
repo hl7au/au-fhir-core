@@ -1,5 +1,5 @@
 ### SNOMED CT Australian (SNOMED CT-AU) Edition
-For guidance on SNOMED CT-AU in FHIR, see the guidance defined in AU Base [SNOMED CT Australian Edition](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition).
+For guidance on SNOMED CT-AU in FHIR, see the guidance defined in AU Base [SNOMED CT Australian Edition](https://hl7.org.au/fhir/6.0.0/generalguidance.html#snomed-ct-australian-edition).
 
 ### Contained Resources
 In some circumstances, the content referred to in the resource reference does not have an independent existence apart from the resource that contains it - it cannot be identified independently, and nor can it have its own independent transaction scope. For example, use of a Medication resource to represent medicinal product identification within the context of a MedicationRequest. In these circumstances the resource can be [contained](http://hl7.org/fhir/R4/references.html#contained). 
@@ -22,7 +22,7 @@ When exchanging `Procedure` and `Condition` resources using AU Core profiles the
 * The `bodySite` element is not *Must Support* in AU Core profiles, there is no expectation to fill or meaningfully consume this element.
 * The `CodeableConcept.text` element is system populated and may reflect more specific detail than the `CodeableConcept.coding` concepts provided.
 
-See the guidance in AU Base [Representing Body Site, Which May Include Laterality](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#representing-body-site-which-may-include-laterality) for what to do in each of the following scenarios:
+See the guidance in AU Base [Representing Body Site, Which May Include Laterality](https://hl7.org.au/fhir/6.0.0/generalguidance.html#representing-body-site-which-may-include-laterality) for what to do in each of the following scenarios:
 1. Primary finding/procedure code with body site and laterality as a pre-coordinated code.
 1. Primary finding/procedure code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
 1. Coded body site with laterality and separate primary finding/procedure code.
