@@ -948,7 +948,7 @@
 		</parameter>
 		<parameter>
 			<code value="fmm-definition"/>
-			<value value="https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#maturity-levels"/>
+			<value value="https://hl7.org.au/fhir/6.0.0/generalguidance.html#maturity-levels"/>
 		</parameter>
 		<parameter>
 			<code value="version-comparison-master"/>
