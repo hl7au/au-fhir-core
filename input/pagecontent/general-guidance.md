@@ -80,7 +80,7 @@ Cardinality is only restricted where there is an agreed minimum data quality req
 AU Core does not prohibit (cardinality 0..0) elements or extensions, as prohibition restricts the opportunities for downstream IGs and applications to define their own business rules.
 
 AU Core profiles include conditional cardinality constraints (defined using [invariants](general-guidance.html#use-of-invariants)), which are:
-* inherited from the FHIR standard e.g. [AU Core Condition](StructureDefinition-au-core-condition.html) inherits invariant con-5: Condition.clinicalStatus SHALL NOT be present if verification Status is entered-in-error.
+* inherited from the FHIR standard e.g. [AU Core Condition](StructureDefinition-au-core-condition.html) inherits invariant **con-5:** Condition.clinicalStatus SHALL NOT be present if verification Status is entered-in-error.
 * added in AU Core to apply minimum data quality requirements e.g. [AU Core Location](StructureDefinition-au-core-location.html) invariant **au-core-loc-01:** The location shall at least have a valid identifier or address or type.
 
 ##### Use of Extensions
@@ -101,7 +101,7 @@ Terminology binding strength used in AU Core profiles:
   * legacy systems and data
   * limited implementation of standardised terminology
   * significant downstream variation for different use cases
-* [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) bindings are applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules. In some cases, AU Core strengthens the inherited binding on supported elements (i.e. elements labelled _Must Support_) from [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) where there is national agreement across use cases (e.g. `AllergyIntolerance.code`,`Condition.code`).
+* [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) bindings are applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules. In some cases, AU Core strengthens the inherited binding on supported elements (i.e. elements labelled _Must Support_) from [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) where there is national agreement across use cases (e.g. `AllergyIntolerance.code`, `Condition.code`).
 * [required](https://hl7.org/fhir/R4/terminologies.html#required) bindings are inherited from the FHIR standard. AU Core does not strengthen bindings to required to allow for systems to supply text only values where coded data is not available. Downstream IGs can introduce tighter terminology requirements appropriate to their use case. 
  
 New additional bindings are added to AU Core profiles when there is a candidate value set for consideration by the community that is stricter than the currently bound value set for an element (e.g. the value set [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1) is a candidate binding for `Observation.value.code` in [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)). These candidate value sets are included in a profile using the [additional bindings extension](https://build.fhir.org/ig/FHIR/fhir-tools-ig/StructureDefinition-additional-binding.html) with the binding purpose set to [candidate](https://build.fhir.org/ig/FHIR/fhir-tools-ig/ValueSet-additional-binding-purpose.html).
@@ -143,9 +143,9 @@ Some AU Core profiles include slicing with a discriminator of type 'pattern' whi
 
 To support validation, resource references for supported elements (i.e. elements labelled _Must Support_) are constrained to target AU Core profiles, or where not available, AU Base resource profiles (where they exist).
 
-Types for supported elements (i.e. elements labelled _Must Support_) are restricted only where there is national agreement to restrict that usage. This is rare as AU Core profiles are modelled intentionally to not restrict meanginful use case options. Some examples where a restriction is applied are:
-* [AU Core Condition](StructureDefinition-au-core-condition.html) `Condition.onset[x]` is constrained to not allow `onsetString` 
-* [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) `Observation.value` is constrained to only allow `valueCodeableConcept`
+Types for supported elements (i.e. elements labelled _Must Support_) are restricted only where there is national agreement to restrict that usage. This is rare as AU Core profiles are modelled intentionally to not restrict meaningful use case options. Some examples where a restriction is applied are:
+* [AU Core Condition](StructureDefinition-au-core-condition.html) `Condition.onset[x]` is constrained to not allow `onsetString`. 
+* [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) `Observation.value` is constrained to only allow `valueCodeableConcept`.
 
 Where no national agreement exists to restrict a type choice, all inherited types are allowed. For example in [AU Core Patient](StructureDefinition-au-core-patient.html), `Patient.address` inherits the FHIR data type [Address](http://hl7.org/fhir/R4/datatypes.html#Address) and AU Base [Australian Address](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-address.html) data type profile from [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html).
 
@@ -155,16 +155,16 @@ New data type profiles are not added in AU Core to the set of allowed type choic
 _[Must Support](general-requirements.html#must-support-and-obligation)_ is used to indicate the elements and extensions that form the minimum requirements of AU Core. Labelling an element _Must Support_ means that systems that produce or consume resources are to provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile needs to make clear exactly what kind of support is required when an element is labelled as _Must Support_.
 
 When defining the meaning of _Must Support_ in AU Core:
-* [Profile only support](general-requirements.html#profile-only-support) is defined in narrative in the IG (e.g. [Missing Data](general-requirements.html#missing-data) requirements)
+* [Profile Only Support](general-requirements.html#profile-only-support) is defined in narrative in the IG (e.g. [Missing Data](general-requirements.html#missing-data) requirements)
 * [Profile Support + Interaction Support](general-requirements.html#profile-support--interaction-support) is defined in:
   * narrative in the IG (e.g. [Missing Data](general-requirements.html#missing-data) requirements)
-  * the [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on each supported element in a profile
+  * the [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on each supported element in a profile, identifying the support expectations for AU Core actors
   * narrative qualification of element obligations present in the profile specific implementation guidance
 
 See [Must Support and Obligation](general-requirements.html#must-support-and-obligation) for a detailed description of how this is applied in AU Core. 
 
 #### Actor Approach
-AU Core Actors are defined to describe the specific sets of functionality supported by systems that play a role in AU Core data exchange. Each actor is defined by:
+AU Core actors are defined to describe the specific sets of functionality supported by systems that play a role in AU Core data exchange. Each actor is defined by:
 * an actor definition that includes reference to support expectations (narrative conformance requirements and capability statements)
 * a capability statement that describes the requirements for the system and resource support
 
@@ -190,7 +190,7 @@ In AU Core profiles:
 
 Further guidance about the general use case for [contained resources](http://hl7.org/fhir/R4/references.html#contained) can be found in the FHIR standard.
 
-### Extensibility – 'Additional”'Elements
+### Extensibility – 'Additional' Elements
 A responder can send 'additional' elements beyond those flagged with *Must Support* in an AU Core profile. Additional elements are often required by other profiles the system may conform to, allowing local requirements, including technical and workflow context for the resource, to be reflected and extending the health information supported in exchanges. For this reason, extensibility is generally encouraged and expected in AU Core profiles. Only in some exceptionally rare use case profiles are rules tightened to limit the nature of additional information that can be sent. Specification authors are encouraged to enable greater interoperability and software re-use by avoiding reductions in an element's cardinality.
 
 Depending on local requirements, a requester (i.e. client application) may ignore these 'additional' elements, may treat the data as for rendering only, or be capable of recognising and using the element. 
