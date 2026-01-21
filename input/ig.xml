@@ -45,7 +45,7 @@
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa"/>
 		<packageId value="hl7.fhir.uv.ipa"/>
-		<version value="1.1.0"/>
+		<version value="current"/>
 	</dependsOn>
 	<definition>
 		<resource>
