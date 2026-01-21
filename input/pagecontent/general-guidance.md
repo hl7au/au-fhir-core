@@ -52,7 +52,7 @@ As part of profiling, AU Core indicates the support expectations for terminology
 For a list of the terminology supported in AU Core refer to the [Terminology](terminology.html) page. See AU Base for guidance on [Terminology Selection](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection) in HL7 AU implementation guides.
 
 #### Resource Profile Approach
-AU Core resource profiles set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. AU Core profiles are derived from AU Base profiles, where available, and identify the additional mandatory core elements, extensions, vocabularies and value sets that are to be present in the resource when conforming to AU Core. These profiles define the minimum conformance requirements that downstream profiles are expected to comply with.
+AU Core resource profiles set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. AU Core profiles are derived from AU Base resource profiles, where available, and identify the additional mandatory core elements, extensions, vocabularies and value sets that are to be present in the resource when conforming to AU Core. These profiles define the minimum conformance requirements that downstream profiles are expected to comply with.
 
 AU Core profiles:
 * are derived from AU Base, where available, to inherit the nationally agreed localised terminology, identifiers, and extensions.
@@ -89,20 +89,20 @@ Extensions are inherited from the underlying AU Base resource profile, where ava
 
 Additional extensions are not added directly to an AU Core profile, unless there is no underlying AU Base resource profile to derive from. Some FHIR resource types are not profiled in AU Base as the resource type is too abstract to support meaningful localisation across use cases in a base resource profile (e.g. Basic, Observation, or Device).
 
-While the work to include a new extension in the underlying AU Base profile is progressing, extensions can be added (but not defined) temporarily in an AU Core profile to support development and testing in a release.
+While the work to include a new extension in the underlying AU Base resource profile is progressing, extensions can be added (but not defined) temporarily in an AU Core profile to support development and testing in a release.
 
 ##### Use of Terminology Bindings
- Where the AU Core profile is derived, the underlying AU Base terminology binding is inherited. Terminology for a resource is [localised in AU Base]((https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection)). In some cases the localised terminology is represented as a preferred binding to an element, and in other cases the set of terminology recognised for use in Australia is represented as a set of additional bindings.
+ Where the AU Core profile is derived, the underlying AU Base terminology binding is inherited. Terminology for a resource is [localised in AU Base]((https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection)). In some cases the localised terminology is represented in the binding for a coded element, and in other cases the set of terminology recognised for use in Australia is represented as additional bindings.
 
-New terminology bindings are not added in an AU Core profile unless there is no AU Base profile available to derive from (e.g. profiles of Observation, Device, Basic).
+New terminology bindings are not added in an AU Core profile unless there is no AU Base resource profile available to derive from (e.g. profiles of Observation, Device, Basic).
 
-Terminology binding strength in AU Core profiles:
+Terminology binding strength used in AU Core profiles:
 * [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) bindings are more common on many elements to accommodate:
- * legacy systems
- * where there is a limited implementation of the standardised terminology
- * downstream variation to support use cases is expected
-* [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) bindings are applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules. In some cases, AU Core strengthens the binding on supported elements (i.e. elements labelled _Must Support_) from [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) where there is national agreement across use cases, e.g. core clinical concepts such as `AllergyIntolerance.code`, `Procedure.code`, `Condition.code`.
-* [required](https://hl7.org/fhir/R4/terminologies.html#required) bindings are inherited from the FHIR standard. AU Core does not strengthen bindings to required so that systems can supply text only where coded data is not available. Downstream IGs can introduce tighter terminology requirements appropriate to their use case. 
+  * legacy systems and data
+  * where there is a limited implementation of the standardised terminology
+  * downstream variation to support use cases is expected
+* [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) bindings are applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules. In some cases, AU Core strengthens the binding inherited from AU Base or the FHIR standard on supported elements (i.e. elements labelled _Must Support_) from [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) where there is national agreement across use cases (e.g. core clinical concepts such as `AllergyIntolerance.code`, `Procedure.code`, `Condition.code`).
+* [required](https://hl7.org/fhir/R4/terminologies.html#required) bindings are inherited from the FHIR standard. AU Core does not strengthen bindings to required to allow for systems to supply text only values where coded data is not available. Downstream IGs can introduce tighter terminology requirements appropriate to their use case. 
  
 New additional bindings in AU Core profiles are added when there is a candidate value set for consideration by the community that is stricter than the currently bound value set for an element (e.g. the value set [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1) is a candidate binding for `Observation.value.code` in [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)). These candidate value sets are included in a profile using the [additional bindings extension](https://build.fhir.org/ig/FHIR/fhir-tools-ig/StructureDefinition-additional-binding.html) with the binding purpose set to [candidate](https://build.fhir.org/ig/FHIR/fhir-tools-ig/ValueSet-additional-binding-purpose.html).
 
@@ -110,7 +110,7 @@ Coded elements in AU Core profiles that define support for more than one value s
 
 Additional terminology rules that cannot be represented using a binding are applied with the [use of invariants](general-guidance.html#use-of-invariants) (e.g. [AU Core Procedure](StructureDefinition-au-core-procedure.html) invariant au-core-pro-01: If a coded body site is provided, at least one coding shall be from SNOMED CT).
 
-While the work to include a new terminology binding in the underlying AU Base profile is progressing, it can be added temporarily to an AU Core profile directly to support development and testing in a release.
+While the work to include a new terminology binding in the underlying AU Base resource profile is progressing, it can be added temporarily to an AU Core profile directly to support development and testing in a release.
 
 ##### Use of Invariants
 AU Core resource profiles include invariants when a minimum data quality requirement requires logic that cannot be represented through other profiling techniques (e.g. cardinality or terminology binding). These invariants are formally defined using FHIRPath so that the constraint can be computationally evaluated.
@@ -141,7 +141,7 @@ Some AU Core profiles include slicing with a discriminator of type 'pattern' whi
 
 ##### Restricting References and Type Choices
 
-To support validation, resource references for supported elements (i.e. elements labelled _Must Support_) are constrained to target AU Core profiles, or where not available, AU Base profiles (where they exist).
+To support validation, resource references for supported elements (i.e. elements labelled _Must Support_) are constrained to target AU Core profiles, or where not available, AU Base resource profiles (where they exist).
 
 Types for supported elements (i.e. elements labelled _Must Support_) are restricted only where there is national agreement to restrict that usage. This is rare as AU Core profiles are modelled intentionally to not restrict meanginful use case options. Some examples where a restriction is applied are:
 * [AU Core Condition](StructureDefinition-au-core-condition.html) `Condition.onset[x]` does not allow `onsetString` 
