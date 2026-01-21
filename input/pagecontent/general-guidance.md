@@ -59,7 +59,7 @@ AU Core profiles:
 * are only constrained (e.g. cardinality) where the constraint is agreed to be a minimum requirement that is nationally relevant and applicable across use cases to avoid limiting options for downstream use case decisions and business rules. 
 * elements and extensions that form the minimum requirements are labelled _Must Support_. 
 * elements that are not labelled _Must Support_ are not part of the minimum requirements and are therefore not further constrained in AU Core.
-  * an exception to this rule has been agreed for body site elements to ensure nationally agreed terminology. In AU Core resource profiles with a body site element, an invariant is present to enforce that if a coded body site is provided, at least one coding is from SNOMED CT.
+  * an exception to this rule has been agreed for body site elements to ensure nationally agreed terminology. In AU Core profiles with a body site element, an invariant is present to enforce that if a coded body site is provided, at least one coding is from SNOMED CT.
 * are defined as open, allowing additional elements, extensions, and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.  
 
 Some aspects of the approach to [profiling](https://hl7.org/fhir/R4/profiling.html) resources in AU Core are described in further detail in the subsections below:
@@ -99,25 +99,25 @@ New terminology bindings are not added in an AU Core profile unless there is no 
 Terminology binding strength used in AU Core profiles:
 * [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) bindings are commonly used on many elements to accommodate:
   * legacy systems and data
-  * where there is a limited implementation of the standardised terminology
-  * expected downstream variation to support use cases
-* [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) bindings are applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules. In some cases, AU Core strengthens the binding inherited from AU Base or the FHIR standard on supported elements (i.e. elements labelled _Must Support_) from [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) where there is national agreement across use cases (e.g. core clinical concepts such as `AllergyIntolerance.code`, `Procedure.code`, `Condition.code`).
+  * limited implementation of standardised terminology
+  * significant downstream variation for different use cases
+* [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) bindings are applied conservatively to avoid limiting opportunities for downstream IGs and applications to define their own business rules. In some cases, AU Core strengthens the inherited binding on supported elements (i.e. elements labelled _Must Support_) from [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to [extensible](https://hl7.org/fhir/R4/terminologies.html#extensible) where there is national agreement across use cases (e.g. `AllergyIntolerance.code`,`Condition.code`).
 * [required](https://hl7.org/fhir/R4/terminologies.html#required) bindings are inherited from the FHIR standard. AU Core does not strengthen bindings to required to allow for systems to supply text only values where coded data is not available. Downstream IGs can introduce tighter terminology requirements appropriate to their use case. 
  
 New additional bindings are added to AU Core profiles when there is a candidate value set for consideration by the community that is stricter than the currently bound value set for an element (e.g. the value set [Metric Body Weight Units](https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1) is a candidate binding for `Observation.value.code` in [AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)). These candidate value sets are included in a profile using the [additional bindings extension](https://build.fhir.org/ig/FHIR/fhir-tools-ig/StructureDefinition-additional-binding.html) with the binding purpose set to [candidate](https://build.fhir.org/ig/FHIR/fhir-tools-ig/ValueSet-additional-binding-purpose.html).
 
-Coded elements in AU Core profiles that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing _Must Support_ on each value set slice. Modelling optional slices of Coding allows systems to supply a text only value. See [Use of Slicing, Pattern, and Fixed Value ](general-guidance.html#use-of-slicing).
+Coded elements in AU Core profiles that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing _Must Support_ on each value set slice. Modelling optional slices of Coding allows systems to supply a text only value. See [Use of Slicing, Pattern, and Fixed Value](general-guidance.html#use-of-slicing).
 
 Additional terminology rules that cannot be represented using a binding are applied with the [use of invariants](general-guidance.html#use-of-invariants) (e.g. [AU Core Procedure](StructureDefinition-au-core-procedure.html) invariant **au-core-pro-01:** If a coded body site is provided, at least one coding shall be from SNOMED CT).
 
 While the work to include a new terminology binding in the underlying AU Base resource profile is progressing, it can be added temporarily to an AU Core profile directly to support development and testing in a release.
 
 ##### Use of Invariants
-AU Core resource profiles include invariants when a minimum data quality requirement requires logic that cannot be represented through other profiling techniques (e.g. cardinality or terminology binding). These invariants are formally defined using FHIRPath so that the constraint can be computationally evaluated.
+AU Core profiles include invariants when a minimum data quality requirement requires logic that cannot be represented through other profiling techniques (e.g. cardinality or terminology binding). These invariants are formally defined using FHIRPath so that the constraint can be computationally evaluated.
 
 Typically, invariants defined in AU Core are used to:
   * define data precision rules (e.g. [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html) invariant **au-core-obs-01:** Date shall be at least to day)
-  * define conditional cardinality rules such as "at least one of" (e.g. [AU Core Location](StructureDefinition-au-core-location.html) invariant **au-core-loc-01:** The location shall at least have a valid identifier or address or type)
+  * define conditional cardinality rules such as 'at least one of' (e.g. [AU Core Location](StructureDefinition-au-core-location.html) invariant **au-core-loc-01:** The location shall at least have a valid identifier or address or type)
   * define terminology rules (e.g. [AU Core Procedure](StructureDefinition-au-core-procedure.html) invariant **au-core-pro-01:** If a coded body site is provided, at least one coding shall be from SNOMED CT)
 
 AU Core invariants are intentionally written to allow for the AU Core requirements on [Missing Data](general-requirements.html#missing-data) to be met (e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) invariant **au-core-pat-01:** At least one patient identifier shall be valid, or if not available, the Data Absent Reason extension shall be present).
@@ -132,7 +132,7 @@ Slicing is avoided where possible to avoid limiting the opportunities for downst
 Slices are defined as open (i.e. `slicing.rules` is `open`) so that downstream IGs and applications can add additional patterns where required, provided the AU Core profile constraints are met.
 
 Patterns and fixed values are used to define support for recognised clinical concepts:
-* Pattern is the preferred primary mechanism to represent "at least the following" for coded repeating elements (e.g. [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) applies pattern to specify that at least one instance of `Observation.code` needs to have `Observation.code.coding.code`="1747861000168109" and `Observation.code.coding.system`="http://snomed.info/sct").
+* Pattern is the preferred primary mechanism to represent 'at least the following' for coded repeating elements (e.g. [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) applies pattern to specify that at least one instance of `Observation.code` needs to have `Observation.code.coding.code`="1747861000168109" and `Observation.code.coding.system`="http://snomed.info/sct").
 * Fixed values are used in slices to define an additional recognised clinical concept (e.g. [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) defines an optional slice of `Observation.code` as `Observation.code.coding.code`="72166-2" and `Observation.code.coding.system`="http://loinc.org"). 
 
 <div class="stu-note" markdown="1">
@@ -144,12 +144,12 @@ Some AU Core profiles include slicing with a discriminator of type 'pattern' whi
 To support validation, resource references for supported elements (i.e. elements labelled _Must Support_) are constrained to target AU Core profiles, or where not available, AU Base resource profiles (where they exist).
 
 Types for supported elements (i.e. elements labelled _Must Support_) are restricted only where there is national agreement to restrict that usage. This is rare as AU Core profiles are modelled intentionally to not restrict meanginful use case options. Some examples where a restriction is applied are:
-* [AU Core Condition](StructureDefinition-au-core-condition.html) `Condition.onset[x]` does not allow `onsetString` 
+* [AU Core Condition](StructureDefinition-au-core-condition.html) `Condition.onset[x]` is constrained to not allow `onsetString` 
 * [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) `Observation.value` is constrained to only allow `valueCodeableConcept`
 
-Where no national agreement exists to restrict a type choice, all inherited types are allowed. For example in [AU Core Patient](StructureDefinition-au-core-patient.html), `Patient.address` inherits the FHIR data type [Address](http://hl7.org/fhir/R4/datatypes.html#Address) and [AU Base Australian Address](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-address.html) data type profile from [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html).
+Where no national agreement exists to restrict a type choice, all inherited types are allowed. For example in [AU Core Patient](StructureDefinition-au-core-patient.html), `Patient.address` inherits the FHIR data type [Address](http://hl7.org/fhir/R4/datatypes.html#Address) and AU Base [Australian Address](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-address.html) data type profile from [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html).
 
-New data type profiles are not added in AU Core to the set of allowed type choices unless there is no underlying AU Base resource profile available to derive from (e.g. profiles of Observation, Device, Basic).
+New data type profiles are not added in AU Core to the set of allowed type choices unless there is no AU Base resource profile available to derive from (e.g. profiles of Observation, Device, Basic).
 
 ##### Use of Must Support and Obligations
 _[Must Support](general-requirements.html#must-support-and-obligation)_ is used to indicate the elements and extensions that form the minimum requirements of AU Core. Labelling an element _Must Support_ means that systems that produce or consume resources are to provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile needs to make clear exactly what kind of support is required when an element is labelled as _Must Support_.
@@ -173,9 +173,9 @@ AU Core capability statements are defined to describe the specific capabilities 
 
 AU Core capability statements are defined as open, allowing additional resources, profiles, operations, and search parameters to be defined.
 
-Every resource type that is the target of a _Must Support_ element in a profile is modelled, with the agreed support expectations, in the the AU Core capability statement to ensure a complete description of the requirements for implementation. 
+Every resource type that is the target of a _Must Support_ element in a profile is modelled, with the agreed support expectations (incl. base and supported profiles, operations, search parameters), to ensure a complete description of the requirements for implementation. 
 
-AU Core capability statements include profile specific implementation guidance including the qualifying narrative where further clarification for _Must Support_  behaviour is required or where agreed relaxations apply. 
+AU Core capability statements include profile specific implementation guidance that provides qualifying narrative where further clarification for _Must Support_  behaviour is required or where agreed relaxations apply. 
 
 ### SNOMED CT Australian (SNOMED CT-AU) Edition
 For guidance on SNOMED CT-AU in FHIR, see the guidance defined in AU Base [SNOMED CT Australian Edition](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition).
@@ -190,10 +190,10 @@ In AU Core profiles:
 
 Further guidance about the general use case for [contained resources](http://hl7.org/fhir/R4/references.html#contained) can be found in the FHIR standard.
 
-### Extensibility – “Additional” Elements
-A responder can send "additional" elements beyond those flagged with *Must Support* in an AU Core profile. Additional elements are often required by other profiles the system may conform to, allowing local requirements, including technical and workflow context for the resource, to be reflected and extending the health information supported in exchanges. For this reason, extensibility is generally encouraged and expected in AU Core profiles. Only in some exceptionally rare use case profiles are rules tightened to limit the nature of additional information that can be sent. Specification authors are encouraged to enable greater interoperability and software re-use by avoiding reductions in an element's cardinality.
+### Extensibility – 'Additional”'Elements
+A responder can send 'additional' elements beyond those flagged with *Must Support* in an AU Core profile. Additional elements are often required by other profiles the system may conform to, allowing local requirements, including technical and workflow context for the resource, to be reflected and extending the health information supported in exchanges. For this reason, extensibility is generally encouraged and expected in AU Core profiles. Only in some exceptionally rare use case profiles are rules tightened to limit the nature of additional information that can be sent. Specification authors are encouraged to enable greater interoperability and software re-use by avoiding reductions in an element's cardinality.
 
-Depending on local requirements, a requester (i.e. client application) may ignore these "additional" elements, may treat the data as for rendering only, or be capable of recognising and using the element. 
+Depending on local requirements, a requester (i.e. client application) may ignore these 'additional' elements, may treat the data as for rendering only, or be capable of recognising and using the element. 
 
 ### Representing Body Site, Which May Include Laterality
 When exchanging `Procedure` and `Condition` resources using AU Core profiles there may be a need to represent a relevant body site and associated laterality using `CodeableConcept` elements. In FHIR, body site and associated laterality can be recorded in various ways and implementers are encouraged to consider the following points when implementing:
