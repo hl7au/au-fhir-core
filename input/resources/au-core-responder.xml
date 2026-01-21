@@ -8,7 +8,7 @@
 <name value="AUCoreResponderCapabilityStatement"/>
 <title value="AU Core Responder CapabilityStatement"/>
 <status value="active"/>
-<date value="2023-05-15"/>
+<date value="2026-01-22"/>
 <description value="This CapabilityStatement describes the basic rules for the [AU Core Responder actor](ActorDefinition-au-core-actor-responder.html) that is responsible for providing responses to queries submitted by AU Core Requesters. The complete list of FHIR profiles, RESTful operations, and search parameters supported by AU Core Responders are defined in this CapabilityStatement."/>
 <kind value="requirements"/>
 <fhirVersion value="4.0.1"/>
