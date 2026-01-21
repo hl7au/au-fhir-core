@@ -26,17 +26,17 @@ AU Core defines:
 * [Actors](general-guidance.html#actor-approach) to define systems that play a role in AU Core data exchange.
 * [Capability statements](general-guidance.html#capability-statement-approach) to define the minimum capabilities (behaviours) to be supported for AU Core actors.
 
-AU Core does not define new extensions, search parameters, operations or [terminology](general-guidance.html#terminology-approach); these artefacts are defined in AU Base. AU Core profiles these AU Base artefacts to describe minimum expectations for support in Australia. For more information on the definitional nature of AU Base see the guidance in [AU Base Implementation Guide Approach](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#implementation-guide-approach).
+AU Core does not define new extensions, search parameters, operations or [terminology](general-guidance.html#terminology-approach); these artefacts are defined in AU Base. AU Core profiles these AU Base artefacts to describe minimum expectations for support in Australia. For more information on the definitional nature of AU Base see the guidance in [AU Base Implementation Guide Approach](https://hl7.org.au/fhir/6.0.0/generalguidance.html#implementation-guide-approach).
 
 #### Extension Approach
-AU Core does not define new extensions. All extensions included in AU Core are defined in the [FHIR Extensions Pack](https://hl7.org/fhir/extensions/) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions). A limited set of extensions are indicated as _Must Support_ in AU Core resource profiles (see [Use of Extensions](general-guidance.html#use-of-extensions) in [Resource Profile Approach](general-guidance.html#resource-profile-approach)).
+AU Core does not define new extensions. All extensions included in AU Core are defined in the [FHIR Extensions Pack](https://hl7.org/fhir/extensions/) or [AU Base](https://hl7.org.au/fhir/6.0.0/profiles-and-extensions.html#extensions). A limited set of extensions are indicated as _Must Support_ in AU Core resource profiles (see [Use of Extensions](general-guidance.html#use-of-extensions) in [Resource Profile Approach](general-guidance.html#resource-profile-approach)).
 
 AU Core profiles some complex extensions to define minimum support expectations, for example [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html) profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) to indicate which parts of the extension are _Must Support_ and the obligations for AU Core actors.
 
 When modelling AU Core extension profiles, the [AU Core resource profile approach](general-guidance.html#resource-profile-approach) is followed.
 
 #### Search Parameter Approach
-AU Core does not define new search parameters. All search parameters included in AU Core are defined in the [FHIR Search Parameter Registry](https://hl7.org/fhir/R4/searchparameter-registry.html) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/search-parameters.html).
+AU Core does not define new search parameters. All search parameters included in AU Core are defined in the [FHIR Search Parameter Registry](https://hl7.org/fhir/R4/searchparameter-registry.html) or [AU Base](https://hl7.org.au/fhir/6.0.0/search-parameters.html).
 
 AU Core profiles these search parameters to describe the additional minimum support expectations for search parameters for AU Core actors including support for chaining, modifiers, and comparators, e.g. [AU Core profile of clinical-patient](SearchParameter-au-core-clinical-patient.html) that defines support for chained identifiers.
 
@@ -45,11 +45,11 @@ The set of AU Core SearchParameters defined in this release of AU Core include s
 </div>
 
 #### Terminology Approach
-AU Core does not define new terminology FHIR artefacts (e.g. value sets or code systems). Terminology supported in AU Core are published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), the FHIR standard, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/). 
+AU Core does not define new terminology FHIR artefacts (e.g. value sets or code systems). Terminology supported in AU Core are published in [AU Base](https://hl7.org.au/fhir/6.0.0/terminology.html), the FHIR standard, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/). 
 
 As part of profiling, AU Core indicates the support expectations for terminology for that resource using the terminology binding and _Must Support_ flag (see [Use of Terminology Bindings](general-guidance.html#use-of-terminology-bindings) in [Resource Profile Approach](general-guidance.html#resource-profile-approach)). 
 
-For a list of the terminology supported in AU Core refer to the [Terminology](terminology.html) page. See AU Base for guidance on [Terminology Selection](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection) in HL7 AU implementation guides.
+For a list of the terminology supported in AU Core refer to the [Terminology](terminology.html) page. See AU Base for guidance on [Terminology Selection](https://hl7.org.au/fhir/6.0.0/generalguidance.html#terminology-selection) in HL7 AU implementation guides.
 
 #### Resource Profile Approach
 AU Core resource profiles set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information in Australia. AU Core profiles are derived from AU Base resource profiles, where available, and identify the additional mandatory core elements, extensions, vocabularies and value sets that are to be present in the resource when conforming to AU Core. These profiles define the minimum conformance requirements that downstream profiles are expected to comply with.
@@ -92,7 +92,7 @@ Additional extensions are not added directly to an AU Core profile, unless there
 While the work to include a new extension in the underlying AU Base resource profile is progressing, extensions can be added (but not defined) temporarily in an AU Core profile to support development and testing in a release.
 
 ##### Use of Terminology Bindings
- Where the AU Core profile is derived, the underlying AU Base terminology binding is inherited. Terminology for a resource is [localised in AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection). In some cases that localised terminology is represented in the binding for a coded element, and in other cases it is represented as additional bindings that list the set of terminology recognised for use in Australia for that element.
+ Where the AU Core profile is derived, the underlying AU Base terminology binding is inherited. Terminology for a resource is [localised in AU Base](https://hl7.org.au/fhir/6.0.0/generalguidance.html#terminology-selection). In some cases that localised terminology is represented in the binding for a coded element, and in other cases it is represented as additional bindings that list the set of terminology recognised for use in Australia for that element.
 
 New terminology bindings are not added in an AU Core profile unless there is no AU Base resource profile available to derive from (e.g. profiles of Observation, Device, Basic).
 
@@ -147,7 +147,7 @@ Types for supported elements (i.e. elements labelled _Must Support_) are restric
 * [AU Core Condition](StructureDefinition-au-core-condition.html) `Condition.onset[x]` is constrained to not allow `onsetString`. 
 * [AU Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) `Observation.value` is constrained to only allow `valueCodeableConcept`.
 
-Where no national agreement exists to restrict a type choice, all inherited types are allowed. For example in [AU Core Patient](StructureDefinition-au-core-patient.html), `Patient.address` inherits the FHIR data type [Address](http://hl7.org/fhir/R4/datatypes.html#Address) and AU Base [Australian Address](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-address.html) data type profile from [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html).
+Where no national agreement exists to restrict a type choice, all inherited types are allowed. For example in [AU Core Patient](StructureDefinition-au-core-patient.html), `Patient.address` inherits the FHIR data type [Address](http://hl7.org/fhir/R4/datatypes.html#Address) and AU Base [Australian Address](https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-address.html) data type profile from [AU Base Patient](https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-patient.html).
 
 New data type profiles are not added in AU Core to the set of allowed type choices unless there is no AU Base resource profile available to derive from (e.g. profiles of Observation, Device, Basic).
 
