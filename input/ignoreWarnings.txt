@@ -68,13 +68,13 @@ No definition could be found for URL value 'http://ns.electronichealth.net.au/id
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/12345678901'
 
 # === WARNING 11: INHERITED FROM AU BASE: Example codes are tested against bound terminology (MIMS/PBS). These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
-Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0' because the code system http://snomed.info/sct was not found
-Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/mims|6.0.0' because the code system http://snomed.info/sct was not found
-Resolved system http://pbs.gov.au/code/item (v6.0.0), but the definition doesn't include any codes, so the code has not been validated
+Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.1-ci-build' because the code system http://snomed.info/sct was not found
+Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/mims|6.0.1-ci-build' because the code system http://snomed.info/sct was not found
+Resolved system http://pbs.gov.au/code/item (v6.0.1-ci-build), but the definition doesn't include any codes, so the code has not been validated
 
 # === WARNING 12: INHERITED FROM AU BASE: Example codes from the code systems supplied are tested against an example binding terminology. IG publisher identifies this as '' (no ValueSet); and the code can not be validated.  ===
 Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
-Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0' because the code system http://pbs.gov.au/code/item was not found
+Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.1-ci-build' because the code system http://pbs.gov.au/code/item was not found
 
 # === WARNING 13: Example intentionally demonstrates inclusion of an allowed value that is not part of the defined slices.  ===
 The provided code 'http://snomed.info/sct#78564009' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'; The provided code 'http://snomed.info/sct#364075005' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'
