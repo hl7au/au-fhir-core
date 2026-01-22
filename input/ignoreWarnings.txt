@@ -123,3 +123,4 @@ This element does not match any known slice defined in the profile http://hl7.or
 
 # === INFORMATION 09 (NEW + TO BE ACKNOWLEDGED BY TDG): The use of the obligation extension generates multiple slicing information messages in the snapshot. This extension is reused across many resources in leading to repeated validation messages that do not appear to indicate an actual problem. Other IGs that are using obligations (e.g. IPS, IPA, EPS) show the same set of QA "element does not match any known slice" slicing information messages that have been accepted for publication (see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Obligations.20extension.20does.20not.20meet.20slice/with/553529895). ===
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
