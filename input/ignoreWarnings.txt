@@ -3,7 +3,7 @@
 # === ERROR 01: Expected error as the CodeSystem is defined without content included. ===
 Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'
 
-# === ERROR 02 (NEW + ACCEPTED BY FHIR WG + TO BE ACKNOWLEDGED BY TDG): This issue will be fixed in a later version of the IG Publisher (see: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build). ===
+# === ERROR 02: This issue will be fixed in a later version of the IG Publisher (see: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build). ===
 No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters' 
 
 # === WARNING 01: These are warnings for publication artefacts not used in HL7 AU specifications at this time and are accepted by the AU FHIR WG. ===
@@ -76,10 +76,10 @@ Resolved system http://pbs.gov.au/code/item (v6.0.0), but the definition doesn't
 Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
 Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0' because the code system http://pbs.gov.au/code/item was not found
 
-# === WARNING 13 (NEW + TO BE ACKNOWLEDGED BY TDG): Example intentionally demonstrates inclusion of an allowed value that is not part of the defined slices.  ===
+# === WARNING 13: Example intentionally demonstrates inclusion of an allowed value that is not part of the defined slices.  ===
 The provided code 'http://snomed.info/sct#78564009' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'; The provided code 'http://snomed.info/sct#364075005' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'
 
-# === INFORMATION 01 (NEW + TO BE ACKNOWLEDGED BY TDG): INHERITED FROM FHIR STANDARD: Some FHIR standard ValueSets are published as draft. ===
+# === INFORMATION 01: INHERITED FROM FHIR STANDARD: Some FHIR standard ValueSets are published as draft. ===
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/device-action|4.0.1
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/condition-severity|4.0.1
 
@@ -92,7 +92,7 @@ Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-ha
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3|3.20251231.0
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3|3.20251231.0
 
-# === INFORMATION 03 (2 NEW INFO + ACCEPTED BY FHIR WG + TO BE ACKNOWLEDGED BY TDG): These issues are known FHIR standard and Extension Pack future version and current deprecations. ===
+# === INFORMATION 03: These issues are known FHIR standard and Extension Pack future version and current deprecations. ===
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing) 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
@@ -101,7 +101,7 @@ The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated 
 Reference to external CodeSystem http://terminology.hl7.org/CodeSystem/v3-RoleCode|2018-08-12
 Reference to trial-use ValueSet http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|2014-03-26
 
-# === INFORMATION 05 (NEW + TO BE ACKNOWLEDGED BY TDG): INHERITED FROM AU BASE: This is HL7 AU Base managed content.===
+# === INFORMATION 05: INHERITED FROM AU BASE: This is HL7 AU Base managed content.===
 Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/v3-ServiceDeliveryLocationRoleType-extended|6.0.0
 Reference to trial-use CodeSystem http://terminology.hl7.org.au/CodeSystem/location-type|6.0.0
 
@@ -119,5 +119,5 @@ This element does not match any known slice defined in the profile http://hl7.or
 # === INFORMATION 09: Information about the use of standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities; see FHIR-12419. ===
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# === INFORMATION 10: (NEW + TO BE ACKNOWLEDGED BY TDG): The use of the obligation extension generates multiple slicing information messages in the snapshot. This extension is reused across many resources in leading to repeated validation messages that do not appear to indicate an actual problem. Other IGs that are using obligations (e.g. IPS, IPA, EPS) show the same set of QA "element does not match any known slice" slicing information messages that have been accepted for publication (see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Obligations.20extension.20does.20not.20meet.20slice/with/553529895). ===
+# === INFORMATION 10: The use of the obligation extension generates multiple slicing information messages in the snapshot. This extension is reused across many resources in leading to repeated validation messages that do not appear to indicate an actual problem. Other IGs that are using obligations (e.g. IPS, IPA, EPS) show the same set of QA "element does not match any known slice" slicing information messages that have been accepted for publication (see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Obligations.20extension.20does.20not.20meet.20slice/with/553529895). ===
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
