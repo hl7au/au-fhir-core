@@ -42,20 +42,14 @@ There are multiple different potential matches for the url 'http://terminology.h
 # === WARNING 05: This example demonstrates how to represent missing data and therefore uses the Data Absent Reason extension as per AU Core rules. The IG Publisher triggers a warning because of this, but the example is intentionally designed to show the correct handling of missing data and does not indicate any issues with the IG. ===
 A Reference without an actual reference or identifier should have a display
 
-# === WARNING 06: INHERITED FROM AU BASE:  Known NCTS published RCPA ValueSets published as experimental. ===
-The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3' which is experimental, but this structure is not labeled as experimental
-The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3' which is experimental, but this structure is not labeled as experimental
-The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3' which is experimental, but this structure is not labeled as experimental
-The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3' which is experimental, but this structure is not labeled as experimental
-
-# === WARNING 07: Expected warning as the AU Base PBS CodeSystem is defined without content included. ===
+# === WARNING 06: Expected warning as the AU Base PBS CodeSystem is defined without content included. ===
 Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#2951H' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
 
-# === WARNING 08: INHERITED FROM AU BASE: These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
+# === WARNING 07: INHERITED FROM AU BASE: These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
 A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://www.mims.com.au/codes' could not be found, so the code cannot be validated
 
-# === WARNING 09: The canonical URL for following identifier types currently resolves to a html page and not a FHIR artefact. See the list of AU Base identifier profiles for the corresponding data type profile. ===
+# === WARNING 08: The canonical URL for following identifier types currently resolves to a html page and not a FHIR artefact. See the list of AU Base identifier profiles for the corresponding data type profile. ===
 No definition could be found for URL value 'http://pca.digitalhealth.gov.au/id/pca-healthcare-service'
 No definition could be found for URL value 'http://hl7.org.au/id/abn'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hi/hpio/1.0'
@@ -63,23 +57,23 @@ No definition could be found for URL value 'http://ns.electronichealth.net.au/id
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hi/hpii/1.0'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/medicare-provider-number'
 
-# === WARNING 10: Examples of ABN or HPIO scoped identifier system URLs do not have formal definition as they are examples. ===
+# === WARNING 09: Examples of ABN or HPIO scoped identifier system URLs do not have formal definition as they are examples. ===
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0/8003626566699734'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/12345678901'
 
-# === WARNING 11: INHERITED FROM AU BASE: Example codes are tested against bound terminology (MIMS/PBS). These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
+# === WARNING 10: INHERITED FROM AU BASE: Example codes are tested against bound terminology (MIMS/PBS). These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
 Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0' because the code system http://snomed.info/sct was not found
 Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/mims|6.0.0' because the code system http://snomed.info/sct was not found
 Resolved system http://pbs.gov.au/code/item (v6.0.0), but the definition doesn't include any codes, so the code has not been validated
 
-# === WARNING 12: INHERITED FROM AU BASE: Example codes from the code systems supplied are tested against an example binding terminology. IG publisher identifies this as '' (no ValueSet); and the code can not be validated.  ===
+# === WARNING 11: INHERITED FROM AU BASE: Example codes from the code systems supplied are tested against an example binding terminology. IG publisher identifies this as '' (no ValueSet); and the code can not be validated.  ===
 Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
 Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0' because the code system http://pbs.gov.au/code/item was not found
 
-# === WARNING 13: Example intentionally demonstrates inclusion of an allowed value that is not part of the defined slices.  ===
+# === WARNING 12: Example intentionally demonstrates inclusion of an allowed value that is not part of the defined slices.  ===
 The provided code 'http://snomed.info/sct#78564009' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'; The provided code 'http://snomed.info/sct#364075005' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'
 
-# === WARNING 14: This is a tooling environment warning indicating the ValueSet and CodeSystem cannot be found in tx.hl7.org.au. Resolution in tx.hl7.org.au is in progress.   ===
+# === WARNING 13: This is a tooling environment warning indicating the ValueSet and CodeSystem cannot be found in tx.hl7.org.au. Resolution in tx.hl7.org.au is in progress.   ===
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' version 'null' could not be found, so the code cannot be validated. Valid versions: [3.0.0, 2.2.0, 2018-08-12]
 Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/v3-ServiceDeliveryLocationRoleType-extended|6.0.0' because the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode was not found
 Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/v3-ServiceDeliveryLocationRoleType-extended|6.0.0' because the code system http://snomed.info/sct was not found
@@ -91,12 +85,6 @@ Reference to draft ValueSet http://hl7.org/fhir/ValueSet/condition-severity|4.0.
 
 # === INFORMATION 02: INHERITED FROM FHIR STANDARD: Some FHIR standard ValueSets are deprecated. ===
 Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
-
-# === INFORMATION 03: INHERITED FROM AU BASE: Known NCTS published RCPA ValueSets published as experimental. ===
-Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3|3.20251231.0
-Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3|3.20251231.0
-Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3|3.20251231.0
-Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3|3.20251231.0
 
 # === INFORMATION 03: These issues are known FHIR standard and Extension Pack future version and current deprecations. ===
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing) 
