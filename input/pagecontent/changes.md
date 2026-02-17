@@ -11,7 +11,7 @@ This change log documents the significant updates and resolutions implemented fr
 - Publication status: Working Standard (Trial Use)
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [2.0.0-ballot](https://hl7.org.au/fhir/core/2.0.0-ballot/index.html) to [2.0.0](https://hl7.org.au/fhir/core/2.0.0//index.html). The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
+This change log documents the significant updates and resolutions implemented from version [2.0.0-ballot](https://hl7.org.au/fhir/core/2.0.0-ballot/index.html) to [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html). The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
 - moved substantive guidance on representing body site and laterality from [Representing Body Site, Which May Include Laterality](https://hl7.org.au/fhir/core/2.0.0/general-guidance.html#representing-body-site-which-may-include-laterality) section in [General Guidance](https://hl7.org.au/fhir/core/2.0.0/general-guidance.html) to the AU Base [General Guidance](https://hl7.org.au/fhir/6.0.0/generalguidance.html) page, with AU Core specific content retained [AU Core: FHIR-52372](https://jira.hl7.org/browse/FHIR-52372).
@@ -20,7 +20,7 @@ This change log documents the significant updates and resolutions implemented fr
   - changed AllergyIntolerance.reaction.manifestation binding to Adverse Reaction Clinical Manifestation (preferred) [AU Base: FHIR-47076](https://jira.hl7.org/browse/FHIR-47076)
 - [AU Core Diagnostic Result Observation](https://hl7.org.au/fhir/core/2.0.0/StructureDefinition-au-core-diagnosticresult.html)
   - changed Observation.hasMember to restore reference to AU Base Diagnostic Imaging Result profile inherited from AU Base [AU Core: FHIR-52164](https://jira.hl7.org/browse/FHIR-52164) 
-- [AU Core Patient](StructureDefinition-au-core-patient.html)
+- [AU Core Patient](https://hl7.org.au/fhir/core/2.0.0/StructureDefinition-au-core-patient.html)
   - applied technical correction to invariants inv-pat-1 and inv-pat-2 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present [AU Base: FHIR-53536](https://jira.hl7.org/browse/FHIR-53536)  
 - [AU Core Requester CapabilityStatement](https://hl7.org.au/fhir/core/2.0.0/CapabilityStatement-au-core-requester.html) 
   - added AU Base Diagnostic Imaging Result to the supported profiles for Observation as a SHALL [AU Core: FHIR-52164](https://jira.hl7.org/browse/FHIR-52164) 
