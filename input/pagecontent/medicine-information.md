@@ -210,7 +210,7 @@ The guidance for how to support coded or text identification of medicinal produc
           "coding": [
             {
               "system": "http://snomed.info/sct",
-              "code": "32328011000036106",
+              "code": "933664121000036103",
               "display": "Benpen 3 g powder for injection, 1 vial"
             }
           ]
