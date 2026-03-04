@@ -46,7 +46,7 @@ The guidance for how to support coded or text identification of medicinal produc
           "coding": [
             {
               "system": "http://snomed.info/sct",
-              "code": "32328011000036106",
+              "code": "933664111000036105",
               "display": "Benpen 3 g powder for injection, 1 vial"
             },
           ]
@@ -73,8 +73,8 @@ The guidance for how to support coded or text identification of medicinal produc
                 }
               ],
               "system": "http://snomed.info/sct", 
-              "code": "32686011000036108",
-              "display": "Benzylpenicillin 3 g injection, vial"
+              "code": "933664081000036101",
+              "display": "Benzylpenicillin sodium 3 g injection, vial"
             },
           ]
         }
@@ -210,7 +210,7 @@ The guidance for how to support coded or text identification of medicinal produc
           "coding": [
             {
               "system": "http://snomed.info/sct",
-              "code": "933664121000036103",
+              "code": "933664111000036105",
               "display": "Benpen 3 g powder for injection, 1 vial"
             }
           ]
