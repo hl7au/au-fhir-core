@@ -28,11 +28,13 @@ If you've found an issue with this repository or it's contents then you please [
 
 ## Contributing to AU Core Development
 
-AU Core R2 is in currently in development. The AU Core R2 Ballot is scheduled for August 2025.
+AU Core R2 is now published. Scoping for AU Core R3 is currently underway.
 
-### 1. Join the AU Core Technical Design Group
+### 1. Join the AU Core Work Group
 
-See [How to Register - Participant Information](https://confluence.csiro.au/display/FHIR/How+to+Register+-+Participant+Information) for information on how to participate in the AU Core Technical Design Group and Clinical Design Group as part of Sparked, the Australian FHIR Accelerator. Visit the [HL7 Australia - AU Core Technical Design Group Home](https://confluence.hl7.org/display/HAFWG/HL7+Australia+-+AU+Core+Technical+Design+Group+Home)
+See [Register for Sparked](https://sparked.csiro.au/index.php/registration-form/) for information on how to participate in the AU Core Work Group and Clinical Design Group as part of Sparked, the Australian FHIR Accelerator. 
+
+Visit the [HL7 Australia - AU Core Work Group Home](https://confluence.hl7.org/spaces/HAAUCOREWG/overview).
 
 ### 2. Discuss an issue in chat.fhir.org
 
