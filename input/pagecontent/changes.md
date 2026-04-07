@@ -5,6 +5,10 @@
 
 This change log documents the significant updates and resolutions implemented from version [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
+#### Changes in this version
+- [AU Core Organization](StructureDefinition-au-core-organization.html):
+  - added AU HAE as an allowed type for Patient.identifier [AU Base: FHIR-54928](https://jira.hl7.org/browse/FHIR-54928)
+  - added AU HSP-O as an allowed type for Patient.identifier [AU Base: FHIR-54923](https://jira.hl7.org/browse/FHIR-54923)
 
 ### Release 2.0.0
 - Publication date: 2026-01-28
@@ -95,25 +99,32 @@ This change log documents the significant updates and resolutions implemented fr
 
 This change log documents the significant updates and resolutions implemented from version [1.0.0-ballot](https://hl7.org.au/fhir/core/1.0.0-ballot/index.html) to [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html). The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
+#### Breaking Changes
+This version introduces the following non-compatible changes.
+
+- [AU Core Encounter](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-encounter.html)
+  - removed codes (PHONE, VIDEO, EMAIL and SMS) from ActEncounterCode - AU Extended value set as these concepts are subsumed by the VR concept and cannot be used to populate the Encounter.class element in FHIR R4 [AU Base: FHIR-47120](https://jira.hl7.org/browse/FHIR-47120)
+- [AU Core Diagnostic Result Observation](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-diagnosticresult.html):
+  - added invariant inv-obs-1 to preadopt R5 behaviour to ensure the BodyStructure Reference extension is present only when Observation.bodySite is not present [AU Base: FHIR-47117](https://jira.hl7.org/browse/FHIR-47117)
+- [AU Core Patient](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-patient.html):
+  - added minimum length constraint of 10 characters to Identifier.value in AU Medicare Card Number which is an allowed type for Patient.identifier [AU Base: FHIR-46619](https://jira.hl7.org/browse/FHIR-46619)
+
 #### Changes in this version
 - Added [Sex and Gender](https://hl7.org.au/fhir/core/1.0.0/sex-and-gender.html) page to consolidate implementation guidance on sex and gender concepts in AU Core. Duplicate guidance already defined in AU Base is removed, and replaced with reference to AU Base guidance [AU Core: FHIR-47176](https://jira.hl7.org/browse/FHIR-47176), [AU Core: FHIR-47178](https://jira.hl7.org/browse/FHIR-47178), [AU Core: FHIR-47182](https://jira.hl7.org/browse/FHIR-47182), [AU Core: FHIR-47183](https://jira.hl7.org/browse/FHIR-47183), [AU Core: FHIR-46892](https://jira.hl7.org/browse/FHIR-46892), [AU Core: FHIR-46896](https://jira.hl7.org/browse/FHIR-46896).
 - [AU Core Encounter](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-encounter.html)
-  - removed codes (PHONE, VIDEO, EMAIL and SMS) from ActEncounterCode - AU Extended value set bound to Encounter.class [AU Base: FHIR-47120](https://jira.hl7.org/browse/FHIR-47120)
-  - removed deprecated Encounter Description extension [AU Base: FHIR-47121](https://jira.hl7.org/browse/FHIR-47121)
+  - removed codes (PHONE, VIDEO, EMAIL and SMS) from ActEncounterCode - AU Extended value set as these concepts are subsumed by the VR concept and cannot be used to populate the Encounter.class element in FHIR R4 [AU Base: FHIR-47120](https://jira.hl7.org/browse/FHIR-47120)
 - [AU Core Diagnostic Result Observation](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-diagnosticresult.html):
   - corrected base profile to AU Base Diagnostic Observation [AU Core: FHIR-47116](https://jira.hl7.org/browse/FHIR-47116)
   - removed constraints from Observation.hasMember.reference [AU Core: FHIR-46728](https://jira.hl7.org/browse/FHIR-46728), [AU Core: FHIR-48331](https://jira.hl7.org/browse/FHIR-48331)
   - removed Must Support and Obligations from Observation.identifier, Observation.interpretation, Observation.note, Observation.method, Observation.referenceRange, Observation.referenceRange.low, Observation.referenceRange.high, Observation.referenceRange.type and Observation.referenceRange.text [AU Core: FHIR-46737](https://jira.hl7.org/browse/FHIR-46737)
   - added invariant inv-obs-1 to preadopt R5 behaviour to ensure the BodyStructure Reference extension is present only when Observation.bodySite is not present [AU Base: FHIR-47117](https://jira.hl7.org/browse/FHIR-47117)
-  - removed type constraint on Observation.effective[x] [AU Base: FHIR-48632](https://jira.hl7.org/browse/FHIR-48632)
 - [AU Core Location](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-location.html): removed Must Support flag and associated Obligation extensions from Location.identifier [AU Core: FHIR-47105](https://jira.hl7.org/browse/FHIR-47105) and Location.mode [AU Core: FHIR-47104](https://jira.hl7.org/browse/FHIR-47104)
 - [AU Core MedicationRequest](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-medicationrequest.html): updated invariant au-core-medreq-01 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [AU Core: FHIR-46417](https://jira.hl7.org/browse/FHIR-46417)
 - [AU Core Pathology Result Observation](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-diagnosticresult-path.html):
   - removed constraints from Observation.hasMember.reference and Observation.specimen.reference [AU Core: FHIR-46728](https://jira.hl7.org/browse/FHIR-46728), [AU Core: FHIR-46731](https://jira.hl7.org/browse/FHIR-46731)
   - removed Must Support and Obligations from Observation.identifier, Observation.method and Observation.note [AU Core: FHIR-46732](https://jira.hl7.org/browse/FHIR-46732)
-- [AU Core Practitioner](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-practitioner.html)
-  - removed invariants inv-pra-0 (related to Ahpra Profession Details extension) and inv-pra-1 (related to Ahpra Registration Details extension) and renumbered remaining invariants [AU Base: FHIR-46718](https://jira.hl7.org/browse/FHIR-46718)
-  - removed Ahpra Profession Details extension and Ahpra Registration Details extension from Practitioner.qualification [AU Base: FHIR-46718](https://jira.hl7.org/browse/FHIR-46718)
+- [AU Core Patient](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-patient.html):
+  - added minimum length constraint of 10 characters to Identifier.value in AU Medicare Card Number which is an allowed type for Patient.identifier [AU Base: FHIR-46619](https://jira.hl7.org/browse/FHIR-46619)
 - AU Core search parameters and search parameter combinations:
   - [Observation search parameters](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-bloodpressure.html#notes): changed 'patient' from SHALL to MAY [AU Core: FHIR-47171](https://jira.hl7.org/browse/FHIR-47171)
   - [Patient search parameters](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-patient.html#notes): removed the requirement for including an offset for 'birthdate' [AU Core: FHIR-47150](https://jira.hl7.org/browse/FHIR-47150)
@@ -215,8 +226,6 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support on Patient.name.family [AU Core: FHIR-44818](https://jira.hl7.org/browse/FHIR-44818)
   - added Must Support on Patient.name.given [AU Core: FHIR-44818](https://jira.hl7.org/browse/FHIR-44818)
   - updated invariants au-core-pat-01, au-core-pat-02, and au-core-pat-04 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [AU Core: FHIR-46406](https://jira.hl7.org/browse/FHIR-46406)
-  - changed Patient.extension to remove genderIdentity extension and add Individual Gender Identity extension, and added inv-pat-1 to apply Gender Identity Response value set [AU Base: FHIR-43718](https://jira.hl7.org/browse/FHIR-43718)
-  - changed Patient.extension to add Individual Pronouns and added inv-pat-2 to apply Australian Pronouns value set [AU Base: FHIR-43719](https://jira.hl7.org/browse/FHIR-43719)
 - Changes to [AU Core Practitioner](https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-practitioner.html):
   - removed Must Support from Practitioner.communication [AU Core: FHIR-44588](https://jira.hl7.org/browse/FHIR-44588)
   - removed Must Support from Practitioner.qualification, Practitioner.qualification.identifier, Practitioner.qualification.code, Practitioner.qualification.period, Practitioner.qualification.issuer: [AU Core: FHIR-45118](https://jira.hl7.org/browse/FHIR-45118), [AU Core: FHIR-44587](https://jira.hl7.org/browse/FHIR-44587)
@@ -225,8 +234,6 @@ This change log documents the significant updates and resolutions implemented fr
   - added Must Support on Practitioner.name.family [AU Core: FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
   - added Must Support on Practitioner.name.given [AU Core: FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
   - replaced constraint _au-core-prac-01: At least text or family name shall be present_ with making Practitioner.name.family mandatory (1..1) [AU Core: FHIR-44819](https://jira.hl7.org/browse/FHIR-44819)
-  - changed Practitioner.extension to remove genderIdentity extension and add Individual Gender Identity extension, and added inv-pra-1 to apply Gender Identity Response value set [AU Base: FHIR-43718](https://jira.hl7.org/browse/FHIR-43718)
-  - changed Practitioner.extension to add Individual Pronouns and added inv-pra-2 to apply Australian Pronouns value set [AU Base: FHIR-43719](https://jira.hl7.org/browse/FHIR-43719)
 - Changes to [AU Core PractitionerRole](https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-practitionerrole.html):
   - removed Must Support from PractitionerRole.location [AU Core: FHIR-43841](https://jira.hl7.org/browse/FHIR-43841)
   - updated invariant au-core-prarol-01 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [AU Core: FHIR-46419](https://jira.hl7.org/browse/FHIR-46419)
