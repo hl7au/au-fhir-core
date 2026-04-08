@@ -100,7 +100,7 @@ This change log documents the significant updates and resolutions implemented fr
 This change log documents the significant updates and resolutions implemented from version [1.0.0-ballot](https://hl7.org.au/fhir/core/1.0.0-ballot/index.html) to [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html). The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Breaking Changes
-This version introduces the following non-compatible changes inherited from AU Base.
+This version introduces the following non-compatible changes.
 
 - [AU Core Encounter](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-encounter.html)
   - removed codes (PHONE, VIDEO, EMAIL and SMS) from ActEncounterCode - AU Extended value set as these concepts are subsumed by the VR concept and cannot be used to populate the Encounter.class element in FHIR R4 [AU Base: FHIR-47120](https://jira.hl7.org/browse/FHIR-47120)
