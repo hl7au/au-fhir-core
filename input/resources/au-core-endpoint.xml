@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-core-endpoint" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-core-endpoint" />
+  <name value="AUCoreEndpoint" />
+  <title value="AU Core Endpoint" />
+  <status value="active" />
+  <description value="This profile constrains the AU Base Endpoint profile for use in the AU Core context. It only restates elements that differ from AU Base, such as MustSupport flags, obligations, and binding strengths, to support Australian FHIR and SMD use cases." />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Endpoint" />
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-endpoint" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Endpoint.extension:au-receivingfacility">
+      <path value="Endpoint.extension"/>
+      <sliceName value="au-receivingfacility"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-receivingfacility"/>
+      </type>
+      <short value="HL7 V2 receiving facility"/>
+      <definition value="HL7 V2 receiving facility. URL: http://hl7.org.au/fhir/StructureDefinition/au-receivingfacility"/>
+    </element>
+    <element id="Endpoint.extension:au-receivingapplication">
+      <path value="Endpoint.extension"/>
+      <sliceName value="au-receivingapplication"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-receivingapplication"/>
+      </type>
+      <short value="HL7 V2 receiving application"/>
+      <definition value="HL7 V2 receiving application. URL: http://hl7.org.au/fhir/StructureDefinition/au-receivingapplication"/>
+    </element>
+    <element id="Endpoint.extension:au-environmentType">
+      <path value="Endpoint.extension"/>
+      <sliceName value="au-environmentType"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-environmenttype"/>
+      </type>
+      <short value="The type of environment(s) exposed at this endpoint"/>
+      <definition value="The type of environment(s) exposed at this endpoint. URL: http://hl7.org.au/fhir/StructureDefinition/au-environmenttype. Binding: AU Endpoint Environment Type (preferred): The type of environment."/>
+    </element>
+    <element id="Endpoint.extension:au-implementationGuideSupported">
+      <path value="Endpoint.extension"/>
+      <sliceName value="au-implementationGuideSupported"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-implementation-guide"/>
+      </type>
+      <short value="Implementation Guide Supported"/>
+      <definition value="Implementation Guide Supported. URL: http://hl7.org.au/fhir/StructureDefinition/au-implementation-guide"/>
+    </element>
+    <element id="Endpoint.extension:encryption-certificate-pem-x509">
+      <path value="Endpoint.extension"/>
+      <sliceName value="encryption-certificate-pem-x509"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/encryption-certificate-pem-x509"/>
+      </type>
+      <short value="PEM X509 certificate"/>
+      <definition value="PEM X509 certificate. URL: http://hl7.org.au/fhir/StructureDefinition/encryption-certificate-pem-x509"/>
+    </element>
+    <element id="Endpoint.status">
+      <path value="Endpoint.status" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <short value="active | suspended | error | off | entered-in-error | test"/>
+      <definition value="The status of the endpoint. Binding: EndpointStatus (required): The status of the endpoint."/>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+    </element>
+    <element id="Endpoint.connectionType">
+      <path value="Endpoint.connectionType" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <short value="Protocol/Profile/Standard to be used with this endpoint connection"/>
+      <definition value="Protocol/Profile/Standard to be used with this endpoint connection. Binding: Australian Service Interfaces (preferred)"/>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/service-interfaces" />
+      </binding>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+    </element>
+    <element id="Endpoint.payloadType">
+      <path value="Endpoint.payloadType" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <short value="The type of content that may be used at this endpoint (e.g. XDS Discharge summaries)"/>
+      <definition value="The type of content that may be used at this endpoint (e.g. XDS Discharge summaries). Binding: Australian Endpoint Payload Type (preferred)"/>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/endpoint-payload-type" />
+      </binding>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+    </element>
+    <element id="Endpoint.address">
+      <path value="Endpoint.address" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <short value="The technical base address for connecting to this endpoint"/>
+      <definition value="The technical base address for connecting to this endpoint."/>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+    </element>
+    <element id="Endpoint.name">
+      <path value="Endpoint.name" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <short value="An endpoint in an Australian healthcare context"/>
+      <definition value="An endpoint in an Australian healthcare context."/>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -24,7 +24,9 @@ Example: CapabilityStatement resource for a server supporting the AU Core Patien
               ...
               {
                 "type": "Patient",
-                "profile": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient",
+                "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/au-core-patient"
+                ],
                 ...
               }
             ]

@@ -1,0 +1,71 @@
+<!--  AU Core Endpoint - Test Environment example -->
+<Endpoint xmlns="http://hl7.org/fhir">
+  <id value="endpoint-test-environment"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-core-endpoint"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><b>Generated Narrative</b></p>
+      <p>Example showing test environment with multiple extensions for development use</p>
+    </div>
+  </text>
+
+  <!-- au-receivingfacility extension for test facility -->
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/au-receivingfacility">
+    <valueString value="TESTHOSP"/>
+  </extension>
+
+  <!-- au-receivingapplication extension for test application -->
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/au-receivingapplication">
+    <valueString value="TESTAPP"/>
+  </extension>
+
+  <!-- au-environmenttype extensions for test environment -->
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/au-environmenttype">
+    <valueCode value="test"/>
+  </extension>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/au-environmenttype">
+    <valueCode value="development"/>
+  </extension>
+
+  <!-- au-implementation-guide extension for test environment -->
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/au-implementation-guide">
+    <valueCanonical value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
+  </extension>
+
+  <identifier>
+    <system value="http://example.org/endpoint-identifiers"/>
+    <value value="test-fhir-endpoint"/>
+  </identifier>
+  <status value="test"/>
+  <connectionType>
+    <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
+    <code value="hl7-fhir-rest"/>
+    <display value="HL7 FHIR"/>
+  </connectionType>
+  <name value="Test Environment FHIR Endpoint"/>
+  <managingOrganization>
+    <reference value="Organization/test-health-org"/>
+    <display value="Test Health Organization"/>
+  </managingOrganization>
+  <contact>
+    <system value="email"/>
+    <value value="fhir-dev@example.org"/>
+    <use value="work"/>
+  </contact>
+  <period>
+    <start value="2024-01-01"/>
+    <end value="2024-12-31"/>
+  </period>
+  <payloadType>
+    <coding>
+      <system value="http://hl7.org/fhir/resource-types"/>
+      <code value="Patient"/>
+      <display value="Patient"/>
+    </coding>
+  </payloadType>
+  <payloadMimeType value="application/fhir+json"/>
+  <address value="https://test-fhir.example.org/R4"/>
+</Endpoint>

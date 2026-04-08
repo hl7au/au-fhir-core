@@ -1,0 +1,66 @@
+<!--  AU Core Endpoint - PEM X509 Certificate example -->
+<Endpoint xmlns="http://hl7.org/fhir">
+  <id value="endpoint-encryption-certificate"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-core-endpoint"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><b>Generated Narrative</b></p>
+      <p>Example showing encryption-certificate-pem-x509 extension - X.509 certificate for secure communication</p>
+    </div>
+  </text>
+
+  <!-- encryption-certificate-pem-x509 extension: X.509 certificate in PEM format -->
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/encryption-certificate-pem-x509">
+    <valueString value="-----BEGIN CERTIFICATE-----
+MIIEoTCCA4mgAwIBAgIJAMgNZoLqTJLVMA0GCSqGSIb3DQEBCwUAMIGOMQswCQYD
+VQQGEwJBVTELMAkGA1UECAwCTlMxEjAQBgNVBAcMCVN5ZG5leTEgMB4GA1UECgwX
+QWRlbGFpZGUgSGVhbHRoIE5ldHdvcmsxGTAXBgNVBAsMEERpZ2l0YWwgSGVhbHRo
+MSwwKgYDVQQDDCNhZGVsYWlkZS1oZWFsdGgtbmV0d29yay5nb3YuYXUwggIiMA0
+GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDKvKMzXn2M8w4QHxGzE8Q6x5K2
+... (certificate content truncated for brevity) ...
+SjT4HjA1LftL9xR+HwO3BhA2bz9yDmJ8Q6R1234567890123456789012345678901
+234567890123456789012345678901234567890123456789012345678901234567
+890123456789012345678901234567890RnL1A=
+-----END CERTIFICATE-----"/>
+  </extension>
+
+  <identifier>
+    <system value="http://example.org/endpoint-identifiers"/>
+    <value value="encrypted-fhir-endpoint"/>
+  </identifier>
+  <status value="active"/>
+  <connectionType>
+    <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
+    <code value="hl7-fhir-rest"/>
+    <display value="HL7 FHIR"/>
+  </connectionType>
+  <name value="Encrypted FHIR Endpoint"/>
+  <managingOrganization>
+    <reference value="Organization/adelaide-health-network"/>
+    <display value="Adelaide Health Network"/>
+  </managingOrganization>
+  <contact>
+    <system value="email"/>
+    <value value="security@adelaidehealth.sa.gov.au"/>
+    <use value="work"/>
+  </contact>
+  <payloadType>
+    <coding>
+      <system value="http://hl7.org/fhir/resource-types"/>
+      <code value="Patient"/>
+      <display value="Patient"/>
+    </coding>
+  </payloadType>
+  <payloadType>
+    <coding>
+      <system value="http://hl7.org/fhir/resource-types"/>
+      <code value="Observation"/>
+      <display value="Observation"/>
+    </coding>
+  </payloadType>
+  <payloadMimeType value="application/fhir+json"/>
+  <address value="https://encrypted-fhir.adelaidehealth.sa.gov.au/R4"/>
+</Endpoint>
