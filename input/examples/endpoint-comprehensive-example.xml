@@ -1,0 +1,97 @@
+<!--  AU Core Endpoint - Comprehensive example showing all extensions -->
+<Endpoint xmlns="http://hl7.org/fhir">
+  <id value="endpoint-comprehensive-example"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-core-endpoint"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><b>Generated Narrative</b></p>
+      <p>Comprehensive example of AU Core Endpoint with all extensions</p>
+    </div>
+  </text>
+
+  <!-- au-receivingfacility extension -->
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/au-receivingfacility">
+    <valueString value="HOSP01"/>
+  </extension>
+
+  <!-- au-receivingapplication extension -->
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/au-receivingapplication">
+    <valueString value="PACSAPP"/>
+  </extension>
+
+  <!-- au-environmenttype extension (can have multiple) -->
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/au-environmenttype">
+    <valueCode value="production"/>
+  </extension>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/au-environmenttype">
+    <valueCode value="clinical"/>
+  </extension>
+
+  <!-- au-implementation-guide extension (can have multiple) -->
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/au-implementation-guide">
+    <valueCanonical value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
+  </extension>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/au-implementation-guide">
+    <valueCanonical value="http://hl7.org.au/fhir/base/ImplementationGuide/hl7.fhir.au.base"/>
+  </extension>
+
+  <!-- encryption-certificate-pem-x509 extension -->
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/encryption-certificate-pem-x509">
+    <valueString value="-----BEGIN CERTIFICATE-----
+MIIEpDCCA4ygAwIBAgIJANBgkO6u+sZQMA0GCSqGSIb3DQEBCwUAMIGSMQswCQYD
+VQQGEwJBVTELMAkGA1UECAwCTlMxEjAQBgNVBAcMCVN5ZG5leTEgMB4GA1UECgwX
+U29tZSBIZWFsdGhjYXJlIEZhY2lsaXR5MRYwFAYDVQQLDA1JVCBEZXBhcnRtZW50
+MSgwJgYDVQQDDB9zb21lLWhlYWx0aGNhcmUtZmFjaWxpdHkuY29tLmF1MB4XDTIw
+... (certificate content truncated for brevity) ...
+-----END CERTIFICATE-----"/>
+  </extension>
+
+  <identifier>
+    <system value="http://example.org/endpoint-identifiers"/>
+    <value value="endpoint-001"/>
+  </identifier>
+  <status value="active"/>
+  <connectionType>
+    <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
+    <code value="hl7-fhir-rest"/>
+    <display value="HL7 FHIR"/>
+  </connectionType>
+  <name value="Primary Healthcare Facility FHIR Endpoint"/>
+  <managingOrganization>
+    <reference value="Organization/sydney-health-network"/>
+    <display value="Sydney Health Network"/>
+  </managingOrganization>
+  <contact>
+    <system value="phone"/>
+    <value value="+61-2-1234-5678"/>
+    <use value="work"/>
+  </contact>
+  <contact>
+    <system value="email"/>
+    <value value="fhir-support@sydneyhealthnetwork.gov.au"/>
+    <use value="work"/>
+  </contact>
+  <period>
+    <start value="2024-01-01"/>
+  </period>
+  <payloadType>
+    <coding>
+      <system value="http://hl7.org/fhir/resource-types"/>
+      <code value="Patient"/>
+      <display value="Patient"/>
+    </coding>
+  </payloadType>
+  <payloadType>
+    <coding>
+      <system value="http://hl7.org/fhir/resource-types"/>
+      <code value="Observation"/>
+      <display value="Observation"/>
+    </coding>
+  </payloadType>
+  <payloadMimeType value="application/fhir+json"/>
+  <payloadMimeType value="application/fhir+xml"/>
+  <address value="https://fhir.sydneyhealthnetwork.gov.au/R4"/>
+</Endpoint>
