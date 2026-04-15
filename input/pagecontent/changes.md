@@ -99,16 +99,6 @@ This change log documents the significant updates and resolutions implemented fr
 
 This change log documents the significant updates and resolutions implemented from version [1.0.0-ballot](https://hl7.org.au/fhir/core/1.0.0-ballot/index.html) to [1.0.0](https://hl7.org.au/fhir/core/1.0.0/index.html). The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
-#### Breaking Changes
-This version introduces the following non-compatible changes.
-
-- [AU Core Encounter](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-encounter.html)
-  - removed codes (PHONE, VIDEO, EMAIL and SMS) from ActEncounterCode - AU Extended value set as these concepts are subsumed by the VR concept and cannot be used to populate the Encounter.class element in FHIR R4 [AU Base: FHIR-47120](https://jira.hl7.org/browse/FHIR-47120)
-- [AU Core Diagnostic Result Observation](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-diagnosticresult.html):
-  - added invariant inv-obs-1 to preadopt R5 behaviour to ensure the BodyStructure Reference extension is present only when Observation.bodySite is not present [AU Base: FHIR-47117](https://jira.hl7.org/browse/FHIR-47117)
-- [AU Core Patient](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-patient.html):
-  - added minimum length constraint of 10 characters to Identifier.value in AU Medicare Card Number [AU Base: FHIR-46619](https://jira.hl7.org/browse/FHIR-46619)
-
 #### Changes in this version
 - Added [Sex and Gender](https://hl7.org.au/fhir/core/1.0.0/sex-and-gender.html) page to consolidate implementation guidance on sex and gender concepts in AU Core. Duplicate guidance already defined in AU Base is removed, and replaced with reference to AU Base guidance [AU Core: FHIR-47176](https://jira.hl7.org/browse/FHIR-47176), [AU Core: FHIR-47178](https://jira.hl7.org/browse/FHIR-47178), [AU Core: FHIR-47182](https://jira.hl7.org/browse/FHIR-47182), [AU Core: FHIR-47183](https://jira.hl7.org/browse/FHIR-47183), [AU Core: FHIR-46892](https://jira.hl7.org/browse/FHIR-46892), [AU Core: FHIR-46896](https://jira.hl7.org/browse/FHIR-46896).
 - [AU Core Encounter](https://hl7.org.au/fhir/core/1.0.0/StructureDefinition-au-core-encounter.html)
