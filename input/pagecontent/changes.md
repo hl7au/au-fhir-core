@@ -5,6 +5,14 @@
 
 This change log documents the significant updates and resolutions implemented from version [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
+#### Changes in This Version
+<ul>
+  <li><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a>:
+    <ul>
+      <li>Removed constraint au-core-org-01 (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
+    </ul>
+  </li>
+</ul>
 
 ### Release 2.0.0
 - Publication date: 2026-01-28
