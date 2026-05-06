@@ -21,4 +21,5 @@ The following are supported usage scenarios for this profile:
   - Responders **MAY** populate with only text if no coded value is known.
 - The MedicationRequest resource can represent the clinical indication as a code with `MedicationRequest.reasonCode`, or a reference with `MedicationRequest.reasonReference` to a Condition or other resource.
   - Although both are marked as *Must Support*, responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
-  - A requester **SHALL** support both elements  
+  - A requester **SHALL** support both elements
+- The MedicationRequest resource **SHALL NOT** be used to represent that a patient is not currently taking any medications; implementers **SHOULD** use the MedicationStatement resource following the [profile specific implementation guidance](StructureDefinition-au-core-medicationstatement.html#profile-specific-implementation-guidance) in [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html). 
