@@ -5,6 +5,9 @@
 
 This change log documents the significant updates and resolutions implemented from version [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
+#### Changes in this version
+- [AU Core Composition](StructureDefinition-au-core-composition.html)"
+  - added new profile, including interaction support to the AU Core CapabilityStatements [AU Core: FHIR-57204](https://jira.hl7.org/browse/FHIR-57204)
 
 ### Release 2.0.0
 - Publication date: 2026-01-28
