@@ -5,6 +5,14 @@
 
 This change log documents the significant updates and resolutions implemented from version [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
+#### Changes in This Version
+<ul>
+  <li><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a>:
+    <ul>
+      <li>Removed constraint au-core-org-01 (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
+    </ul>
+  </li>
+</ul>
 #### Changes in this version
 - [AU Core Organization](StructureDefinition-au-core-organization.html):
   - added AU HAE as an allowed type for Organization.identifier [AU Base: FHIR-54928](https://jira.hl7.org/browse/FHIR-54928)
