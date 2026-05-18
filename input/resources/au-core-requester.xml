@@ -195,7 +195,7 @@
 <name value="author"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Composition-author"/>
 <type value="reference"/>
-<documentation value="TBD"/>
+<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both."/>
 </searchParam>
 </resource>
 <!-- CONDITION :: DONE -->

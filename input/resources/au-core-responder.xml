@@ -176,7 +176,7 @@
 <name value="type"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-type"/>
 <type value="token"/>
-<documentation value="TBD"/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xa;&#xa;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -194,7 +194,7 @@
 <name value="author"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Composition-author"/>
 <type value="reference"/>
-<documentation value="TBD"/>
+<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both."/>
 </searchParam>
 </resource>
 <!-- CONDITION :: DONE -->
