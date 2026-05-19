@@ -213,6 +213,12 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-composition"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
 		<!--LIFESTYLE FACTOR-->
 		<resource>
 			<reference>
