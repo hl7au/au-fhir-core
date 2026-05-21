@@ -43,6 +43,7 @@ A Reference without an actual reference or identifier should have a display
 
 # === WARNING 06: Expected warning as the AU Base PBS CodeSystem is defined without content included. ===
 Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#2951H' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
+Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#2951H' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-use-1|1.0.0' 
 
 # === WARNING 07: INHERITED FROM AU BASE: These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
 A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
