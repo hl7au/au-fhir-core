@@ -43,7 +43,7 @@ Column attribute descriptions are as follows:
 |[Clinical Specialty](https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1)|[AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|NCTS|
 |[Common Languages in Australia](https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2)|[AU Core Patient](StructureDefinition-au-core-patient.html)|NCTS|
 |[CompositionAttestationMode](http://hl7.org/fhir/R4/valueset-composition-attestation-mode.html)|[AU Core Document Composition](StructureDefinition-au-core-documentcomposition.html)|FHIR|
-|[CompositionStatus](https://hl7.org/fhir/R4/valueset-composition-status.html)|[AU Core Document Composition](StructureDefinition-au-core-composition.html)|FHIR|
+|[CompositionStatus](https://hl7.org/fhir/R4/valueset-composition-status.html)|[AU Core Document Composition](StructureDefinition-au-core-documentcomposition.html)|FHIR|
 |[Condition Category Codes](https://hl7.org/fhir/R4/valueset-condition-category.html)|[AU Core Condition](StructureDefinition-au-core-condition.html)|FHIR|
 |[Condition Clinical Status Codes](https://hl7.org/fhir/R4/valueset-condition-clinical.html)|[AU Core Condition](StructureDefinition-au-core-condition.html)|FHIR|
 |[Condition/Diagnosis Severity](https://hl7.org/fhir/R4/valueset-condition-severity.html)|[AU Core Condition](StructureDefinition-au-core-condition.html)|FHIR|
