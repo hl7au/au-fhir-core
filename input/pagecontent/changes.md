@@ -6,6 +6,8 @@
 This change log documents the significant updates and resolutions implemented from version [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
+- [AU Core Document Composition](StructureDefinition-au-core-documentcomposition.html)
+  - added new profile, including interaction support to the AU Core CapabilityStatements [AU Core: FHIR-57204](https://jira.hl7.org/browse/FHIR-57204), [AU Core: FHIR-57306](https://jira.hl7.org/browse/FHIR-57306), [AU Core: FHIR-57307](https://jira.hl7.org/browse/FHIR-57307), [AU Core: FHIR-57310](https://jira.hl7.org/browse/FHIR-57310), [AU Core: FHIR-57311](https://jira.hl7.org/browse/FHIR-57311), [AU Core: FHIR-57313](https://jira.hl7.org/browse/FHIR-57313), [AU Core: FHIR-57314](https://jira.hl7.org/browse/FHIR-57314)
 - [AU Core Organization](StructureDefinition-au-core-organization.html):
   - added AU HAE as an allowed type for Organization.identifier [AU Base: FHIR-54928](https://jira.hl7.org/browse/FHIR-54928)
   - added AU HSP-O as an allowed type for Organization.identifier [AU Base: FHIR-54923](https://jira.hl7.org/browse/FHIR-54923)

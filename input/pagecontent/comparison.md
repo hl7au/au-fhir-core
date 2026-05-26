@@ -83,6 +83,12 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-documentcomposition.html">AU Core Document Composition</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+        </tr>
+        <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
@@ -329,6 +335,216 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         <tr>
             <td style="width: 25%;">Condition.code</td>
             <td  style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td rowspan="52" style="width: 25%;"><a href="StructureDefinition-au-core-documentcomposition.html">AU Core Document Composition</a></td>
+            <td rowspan="52" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Composition-uv-ips.html">Composition (IPS)</a></td>
+            <td style="width: 25%;">Composition.meta.profile</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr> 
+        <tr>
+            <td style="width: 25%;">Composition.type</td>
+            <td style="width: 25%;">IPS requires LOINC code 60591-5. Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Composition.subject.reference</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Composition.event:careProvisioningEvent</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Composition.event:careProvisioningEvent.code</td>
+            <td style="width: 25%;">IPS requires ActClass code PCPR. Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Composition.event:careProvisioningEvent.period</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Composition.section[all slices].code</td>
+             <td style="width: 25%;">IPS requires minimum of 1.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Composition.section[all slices].text</td>
+             <td style="width: 25%;">IPS requires minimum of 1.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionProblems</td>
+              <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionProblems.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 11450-4.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionProblems.entry:problem</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionProblems.emptyReason</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+             <td style="width: 25%;">Composition.section:sectionAllergies</td>
+              <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+             <td style="width: 25%;">Composition.section:sectionAllergies.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 8765-2.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionAllergies.entry:allergyOrIntolerance</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionAllergies.emptyReason</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Composition.section:sectionMedications</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Composition.section:sectionMedications.code</td>
+            <td style="width: 25%;">IPS requires LOINC code 10160-0.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionMedications.entry:medicationStatementOrRequest</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionMedications.emptyReason</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionImmunizations</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionImmunizations.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 11369-6.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionImmunizations.entry:immunization</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionResults</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionResults.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 30954-2.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionResultsentry:results-observation-laboratory-pathology</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionResults.entry:results-observation-radiology</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionResults.entry:results-diagnosticReport</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionProceduresHx</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionProceduresHx.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 47519-4.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionRsectionProceduresHx.entry:procedure</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionMedicalDevices</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionMedicalDevices.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 46264-8.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionMedicalDevices.entry:deviceStatement</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionAdvanceDirectives</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionAdvanceDirectives.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 42348-3.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionAlerts</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionAlerts.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 104605-1.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionFunctionalStatus</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionFunctionalStatus.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 47420-5.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionPastProblems</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionPastProblems.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 11348-0.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionPregnancyHx</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionPregnancyHx.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 10162-6.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionPatientStory</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionPatientStory.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 81338-6.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionPlanOfCare</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionPlanOfCare.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 18776-5.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionSocialHistory</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionSocialHistory.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 29762-2.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionVitalSigns</td>
+              <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+              <td style="width: 25%;">Composition.section:sectionVitalSigns.code</td>
+              <td style="width: 25%;">IPS requires LOINC code 8716-3.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
@@ -1299,6 +1515,15 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
+            <td style="text-align: left; vertical-align: middle;">Composition</td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+			<td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+        </tr>
+        <tr>
             <td style="text-align: left; vertical-align: middle;">Condition</td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
@@ -1733,7 +1958,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPS Capability
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Composition resource.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/><strong>SHALL</strong> support Composition (IPS) profile.</td>
+            <td><img src="plus_sign.png" width="20"/><strong>SHALL</strong> support Composition (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td rowspan="2">Patient</td>
