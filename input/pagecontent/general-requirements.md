@@ -200,6 +200,8 @@ The table below provides a list of AU Core profile elements that allow multiple 
 
 AU Core Profile |Must Support Element|Reference
 ---|---|---
+[AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html)|DiagnosticReport.performer|AU Core Organization, AU Core Practitioner, AU Core PractitionerRole, CareTeam
+[AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html)|DiagnosticReport.result|AU Base Diagnostic Imaging Result, AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.hasMember|AU Base Diagnostic Imaging Result, AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
 [AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.participant.individual|AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
@@ -224,6 +226,7 @@ AU Core Profile |Must Support Element|Data Types
 [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
 [AU Core Condition](StructureDefinition-au-core-condition.html)|Condition.onset[x]|dateTime, age, Period, Range
 [AU Core Condition](StructureDefinition-au-core-condition.html)|Condition.abatement[x]|dateTime, age, Period, Range
+[AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html)|DiagnosticReport.effective[x]|dateTime, Period
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.effective[x]|dateTime, Period, Timing, instant
 [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.effective[x]|dateTime, Period, Timing, instant
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
@@ -270,6 +273,7 @@ The table below provides a list of AU Core profile elements with one or more sup
 
 AU Core Profile |Must Support Element|Supported Identifiers
 ---|---|---
+[AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html)|DiagnosticReport.identifier|AU Accession Number, AU Local Order Identifier, AU Local Report Identifier, Identifier
 [AU Core Organization](StructureDefinition-au-core-organization.html)|Organization.identifier|HPI-O, Australian Business Number
 [AU Core Patient](StructureDefinition-au-core-patient.html)|Patient.identifier|IHI, Medicare Card Number, DVA Number
 [AU Core Practitioner](StructureDefinition-au-core-practitioner.html)|Practitioner.identifier|HPI-I
