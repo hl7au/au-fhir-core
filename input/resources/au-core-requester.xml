@@ -432,16 +432,6 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
   <valueCode value="SHOULD"/>
   </extension>
-  <name value="organization"/>
-  <definition value="http://hl7.org/fhir/SearchParameter/Endpoint-organization"/>
-  <type value="reference"/>
-  <documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and
-  id values.&#xa;&#xa;The requester **SHALL** support both."/>
-  </searchParam>
-    <searchParam>
-  <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-  <valueCode value="SHOULD"/>
-  </extension>
   <name value="payload-type"/>
   <definition value="http://hl7.org/fhir/SearchParameter/Endpoint-payload-type"/>
   <type value="token"/>
