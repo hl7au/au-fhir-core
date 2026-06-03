@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composition xmlns="http://hl7.org/fhir">
+  <!--  Example adapted from AU Patient Summary Implementation Guide aups-basic -->
+  <id value="aups-basic" />
+  <meta>
+    <versionId value="1" />
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentcomposition" />
+  </meta>
+  <language value="en-AU" />
+  <status value="final" />
+  <type>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="60591-5" />
+      <display value="Patient summary Document" />
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/banks-mia-leanne" />
+  </subject>
+  <date value="2025-02-03" />
+  <author>
+    <reference value="PractitionerRole/bobrester-bob-gp" />
+  </author>
+  <title value="Australian Patient Summary" />
+  <custodian>
+    <reference value="Organization/bobrester-medical-center" />
+  </custodian>
+  <section>
+    <title value="Active Allergies or Intolerances" />
+    <code>
+      <coding>
+        <system value="http://loinc.org" />
+        <code value="48765-2" />
+        <display value="Allergies and adverse reactions Document" />
+      </coding>
+    </code>
+    <entry>
+      <reference value="AllergyIntolerance/lactose" />
+    </entry>
+  </section>
+  <section>
+    <title value="Problem List" />
+    <code>
+      <coding>
+        <system value="http://loinc.org" />
+        <code value="11450-4" />
+        <display value="Problem list - Reported" />
+      </coding>
+    </code>
+    <text>
+      <status value="generated" />
+      <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">There is no information available about the consumer's health problems or disabilities.</div>
+    </text>
+    <emptyReason>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/list-empty-reason" />
+        <code value="unavailable" />
+        <display value="Unavailable" />
+      </coding>
+      <text value="No information available" />
+    </emptyReason>
+  </section>
+  <section>
+    <title value="Current Medicines" />
+    <code>
+      <coding>
+        <system value="http://loinc.org" />
+        <code value="10160-0" />
+        <display value="History of Medication use Narrative" />
+      </coding>
+    </code>
+    <entry>
+      <reference value="MedicationStatement/active-bisoprolol" />
+    </entry>
+  </section>
+</Composition>
