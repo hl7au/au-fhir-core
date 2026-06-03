@@ -767,50 +767,18 @@
 		<!--ENDPOINT EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="Endpoint/endpoint-receiving-facility"/>
+				<reference value="Endpoint/endpoint-bobrester-medical-center"/>
 			</reference>
-			<name value="Endpoint - HL7 V2 Receiving Facility"/>
-			<description value="Shows an example of an AU Core Endpoint with the au-receivingfacility extension for HL7 V2 messaging environments."/>
+			<name value="Endpoint - BobRester Medical Center"/>
+			<description value="Shows an example of an AU Core Endpoint connectionType"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Endpoint/endpoint-receiving-application"/>
+				<reference value="Endpoint/endpoint-murrabit-hospital"/>
 			</reference>
-			<name value="Endpoint - HL7 V2 Receiving Application"/>
-			<description value="Shows an example of an AU Core Endpoint with the au-receivingapplication extension for HL7 V2 messaging applications."/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Endpoint/endpoint-environment-type"/>
-			</reference>
-			<name value="Endpoint - Environment Types"/>
-			<description value="Shows an example of an AU Core Endpoint with multiple au-environmenttype extensions indicating production, clinical, and secure environments."/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Endpoint/endpoint-implementation-guide"/>
-			</reference>
-			<name value="Endpoint - Implementation Guide Support"/>
-			<description value="Shows an example of an AU Core Endpoint with multiple au-implementation-guide extensions indicating support for different FHIR implementation guides."/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Endpoint/endpoint-encryption-certificate"/>
-			</reference>
-			<name value="Endpoint - Encryption Certificate"/>
-			<description value="Shows an example of an AU Core Endpoint with the encryption-certificate-pem-x509 extension for secure communication."/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="Endpoint/endpoint-test-environment"/>
-			</reference>
-			<name value="Endpoint - Test Environment"/>
-			<description value="Shows an example of an AU Core Endpoint configured for test and development environments with multiple extensions."/>
+			<name value="Endpoint - Murrabit Public Hospital"/>
+			<description value="Shows an example of an AU Core Endpoint connectionType"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
 		</resource>
 		<!--PAGES-->
