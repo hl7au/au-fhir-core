@@ -1,0 +1,25 @@
+<Endpoint xmlns="http://hl7.org/fhir">
+  <id value="bobrester-medical-center"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
+  </meta>
+  <status value="active"/>
+  <connectionType>
+    <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
+    <code value="hl7-fhir-rest"/>
+    <display value="HL7 FHIR"/>
+  </connectionType>
+  <name value="Bobrester Medical Center FHIR Endpoint"/>
+  <managingOrganization>
+    <reference value="Organization/bobrester-medical-center"/>
+    <display value="Bobrester Medical Center"/>
+  </managingOrganization>
+  <payloadType>
+    <coding>
+      <system value="http://hl7.org/fhir/resource-types"/>
+      <code value="Patient"/>
+    </coding>
+  </payloadType>
+  <payloadMimeType value="application/fhir+json"/>
+  <address value="https://fhir.bobrestermedical.example.com/R4"/>
+</Endpoint>
