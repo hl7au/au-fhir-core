@@ -89,6 +89,12 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-endpoint.html">AU Core Endpoint</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+        </tr>
+        <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-healthcareservice.html">AU Core HealthcareService</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
@@ -1333,6 +1339,15 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
 			<td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: middle;">Endpoint</td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png.png" width="20"/></td>
+			<td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png.png" width="20"/></td>
         </tr>
 		<tr>
             <td style="text-align: left; vertical-align: middle;">HealthcareService</td>
