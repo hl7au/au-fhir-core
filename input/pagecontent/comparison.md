@@ -281,8 +281,8 @@ AU Core compliant resources are compliant with IPA requirements for Missing Data
 IPA does not include requirements for Suppressed Data.
 
 ##### Additional Profiles
-This version of AU Core has no equivalent profile for the following IPA profiles:
-- IPA-DocumentReference
+IPA does not include additional profiles.
+
 
 #### IPS Profile Additional Requirements
 
@@ -708,7 +708,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="9" style="width: 25%;">AU Core DocumentReference</td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile</a>>/td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile</a></td>
             <td style="width: 25%;">DocumentReference.extension:authenticationTime</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
          </tr>
@@ -1158,8 +1158,6 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core Implantable Device Profile
 - US Core DiagnosticReport Profile for Laboratory Results Reporting Profile
 - US Core DiagnosticReport Profile for Report and Note Exchange Profile
-- US Core ADI DocumentReference Profile
-- US Core DocumentReference Profile
 - US Core Goal Profile
 - US Core MedicationDispense Profile
 - US Core Average Blood Pressure Profile
