@@ -83,6 +83,12 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core DocumentReference</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+        </tr>
+        <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
@@ -207,6 +213,16 @@ The following IPA profile(s) contain additional requirements. Implementers are a
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-documentreference.html">AU Core DocumentReference</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/StructureDefinition-ipa-documentreference.html">IPA-DocumentReference</a></td>
+            <td style="width: 25%;">DocumentReference.content.format</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.context.encounter</td>
+            <td style="width: 25%;">IPA allows maximum of 1. Element flagged as <i>Must Support</i> in IPA.</td>
+        </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
@@ -474,7 +490,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td>Observation.component</td>
-            <td>Element prohibited in IPS. </td>
+            <td style="width: 25%;">Element prohibited in IPS. </td>
         </tr>
     </tbody>
 </table>
@@ -689,6 +705,45 @@ The following US Core profile(s) contain additional requirements. Implementers a
         <tr>
             <td style="width: 25%;">Encounter.hospitalization.dischargeDisposition</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td rowspan="9" style="width: 25%;">AU Core DocumentReference</td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile</a>>/td>
+            <td style="width: 25%;">DocumentReference.extension:authenticationTime</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+         </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.identifier</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.authenticator</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.content.format</td>
+            <td style="width: 25%;">TBD Extensible binding. Element flagged as <i>Must Support</i> in US Core. </td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.content.attachment</td>
+            <td style="width: 25%;">US Core requires DocumentReference.content.attachment.url or DocumentReference.content.attachment.data or both to be present (us-core-6).</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a></td>
+            <td style="width: 25%;">DocumentReference.identifier</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.category</td>
+            <td style="width: 25%;">TBD - min 1, binding</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.content.format</td>
+            <td style="width: 25%;">TBD- Extensible binding. Element flagged as <i>Must Support</i> in US Core. </td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.context.encounter</td>
+            <td style="width: 25%;">TBD - Ms, max 1</td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
