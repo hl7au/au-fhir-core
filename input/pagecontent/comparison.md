@@ -1598,37 +1598,30 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
 		</tr>
 		<tr>
-            <td rowspan="8">DocumentReference</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-DocumentReference profile.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-DocumentReference profile.</td>
-        </tr>
-		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
+            <td rowspan="6">DocumentReference</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-DocumentReference profile which has additional requirements, see <a href="#ipa-profile-additional-requirements">IPA profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-DocumentReference profile which has additional requirements, see <a href="#ipa-profile-additional-requirements">IPA profile additional requirements</a>.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support the <code>patient</code> search parameter.</td> 
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>,<code>patient+category</code>, <code>patient+category+date</code>, and <code>patient+type</code> search parameters and search parameter combinations.</td> 
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>$docref</code> operation.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td> 
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> handle: <code>DocumentReference.status</code>, <code>DocumentReference.type</code>, <code>DocumentReference.subject</code>, <code>DocumentReference.content</code>, <code>DocumentReference.content.attachment</code>, <code>DocumentReference.content.attachment.contentType</code>, <code>DocumentReference.content.attachment.data</code>, <code>DocumentReference.content.attachment.url</code>, <code>DocumentReference.format</code>, <code>DocumentReference.context</code>, <code>DocumentReference.context.encounter</code>, and <code>DocumentReference.context.period</code>.</td>
-		<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> populate-if-known: <code>DocumentReference.status</code>, <code>DocumentReference.type</code>, <code>DocumentReference.category</code>, <code>DocumentReference.subject</code>, <code>DocumentReference.date</code>, <code>DocumentReference.author</code>, <code>DocumentReference.content</code>, <code>DocumentReference.content.attachment</code>, <code>DocumentReference.content.attachment.contentType</code>, <code>DocumentReference.content.attachment.data</code>, <code>DocumentReference.content.attachment.url</code>, <code>DocumentReference.format</code>, <code>DocumentReference.context</code>, <code>DocumentReference.context.encounter</code>, and <code>DocumentReference.context.period</code>.</td>
+		    <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> populate-if-known: <code>DocumentReference.status</code>, <code>DocumentReference.type</code>, <code>DocumentReference.category</code>, <code>DocumentReference.subject</code>, <code>DocumentReference.date</code>, <code>DocumentReference.author</code>, <code>DocumentReference.content</code>, <code>DocumentReference.content.attachment</code>, <code>DocumentReference.content.attachment.contentType</code>, <code>DocumentReference.content.attachment.data</code>, <code>DocumentReference.content.attachment.url</code>, <code>DocumentReference.format</code>, <code>DocumentReference.context</code>, <code>DocumentReference.context.encounter</code>, and <code>DocumentReference.context.period</code>.</td>
 		</tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> handle: <code>DocumentReference.category</code> and <code>DocumentReference.author</code>.</td>
-           <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>$docref</code> operation.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>$docref</code> operation.</td>
 		</tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_id</code>, <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+type</code>, <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameter combinations.</td>
-           <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+contenttype</code>, <code>patient+status</code>, <code>patient+type+date</code>, and <code>patient+type+period</code> search parameters and search parameters combinations.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_id</code>, <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+contenttype</code>,and <code>patient+status</code> search parameter combinations.</td>
+           <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+contenttype</code>, and <code>patient+status</code> search parameters and search parameters combinations.</td>
        </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
-		<td rowspan="2"><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
+		<td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
         </tr>
-        <tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>$docref</code> operation.</td>
-        </tr> 
 		<tr>
             <td rowspan="3">Immunization</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> meet the requirements of the IPA-Immunization profile which has additional requirements, see <a href="#ipa-profile-additional-requirements">IPA profile additional requirements</a>.</td>
