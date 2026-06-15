@@ -285,6 +285,23 @@
 			<description value="Shows an example of no known conditions for the *AU Core Condition* profile. Patient: Deangelo HOWE."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
+		<!--DIAGNOSTICREPORT EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="DiagnosticReport/diagnosticreport-lipid-panel"/>
+			</reference>
+			<name value="DiagnosticReport - Lipid panel"/>
+			<description value="Shows an example of a diagnostic report for a lipid panel for the *AU Core DiagnosticReport* profile. Patient:  Mia Leanne Banks."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticreport"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="DiagnosticReport/diagnosticreport-covid"/>
+			</reference>
+			<name value="DiagnosticReport - Covid-19 PCR"/>
+			<description value="Shows an example of a diagnostic report for a Covid-19 PCR for the *AU Core DiagnosticReport* profile. Patient: Mr. Li Wang."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticreport"/>
+		</resource>
 		<!--ENCOUNTER EXAMPLES-->
 		<resource>
 			<reference>
@@ -595,6 +612,14 @@
 			</reference>
 			<name value="Organization - Mitchells Hill Audiology"/>
 			<description value="Shows an example of an organisation, Mitchells Hill Audiology, for the *AU Core Organization* profile, with HPI-O and ABN identifiers, type specified as an audiology clinic, with contact details and an address."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/pullabooka-pathology"/>
+			</reference>
+			<name value="Organization - Pullabooka Pathology"/>
+			<description value="Shows an example of an organisation, Pullabooka Pathology, for the *AU Core Organization* profile, with HPI-O identifier, type specified as a pathology service, with contact details and partial address."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
 		<!--PATIENT EXAMPLES-->

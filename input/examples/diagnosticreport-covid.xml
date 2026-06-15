@@ -1,0 +1,33 @@
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="diagnosticreport-covid"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticreport"/>
+  </meta>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="LAB"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="1445431000168101"/>
+      <display value="SARS-CoV-2 nucleic acid assay"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/wang-li"/>
+  </subject>
+  <effectiveDateTime value="2021-02-15"/>
+  <issued value="	2021-02-15T10:00:00+10:00"/>
+  <performer> 
+    <reference value="Organization/pullabooka-pathology"/>
+  </performer>
+  <result>
+    <reference value="Observation/pathresult-covid-1"/>
+    <display value="Covid-19 PCR"/>
+  </result>
+</DiagnosticReport>

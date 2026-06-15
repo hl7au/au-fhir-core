@@ -386,6 +386,23 @@
 <type value="token"/>
 <documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xa;&#xa;The responder **SHALL** support both."/>
 </searchParam>
+<interaction>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHALL"/>
+</extension>
+<code value="read"/>
+</interaction>
+<interaction>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHALL"/>
+</extension>
+<code value="search-type"/>
+</interaction>
+<referencePolicy value="resolves">
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHOULD"/>
+</extension>
+</referencePolicy>
 </resource>
 <!-- DOCUMENTREFERENCE :: DONE -->
 <resource>
