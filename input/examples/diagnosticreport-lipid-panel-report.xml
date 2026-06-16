@@ -1,5 +1,5 @@
 <DiagnosticReport xmlns="http://hl7.org/fhir">
-  <id value="diagnosticreport-lipid-panel"/>
+  <id value="lipid-panel-report"/>
   <meta>
     <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticreport"/>
   </meta>

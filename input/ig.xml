@@ -288,7 +288,7 @@
 		<!--DIAGNOSTICREPORT EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="DiagnosticReport/diagnosticreport-lipid-panel"/>
+				<reference value="DiagnosticReport/lipid-panel-report"/>
 			</reference>
 			<name value="DiagnosticReport - Lipid panel"/>
 			<description value="Shows an example of a diagnostic report for a lipid panel for the *AU Core DiagnosticReport* profile. Patient:  Mia Leanne Banks."/>
@@ -296,7 +296,7 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="DiagnosticReport/diagnosticreport-covid"/>
+				<reference value="DiagnosticReport/covid-report"/>
 			</reference>
 			<name value="DiagnosticReport - Covid-19 PCR"/>
 			<description value="Shows an example of a diagnostic report for a Covid-19 PCR for the *AU Core DiagnosticReport* profile. Patient: Mr. Li Wang."/>
