@@ -80,7 +80,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticreport.html">AU Core DiagnosticReport</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="TBD" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
@@ -337,6 +337,16 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td  style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticreport.html">AU Core DiagnosticReport</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html">DiagnosticReport (IPS)</a></td>
+            <td style="width: 25%;">DiagnosticReport.subject.reference</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.effective[x]</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Type choice dateTime is flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
             <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
             <td style="width: 25%;">Immunization.vaccineCode</td>
@@ -498,7 +508,6 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - Device (IPS)
 - Device - Performer or Observer (IPS)
 - DeviceUseStatement (IPS)
-- DiagnosticReport (IPS)
 - Flag - Alert (IPS)
 - ImagingStudy (IPS)
 - Observation Pregnancy - Expected Delivery Date (IPS) 
@@ -635,6 +644,57 @@ The following US Core profile(s) contain additional requirements. Implementers a
          <tr>
             <td style="width: 25%;">Condition.recordedDate</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td rowspan="13" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticreport.html">AU Core DiagnosticReport</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-lab.html">US Core DiagnosticReport Profile for Laboratory Results Reporting</a></td>
+            <td style="width: 25%;">DiagnosticReport.meta</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.meta.lastUpdated</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.category</td>
+            <td style="width: 25%;">US Core requires category of 'LAB'.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.code</td>
+            <td style="width: 25%;"> US Core has extensible binding to <a href="https://hl7.org/fhir/us/core/STU8.0.1/ValueSet-us-core-laboratory-test-codes.html">US Core Laboratory Test Codes</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.encounter</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.effective[x]</td>
+            <td style="width: 25%;">Type choice of DateTime is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.resultsInterpreter</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport.note.html">US Core DiagnosticReport Profile for Report and Note Exchange</a></td>
+            <td style="width: 25%;">DiagnosticReport.encounter</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+         <tr>
+            <td style="width: 25%;">DiagnosticReport.effective[x]</td>
+            <td style="width: 25%;">Type choice of DateTime is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.performer</td>
+            <td style="width: 25%;">Reference target Practitioner and Organization are flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.resultsinterpreter</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.Reference target Practitioner flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.results</td>
+            <td style="width: 25%;">Reference target Observation Clinical Result flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core Diagnostic Result Observation</a></td>
@@ -1107,8 +1167,6 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core CareTeam Profile
 - US Core Coverage Profile
 - US Core Implantable Device Profile
-- US Core DiagnosticReport Profile for Laboratory Results Reporting Profile
-- US Core DiagnosticReport Profile for Report and Note Exchange Profile
 - US Core ADI DocumentReference Profile
 - US Core DocumentReference Profile
 - US Core Goal Profile
