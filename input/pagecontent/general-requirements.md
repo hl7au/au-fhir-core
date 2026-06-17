@@ -273,7 +273,6 @@ The table below provides a list of AU Core profile elements with one or more sup
 
 AU Core Profile |Must Support Element|Supported Identifiers
 ---|---|---
-[AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html)|DiagnosticReport.identifier|AU Accession Number, AU Local Order Identifier, AU Local Report Identifier, Identifier
 [AU Core Organization](StructureDefinition-au-core-organization.html)|Organization.identifier|HPI-O, Australian Business Number
 [AU Core Patient](StructureDefinition-au-core-patient.html)|Patient.identifier|IHI, Medicare Card Number, DVA Number
 [AU Core Practitioner](StructureDefinition-au-core-practitioner.html)|Practitioner.identifier|HPI-I

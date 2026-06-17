@@ -20,13 +20,13 @@
       <constraint>
         <key value="au-core-dr-01"/>
         <severity value="error"/>
-        <human value="effective[x] SHALL be present if the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'"/>
+        <human value="If the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended', effective[x] SHALL be present"/>
         <expression value="(status='partial' or status='preliminary' or status='final' or status='amended' or status='corrected' or status='appended' ) implies effective.exists()"/>
       </constraint>
       <constraint>
         <key value="au-core-dr-02"/>
         <severity value="error"/>
-        <human value="issued SHALL be present if the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'"/>
+        <human value="If the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended', issued SHALL be present"/>
         <expression value="(status='partial' or status='preliminary' or status='final' or status='amended' or status='corrected' or status='appended' ) implies issued.exists()"/>
       </constraint>
     </element>

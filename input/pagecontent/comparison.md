@@ -676,7 +676,11 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport.note.html">US Core DiagnosticReport Profile for Report and Note Exchange</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-note.html">US Core DiagnosticReport Profile for Report and Note Exchange</a></td>
+            <td style="width: 25%;">DiagnosticReport.code</td>
+            <td style="width: 25%;">US Core has extensible binding to <a href="https://hl7.org/fhir/us/core/STU8.0.1/ValueSet-us-core-diagnosticreport-report-and-note-codes.html">US Core Non Laboratory Codes</a>.</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">DiagnosticReport.encounter</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>

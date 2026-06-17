@@ -30,4 +30,9 @@
     <reference value="Observation/pathresult-covid-1"/>
     <display value="Covid-19 PCR"/>
   </result>
+  <presentedForm>
+    <contentType value="application/pdf"/>
+    <url value="http://example.org.au/fhir/reports/covid-report-123.pdf"/>
+    <hash value="d3b07384d113edec49eaa6238ad5ff00"/>
+  </presentedForm>
 </DiagnosticReport>
