@@ -2093,7 +2093,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="11">DiagnosticReport</td>
+            <td rowspan="10">DiagnosticReport</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DiagnosticReport Profile for Laboratory Results Reporting  and US Core DiagnosticReport Profile for Report and Note Exchange profiles.</td>
 		<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DiagnosticReport Profile for Laboratory Results Reporting  and US Core DiagnosticReport Profile for Report and Note Exchange profiles.</td>	
         </tr>
@@ -2101,18 +2101,10 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of fetching a DiagnosticReport resource using: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of returning a DiagnosticReport resource using: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
 		</tr>
-       <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> and <code>search-type</code> interactions.</td>
-        </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>create</code> for the US Core DiagnosticReport Profile for Report and Note exchange profile.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>create</code> for the US Core DiagnosticReport Profile for Report and Note exchange profile.</td>
 		</tr>
-		<tr>
-			  <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
-			  <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>patient</code>, <code>patient+code</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameter and search parameter combinations.</td>
-        </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
@@ -2122,8 +2114,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+code+date</code>, <code>patient+status</code>, and <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+code+date</code>, <code>patient+status</code>, and <code>patient+category+_lastUpdated</code> search parameter combinations.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+category+_lastUpdated</code> search parameter combination.</td>
 		</tr>
         <tr>    
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use <code>DiagnosticReport.media.link</code> to suppport links to images</td>
