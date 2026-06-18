@@ -332,8 +332,8 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
 
 1.  For *non-coded* data elements where the applicable AU Core profile does not mandate a sub-element
     - use the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) 
-    - use the code `unknown` _The value is expected to exist but is not known_
-    - For some AU Core Observation profiles the `Observation.value` element is conditionally mandatory, e.g. AU Core Body Height.  In this case the `Observation.dataAbsentReason` element is used with the code `unknown` rather than the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html). Requesters are advised that other meaningful values can be captured in `Observation.dataAbsentReason` beyond missing or suppressed.
+    - use the code "unknown" _The value is expected to exist but is not known_
+    - For some AU Core Observation profiles the `Observation.value` element is conditionally mandatory, e.g. AU Core Body Height.  In this case the `Observation.dataAbsentReason` element is used with the code "unknown" rather than the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html). Requesters are advised that other meaningful values can be captured in `Observation.dataAbsentReason` beyond missing or suppressed.
   
     Example: Patient resource where the patient's birthDate is not available.
     ~~~
@@ -368,7 +368,7 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
       - when the system has text but no coded value, only the text sub-element is populated.
       - when there is neither text or coded value:
         - use the appropriate "unknown" concept code from the value set if available.
-        - when the value set does not have an appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason).
+        - when the value set does not have an appropriate "unknown" concept code, use "unknown" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason).
 
         Example: AllergyIntolerance resource where the manifestation is unknown.
         ~~~
@@ -390,7 +390,7 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
         ]
         ...
         ~~~
-    - For some AU Core Observation profiles the `Observation.value` element is conditionally mandatory, e.g. AU Core Smoking Status.  In this case the `Observation.dataAbsentReason` element is used with the code `unknown` rather than the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html). Requesters are advised that other meaningful values can be captured in `Observation.dataAbsentReason` beyond missing or suppressed.
+    - For some AU Core Observation profiles the `Observation.value` element is conditionally mandatory, e.g. AU Core Smoking Status.  In this case the `Observation.dataAbsentReason` element is used with the code "unknown" rather than the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html). Requesters are advised that other meaningful values can be captured in `Observation.dataAbsentReason` beyond missing or suppressed.
 
 
 ### Suppressed Data
@@ -401,6 +401,6 @@ When an element definition is optional (minimum cardinality = 0), including elem
 
 When an element definition is mandatory (minimum cardinality > 0), 
 - AU Core Responders **SHALL** correctly populate the element but it may exceed the data requester's access rights to know that the data is suppressed:
-  - where a requester does not have access rights to know that data is suppressed use the code `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
-  - where a requester may know that the data is suppressed use the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
+  - where a requester does not have access rights to know that data is suppressed use the code "unknown" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
+  - where a requester may know that the data is suppressed use the code "masked" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
 
