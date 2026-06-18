@@ -101,6 +101,7 @@
 <type value="reference"/>
 <documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The responder **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
 </searchParam>
+</resource>
 <!-- CARETEAM :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -110,7 +111,7 @@
 <profile value="http://hl7.org/fhir/StructureDefinition/CareTeam"/>
 <documentation value="If the requester supports the CareTeam resource, the requester **SHALL** support the conformance expectations for the CareTeam resource."/>
 </resource>
-</resource><!-- CONDITION :: DONE -->
+<!-- CONDITION :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="SHOULD"/>

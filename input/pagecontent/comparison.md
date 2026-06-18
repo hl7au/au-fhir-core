@@ -669,7 +669,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">DiagnosticReport.effective[x]</td>
-            <td style="width: 25%;">Type choice of DateTime is flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Type choice of dateTime is flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">DiagnosticReport.resultsInterpreter</td>
@@ -686,7 +686,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
          <tr>
             <td style="width: 25%;">DiagnosticReport.effective[x]</td>
-            <td style="width: 25%;">Type choice of DateTime is flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Type choice of dateTime is flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">DiagnosticReport.performer</td>
@@ -694,7 +694,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">DiagnosticReport.resultsinterpreter</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.Reference target Practitioner flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. Reference target Practitioner flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">DiagnosticReport.results</td>

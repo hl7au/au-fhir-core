@@ -148,14 +148,14 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the **[`identifier`](https://hl7.org/fhir/R4/DiagnosticReport.html#search)** search parameter:
     
-    `GET [base]/DiagnosticReport?identifier=[system|][code]`
+    `GET [base]/DiagnosticReport?identifier={system|}[code]`
 
-    Example:
+    Example: 
     
-      1. GET [base]/DiagnosticReport?identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952
-      1. GET [base]/DiagnosticReport?identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361
+      1. GET [base]/DiagnosticReport?identifier=http://ns.electronichealth.net.au/id/hpio-scoped/report/1.0/8003611566718494|42657
+      1. GET [base]/DiagnosticReport?identifier=https://pullabookapathology.example.com.au/report/report-identifier|63698
 
-    *Implementation Notes:* Fetches a bundle containing all DiagnosticReport resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle containing all DiagnosticReport resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token)
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`category`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`status`](https://hl7.org/fhir/R4/encounter.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)

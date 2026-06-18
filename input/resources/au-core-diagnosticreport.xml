@@ -20,14 +20,8 @@
       <constraint>
         <key value="au-core-dr-01"/>
         <severity value="error"/>
-        <human value="If the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended', effective[x] SHALL be present"/>
-        <expression value="(status='partial' or status='preliminary' or status='final' or status='amended' or status='corrected' or status='appended' ) implies effective.exists()"/>
-      </constraint>
-      <constraint>
-        <key value="au-core-dr-02"/>
-        <severity value="error"/>
-        <human value="If the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended', issued SHALL be present"/>
-        <expression value="(status='partial' or status='preliminary' or status='final' or status='amended' or status='corrected' or status='appended' ) implies issued.exists()"/>
+        <human value="If the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended', effective[x] and issued SHALL be present"/>
+        <expression value="(status='partial' or status='preliminary' or status='final' or status='amended' or status='corrected' or status='appended' ) implies (effective.exists() and issued.exists())"/>
       </constraint>
     </element>
     <element id="DiagnosticReport.identifier">
