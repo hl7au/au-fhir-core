@@ -72,8 +72,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameter:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
-    `GET [base]/DocumentReference?patient={Type/}[id]`
-    or optionally `GET [base]/DocumentReference?patient.identifier=[system|][code]`
+    `GET [base]/DocumentReference?patient={Type/}[id]` or optionally `GET [base]/DocumentReference?patient.identifier=[system|][code]`
 
     Example:
     
@@ -81,50 +80,61 @@ The following search parameters and search parameter combinations **SHALL** be s
       1. GET [base]/DocumentReference?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952
       1. GET [base]/DocumentReference?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361 
 
-    *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference))
 
-    1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`type`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`date`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`
+1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`type`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameters:
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
-    - **SHALL** support these `date` comparators: `gt,lt,ge,le`
-    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
-    `GET [base]/DocumentReference?patient={Type/}[id]&type={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/DocumentReference?patient={Type/}[id]&type={system|}[code]{,{system|}[code],...}`
 
     Example:
     
-      1. GET [base]/DocumentReference?patient=5678&amp;type=http://loinc.org\|60591-5,http://loinc.org\|34133-9,http://loinc.org\|18842-5&amp;date=ge2020-01-01T00:00:00Z
-      1. GET [base]/DocumentReference?patient.identifier=http://example.org/fhir/mrn\|12345&amp;type=type=http://loinc.org\|60591-5,http://loinc.org\|34133-9,http://loinc.org\|18842-5&amp;date=ge2020-01-01T00:00:00Z
+      1. GET [base]/DocumentReference?patient=5678&amp;type=http://loinc.org\|60591-5
+      1. GET [base]/DocumentReference?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952&amp;type=http://loinc.org\|60591-5
 
-    *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and date and report code(s) ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
+    *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and type ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 #### Optional Search Parameters
 
 The following search parameters and search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`author`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
     `GET [base]/DocumentReference?patient={Type/}[id]&author={Type/}[id]`
 
-      *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and author ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference))
+    Example:
+    
+      1. GET [base]/DocumentReference?patient=5678&amp;author=Practitioner/2345
+      1. GET [base]/DocumentReference?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952&amp;author=Practitioner/2345
+
+      *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and author ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by reference](http://hl7.org/fhir/R4/search.html#reference))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`type`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`date`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`
-    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHALL** support these `date` comparators: `gt,lt,ge,le`
-    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`)
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, **SHALL** support the search comparators `gt,lt,ge,le`
 
     `GET [base]/DocumentReference?patient={Type/}[id]&type={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
-      *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient, type and date ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
+    Example:
+    
+      1. GET [base]/DocumentReference?patient=5678&amp;type=http://loinc.org\|60591-5&amp;date=ge2020-01-01T00:00:00Z
+      1. GET [base]/DocumentReference?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952&amp;type=http://loinc.org\|60591-5&amp;date=ge2020-01-01T00:00:00Z
+
+      *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and type and date ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`type`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`period`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameters:
-    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`
-    - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `type` (e.g.`type={system|}[code],{system|}[code],...`)
-    - **SHALL** support these `date` comparators: `gt,lt,ge,le`
-    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`)
+    - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
+    - **SHALL** support these `period` comparators: `gt,lt,ge,le`
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `period` (e.g.`period=[date]&period=[date]]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, **SHALL** support the search comparators `gt,lt,ge,le`
 
-    `GET [base]/DocumentReference?patient={Type/}[id]&type={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/DocumentReference?patient={Type/}[id]&type={system|}[code]&period={gt|lt|ge|le}[date]{&period={gt|lt|ge|le}[date]&...}`
 
-      *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient, type and period ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
+    Example:
+    
+      1. GET [base]/DocumentReference?patient=5678&amp;type=http://loinc.org\|60591-5&amp;period=ge2020-01-01T00:00:00Z
+      1. GET [base]/DocumentReference?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952&amp;type=http://loinc.org\|60591-5&amp;period=ge2020-01-01T00:00:00Z
+
+      *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and type and period ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
