@@ -1,44 +1,67 @@
 {% include search_parameters_intro.md -%}
 <table class="list">
-<tbody>
-  <tr>
-    <th>Parameter(s)</th>
-    <th>Conformance</th>
-    <th>Type(s)</th>
-    <th>Requirements (when used alone or in combination)</th>
-  </tr>
-  <tr>
-        <td>patient</td>
-        <td><b>SHALL</b></td>
-        <td><code>reference</code></td>
-        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
-  </tr>
+  <tbody>
     <tr>
-        <td>patient+type</td>
-        <td><b>SHALL</b></td>
-        <td><code>reference</code>+<code>token</code></td>
-        <td></td>
-  </tr>
-   <tr>
-        <td>patient+author</td>
-        <td><b>SHOULD</b></td>
-        <td><code>reference</code>+<code>reference</code></td>
-        <td></td>
-  </tr>
-  <tr>
-        <td>patient+type+period</td>
-        <td><b>SHOULD</b></td>
-        <td><code>reference</code>+<code>token</code>+<code>date</code></td>
-        <td></td>
-  </tr>
-  <tr>
-        <td>patient+type+date</td>
-        <td><b>SHOULD</b></td>
-        <td><code>reference</code>+<code>token</code>+<code>date</code></td>
-        <td></td>
-  </tr>
-
- </tbody>
+      <th>Parameter(s)</th>
+      <th>Conformance</th>
+      <th>Type(s)</th>
+      <th>Requirements (when used alone or in combination)</th>
+    </tr>
+    <tr>
+      <td>patient</td>
+      <td><b>SHALL</b></td>
+      <td><code>reference</code></td>
+      <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
+    </tr>
+    <tr>
+      <td>patient+type</td>
+      <td><b>SHALL</b></td>
+      <td><code>reference</code>+<code>token</code></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>patient+author</td>
+      <td><b>SHOULD</b></td>
+      <td><code>reference</code>+<code>reference</code></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>patient+type+period</td>
+      <td><b>SHOULD</b></td>
+      <td><code>reference</code>+<code>token</code>+<code>date</code></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>patient+type+date</td>
+      <td><b>SHOULD</b></td>
+      <td><code>reference</code>+<code>token</code>+<code>date</code></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>author</td>
+      <td><b>MAY</b></td>
+      <td><code>reference</code></td>
+      <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.</td>
+    </tr>
+    <tr>
+      <td>date</td>
+      <td><b>MAY</b></td>
+      <td><code>date</code></td>
+      <td>A requester <b>SHALL</b> provide a value precise to the second + time offset. A responder <b>SHALL</b> support a value precise to the second + time offset.<br/><br/>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.<br/><br/>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</td>
+    </tr>
+    <tr>
+      <td>period</td>
+      <td><b>MAY</b></td>
+      <td><code>date</code></td>
+      <td>A requester <b>SHALL</b> provide a value precise to the second + time offset. A responder <b>SHALL</b> support a value precise to the second + time offset.<br/><br/>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.<br/><br/>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td><b>MAY</b></td>
+      <td><code>token</code></td>
+      <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <strong>SHOULD</strong> support <code>multipleOr</code>. The responder <strong>SHOULD</strong> support <code>multipleOr</code>.</td>
+    </tr>
+  </tbody>
 </table>
 
 
@@ -94,7 +117,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     `GET [base]/DocumentReference?patient={Type/}[id]&type={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
-      *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient, type and date ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token)) [how to search by date](http://hl7.org/fhir/R4/search.html#date))
+      *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient, type and date ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`type`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`period`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`
@@ -104,4 +127,4 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     `GET [base]/DocumentReference?patient={Type/}[id]&type={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
-      *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient, type and period ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token)) [how to search by date](http://hl7.org/fhir/R4/search.html#date))
+      *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient, type and period ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))

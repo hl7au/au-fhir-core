@@ -707,8 +707,8 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="9" style="width: 25%;">AU Core DocumentReference</td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile</a></td>
+            <td rowspan="11" style="width: 25%;"><a ref="StructureDefinition-au-core-documentreference.html">AU Core DocumentReference</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile</a></td>
             <td style="width: 25%;">DocumentReference.extension:authenticationTime</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
          </tr>
@@ -717,12 +717,20 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
+            <td style="width: 25%;">DocumentReference.type</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.41/expansion">Advance Healthcare Directive Document Types Grouper</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.category</td>
+            <td style="width: 25%;">US Core requires minimum of 1.</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">DocumentReference.authenticator</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">DocumentReference.content.format</td>
-            <td style="width: 25%;">TBD Extensible binding. Element flagged as <i>Must Support</i> in US Core. </td>
+            <td style="width: 25%;">US Core extensible binding to <a href="http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes">HL7FormatCodes (2.1.0)</a>. Element flagged as <i>Must Support</i> in US Core. </td>
         </tr>
         <tr>
             <td style="width: 25%;">DocumentReference.content.attachment</td>
@@ -730,20 +738,20 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a></td>
-            <td style="width: 25%;">DocumentReference.identifier</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">DocumentReference.type</td>
+            <td style="width: 25%;">US Core required binding to <a href="https://hl7.org/fhir/us/core/STU8.0.1/ValueSet-us-core-documentreference-type.html">US Core DocumentReference Type</a>. US Core min binding to <a href="https://hl7.org/fhir/us/core/STU8.0.1/ValueSet-us-core-clinical-note-type.html">US Core Clinical Note Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">DocumentReference.category</td>
-            <td style="width: 25%;">TBD - min 1, binding</td>
+            <td style="width: 25%;">US Core requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;">DocumentReference.content.format</td>
-            <td style="width: 25%;">TBD- Extensible binding. Element flagged as <i>Must Support</i> in US Core. </td>
+            <td style="width: 25%;">US Core extensible binding to <a href="http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes">HL7FormatCodes (2.1.0)</a>. Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">DocumentReference.context.encounter</td>
-            <td style="width: 25%;">TBD - Ms, max 1</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
@@ -1604,19 +1612,19 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>$docref</code> operation.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td> 
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td> 
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> handle: <code>DocumentReference.status</code>, <code>DocumentReference.type</code>, <code>DocumentReference.subject</code>, <code>DocumentReference.content</code>, <code>DocumentReference.content.attachment</code>, <code>DocumentReference.content.attachment.contentType</code>, <code>DocumentReference.content.attachment.data</code>, <code>DocumentReference.content.attachment.url</code>, <code>DocumentReference.format</code>, <code>DocumentReference.context</code>, <code>DocumentReference.context.encounter</code>, and <code>DocumentReference.context.period</code>.</td>
-		    <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> populate-if-known: <code>DocumentReference.status</code>, <code>DocumentReference.type</code>, <code>DocumentReference.category</code>, <code>DocumentReference.subject</code>, <code>DocumentReference.date</code>, <code>DocumentReference.author</code>, <code>DocumentReference.content</code>, <code>DocumentReference.content.attachment</code>, <code>DocumentReference.content.attachment.contentType</code>, <code>DocumentReference.content.attachment.data</code>, <code>DocumentReference.content.attachment.url</code>, <code>DocumentReference.format</code>, <code>DocumentReference.context</code>, <code>DocumentReference.context.encounter</code>, and <code>DocumentReference.context.period</code>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> handle: <code>DocumentReference.status</code>, <code>DocumentReference.type</code>, <code>DocumentReference.subject</code>, <code>DocumentReference.content</code>, <code>DocumentReference.content.attachment</code>, <code>DocumentReference.content.attachment.contentType</code>, <code>DocumentReference.content.attachment.data</code>, <code>DocumentReference.content.attachment.url</code>, <code>DocumentReference.format</code>, <code>DocumentReference.context</code>, <code>DocumentReference.context.encounter</code>, and <code>DocumentReference.context.period</code>.</td>
+		    <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> populate-if-known: <code>DocumentReference.status</code>, <code>DocumentReference.format</code>, and <code>DocumentReference.context.encounter</code>.</td>
 		</tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> handle: <code>DocumentReference.category</code> and <code>DocumentReference.author</code>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> handle: <code>DocumentReference.category</code> and <code>DocumentReference.author</code>.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>$docref</code> operation.</td>
 		</tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_id</code>, <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+contenttype</code>,and <code>patient+status</code> search parameter combinations.</td>
-           <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+contenttype</code>, and <code>patient+status</code> search parameters and search parameters combinations.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>_id</code>, <code>patient+category</code>, <code>patient+category+date</code>, <code>patient+contenttype</code>,and <code>patient+status</code> search parameter combinations.</td>
+           <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+contenttype</code>, and <code>patient+status</code> search parameters and search parameters combinations.</td>
        </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> Conformance level <strong>SHOULD</strong>/<strong>MAY</strong> for <code>_revinclude=Provenance:target</code> is under discussion, see <a href="https://jira.hl7.org/browse/FHIR-50351">FHIR-50351</a>.</td>
@@ -2121,8 +2129,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="16">DocumentReference</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile and US Core ADI DocumentReference Profile.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile and US Core ADI DocumentReference Profile which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile and US Core ADI DocumentReference Profile which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at minimum the ten <a href="https://hl7.org/fhir/us/core/ValueSet-us-core-clinical-note-type.html">Common Clinical Notes</a> in the DocumentReference.type.</td>
@@ -2145,16 +2153,16 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of returning a DocumentReference resource using: <code>GET [base]/DocumentReference/[id]</code>.</td>
 		</tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>create</code>, <code>read</code> and <code>search-type</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>create</code>, <code>read</code> and <code>search-type</code> interactions.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>create</code> interaction.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>create</code> interaction.</td>
         </tr>
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
-		 <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+type</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
+		 <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient+category</code>, and <code>patient+category+date</code> search parameters and search parameter combinations.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>$docref</code> operation.</td>
@@ -2177,8 +2185,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+type+period</code> and <code>patient+status</code> search parameter combinations.</td>
+            <td rowspan="2"><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status</code> search parameter combination.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status</code> search parameter combination.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> If a <code>period</code> parameter is supplied to the <code>$docref</code> operation, <strong>SHOULD</strong> return references to documents within the specified date range; if not supplied, <strong>SHALL</strong> return the most recent or current document(s).</td>

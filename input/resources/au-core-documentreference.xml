@@ -214,7 +214,7 @@
       <path value="DocumentReference.content.attachment"/>
       <mustSupport value="true"/>
     </element>
-    <element id="DocumentReference.content.contentType">
+    <element id="DocumentReference.content.attachment.contentType">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
@@ -231,11 +231,11 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="DocumentReference.content.contentType"/>
+      <path value="DocumentReference.content.attachment.contentType"/>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="DocumentReference.content.data">
+    <element id="DocumentReference.content.attachment.data">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
@@ -252,10 +252,10 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="DocumentReference.content.data"/>
+      <path value="DocumentReference.content.attachment.data"/>
       <mustSupport value="true"/>
     </element>
-    <element id="DocumentReference.content.url">
+    <element id="DocumentReference.content.attachment.url">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
@@ -272,7 +272,7 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="DocumentReference.content.url"/>
+      <path value="DocumentReference.content.attachment.url"/>
       <mustSupport value="true"/>
     </element>
     <element id="DocumentReference.context">
