@@ -62,6 +62,7 @@
         </extension>
       </extension>
       <path value="DiagnosticReport.status"/>
+      <condition value="au-core-dr-01"/>
       <mustSupport value="true"/>
     </element>
     <element id="DiagnosticReport.category">
@@ -148,6 +149,7 @@
         </extension>
       </extension>
       <path value="DiagnosticReport.effective[x]"/>
+      <condition value="au-core-dr-01"/>
       <mustSupport value="true"/>
     </element>
     <element id="DiagnosticReport.issued">
@@ -168,6 +170,7 @@
         </extension>
       </extension>
       <path value="DiagnosticReport.issued"/>
+      <condition value="au-core-dr-01"/>
       <mustSupport value="true"/>
     </element>
     <element id="DiagnosticReport.performer">

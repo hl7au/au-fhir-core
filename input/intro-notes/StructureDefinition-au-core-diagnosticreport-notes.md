@@ -99,7 +99,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     Example:
     
-      1. GET [base]/DiagnosticReport/_id=5678
+      1. GET [base]/DiagnosticReport?_id=5678
 
     *Implementation Notes:* Fetches a bundle with the requested DiagnosticReport, instead of just the resource itself, and allows for the inclusion of additional search parameters such as _include, _revinclude, or _lastUpdated ([how to search by id of the resource](https://hl7.org/fhir/r4/search.html#id))
 
