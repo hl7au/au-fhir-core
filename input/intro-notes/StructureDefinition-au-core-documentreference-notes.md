@@ -59,8 +59,7 @@
       <td>type</td>
       <td><b>MAY</b></td>
       <td><code>token</code></td>
-      <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <strong>SHOULD</strong> support <code>multipleOr</code>. The responder <strong>SHOULD</strong> support <code>multipleOr</code>.</td>
-    </tr>
+      <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</tr>
   </tbody>
 </table>
 
