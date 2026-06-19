@@ -349,7 +349,7 @@
 </extension>
 <name value="type"/>
 <definition value="http://hl7.org/fhir/SearchParameter/clinical-type"/>
-<type value="reference"/>
+<type value="token"/>
 <documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
@@ -358,7 +358,7 @@
 </extension>
 <name value="date"/>
 <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-date"/>
-<type value="reference"/>
+<type value="date"/>
 <documentation value="The requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;The responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 <searchParam>
@@ -367,7 +367,7 @@
 </extension>
 <name value="period"/>
 <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-period"/>
-<type value="reference"/>
+<type value="date"/>
 <documentation value="The requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;The responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`."/>
 </searchParam>
 </resource>
