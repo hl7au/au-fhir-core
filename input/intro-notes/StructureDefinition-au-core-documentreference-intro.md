@@ -12,7 +12,7 @@ The following are supported usage scenarios for this profile:
 <div class="stu-note" markdown="1">
 **Upcoming NCTS ValueSet Availability**
 
-Implementers should note that a request to NCTS to create a new value set for use in a candidate additional binding to DocumentReference.type is pending release. Consequently  it is not yet available in this guide.
+Implementers should note that a request to NCTS to create a new value set for use in a candidate additional binding to DocumentReference.type is pending release. Consequently it is not yet available in this guide.
 
 Related JIRA issue with details is <a href="https://jira.hl7.org/browse/FHIR-57676">FHIR-57676</a>.
 </div>
