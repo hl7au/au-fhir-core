@@ -7,6 +7,10 @@
     <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentcomposition" />
   </meta>
   <language value="en-AU" />
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:8f0c263a-b43a-4c65-957a-7121fc57dd64"/>
+  </identifier>
   <status value="final" />
   <type>
     <coding>
@@ -23,6 +27,13 @@
     <reference value="PractitionerRole/bobrester-bob-gp" />
   </author>
   <title value="Australian Patient Summary" />
+  <attester>
+    <mode value="professional"/>
+    <time value="2025-02-03"/>
+    <party>
+      <reference value="PractitionerRole/bobrester-bob-gp"/>
+    </party>
+  </attester>
   <custodian>
     <reference value="Organization/bobrester-medical-center" />
   </custodian>
