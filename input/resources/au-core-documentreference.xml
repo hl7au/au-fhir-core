@@ -8,7 +8,7 @@
   <name value="AUCoreDocumentReference"/>
   <title value="AU Core DocumentReference"/>
   <status value="active"/>
-  <description value="This profile sets minimum expectations for an DocumentReference resource to record, search, and fetch patient documents. It is based on the [DocumentReference](https://www.hl7.org/fhir/R4/documentreference.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the AllergyIntolerance resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."/>
+  <description value="This profile sets minimum expectations for an DocumentReference resource to record, search, and fetch patient documents. It is based on the [DocumentReference](https://www.hl7.org/fhir/R4/documentreference.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the DocumentReference resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="DocumentReference"/>
