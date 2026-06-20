@@ -73,6 +73,8 @@ The following search parameters and search parameter combinations **SHALL** be s
     
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/allergyintolerance.html#search)** and **[`date`](https://hl7.org/fhir/R4/composition.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
+    - **SHALL** support these `date` comparators: `gt,lt,ge,le`
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g.`date=[date]&date=[date]]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, **SHALL** support the search comparators `gt,lt,ge,le`
 
 
     `GET [base]/Composition?patient={Type/}[id]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
@@ -80,6 +82,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     Example:
     
       1. GET [base]/Composition?patient=5678&amp;date=ge2020-01-01T00:00:00Z
+      1. GET [base]/Composition?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952&amp;date=ge2020-01-01T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all Composition resources for the specified patient and date ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by date](http://hl7.org/fhir/R4/search.html#date)) 
 
@@ -87,7 +90,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
 
-    `GET [base]/Composition?patient={Type/}[id]&clinical-status={system|}[code]{,{system|}[code],...}`
+    `GET [base]/Composition?patient={Type/}[id]&type={system|}[code]`
 
     Example:
     

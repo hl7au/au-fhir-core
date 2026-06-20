@@ -337,8 +337,8 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td  style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
-            <td rowspan="52" style="width: 25%;"><a href="StructureDefinition-au-core-documentcomposition.html">AU Core Document Composition</a></td>
-            <td rowspan="52" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Composition-uv-ips.html">Composition (IPS)</a></td>
+            <td rowspan="53" style="width: 25%;"><a href="StructureDefinition-au-core-documentcomposition.html">AU Core Document Composition</a></td>
+            <td rowspan="53" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Composition-uv-ips.html">Composition (IPS)</a></td>
             <td style="width: 25%;">Composition.meta.profile</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
         </tr> 
@@ -363,8 +363,12 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">Composition.section[all slices].code</td>
-             <td style="width: 25%;">IPS requires minimum of 1.</td>
+            <td style="width: 25%;">Composition.section:careProvisioningEvent.period</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Composition.section</td>
+             <td style="width: 25%;">IPS requires minimum of 3.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Composition.section[all slices].text</td>
@@ -392,7 +396,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
              <td style="width: 25%;">Composition.section:sectionAllergies.code</td>
-              <td style="width: 25%;">IPS requires LOINC code 8765-2.</td>
+              <td style="width: 25%;">IPS requires LOINC code 48765-2.</td>
         </tr>
         <tr>
               <td style="width: 25%;">Composition.section:sectionAllergies.entry:allergyOrIntolerance</td>
@@ -459,7 +463,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
               <td style="width: 25%;">IPS requires LOINC code 47519-4.</td>
         </tr>
         <tr>
-              <td style="width: 25%;">Composition.section:sectionRsectionProceduresHx.entry:procedure</td>
+              <td style="width: 25%;">Composition.section:sectionProceduresHx.entry:procedure</td>
               <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
@@ -1505,7 +1509,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
-            <td rowspan="19" style="text-align: left; vertical-align: middle;">Capabilities by Resource/Profile</td>
+            <td rowspan="20" style="text-align: left; vertical-align: middle;">Capabilities by Resource/Profile</td>
             <td style="text-align: left; vertical-align: middle;">AllergyIntolerance</td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
