@@ -16,6 +16,8 @@ This change log documents the significant updates and resolutions implemented fr
 - [AU Core Organization](StructureDefinition-au-core-organization.html):
   - added AU HAE as an allowed type for Organization.identifier [AU Base: FHIR-54928](https://jira.hl7.org/browse/FHIR-54928)
   - added AU HSP-O as an allowed type for Organization.identifier [AU Base: FHIR-54923](https://jira.hl7.org/browse/FHIR-54923)
+  - removed invariant au-core-org-01 limiting a National Organization Identifier to an HPI-O or PAI-O [AU Core: FHIR-55738](https://jira.hl7.org/browse/FHIR-55738)
+  - changed Organization.identifier:abn.type to require code ABN from the IdentifierType AU code system [AU Base: FHIR-56103](https://jira.hl7.org/browse/FHIR-56103)
 
 ### Release 2.0.0
 - Publication date: 2026-01-28
