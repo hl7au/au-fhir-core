@@ -1,0 +1,28 @@
+{
+    "resourceType": "DocumentReference",
+    "id": "aups-basicsummary-data",
+    "meta": {
+        "profile": ["http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"]
+    },
+    "status": "current",
+    "type": {
+        "coding": [ {
+            "system": "http://loinc.org",
+            "code": "60591-5",
+            "display": "Patient summary Document"
+        } ]
+    },
+    "subject": {
+        "reference": "Patient/banks-mia-leanne"
+    },
+    "date": "2025-02-03T15:08:15+10:00",
+    "author": [ {
+        "reference": "PractitionerRole/bobrester-bob-gp"
+    } ],
+    "content": [ {
+        "attachment": {
+            "contentType": "application/fhir+json",
+            "data": "JVBERi0xLjMKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMSAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1BhZ2VNb2RlIC9Vc2VOb25lIC9QYWdlcyA1IDAgUiAvVHlwZSAvQ2F0YWxvZwo+PgplbmRvYmoKNCAwIG9iago8PAovQXV0aG9yIChhbm9ueW1vdXMpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjA2MjMwMzE3MTUrMDAnMDAnKSAvQ3JlYXRvciAoYW5vbnltb3VzKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjA2MjMwMzE3MTUrMDAnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAodW5zcGVjaWZpZWQpIC9UaXRsZSAodW50aXRsZWQpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKNSAwIG9iago8PAovQ291bnQgMCAvS2lkcyBbICBdIC9UeXBlIC9QYWdlcwo+PgplbmRvYmoKeHJlZgowIDYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDYxIDAwMDAwIG4gCjAwMDAwMDAwOTIgMDAwMDAgbiAKMDAwMDAwMDE5OSAwMDAwMCBuIAowMDAwMDAwMjY3IDAwMDAwIG4gCjAwMDAwMDA1MjggMDAwMDAgbiAKdHJhaWxlcgo8PAovSUQgCls8MmIwZDIyMGQ3ZTZmYWNiMWYwNWMyYWE2MWFmODdkOWQ+PDJiMGQyMjBkN2U2ZmFjYjFmMDVjMmFhNjFhZjg3ZDlkPl0KJSBSZXBvcnRMYWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKG9wZW5zb3VyY2UpCgovSW5mbyA0IDAgUgovUm9vdCAzIDAgUgovU2l6ZSA2Cj4+CnN0YXJ0eHJlZgo1ODIKJSVFT0YK"
+        }
+    } ]
+}

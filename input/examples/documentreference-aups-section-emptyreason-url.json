@@ -1,0 +1,33 @@
+{
+    "resourceType": "DocumentReference",
+    "id": "auaups-section-emptyreason-url",
+    "meta": {
+        "profile": ["http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"]
+    },
+    "status": "current",
+    "type": {
+        "coding": [ {
+            "system": "http://loinc.org",
+            "code": "60591-5",
+            "display": "Patient summary Document"
+        } ]
+    },
+    "subject": {
+        "reference": "Patient/ronny-irvine"
+    },
+    "date": "2025-01-08T15:08:15+10:00",
+    "author": [ {
+        "reference": "Patient/ronny-irvine"
+    } ],
+    "content": [ {
+        "attachment": {
+            "contentType": "application/fhir+json",
+            "url": "Bundle/aups-section-emptyreason"
+        }
+    } ],
+    "context": {
+        "period": { 
+            "end": "2025-01-08" 
+        }
+    }
+}
