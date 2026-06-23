@@ -232,7 +232,6 @@
         </extension>
       </extension>
       <path value="DocumentReference.content.attachment.contentType"/>
-      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="DocumentReference.content.attachment.data">
