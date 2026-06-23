@@ -15,6 +15,7 @@
       <system value="http://terminology.hl7.org/CodeSystem/v2-0003"/>
       <code value="AO1"/>
     </coding>
+    <coding>
       <system value="http://terminology.hl7.org/CodeSystem/v2-0003"/>
       <code value="AO3"/>
     </coding>
