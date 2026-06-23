@@ -10,16 +10,18 @@
     <display value="HL7 v2 MLLP"/>
   </connectionType>
   <name value="Murrabit Hospital HL7 V2 Endpoint"/>
-  <managingOrganization>
-    <reference value="Organization/murrabit-hospital"/>
-    <display value="Murrabit Hospital"/>
-  </managingOrganization>
   <payloadType>
     <coding>
-      <system value="http://hl7.org/fhir/resource-types"/>
-      <code value="Patient"/>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0003"/>
+      <code value="AO1"/>
+    </coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0003"/>
+      <code value="AO3"/>
+    </coding>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0003"/>
+      <code value="A04"/>
     </coding>
   </payloadType>
-  <payloadMimeType value="application/hl7-v2"/>
-  <address value="mllp://hl7v2.murrabithospital.example.com:8080"/>
+  <address value="mllp://hl7v2.murrabithospital.example.com:56123"/>
 </Endpoint>
