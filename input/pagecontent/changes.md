@@ -6,6 +6,7 @@
 This change log documents the significant updates and resolutions implemented from version [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
+- added [AU Core MedicationDispense](StructureDefinition-au-core-medicationdispense.html) profile, derived from AU Base MedicationDispense, with supported search parameters added to the [AU Core Requester](CapabilityStatement-au-core-requester.html) and [AU Core Responder](CapabilityStatement-au-core-responder.html) CapabilityStatements
 - [AU Core Organization](StructureDefinition-au-core-organization.html):
   - added AU HAE as an allowed type for Organization.identifier [AU Base: FHIR-54928](https://jira.hl7.org/browse/FHIR-54928)
   - added AU HSP-O as an allowed type for Organization.identifier [AU Base: FHIR-54923](https://jira.hl7.org/browse/FHIR-54923)

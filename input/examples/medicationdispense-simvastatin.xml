@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationDispense xmlns="http://hl7.org/fhir">
+    <id value="simvastatin"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
+    </meta>
+    <status value="completed"/>
+    <medicationReference>
+        <reference value="Medication/simvastatin"/>
+    </medicationReference>
+    <subject>
+        <reference value="Patient/wang-li"/>
+    </subject>
+    <performer>
+        <actor>
+            <reference value="PractitionerRole/guddi-nurse-smith"/>
+        </actor>
+    </performer>
+    <authorizingPrescription>
+        <reference value="MedicationRequest/simvastatin"/>
+    </authorizingPrescription>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="FFC"/>
+            <display value="First Fill - Complete"/>
+        </coding>
+    </type>
+    <quantity>
+        <value value="30"/>
+        <unit value="TAB"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+        <code value="TAB"/>
+    </quantity>
+    <whenHandedOver value="2020-07-16"/>
+    <dosageInstruction>
+        <text value="Take one tablet daily"/>
+        <timing>
+            <repeat>
+                <frequency value="1"/>
+                <period value="1"/>
+                <periodUnit value="d"/>
+            </repeat>
+        </timing>
+        <route>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="26643006"/>
+                <display value="Oral route"/>
+            </coding>
+        </route>
+        <doseAndRate>
+            <doseQuantity>
+                <value value="1"/>
+                <unit value="TAB"/>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+                <code value="TAB"/>
+            </doseQuantity>
+        </doseAndRate>
+    </dosageInstruction>
+</MedicationDispense>
