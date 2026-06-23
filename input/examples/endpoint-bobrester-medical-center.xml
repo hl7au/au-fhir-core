@@ -10,16 +10,11 @@
     <display value="HL7 FHIR"/>
   </connectionType>
   <name value="Bobrester Medical Center FHIR Endpoint"/>
-  <managingOrganization>
-    <reference value="Organization/bobrester-medical-center"/>
-    <display value="Bobrester Medical Center"/>
-  </managingOrganization>
   <payloadType>
     <coding>
       <system value="http://hl7.org/fhir/resource-types"/>
       <code value="Patient"/>
     </coding>
   </payloadType>
-  <payloadMimeType value="application/fhir+json"/>
-  <address value="https://fhir.bobrestermedical.example.com/R4"/>
+  <address value="https://api.bobrestermedical.example.com/fhir/R4"/>
 </Endpoint>
