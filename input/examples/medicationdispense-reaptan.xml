@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MedicationDispense xmlns="http://hl7.org/fhir">
-    <id value="dispense-reaptan"/>
+    <id value="reaptan"/>
     <contained>
         <Medication>
             <id value="med1"/>
