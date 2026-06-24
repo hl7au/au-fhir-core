@@ -353,6 +353,15 @@
         </extension>
       </extension>
       <path value="MedicationDispense.whenPrepared"/>
+      <condition value="au-core-meddisp-02"/>
+      <constraint>
+        <key value="au-core-meddisp-02"/>
+        <severity value="error"/>
+        <human value="Date shall be precise to the day or, if not available, the Data Absent Reason extension shall be present"/>
+        <expression value="$this.hasValue() implies (extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').value.exists().not() and $this.toString().length() >= 10)"/>
+        <xpath value="(f:whenPrepared[string-length(.)>=10]) and not(exists(f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'])))"/>
+        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationDispense.whenHandedOver">
@@ -373,7 +382,6 @@
         </extension>
       </extension>
       <path value="MedicationDispense.whenHandedOver"/>
-      <min value="1"/>
       <condition value="au-core-meddisp-01"/>
       <constraint>
         <key value="au-core-meddisp-01"/>
