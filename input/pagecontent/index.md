@@ -106,7 +106,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Search Parameters](search-parameters.html): This page lists the search parameters extended for use in this guide for use in AU Core operations.
   - [Terminology](terminology.html): This page lists the value sets and code systems supported in this guide.
   - [Capability Statements](capability-statements.html): This page defines the expected FHIR capabilities of AU Core Responders and Requesters.
-  - [Actor Definitions](actors.html): This page defines the AU Core actors, AU Core Responder and AU Core Requester.
+  - [Actor Definitions](actors.html): This page describes the AU Core actors, AU Core Responder and AU Core Requester.
 - [Examples](examples.html): This page lists all the examples used in this guide.
 - [Support](support.html): These pages provide supporting material for implementation of AU Core.    
   - [Downloads](downloads.html): This page provides links to downloadable artefacts.
