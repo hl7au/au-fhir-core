@@ -8,6 +8,7 @@ The following are supported usage scenarios for this profile:
 - Record or update a document belonging to a patient
 
 ### Profile Specific Implementation Guidance
+None. 
 
 <div class="stu-note" markdown="1">
 **Upcoming NCTS ValueSet Availability**
