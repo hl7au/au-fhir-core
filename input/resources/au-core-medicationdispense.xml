@@ -335,6 +335,26 @@
       <path value="MedicationDispense.quantity"/>
       <mustSupport value="true"/>
     </element>
+    <element id="MedicationDispense.whenPrepared">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
+      <path value="MedicationDispense.whenPrepared"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="MedicationDispense.whenHandedOver">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
