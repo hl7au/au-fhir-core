@@ -67,13 +67,15 @@ Because AU Core is a foundational standard, *Must Support* needs to be defined i
 
 In AU Core, the meaning of *Must Support* is specified in terms of [Obligation Codes](https://hl7.org/fhir/extensions/CodeSystem-obligation.html) in [obligation extensions](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition. These obligations can also be applied at more granular levels, such as individual data type choices, terminology bindings, identifiers, or sub-elements. The obligation codes used to define the minimum obligations of *Must Support* elements in this implementation guide are reiterated below.
 
+*Must Support* on a profile element **SHALL** be interpreted as detailed in the [Interpreting Profile Elements Labelled Must Support](#interpreting-profile-elements-labelled-must-support) section, which includes additional narrative conformance requirements where agreed.
+
 Actor | Code | Display | Definition | Notes
 --- | --- | --- | --- | ---
 [AU Core Responder](ActorDefinition-au-core-actor-responder.html) | [SHALL:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate-if-known) | SHALL populate if known | Conformant applications producing resources SHALL correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance.
-[AU Core Responder](ActorDefinition-au-core-actor-responder.html) | [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate) | SHOULD populate | Conformant applications producing resources SHOULD include this element if a value is known and allowed to be shared.| This implementation obligation means that whenever the producer knows the correct value for an element, it should populate it.
+[AU Core Responder](ActorDefinition-au-core-actor-responder.html) | [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate) | SHOULD populate | Conformant applications producing resources SHOULD include this element if a value is known and allowed to be shared.| This implementation obligation means that whenever the producer knows the correct value for an element, it should populate it. This is NOT the same as cardinality, as a 'populate' element can be omitted if no data exists or the data that exists is prohibited from being shared. Organizations might be required to formally document their rules for determining when they are 'able to share' as part of conformance testing processes. (e.g. regulatory, consent, etc.)
 [AU Core Requester](ActorDefinition-au-core-actor-requester.html) | [SHALL:no-error](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58no-error) | SHALL not error if present | Conformant applications SHALL accept resources containing any valid value for the element without error. | Applications are still able to inform the user that a value cannot be processed correctly and may ignore the data, but applications aren't able to reject an instance merely because the element is present (which would be allowed for elements that do not have this obligation). A system MAY raise an error if the value provided is not valid or violates specific business rules. This obligation also applies to elements that only contain an extension in place of a value where (or equivalent), should either of these be allowed on the consumer obligations
 
-*Must Support* elements are treated differently between [AU Core Responder](ActorDefinition-au-core-actor-responder.html) and [AU Core Requester](ActorDefinition-au-core-actor-requester.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
+*Must Support* elements are treated differently between [AU Core Responder](ActorDefinition-au-core-actor-responder.html) and [AU Core Requester](ActorDefinition-au-core-actor-requester.html) actors.
 
 #### AU Core Responder
 An AU Core Responder:
@@ -102,7 +104,7 @@ All elements with *Must Support* in AU Core are accompanied by an explicit oblig
 *Figure 1: Key Elements Table View*
 <br/>
 
-Implementers need to refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support* with obligations, and the full set of terminology requirements.  Implementers need to be aware that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile.
+Implementers need to refer to the "Key Elements Table" (or the "Snapshot Table") to see the full set of elements that are mandatory or *Must Support* with obligations, terminology requirements and constraints (i.e. invariants).
 
 ##### Presentation of Must Support and Obligation in Raw Representations
 
@@ -148,27 +150,17 @@ Example: AU Core AllergyIntolerance profile with *Must Support* and obligations 
 ~~~
 
 #### Interpreting Profile Elements Labelled Must Support
+The section is provided as additional support in understanding of *Must Support* and obligations on elements in AU Core. This section does not override the obligations defined for an actor - implementers also need to read the profile specific implementation guidance for any qualifying requirements placed on the obligations for a *Must Support* element.
 
 Profiles defined in this implementation publication flag *Must Support* on elements (e.g. `Patient.name`) and sub-elements of a data type (e.g. `Patient.name.use`). 
-The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element.
-
-The sub-elements for each supported element in a profile are defined by a combination of the data type from the core specification and any additional rules included in the profile. A profile may include rules that:
-- limit what is considered 'valid'
-- extend the potential sub-elements by including an extension
-
-For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) limits what is considered valid for the element `Patient.name` with the invariant "**au-core-pat-02:** At least one patient name shall have a family name".
-
-Typically AU Core profiles will inherit extended sub-elements from a HL7 AU Base profile, e.g. the element `Medication.code` in profile [AU Core Medication](StructureDefinition-au-core-medication.html) is of type CodeableConcept and is extended by inheriting a medicine specific sub-element `Medication.code.coding.extension` [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) from [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html). 
-
-The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot Table" which shows the sub-elements defined in this profile (shown in the "Differential Table") and the sub-elements inherited from a base profile.
-
+The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element. For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) limits what is considered valid for the element `Patient.name` with the invariant "**au-core-pat-02:** At least one patient name shall have a family name".
 
 ##### Must Support - Primitive Elements
 Primitive elements are single elements with a primitive value. If a primitive element is labelled as *Must Support*: 
 - AU Core Responders **SHALL** correctly populate the element if a value is known. 
 - AU Core Requesters **SHALL** accept resources without error if the element is present and contains any valid value.
 
-For example, the AU Core Organization Profile `name` element is a primitive string datatype. Therefore, when claiming conformance to this profile:
+For example, the AU Core Organization Profile `Organization.name` element is a primitive string datatype. Therefore, when claiming conformance to this profile:
 - AU Core Responders **SHALL** correctly populate a value in `Organization.name` if a value is known.
 - AU Core Requesters **SHALL** accept the Organization resource without error if `Organization.name` is present and contains any valid value.
 
@@ -179,7 +171,7 @@ If a complex element is labelled as *Must Support*:
 - AU Core Responders **SHALL** correctly populate the element with at least one of the sub-element values if the value is known.
 - AU Core Requesters **SHALL** accept resources without error if the element is present and contains any valid sub-element.
 
-For example, the AU Core AllergyIntolerance Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
+For example, the AU Core AllergyIntolerance Profile `AllergyIntolerance.note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
 - AU Core Responders **SHALL** correctly populate a value in any valid `AllergyIntolerance.note` sub-element if a value is known e.g. `AllergyIntolerance.note.text`.
 - AU Core Requesters **SHALL** accept the AllergyIntolerance resource without error if `AllergyIntolerance.note` is present and contains any valid sub-elements.
 
@@ -187,7 +179,7 @@ If a sub-element is labelled as *Must Support*:
 - AU Core Responders **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
 - AU Core Requesters **SHALL** accept resources without error if *Must Support* sub-elements are present and contains any valid value.
 
-For example, in the AU Core Practitioner Profile, the `name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
+For example, in the AU Core Practitioner Profile, the `Practitioner.name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
 - AU Core Responders **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
 - AU Core Requesters **SHALL** accept a Practitioner resource without error if `Practitioner.name` is present and contains valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements.
 
@@ -342,8 +334,8 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
 
 1.  For *non-coded* data elements where the applicable AU Core profile does not mandate a sub-element
     - use the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) 
-    - use the code `unknown` _The value is expected to exist but is not known_
-    - For some AU Core Observation profiles the `Observation.value` element is conditionally mandatory, e.g. AU Core Body Height.  In this case the `Observation.dataAbsentReason` element is used with the code `unknown` rather than the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html). Requesters are advised that other meaningful values can be captured in `Observation.dataAbsentReason` beyond missing or suppressed.
+    - use the code "unknown" _The value is expected to exist but is not known_
+    - For some AU Core Observation profiles the `Observation.value` element is conditionally mandatory, e.g. AU Core Body Height.  In this case the `Observation.dataAbsentReason` element is used with the code "unknown" rather than the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html). Requesters are advised that other meaningful values can be captured in `Observation.dataAbsentReason` beyond missing or suppressed.
   
     Example: Patient resource where the patient's birthDate is not available.
     ~~~
@@ -378,7 +370,7 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
       - when the system has text but no coded value, only the text sub-element is populated.
       - when there is neither text or coded value:
         - use the appropriate "unknown" concept code from the value set if available.
-        - when the value set does not have an appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason).
+        - when the value set does not have an appropriate "unknown" concept code, use "unknown" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason).
 
         Example: AllergyIntolerance resource where the manifestation is unknown.
         ~~~
@@ -400,7 +392,7 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
         ]
         ...
         ~~~
-    - For some AU Core Observation profiles the `Observation.value` element is conditionally mandatory, e.g. AU Core Smoking Status.  In this case the `Observation.dataAbsentReason` element is used with the code `unknown` rather than the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html). Requesters are advised that other meaningful values can be captured in `Observation.dataAbsentReason` beyond missing or suppressed.
+    - For some AU Core Observation profiles the `Observation.value` element is conditionally mandatory, e.g. AU Core Smoking Status.  In this case the `Observation.dataAbsentReason` element is used with the code "unknown" rather than the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html). Requesters are advised that other meaningful values can be captured in `Observation.dataAbsentReason` beyond missing or suppressed.
 
 
 ### Suppressed Data
@@ -411,6 +403,6 @@ When an element definition is optional (minimum cardinality = 0), including elem
 
 When an element definition is mandatory (minimum cardinality > 0), 
 - AU Core Responders **SHALL** correctly populate the element but it may exceed the data requester's access rights to know that the data is suppressed:
-  - where a requester does not have access rights to know that data is suppressed use the code `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
-  - where a requester may know that the data is suppressed use the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
+  - where a requester does not have access rights to know that data is suppressed use the code "unknown" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
+  - where a requester may know that the data is suppressed use the code "masked" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
 
