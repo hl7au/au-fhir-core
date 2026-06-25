@@ -14,16 +14,16 @@
         <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
   </tr>
     <tr>
-        <td>patient+type</td>
+        <td>patient+status</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code>+<code>token</code></td>
          <td></td>
   </tr>
   <tr>
-        <td>type</td>
+        <td>status</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <strong>SHALL</strong> support <code>multipleOr</code>. The responder <strong>SHALL</strong> support <code>multipleOr</code>.</td>
   </tr>
  </tbody>
 </table>
@@ -49,16 +49,17 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     *Implementation Notes:* Fetches a bundle of all MedicationDispense resources for the specified patient ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationdispense.html#search)** and **[`type`](https://hl7.org/fhir/R4/medicationdispense.html#search)** search parameters:
+1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/medicationdispense.html#search)** and **[`status`](https://hl7.org/fhir/R4/medicationdispense.html#search)** search parameters:
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `MedicationDispense:medication`
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
+    - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g. `status={system|}[code],{system|}[code],...`)
 
 
-    `GET [base]/MedicationDispense?patient={Type/}[id]&type={system|}[code]`
+    `GET [base]/MedicationDispense?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
 
     Example:
     
-      1. GET [base]/MedicationDispense?patient=5678&amp;type=FFC
-      1. GET [base]/MedicationDispense?patient=5678&amp;type=FFC&amp;_include=MedicationDispense:medication
+      1. GET [base]/MedicationDispense?patient=5678&amp;status=completed
+      1. GET [base]/MedicationDispense?patient=5678&amp;status=completed&amp;_include=MedicationDispense:medication
 
-    *Implementation Notes:* Fetches a bundle of all MedicationDispense resources for the specified patient and type ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all MedicationDispense resources for the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))

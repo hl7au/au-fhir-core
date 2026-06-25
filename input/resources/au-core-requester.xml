@@ -744,7 +744,7 @@
 <valueString value="patient"/>
 </extension>
 <extension url="required">
-<valueString value="type"/>
+<valueString value="status"/>
 </extension>
 </extension>
 <type value="MedicationDispense"/>
@@ -776,10 +776,10 @@
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 <valueCode value="MAY"/>
 </extension>
-<name value="type"/>
-<definition value="http://hl7.org/fhir/SearchParameter/MedicationDispense-type"/>
+<name value="status"/>
+<definition value="http://hl7.org/fhir/SearchParameter/medications-status"/>
 <type value="token"/>
-<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both."/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xA;&#xA;The responder **SHALL** support both.&#xa;&#xa;The requester **SHALL** support `multipleOr`.&#xa;&#xa;The responder **SHALL** support `multipleOr`."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
