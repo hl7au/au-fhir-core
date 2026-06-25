@@ -200,7 +200,7 @@ AU Core Profile |Must Support Element|Reference
 [AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.reasonReference|AU Core Condition, Observation, AU Core Procedure
 [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.requester|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.reasonReference|AU Core Condition, Observation
-[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.reasonReference|AU Core Condition, Observation, AU Base DiagnosticReport
+[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.reasonReference|AU Core Condition, AU Core DiagnosticReport, Observation
 [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 [AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
 {:.grid}
