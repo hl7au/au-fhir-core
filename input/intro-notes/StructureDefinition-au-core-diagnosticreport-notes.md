@@ -77,7 +77,7 @@
         <td>date</td>
         <td><b>MAY</b></td>
         <td><code>date</code></td>
-        <td>The requester <b>SHALL</b> provide a value precise to the second + time offset. The responder <b>SHALL</b> support a value precise to the second + time offset.</td>
+        <td>The requester <b>SHALL</b> provide a value precise to the second + time offset. The responder <b>SHALL</b> support a value precise to the second + time offset.<br/><br/>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.<br/><br/>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</td>
   </tr>
   <tr>
         <td>status</td>
@@ -131,14 +131,16 @@ The following search parameters and search parameter combinations **SHALL** be s
 
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`category`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`date`](https://hl7.org/fhir/R4/encounter.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
+     - **SHALL** support these `date` comparators: `gt,lt,ge,le`
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g. `date=[date]&date=[date]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, **SHALL** support the search comparators `gt,lt,ge,le`
 
-    `GET [base]/DiagnosticReport?patient={Type/}[id]&category={system|}[code]&date=[date]` or optionally `GET [base]/DiagnosticReport?patient.identifier=[system|][code]&category={system|}[code]&date=[date]`
+    `GET [base]/DiagnosticReport?patient={Type/}[id]&category={system|}[code]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}` or optionally `GET [base]/DiagnosticReport?patient.identifier=[system|][code]&category={system|}[code]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
-      1. GET [base]/DiagnosticReport?patient=5678&amp;category=CH&amp;date=2021-02-07
-      1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952&amp;category=CH&amp;date=2021-02-07
-      1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361&amp;category=CH&amp;date=2021-02-07
+      1. GET [base]/DiagnosticReport?patient=5678&amp;category=CH&amp;date=ge2021-02-07
+      1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952&amp;category=CH&amp;date=ge2021-02-07
+      1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361&amp;category=CH&amp;date=ge2021-02-07
 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient, category and date ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference), [how to search by token](http://hl7.org/fhir/R4/search.html#token)) and [how to search by date](http://hl7.org/fhir/R4/search.html#date)
 
@@ -185,14 +187,16 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/DiagnosticReport.html#search)** and **[`code`](https://hl7.org/fhir/R4/DiagnosticReport.html#search)** and **[`date`](https://hl7.org/fhir/R4/encounter.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
+    - **SHALL** support these `date` comparators: `gt,lt,ge,le`
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g. `date=[date]&date=[date]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, **SHALL** support the search comparators `gt,lt,ge,le`
 
-    `GET [base]/DiagnosticReport?patient={Type/}[id]&code={system|}[code]&date=[date]` or optionally `GET [base]/DiagnosticReport?patient.identifier=[system|][code]&code={system|}[code]&date=[date]`
+    `GET [base]/DiagnosticReport?patient={Type/}[id]&code={system|}[code]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}` or optionally `GET [base]/DiagnosticReport?patient.identifier=[system|][code]&code={system|}[code]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
-      1. GET [base]/DiagnosticReport?patient=5678&amp;code=444821009&amp;date=2022-03-21
-      1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952&amp;code=444821009&amp;date=2022-03-21
-      1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361&amp;code=444821009&amp;date=2022-03-21
+      1. GET [base]/DiagnosticReport?patient=5678&amp;code=444821009&amp;date=ge2022-03-21
+      1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952&amp;code=444821009&amp;date=ge2022-03-21
+      1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361&amp;code=444821009&amp;date=ge2022-03-21
 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient, code and date ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference), [how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by date](http://hl7.org/fhir/R4/search.html#date))
 
