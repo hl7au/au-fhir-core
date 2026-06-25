@@ -1,0 +1,60 @@
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="lipid-panel-report"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticreport"/>
+  </meta>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+        <code value="LRI"/>
+      </coding>
+    </type>
+    <system
+            value="http://ns.electronichealth.net.au/id/hpio-scoped/report/1.0/8003611566718494"/>
+    <value value="PP1552642"/>
+    <assigner>
+      <reference value="Organization/pullabooka-pathology"/>
+      <display value="Pullabooka Pathology"/>
+    </assigner>
+  </identifier>
+  <status value="registered"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="LAB"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="16254007"/>
+      <display value="Lipid panel"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/banks-mia-leanne"/>
+  </subject>
+  <effectiveDateTime value="2023-01-18"/>
+  <issued value="2023-01-18T09:30:00+10:00"/>
+  <performer> 
+    <reference value="Organization/pullabooka-pathology"/>
+  </performer>
+  <result>
+    <reference value="Observation/lipid-hdl-1"/>
+    <display value="HDL"/>
+  </result>
+  <result> 
+    <reference value="Observation/lipid-ldl-1"/>
+    <display value="LDL"/>
+  </result>
+  <result> 
+    <reference value="Observation/lipid-total-chol-1"/>
+    <display value="Total cholesterol"/>
+  </result>
+  <result>
+    <reference value="Observation/lipid-triglyceride-1"/>
+    <display value="Triglyceride"/>
+  </result>
+</DiagnosticReport>
