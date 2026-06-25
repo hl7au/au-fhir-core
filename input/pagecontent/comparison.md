@@ -1344,10 +1344,10 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: left; vertical-align: middle;">Endpoint</td>
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
 		<tr>
             <td style="text-align: left; vertical-align: middle;">HealthcareService</td>
@@ -2190,21 +2190,13 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> update Encounter.meta.lastUpdated to reflect new encounters, and changes in the status of encounters.</td>
         </tr>
         <tr>
-            <td rowspan="4">Endpoint</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Endpoint resource.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support Endpoint resource.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code> and <code>vread</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code> and <code>vread</code> interactions.</td>
+            <td rowspan="2">Endpoint</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> interaction.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> interaction.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of fetching an Endpoint resource using <code>GET [base]/Endpoint/[id]</code>.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of returning an Endpoint resource using <code>GET [base]/Endpoint/[id]</code>.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
             <td rowspan="9">Goal</td>

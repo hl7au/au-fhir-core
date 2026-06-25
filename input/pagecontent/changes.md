@@ -7,7 +7,7 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 - [AU Core Endpoint](StructureDefinition-au-core-endpoint.html):
-  - added new profile, including interaction support to the AU Core CapabilityStatements [AU Core: FHIR-53817](https://jira.hl7.org/browse/FHIR-53817), [AU Core: FHIR-57573](https://jira.hl7.org/browse/FHIR-57573)
+  - added new profile, including interaction support to the AU Core CapabilityStatements [AU Core: FHIR-53817](https://jira.hl7.org/browse/FHIR-53817), [AU Core: FHIR-57573](https://jira.hl7.org/browse/FHIR-57573), [AU Core: FHIR-57748](https://jira.hl7.org/browse/FHIR-57748), [AU Core: FHIR-57639](https://jira.hl7.org/browse/FHIR-57639)
 - [AU Core Organization](StructureDefinition-au-core-organization.html):
   - added AU HAE as an allowed type for Organization.identifier [AU Base: FHIR-54928](https://jira.hl7.org/browse/FHIR-54928)
   - added AU HSP-O as an allowed type for Organization.identifier [AU Base: FHIR-54923](https://jira.hl7.org/browse/FHIR-54923)
