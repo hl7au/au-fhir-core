@@ -29,7 +29,7 @@ This profile was approved without any profile specific advice, the following mat
 
 <div class="stu-note">
 
-	<p>This profile was approved without constraints on precision of dates provided the following is included to promote discussion:</p>
+	<p>This profile was approved without constraints on precision of dates provided the following constraints included to promote discussion:</p>
 
 	<table class="list presentation" data-fhir="generated-heirarchy">
   <tbody><tr>
