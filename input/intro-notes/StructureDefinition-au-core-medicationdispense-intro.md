@@ -29,60 +29,43 @@ This profile was approved without any profile specific advice, the following mat
 
 <div class="stu-note">
 
-	This profile was approved without constraints on precision of dates provided the following is included to promote discussion:
+	<p>This profile was approved without constraints on precision of dates provided the following is included to promote discussion:</p>
 
-	<table class="list" data-fhir="generated-heirarchy">
+	<table class="list presentation" data-fhir="generated-heirarchy">
   <tbody><tr>
-    <td>
-      <b>Path</b>
+    <td width="60">
+      <b>Id</b>
     </td>
     <td>
-      <b>Status</b>
+      <b>Grade</b>
     </td>
     <td>
-      <b>Usage</b>
+      <b>Path(s)</b>
     </td>
     <td>
-      <b>ValueSet</b>
+      <b>Description</b>
     </td>
     <td>
-      <b>Version</b>
-    </td>
-    <td>
-      <b>Source</b>
+      <b>Expression</b>
     </td>
   </tr>
   <tr>
-    <td>MedicationDispense.medication[x]:medicationCodeableConcept.&ZeroWidthSpace;coding:pbs</td>
-    <td>Base</td>
+    <td>au-core-meddisp-01</td>
+    <td>error</td>
+    <td>MedicationDispense.whenHandedOver</td>
+    <td>Date shall be precise to the day or, if not available, the Data Absent Reason extension shall be present</td>
     <td>
-      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
-    </td>
-    <td>
-      <a style="opacity: 0.5" href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html">PBS Item Codes</a>
-      <button data-clipboard-text="http://terminology.hl7.org.au/ValueSet/pbs-item" title="" class="btn-copy" data-original-title="Click to copy URL" fdprocessedid="psbdln"></button>
-    </td>
-    <td title="Version is not explicitly stated, which means it is fixed to 6.0.1-ci-build, the version found through the package references">📦6.0.1-ci-build</td>
-    <td>
-      <a href="https://build.fhir.org/ig/hl7au/au-fhir-base/">AU Base Implementation Guide vnull</a>
+      <code>$this.hasValue() implies (extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').value.exists().not() and $this.toString().length() &gt;= 10)</code>
     </td>
   </tr>
   <tr>
-    <td>MedicationDispense.medication[x]:medicationCodeableConcept.&ZeroWidthSpace;coding:amt</td>
-    <td>Base</td>
+    <td>au-core-meddisp-02</td>
+    <td>error</td>
+    <td>MedicationDispense.whenPrepared</td>
+    <td>Date shall be precise to the day or, if not available, the Data Absent Reason extension shall be present</td>
     <td>
-      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
-    </td>
-    <td>
-      <a style="opacity: 0.5" href="https://tx.hl7.org.au/fhir/ValueSet/australian-medication-1">Australian Medication</a>
-      <button data-clipboard-text="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1" title="" class="btn-copy" data-original-title="Click to copy URL" fdprocessedid="pw94cb"></button>
-      <img src="external.png" alt=".">
-    </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 1.0.2 has been used">⏿1.0.2</td>
-    <td>
-      <a href="https://tx.hl7.org.au/fhir">tx.hl7.org.au</a>
+      <code>$this.hasValue() implies (extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').value.exists().not() and $this.toString().length() &gt;= 10)</code>
     </td>
   </tr>
 </tbody></table>
-
 </div>
