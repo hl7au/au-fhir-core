@@ -13,7 +13,7 @@ The following are supported usage scenarios for this profile:
 
 <div class="stu-note" markdown="1">
 
-	This profile was approved without any profile specific advice, the following material is aligned with similar advice given for the [AU Core MedicationRequest]() profile and is provided to promote discussion:
+This profile was approved without any profile specific advice, the following material is aligned with similar advice given for the [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html) profile and is provided to promote discussion:
 
 - See the [Medicine Information](medicine-information.html) page for guidance on how medicinal product identification can be structured in FHIR conformant to AU Core.
 - MedicationDispense resources can represent a medication using either a code as `MedicationDispense.medicationCodeableConcept`, or reference a [Medication](http://hl7.org/fhir/R4/medication.html) resource using `MedicationDispense.medicationReference`.
@@ -27,7 +27,7 @@ The following are supported usage scenarios for this profile:
 
 </div>
 
-<div class="stu-note" markdown="1">
+<div class="stu-note">
 
 	This profile was approved without constraints on precision of dates provided the following is included to promote discussion:
 
