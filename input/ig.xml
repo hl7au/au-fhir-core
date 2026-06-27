@@ -285,6 +285,15 @@
 			<description value="Shows an example of no known conditions for the *AU Core Condition* profile. Patient: Deangelo HOWE."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
+		<!--DOCUMENTREFERENCE EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="DocumentReference/aups-basicsummary-data"/>
+			</reference>
+			<name value="DocumentReference - AU Patient Summary"/>
+			<description value="Shows an example of a DocumentReference for the *AU Core DocumentReference* profile referencing an AU Patient Summary FHIR document using an inline attachment. Patient:  Mia Leanne Banks."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
+		</resource>
 		<!--ENCOUNTER EXAMPLES-->
 		<resource>
 			<reference>
