@@ -9,7 +9,7 @@ The following are supported usage scenarios for this profile:
 - Record or update a clinical document for a patient
 
 ### Profile Specific Implementation Guidance
-None.
+No guidance currently defined.
 
 <div class="stu-note" markdown="1">
 **Upcoming NCTS ValueSet Availability**
