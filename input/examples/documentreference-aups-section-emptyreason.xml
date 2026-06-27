@@ -1,0 +1,29 @@
+<DocumentReference xmlns="http://hl7.org/fhir">
+    <id value="aups-section-emptyreason"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
+    </meta>
+    <status value="current"/>
+    <type>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code valye="60591-5"/>
+            <display value="Patient summary Document"/>
+        </coding>
+    </type>
+    <subject>
+        <reference value="Patient/banks-mia-leanne"/>
+    </subject>
+    <date value="2025-01-08T15:08:15+10:00"/>
+    <content>
+        <attachment>
+            <contentType value="application/fhir+json" />
+            <url value="https://build.fhir.org/ig/hl7au/au-fhir-ps/Bundle-aups-section-emptyreason.json" />
+        </attachment>
+    </content>
+    <context>
+        <period>
+            <end value="2025-01-08"/>
+        </period>
+    </context>
+</DocumentReference>

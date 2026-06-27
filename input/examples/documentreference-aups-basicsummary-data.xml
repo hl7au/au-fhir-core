@@ -3,6 +3,10 @@
     <meta>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
     </meta>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:uuid:b8b5a649-d339-4fd4-8da9-77d7c326ae87"/>
+  </identifier>
     <status value="current"/>
     <type>
         <coding>
