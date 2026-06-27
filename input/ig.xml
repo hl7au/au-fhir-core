@@ -310,6 +310,15 @@
 			<description value="Shows an example of a completed virtual telehealth encounter for the *AU Core Encounter* profile. Patient: Mrs. Anne Bennelong."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
 		</resource>
+		<!--ENDPOINT EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Endpoint/bobrester-medical-center"/>
+			</reference>
+			<name value="Endpoint - Bobrester Medical Center FHIR REST endpoint"/>
+			<description value="Shows an example of an Endpoint for the *AU Core Endpoint* profile representing the HL7 FHIR REST endpoint for Bobrester Medical Center."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
+		</resource>
 		<!--IMMUNIZATION EXAMPLES-->
 		<resource>
 			<reference>
