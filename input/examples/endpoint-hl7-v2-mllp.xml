@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Endpoint xmlns="http://hl7.org/fhir">
+  <id value="hl7-v2-mllp"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
+  </meta>
+  <status value="active"/>
+  <connectionType>
+    <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
+    <code value="hl7v2-mllp"/>
+    <display value="HL7 v2 MLLP"/>
+  </connectionType>
+  <name value="Murrabit Hospital HL7 V2 Endpoint"/>
+  <payloadType>
+ <coding>
+    <system value="http://hl7.org.au/fhir/CodeSystem/au-endpoint-payload-type"/>
+    <code value="http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-ORM-201701"/>
+    <display value="HL7 V2.4 ORM message"/>
+  </coding>
+  <coding>
+    <system value="http://hl7.org.au/fhir/CodeSystem/au-endpoint-payload-typee"/>
+    <code value="http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-ORU-201701"/>
+    <display value="HL7 V2.4 ORU message"/>
+  </coding>
+  <coding>
+    <system value="http://hl7.org.au/fhir/CodeSystem/au-endpoint-payload-type"/>
+    <code value="http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-ACK-201701"/>
+    <display value="HL7 V2.4 ACK message"/>
+  </coding>
+  </payloadType>
+  <address value="mllp://hl7v2.murrabithospital.example.com:56123"/>
+</Endpoint>
