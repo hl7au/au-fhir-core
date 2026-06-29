@@ -36,7 +36,7 @@
   <subject>
     <reference value="Patient/banks-mia-leanne"/>
   </subject>
-  <effectiveDateTime value="2023-01-18"/>
+  <effectiveDateTime value="2023-01-17T08:30:00+10:00"/>
   <issued value="2023-01-18T09:30:00+10:00"/>
   <performer> 
     <reference value="Organization/pullabooka-pathology"/>
