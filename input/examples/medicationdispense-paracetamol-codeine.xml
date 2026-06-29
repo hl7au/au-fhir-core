@@ -23,13 +23,6 @@
     <authorizingPrescription>
         <reference value="MedicationRequest/paracetamol-codeine"/>
     </authorizingPrescription>
-    <type>
-        <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
-            <code value="FFC"/>
-            <display value="First Fill - Complete"/>
-        </coding>
-    </type>
     <quantity>
         <value value="20"/>
         <unit value="TAB"/>
@@ -37,7 +30,6 @@
         <code value="TAB"/>
     </quantity>
     <whenPrepared value="2018-07-15"/>
-    <whenHandedOver value="2018-07-15"/>
     <dosageInstruction>
         <text value="1-2 tablets every 4-6 hours as needed for pain"/>
         <timing>
