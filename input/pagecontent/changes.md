@@ -8,6 +8,13 @@ This change log documents the significant updates and resolutions implemented fr
 #### Changes in this version
 - [AU Core DocumentReference](StructureDefinition-au-core-documentreference.html):
   - added new profile, including interaction support to the AU Core CapabilityStatements and replacing references to DocumentReference with AU Core DocumentReference [AU Core: FHIR-57340](https://jira.hl7.org/browse/FHIR-57340), [AU Core: FHIR-57341](https://jira.hl7.org/browse/FHIR-57341), [AU Core: FHIR-57626](https://jira.hl7.org/browse/FHIR-57626), [AU Core: FHIR-57627](https://jira.hl7.org/browse/FHIR-57627), [AU Core:FHIR-57641](https://jira.hl7.org/browse/FHIR-57641)
+- [AU Core Medication](StructureDefinition-au-core-medication.html):
+  - added profile specific implementation guidance that this resource SHALL NOT be used to represent no known medications for a patient and MedicationStatement SHOULD be used instead [AU Core: FHIR-52286](https://jira.hl7.org/browse/FHIR-52286)
+- [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html):
+  - added profile specific implementation guidance that this resource SHALL NOT be used to represent no known medications for a patient and MedicationStatement SHOULD be used instead [AU Core: FHIR-52286](https://jira.hl7.org/browse/FHIR-52286)
+- [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html):
+  - changed MedicationStatement.medicationCodeableConcept binding to Australian Medication Use (preferred) [AU Base: FHIR-53469](https://jira.hl7.org/browse/FHIR-53469)
+  - added profile specific implementation guidance for representing no known medications for a patient [AU Core: FHIR-52286](https://jira.hl7.org/browse/FHIR-52286)
 - [AU Core Organization](StructureDefinition-au-core-organization.html):
   - added AU HAE as an allowed type for Organization.identifier [AU Base: FHIR-54928](https://jira.hl7.org/browse/FHIR-54928)
   - added AU HSP-O as an allowed type for Organization.identifier [AU Base: FHIR-54923](https://jira.hl7.org/browse/FHIR-54923)
