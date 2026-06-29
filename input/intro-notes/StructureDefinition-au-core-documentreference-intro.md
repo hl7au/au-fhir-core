@@ -8,12 +8,4 @@ The following are supported usage scenarios for this profile:
 - Record or update a document belonging to a patient
 
 ### Profile Specific Implementation Guidance
-No guidance currently defined. 
-
-<div class="stu-note" markdown="1">
-**Upcoming NCTS ValueSet Availability**
-
-Implementers should note that a new value set for use in a candidate additional binding to `DocumentReference.type` is pending release. Consequently, the additional binding has not yet been applied in this guide.
-
-See JIRA issue <a href="https://jira.hl7.org/browse/FHIR-57676">FHIR-57676</a> for details.
-</div>
+No guidance currently defined.
