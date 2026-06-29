@@ -20,3 +20,7 @@ The following are supported usage scenarios for this profile:
 - The MedicationStatement resource can represent the clinical indication as a code with `MedicationStatement.reasonCode`, or a reference with `MedicationStatement.reasonReference` to a Condition or other resource.
   - Although both are marked as *Must Support*, responders are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
   - A requester **SHALL** support both elements 
+- To represent that a patient is not currently taking any medications, the code SNOMED CT 787481004 &#124;No known medications&#124; is used in `MedicationStatement.medicationCodeableConcept`:
+  - `MedicationStatement.status` is set to "active"
+  - `MedicationStatement.effective[x]` is the period the statement was true or date/time the statement was current
+  - A Medication resource referenced in `MedicationStatement.medicationReference` **SHALL NOT** be used
