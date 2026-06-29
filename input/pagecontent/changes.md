@@ -7,7 +7,7 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 - [AU Core MedicationDispense](StructureDefinition-au-core-medicationdispense.html):
-  - added new profile, including interaction support to the AU Core CapabilityStatements [AU Core: FHIR-57770](https://jira.hl7.org/browse/FHIR-57770), [AU Core: FHIR-57771](https://jira.hl7.org/browse/FHIR-57771), [AU Core: FHIR-57767](https://jira.hl7.org/browse/FHIR-57767), [AU Core: FHIR-57768](https://jira.hl7.org/browse/FHIR-57768), [AU Core: FHIR-57769](https://jira.hl7.org/browse/FHIR-57769)
+  - added new profile, including interaction support to the AU Core CapabilityStatements  [AU Core: FHIR-57751](https://jira.hl7.org/browse/FHIR-57751), [AU Core: FHIR-57752](https://jira.hl7.org/browse/FHIR-57752),  [AU Core: FHIR-57767](https://jira.hl7.org/browse/FHIR-57767), [AU Core: FHIR-57768](https://jira.hl7.org/browse/FHIR-57768), [AU Core: FHIR-57769](https://jira.hl7.org/browse/FHIR-57769), [AU Core: FHIR-57770](https://jira.hl7.org/browse/FHIR-57770), [AU Core: FHIR-57771](https://jira.hl7.org/browse/FHIR-57771)
 - [AU Core Medication](StructureDefinition-au-core-medication.html):
   - added profile specific implementation guidance that this resource SHALL NOT be used to represent no known medications for a patient and MedicationStatement SHOULD be used instead [AU Core: FHIR-52286](https://jira.hl7.org/browse/FHIR-52286)
 - [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html):
