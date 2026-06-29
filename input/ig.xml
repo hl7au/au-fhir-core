@@ -215,7 +215,7 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="StructureDefinition/au-core-documentcomposition"/>
+				<reference value="StructureDefinition/au-core-composition"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
@@ -258,8 +258,8 @@
 				<reference value="Composition/aups-basic"/>
 			</reference>
 			<name value="Composition - Basic Summary"/>
-			<description value="Shows an example of a composition for the *AU Core Document Composition* profile representing an Australian Patient Summary containing allergy and medication information, with no information available for the problems section. &#xa;&#xa;Patient: Mia Leanne Banks"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentcomposition"/>
+			<description value="Shows an example of a composition for the *AU Core Composition* profile representing an Australian Patient Summary containing allergy and medication information, with no information available for the problems section. &#xa;&#xa;Patient: Mia Leanne Banks"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-composition"/>
 		</resource>
 		<!--CONDITION EXAMPLES-->
 		<resource>

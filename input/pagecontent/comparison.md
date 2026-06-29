@@ -71,6 +71,12 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-composition.html">AU Core Composition</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+        </tr>
+        <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
@@ -81,12 +87,6 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-documentcomposition.html">AU Core Document Composition</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
@@ -311,33 +311,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
-            <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
-            <td style="width: 25%;">Condition.subject.reference</td>
-            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Condition.clinicalStatus</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Condition.verificationStatus</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Condition.category</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Condition.severity</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Condition.code</td>
-            <td  style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
-        </tr>
-        <tr>
-            <td rowspan="53" style="width: 25%;"><a href="StructureDefinition-au-core-documentcomposition.html">AU Core Document Composition</a></td>
+            <td rowspan="53" style="width: 25%;"><a href="StructureDefinition-au-core-composition.html">AU Core Composition</a></td>
             <td rowspan="53" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Composition-uv-ips.html">Composition (IPS)</a></td>
             <td style="width: 25%;">Composition.meta.profile</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
@@ -551,6 +525,32 @@ The following IPS profile(s) contain additional requirements. Implementers are a
               <td style="width: 25%;">IPS requires LOINC code 8716-3.</td>
         </tr>
         <tr>
+            <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Condition-uv-ips.html">Condition (IPS)</a></td>
+            <td style="width: 25%;">Condition.subject.reference</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.clinicalStatus</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.verificationStatus</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.category</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.severity</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.code</td>
+            <td  style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
             <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
             <td style="width: 25%;">Immunization.vaccineCode</td>
@@ -708,7 +708,6 @@ IPS does not include requirements for Suppressed Data.
 ##### Additional Profiles <a id="ips-additional-profiles"></a>
 This version of AU Core has no equivalent profile for the following IPS profiles:
 - Bundle (IPS)
-- Composition (IPS)
 - Device (IPS)
 - Device - Performer or Observer (IPS)
 - DeviceUseStatement (IPS)
@@ -1959,10 +1958,10 @@ A system conforming to an AU Core CapabilityStatement aligns with IPS Capability
         </tr>
 		<tr>
             <td rowspan="2">Composition</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support Composition resource.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support Composition resource.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/><strong>SHALL</strong> support Composition (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/><strong>SHALL</strong> support Composition (IPS) profile which has additional requirements, see <a href="#ips-profile-additional-requirements">IPS profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td rowspan="2">Patient</td>

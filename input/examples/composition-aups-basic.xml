@@ -4,7 +4,7 @@
   <id value="aups-basic" />
   <meta>
     <versionId value="1" />
-    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentcomposition" />
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-composition" />
   </meta>
   <language value="en-AU" />
   <identifier>
