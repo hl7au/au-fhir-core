@@ -12,21 +12,25 @@
   </connectionType>
   <name value="Murrabit Hospital HL7 V2 Endpoint"/>
   <payloadType>
- <coding>
-    <system value="http://hl7.org.au/fhir/CodeSystem/au-endpoint-payload-type"/>
-    <code value="http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-ORM-201701"/>
-    <display value="HL7 V2.4 ORM message"/>
-  </coding>
-  <coding>
-    <system value="http://hl7.org.au/fhir/CodeSystem/au-endpoint-payload-typee"/>
-    <code value="http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-ORU-201701"/>
-    <display value="HL7 V2.4 ORU message"/>
-  </coding>
-  <coding>
-    <system value="http://hl7.org.au/fhir/CodeSystem/au-endpoint-payload-type"/>
-    <code value="http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-ACK-201701"/>
-    <display value="HL7 V2.4 ACK message"/>
-  </coding>
+    <coding>
+      <system value="http://terminology.hl7.org.au/CodeSystem/endpoint-payload-type"/>
+      <code value="http://ns.electronichealth.net.au/ds/sc/deliver/hl7Mdm/2012"/>
+      <display value="	HL7 V2 MDM Discharge Summary"/>
+    </coding>
+  </payloadType>
+  <payloadType> 
+   <coding>
+     <system value="http://terminology.hl7.org.au/CodeSystem/endpoint-payload-type"/>
+     <code value="http://ns.electronichealth.net.au/er/sc/deliver/hl7Mdm/2012"/>
+      <display value="HL7 V2 MDM eReferral"/>
+    </coding>
+  </payloadType>
+  <payloadType> 
+    <coding>
+      <system value="http://terminology.hl7.org.au/CodeSystem/endpoint-payload-type"/>
+     <code value="hhttp://ns.electronichealth.net.au/es/sc/deliver/hl7Mdm/2012"/>
+     <display value="HL7 V2 MDM Event Summary"/>
+    </coding>
   </payloadType>
   <address value="mllp://hl7v2.murrabithospital.example.com:56123"/>
 </Endpoint>
