@@ -112,8 +112,8 @@
             <valueMarkdown value="The Common Document Types in Australia value set comprises document type codes used to identify the kind of document represented by a Composition."/>
           </extension>          
         </extension>
-        <strength value="extensible" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2"/>
+        <strength value="preferred" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/doc-typecodes"/>
       </binding>
     </element>
     <element id="Composition.subject">
