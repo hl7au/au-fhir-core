@@ -97,6 +97,24 @@
       </extension>
       <path value="Composition.type"/>
       <mustSupport value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="adb-cmp-type-cand"/>
+          </extension>
+          <extension url="purpose">
+            <valueCode value="candidate"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://healthterminologies.gov.au/fhir/ValueSet/common-document-types-au-1"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="The Common Document Types in Australia value set comprises document type codes used to identify the kind of document represented by a Composition."/>
+          </extension>          
+        </extension>
+        <strength value="extensible" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2"/>
+      </binding>
     </element>
     <element id="Composition.subject">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
