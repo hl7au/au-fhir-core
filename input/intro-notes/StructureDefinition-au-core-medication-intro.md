@@ -10,6 +10,6 @@ The following are supported usage scenarios for this profile:
 
 ### Profile Specific Implementation Guidance
 - See the [Medicine Information](medicine-information.html) page for guidance on how medicinal product identification can be structured in FHIR conformant to AU Core.
-- The Medication resource **SHALL NOT** be used to represent that a patient is not currently taking any medications; implementers **SHOULD** use the MedicationStatement resource following the [profile specific implementation guidance](StructureDefinition-au-core-medicationstatement.html#profile-specific-implementation-guidance) in [AU Core MedicationStatement](StructureDefinition-au-ps-medicationstatement.html).
+- The Medication resource **SHALL NOT** be used to represent that a patient is not currently taking any medications; implementers **SHOULD** use the MedicationStatement resource following the [profile specific implementation guidance](StructureDefinition-au-core-medicationstatement.html#profile-specific-implementation-guidance) in [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html).
 
 
