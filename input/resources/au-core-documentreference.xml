@@ -81,7 +81,7 @@
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
           <extension url="key">
-            <valueId value="adb-cmp-type-cand"/>
+            <valueId value="adb-docref-type-cand"/>
           </extension>
           <extension url="purpose">
             <valueCode value="candidate"/>
