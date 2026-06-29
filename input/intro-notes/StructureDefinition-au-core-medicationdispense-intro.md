@@ -11,4 +11,4 @@ The following are supported usage scenarios for this profile:
 
 ### Profile Specific Implementation Guidance
 
-No profile specific guidance is provided.
+No guidance currently defined.
