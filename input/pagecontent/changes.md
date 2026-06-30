@@ -7,7 +7,7 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 - [AU Core Endpoint](StructureDefinition-au-core-endpoint.html):
-  - added new profile, including interaction support to the AU Core CapabilityStatements [AU Core: FHIR-53817](https://jira.hl7.org/browse/FHIR-53817), [AU Core: FHIR-57573](https://jira.hl7.org/browse/FHIR-57573), [AU Core: FHIR-57748](https://jira.hl7.org/browse/FHIR-57748), [AU Core: FHIR-57639](https://jira.hl7.org/browse/FHIR-57639)
+  - added new profile, including interaction support to the AU Core CapabilityStatements [AU Core: FHIR-57573](https://jira.hl7.org/browse/FHIR-57573), [AU Core: FHIR-57748](https://jira.hl7.org/browse/FHIR-57748), [AU Core: FHIR-57639](https://jira.hl7.org/browse/FHIR-57639)
 - [AU Core Medication](StructureDefinition-au-core-medication.html):
   - added profile specific implementation guidance that this resource SHALL NOT be used to represent no known medications for a patient and MedicationStatement SHOULD be used instead [AU Core: FHIR-52286](https://jira.hl7.org/browse/FHIR-52286)
 - [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html):
