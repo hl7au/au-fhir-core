@@ -12,7 +12,5 @@ This implementation guide has no variance (i.e. fully compliant) from AU Base FH
 
 This implementation guide profiles the following resources that are not profiled in AU Base:
 
-- [AU Core DocumentReference](StructureDefinition-au-core-documentreference.html) profiles FHIR resource [DocumentReference](https://www.hl7.org/fhir/R4/documentreference.html)
-
 - Extension
   - [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html) profiles FHIR extension [Person Recorded Sex Or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender)
