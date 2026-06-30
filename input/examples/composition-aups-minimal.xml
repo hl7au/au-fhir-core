@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Composition xmlns="http://hl7.org/fhir">
-  <!--  Example adapted from AU Patient Summary Implementation Guide aups-basic -->
-  <id value="aups-basic" />
+  <id value="aups-minimal" />
   <meta>
     <versionId value="1" />
     <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-composition" />
