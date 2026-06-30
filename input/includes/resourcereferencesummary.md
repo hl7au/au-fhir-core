@@ -1,7 +1,6 @@
 |Resource Type|Profile|Supported Target Reference|
 |---|---|---|---|
 |AllergyIntolerance|[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|
-|CareTeam|[CareTeam](https://hl7.org/fhir/R4/careteam.html)|-|
 |Condition|[AU Core Condition](StructureDefinition-au-core-condition.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|
 |DiagnosticReport|[AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html)|[AU Base Diagnostic Imaging Result](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-imagingresult.html), [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html), [AU Core Organization](StructureDefinition-au-core-organization.html), [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html), [AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Practitioner](StructureDefinition-au-core-practitioner.html), [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html), [CareTeam](https://hl7.org/fhir/R4/careteam.html)|
 |DocumentReference|[DocumentReference](https://hl7.org/fhir/R4/documentreference.html)|-|
