@@ -19,9 +19,9 @@ This change log documents the significant updates and resolutions implemented fr
   - removed invariant au-core-org-01 limiting a National Organization Identifier to an HPI-O or PAI-O [AU Core: FHIR-55738](https://jira.hl7.org/browse/FHIR-55738)
   - changed Organization.identifier:abn.type to require code ABN from the IdentifierType AU code system [AU Base: FHIR-56103](https://jira.hl7.org/browse/FHIR-56103)
 - [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) 
-  - applied technical correction to reference the RelatedPerson-patient search parameter instead of the AU Core clinical-patient search parameter for RelatedPerson [AU Core: FHIR-57758](https://jira.hl7.org/browse/FHIR-57758) 
+  - corrected url for RelatedPerson-patient search parameter [AU Core: FHIR-57758](https://jira.hl7.org/browse/FHIR-57758) 
 - [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html)
-  - applied technical correction to reference the RelatedPerson-patient search parameter instead of the AU Core clinical-patient search parameter for RelatedPerson [AU Core: FHIR-57758](https://jira.hl7.org/browse/FHIR-57758)  
+  - corrected url for RelatedPerson-patient search parameter [AU Core: FHIR-57758](https://jira.hl7.org/browse/FHIR-57758)  
 
 ### Release 2.0.0
 - Publication date: 2026-01-28
