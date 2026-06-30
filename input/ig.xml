@@ -164,12 +164,6 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
-		<resource>
-			<reference>
-				<reference value="StructureDefinition/au-core-endpoint"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
 		<!--VITAL SIGNS-->
 		<resource>
 			<reference>
