@@ -8,4 +8,4 @@ The following are supported usage scenarios for this profile:
 - Record or update a document belonging to a patient
 
 ### Profile Specific Implementation Guidance
-No guidance currently defined.
+No guidance defined.
