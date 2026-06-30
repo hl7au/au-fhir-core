@@ -192,13 +192,15 @@ The table below provides a list of AU Core profile elements that allow multiple 
 
 AU Core Profile |Must Support Element|Reference
 ---|---|---
+[AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html)|DiagnosticReport.performer|AU Core Organization, AU Core Practitioner, AU Core PractitionerRole, CareTeam
+[AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html)|DiagnosticReport.result|AU Base Diagnostic Imaging Result, AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.hasMember|AU Base Diagnostic Imaging Result, AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
 [AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.participant.individual|AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
 [AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.reasonReference|AU Core Condition, Observation, AU Core Procedure
 [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.requester|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.reasonReference|AU Core Condition, Observation
-[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.reasonReference|AU Core Condition, Observation, AU Base DiagnosticReport
+[AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.reasonReference|AU Core Condition, AU Core DiagnosticReport, Observation
 [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 [AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
 {:.grid}
@@ -216,6 +218,7 @@ AU Core Profile |Must Support Element|Data Types
 [AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
 [AU Core Condition](StructureDefinition-au-core-condition.html)|Condition.onset[x]|dateTime, age, Period, Range
 [AU Core Condition](StructureDefinition-au-core-condition.html)|Condition.abatement[x]|dateTime, age, Period, Range
+[AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html)|DiagnosticReport.effective[x]|dateTime, Period
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.effective[x]|dateTime, Period, Timing, instant
 [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.effective[x]|dateTime, Period, Timing, instant
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
