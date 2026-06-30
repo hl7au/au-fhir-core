@@ -53,32 +53,6 @@ The table below provides an overview of the sex and gender concepts that are inc
     <tbody>
         <tr>
             <td style=" text-align: center; vertical-align: middle;">
-                <a href="StructureDefinition-au-core-diagnosticreport.html">AU Core <br/>DiagnosticReport</a>
-            </td>
-            <td style=" text-align: center; vertical-align: middle;">
-                <img src="minus_symbol.png" width="20"/>
-            </td>
-            <td style=" text-align: center; vertical-align: middle;">
-                <img src="minus_symbol.png" width="20"/>
-            </td>
-            <td style=" text-align: center; vertical-align: middle;">
-                <img src="minus_symbol.png" width="20"/>
-            </td>
-            <td style=" text-align: center; vertical-align: middle;">
-                <img src="minus_symbol.png" width="20"/>
-            </td>
-            <td style=" text-align: center; vertical-align: middle;">
-                <img src="minus_symbol.png" width="20"/>
-            </td>
-            <td style=" text-align: center; vertical-align: middle;">
-                <img src="minus_symbol.png" width="20"/>
-            </td>
-            <td style=" text-align: center; vertical-align: middle;">
-                <img src="orange_checkmark.png" width="20"/>
-            </td>
-        </tr>
-        <tr>
-            <td style=" text-align: center; vertical-align: middle;">
                 <a href="StructureDefinition-au-core-patient.html">AU Core<br/>Patient</a>
             </td>
             <td style=" text-align: center; vertical-align: middle;">
