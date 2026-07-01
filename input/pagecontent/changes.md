@@ -6,6 +6,8 @@
 This change log documents the significant updates and resolutions implemented from version [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
+- [AU Core Composition](StructureDefinition-au-core-composition.html)
+  - added new profile, including interaction support to the AU Core CapabilityStatements [AU Core: FHIR-57306](https://jira.hl7.org/browse/FHIR-57306), [AU Core: FHIR-57310](https://jira.hl7.org/browse/FHIR-57310), [AU Core: FHIR-57311](https://jira.hl7.org/browse/FHIR-57311), [AU Core: FHIR-57313](https://jira.hl7.org/browse/FHIR-57313), [AU Core: FHIR-57314](https://jira.hl7.org/browse/FHIR-57314), [AU Core: FHIR-57308](https://jira.hl7.org/browse/FHIR-57308)
 - [AU Core DocumentReference](StructureDefinition-au-core-documentreference.html):
   - added new profile, including interaction support to the AU Core CapabilityStatements and replacing references to DocumentReference with AU Core DocumentReference [AU Core: FHIR-57340](https://jira.hl7.org/browse/FHIR-57340), [AU Core: FHIR-57341](https://jira.hl7.org/browse/FHIR-57341), [AU Core: FHIR-57626](https://jira.hl7.org/browse/FHIR-57626), [AU Core: FHIR-57627](https://jira.hl7.org/browse/FHIR-57627), [AU Core:FHIR-57641](https://jira.hl7.org/browse/FHIR-57641), [AU Core:FHIR-57676](https://jira.hl7.org/browse/FHIR-57676)
 - [AU Core Medication](StructureDefinition-au-core-medication.html):
@@ -20,6 +22,10 @@ This change log documents the significant updates and resolutions implemented fr
   - added AU HSP-O as an allowed type for Organization.identifier [AU Base: FHIR-54923](https://jira.hl7.org/browse/FHIR-54923)
   - removed invariant au-core-org-01 limiting a National Organization Identifier to an HPI-O or PAI-O [AU Core: FHIR-55738](https://jira.hl7.org/browse/FHIR-55738)
   - changed Organization.identifier:abn.type to require code ABN from the IdentifierType AU code system [AU Base: FHIR-56103](https://jira.hl7.org/browse/FHIR-56103)
+- [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) 
+  - corrected url for RelatedPerson-patient search parameter [AU Core: FHIR-57758](https://jira.hl7.org/browse/FHIR-57758) 
+- [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html)
+  - corrected url for RelatedPerson-patient search parameter [AU Core: FHIR-57758](https://jira.hl7.org/browse/FHIR-57758)  
 
 ### Release 2.0.0
 - Publication date: 2026-01-28
