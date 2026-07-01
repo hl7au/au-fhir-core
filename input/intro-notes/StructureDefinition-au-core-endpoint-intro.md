@@ -9,4 +9,4 @@ The following are supported usage scenarios for this profile:
 - Record or update endpoint information
 
 ### Profile Specific Implementation Guidance
-No guidance currently defined.
+No guidance defined.
