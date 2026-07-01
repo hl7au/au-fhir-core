@@ -7,8 +7,8 @@
   <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
   <name value="AUCoreDocumentReference"/>
   <title value="AU Core DocumentReference"/>
-  <status value="active"/>
-  <description value="This profile sets minimum expectations for a DocumentReference resource to record, search, and fetch patient documents. It is based on the [DocumentReference](https://www.hl7.org/fhir/R4/documentreference.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the DocumentReference resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."/>
+  <status value="draft"/>
+  <description value="This profile sets minimum expectations for a DocumentReference resource to record, search, and fetch documents associated with a patient. It is based on the [DocumentReference](https://www.hl7.org/fhir/R4/documentreference.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the DocumentReference resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="DocumentReference"/>
@@ -87,10 +87,10 @@
             <valueCode value="candidate"/>
           </extension>
           <extension url="valueSet">
-            <valueCanonical value="https://healthterminologies.gov.au/fhir/ValueSet/common-fhir-document-types-au-1"/>
+            <valueCanonical value="https://healthterminologies.gov.au/fhir/ValueSet/common-document-types-au-1"/>
           </extension>
           <extension url="documentation">
-            <valueMarkdown value="The Common FHIR Document Types in Australia value set comprises values that can be used to identify common types of FHIR documents in an Australian context."/>
+            <valueMarkdown value="The Common Document Types in Australia value set comprises values that can be used to identify common types of FHIR documents in an Australian context."/>
           </extension>          
         </extension>
         <strength value="preferred" />
