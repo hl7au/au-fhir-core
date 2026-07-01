@@ -213,6 +213,12 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-composition"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
 		<!--LIFESTYLE FACTOR-->
 		<resource>
 			<reference>
@@ -245,6 +251,15 @@
 			<name value="AllergyIntolerance - Penicillin allergy"/>
 			<description value="Shows an example of a Penicillin allergy with the reaction manifestation as hives for the *AU Core AllergyIntolerance* profile. Patient: Deangelo HOWE."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
+		</resource>
+		<!--COMPOSITION EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Composition/aups-minimal"/>
+			</reference>
+			<name value="Composition - AU Patient Summary (minimal)"/>
+			<description value="Shows an example of a composition for the *AU Core Composition* profile representing an Australian Patient Summary containing allergy and medication information, with no information available for the problems section. &#xa;&#xa;Patient: Mia Leanne Banks"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-composition"/>
 		</resource>
 		<!--CONDITION EXAMPLES-->
 		<resource>
