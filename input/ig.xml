@@ -100,6 +100,12 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/au-core-diagnosticreport"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-core-encounter"/>
 			</reference>
 			<exampleBoolean value="false"/>
