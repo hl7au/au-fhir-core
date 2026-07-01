@@ -103,6 +103,100 @@
 <documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The responder **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
 </searchParam>
 </resource>
+<!-- COMPOSITION :: DONE -->
+<resource>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHOULD"/>
+</extension>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHALL"/>
+</extension>
+<extension url="required">
+<valueString value="patient"/>
+</extension>
+<extension url="required">
+<valueString value="type"/>
+</extension>
+</extension>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHOULD"/>
+</extension>
+<extension url="required">
+<valueString value="patient"/>
+</extension>
+<extension url="required">
+<valueString value="author"/>
+</extension>
+</extension>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHALL"/>
+</extension>
+<extension url="required">
+<valueString value="patient"/>
+</extension>
+<extension url="required">
+<valueString value="date"/>
+</extension>
+</extension>
+<type value="Composition"/>
+<profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-composition"/>
+<documentation value="If the requester supports the Composition resource, the requester **SHALL** support the AU Core profile and the conformance expectations for the Composition resource."/>
+<interaction>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHALL"/>
+</extension>
+<code value="read"/>
+</interaction>
+<interaction>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHALL"/>
+</extension>
+<code value="search-type"/>
+</interaction>
+<referencePolicy value="resolves">
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHOULD"/>
+</extension>
+</referencePolicy>
+<searchParam>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHALL"/>
+</extension>
+<name value="patient"/>
+<definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
+<type value="reference"/>
+<documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The responder **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
+</searchParam>
+<searchParam>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="MAY"/>
+</extension>
+<name value="type"/>
+<definition value="http://hl7.org/fhir/SearchParameter/clinical-type"/>
+<type value="token"/>
+<documentation value="The requester **SHALL** provide at least a code value and **MAY** provide both the system and code values.&#xa;&#xa;The responder **SHALL** support both."/>
+</searchParam>
+<searchParam>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="MAY"/>
+</extension>
+<name value="date"/>
+<definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
+<type value="date"/>
+<documentation value="The requester **SHALL** provide a value precise to the *second + time offset*.&#xA;&#xA;The responder **SHALL** support a value precise to the *second + time offset*. &#xA;&#xA;The requester **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xA;&#xA;The responder **SHALL** support these search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The requester **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`.&#xa;&#xa;The responder **SHOULD** support `multipleAnd`, and if `multipleAnd` is supported, **SHALL** support the search comparators `gt`, `lt`, `ge`, `le`."/>
+</searchParam>
+<searchParam>
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="MAY"/>
+</extension>
+<name value="author"/>
+<definition value="http://hl7.org/fhir/SearchParameter/Composition-author"/>
+<type value="reference"/>
+</searchParam>
+</resource>
 <!-- CONDITION :: DONE -->
 <resource>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -1581,7 +1675,7 @@
 <valueCode value="SHALL"/>
 </extension>
 <name value="patient"/>
-<definition value="http://hl7.org.au/fhir/core/SearchParameter/au-core-clinical-patient"/>
+<definition value="http://hl7.org/fhir/SearchParameter/RelatedPerson-patient"/>
 <type value="reference"/>
 <documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the Type and id values.&#xa;&#xa;The responder **SHALL** support both.&#xa;&#xa;The requester **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.&#xa;&#xa;The responder **SHOULD** support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile."/>
 </searchParam>
