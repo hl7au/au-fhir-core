@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Endpoint xmlns="http://hl7.org/fhir">
+  <id value="hl7-v2-mllp"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
+  </meta>
+  <status value="active"/>
+  <connectionType>
+    <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
+    <code value="hl7v2-mllp"/>
+    <display value="HL7 v2 MLLP"/>
+  </connectionType>
+  <name value="Murrabit Hospital HL7 V2 Endpoint"/>
+  <payloadType>
+    <coding>
+      <system value="http://terminology.hl7.org.au/CodeSystem/endpoint-payload-type"/>
+      <code value="http://ns.electronichealth.net.au/ds/sc/deliver/hl7Mdm/2012"/>
+      <display value="	HL7 V2 MDM Discharge Summary"/>
+    </coding>
+  </payloadType>
+  <payloadType> 
+   <coding>
+     <system value="http://terminology.hl7.org.au/CodeSystem/endpoint-payload-type"/>
+     <code value="http://ns.electronichealth.net.au/er/sc/deliver/hl7Mdm/2012"/>
+      <display value="HL7 V2 MDM eReferral"/>
+    </coding>
+  </payloadType>
+  <payloadType> 
+    <coding>
+      <system value="http://terminology.hl7.org.au/CodeSystem/endpoint-payload-type"/>
+     <code value="hhttp://ns.electronichealth.net.au/es/sc/deliver/hl7Mdm/2012"/>
+     <display value="HL7 V2 MDM Event Summary"/>
+    </coding>
+  </payloadType>
+  <address value="mllp://hl7v2.murrabithospital.example.com:56123"/>
+</Endpoint>
