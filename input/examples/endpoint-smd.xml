@@ -22,11 +22,5 @@
       <code value="http://ns.electronichealth.net.au/er/sc/deliver/hl7Mdm/2012"/>
     </coding>
   </payloadType>
-  <payloadType> 
-    <coding>
-      <system value="http://terminology.hl7.org.au/CodeSystem/endpoint-payload-type"/>
-      <code value="http://ns.electronichealth.net.au/er/sc/deliver/hl7Mdm/2012"/>
-    </coding>
-  </payloadType>
   <address value="https://smd.mitchellshillaudiology.example.com.au/SealedMessageDelivery.svc"/>
 </Endpoint>
