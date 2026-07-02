@@ -55,13 +55,8 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-<<<<<<< HEAD
-      <path value="Endpoint.connectionType" />
-      <mustSupport value="true" />
-=======
       <path value="Endpoint.connectionType"/>
       <mustSupport value="true"/>
->>>>>>> master
     </element>
     <element id="Endpoint.name">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -80,13 +75,8 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-<<<<<<< HEAD
-      <path value="Endpoint.name" />
-      <mustSupport value="true" />
-=======
       <path value="Endpoint.name"/>
       <mustSupport value="true"/>
->>>>>>> master
     </element>
     <element id="Endpoint.payloadType">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -105,13 +95,8 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-<<<<<<< HEAD
-      <path value="Endpoint.payloadType" />
-      <mustSupport value="true" />
-=======
       <path value="Endpoint.payloadType"/>
       <mustSupport value="true"/>
->>>>>>> master
     </element>
     <element id="Endpoint.address">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -130,13 +115,8 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-<<<<<<< HEAD
-      <path value="Endpoint.address" />
-      <mustSupport value="true" />
-=======
       <path value="Endpoint.address"/>
       <mustSupport value="true"/>
->>>>>>> master
     </element>
   </differential>
 </StructureDefinition>
