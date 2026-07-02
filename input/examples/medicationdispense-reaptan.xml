@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationDispense xmlns="http://hl7.org/fhir">
+    <id value="reaptan"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
+    </meta>
+    <contained>
+        <Medication>
+            <id value="med1"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="926213011000036100"/>
+                </coding>
+                <text value="Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablet, 10"/>
+            </code>
+        </Medication>
+    </contained>
+    <status value="completed"/>
+    <medicationReference>
+        <reference value="#med1"/>
+    </medicationReference>
+    <subject>
+        <reference value="Patient/wang-li"/>
+    </subject>
+    <performer>
+        <actor>
+            <display value="Main Street Pharmacy"/>
+        </actor>
+    </performer>
+    <authorizingPrescription>
+        <reference value="MedicationRequest/reaptan"/>
+    </authorizingPrescription>
+    <quantity>
+        <value value="10"/>
+        <unit value="TAB"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+        <code value="TAB"/>
+    </quantity>
+    <whenPrepared value="2018-07-15"/>
+    <dosageInstruction>
+        <text value="1 tablet daily"/>
+    </dosageInstruction>
+</MedicationDispense>
