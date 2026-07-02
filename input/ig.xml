@@ -130,6 +130,12 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/au-core-medicationdispense"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-core-medicationrequest"/>
 			</reference>
 			<exampleBoolean value="false"/>
@@ -428,6 +434,31 @@
 			<name value="MedicationRequest - active prescription, Simvastatin"/>
 			<description value="Shows an example of an order for Simvastatin 40 mg oral tablet for high cholesterol for the *AU Core MedicationRequest* profile, demonstrating representation of medication as a reference to a Medication resource. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
+		</resource>
+		<!--MEDICATIONDISPENSE EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="MedicationDispense/paracetamol-codeine"/>
+			</reference>
+			<name value="MedicationDispense - completed supply, paracetamol 500 mg + codeine phosphate hemihydrate 30 mg"/>
+			<description value="Shows an example of the completed supply (dispense) of paracetamol 500 mg + codeine phosphate hemihydrate 30 mg tablet for pain management for the *AU Core MedicationDispense* profile, demonstrating representation of medication as a code. Patient: Mrs. Anne Bennelong."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationDispense/reaptan"/>
+			</reference>
+			<name value="MedicationDispense - completed supply, Reaptan"/>
+			<description value="Shows an example of the completed supply (dispense) of Reaptan 10 mg/10 mg for the *AU Core MedicationDispense* profile, demonstrating representation of medication as a reference to a contained Medication resource. Patient: Mr. Li Wang."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationDispense/simvastatin"/>
+			</reference>
+			<name value="MedicationDispense - completed supply, Simvastatin"/>
+			<description value="Shows an example of the completed supply (dispense) of Simvastatin 40 mg oral tablet for the *AU Core MedicationDispense* profile, demonstrating representation of medication as a reference to a Medication resource and a reference to the authorising prescription. Patient: Mr. Li Wang."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
 		</resource>
 		<!--MEDICATIONSTATEMENT EXAMPLES-->
 		<resource>
