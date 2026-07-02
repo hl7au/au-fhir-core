@@ -1,9 +1,9 @@
-### Release TBD
-- Publication date: TBD
-- Publication status: TBD
+### Release 2.1.0-draft
+- Publication date: 2026-07-03
+- Publication status: Draft
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
+This change log documents the significant updates and resolutions implemented from version [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html) to [2.1.0-draft](https://hl7.org.au/fhir/core/2.1.0-draft/index.html). The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
 - [AU Core Composition](StructureDefinition-au-core-composition.html)

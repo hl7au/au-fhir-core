@@ -1,3 +1,18 @@
+<div class="stu-note" markdown="1">
+
+#### AU Core 2.1.0-draft for Testing 
+
+This July 2026 draft snapshot supports testing of AU Core prior to Ballot of AU Core R3.
+
+Testing plays a crucial role in the development of AU Core. It helps to build an AU Core that is aligned with its intended purpose and is practical, and responsive to the diverse needs of various stakeholders.  
+
+Testing AU Core helps identify issues, challenges, or gaps in the specification, enabling its improvement. During testing, implementers test their FHIR resources, software products, and/or proof of concepts with AU Core and provide essential feedback.
+
+To learn more about testing AU Core or express your interest in participating, see [AU Core FHIR IG Testing](https://confluence.hl7.org/spaces/HAAUCOREWG/pages/358876003/AU+Core+FHIR+IG+Testing).
+
+</div>
+<!-- stu-note -->
+
 ### Introduction
 AU Core is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context. It sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
 
