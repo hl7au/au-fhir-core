@@ -18,7 +18,7 @@
     <content>
         <attachment>
             <contentType value="application/fhir+json" />
-            <url value="https://build.fhir.org/ig/hl7au/au-fhir-ps/Bundle-aups-section-emptyreason.json" />
+            <url value="https://smile.sparked-fhir.com/aucore/fhir/DEFAULT/Bundle/aups-section-emptyreason" />
         </attachment>
     </content>
     <context>

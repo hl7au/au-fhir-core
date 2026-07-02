@@ -15,6 +15,13 @@
             <display value="Patient summary Document"/>
         </coding>
     </type>
+    <category>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="107903-7"/>
+            <display value="Clinical note"/>
+        </coding>
+    </category>
     <subject>
         <reference value="Patient/banks-mia-leanne"/>
     </subject>
