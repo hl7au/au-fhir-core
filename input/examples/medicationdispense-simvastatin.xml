@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationDispense xmlns="http://hl7.org/fhir">
+    <id value="simvastatin"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
+    </meta>
+    <status value="completed"/>
+    <medicationReference>
+        <reference value="Medication/simvastatin"/>
+    </medicationReference>
+    <subject>
+        <reference value="Patient/wang-li"/>
+    </subject>
+    <performer>
+        <actor>
+            <display value="Main Street Pharmacy"/>
+        </actor>
+    </performer>
+    <authorizingPrescription>
+        <reference value="MedicationRequest/simvastatin"/>
+    </authorizingPrescription>
+    <quantity>
+        <value value="30"/>
+        <unit value="TAB"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+        <code value="TAB"/>
+    </quantity>
+    <whenPrepared value="2020-07-15"/>
+    <dosageInstruction>
+        <text value="Take one tablet daily"/>
+    </dosageInstruction>
+</MedicationDispense>
