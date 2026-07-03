@@ -396,10 +396,10 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Endpoint/murrabit-hospital-hl7-v2"/>
+				<reference value="Endpoint/murrabit-hospital-hl7-v2-mllp"/>
 			</reference>
-			<name value="Endpoint - Murrabit Hospital HL7 v2"/>
-			<description value="Shows an example of an Endpoint for the *AU Core Endpoint* profile representing a HL7 v2 endpoint for Murrabit Hospital."/>
+			<name value="Endpoint - Murrabit Hospital HL7 v2 MLLP"/>
+			<description value="Shows an example of an Endpoint for the *AU Core Endpoint* profile representing a HL7 v2 MLLP endpoint for Murrabit Hospital."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
 		</resource>
 		<!--IMMUNIZATION EXAMPLES-->
