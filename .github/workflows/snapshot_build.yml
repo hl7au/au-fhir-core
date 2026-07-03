@@ -1,4 +1,10 @@
-name: Au Core IG Profiles publish->go-publish
+name: (LEGACY) Au Core IG Profiles publish->go-publish - snapshots
+
+# LEGACY pipeline, deliberately kept TAG-TRIGGERED alongside the centralized build-review-publish.yml
+# so either release method can be used: this one renders and uploads to the s3://action-runner-working
+# staging bucket and pushing to prod stays a manual step, so the two coexist without conflict. The
+# centralized caller publishes per publication-request status (working = automatic, milestone = gated
+# by the production environment).
 
 on:
   push:
