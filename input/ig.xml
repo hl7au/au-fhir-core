@@ -380,25 +380,25 @@
 		<!--ENDPOINT EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="Endpoint/fhir-rest"/>
+				<reference value="Endpoint/bobrester-fhir-rest"/>
 			</reference>
-			<name value="Endpoint - FHIR REST"/>
+			<name value="Endpoint - Bobrester Medical Center FHIR REST"/>
 			<description value="Shows an example of an Endpoint for the *AU Core Endpoint* profile representing a HL7 FHIR REST endpoint for Bobrester Medical Center."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Endpoint/smd"/>
+				<reference value="Endpoint/mh-audiology-smd"/>
 			</reference>
-			<name value="Endpoint - Secure Message Delivery (SMD)"/>
+			<name value="Endpoint - Mitchell's Hill Audiology SMD"/>
 			<description value="Shows an example of an Endpoint for the *AU Core Endpoint* profile representing a Secure Message Delivery (SMD) endpoint for Mitchell's Hill Audiology."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Endpoint/hl7-v2-mllp"/>
+				<reference value="Endpoint/murrabit-hospital-hl7-v2"/>
 			</reference>
-			<name value="Endpoint - HL7 v2 messaging"/>
+			<name value="Endpoint - Murrabit Hospital HL7 v2"/>
 			<description value="Shows an example of an Endpoint for the *AU Core Endpoint* profile representing a HL7 v2 endpoint for Murrabit Hospital."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
 		</resource>
