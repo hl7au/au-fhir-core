@@ -9,10 +9,10 @@ name: (LEGACY) Au Core IG Profiles publish->go-publish - snapshots
 on:
   push:
     tags:
-      - '**-ballot'
-      - '**-snapshot'
-      - '**-preview'
-      - '**-draft'
+      - '!**-ballot'
+      - '!**-snapshot'
+      - '!**-preview'
+      - '!**-draft'
 
 permissions:
   id-token: write # This is required for requesting the JWT
