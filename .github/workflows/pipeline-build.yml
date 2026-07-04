@@ -1,4 +1,4 @@
-name: Au base IG Profiles publish->go-publish - all releases
+name: Au Core IG Profiles publish->go-publish - all releases
 
 on:
   push:
