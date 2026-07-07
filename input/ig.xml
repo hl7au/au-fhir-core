@@ -8,7 +8,7 @@
 		<valueInteger value="2"/>
 	</extension>
 	<url value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
-	<version value="2.0.1-ci-build"/>
+	<version value="2.1.1-ci-build"/>
 	<name value="AUCoreImplementationGuide"/>
 	<title value="AU Core Implementation Guide"/>
 	<status value="active"/>
@@ -318,6 +318,23 @@
 			<description value="Shows an example of no known conditions for the *AU Core Condition* profile. Patient: Deangelo HOWE."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
 		</resource>
+		<!--DOCUMENTREFERENCE EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="DocumentReference/aups-basicsummary-data"/>
+			</reference>
+			<name value="DocumentReference - AU Patient Summary (inline attachment)"/>
+			<description value="Shows an example of a DocumentReference for the *AU Core DocumentReference* profile, referencing an AU Patient Summary FHIR document using an inline attachment. Patient: Mia Leanne Banks."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="DocumentReference/aups-section-emptyreason"/>
+			</reference>
+			<name value="DocumentReference - AU Patient Summary (external reference)"/>
+			<description value="Shows an example of a DocumentReference for the *AU Core DocumentReference* profile, referencing an AU Patient Summary FHIR document using an external URL. Patient: Mia Leanne Banks."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
+		</resource>
 		<!--DIAGNOSTICREPORT EXAMPLES-->
 		<resource>
 			<reference>
@@ -359,6 +376,31 @@
 			<name value="Encounter - telehealth"/>
 			<description value="Shows an example of a completed virtual telehealth encounter for the *AU Core Encounter* profile. Patient: Mrs. Anne Bennelong."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+		</resource>
+		<!--ENDPOINT EXAMPLES-->
+		<resource>
+			<reference>
+				<reference value="Endpoint/bobrester-fhir-rest"/>
+			</reference>
+			<name value="Endpoint - Bobrester Medical Center FHIR REST"/>
+			<description value="Shows an example of an Endpoint for the *AU Core Endpoint* profile representing a HL7 FHIR REST endpoint for Bobrester Medical Center."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Endpoint/mh-audiology-smd"/>
+			</reference>
+			<name value="Endpoint - Mitchell's Hill Audiology SMD"/>
+			<description value="Shows an example of an Endpoint for the *AU Core Endpoint* profile representing a Secure Message Delivery (SMD) endpoint for Mitchell's Hill Audiology."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Endpoint/murrabit-hospital-hl7-v2-mllp"/>
+			</reference>
+			<name value="Endpoint - Murrabit Hospital HL7 v2 MLLP"/>
+			<description value="Shows an example of an Endpoint for the *AU Core Endpoint* profile representing a HL7 v2 MLLP endpoint for Murrabit Hospital."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
 		</resource>
 		<!--IMMUNIZATION EXAMPLES-->
 		<resource>

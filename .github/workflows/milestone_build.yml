@@ -1,4 +1,10 @@
-name: Milestone - Au base IG Profiles publish->go-publish
+name: (LEGACY) Milestone - Au Core IG Profiles publish->go-publish
+
+# LEGACY pipeline, deliberately kept TAG-TRIGGERED alongside the centralized build-review-publish.yml
+# so either release method can be used: this one renders into the self-hosted EC2 /webroot and pushing
+# to prod stays a manual step, so the two coexist without conflict. The centralized caller publishes
+# per publication-request status (working = automatic, milestone = gated by the production
+# environment).
 
 on:
   push:

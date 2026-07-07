@@ -6,11 +6,11 @@ HL7 Australia published FHIR implementation guides are required to follow specif
 - **SHALL** include an AU Variance Statement page
 
 ### Variance from AU Base
-This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 6.0.0-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-base/)).
+This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 6.1.2-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-base/)).
 
 #### Additionally Profiled Resources
 
 This implementation guide profiles the following resources that are not profiled in AU Base:
-
+- [AU Core DocumentReference](StructureDefinition-au-core-documentreference.html) profiles FHIR resource [DocumentReference](https://hl7.org/fhir/R4/documentreference.html)
 - Extension
   - [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html) profiles FHIR extension [Person Recorded Sex Or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender)

@@ -1,0 +1,55 @@
+name: AU Core — build / preview / gated publish
+
+# Thin caller for the CENTRALIZED reusable pipeline in hl7au/publications. The full build → preview →
+# publish logic lives once at hl7au/publications/.github/workflows/build-review-publish.yml; this stub
+# just forwards au-fhir-core's events to it. subtree="core" → au-core owns only the /fhir/core
+# subtree (au-base owns the /fhir root); the reusable workflow scopes the prod sync accordingly and
+# uploads only the shared root files au-core read-modify-writes.
+#
+# RELEASE FLOW: push a release-<version> tag on the release commit (publication-request.json must name
+# the same version). A working status (draft/ballot/preview) publishes to prod automatically as a
+# versioned snapshot; a milestone status (release/trial-use/normative — becomes 'current') waits for
+# one approval on THIS repo's `production` environment (deployment rules = master + v* + release-*).
+#
+# The legacy workflows (snapshot_build.yml / milestone_build.yml) deliberately stay tag-triggered
+# alongside: they stop at the staging bucket / EC2 webroot with a manual prod push, so either release
+# method can be used without conflict.
+
+on:
+  push:
+    branches: [master]
+    tags: ['v*', 'release-*']   # release-<version> is the established AU tagging convention
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Tag/branch of au-fhir-core to build"
+        default: master
+      publish_milestone:
+        description: "Promote the MILESTONE build to prod S3 (becomes 'current'; gated)"
+        type: boolean
+        default: false
+      publish_working:
+        description: "Publish the WORKING build to prod S3 (versioned snapshot, NOT current)"
+        type: boolean
+        default: false
+      deploy_preprod:
+        description: "Deploy this build to preprod (staging behind the real CloudFront setup)"
+        type: boolean
+        default: false
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  pipeline:
+    uses: hl7au/publications/.github/workflows/build-review-publish.yml@master
+    with:
+      subtree: "core"                                      # au-core owns only the /fhir/core subtree
+      ref: ${{ inputs.ref || '' }}
+      publish_milestone: ${{ inputs.publish_milestone || false }}
+      publish_working: ${{ inputs.publish_working || false }}
+      deploy_preprod: ${{ inputs.deploy_preprod || false }}
+    secrets: inherit
