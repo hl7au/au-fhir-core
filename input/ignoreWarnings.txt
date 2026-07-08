@@ -68,10 +68,6 @@ The provided code 'http://snomed.info/sct#78564009' was not found in the value s
 No definition could be found for URL value 'https://smd.mitchellshillaudiology.example.com.au/SealedMessageDelivery.svc'
 No definition could be found for URL value 'mllp://hl7v2.murrabithospital.example.com:56123'
 
-# === WARNING 14 [FOR AU CORE WG ACCEPTANCE]: INHERITED FROM FHIR STANDARD: R4 CapabilityStatement.format includes narrative support for the short-form values xml, json and ttl, however the required MimeTypes value set does not include these codes. The resulting terminology validation messages are expected for R4 implementation guides and do not indicate an issue with the implementation guide content. R5 introduces a dedicated value set for CapabilityStatement.format that includes the short-form codes but there is no equivalent correction for R4. See https://chat.fhir.org/#narrow/channel/179239-tooling/topic/CapabilityStatement.2Eformat.20and.20MIME.20Types.20warnings/with/608718733. ===
-Unknown Code 'json' in the CodeSystem 'urn:ietf:bcp:13' version '0.0.2' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-Unknown Code 'xml' in the CodeSystem 'urn:ietf:bcp:13' version '0.0.2' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-
 # === INFORMATION 01: INHERITED FROM FHIR STANDARD: Some FHIR standard ValueSets are published as draft. ===
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/device-action|4.0.1
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/condition-severity|4.0.1
