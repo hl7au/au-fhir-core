@@ -30,8 +30,10 @@ This change log documents the significant updates and resolutions implemented fr
   - changed Organization.identifier:abn.type to require code ABN from the IdentifierType AU code system [AU Base: FHIR-56103](https://jira.hl7.org/browse/FHIR-56103)
 - [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) 
   - corrected url for RelatedPerson-patient search parameter [AU Core: FHIR-57758](https://jira.hl7.org/browse/FHIR-57758) 
+  - added missing entries for CareTeam and Device resources [AU Core: FHIR-57789](https://jira.hl7.org/browse/FHIR-57789)
 - [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html)
-  - corrected url for RelatedPerson-patient search parameter [AU Core: FHIR-57758](https://jira.hl7.org/browse/FHIR-57758)  
+  - corrected url for RelatedPerson-patient search parameter [AU Core: FHIR-57758](https://jira.hl7.org/browse/FHIR-57758) 
+  - added missing entries for CareTeam and Device resources [AU Core: FHIR-57789](https://jira.hl7.org/browse/FHIR-57789) 
 
 ### Release 2.0.0
 - Publication date: 2026-01-28
