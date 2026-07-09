@@ -217,7 +217,7 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-documentreference.html">AU Core DocumentReference</a></td>
             <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/StructureDefinition-ipa-documentreference.html">IPA-DocumentReference</a></td>
             <td style="width: 25%;">DocumentReference.content.attachment.contentType</td>
-            <td style="width: 25%;">IPA requires minimum of 1</td>
+            <td style="width: 25%;">IPA requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;">DocumentReference.content.format</td>
@@ -2140,7 +2140,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> update <code>DiagnosticReport.meta.lastUpdated</code> to reflect new laboratory reports, and changes in the status of laboratory report.</td>
         </tr>
         <tr>
-            <td rowspan="15">DocumentReference</td>
+            <td rowspan="16">DocumentReference</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile and US Core ADI DocumentReference Profile which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile and US Core ADI DocumentReference Profile which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
