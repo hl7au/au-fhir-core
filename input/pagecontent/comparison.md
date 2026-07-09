@@ -119,6 +119,12 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationdispense.html">AU Core MedicationDispense</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+        </tr>
+        <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
@@ -791,6 +797,48 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
+            <td rowspan="10" style="width: 25%;"><a href="StructureDefinition-au-core-medicationdispense.html">AU Core MedicationDispense</a></td>
+            <td rowspan="10" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-medicationdispense.html">US Core MedicationDispense Profile</a></td>
+            <td style="width: 25%;">MedicationDispense.medication[x]</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.context</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. TBD - Encounter MS</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.performer.actor</td>
+            <td style="width: 25%;">TBD - US Core Org MS</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.type</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://hl7.org/fhir/R4/valueset-ucum-common.html">ActPharmacySupplyType</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.quantity</td>
+            <td style="width: 25%;">US Core preferred binding to <a href="https://terminology.hl7.org/7.0.0/ValueSet-v3-ActPharmacySupplyType.html">Common UCUM units</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.whenHandedOver</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.dosageInstruction.timing</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.dosageInstruction.route</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.22/expansion">Route of Administration of Therapeutic Agents</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.dosageInstruction.doseAndRate</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.dosageInstruction.doseAndRate.dose[x]</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core preferred binding to <a href="https://terminology.hl7.org/7.0.0/ValueSet-v3-ActPharmacySupplyType.html">Common UCUM units</a>.</td>
+        </tr>
+        <tr>
             <td rowspan="12" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
             <td rowspan="12" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
             <td style="width: 25%;">MedicationRequest.medicationCodeableConcept</td>
@@ -1106,7 +1154,6 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core ADI DocumentReference Profile
 - US Core DocumentReference Profile
 - US Core Goal Profile
-- US Core MedicationDispense Profile
 - US Core Average Blood Pressure Profile
 - US Core BMI Profile
 - US Core Care Experience Preference Profile
