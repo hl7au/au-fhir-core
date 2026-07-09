@@ -22,5 +22,5 @@
       <code value="http://ns.electronichealth.net.au/er/sc/deliver/hl7Mdm/2012"/>
     </coding>
   </payloadType>
-  <address value="https://smd.mitchellshillaudiology.example.com.au/SealedMessageDelivery.svc"/>
+  <address value="https://smd.mitchellshillaudiology.example.com/SealedMessageDelivery.svc"/>
 </Endpoint>
