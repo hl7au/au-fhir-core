@@ -2140,25 +2140,21 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> update <code>DiagnosticReport.meta.lastUpdated</code> to reflect new laboratory reports, and changes in the status of laboratory report.</td>
         </tr>
         <tr>
-            <td rowspan="16">DocumentReference</td>
+            <td rowspan="15">DocumentReference</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile and US Core ADI DocumentReference Profile which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DocumentReference Profile and US Core ADI DocumentReference Profile which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
-		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at minimum the ten <a href="https://hl7.org/fhir/us/core/ValueSet-us-core-clinical-note-type.html">Common Clinical Notes</a> in the DocumentReference.type.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at minimum the ten <a href="https://hl7.org/fhir/us/core/ValueSet-us-core-clinical-note-type.html">Common Clinical Notes</a> in the DocumentReference.type.</td>
-		</tr>
 		<tr>
 		  <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both <code>DocumentReference.content.attachment.url</code> and <code>DocumentReference.content.attachment.data</code>.</td>
 		  <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least one of <code>DocumentReference.content.attachment.url</code> and <code>DocumentReference.content.attachment.data</code>.</td>
 		</tr>
 		<tr>
-		  <td><img src="plus_sign.png" width="20"/> If there are multiple <code>DocumentReference.content</code> repetitions, these <strong>SHALL</strong> represent the same document in different formats or attachment metadata, and <strong>SHALL NOT</strong> represent different document versions.</td>
-		<td><img src="plus_sign.png" width="20"/> If there are multiple <code>DocumentReference.content</code> repetitions, these <strong>SHALL</strong> represent the same document in different formats or attachment metadata, and <strong>SHALL NOT</strong> represent different document versions.</td>
+		    <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support multiple <code>DocumentReference.content</code> repetitions only where they represent the same document in different formats or attachment metadata, and <strong>SHALL NOT</strong> use them to represent different document versions.</td>
+		    <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support multiple <code>DocumentReference.content</code> repetitions only where they represent the same document in different formats or attachment metadata, and <strong>SHALL NOT</strong> use them to represent different document versions.</td>
 		</tr>
 		<tr>
-		  <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of handling a responsible organisation, either direclty in <code>DocumentReference.custodian</code> or via <code>Provenance.agent.who</code> or <code>Provenance.agent.onBehalfOf</code>.</td>
-		<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> ensure that the responsible organisation is present either in <code>DocumentReference.custodian</code> or accesible via <code>Provenance.agent.who</code> or <code>Provenance.agent.onBehalfOf</code>.</td>
+		  <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> make the Organization responsible for the DocumentReference available either in <code>DocumentReference.custodian</code> or in a Provenance resource targeting the DocumentReference using <code>Provenance.agent.who</code> or <code>Provenance.agent.onBehalfOf</code>.</td>
+		  <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> make the Organization responsible for the DocumentReference available either in <code>DocumentReference.custodian</code> or in a Provenance resource targeting the DocumentReference using <code>Provenance.agent.who</code> or <code>Provenance.agent.onBehalfOf</code>.</td>
 		</tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of fetching a DocumentReference resource using: <code>GET [base]/DocumentReference/[id]</code>.</td>
@@ -2197,11 +2193,14 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td rowspan="2"><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status</code> search parameter combination.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status</code> search parameter combination.</td>
+            <td rowspan="3"><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status</code> search parameter combination.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status</code> search parameter combination.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> If a <code>period</code> parameter is supplied to the <code>$docref</code> operation, <strong>SHOULD</strong> return references to documents within the specified date range; if not supplied, <strong>SHALL</strong> return the most recent or current document(s).</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> return references to documents within the specified date range when a <code>period</code> is supplied to the <code>$docref</code> operation.</td>
+        </tr>
+        <tr>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> return the most recent or current document(s) when a <code>period</code> is not supplied to the <code>$docref</code> operation.</td>
         </tr>
         <tr>
             <td rowspan="9">Encounter</td>
