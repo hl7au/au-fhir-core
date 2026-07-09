@@ -10,5 +10,4 @@ The following are supported usage scenarios for this profile:
 
 
 ### Profile Specific Implementation Guidance
-
-No guidance defined.
+- See the [Medicine Information](medicine-information.html) page for guidance on how medicinal product identification can be structured in FHIR conformant to AU Core.
