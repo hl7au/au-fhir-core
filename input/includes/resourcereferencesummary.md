@@ -1,6 +1,7 @@
 |Resource Type|Profile|Supported Target Reference|
 |---|---|---|---|
 |AllergyIntolerance|[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|
+|Composition|[AU Core Composition](StructureDefinition-au-core-composition.html)|[Device](http://hl7.org/fhir/StructureDefinition/Device), [AU Core Organization](StructureDefinition-au-core-organization.html), [AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Practitioner](StructureDefinition-au-core-practitioner.html), [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html), [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html)|
 |Condition|[AU Core Condition](StructureDefinition-au-core-condition.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|
 |DiagnosticReport|[AU Base DiagnosticReport](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-diagnosticreport.html)|-|
 |DocumentReference|[DocumentReference](https://hl7.org/fhir/R4/documentreference.html)|-|
