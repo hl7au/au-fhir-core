@@ -214,8 +214,12 @@ The following IPA profile(s) contain additional requirements. Implementers are a
     </thead>
     <tbody>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-documentreference.html">AU Core DocumentReference</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/StructureDefinition-ipa-documentreference.html">IPA-DocumentReference</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-documentreference.html">AU Core DocumentReference</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/StructureDefinition-ipa-documentreference.html">IPA-DocumentReference</a></td>
+            <td style="width: 25%;">DocumentReference.content.attachment.contentType</td>
+            <td style="width: 25%;">IPA requires minimum of 1</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">DocumentReference.content.format</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPA.</td>
         </tr>
@@ -669,15 +673,11 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="13" style="width: 25%;"><a href="StructureDefinition-au-core-documentreference.html">AU Core DocumentReference</a></td>
-            <td rowspan="8" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile</a></td>
+            <td rowspan="12" style="width: 25%;"><a href="StructureDefinition-au-core-documentreference.html">AU Core DocumentReference</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile</a></td>
             <td style="width: 25%;">DocumentReference.extension:authenticationTime</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
          </tr>
-        <tr>
-            <td style="width: 25%;">DocumentReference.identifier</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
-        </tr>
         <tr>
             <td style="width: 25%;">DocumentReference.type</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.41/expansion">Advance Healthcare Directive Document Types Grouper</a>.</td>
@@ -721,7 +721,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">DocumentReference.context.encounter</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">US Core allows maximum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
