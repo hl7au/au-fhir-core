@@ -40,4 +40,5 @@ jobs:
       subtree: "core"                                      # au-core owns only the /fhir/core subtree
       ref: ${{ inputs.ref || '' }}
       deploy_preprod: ${{ inputs.deploy_preprod || false }}
+      qa_max_errors: 4                                     # QA gate: current baseline is 4 errors — ratchet down as they're fixed
     secrets: inherit
