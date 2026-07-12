@@ -2389,6 +2389,23 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> and <code>patient+status</code> search parameter combinations.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> and <code>patient+status</code> search parameter combinations.</td>
 		</tr>
+        <tr>
+            <td rowspan="9">MedicationDispense</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationDispense Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationDispense Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+        </tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both <code>MedicationDispense.medicationCodeableConcept</code> and <code>MedicationDispense.medicationReference</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least one of <code>MedicationDispense.medicationCodeableConcept</code> and <code>MedicationDispense.medicationReference</code>.</td>
+        </tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> and <code>patient+status</code> search parameter combinations.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> and <code>patient+status</code> search parameter combinations.</td>
+        </tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
 		<tr>
             <td rowspan="9">MedicationRequest</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationRequest Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
