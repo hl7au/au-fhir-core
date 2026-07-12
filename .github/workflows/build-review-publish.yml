@@ -1,0 +1,44 @@
+name: AU Core — build / preview / release to preprod
+
+# Thin caller for the CENTRALIZED reusable pipeline in hl7au/publications. The full build → preview →
+# preprod-deploy logic lives once at hl7au/publications/.github/workflows/build-review-publish.yml;
+# this stub just forwards au-fhir-core's events to it. subtree="core" → au-core owns only the
+# /fhir/core subtree (au-base owns the /fhir root); the reusable workflow scopes the preprod sync
+# accordingly and uploads only the shared root files au-core read-modify-writes.
+#
+# RELEASE FLOW: publication/release branches are never merged to master (master = CI build). Cut a
+# GitHub RELEASE targeting the release branch → this builds and deploys to PREPROD (staging). PROD is
+# NOT published from here: promotion is a manual, HL7 AU-only step in the publications repo
+# (Actions → "Promote preprod → prod"), which copies the approved preprod content to prod. See the
+# reusable workflow + publications docs/publication-process.md for the full design.
+
+on:
+  push:
+    branches: [master]          # CI validation build only (no deploy)
+  pull_request:
+    branches: [master]
+  release:
+    types: [published]          # a GitHub release → build + deploy to preprod (staging)
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Tag/branch of au-fhir-core to build"
+        default: master
+      deploy_preprod:
+        description: "Deploy this build to preprod (on-demand branch staging behind the real CloudFront setup)"
+        type: boolean
+        default: false
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write   # let the reusable QA gate upsert its summary comment on PRs
+
+jobs:
+  pipeline:
+    uses: hl7au/publications/.github/workflows/build-review-publish.yml@master
+    with:
+      subtree: "core"                                      # au-core owns only the /fhir/core subtree
+      ref: ${{ inputs.ref || '' }}
+      deploy_preprod: ${{ inputs.deploy_preprod || false }}
+    secrets: inherit
