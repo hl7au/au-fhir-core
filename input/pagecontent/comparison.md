@@ -311,8 +311,8 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
-            <td rowspan="53" style="width: 25%;"><a href="StructureDefinition-au-core-composition.html">AU Core Composition</a></td>
-            <td rowspan="53" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Composition-uv-ips.html">Composition (IPS)</a></td>
+            <td rowspan="54" style="width: 25%;"><a href="StructureDefinition-au-core-composition.html">AU Core Composition</a></td>
+            <td rowspan="54" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Composition-uv-ips.html">Composition (IPS)</a></td>
             <td style="width: 25%;">Composition.meta.profile</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
         </tr> 
@@ -343,6 +343,10 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         <tr>
             <td style="width: 25%;">Composition.section</td>
              <td style="width: 25%;">IPS requires minimum of 3.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Composition.section[all slices].code</td>
+             <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Composition.section[all slices].text</td>
