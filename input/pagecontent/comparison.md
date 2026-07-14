@@ -804,11 +804,11 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">MedicationDispense.context</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. TBD - Encounter MS</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. Reference target Encounter is flagged as Must Support in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationDispense.performer.actor</td>
-            <td style="width: 25%;">TBD - US Core Org MS</td>
+            <td style="width: 25%;">Reference target Organization is flagged as Must Support in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationDispense.type</td>
@@ -820,7 +820,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">MedicationDispense.whenHandedOver</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">Element SHALL be present if MedicationDispense.status is "completed" (us-core-20). Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationDispense.dosageInstruction.timing</td>
@@ -836,7 +836,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">MedicationDispense.dosageInstruction.doseAndRate.dose[x]</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core preferred binding to <a href="https://terminology.hl7.org/7.0.0/ValueSet-v3-ActPharmacySupplyType.html">Common UCUM units</a>.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core preferred binding to <a href="https://terminology.hl7.org/7.0.0/ValueSet-v3-ActPharmacySupplyType.html">Common UCUM units</a>. Type choice quantity is flagged as Must Support in US Core.</td>
         </tr>
         <tr>
             <td rowspan="12" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
@@ -2346,21 +2346,9 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="11">MedicationDispense</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support MedicationDispense resource.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support MedicationDispense resource.</td>
-        </tr>
-		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core MedicationDispense Profile.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core MedicationDispense Profile.</td>
-		</tr>
-         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>search-type</code> and <code>read</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>search-type</code> and <code>read</code> interactions.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>patient</code> search parameter.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>patient</code> search parameter.</td>
+            <td rowspan="8">MedicationDispense</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationDispense Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationDispense Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
         <tr>
             <td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support representing medication using a code and using a reference to a Medication resource.</td>
@@ -2386,26 +2374,9 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of returning a MedicationDispense resource using <code>GET [base]/MedicationDispense/[id]</code>.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> and <code>patient+status</code> search parameter combinations.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> and <code>patient+status</code> search parameter combinations.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> search parameter combination.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> search parameter combination.</td>
 		</tr>
-        <tr>
-            <td rowspan="9">MedicationDispense</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationDispense Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationDispense Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both <code>MedicationDispense.medicationCodeableConcept</code> and <code>MedicationDispense.medicationReference</code>.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least one of <code>MedicationDispense.medicationCodeableConcept</code> and <code>MedicationDispense.medicationReference</code>.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> and <code>patient+status</code> search parameter combinations.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> and <code>patient+status</code> search parameter combinations.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
-        </tr>
 		<tr>
             <td rowspan="9">MedicationRequest</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationRequest Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
