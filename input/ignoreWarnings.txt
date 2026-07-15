@@ -65,7 +65,6 @@ Unable to check whether the code is in the value set 'http://terminology.hl7.org
 The provided code 'http://snomed.info/sct#78564009' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'; The provided code 'http://snomed.info/sct#364075005' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'
 
 # === WARNING 13: Examples of Endpoint address URLs do not have formal definition as they are examples.  ===
-No definition could be found for URL value 'https://smd.mitchellshillaudiology.example.com/SealedMessageDelivery.svc'
 No definition could be found for URL value 'mllp://hl7v2.murrabithospital.example.com:56123'
 
 # === INFORMATION 01: INHERITED FROM FHIR STANDARD: Some FHIR standard ValueSets are published as draft. ===
