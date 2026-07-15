@@ -1,13 +1,15 @@
 {%   include search_parameters_intro.md -%}
 
 <table class="list">
-<tbody>
+<thead>
   <tr>
     <th>Parameter(s)</th>
     <th>Conformance </th>
     <th>Type(s)</th>
     <th>Requirements (when used alone or in combination)</th>
   </tr>
+</thead>
+<tbody>
   <tr>
         <td>name</td>
         <td><b>SHALL</b></td>
