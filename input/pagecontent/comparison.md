@@ -164,7 +164,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
          <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-relatedperson.html">AU Core RelatedPerson</a></td>
@@ -521,7 +521,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
             <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></td>
             <td style="width: 25%;">AllergyIntolerance.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion">Common substances for allergy and intolerance documentation including refutations</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113762.1.4.1267.43-20260321">Allergen Concepts (Medications, Foods, and Environmental Substances) including refutations.</a>.</td>
         </tr>
         <tr>
            <td style="width: 25%;">AllergyIntolerance.manifestation</td>
@@ -535,7 +535,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113883.3.88.12.80.62-20251202">Vital Sign Result Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]</td>
@@ -549,11 +549,11 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113883.3.88.12.80.62-20251202">Vital Sign Result Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.component.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113883.3.88.12.80.62-20251202">Vital Sign Result Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.component.value[x]</td>
@@ -567,11 +567,11 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113883.3.88.12.80.62-20251202">Vital Sign Result Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.component.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113883.3.88.12.80.62-20251202">Vital Sign Result Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.component.value[x]</td>
@@ -585,19 +585,19 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113883.3.88.12.80.62-20251202">Vital Sign Result Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.component.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113883.3.88.12.80.62-20251202">Vital Sign Result Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.component.value[x]</td>
             <td style="width: 25%;">Type choice Quantity is flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+            <td rowspan="10" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
             <td style="width: 25%;">Condition.category</td>
             <td style="width: 25%;">US Core requires category of 'problem-list-item' or 'health-concern'.</td>
         </tr>
@@ -608,6 +608,10 @@ The following US Core profile(s) contain additional requirements. Implementers a
         <tr>
             <td style="width: 25%;">Condition.meta.lastUpdated</td>
             <td style="width: 25%;">Sub-element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Condition.code</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-condition-code.html">US Core Condition Codes</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.assertedDate</td>
@@ -622,11 +626,15 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a></td>
             <td style="width: 25%;">Condition.encounter</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
-         <tr>
+        <tr>
+            <td style="width: 25%;">Condition.code</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-condition-code.html">US Core Condition Codes</a>.</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">Condition.recordedDate</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
@@ -656,7 +664,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
             <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
             <td style="width: 25%;">Encounter.type</td>
-            <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.23/expansion">Encounter Type</a>.</td>
+            <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113762.1.4.1267.23-20250510">Encounter Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Encounter.meta</td>
@@ -694,7 +702,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
             <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-heart-rate.html">US Core Heart Rate Profile</a></td>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113883.3.88.12.80.62-20251202">Vital Sign Result Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.performer</td>
@@ -702,7 +710,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.component.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113883.3.88.12.80.62-20251202">Vital Sign Result Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.component.value[x]</td>
@@ -712,7 +720,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
             <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-immunization.html">US Core Immunization Profile</a></td>
             <td style="width: 25%;">Immunization.vaccineCode</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.6/expansion">CVX Vaccines Administered Vaccine Set</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113762.1.4.1010.6-20260428">CVX Vaccines Administered Vaccine Set</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Immunization.statusReason</td>
@@ -750,7 +758,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Location.type</td>
-            <td style="width: 25%;">US Core extensible additional bindings to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.31/expansion">Healthcare Service Location Type Combined</a> and <a href="https://terminology.hl7.org/6.4.0/ValueSet-CMSPlaceOfServiceCodes.html">CMS Place of Service Codes (POS)</a>.</td>
+            <td style="width: 25%;">US Core extensible bindings to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-location-type.html">US Core Location Type Codes</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Location.type.coding</td>
@@ -788,13 +796,13 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-medication.html">US Core Medication Profile</a></td>
             <td style="width: 25%;">Medication.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113762.1.4.1010.4-20240606">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
             <td rowspan="12" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
             <td rowspan="12" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
             <td style="width: 25%;">MedicationRequest.medicationCodeableConcept</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113762.1.4.1010.4-20240606">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.category</td>
@@ -818,7 +826,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dosageInstruction.route</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.22/expansion">Route of Administration of Therapeutic Agents</a>. Sub-element flagged as <i>Must Support</i> in US Core.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113762.1.4.1267.22-20241015">Route of Administration of Therapeutic Agents</a>. Sub-element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.dosageInstruction.doseAndRate</td>
@@ -1012,15 +1020,21 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">PractitionerRole.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.30/expansion">Care Team Member Function</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113762.1.4.1099.30-20240605">Care Team Member Function</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">PractitionerRole.specialty</td>
-            <td style="width: 25%;"> US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.1066/expansion">Healthcare Provider Taxonomy</a>.</td>
+            <td style="width: 25%;"> US Core extensible binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-practitionerrole-specialty.html">US Core Practitioner Role Specialty Codes</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-relatedperson.html">US Core Procedure Profile</a></td>
+            <td style="width: 25%;">Procedure.code</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-procedure-code.html">US Core Procedure Codes</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-relatedperson.html">AU Core RelatedPerson</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-relatedperson.html">US Core RelatedPerson Profile</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-procedure.html">US Core RelatedPerson Profile</a></td>
             <td style="width: 25%;">RelatedPerson.active</td>
             <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
@@ -1028,7 +1042,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-resprate.html">AU Core Respiration Rate</a></td>
             <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-respiratory-rate.html">US Core Respiratory Rate Profile</a></td>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113883.3.88.12.80.62-20251202">Vital Sign Result Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.performer</td>
@@ -1036,7 +1050,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.component.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113883.3.88.12.80.62-20251202">Vital Sign Result Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.component.value[x]</td>
@@ -1050,7 +1064,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.6/expansion">Smoking Status Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113762.1.4.1267.6-20240222">Smoking Status Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.performer</td>
@@ -1062,7 +1076,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]:valueCodeableConcept</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.3/expansion">Smoking status comprehensive</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113762.1.4.1267.3-20240217">Smoking status comprehensive</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]:valueQuantity</td>
@@ -1070,13 +1084,13 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-simple-observation.html">US Core Vital Signs Profile</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-vital-signs.html">US Core Vital Signs Profile</a></td>
             <td style="width: 25%;">Observation.performer</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113883.3.88.12.80.62-20251202">Vital Sign Result Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.component.value[x]</td>
@@ -1084,7 +1098,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.component.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113883.3.88.12.80.62-20251202">Vital Sign Result Type</a>.</td>
         </tr> 
     </tbody>
 </table>
@@ -1100,11 +1114,12 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core CarePlan Profile
 - US Core CareTeam Profile
 - US Core Coverage Profile
-- US Core Implantable Device Profile
-- US Core DiagnosticReport Profile for Laboratory Results Reporting Profile
-- US Core DiagnosticReport Profile for Report and Note Exchange Profile
+- US Core Device Profile
+- US Core DiagnosticReport Profile for Laboratory Results Reporting
+- US Core DiagnosticReport Profile for Report and Note Exchange
 - US Core ADI DocumentReference Profile
 - US Core DocumentReference Profile
+- US Core FamilyMemberHistory Profile
 - US Core Goal Profile
 - US Core MedicationDispense Profile
 - US Core Average Blood Pressure Profile
@@ -2498,7 +2513,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="7">Procedure</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both the US Core Procedure and US Core ServiceRequest profiles for communicating the reason for referral or consultation via <code>Procedure.basedOn</code>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Procedure which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least one of target resource types in <code>Procedure.reasonReference</code>.</td>
         </tr>
 		<tr>
@@ -2506,7 +2521,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> ensure that referenced resources in <code>Procedure.reasonReference</code> conform to US Core profiles.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both the US Core Procedure and US Core ServiceRequest profiles for communicating the reason for referral or consultation via <code>Procedure.basedOn</code>.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support the US Core Procedure which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
 		</tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use <code>Procedure.focalDevice</code> with reference to the US Core Implantable Device Profile when applicable.</td>
