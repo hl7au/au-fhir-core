@@ -730,6 +730,14 @@
 			<description value="Shows an example of an organisation, Pullabooka Pathology, for the *AU Core Organization* profile, with HPI-O identifier, type specified as a pathology service, with contact details and partial address."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/appin-pharmacy"/>
+			</reference>
+			<name value="Organization - Appin Pharmacy"/>
+			<description value="Shows an example of an organisation, Appin Pharmacy, for the *AU Core Organization* profile, with HPI-O and ABN identifiers, type specified as a community pharmacy, with contact details and partial address."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
+		</resource>
 		<!--PATIENT EXAMPLES-->
 		<resource>
 			<reference>
