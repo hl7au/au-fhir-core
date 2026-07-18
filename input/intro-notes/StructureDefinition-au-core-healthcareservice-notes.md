@@ -1,13 +1,15 @@
 {%   include search_parameters_intro.md -%}
 
 <table class="list">
-<tbody>
+<thead>
   <tr>
     <th>Parameter(s)</th>
     <th>Conformance </th>
     <th>Type(s)</th>
     <th>Requirements (when used alone or in combination)</th>
   </tr>
+</thead>
+<tbody>
   <tr>
         <td>name</td>
         <td><b>SHALL</b></td>
@@ -18,7 +20,7 @@
         <td>identifier</td>
         <td><b>SHOULD</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/></td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>_id</td>

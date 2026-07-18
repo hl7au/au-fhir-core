@@ -1,12 +1,14 @@
 {% include search_parameters_intro.md -%}
 <table class="list">
-<tbody>
+<thead>
   <tr>
     <th>Parameter(s)</th>
-    <th>Conformance</th>
+    <th>Conformance </th>
     <th>Type(s)</th>
     <th>Requirements (when used alone or in combination)</th>
   </tr>
+</thead>
+<tbody>
   <tr>
         <td>patient</td>
         <td><b>SHALL</b></td>
@@ -59,7 +61,7 @@
         <td>status</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <strong>SHALL</strong> support <code>multipleOr</code>.The responder <strong>SHALL</strong> support <code>multipleOr</code>.</td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <strong>SHALL</strong> support <code>multipleOr</code>. The responder <strong>SHALL</strong> support <code>multipleOr</code>.</td>
   </tr>
  </tbody>
 </table>
@@ -85,7 +87,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 1. **SHALL** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`date`](https://hl7.org/fhir/R4/encounter.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHALL** support these `date` comparators: `gt,lt,ge,le`
-    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g. `date=[date]&date=[date]]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, <strong>SHALL</strong> support the search comparators `gt,lt,ge,le`
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g. `date=[date]&date=[date]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, <strong>SHALL</strong> support the search comparators `gt,lt,ge,le`
 
     `GET [base]/Encounter?patient={Type/}[id]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
@@ -126,10 +128,10 @@ The following search parameters and search parameter combinations **SHOULD** be 
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g. `status={system|}[code],{system|}[code],...`)
 
-    `GET [base]/Encounter?patient={Type/}[id]&&status={system|}[code]{,{system|}[code],...}`
+    `GET [base]/Encounter?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
 
     Example:
     
       1. GET [base]/Encounter?patient=5678&amp;status=finished
 
-    *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference)) and [how to search by token](http://hl7.org/fhir/R4/search.html#token)).
+    *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token)).

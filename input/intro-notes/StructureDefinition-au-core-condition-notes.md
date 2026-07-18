@@ -1,12 +1,14 @@
 {% include search_parameters_intro.md -%}
 <table class="list">
-<tbody>
+<thead>
   <tr>
     <th>Parameter(s)</th>
-    <th>Conformance</th>
+    <th>Conformance </th>
     <th>Type(s)</th>
     <th>Requirements (when used alone or in combination)</th>
   </tr>
+</thead>
+<tbody>
    <tr>
         <td>patient</td>
         <td><b>SHALL</b></td>
@@ -123,7 +125,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     Example:
     
-      1. GET [base]/Condition?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|encounter-diagnosis&amp;clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical\|active
+      1. GET [base]/Condition?patient=5678&amp;category=http://terminology.hl7.org/CodeSystem/condition-category\|encounter-diagnosis&amp;clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical\|active
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and category and clinical-status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
@@ -142,9 +144,9 @@ The following search parameters and search parameter combinations **SHOULD** be 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/condition.html#search)** and **[`onset-date`](https://hl7.org/fhir/R4/condition.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHALL** support these `onset-date` comparators: `gt,lt,ge,le`
-    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `onset-date` (e.g. `onset-date=[date]&date=[date]]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, <strong>SHALL</strong> support the search comparators `gt,lt,ge,le`
+    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `onset-date` (e.g. `onset-date=[date]&onset-date=[date]]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, <strong>SHALL</strong> support the search comparators `gt,lt,ge,le`
 
-    `GET [base]/Condition?patient={Type/}[id]&onset-date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/Condition?patient={Type/}[id]&onset-date={gt|lt|ge|le}[date]{&onset-date={gt|lt|ge|le}[date]&...}`
 
     Example:
     

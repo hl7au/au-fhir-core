@@ -1,12 +1,14 @@
 {% include search_parameters_intro.md -%}
 <table class="list">
-<tbody>
+<thead>
   <tr>
     <th>Parameter(s)</th>
     <th>Conformance </th>
     <th>Type(s)</th>
     <th>Requirements (when used alone or in combination)</th>
   </tr>
+</thead>
+<tbody>
   <tr>
         <td>patient</td>
         <td><b>SHALL</b></td>
@@ -61,4 +63,4 @@ The following search parameters and search parameter combinations **SHOULD** be 
     
       1. GET [base]/AllergyIntolerance?patient=5678&amp;clinical-status=http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical\|active
 
-    *Implementation Notes:* Fetches a bundle of all AllergyIntolerance resources for the specified patient and status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all AllergyIntolerance resources for the specified patient and clinical status ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))

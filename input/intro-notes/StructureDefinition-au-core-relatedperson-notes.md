@@ -1,12 +1,14 @@
 {% include search_parameters_intro.md -%}
 <table class="list">
-<tbody>
+<thead>
   <tr>
     <th>Parameter(s)</th>
-    <th>Conformance</th>
+    <th>Conformance </th>
     <th>Type(s)</th>
     <th>Requirements (when used alone or in combination)</th>
   </tr>
+</thead>
+<tbody>
   <tr>
         <td>patient</td>
         <td><b>SHALL</b></td>
@@ -42,7 +44,7 @@
         <td>relationship</td>
         <td><b>MAY</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder SHALL support both.</td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
   </tr>
  </tbody>
 </table>
@@ -88,8 +90,8 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     Example:
     
-      1. GET [base]/RelatedPerson?patient=5678&amp;relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode\|MTH,http://snomed.info/sct\|133932002
-      1. GET [base]/RelatedPerson?patient.identifier=http://example.org/fhir/mrn\|12345&amp;relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode\|MTH,http://snomed.info/sct\|133932002
+      1. GET [base]/RelatedPerson?patient=5678&amp;relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode\|MTH
+      1. GET [base]/RelatedPerson?patient.identifier=http://example.org/fhir/mrn\|12345&amp;relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode\|MTH
 
     *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient and relationship code ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 

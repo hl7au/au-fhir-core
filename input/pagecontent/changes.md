@@ -30,8 +30,10 @@ This change log documents the significant updates and resolutions implemented fr
   - changed Organization.identifier:abn.type to require code ABN from the IdentifierType AU code system [AU Base: FHIR-56103](https://jira.hl7.org/browse/FHIR-56103)
 - [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) 
   - corrected url for RelatedPerson-patient search parameter [AU Core: FHIR-57758](https://jira.hl7.org/browse/FHIR-57758) 
+  - added missing entries for CareTeam and Device resources [AU Core: FHIR-57789](https://jira.hl7.org/browse/FHIR-57789)
 - [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html)
-  - corrected url for RelatedPerson-patient search parameter [AU Core: FHIR-57758](https://jira.hl7.org/browse/FHIR-57758)  
+  - corrected url for RelatedPerson-patient search parameter [AU Core: FHIR-57758](https://jira.hl7.org/browse/FHIR-57758) 
+  - added missing entries for CareTeam and Device resources [AU Core: FHIR-57789](https://jira.hl7.org/browse/FHIR-57789) 
 
 ### Release 2.0.0
 - Publication date: 2026-01-28
@@ -196,8 +198,13 @@ This change log documents the significant updates and resolutions implemented fr
     - name search parameter to SHOULD instead of SHALL [AU Core: FHIR-45133](https://jira.hl7.org/browse/FHIR-45133)
 - Changes to [AU Core Immunization](https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-immunization.html):
   - removed Must Support from Immunization.encounter [AU Core: FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
-  - removed Must Support from Immunization.performer, Immunization.performer.function, Immunization.performer.actor [AU Core: FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
-  - removed Must Support from Immunization.protocolApplied, Immunization.protocolApplied.series, Immunization.protocolApplied.targetDisease, Immunization.protocolApplied.doseNumber[x] [AU Core: FHIR-44674](https://jira.hl7.org/browse/FHIR-44674), [AU Core: FHIR-44656](https://jira.hl7.org/browse/FHIR-44656), [AU Core: FHIR-44654](https://jira.hl7.org/browse/FHIR-44654)
+  - removed Must Support from Immunization.performer [AU Core: FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
+  - removed Must Support from Immunization.performer.function [AU Core: FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
+  - removed Must Support from Immunization.performer.actor [AU Core: FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
+  - removed Must Support from Immunization.protocolApplied [AU Core: FHIR-44674](https://jira.hl7.org/browse/FHIR-44674), [AU Core: FHIR-44656](https://jira.hl7.org/browse/FHIR-44656), [AU Core: FHIR-44654](https://jira.hl7.org/browse/FHIR-44654)
+  - removed Must Support from Immunization.protocolApplied.series [AU Core: FHIR-44674](https://jira.hl7.org/browse/FHIR-44674), [AU Core: FHIR-44656](https://jira.hl7.org/browse/FHIR-44656), [AU Core: FHIR-44654](https://jira.hl7.org/browse/FHIR-44654)
+  - removed Must Support from Immunization.protocolApplied.targetDisease [AU Core: FHIR-44674](https://jira.hl7.org/browse/FHIR-44674), [AU Core: FHIR-44656](https://jira.hl7.org/browse/FHIR-44656), [AU Core: FHIR-44654](https://jira.hl7.org/browse/FHIR-44654)
+  - removed Must Support from Immunization.protocolApplied.doseNumber[x] [AU Core: FHIR-44674](https://jira.hl7.org/browse/FHIR-44674), [AU Core: FHIR-44656](https://jira.hl7.org/browse/FHIR-44656), [AU Core: FHIR-44654](https://jira.hl7.org/browse/FHIR-44654)
   - removed Must Support from Immunization.reasonCode [AU Core: FHIR-44654](https://jira.hl7.org/browse/FHIR-44654), [AU Core: FHIR-45968](https://jira.hl7.org/browse/FHIR-45968)
   - added Must Support to Immunization.primarySource [AU Core: FHIR-44659](https://jira.hl7.org/browse/FHIR-44659)
   - changed Immunization.vaccineCode slicing rule from slicing by system to slice by value set [AU Core: FHIR-46391](https://jira.hl7.org/browse/FHIR-46391)
@@ -282,11 +289,6 @@ This change log documents the significant updates and resolutions implemented fr
   - removed the fixed value constraint 'final' on Observation.status [AU Core: FHIR-45120](https://jira.hl7.org/browse/FHIR-45120)
   - replaced Observation.code patternCodeableConcept constraint of 266918002 \|Tobacco smoking consumption\| with 1747861000168109 \|Smoking status\| [AU Core: FHIR-45124](https://jira.hl7.org/browse/FHIR-45124)
   - corrected invariant au-core-obs-01 to change the length check from >= 10 to >= 8 to match required precision to the day [AU Core: FHIR-46407](https://jira.hl7.org/browse/FHIR-46407)
-- Changes to [AU Core Immunization](https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-immunization.html):
-  - removed Must Support from Immunization.encounter [AU Core: FHIR-45218](https://jira.hl7.org/browse/FHIR-45218)
-  - removed Must Support from Immunization.performer [AU Core: FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
-  - removed Must Support from Immunization.performer.function [AU Core: FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
-  - removed Must Support from Immunization.performer.actor [AU Core: FHIR-44653](https://jira.hl7.org/browse/FHIR-44653)
 - Changes to [AU Core Blood Pressure](https://hl7.org.au/fhir/core/1.0.0-ballot/StructureDefinition-au-core-bloodpressure.html): 
   - removed Must Support from Observation.encounter [AU Core: FHIR-45134](https://jira.hl7.org/browse/FHIR-45134)
   - removed Must Support from Observation.performer [AU Core: FHIR-44786](https://jira.hl7.org/browse/FHIR-44786)
