@@ -1,9 +1,9 @@
 |Resource Type|Profile|Supported Target Reference|
 |---|---|---|---|
 |AllergyIntolerance|[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|
+|CareTeam|[CareTeam](http://hl7.org/fhir/R4/careteam.html)|-|
 |Condition|[AU Core Condition](StructureDefinition-au-core-condition.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|
-|DiagnosticReport|[AU Base DiagnosticReport](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-diagnosticreport.html)|-|
-|DocumentReference|[DocumentReference](https://hl7.org/fhir/R4/documentreference.html)|-|
+|Device|[Device](https://hl7.org/fhir/R4/device.html)|-|
 |Encounter|[AU Core Encounter](StructureDefinition-au-core-encounter.html)|[AU Core Condition](StructureDefinition-au-core-condition.html), [AU Core Location](StructureDefinition-au-core-location.html), [AU Core Organization](StructureDefinition-au-core-organization.html), [AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Practitioner](StructureDefinition-au-core-practitioner.html), [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html), [AU Core Procedure](StructureDefinition-au-core-procedure.html), [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html),  [Observation](http://hl7.org/fhir/R4/observation.html)|
 |Endpoint|[AU Core Endpoint](StructureDefinition-au-core-endpoint.html)|-|
 |HealthcareService|[AU Core HealthcareService](StructureDefinition-au-core-healthcareservice.html)|-|

@@ -80,13 +80,13 @@ The following search parameters **SHOULD** be supported:
 
     *Implementation Notes:* Fetches a bundle of all Location resources for the city ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
-1. **SHOULD** support searching using the **[`addresss-postalcode`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
+1. **SHOULD** support searching using the **[`address-postalcode`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
     
-    `GET [base]/Location?addresss-postalcode=[string]`
+    `GET [base]/Location?address-postalcode=[string]`
 
     Example:
     
-      1. GET [base]/Location?addresss-postalcode=3005
+      1. GET [base]/Location?address-postalcode=3005
 
     *Implementation Notes:* Fetches a bundle of all Location resources matching the post code ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
