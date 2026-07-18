@@ -30,7 +30,9 @@
         <code value="TAB"/>
     </quantity>
     <whenPrepared value="2018-07-15"/>
-    <note value="Consumer advised not to exceed 8 tablets in 24 hours."/>
+    <note>
+        <text value="Consumer advised not to exceed 8 tablets in 24 hours."/>
+    </note>
     <dosageInstruction>
         <text value="1-2 tablets every 4-6 hours as needed for pain"/>
         <timing>
