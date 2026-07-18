@@ -203,7 +203,7 @@ The guidance for how to support coded or text identification of medicinal produc
     ~~~
 
 
-  Example: Medication with text only medication form and strength for the medication as a whole.
+    Example: Medication with text only medication form and strength for the medication as a whole.
     ~~~
     {
       "resourceType": "Medication",
