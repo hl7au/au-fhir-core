@@ -86,10 +86,13 @@ The guidance for how to support coded or text identification of medicinal produc
       - brand name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
       - generic name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
    - If the resource is a Medication resource:
-      - form and strength may be separately provided in `Medication.form`, `Medication.ingredient.itemCodeableConcept` and `Medication.ingredient.strength` when they are not implicit in `Medication.code`
+      - form = `Medication.form` when not implicit in `Medication.code`
+      - medication strength = `Medication.extension` [Medication Strength extension](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-strength.html) when not implicit in `Medication.code`
+      - ingredient strength may be separately provided in `Medication.ingredient.itemCodeableConcept` and `Medication.ingredient.strength` when not implicit in `Medication.code`
+        - where ingredient strength is unavailable as a ratio, it may instead be provided as text in `CodeableConcept.text` using the FHIR R5 element pre-adoption of `Medication.ingredient.strength[x]`, extension URL `http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]` applied on `Medication.ingredient`
       
 
-    Example: Medication with coded brand name, generic name, item form and strength.
+    Example: Medication with coded brand name, generic name, form and ingredient strength.
     ~~~
     {
       "resourceType": "Medication",
