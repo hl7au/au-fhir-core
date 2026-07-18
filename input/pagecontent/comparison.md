@@ -337,10 +337,14 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td  style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticreport.html">AU Core DiagnosticReport</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html">DiagnosticReport (IPS)</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticreport.html">AU Core DiagnosticReport</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html">DiagnosticReport (IPS)</a></td>
             <td style="width: 25%;">DiagnosticReport.status</td>
             <td style="width: 25%;">IPS requires value from <a href="https://hl7.org/fhir/uv/ips/STU2/ValueSet-diagnostics-report-status-uv-ips.html">Diagnostics Report Status Codes - IPS</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.code<td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">DiagnosticReport.subject.reference</td>
@@ -674,6 +678,10 @@ The following US Core profile(s) contain additional requirements. Implementers a
         <tr>
             <td style="width: 25%;">DiagnosticReport.effective[x]</td>
             <td style="width: 25%;">Type choice of dateTime is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.performer</td>
+            <td style="width: 25%;">Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td style="width: 25%;">DiagnosticReport.resultsInterpreter</td>
@@ -2102,8 +2110,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="9">DiagnosticReport</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DiagnosticReport Profile for Laboratory Results Reporting  and US Core DiagnosticReport Profile for Report and Note Exchange profiles.</td>
-		<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DiagnosticReport Profile for Laboratory Results Reporting  and US Core DiagnosticReport Profile for Report and Note Exchange profiles.</td>	
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DiagnosticReport Profile for Laboratory Results Reporting  and US Core DiagnosticReport Profile for Report and Note Exchange profiles which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+		<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DiagnosticReport Profile for Laboratory Results Reporting  and US Core DiagnosticReport Profile for Report and Note Exchange profiles which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>	
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of fetching a DiagnosticReport resource using: <code>GET [base]/DiagnosticReport/[id]</code>.</td>

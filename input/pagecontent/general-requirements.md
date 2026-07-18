@@ -192,7 +192,7 @@ The table below provides a list of AU Core profile elements that allow multiple 
 
 AU Core Profile |Must Support Element|Reference
 ---|---|---
-[AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html)|DiagnosticReport.performer|AU Core Organization, AU Core Practitioner, AU Core PractitionerRole, CareTeam
+[AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html)|DiagnosticReport.performer|CareTeam, AU Core Organization, AU Core Practitioner, AU Core PractitionerRole
 [AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html)|DiagnosticReport.result|AU Base Diagnostic Imaging Result, AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.hasMember|AU Base Diagnostic Imaging Result, AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
