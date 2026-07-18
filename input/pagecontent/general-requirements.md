@@ -402,7 +402,7 @@ When an element definition is optional (minimum cardinality = 0), including elem
 - The element **SHALL NOT** be populated in the resource when a value is suppressed.  
 
 When an element definition is mandatory (minimum cardinality > 0), 
-- The element **SHALL** be correctly populated in the source system but it may exceed the data requester's access rights to know that the data is suppressed:
+- The element **SHALL** be correctly populated but it may exceed the data requester's access rights to know that the data is suppressed:
   - where a requester does not have access rights to know that data is suppressed use the code "unknown" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
-  - where a requester may know that the data is suppressed use the code "masked" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
+  - where a requester has the access rights to know that data is suppressed use the code "masked" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
 
