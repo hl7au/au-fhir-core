@@ -2,7 +2,7 @@
 <table class="list">
 <thead>
     <tr>
-      <th>Search Parameter(s)</th>
+      <th>Parameter(s)</th>
       <th>Conformance</th>
       <th>Type(s)</th>
       <th>Requirements</th>
