@@ -343,7 +343,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">IPS requires value from <a href="https://hl7.org/fhir/uv/ips/STU2/ValueSet-diagnostics-report-status-uv-ips.html">Diagnostics Report Status Codes - IPS</a>.</td>
         </tr>
         <tr>
-            <td style="width: 25%;">DiagnosticReport.code<td>
+            <td style="width: 25%;">DiagnosticReport.code</td>
             <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
