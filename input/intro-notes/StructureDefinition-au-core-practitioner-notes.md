@@ -13,7 +13,7 @@
         <td>identifier</td>
         <td><b>SHALL</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using a HPI-I identifier as defined in the profile. The responder <b>SHOULD</b> support search using the using a HPI-I identifier as defined in the profile.</td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both. <br/><br/> The requester <b>SHOULD</b> support search using a HPI-I identifier as defined in the profile. The responder <b>SHOULD</b> support search using the a HPI-I identifier as defined in the profile.</td>
   </tr>
   <tr>
         <td>_id</td>
@@ -65,6 +65,5 @@ The following search parameters **SHOULD** be supported:
     Example:
     
       1. GET [base]/Practitioner?name=Sandyson
-      1. GET [base]/Practitioner?name=Sandyson&amp;
 
     *Implementation Notes:* Fetches a bundle of all Practitioner resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))

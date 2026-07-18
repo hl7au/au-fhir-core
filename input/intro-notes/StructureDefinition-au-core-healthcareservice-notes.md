@@ -20,7 +20,7 @@
         <td>identifier</td>
         <td><b>SHOULD</b></td>
         <td><code>token</code></td>
-        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/></td>
+        <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>_id</td>
