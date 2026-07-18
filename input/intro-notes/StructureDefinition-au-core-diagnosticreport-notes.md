@@ -5,7 +5,7 @@
       <th>Parameter(s)</th>
       <th>Conformance</th>
       <th>Type(s)</th>
-      <th>Requirements</th>
+      <th>Requirements (when used alone or in combination)</th>
     </tr>
 </thead>
  <tbody>
