@@ -654,8 +654,8 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="13" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticreport.html">AU Core DiagnosticReport</a></td>
-            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-lab.html">US Core DiagnosticReport Profile for Laboratory Results Reporting</a></td>
+            <td rowspan="14" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticreport.html">AU Core DiagnosticReport</a></td>
+            <td rowspan="8" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-lab.html">US Core DiagnosticReport Profile for Laboratory Results Reporting</a></td>
             <td style="width: 25%;">DiagnosticReport.meta</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
