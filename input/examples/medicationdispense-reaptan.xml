@@ -25,7 +25,7 @@
     </subject>
     <performer>
         <actor>
-            <display value="Main Street Pharmacy"/>
+            <reference value="Organization/appin-pharmacy"/>
         </actor>
     </performer>
     <authorizingPrescription>
