@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MedicationDispense xmlns="http://hl7.org/fhir">
-    <id value="paracetamol-codeine"/>
+    <id value="panadeine-forte"/>
     <meta>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
     </meta>
@@ -8,8 +8,8 @@
     <medicationCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="79115011000036100"/>
-            <display value="Paracetamol 500 mg + codeine phosphate hemihydrate 30 mg tablet"/>
+            <code value="835831000168109"/>
+            <display value="Panadeine Forte tablet"/>
         </coding>
     </medicationCodeableConcept>
     <subject>
@@ -17,7 +17,7 @@
     </subject>
     <performer>
         <actor>
-            <display value="Main Street Pharmacy"/>
+           <reference value="Organization/appin-pharmacy"/>
         </actor>
     </performer>
     <authorizingPrescription>
@@ -30,6 +30,9 @@
         <code value="TAB"/>
     </quantity>
     <whenPrepared value="2018-07-15"/>
+    <note>
+        <text value="Consumer advised not to exceed 8 tablets in 24 hours."/>
+    </note>
     <dosageInstruction>
         <text value="1-2 tablets every 4-6 hours as needed for pain"/>
         <timing>
