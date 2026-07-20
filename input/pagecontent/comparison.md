@@ -2109,14 +2109,10 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="9">DiagnosticReport</td>
+            <td rowspan="8">DiagnosticReport</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DiagnosticReport Profile for Laboratory Results Reporting  and US Core DiagnosticReport Profile for Report and Note Exchange profiles which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
 		<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support US Core DiagnosticReport Profile for Laboratory Results Reporting  and US Core DiagnosticReport Profile for Report and Note Exchange profiles which have additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>	
         </tr>
-		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of fetching a DiagnosticReport resource using: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of returning a DiagnosticReport resource using: <code>GET [base]/DiagnosticReport/[id]</code>.</td>
-		</tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>create</code> for the US Core DiagnosticReport Profile for Report and Note exchange profile.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>create</code> for the US Core DiagnosticReport Profile for Report and Note exchange profile.</td>
