@@ -11,8 +11,7 @@ AU Core defines the following profiles:
 - [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html) (with AU Core Medication): to support prescription, ordering, and ePrescribing use cases.
 - [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html) (with AU Core Medication): to support summary statements of medicine use.
 
-It is anticipated that future releases of AU Core will define profiles of:
-- MedicationAdministration (with AU Core Medication) to support medication chart and other administration use cases.
+It is anticipated that future releases of AU Core will define profiles of MedicationAdministration (with AU Core Medication) to support medication chart and other administration use cases.
 
 The guidance below addresses how medicinal product identification can be structured in FHIR conformant to AU Core.
 

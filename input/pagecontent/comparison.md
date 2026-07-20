@@ -2346,20 +2346,9 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="8">MedicationDispense</td>
+            <td rowspan="4">MedicationDispense</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationDispense Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationDispense Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
-        </tr>
-        <tr>
-            <td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support representing medication using a code and using a reference to a Medication resource.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support representing medication using at least one of a code or a reference to a Medication resource.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_include</code> parameter for <code>.medicationReference</code> when referencing an external Medication resource.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_include=MedicationDispense:medication</code>.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_include=MedicationDispense:medication</code>.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
@@ -2368,10 +2357,6 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of fetching a MedicationDispense resource using <code>GET [base]/MedicationDispense/[id]</code>.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of returning a MedicationDispense resource using <code>GET [base]/MedicationDispense/[id]</code>.</td>
         </tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> search parameter combination.</td>
