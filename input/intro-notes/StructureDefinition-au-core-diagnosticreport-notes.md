@@ -140,7 +140,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 
     Example:
     
-      1. GET [base]/DiagnosticReport?patient=5678&amp;category=CH&amp;date=ge2021-02-07
+      1. GET [base]/DiagnosticReport?patient=5678&amp;category=CH&amp;date=ge2021-02-07T00:00:00Z
       1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952&amp;category=CH&amp;date=ge2021-02-07T00:00:00Z
       1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361&amp;category=CH&amp;date=ge2021-02-07T00:00:00Z
 
