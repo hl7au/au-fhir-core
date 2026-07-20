@@ -346,7 +346,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">Composition.section[all slices].code</td>
-             <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+             <td style="width: 25%;">IPS requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Composition.section[all slices].text</td>
