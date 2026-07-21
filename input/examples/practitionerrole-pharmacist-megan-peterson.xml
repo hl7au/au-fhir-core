@@ -35,7 +35,7 @@
     </telecom>
     <telecom>
         <system value="email"/>
-        <value value="megan.peterson@appin.example.com.au"/>
+        <value value="megan.peterson@appinpharmacy.example.com.au"/>
         <use value="work"/>
     </telecom>
 </PractitionerRole>

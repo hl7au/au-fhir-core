@@ -29,7 +29,7 @@
     </subject>
     <performer>
         <actor>
-            <reference value="Organization/appin-pharmacy"/>
+            <reference value="PractitionerRole/pharmacist-megan-peterson"/>
         </actor>
     </performer>
     <authorizingPrescription>
