@@ -11,6 +11,10 @@
             <code value="835831000168109"/>
             <display value="Panadeine Forte tablet"/>
         </coding>
+        <coding>
+            <system value="http://pbs.gov.au/code/item"/>
+            <code value="12022R"/>
+        </coding>
     </medicationCodeableConcept>
     <subject>
         <reference value="Patient/bennelong-anne"/>
