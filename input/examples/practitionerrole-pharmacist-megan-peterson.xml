@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PractitionerRole xmlns="http://hl7.org/fhir">
-    <id value="cardiologist-sallie-sutherland"/>
+    <id value="pharmacist-megan-peterson"/>
     <meta>
         <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
     </meta>
@@ -19,26 +19,23 @@
         <reference value="Practitioner/megan-peterson"/>
     </practitioner>
     <organization>
-        <reference value="Organization/murrabit-hospital"/>
+        <reference value="Organization/appin-pharmacy"/>>
     </organization>
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="17561000"/>
-            <display value="Cardiologist"/>
+            <code value="46255001"/>
+            <display value="Pharmacist"/>
         </coding>
-        <text value="Cardiologist"/>
+        <text value="Pharmacist"/>
     </code>
-    <location>
-        <reference value="Location/murrabit-hospital"/>
-    </location>
     <telecom>
         <system value="phone"/>
-        <value value="0370102880"/>
+        <value value="0255500340"/>s
     </telecom>
     <telecom>
         <system value="email"/>
-        <value value="sallie.sutherland@murrabitph.example.com.au"/>
+        <value value="megan.peterson@appin.example.com.au"/>
         <use value="work"/>
     </telecom>
 </PractitionerRole>
