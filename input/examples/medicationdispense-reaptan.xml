@@ -12,10 +12,6 @@
                     <system value="http://snomed.info/sct"/>
                     <code value="926213011000036100"/>
                 </coding>
-                <coding>
-                    <system value="http://pbs.gov.au/code/item"/>
-                    <code value="13382H"/>
-                </coding>
                 <text value="Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablet, 10"/>
             </code>
         </Medication>
