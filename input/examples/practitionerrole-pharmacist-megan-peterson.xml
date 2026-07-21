@@ -19,7 +19,7 @@
         <reference value="Practitioner/megan-peterson"/>
     </practitioner>
     <organization>
-        <reference value="Organization/appin-pharmacy"/>>
+        <reference value="Organization/appin-pharmacy"/>
     </organization>
     <code>
         <coding>
@@ -31,7 +31,7 @@
     </code>
     <telecom>
         <system value="phone"/>
-        <value value="0255500340"/>s
+        <value value="0255500340"/>
     </telecom>
     <telecom>
         <system value="email"/>
