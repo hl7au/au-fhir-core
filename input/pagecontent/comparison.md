@@ -125,6 +125,12 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationdispense.html">AU Core MedicationDispense</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+        </tr>
+        <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
@@ -1014,6 +1020,48 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
+            <td rowspan="10" style="width: 25%;"><a href="StructureDefinition-au-core-medicationdispense.html">AU Core MedicationDispense</a></td>
+            <td rowspan="10" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-medicationdispense.html">US Core MedicationDispense Profile</a></td>
+            <td style="width: 25%;">MedicationDispense.medication[x]</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.context</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. Reference target Encounter is flagged as Must Support in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.performer.actor</td>
+            <td style="width: 25%;">Reference target Organization is flagged as Must Support in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.type</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://hl7.org/fhir/R4/valueset-ucum-common.html">ActPharmacySupplyType</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.quantity</td>
+            <td style="width: 25%;">US Core preferred binding to <a href="https://terminology.hl7.org/7.0.0/ValueSet-v3-ActPharmacySupplyType.html">Common UCUM units</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.whenHandedOver</td>
+            <td style="width: 25%;">Element SHALL be present if MedicationDispense.status is "completed" (us-core-20). Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.dosageInstruction.timing</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.dosageInstruction.route</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.22/expansion">Route of Administration of Therapeutic Agents</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.dosageInstruction.doseAndRate</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.dosageInstruction.doseAndRate.dose[x]</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core preferred binding to <a href="https://terminology.hl7.org/7.0.0/ValueSet-v3-ActPharmacySupplyType.html">Common UCUM units</a>. Type choice quantity is flagged as Must Support in US Core.</td>
+        </tr>
+        <tr>
             <td rowspan="12" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
             <td rowspan="12" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
             <td style="width: 25%;">MedicationRequest.medicationCodeableConcept</td>
@@ -1329,7 +1377,6 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core ADI DocumentReference Profile
 - US Core DocumentReference Profile
 - US Core Goal Profile
-- US Core MedicationDispense Profile
 - US Core Average Blood Pressure Profile
 - US Core BMI Profile
 - US Core Care Experience Preference Profile
@@ -1599,6 +1646,15 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: middle;">MedicationDispense</td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
@@ -2522,48 +2578,28 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="11">MedicationDispense</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support MedicationDispense resource.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support MedicationDispense resource.</td>
-        </tr>
-		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core MedicationDispense Profile.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core MedicationDispense Profile.</td>
-		</tr>
-         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>search-type</code> and <code>read</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>search-type</code> and <code>read</code> interactions.</td>
+            <td rowspan="6">MedicationDispense</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationDispense Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationDispense Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>patient</code> search parameter.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>patient</code> search parameter.</td>
-        </tr>
-        <tr>
-            <td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support representing medication using a code and using a reference to a Medication resource.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support representing medication using at least one of a code or a reference to a Medication resource.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_include</code> parameter for <code>.medicationReference</code> when referencing an external Medication resource.</td>
+            <td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_include=MedicationDispense:medication</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_include</code> parameter for <code>MedicationDispense:medication</code> when referencing an external Medication resource.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_include=MedicationDispense:medication</code>.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_include=MedicationDispense:medication</code>.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
-        </tr>
-		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of fetching a MedicationDispense resource using <code>GET [base]/MedicationDispense/[id]</code>.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of returning a MedicationDispense resource using <code>GET [base]/MedicationDispense/[id]</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> and <code>patient+status</code> search parameter combinations.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> and <code>patient+status</code> search parameter combinations.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> search parameter combination.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> search parameter combination.</td>
 		</tr>
 		<tr>
             <td rowspan="9">MedicationRequest</td>
@@ -2589,7 +2625,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> interpret the use of <code>MedicationRequest.requester</code> with Patient or RelatedPerson indicates a self-prescribed medication.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination.</td>
         </tr>
-         <tr>
+        <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
