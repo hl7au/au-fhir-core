@@ -10,6 +10,10 @@
       <code value="23525011000036109"/>
       <display value="Simvastatin 40 mg tablet"/>
     </coding>
+     <coding>
+       <system value="http://pbs.gov.au/code/item"/>
+       <code value="13382H"/>
+     </coding>
     <text value="Simvastatin 40 MG Disintegrating Oral Tablet"/>
   </code>
 </Medication>
