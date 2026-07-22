@@ -29,9 +29,9 @@
     <use value="work"/>
   </contact>
   <contact>
-    <system value="url"/>
+    <system value="email"/>
     <value value="sparked@csiro.au"/>
-    <use value="email"/>
+    <use value="official"/>
   </contact>
   <payloadType>
     <coding>
