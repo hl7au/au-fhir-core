@@ -398,7 +398,7 @@
 			<reference>
 				<reference value="Endpoint/sparked-tx-fhir-rest"/>
 			</reference>
-			<name value="Endpoint - Sparked Terminology Development Server)"/>
+			<name value="Endpoint - Sparked Terminology Development Server"/>
 			<description value="Shows an example of an Endpoint for the *AU Core Endpoint* profile representing a HL7 FHIR REST endpoint for the Sparked Terminology Development Server."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
 		</resource>
