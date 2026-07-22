@@ -42,5 +42,5 @@
   </payloadType>
   <payloadMimeType value="application/fhir+json"/>
   <payloadMimeType value="application/fhir+xml"/>
-  <address value="https://fhir.hl7.org.au/aucore/fhir/default"/>
+  <address value="https://smile.sparked-fhir.com/aucore/fhir/DEFAULT"/>
 </Endpoint>
