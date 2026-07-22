@@ -365,6 +365,8 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
       - For AU Core profiles, the following status elements with required binding have no appropriate "unknown" concept code:
         - `AllergyIntolerance.clinicalStatus`&#42;
         - `Condition.clinicalStatus`&#42;
+        - `Composition.status`
+        - `Composition.attester.mode`
         - `Immunization.status`
         
       &#xa;&#xa;&#xa;&#xa;&#42;The clinicalStatus element is conditionally mandatory based on resource-specific constraints.
