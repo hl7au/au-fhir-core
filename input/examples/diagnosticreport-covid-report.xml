@@ -62,7 +62,7 @@
   </result>
   <presentedForm>
     <contentType value="application/pdf"/>
-    <url value="http://example.org.au/fhir/reports/covid-report-123.pdf"/>
-    <hash value="d3b07384d113edec49eaa6238ad5ff00"/>
+    <url value="https://hl7.org.au/assets/data/diagnosticreport-covid-report.pdf"/>
+    <title value="Wang - Covid Report"/>
   </presentedForm>
 </DiagnosticReport>
