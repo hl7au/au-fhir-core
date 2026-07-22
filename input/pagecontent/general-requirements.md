@@ -407,19 +407,20 @@ When an element definition is mandatory (minimum cardinality > 0),
     
     Example: Patient resource where the identifier and gender are suppressed.
     ~~~
+    "resourceType" : "Patient",
     ...
     "identifier" : [
+      {
+        "extension" : [
           {
-            "extension" : [
-              {
-                "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode" : "unknown"
-              }
-            ]
+            "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "valueCode" : "masked"
           }
-        ],
-        ...
-        "gender" : "unknown",
+        ]
+      }
+    ],
+    ...
+    "gender" : "unknown",
     ...
     ~~~
 
