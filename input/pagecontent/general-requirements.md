@@ -409,7 +409,7 @@ When an element definition is mandatory (minimum cardinality > 0),
 - The element **SHALL** be correctly populated but it may exceed the data requester's access rights to know that the data is suppressed:
   - where a requester does not have access rights to know that data is suppressed use the code "unknown" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
     
-    Example: Patient resource where the identifier and gender are suppressed.
+    Example: Patient resource where the identifier is suppressed.
     ~~~
     "resourceType" : "Patient",
     ...
@@ -418,13 +418,11 @@ When an element definition is mandatory (minimum cardinality > 0),
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-            "valueCode" : "masked"
+            "valueCode" : "unknown"
           }
         ]
       }
     ],
-    ...
-    "gender" : "unknown",
     ...
     ~~~
 
