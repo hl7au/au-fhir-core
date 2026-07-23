@@ -179,7 +179,7 @@ If a sub-element is labelled as *Must Support*:
 - AU Core Responders **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
 - AU Core Requesters **SHALL** accept resources without error if *Must Support* sub-elements are present and contains any valid value.
 
-For example, in the AU Core Practitioner Profile, the `Practitioner.name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
+For example, in the AU Core Practitioner Profile, the `Practitioner.name` element is labelled *Must Support* and has *Must Support* sub-elements `Practitioner.name.family` and `Practitioner.name.given`. When claiming conformance to this profile:
 - AU Core Responders **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
 - AU Core Requesters **SHALL** accept a Practitioner resource without error if `Practitioner.name` is present and contains valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements.
 
@@ -271,7 +271,7 @@ AU Core Profile |Must Support Element|Supported Identifiers
 [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
-For example, the profile [AU Core Organization](StructureDefinition-au-core-organization.html) defines support for the Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN) identifier types as slices of `Organization.identifier` flagged with *Must Support*. When claiming conformance to the AU Core Organization Profile:
+For example, the profile [AU Core Organization](StructureDefinition-au-core-organization.html) defines support for the Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN) identifier types as slices of `Organization.identifier` labelled with *Must Support*. When claiming conformance to the AU Core Organization Profile:
 - AU Core Responders **SHALL** correctly populate `Organization.identifier` with at least one of HPI-O or ABN if known, or any other identifier type when neither HPI-O or ABN are known but some other identifier is known (e.g. NATA Accreditation Number).
 - AU Core Requesters **SHALL** accept the Organization resource if `Organization.identifier` is present and containins any valid value. A valid value may be an HPI-O or ABN, or may be any other valid identifier type allowed by the element definition (e.g. NATA Accreditation Number).
 
@@ -279,7 +279,7 @@ Systems **MAY** support populating and accepting other identifiers, but this is 
 
 ##### Must Support - Choice of Profile Elements
 
-A resource may support two elements that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU Core Encounter](StructureDefinition-au-core-encounter.html). In such cases:
+A profile may label two elements as *Must Support* that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU Core Encounter](StructureDefinition-au-core-encounter.html). In such cases:
 - AU Core Responders **SHALL** correctly populate at least one element choice if the value is known.
 - AU Core Requesters **SHALL** accept resources without error if any element allowed by the profile is present and contains any valid value. 
 
@@ -314,7 +314,7 @@ AU Core Profile |Must Support Sub-Element|Terminology Choices
 [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.medicationCodeableConcept.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html)
 {:.grid}
 
-For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) defines support for [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) value sets as slices of `Medication.code.coding` flagged with *Must Support*.
+For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) defines support for [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) value sets as slices of `Medication.code.coding` labelled with *Must Support*.
 
 When claiming conformance to the AU Core Medication profile: 
 - AU Core Responders **SHALL** correctly populate `Medication.code.coding` with codes from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) if both coded values are known, or from either if only one is known, or from another terminology if neither is known but a code is available, or text only if no coded value is known.
