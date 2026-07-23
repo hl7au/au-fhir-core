@@ -86,7 +86,7 @@ The guidance for how to support coded or text identification of medicinal produc
       - generic name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
    - If the resource is a Medication resource:
       - form and strength may be separately provided in `Medication.form`, `Medication.ingredient.itemCodeableConcept` and `Medication.ingredient.strength` when they are not implicit in `Medication.code`
-      - where possible, use the existing `Medication.ingredient.strength` element as Ratio. Where ingredient strength needs to be represented as a CodeableConcept or Quantity, use the FHIR R5 pre-adoption of `Medication.ingredient.strength[x]` using the extension URL `http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength` applied on `Medication.ingredient.strength`.
+      - use the FHIR R4 `Medication.ingredient.strength` as a `Ratio` where possible. Where  ingredient strength is represented as a `CodeableConcept` or `Quantity`, use the FHIR R5 pre-adoption of `Medication.ingredient.strength[x]` using the extension URL `http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength` applied on `Medication.ingredient.strength`.
       
 
     Example: Medication with coded brand name, generic name, item form and strength.
@@ -178,7 +178,7 @@ The guidance for how to support coded or text identification of medicinal produc
         - when medication form and strength are not implicit in `Medication.code.text`, they may be separately represented in:
           - form = `Medication.form.text`
           - strength for the medication as a whole = `Medication.extension` [Medication Strength extension](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-strength.html) 
-        - when representing individual ingredient strength as text, use the FHIR R5 pre-adoption of `Medication.ingredient.strength[x]` using the extension URL `http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength` applied on `Medication.ingredient.strength`, with the strength represented in `valueCodeableConcept.text`. 
+          - strength for an individual ingredient = the FHIR R5 pre-adoption of `Medication.ingredient.strength[x]` using the extension URL `http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength` applied on `Medication.ingredient.strength`, with the strength represented in `valueCodeableConcept.text`. 
 
   
     Example: Medication with text only brand name, generic name, item form and strength.
