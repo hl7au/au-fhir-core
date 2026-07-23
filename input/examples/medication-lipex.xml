@@ -10,5 +10,9 @@
       <code value="6193011000036103"/>
       <display value="Lipex 40 mg tablet"/>
     </coding>
+    <coding>
+       <system value="http://pbs.gov.au/code/item"/>
+       <code value="13382H"/>
+    </coding>
   </code>
 </Medication>
