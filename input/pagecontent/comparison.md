@@ -89,6 +89,12 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-documentreference.html">AU Core DocumentReference</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+        </tr>
+        <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
@@ -770,6 +776,49 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
+            <td rowspan="10" style="width: 25%;"><a href="StructureDefinition-au-core-documentreference.html">AU Core DocumentReference</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile</a></td>
+            <td style="width: 25%;">DocumentReference.type</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113762.1.4.1115.41-20250407">Advance Healthcare Directive Document Types Grouper</a>.</td>
+         </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.category</td>
+            <td style="width: 25%;">US Core requires minimum of 1.</td>
+        </tr>
+        <tr>        
+            <td style="width: 25%;">DocumentReference.author</td>
+            <td style="width: 25%;">Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.content.format</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes">HHL7 ValueSet of Format Codes for use with Document Sharing</a>. Element flagged as <i>Must Support</i> in US Core. </td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.content.attachment</td>
+            <td style="width: 25%;">US Core requires DocumentReference.content.attachment.url or DocumentReference.content.attachment.data or both to be present (us-core-6).</td>
+        </tr>
+        <tr>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a></td>
+            <td style="width: 25%;">DocumentReference.type</td>
+            <td style="width: 25%;">US Core required binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-documentreference-type.htmll">US Core DocumentReference Type</a>. US Core min binding to <a href="https://hl7.org/fhir/us/core/STU8.0.1/ValueSet-us-core-clinical-note-type.html">US Core Clinical Note Type</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.category</td>
+            <td style="width: 25%;">US Core requires minimum of 1.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.author</td>
+            <td style="width: 25%;">Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.content.format</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes">HL7 ValueSet of Format Codes for use with Document Sharing</a>. Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DocumentReference.context.encounter</td>
+            <td style="width: 25%;">US Core allows maximum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
             <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
             <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
             <td style="width: 25%;">Encounter.type</td>
@@ -1268,8 +1317,6 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core Device Profile
 - US Core DiagnosticReport Profile for Laboratory Results Reporting
 - US Core DiagnosticReport Profile for Report and Note Exchange
-- US Core ADI DocumentReference Profile
-- US Core DocumentReference Profile
 - US Core FamilyMemberHistory Profile
 - US Core Goal Profile
 - US Core Average Blood Pressure Profile
@@ -2286,8 +2333,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         </tr>
         <tr>
             <td rowspan="9">Encounter</td>
-            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Encounter Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code> search parameter.</td>
