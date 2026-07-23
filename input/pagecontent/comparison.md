@@ -2414,7 +2414,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support NDC vaccine codes as additional codes to CVX vaccine codes, which are required based on the ASTP U.S. Core Data for Interoperability (USCDI) requirements.</td>
         </tr>
         <tr>
-            <td rowspan="4">Location</td>
+            <td rowspan="5">Location</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Location Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Location Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -2429,6 +2429,10 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
+        </tr>
+        <tr>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use ISO 3166 subdivision codes for <code>Location.address.state</code> when encoding addresses outside the US.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use ISO 3166 subdivision codes for <code>Location.address.state</code> when encoding addresses outside the US.</td>
         </tr>
         <tr>
             <td rowspan="2">Medication</td>
@@ -2562,8 +2566,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least <code>Patient.deceasedDateTime</code> if supporting <code>Patient.deceased[x]</code>.</td>
 		</tr>	
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Patient.address.line and Patient.address.city formatting.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Patient.address.line and Patient.address.city formatting.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use ISO 3166 subdivision codes for <code>Patient.address.state</code> when encoding addresses outside the US.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use ISO 3166 subdivision codes for <code>Patient.address.state</code> when encoding addresses outside the US.</td>
 		</tr>
 		<tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD NOT</strong> use a Social Security Number in <code>Patient.identifier.value</code>.</td>
@@ -2595,8 +2599,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> provide implementation-specific guidance for accessing a provider's location and contact information when only the Practitioner resource is supported.</td>
 		</tr>
         <tr>
-			<td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for <code>Practitioner.address.line</code> and <code>Practitioner.address.city</code> formatting.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for <code>Practitioner.address.line</code> and <code>Practitioner.address.city</code> formatting.</td>
+			<td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use ISO 3166 subdivision codes for <code>Practitioner.address.state</code> when encoding addresses outside the US.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use ISO 3166 subdivision codes for <code>Practitioner.address.state</code> when encoding addresses outside the US.</td>
 		</tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
@@ -2655,7 +2659,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
        <tr>
-            <td rowspan="8">Provenance</td>
+            <td rowspan="6">Provenance</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Provenance resource.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support Provenance resource.</td>
         </tr>
@@ -2668,27 +2672,19 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> interaction.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support the US Core Provenance Profile for AllergyIntolerance, CarePlan, CareTeam, Condition, Coverage, Device, DiagnosticReport, DocumentReference, Encounter, Goal, Immunization, MedicationDispense, MedicationRequest, Observation, Patient, Procedure, QuestionnaireResponse, RelatedPerson, and ServiceRequest resources.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support the US Core Provenance Profile for AllergyIntolerance, CarePlan, CareTeam, Condition, Coverage, Device, DiagnosticReport, DocumentReference, Encounter, Goal, Immunization, MedicationDispense, MedicationRequest, Observation, Patient, Procedure, QuestionnaireResponse, RelatedPerson, and ServiceRequest resources.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support the US Core Provenance Profile for AllergyIntolerance, CarePlan, CareTeam, Condition, Coverage, Device, DiagnosticReport, DocumentReference, Encounter, FamilyMemberHistory, Goal, Immunization, MedicationDispense, MedicationRequest, Observation, Patient, Procedure, QuestionnaireResponse, RelatedPerson, and ServiceRequest resources.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support the US Core Provenance Profile for AllergyIntolerance, CarePlan, CareTeam, Condition, Coverage, Device, DiagnosticReport, DocumentReference, Encounter, FamilyMemberHistory, Goal, Immunization, MedicationDispense, MedicationRequest, Observation, Patient, Procedure, QuestionnaireResponse, RelatedPerson, and ServiceRequest resources.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> provide the organisation as the source when a provider is received in <code>Provenance.agent.who</code> as free text.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> provide the organisation as the source when a provider is received in <code>Provenance.agent.who</code> as free text.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> populate the activity when the system needs to know the activity has occurred.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> populate activity when the system needs to know the activity has occurred.</td>
-        </tr>
-        <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-    	<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of fetching a Provenance resource using <code>GET [base]/Provenance/[id]</code>.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of returning a Provenance resource using <code>GET [base]/Provenance/[id]</code>.</td>
-		</tr>
        <tr>
-            <td rowspan="5">Questionnaire</td>
+            <td rowspan="4">Questionnaire</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Questionnaire resource.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Questionnaire resource.</td>
         </tr>
@@ -2703,30 +2699,19 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code> and <code>vread</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code> and <code>vread</code> interactions.</td>
         </tr>
-    	<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of fetching a Questionnaire resource using <code>GET [base]/Questionnaire/[id]</code>.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of returning a Questionnaire resource using <code>GET [base]/Questionnaire/[id]</code>.</td>
-		</tr>
         <tr>
-            <td rowspan="8">QuestionnaireResponse</td>
+            <td rowspan="6">QuestionnaireResponse</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support QuestionnaireResponse resource.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support QuestionnaireResponse resource.</td>
         </tr>
         <tr>
-            <td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core QuestionnaireResponse Profile.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core Observation Screening Assessment Profile.</td>
-        </tr>
-        <tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support  SDC Base Questionnaire Profile/US Core QuestionnaireResponse Profile.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core QuestionnaireResponse Profile.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core QuestionnaireResponse Profile.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>search-type</code>, <code>read</code>, <code>vread</code> and <code>history-instance</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>search-type</code>, <code>read</code>, <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
-    	<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of fetching a QuestionnaireResponse resource using <code>GET [base]/QuestionnaireResponse/[id]</code>.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of returning a QuestionnaireResponse resource using <code>GET [base]/QuestionnaireResponse/[id]</code>.</td>
-		</tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
@@ -2761,11 +2746,11 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>name</code> search parameter.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for <code>RelatedPerson.address.line</code> and <code>RelatedPerson.address.city</code> formatting.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for <code>RelatedPerson.address.line</code> and <code>RelatedPerson.address.city</code> formatting.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use ISO 3166 subdivision codes for <code>RelatedPerson.address.state</code> when encoding addresses outside the US.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use ISO 3166 subdivision codes for <code>RelatedPerson.address.state</code> when encoding addresses outside the US.</code> formatting.</td>
 		</tr>
         <tr>
-            <td rowspan="16">ServiceRequest</td>
+            <td rowspan="9">ServiceRequest</td>
            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support ServiceRequest resource.</td>
            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support ServiceRequest resource.</td>
         </tr>
@@ -2777,10 +2762,6 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>search-type</code> and <code>read</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>read</code> interaction.</td>
         </tr>
-        <tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of fetching a ServiceRequest resource using: <code>GET [base]/ServiceRequest/[id]</code>.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of returning a ServiceRequest resource using: <code>GET [base]/ServiceRequest/[id]</code>.</td>
-		</tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+category</code>, <code>patient+category+authored</code>, and <code>patient+code</code> search parameters and search parameter combinations.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_id</code>, <code>patient</code>, <code>patient+category</code>, <code>patient+category+authored</code>, and <code>patient+code</code> search parameters and search parameter combinations.</td>
@@ -2794,10 +2775,6 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both US Core ServiceRequest and US Core Procedure Profiles for representing the reason for a referral.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both US Core ServiceRequest and US Core Procedure Profiles for representing the reason for a referral.</td>
-            </tr>
-        <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both <code>ServiceRequest.reasonCode</code> and <code>ServiceRequest.reasonReference</code>.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least one of <code>ServiceRequest.reasonCode</code> and <code>ServiceRequest.reasonReference</code>.</td>
         </tr>
@@ -2809,35 +2786,11 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status</code> and <code>patient+code+authored</code> search parameter combinations.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status</code> and <code>patient+code+authored</code> search parameter combinations.</td>
         </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support querying by ServiceRequest.category.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support querying by ServiceRequest.category.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use US Core Profiles as target references in <code>ServiceRequest.reasonReference</code>.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use US Core Profiles as target references in <code>ServiceRequest.reasonReference</code>.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use the corresponding category codes for the USCDI Data Element context, as listed in the US Core ServiceRequest Profile page.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> use the corresponding category codes for the USCDI Data Element context, as listed in the US Core ServiceRequest Profile page.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> constrain <code>ServiceRequest.code</code> to an appropriate subset for the use case or domain.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> constrain <code>ServiceRequest.code</code> to an appropriate subset for the use case or domain.</td>
-            </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform to the value set bindings for <code>ServiceRequest.code</code> as listed for each USCDI Order context in the US Core ServiceRequest Profile page.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> conform to the value set bindings for <code>ServiceRequest.code</code> as listed for each USCDI Order context in the US Core ServiceRequest Profile page.</td>
-        </tr>
     	<tr>
-            <td rowspan="7">Specimen</td>
+            <td rowspan="6">Specimen</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Specimen Profile.</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Specimen Profile.</td>
         </tr>
-		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of fetching a Specimen resource using: <code>GET [base]/Specimen/[id]</code>.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of returning a Specimen resource using: <code>GET [base]/Specimen/[id]</code>.</td>
-		</tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support both <code>Specimen.identifier</code> and <code>Specimen.accessionIdentifier</code>.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least one of <code>Specimen.identifier</code> and <code>Specimen.accessionIdentifier</code>.</td>
