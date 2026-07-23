@@ -2,6 +2,7 @@
 |---|---|---|---|
 |AllergyIntolerance|[AU Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|
 |CareTeam|[CareTeam](http://hl7.org/fhir/R4/careteam.html)|-|
+|Composition|[AU Core Composition](StructureDefinition-au-core-composition.html)|[Device](http://hl7.org/fhir/StructureDefinition/Device), [AU Core Organization](StructureDefinition-au-core-organization.html), [AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Practitioner](StructureDefinition-au-core-practitioner.html), [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html), [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html)|
 |Condition|[AU Core Condition](StructureDefinition-au-core-condition.html)|[AU Core Patient](StructureDefinition-au-core-patient.html)|
 |Device|[Device](https://hl7.org/fhir/R4/device.html)|-|
 |DocumentReference|[AU Core DocumentReference](StructureDefinition-au-core-documentreference.html)|[Device](http://hl7.org/fhir/StructureDefinition/Device), [AU Core Organization](StructureDefinition-au-core-organization.html), [AU Core Patient](StructureDefinition-au-core-patient.html), [AU Core Practitioner](StructureDefinition-au-core-practitioner.html), [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html), [AU Core RelatedPerson](StructureDefinition-au-core-relatedperson.html)|
