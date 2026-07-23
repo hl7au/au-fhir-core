@@ -317,8 +317,8 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
-            <td rowspan="25" style="width: 25%;"><a href="StructureDefinition-au-core-composition.html">AU Core Composition</a></td>
-            <td rowspan="25" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Composition-uv-ips.html">Composition (IPS)</a></td>
+            <td rowspan="24" style="width: 25%;"><a href="StructureDefinition-au-core-composition.html">AU Core Composition</a></td>
+            <td rowspan="24" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Composition-uv-ips.html">Composition (IPS)</a></td>
             <td style="width: 25%;">Composition.meta.profile</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
         </tr> 
@@ -332,11 +332,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">Composition.event:careProvisioningEvent</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS. IPS requires ActClass code PCPR.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">Composition.event:careProvisioningEvent.code</td>
-            <td style="width: 25%;">IPS requires ActClass code PCPR. Element flagged as <i>Must Support</i> in IPS. Sub-element Composition.section:careProvisioningEvent.period period flagged as <i>Must Support</i> in IPS.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS. IPS requires ActClass code PCPR. Sub-element period flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Composition.section</td>
