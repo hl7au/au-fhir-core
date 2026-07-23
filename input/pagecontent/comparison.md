@@ -2,7 +2,7 @@
 
 AU Core aligns to, and leverages, international standards and other national standards, in particular:
 - [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/)
-- [International Patient Summary Implementation Guide 2.0.0](https://hl7.org/fhir/uv/ips/STU2/)
+- [International Patient Summary Implementation Guide 2.0.1](https://hl7.org/fhir/uv/ips/2.0.1/)
 - [US Core Implementation Guide 8.0.0](https://hl7.org/fhir/us/core/STU8/)
 
 Relationships between AU Core, AUCDI, and the above key implementation guides is described in [Relationship with other IGs](relationship.html). 
@@ -35,7 +35,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
         <tr>
             <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">IPA 1.1.0</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">IPS 2.0.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">IPS 2.0.1</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">US Core 8.0.0</th>
         </tr>
     </thead>
@@ -116,6 +116,12 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-medicationdispense.html">AU Core MedicationDispense</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
@@ -276,7 +282,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
     <thead>
         <tr>
             <th style="width: 25%;">AU Core Profile</th>
-            <th style="width: 25%;">IPS 2.0.0 Profile</th>
+            <th style="width: 25%;">IPS 2.0.1 Profile</th>
             <th style="width: 25%;">Element</th>
             <th style="width: 25%;">IPS Profile Additional requirements</th>
         </tr>
@@ -284,7 +290,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
     <tbody>
         <tr>
             <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-AllergyIntolerance-uv-ips.html">AllergyIntolerance (IPS)</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-AllergyIntolerance-uv-ips.html">AllergyIntolerance (IPS)</a></td>
             <td style="width: 25%;">AllergyIntolerance.patient.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
@@ -294,15 +300,15 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">AllergyIntolerance.clinicalStatus</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">AllergyIntolerance.code</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">AllergyIntolerance.reaction.manifestation</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
@@ -312,29 +318,29 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">Condition.clinicalStatus</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.verificationStatus</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.category</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.severity</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Condition.code</td>
-            <td  style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td  style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
             <td style="width: 25%;">Immunization.vaccineCode</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>           
         <tr>
           <td style="width: 25%;">Immunization.patient.reference</td>
@@ -342,13 +348,13 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Medication-uv-ips.html">Medication (IPS)</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Medication-uv-ips.html">Medication (IPS)</a></td>
             <td style="width: 25%;">Medication.code</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Medication.form</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>. Element flagged as <i>Must Support</i> in IPS.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Medication.ingredient</td>
@@ -356,7 +362,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">Medication.ingredient.item[x]</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>. Element flagged as <i>Must Support</i> in IPS.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Medication.ingredient.strength</td>
@@ -364,13 +370,13 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-MedicationRequest-uv-ips.html">MedicationRequest (IPS)</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-MedicationRequest-uv-ips.html">MedicationRequest (IPS)</a></td>
             <td style="width: 25%;">MedicationRequest.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.medication[x]</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationRequest.doNotPerform</td>
@@ -382,9 +388,9 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-MedicationStatement-uv-ips.html">MedicationStatement (IPS)</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-MedicationStatement-uv-ips.html">MedicationStatement (IPS)</a></td>
             <td style="width: 25%;">MedicationStatement.medication[x]</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>   
             <td style="width: 25%;">MedicationStatement.subject.reference</td>
@@ -400,9 +406,9 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html">Observation Results - Laboratory/Pathology (IPS)</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html">Observation Results - Laboratory/Pathology (IPS)</a></td>
             <td style="width: 25%;">Observation.status</td>
-            <td style="width: 25%;">IPS requires value from <a href="https://hl7.org/fhir/uv/ips/STU2/ValueSet-results-status-uv-ips.html">Results Status Codes - IPS</a>.</td>
+            <td style="width: 25%;">IPS requires value from <a href="https://hl7.org/fhir/uv/ips/2.0.1/ValueSet-results-status-uv-ips.html">Results Status Codes - IPS</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.subject.reference</td>
@@ -418,19 +424,19 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">Observation.category</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.value[x]</td>
-            <td style="width: 25%;">Types string, Quantity and CodeableConceptIPS are flagged as <i>Must Support</i> in IPS. IPS preferred additional binding to <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html">Results Coded Values Laboratory/Pathology - IPS</a>.</td>
+            <td style="width: 25%;">Types string, Quantity and CodeableConceptIPS are flagged as <i>Must Support</i> in IPS. IPS preferred additional binding to <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html">Results Coded Values Laboratory/Pathology - IPS</a>.</td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Patient-uv-ips.html">Patient (IPS)</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Patient-uv-ips.html">Patient (IPS)</a></td>
             <td style="width: 25%;">Patient.name</td>
             <td style="width: 25%;">IPS does not allow Data Absent Reason extension (ips-pat-1).</td>
         </tr>
@@ -440,7 +446,7 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Practitioner-uv-ips.html">Practitioner (IPS)</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Practitioner-uv-ips.html">Practitioner (IPS)</a></td>
             <td style="width: 25%;">Practitioner.telecom</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
@@ -450,9 +456,9 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Procedure-uv-ips.html">Procedure (IPS)</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Procedure-uv-ips.html">Procedure (IPS)</a></td>
             <td style="width: 25%;">Procedure.code</td>
-            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Procedure.subject.reference</td>
@@ -464,13 +470,13 @@ The following IPS profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation Social History - Tobacco Use (IPS)</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-tobaccouse-uv-ips.html">Observation Social History - Tobacco Use (IPS)</a></td>
             <td style="width: 25%;">Observation.subject.reference</td>
             <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">IPS requires LOINC code 72166-2. Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+            <td style="width: 25%;">IPS requires LOINC code 72166-2. Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
             <td>Observation.component</td>
@@ -791,6 +797,48 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
         <tr>
+            <td rowspan="10" style="width: 25%;"><a href="StructureDefinition-au-core-medicationdispense.html">AU Core MedicationDispense</a></td>
+            <td rowspan="10" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-medicationdispense.html">US Core MedicationDispense Profile</a></td>
+            <td style="width: 25%;">MedicationDispense.medication[x]</td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.context</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. Reference target Encounter is flagged as Must Support in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.performer.actor</td>
+            <td style="width: 25%;">Reference target Organization is flagged as Must Support in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.type</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://hl7.org/fhir/R4/valueset-ucum-common.html">ActPharmacySupplyType</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.quantity</td>
+            <td style="width: 25%;">US Core preferred binding to <a href="https://terminology.hl7.org/7.0.0/ValueSet-v3-ActPharmacySupplyType.html">Common UCUM units</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.whenHandedOver</td>
+            <td style="width: 25%;">Element SHALL be present if MedicationDispense.status is "completed" (us-core-20). Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.dosageInstruction.timing</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.dosageInstruction.route</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.22/expansion">Route of Administration of Therapeutic Agents</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.dosageInstruction.doseAndRate</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationDispense.dosageInstruction.doseAndRate.dose[x]</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core preferred binding to <a href="https://terminology.hl7.org/7.0.0/ValueSet-v3-ActPharmacySupplyType.html">Common UCUM units</a>. Type choice quantity is flagged as Must Support in US Core.</td>
+        </tr>
+        <tr>
             <td rowspan="12" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
             <td rowspan="12" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
             <td style="width: 25%;">MedicationRequest.medicationCodeableConcept</td>
@@ -1106,7 +1154,6 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core ADI DocumentReference Profile
 - US Core DocumentReference Profile
 - US Core Goal Profile
-- US Core MedicationDispense Profile
 - US Core Average Blood Pressure Profile
 - US Core BMI Profile
 - US Core Care Experience Preference Profile
@@ -1149,7 +1196,7 @@ The table below provides a mapping of AU Core capability statements to capabilit
     <tr>
         <th style="width: 25%; text-align: left; vertical-align: middle;">AU Core</th>
         <th style="width: 25%; text-align: left; vertical-align: middle;">IPA 1.1.0</th>
-        <th style="width: 25%; text-align: left; vertical-align: middle;">IPS 2.0.0</th>
+        <th style="width: 25%; text-align: left; vertical-align: middle;">IPS 2.0.1</th>
 		<th style="width: 25%; text-align: left; vertical-align: middle;">US Core 8.0.0</th>
     </tr>
   </thead>
@@ -1163,7 +1210,7 @@ The table below provides a mapping of AU Core capability statements to capabilit
 	<tr>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
-		<td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.png" width="20"/><sup>1</sup> (<a href="https://hl7.org/fhir/uv/ips/STU2/CapabilityStatement-ips-server.html">IPS Server</a>)</td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.png" width="20"/><sup>1</sup> (<a href="https://hl7.org/fhir/uv/ips/2.0.1/CapabilityStatement-ips-server.html">IPS Server</a>)</td>
 		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU8/CapabilityStatement-us-core-server.html">US Core Server</a></td>
     </tr>
   </tbody>
@@ -1207,10 +1254,10 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
         </tr>
 		<tr>
             <th style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></th>
-            <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0</strong></th>
+            <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.1</strong></th>
             <th style="text-align: center; vertical-align: middle;"><strong>US Core 8.0.0</strong></th>
 			<th style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></th>
-            <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.0</strong></th>
+            <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.1</strong></th>
             <th style="text-align: center; vertical-align: middle;"><strong>US Core 8.0.0</strong></th>
         </tr>
     </thead>
@@ -1367,6 +1414,15 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
 			<td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: middle;">MedicationDispense</td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
@@ -1717,7 +1773,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPS Capability
 	<thead>
         <tr>
             <th>AU Core CapabilityStatement requirement</th>
-            <th>IPS 2.0.0 Server CapabilityStatement additional requirements</th>
+            <th>IPS 2.0.1 Server CapabilityStatement additional requirements</th>
         </tr>
     </thead> 
     <tbody>
@@ -2290,48 +2346,28 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="11">MedicationDispense</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support MedicationDispense resource.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support MedicationDispense resource.</td>
-        </tr>
-		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core MedicationDispense Profile.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support US Core MedicationDispense Profile.</td>
-		</tr>
-         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>search-type</code> and <code>read</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>search-type</code> and <code>read</code> interactions.</td>
+            <td rowspan="6">MedicationDispense</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationDispense Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core MedicationDispense Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>patient</code> search parameter.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>patient</code> search parameter.</td>
-        </tr>
-        <tr>
-            <td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support representing medication using a code and using a reference to a Medication resource.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support representing medication using at least one of a code or a reference to a Medication resource.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_include</code> parameter for <code>.medicationReference</code> when referencing an external Medication resource.</td>
+            <td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_include=MedicationDispense:medication</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_include</code> parameter for <code>MedicationDispense:medication</code> when referencing an external Medication resource.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_include=MedicationDispense:medication</code>.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_include=MedicationDispense:medication</code>.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
-        </tr>
-		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>_revinclude=Provenance:target</code>.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of fetching a MedicationDispense resource using <code>GET [base]/MedicationDispense/[id]</code>.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> be capable of returning a MedicationDispense resource using <code>GET [base]/MedicationDispense/[id]</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
 		<tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> and <code>patient+status</code> search parameter combinations.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> and <code>patient+status</code> search parameter combinations.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> search parameter combination.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+status+type</code> search parameter combination.</td>
 		</tr>
 		<tr>
             <td rowspan="9">MedicationRequest</td>
@@ -2357,7 +2393,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> interpret the use of <code>MedicationRequest.requester</code> with Patient or RelatedPerson indicates a self-prescribed medication.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination.</td>
         </tr>
-         <tr>
+        <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
