@@ -83,6 +83,12 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticreport.html">AU Core DiagnosticReport</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+        </tr>
+        <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-diagnosticresult.html">AU Core Diagnostic Result Observation</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
@@ -754,6 +760,65 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
+            <td rowspan="14" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticreport.html">AU Core DiagnosticReport</a></td>
+            <td rowspan="8" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-diagnosticreport-lab.html">US Core DiagnosticReport Profile for Laboratory Results Reporting</a></td>
+            <td style="width: 25%;">DiagnosticReport.meta</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.meta.lastUpdated</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.category</td>
+            <td style="width: 25%;">US Core requires category of 'LAB'.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.code</td>
+            <td style="width: 25%;"> US Core has extensible binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-laboratory-test-codes.html">US Core Laboratory Test Codes</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.encounter</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr> 
+            <td style="width: 25%;">DiagnosticReport.effective[x]</td>
+            <td style="width: 25%;">Type choice of dateTime is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.performer</td>
+            <td style="width: 25%;">Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.resultsInterpreter</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. Reference target Practitioner is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-diagnosticreport-note.html">US Core DiagnosticReport Profile for Report and Note Exchange</a></td>
+            <td style="width: 25%;">DiagnosticReport.code</td>
+            <td style="width: 25%;">US Core has extensible binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-diagnosticreport-report-and-note-codes.html">US Core Non Laboratory Codes</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.encounter</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+         <tr>
+            <td style="width: 25%;">DiagnosticReport.effective[x]</td>
+            <td style="width: 25%;">Type choice of dateTime is flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.performer</td>
+            <td style="width: 25%;">Reference target Practitioner and Organization are flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.resultsinterpreter</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. Reference target Practitioner flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.results</td>
+            <td style="width: 25%;">Reference target Observation Clinical Result flagged as <i>Must Support</i> in US Core.</td>
+        </tr>
+        <tr>
             <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core Diagnostic Result Observation</a></td>
             <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result Profile</a></td>
             <td style="width: 25%;">Observation.code</td>
@@ -1315,8 +1380,6 @@ This version of AU Core has no equivalent profile for the following US Core prof
 - US Core CareTeam Profile
 - US Core Coverage Profile
 - US Core Device Profile
-- US Core DiagnosticReport Profile for Laboratory Results Reporting
-- US Core DiagnosticReport Profile for Report and Note Exchange
 - US Core FamilyMemberHistory Profile
 - US Core Goal Profile
 - US Core Average Blood Pressure Profile
