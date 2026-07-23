@@ -2422,26 +2422,13 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the <code>address</code> search parameter.</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the <code>address</code> search parameter.</td>
         </tr>
+        <tr>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong>  use the <code>location</code> element for all resources where the element is available.</td>
+            <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the <code>address</code> search parameter.</td>
+        </tr>
 		<tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support the <code>vread</code> and <code>history-instance</code> interactions.</td>
-        </tr>
-		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> format <code>Location.address.line</code> and <code>Location.address.city</code> according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> format <code>Location.address.line</code> and <code>Location.address.city</code> according to the Project US@ Technical Specification for Patient Addresses Final Version 1.0.</td>
-        </tr>
-        <tr>
-            <td rowspan="3">Media</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Media resource.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong><sup>2</sup> support Media resource.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code> and <code>vread</code> interactions.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>read</code> and <code>vread</code> interactions.</td>
-        </tr>
-        <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of fetching a Media resource using <code>GET [base]/Media/[id]</code>.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> be capable of returning a Media resource using <code>GET [base]/Media/[id]</code>.</td>
         </tr>
         <tr>
             <td rowspan="2">Medication</td>
@@ -2533,7 +2520,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>Observation.effectivePeriod</code> for time-based tests.</td>
 		</tr>
         <tr>
-            <td rowspan="6">Organization</td>
+            <td rowspan="5">Organization</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Organization Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Organization Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -2549,16 +2536,12 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Clinical Laboratory Improvement Amendments (CLIA) identifier for organisations.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support Clinical Laboratory Improvement Amendments (CLIA) identifier for organisations.</td>
         </tr>
-		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for populating Organization.address.line and Organization.address.city.</td>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for populating Organization.address.line and Organization.address.city.</td>
-        </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
         </tr>
         <tr>
-            <td rowspan="8">Patient</td>
+            <td rowspan="9">Patient</td>
           	<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Patient Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Patient Profile which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
@@ -2589,6 +2572,10 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         <tr>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> include a text description when using the Race and Ethnicity complex extensions.</td>
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> include a text description when using the Race and Ethnicity complex extensions.</td>
+		</tr>
+        <tr>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>death-date+family</code> search parameter combination.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHOUL</strong> support <code>death-date+family</code> search parameter combination.</td>
 		</tr>	
         <tr>
             <td rowspan="7">Practitioner</td>
