@@ -194,6 +194,8 @@ AU Core Profile |Must Support Element|Reference
 ---|---|---
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.hasMember|AU Base Diagnostic Imaging Result, AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
+[AU Core Composition](StructureDefinition-au-core-composition.html)|Composition.author|Device, AU Core Organization, AU Core Patient, AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson 
+[AU Core Composition](StructureDefinition-au-core-composition.html)|Composition.attester.party|AU Core Organization, AU Core Patient, AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
 [AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.participant.individual|AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
 [AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.reasonReference|AU Core Condition, Observation, AU Core Procedure
 [AU Core MedicationDispense](StructureDefinition-au-core-medicationdispense.html)|MedicationDispense.performer.actor| Device, AU Core Organization, AU Core Patient, AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
@@ -363,6 +365,8 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
       - For AU Core profiles, the following status elements with required binding have no appropriate "unknown" concept code:
         - `AllergyIntolerance.clinicalStatus`&#42;
         - `Condition.clinicalStatus`&#42;
+        - `Composition.status`
+        - `Composition.attester.mode`
         - `Immunization.status`
         
       &#xa;&#xa;&#xa;&#xa;&#42;The clinicalStatus element is conditionally mandatory based on resource-specific constraints.
