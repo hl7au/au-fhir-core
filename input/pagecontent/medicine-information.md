@@ -178,7 +178,7 @@ The guidance for how to support coded or text identification of medicinal produc
         - when medication form and strength are not implicit in `Medication.code.text`, they may be separately represented in:
           - form = `Medication.form.text`
           - medication strength (as a whole) = `Medication.extension` [Medication Strength extension](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-strength.html) 
-          - medication ingredient strength = ` Medication.ingredient.strength` [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html), with the strength represented in `valueCodeableConcept.text`
+          - medication ingredient strength = `Medication.ingredient.strength` [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html), with the strength represented in `valueCodeableConcept.text`
 
   
     Example: Medication with text only brand name, generic name, item form and strength.
