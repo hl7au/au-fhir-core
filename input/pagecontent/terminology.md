@@ -126,12 +126,9 @@ Column attribute descriptions are as follows:
 |[Australian Immunisation Register Vaccine](https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats)|[Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)|NCTS|Services Australia|
 |[Australian Indigenous Status](https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1)|[Australian Indigenous Status](https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1)|NCTS|Australian Digital Health Agency|
 |[Australian States and Territories](https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1)|[Australian States and Territories](https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2)|NCTS|Australian Digital Health Agency|
-<<<<<<< HEAD
 |[BCP 13](https://www.rfc-editor.org/info/bcp13/)|[Mime Type](https://hl7.org/fhir/R4/valueset-mimetypes.html)|Internet Engineering Task Force (IETF)|Internet Engineering Task Force (IETF)|
-=======
 |[CompositionAttestationMode](https://hl7.org/fhir/R4/codesystem-composition-attestation-mode.html)|[CompositionAttestationMode](http://hl7.org/fhir/R4/valueset-composition-attestation-mode.html)|FHIR|Health Level Seven International|
 |[CompositionStatus](https://hl7.org/fhir/R4/codesystem-composition-status.html)|[CompositionStatus](https://hl7.org/fhir/R4/valueset-composition-status.html)|FHIR|Health Level Seven International|
->>>>>>> master
 |[Condition Category Codes](https://hl7.org/fhir/R4/codesystem-condition-category.html)|[Condition Category Codes](https://hl7.org/fhir/R4/valueset-condition-category.html)|FHIR|Health Level Seven International|
 |[Condition Clinical Status Codes](https://hl7.org/fhir/R4/codesystem-condition-clinical.html)|[Condition Clinical Status Codes](https://hl7.org/fhir/R4/valueset-condition-clinical.html)|FHIR|Health Level Seven International|
 |[ConditionVerificationStatus](https://hl7.org/fhir/R4/codesystem-condition-ver-status.html)|[ConditionVerificationStatus](https://hl7.org/fhir/R4/valueset-condition-ver-status.html)|FHIR|Health Level Seven International|
