@@ -2,6 +2,7 @@
 
 # === ERROR 01: Expected error as the CodeSystem is defined without content included. ===
 Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'
+Unknown code '12022R' in the CodeSystem 'http://pbs.gov.au/code/item'
 
 # === WARNING 01: These are warnings for publication artefacts not used in HL7 AU specifications at this time and are accepted by the AU FHIR WG. ===
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
@@ -35,6 +36,7 @@ A Reference without an actual reference or identifier should have a display
 # === WARNING 06: Expected warning as the AU Base PBS CodeSystem is defined without content included. ===
 Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#2951H' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
 Unknown code '2951H' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#2951H' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-use-1|1.0.0' 
+Unknown code '12022R' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#12022R' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2' 
 
 # === WARNING 07: INHERITED FROM AU BASE: These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
 A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
@@ -124,6 +126,7 @@ None of the codings provided are in the value set 'GTIN' (http://terminology.hl7
 None of the codings provided are in the value set 'GTIN' (http://terminology.hl7.org/ValueSet/v3-GTIN|3.0.0) specified in an additional binding, and a coding is recommended to come from this value set (codes = http://snomed.info/sct#5232011000036102)
 None of the codings provided are in the value set 'GTIN' (http://terminology.hl7.org/ValueSet/v3-GTIN|3.0.0) specified in an additional binding, and a coding is recommended to come from this value set (codes = http://snomed.info/sct#6193011000036103)
 None of the codings provided are in the value set 'GTIN' (http://terminology.hl7.org/ValueSet/v3-GTIN|3.0.0) specified in an additional binding, and a coding is recommended to come from this value set (codes = http://snomed.info/sct#835831000168109)
+None of the codings provided are in the value set 'GTIN' (http://terminology.hl7.org/ValueSet/v3-GTIN|3.0.0) specified in an additional binding, and a coding is recommended to come from this value set (codes = http://snomed.info/sct#835831000168109, http://pbs.gov.au/code/item#12022R)
 None of the codings provided are in the value set 'Diagnostic Service Section Codes' (http://hl7.org/fhir/ValueSet/diagnostic-service-sections|4.0.1), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/data-absent-reason#masked)
 None of the codings provided are in the value set 'Healthcare Organisation Role Type' (https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1|1.1.0), and a coding is recommended to come from this value set (codes = http://snomed.info/sct#310074003, http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0#6925)
 None of the codings provided are in the value set 'Healthcare Organisation Role Type' (https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1|1.1.0), and a coding is recommended to come from this value set (codes = http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0#4271, http://snomed.info/sct#310080006) 
