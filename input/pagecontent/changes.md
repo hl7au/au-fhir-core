@@ -6,7 +6,7 @@
 This change log documents the significant updates and resolutions implemented from version [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
-- updated guidance on medication strength representations in the [Medicine Information](medicine-information.html) page, including use of the Medication Strength extension and pre-adoption of the FHIR R5 Medication.ingredient.strength[x] element [AU Base: FHIR-50945](https://jira.hl7.org/browse/FHIR-50945), [AU Base: FHIR-57900](https://jira.hl7.org/browse/FHIR-57900)
+- updated guidance on medication strength representations in the [Medicine Information](medicine-information.html) page [AU Base: FHIR-50945](https://jira.hl7.org/browse/FHIR-50945), [AU Base: FHIR-57900](https://jira.hl7.org/browse/FHIR-57900)
 - [AU Core Composition](StructureDefinition-au-core-composition.html)
   - added new profile, including interaction support to the AU Core CapabilityStatements [AU Core: FHIR-57306](https://jira.hl7.org/browse/FHIR-57306), [AU Core: FHIR-57310](https://jira.hl7.org/browse/FHIR-57310), [AU Core: FHIR-57311](https://jira.hl7.org/browse/FHIR-57311), [AU Core: FHIR-57313](https://jira.hl7.org/browse/FHIR-57313), [AU Core: FHIR-57314](https://jira.hl7.org/browse/FHIR-57314), [AU Core: FHIR-57308](https://jira.hl7.org/browse/FHIR-57308)
 - [AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html):
