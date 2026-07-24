@@ -39,7 +39,7 @@ Column attribute descriptions are as follows:
 - **FHIR Path**: The [FHIRPath expression](https://build.fhir.org/ig/HL7/FHIRPath/) to the FHIR element relevant for exchange, i.e. the FHIR element that can be populated with data from a source system that represents the clinical concept expressed in the AUCDI data element. 
 - **Comment**: Additional information about the mapping including an explanation of where an element or group is not yet mapped.
 
-<table border="1" cellspacing="0" cellpadding="0" width="100%">
+<table cellspacing="0" cellpadding="0" width="100%">
 <thead>
   <tr style="background-color: #f2f2f2;">
     <th>AUCDI Data Group</th>

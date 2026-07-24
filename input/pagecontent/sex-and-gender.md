@@ -15,7 +15,7 @@ The table below provides an overview of the sex and gender concepts that are inc
 <img src="minus_symbol.png" width="20"/> **Not Applicable**: This sex or gender related concept is not applicable for use with this resource type.
 
 
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+<table style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
             <th style="width: 12%; text-align: center; vertical-align: middle;">
