@@ -85,7 +85,8 @@ The guidance for how to support coded or text identification of medicinal produc
       - brand name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
       - generic name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
    - If the resource is a Medication resource:
-      - form and strength may be separately provided in `Medication.form`, `Medication.ingredient.itemCodeableConcept` and `Medication.ingredient.strength` when they are not implicit in `Medication.code`
+      - form and medication ingredient strength may be separately provided in `Medication.form`, `Medication.ingredient.itemCodeableConcept` and `Medication.ingredient.strength` when they are not implicit in `Medication.code`
+      - when representing medication ingredient strength use the native FHIR element `Medication.ingredient.strength` as [Ratio](https://hl7.org/fhir/R4/datatypes.html#Ratio) where possible. When the ingredient strength cannot be represented as a Ratio, it can be represented as [CodeableConcept](https://hl7.org/fhir/R4/datatypes.html#CodeableConcept) or [Quantity](https://hl7.org/fhir/R4/datatypes.html#Quantity) using the FHIR R5 to R4 pre-adoption extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html). 
       
 
     Example: Medication with coded brand name, generic name, item form and strength.
@@ -174,6 +175,11 @@ The guidance for how to support coded or text identification of medicinal produc
         - brand name = `Medication.extension` [Medication Brand Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
         - generic name = `Medication.extension` [Medication Generic Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html)
         - item form and strength = `Medication.code.text`
+        - when medication form and strength are not implicit in `Medication.code.text`, they may be separately represented in:
+          - form = `Medication.form.text`
+          - medication strength (as a whole) = `Medication.extension` [Medication Strength extension](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-strength.html) 
+          - medication ingredient strength = `Medication.ingredient.strength` [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html), with the strength represented in `valueCodeableConcept.text`
+
   
     Example: Medication with text only brand name, generic name, item form and strength.
     ~~~
@@ -195,6 +201,59 @@ The guidance for how to support coded or text identification of medicinal produc
        }
     }
     ~~~
+
+
+    Example: Medication with text only medication form and medication strength as a whole.
+    ~~~
+    {
+      "resourceType": "Medication",
+      ...
+      "extension": [
+        {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/medication-strength",
+          "valueString": "3 g"
+        }
+      ],
+      "code": {
+        "text": "Benpen"
+      },
+      "form": {
+        "text": "Powder"
+      }
+    }
+    ~~~
+
+
+
+    Example: Medication with text only medication form and medication ingredient strength.
+      ~~~
+      {
+        "resourceType": "Medication",
+        ...
+        "code": {
+          "text": "Benpen"
+        },
+        "form": {
+          "text": "Powder"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "text": "Benzylpenicillin sodium"
+            },
+            "strength": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength",
+                  "valueCodeableConcept": {
+                    "text": "Equivalent to 3 g benzylpenicillin"
+                  }
+                }
+              ]
+        ...
+      ~~~
+
+     
 
 4. Manufacturer information is not typically included in a medication code. Support for manufacturer information is provided using a Medication resource:
   - *coded* support: manufacturer = `Medication.manufacturer.identifier`
