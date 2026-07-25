@@ -6,7 +6,7 @@ The FHIR standard defines the following resources for exchanging medicine inform
 - [MedicationStatement](http://hl7.org/fhir/R4/medicationstatement.html)
 
 AU Core defines the following profiles:
-- [AU Core Medication](StructureDefinition-au-core-medication.html): to support medicinal product identification in an Australian healthcare context
+- [AU Core Medication](StructureDefinition-au-core-medication.html): to support medicinal product identification.
 - [AU Core MedicationDispense](StructureDefinition-au-core-medicationdispense.html)  (with AU Core Medication): to support dispense records and medication management.
 - [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html) (with AU Core Medication): to support prescription, ordering, and ePrescribing.
 - [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html) (with AU Core Medication): to support summary statements of medicine use.
