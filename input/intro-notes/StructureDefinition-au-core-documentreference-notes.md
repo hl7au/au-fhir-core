@@ -55,7 +55,7 @@
       <td>period</td>
       <td><b>MAY</b></td>
       <td><code>date</code></td>
-      <td>A requester <b>SHALL</b> provide a value precise to the second + time offset. A responder <b>SHALL</b> support a value precise to the second + time offset.<br/><br/>The requester <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHALL</strong> support these search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.<br/><br/>The requester <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>. The responder <strong>SHOULD</strong> support <code>multipleAnd</code>, and if <code>multipleAnd</code> is supported, <strong>SHALL</strong> support the search comparators <code>gt</code>, <code>lt</code>, <code>ge</code>, <code>le</code>.</td>
+      <td></td>
     </tr>
     <tr>
       <td>type</td>
@@ -128,10 +128,8 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`type`](https://hl7.org/fhir/R4/documentreference.html#search)** and **[`period`](https://hl7.org/fhir/R4/documentreference.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
-    - **SHALL** support these `period` comparators: `gt,lt,ge,le`
-    - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `period` (e.g.`period=[date]&period=[date]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, **SHALL** support the search comparators `gt,lt,ge,le`
 
-    `GET [base]/DocumentReference?patient={Type/}[id]&type={system|}[code]&period={gt|lt|ge|le}[date]{&period={gt|lt|ge|le}[date]&...}`
+    `GET [base]/DocumentReference?patient={Type/}[id]&type={system|}[code]&period=[date]`
 
     Example:
     
