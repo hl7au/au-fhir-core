@@ -179,7 +179,7 @@ If a sub-element is labelled as *Must Support*:
 - AU Core Responders **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
 - AU Core Requesters **SHALL** accept resources without error if *Must Support* sub-elements are present and contains any valid value.
 
-For example, in the AU Core Practitioner Profile, the `Practitioner.name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
+For example, in the AU Core Practitioner Profile, the `Practitioner.name` element is labelled *Must Support* and has *Must Support* sub-elements `Practitioner.name.family` and `Practitioner.name.given`. When claiming conformance to this profile:
 - AU Core Responders **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
 - AU Core Requesters **SHALL** accept a Practitioner resource without error if `Practitioner.name` is present and contains valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements.
 
@@ -196,6 +196,9 @@ AU Core Profile |Must Support Element|Reference
 [AU Core DiagnosticReport](StructureDefinition-au-core-diagnosticreport.html)|DiagnosticReport.result|AU Base Diagnostic Imaging Result, AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
 [AU Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html)|Observation.hasMember|AU Base Diagnostic Imaging Result, AU Core Diagnostic Result Observation, AU Core Pathology Result Observation
+[AU Core DocumentReference](StructureDefinition-au-core-documentreference.html)|DocumentReference.author|AU Core Practitioner, AU Core PractitionerRole, AU Core Patient, AU Core RelatedPerson, AU Core Organization, Device
+[AU Core Composition](StructureDefinition-au-core-composition.html)|Composition.author|Device, AU Core Organization, AU Core Patient, AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson 
+[AU Core Composition](StructureDefinition-au-core-composition.html)|Composition.attester.party|AU Core Organization, AU Core Patient, AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
 [AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.participant.individual|AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
 [AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.reasonReference|AU Core Condition, Observation, AU Core Procedure
 [AU Core MedicationDispense](StructureDefinition-au-core-medicationdispense.html)|MedicationDispense.performer.actor| Device, AU Core Organization, AU Core Patient, AU Core Practitioner, AU Core PractitionerRole, AU Core RelatedPerson
@@ -203,7 +206,7 @@ AU Core Profile |Must Support Element|Reference
 [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.reasonReference|AU Core Condition, Observation
 [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.reasonReference|AU Core Condition, AU Core DiagnosticReport, Observation
 [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html)|Observation.performer|AU Core Practitioner, AU Core PractitionerRole, AU Core Organization, AU Core Patient, AU Core RelatedPerson
-[AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, DocumentReference
+[AU Core Procedure](StructureDefinition-au-core-procedure.html)|Procedure.reasonReference|AU Core Condition, Observation, AU Core Procedure, AU Core DocumentReference
 {:.grid}
 
 
@@ -272,7 +275,7 @@ AU Core Profile |Must Support Element|Supported Identifiers
 [AU Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html)|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
-For example, the profile [AU Core Organization](StructureDefinition-au-core-organization.html) defines support for the Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN) identifier types as slices of `Organization.identifier` flagged with *Must Support*. When claiming conformance to the AU Core Organization Profile:
+For example, the profile [AU Core Organization](StructureDefinition-au-core-organization.html) defines support for the Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN) identifier types as slices of `Organization.identifier` labelled with *Must Support*. When claiming conformance to the AU Core Organization Profile:
 - AU Core Responders **SHALL** correctly populate `Organization.identifier` with at least one of HPI-O or ABN if known, or any other identifier type when neither HPI-O or ABN are known but some other identifier is known (e.g. NATA Accreditation Number).
 - AU Core Requesters **SHALL** accept the Organization resource if `Organization.identifier` is present and containins any valid value. A valid value may be an HPI-O or ABN, or may be any other valid identifier type allowed by the element definition (e.g. NATA Accreditation Number).
 
@@ -280,7 +283,7 @@ Systems **MAY** support populating and accepting other identifiers, but this is 
 
 ##### Must Support - Choice of Profile Elements
 
-A resource may support two elements that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU Core Encounter](StructureDefinition-au-core-encounter.html). In such cases:
+A profile may label two elements as *Must Support* that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU Core Encounter](StructureDefinition-au-core-encounter.html). In such cases:
 - AU Core Responders **SHALL** correctly populate at least one element choice if the value is known.
 - AU Core Requesters **SHALL** accept resources without error if any element allowed by the profile is present and contains any valid value. 
 
@@ -315,7 +318,7 @@ AU Core Profile |Must Support Sub-Element|Terminology Choices
 [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.medicationCodeableConcept.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html)
 {:.grid}
 
-For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) defines support for [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) value sets as slices of `Medication.code.coding` flagged with *Must Support*.
+For example, the profile [AU Core Medication](StructureDefinition-au-core-medication.html) defines support for [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) value sets as slices of `Medication.code.coding` labelled with *Must Support*.
 
 When claiming conformance to the AU Core Medication profile: 
 - AU Core Responders **SHALL** correctly populate `Medication.code.coding` with codes from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) if both coded values are known, or from either if only one is known, or from another terminology if neither is known but a code is available, or text only if no coded value is known.
@@ -366,6 +369,8 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
       - For AU Core profiles, the following status elements with required binding have no appropriate "unknown" concept code:
         - `AllergyIntolerance.clinicalStatus`&#42;
         - `Condition.clinicalStatus`&#42;
+        - `Composition.status`
+        - `Composition.attester.mode`
         - `Immunization.status`
         
       &#xa;&#xa;&#xa;&#xa;&#42;The clinicalStatus element is conditionally mandatory based on resource-specific constraints.
@@ -407,5 +412,39 @@ When an element definition is optional (minimum cardinality = 0), including elem
 When an element definition is mandatory (minimum cardinality > 0), 
 - The element **SHALL** be correctly populated but it may exceed the data requester's access rights to know that the data is suppressed:
   - where a requester does not have access rights to know that data is suppressed use the code "unknown" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
-  - where a requester has the access rights to know that data is suppressed use the code "masked" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
+    
+    Example: Patient resource where the identifier is suppressed.
+    ~~~
+    "resourceType" : "Patient",
+    ...
+    "identifier" : [
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "valueCode" : "unknown"
+          }
+        ]
+      }
+    ],
+    ...
+    ~~~
 
+  - where a requester has the access rights to know that data is suppressed use the code "masked" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
+  
+    Example: Observation resource where the code is suppressed.
+    ~~~
+    {
+      "resourceType" : "Observation",
+      ...
+      "code" : {
+        "coding" : [
+          {
+            "system" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "code" : "masked"
+          }
+        ]
+      },
+      ...
+    }
+    ~~~

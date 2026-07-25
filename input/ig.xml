@@ -798,6 +798,14 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Practitioner/megan-peterson"/>
+			</reference>
+			<name value="Practitioner - Megan Peterson"/>
+			<description value="Shows an example of a practitioner resource for Megan Peterson with a HPI-I for the *AU Core Practitioner* profile. The resource includes the practitioner's official name and identifier details."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Practitioner/chau-fryer"/>
 			</reference>
 			<name value="Practitioner - Dr. Chau FRYER"/>
@@ -827,6 +835,14 @@
 			</reference>
 			<name value="PractitionerRole - Cardiologist"/>
 			<description value="Shows an example of a Cardiologist role for the *AU Core PractitionerRole* profile, including a Medicare Provider Number identifier, contact details, and references to the associated Practitioner, Organization, and Location."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="PractitionerRole/pharmacist-megan-peterson"/>
+			</reference>
+			<name value="PractitionerRole - Pharmacist"/>
+			<description value="Shows an example of a Pharmacist role for the *AU Core PractitionerRole* profile, including a Medicare Provider Number identifier, contact details, and references to the associated Practitioner and Organization."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
 		</resource>
 		<resource>
