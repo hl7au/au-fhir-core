@@ -25,7 +25,7 @@ Australian Medicines Terminology (AMT) is the national terminology for identific
 The AMT is published monthly to include new items on the Australian Register of Therapeutic Goods from the TGA, as well as items listed on the Pharmaceutical Benefits Scheme. 
 The AMT is published as part of SNOMED CT-AU (Australian edition of SNOMED CT) and can be downloaded in a variety of formats from the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/). For more information on using SNOMED CT-AU in FHIR, see the guidance defined in AU Base [SNOMED CT Australian Edition](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition).
 
-In addition to the medication code, the majority of use cases support exchange of structured medicine information as separate data elements covering brand name, generic name, item form and strength, and manufacturer. These data elements can be supported as coded, or text, and systems are likely to use a combination of coded and text elements when constructing a Medication resource. Medication ingredient strength is represented using the native FHIR element `Medication.ingredient.strength` as [Ratio](https://hl7.org/fhir/R4/datatypes.html#Ratio) where possible. Where the ingredient strength cannot be represented as a Ratio, it can be represented as [CodeableConcept](https://hl7.org/fhir/R4/datatypes.html#CodeableConcept) or [Quantity](https://hl7.org/fhir/R4/datatypes.html#Quantity) using the FHIR R5 to R4 pre-adoption extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html).
+In addition to the medication code, the majority of use cases support exchange of structured medicine information as separate data elements covering brand name, generic name, item form and strength, ingredient strength and manufacturer. These data elements can be supported as coded, or text, and systems are likely to use a combination of coded and text elements when constructing a Medication resource.
 
 The guidance for how to support coded or text identification of medicinal products is summarised below: 
 
@@ -80,15 +80,15 @@ The guidance for how to support coded or text identification of medicinal produc
     }
     ~~~
 
-2. For *coded* support of brand name, generic name, manufacturer, item form and strength, where the individual components required for medication identification are separately coded:
+2. For *coded* support of brand name, generic name, manufacturer, item form and ingredient strength, where the individual components for medication identification are separately coded:
    - Coded support for the following can be provided using code.coding with an optional [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) to explicitly declare the type of product identification in the resource (i.e. MedicationAdministration, MedicationStatement, MedicationDispense, MedicationRequest, Medication), for example: 
       - brand name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
       - generic name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
-   - If the resource is a Medication resource:
-      - form and ingredient strength may be separately provided in `Medication.form`, `Medication.ingredient.itemCodeableConcept` and `Medication.ingredient.strength` when they are not implicit in `Medication.code`
-      
+   - If the resource is a Medication resource and the form or ingredient strength are not implicit in `Medication.code`, they can be separately represented:
+      - form in `Medication.form`
+      - ingredient strength is represented using the FHIR R5 to R4 pre-adoption extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html), with the ingredient identified in `Medication.ingredient.itemCodeableConcept` and the strength represented in the extension's `valueCodeableConcept.coding`sup>1</sup>
 
-    Example: Medication with coded brand name, generic name, item form and strength.
+    Example: Medication with coded brand name, generic name, item form and igredient strength.
     ~~~
     {
       "resourceType": "Medication",
@@ -154,31 +154,37 @@ The guidance for how to support coded or text identification of medicinal produc
                 }
               ]
             },
-            "strength": {
-              "numerator": {
-                "value": 3,
-                "unit": "g"
-              },
-              "denominator": {
-                "value": 1,
-                "unit": "unit"
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/CodeSystem/medication-ingredientstrength",
+                      "code": "qs",
+                      "display": "QS"
+                    }
+                  ]
+                }
               }
-            }
+            ]
           }
         ]
     }
     ~~~
 
-3.  For *non-coded* support for brand name, generic name, manufacturer, item form and strength:
+Notes:
+1. Where possible, represent the ingredient strength using the native FHIR element `Medication.ingredient.strength` element as a [Ratio](https://hl7.org/fhir/R4/datatypes.html#Ratio). If the strength cannot be represented as a Ratio, it can be represented as [CodeableConcept](https://hl7.org/fhir/R4/datatypes.html#CodeableConcept) or [Quantity](https://hl7.org/fhir/R4/datatypes.html#Quantity) using the R5 to R4 pre-adoption extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html).
+
+3.  For *non-coded* support for brand name, generic name, manufacturer, item form, item strength (as a whole), and ingredient strength:
     - Non-coded support is provided using the Medication resource
         - brand name = `Medication.extension` [Medication Brand Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
         - generic name = `Medication.extension` [Medication Generic Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html)
         - item form and strength = `Medication.code.text`
-        - when medication form and strength are not implicit in `Medication.code.text`, they may be separately represented in:
+        - when medication form, item strength or ingredient strength are not implicit in `Medication.code.text`, they may be separately represented in:
           - form = `Medication.form.text`
-           - strength may be represented for the medication item as a whole, for an individual ingredient, or for both, as applicable:
-             - item strength (as a whole) = `Medication.extension` [Medication Strength extension](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-strength.html) 
-             - ingredient strength = `Medication.ingredient.strength` [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html), with the strength represented in `valueCodeableConcept.text`
+          - item strength (as a whole) = `Medication.extension` [Medication Strength extension](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-strength.html) 
+          - ingredient strength = `Medication.ingredient.strength` [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html), with the ingredient identified in `Medication.ingredient.itemCodeableConcept.text`, and the strength represented in the extension's `valueCodeableConcept.text`
 
   
     Example: Medication with text only brand name, generic name, item form and strength.
