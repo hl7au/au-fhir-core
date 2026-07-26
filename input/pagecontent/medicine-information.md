@@ -87,6 +87,7 @@ The guidance for how to support coded or text identification of medicinal produc
    - If the resource is a Medication resource and the form or ingredient strength are not implicit in `Medication.code`, they can be separately represented:
       - form in `Medication.form`
       - ingredient strength is represented using the FHIR R5 to R4 pre-adoption extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html), with the ingredient identified in `Medication.ingredient.itemCodeableConcept` and the strength represented in the extension's `valueCodeableConcept.coding`sup>1</sup>
+         - Please note that, whenever possible, ingredient strength is represented using the native FHIR `Medication.ingredient.strength` element as a [Ratio](https://hl7.org/fhir/R4/datatypes.html#Ratio). If the strength cannot be represented as a Ratio, the FHIR R5 to R4 pre-adoption extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html) additionally supports representation as a [CodeableConcept](https://hl7.org/fhir/R4/datatypes.html#CodeableConcept) or [Quantity]((https://hl7.org/fhir/R4/datatypes.html#CodeableConcept).
 
     Example: Medication with coded brand name, generic name, item form and igredient strength.
     ~~~
@@ -173,9 +174,6 @@ The guidance for how to support coded or text identification of medicinal produc
     }
     ~~~
 
-Notes:
-1. Where possible, represent the ingredient strength using the native FHIR element `Medication.ingredient.strength` element as a [Ratio](https://hl7.org/fhir/R4/datatypes.html#Ratio). If the strength cannot be represented as a Ratio, it can be represented as [CodeableConcept](https://hl7.org/fhir/R4/datatypes.html#CodeableConcept) or [Quantity](https://hl7.org/fhir/R4/datatypes.html#Quantity) using the R5 to R4 pre-adoption extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html).
-
 3.  For *non-coded* support for brand name, generic name, manufacturer, item form, item strength (as a whole), and ingredient strength:
     - Non-coded support is provided using the Medication resource
         - brand name = `Medication.extension` [Medication Brand Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
@@ -183,8 +181,8 @@ Notes:
         - item form and strength = `Medication.code.text`
         - when medication form, item strength or ingredient strength are not implicit in `Medication.code.text`, they may be separately represented in:
           - form = `Medication.form.text`
-          - item strength (as a whole) = `Medication.extension` [Medication Strength extension](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-strength.html) 
-          - ingredient strength = `Medication.ingredient.strength` [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html), with the ingredient identified in `Medication.ingredient.itemCodeableConcept.text`, and the strength represented in the extension's `valueCodeableConcept.text`
+          - item strength (as a whole) = `Medication.extension` [Medication Strength extension](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-strength.html), representing the strength of the medication as a whole
+          - ingredient strength = `Medication.ingredient.strength` [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html), representing the strength of an individual ingredient, with the ingredient identified in `Medication.ingredient.itemCodeableConcept.text` and the strength represented in the extension's `valueCodeableConcept.text`. Where both medication strength (as a whole) and ingredient strength are available, they may both be represented.
 
   
     Example: Medication with text only brand name, generic name, item form and strength.
