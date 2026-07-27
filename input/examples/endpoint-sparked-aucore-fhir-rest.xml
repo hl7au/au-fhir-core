@@ -19,7 +19,7 @@
     <code value="hl7-fhir-rest"/>
     <display value="HL7 FHIR"/>
   </connectionType>
-  <name value="Sparked Development FHIR Server (AU Core node)"/>
+  <name value="Sparked Development FHIR Server (AU Core)"/>
   <managingOrganization>
     <display value="CSIRO"/>
   </managingOrganization>

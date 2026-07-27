@@ -390,8 +390,8 @@
 			<reference>
 				<reference value="Endpoint/sparked-aucore-fhir-rest"/>
 			</reference>
-			<name value="Endpoint - Sparked Development FHIR Server (AU Core node)"/>
-			<description value="Shows an example of an Endpoint for the *AU Core Endpoint* profile representing the HL7 FHIR REST endpoint of the AU Core node, DEFAULT tenant, on the Sparked Development FHIR Server, a development environment identified using the environment type extension."/>
+			<name value="Endpoint - Sparked Development FHIR Server (AU Core)"/>
+			<description value="Shows an example of an Endpoint for the *AU Core Endpoint* profile representing the AU Core HL7 FHIR REST endpoint on the Sparked Development FHIR Server, a development environment identified using the environment type extension."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
 		</resource>
 		<resource>
