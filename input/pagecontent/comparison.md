@@ -30,7 +30,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
 
 <img src="minus_symbol.png" width="20"/> **No equivalent profile**: No equivalent profile for comparison.
 
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+<table border="1" class="grid" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
             <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core</th>
@@ -221,7 +221,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
 
 The following IPA profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+<table border="1" class="grid" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
             <th style="width: 25%;">AU Core Profile</th>
@@ -310,7 +310,7 @@ IPA does not include additional profiles.
 
 The following IPS profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+<table border="1" class="grid" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
             <th style="width: 25%;">AU Core Profile</th>
@@ -659,7 +659,7 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 
 The following US Core profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+<table border="1" class="grid" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
             <th style="width: 25%;">AU Core Profile</th>
@@ -1443,7 +1443,7 @@ The table below provides a mapping of AU Core capability statements to capabilit
 
 <img src="minus_symbol.png" width="20"/> **No similar capability statement**: No similar actor in terms of role and purpose is defined.
 
-<table border="1" style="width: 100%; margin-left: 0; margin-right: auto; border-collapse: collapse;">
+<table border="1" class="grid" style="width: 100%; margin-left: 0; margin-right: auto; border-collapse: collapse;">
     <thead>
     <tr>
         <th style="width: 25%; text-align: left; vertical-align: middle;">AU Core</th>
@@ -1487,7 +1487,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
 
 <img src="minus_symbol.png" width="20"/> **No equivalent capability statement or resource type**: No equivalent CapabilityStatement mapped for comparison or no equivalent support for that resource type.
 
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+<table border="1" class="grid" style="width: 100%; margin: auto; border-collapse: collapse;">
     <colgroup>
         <col style="width: 15%;">
         <col style="width: 25%;">
@@ -1792,7 +1792,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPA Capability
 
 <img src="plus_sign.png" width="16"/> **New**: The CapabilityStatement includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
 
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+<table border="1" class="grid" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
 		<col style="width: 20%;">
 		<col style="width: 40%;">
@@ -2019,7 +2019,7 @@ A system conforming to an AU Core CapabilityStatement aligns with IPS Capability
 
 <img src="plus_sign.png" width="16"/> **New**: The CapabilityStatement includes a conformance requirement that is NOT present in the mapped AU Core CapabilityStatement.
 
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+<table border="1" class="grid" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
 		<col style="width: 20%;">
 		<col style="width: 80%;">
@@ -2083,7 +2083,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 
 *<sup>2</sup>Servers certified under the 21st Century Cures Act for accessing patient data apply additional requirements including requirements to support ALL resources defined in this capability statement with resource conformance SHALL. These additional requirements are excluded from comparison, i.e. with the exception of the Patient resource, resource conformance SHALL is considered SHOULD.*
 
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+<table border="1" class="grid" style="width: 100%; margin: auto; border-collapse: collapse;">
  	<colgroup>
 		<col style="width: 20%;">
 		<col style="width: 40%;">
