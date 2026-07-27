@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Endpoint xmlns="http://hl7.org/fhir">
-  <id value="sparked-fhir-rest"/>
+  <id value="hl7au-tx-fhir-rest"/>
   <meta>
-    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-endpoint"/>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-endpoint"/>
   </meta>
   <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.environmentType">
     <valueCodeableConcept>
@@ -19,20 +19,10 @@
     <code value="hl7-fhir-rest"/>
     <display value="HL7 FHIR"/>
   </connectionType>
-  <name value="Sparked FHIR Development Server (AUCORE)"/>
+  <name value="HL7 AU Development Terminology Server"/>
   <managingOrganization>
-    <display value="CSIRO"/>
+    <display value="HL7 Australia"/>
   </managingOrganization>
-  <contact>
-    <system value="url"/>
-    <value value="https://sparked.csiro.au"/>
-    <use value="work"/>
-  </contact>
-  <contact>
-    <system value="email"/>
-    <value value="sparked@csiro.au"/>
-    <use value="work"/>
-  </contact>
   <payloadType>
     <coding>
       <system value="http://terminology.hl7.org/CodeSystem/endpoint-payload-type"/>
@@ -42,5 +32,5 @@
   </payloadType>
   <payloadMimeType value="application/fhir+json"/>
   <payloadMimeType value="application/fhir+xml"/>
-  <address value="https://smile.sparked-fhir.com/aucore/fhir/DEFAULT"/>
+  <address value="https://tx.dev.hl7.org.au/fhir"/>
 </Endpoint>
