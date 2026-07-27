@@ -1,9 +1,9 @@
-### Release TBD
-- Publication date: TBD
-- Publication status: TBD
+### Release 3.0.0-ballot1
+- Publication date: 2026-07-29
+- Publication status: Ballot for Working Standard
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
+This change log documents the significant updates and resolutions implemented from version [2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html) to [3.0.0-ballot1](https://hl7.org.au/fhir/core/3.0.0-ballot1/index.html). The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
 - [AU Core Composition](StructureDefinition-au-core-composition.html)
