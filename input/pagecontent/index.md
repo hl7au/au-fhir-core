@@ -5,7 +5,7 @@ This ballot is opened during this cycle to solicit feedback and approval from th
 
 Key updates and changes in this version are shown in the AU Core [Change Log](changes.html).
 
-The ballot period is 11 August 2025 to 07 September 2025.
+The ballot period is 05 August 2026 to 02 September 2026.
 
 Information on how to provide feedback for balloters is available on this Confluence page: [Guidance: Ballot Voting](https://confluence.hl7.org/display/HA/Guidance%3A+Ballot+Voting).
 
