@@ -25,7 +25,7 @@
   </managingOrganization>
   <contact>
     <system value="url"/>
-    <value value="https://chat.fhir.org/#narrow/channel/179173-australia"/>
+    <value value="https://chat.fhir.org/#narrow/channel/179173-australia/topic/Sparked.20FHIR.20Server"/>
     <use value="work"/>
   </contact>
   <payloadType>
