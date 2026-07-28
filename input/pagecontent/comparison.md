@@ -3,7 +3,7 @@
 AU Core aligns to, and leverages, international standards and other national standards, in particular:
 - [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/)
 - [International Patient Summary Implementation Guide 2.0.1](https://hl7.org/fhir/uv/ips/2.0.1/)
-- [US Core Implementation Guide 8.0.0](https://hl7.org/fhir/us/core/STU8/)
+- [US Core Implementation Guide 8.0.1](https://hl7.org/fhir/us/core/STU8.0.1/)
 
 Relationships between AU Core, AUCDI, and the above key implementation guides is described in [Relationship with other IGs](relationship.html). 
 
@@ -36,7 +36,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">IPA 1.1.0</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">IPS 2.0.1</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">US Core 8.0.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">US Core 8.0.1</th>
         </tr>
     </thead>
     <tbody>
@@ -669,7 +669,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
     <thead>
         <tr>
             <th style="width: 25%;">AU Core Profile</th>
-            <th style="width: 25%;">US Core 8.0.0 Profile </th>
+            <th style="width: 25%;">US Core 8.0.1 Profile </th>
             <th style="width: 25%;">Element</th>
             <th style="width: 25%;">US Core Profile Additional requirements</th>
         </tr>
@@ -677,7 +677,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
     <tbody>
         <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></td>
             <td style="width: 25%;">AllergyIntolerance.code</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion">Common substances for allergy and intolerance documentation including refutations</a>.</td>
         </tr>
@@ -687,7 +687,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-core-bloodpressure.html">AU Core Blood Pressure</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile</a></td>
             <td style="width: 25%;">Observation.performer</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
@@ -701,7 +701,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-bodyheight.html">AU Core Body Height</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-body-height.html">US Core Body Height Profile</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-body-height.html">US Core Body Height Profile</a></td>
             <td style="width: 25%;">Observation.performer</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
@@ -719,7 +719,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-bodytemp.html">AU Core Body Temperature</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-body-temperature.html">US Core Body Temperature Profile</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-body-temperature.html">US Core Body Temperature Profile</a></td>
             <td style="width: 25%;">Observation.performer</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
@@ -737,7 +737,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-bodyweight.html">AU Core Body Weight</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-body-weight.html">US Core Body Weight Profile</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-body-weight.html">US Core Body Weight Profile</a></td>
             <td style="width: 25%;">Observation.performer</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
@@ -755,7 +755,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-condition.html">AU Core Condition</a></td>
-            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
             <td style="width: 25%;">Condition.category</td>
             <td style="width: 25%;">US Core requires category of 'problem-list-item' or 'health-concern'.</td>
         </tr>
@@ -780,7 +780,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
-            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a></td>
             <td style="width: 25%;">Condition.encounter</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
@@ -849,7 +849,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-core-allergyintolerance.html">AU Core Diagnostic Result Observation</a></td>
-            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result Profile</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result Profile</a></td>
             <td style="width: 25%;">Observation.code</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/R4/valueset-observation-codes.html">LOINC Codes</a>.</td>
         </tr>
@@ -922,7 +922,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-encounter.html">AU Core Encounter</a></td>
-            <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
+            <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
             <td style="width: 25%;">Encounter.type</td>
             <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.23/expansion">Encounter Type</a>.</td>
         </tr>
@@ -960,7 +960,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-heart-rate.html">US Core Heart Rate Profile</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-heart-rate.html">US Core Heart Rate Profile</a></td>
             <td style="width: 25%;">Observation.code</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
         </tr>
@@ -978,7 +978,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
-            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-immunization.html">US Core Immunization Profile</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-immunization.html">US Core Immunization Profile</a></td>
             <td style="width: 25%;">Immunization.vaccineCode</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.6/expansion">CVX Vaccines Administered Vaccine Set</a>.</td>
         </tr>
@@ -1004,7 +1004,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="12" style="width: 25%;"><a href="StructureDefinition-au-core-location.html">AU Core Location</a></td>
-            <td rowspan="12" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-location.html">US Core Location Profile</a></td>
+            <td rowspan="12" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-location.html">US Core Location Profile</a></td>
             <td style="width: 25%;">Location.name</td>
             <td style="width: 25%;">US Core requires minimum of 1.</td>
         </tr>
@@ -1054,7 +1054,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-medication.html">US Core Medication Profile</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-medication.html">US Core Medication Profile</a></td>
             <td style="width: 25%;">Medication.code</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
@@ -1102,7 +1102,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="12" style="width: 25%;"><a href="StructureDefinition-au-core-medicationrequest.html">AU Core MedicationRequest</a></td>
-            <td rowspan="12" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
+            <td rowspan="12" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td>
             <td style="width: 25%;">MedicationRequest.medicationCodeableConcept</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug</a>.</td>
         </tr>
@@ -1152,7 +1152,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="7" style="width: 25%;"><a href="StructureDefinition-au-core-organization.html">AU Core Organization</a></td>
-            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td>
+            <td rowspan="7" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td>
             <td style="width: 25%;">Organization.active</td>
             <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
@@ -1182,9 +1182,9 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="8" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a></td>
-            <td rowspan="8" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a></td>
+            <td rowspan="8" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a></td>
             <td style="width: 25%;">Observation.code</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-laboratory-test-codes.html">US Core Laboratory Test Codes</a>. </td>
+            <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/us/core/STU8.0.1/ValueSet-us-core-laboratory-test-codes.html">US Core Laboratory Test Codes</a>. </td>
         </tr>
         <tr>
             <td style="width: 25%;">Observation.referenceRange</td>
@@ -1216,7 +1216,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="9" style="width: 25%;"><a href="StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
-            <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></td>
+            <td rowspan="9" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></td>
             <td style="width: 25%;">Patient.identifier</td>
             <td style="width: 25%;">US Core requires all identifiers to have system and value.</td>
         </tr>
@@ -1254,7 +1254,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="12" style="width: 25%;"><a href="StructureDefinition-au-core-practitioner.html">AU Core Practitioner</a></td>
-            <td rowspan="12" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></td>
+            <td rowspan="12" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></td>
             <td style="width: 25%;">Practitioner.identifier</td>
              <td style="width: 25%;">US Core requires minimum of 1, and all identifiers to have system and value.</td>
         </tr>
@@ -1304,7 +1304,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-practitionerrole.html">AU Core PractitionerRole</a></td>
-            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole Profile</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole Profile</a></td>
             <td style="width: 25%;">PractitionerRole.telecom, PractitionerRole.endpoint</td>
             <td style="width: 25%;">US Core requires telecom or endpoint to be present (pd-1).</td>
         </tr>
@@ -1330,13 +1330,13 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-relatedperson.html">AU Core RelatedPerson</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-relatedperson.html">US Core RelatedPerson Profile</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-relatedperson.html">US Core RelatedPerson Profile</a></td>
             <td style="width: 25%;">RelatedPerson.active</td>
             <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-resprate.html">AU Core Respiration Rate</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-respiratory-rate.html">US Core Respiratory Rate Profile</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-respiratory-rate.html">US Core Respiratory Rate Profile</a></td>
             <td style="width: 25%;">Observation.code</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
         </tr>
@@ -1354,7 +1354,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="6" style="width: 25%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
-            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a></td>
+            <td rowspan="6" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a></td>
             <td style="width: 25%;">Observation.status</td>
             <td style="width: 25%;">US Core requires status of 'final' or 'entered-in-error'.</td>
         </tr>
@@ -1380,7 +1380,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html">US Core Vital Signs Profile</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-simple-observation.html">US Core Vital Signs Profile</a></td>
             <td style="width: 25%;">Observation.performer</td>
             <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
@@ -1455,7 +1455,7 @@ The table below provides a mapping of AU Core capability statements to capabilit
         <th style="width: 25%; text-align: left; vertical-align: middle;">AU Core</th>
         <th style="width: 25%; text-align: left; vertical-align: middle;">IPA 1.1.0</th>
         <th style="width: 25%; text-align: left; vertical-align: middle;">IPS 2.0.1</th>
-		<th style="width: 25%; text-align: left; vertical-align: middle;">US Core 8.0.0</th>
+		<th style="width: 25%; text-align: left; vertical-align: middle;">US Core 8.0.1</th>
     </tr>
   </thead>
   <tbody>
@@ -1463,13 +1463,13 @@ The table below provides a mapping of AU Core capability statements to capabilit
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-requester.html">AU Core Requester</a></td>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-client.html">IPA Client</a></td>
 		<td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU8/CapabilityStatement-us-core-client.html">US Core Client</a></td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/CapabilityStatement-us-core-client.html">US Core Client</a></td>
     </tr>
 	<tr>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="CapabilityStatement-au-core-responder.html">AU Core Responder</a></td>
         <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/CapabilityStatement-ipa-server.html">IPA Server</a></td>
 		<td style="width: 25%; text-align: left; vertical-align: middle;"><img src="minus_symbol.png" width="20"/><sup>1</sup> (<a href="https://hl7.org/fhir/uv/ips/2.0.1/CapabilityStatement-ips-server.html">IPS Server</a>)</td>
-		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU8/CapabilityStatement-us-core-server.html">US Core Server</a></td>
+		<td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://hl7.org/fhir/us/core/STU8.0.1/CapabilityStatement-us-core-server.html">US Core Server</a></td>
     </tr>
   </tbody>
 </table>
@@ -1513,10 +1513,10 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
 		<tr>
             <th style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></th>
             <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.1</strong></th>
-            <th style="text-align: center; vertical-align: middle;"><strong>US Core 8.0.0</strong></th>
+            <th style="text-align: center; vertical-align: middle;"><strong>US Core 8.0.1</strong></th>
 			<th style="text-align: center; vertical-align: middle;"><strong>IPA 1.1.0</strong></th>
             <th style="text-align: center; vertical-align: middle;"><strong>IPS 2.0.1</strong></th>
-            <th style="text-align: center; vertical-align: middle;"><strong>US Core 8.0.0</strong></th>
+            <th style="text-align: center; vertical-align: middle;"><strong>US Core 8.0.1</strong></th>
         </tr>
     </thead>
     <tbody>
@@ -2107,8 +2107,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 	<thead>
         <tr>
             <th>AU Core CapabilityStatement requirement</th>
-            <th>US Core 8.0.0 Client CapabilityStatement additional requirements</th>
-			<th>US Core 8.0.0 Server CapabilityStatement additional requirements<sup>2</sup></th>
+            <th>US Core 8.0.1 Client CapabilityStatement additional requirements</th>
+			<th>US Core 8.0.1 Server CapabilityStatement additional requirements<sup>2</sup></th>
         </tr>
     </thead>
     <tbody>
