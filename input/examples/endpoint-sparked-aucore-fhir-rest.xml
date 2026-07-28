@@ -28,11 +28,6 @@
     <value value="https://chat.fhir.org/#narrow/channel/179173-australia"/>
     <use value="work"/>
   </contact>
-  <contact>
-    <system value="email"/>
-    <value value="kyle.pettigrew@csiro.au"/>
-    <use value="work"/>
-  </contact>
   <payloadType>
     <coding>
       <system value="http://terminology.hl7.org/CodeSystem/endpoint-payload-type"/>
