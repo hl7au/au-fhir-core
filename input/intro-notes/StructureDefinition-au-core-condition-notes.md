@@ -139,7 +139,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     
       1. GET [base]/Condition?patient=5678&amp;code=http://snomed.info/sct\|68566005,http://snomed.info/sct\|394659003
 
-    *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and condition code(s). The Condition `code` parameter searches `Condition.code` only. ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and condition code(s) ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/condition.html#search)** and **[`onset-date`](https://hl7.org/fhir/R4/condition.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
