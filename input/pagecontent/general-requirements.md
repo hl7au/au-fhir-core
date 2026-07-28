@@ -152,7 +152,7 @@ Example: AU Core AllergyIntolerance profile with *Must Support* and obligations 
 #### Interpreting Profile Elements Labelled Must Support
 The section is provided as additional support in understanding of *Must Support* and obligations on elements in AU Core. This section does not override the obligations defined for an actor - implementers also need to read the profile specific implementation guidance for any qualifying requirements placed on the obligations for a *Must Support* element.
 
-Profiles defined in this implementation publication flag *Must Support* on elements (e.g. `Patient.name`) and sub-elements of a data type (e.g. `Patient.name.use`). 
+Profiles defined in this implementation guide flag *Must Support* on elements (e.g. `Patient.name`) and sub-elements of a data type (e.g. `Patient.name.use`). 
 The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element. For example, the profile [AU Core Patient](StructureDefinition-au-core-patient.html) limits what is considered valid for the element `Patient.name` with the invariant "**au-core-pat-02:** At least one patient name shall have a family name".
 
 ##### Must Support - Primitive Elements
@@ -186,7 +186,7 @@ For example, in the AU Core Practitioner Profile, the `Practitioner.name` elemen
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
 - AU Core Responders **SHALL** correctly populate the element with at least one referenced resource or allowed profile if the value is known. 
-- AU Core Requesters **SHALL** accept resources without error if the element is present and contains any valid referenced resource or profiles.
+- AU Core Requesters **SHALL** accept resources without error if the element is present and contains any valid referenced resource or profile.
 
 The table below provides a list of AU Core profile elements that allow multiple referenced resource types or profiles.
 
@@ -241,7 +241,7 @@ AU Core Profile |Must Support Element|Data Types
 {:.grid}
 
 In addition, some data type choices are labelled as *Must Support* and apply an additional obligation of [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate) for AU Core Responders. In such cases:
-- AU Core Responders **SHALL** populate the element when the value is known and **SHOULD** be capable of correctly populating the element using this data type. Typically, this means that an application should demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value of that data type.
+- AU Core Responders **SHALL** populate the element when the value is known and **SHOULD** be capable of correctly populating the element using this data type. Typically, this means that an application can demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value of that data type.
 
 The table below provides a list of AU Core profile elements where a data type choice is labelled as *Must Support*.
 
@@ -337,7 +337,7 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
 
 1.  For *non-coded* data elements where the applicable AU Core profile does not mandate a sub-element
     - use the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) 
-    - use the code "unknown" _The value is expected to exist but is not known_
+    - use the code "unknown": _The value is expected to exist but is not known_
     - For some AU Core Observation profiles the `Observation.value` element is conditionally mandatory, e.g. AU Core Body Height.  In this case the `Observation.dataAbsentReason` element is used with the code "unknown" rather than the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html). Requesters are advised that other meaningful values can be captured in `Observation.dataAbsentReason` beyond missing or suppressed.
   
     Example: Patient resource where the patient's birthDate is not available.
@@ -357,7 +357,7 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
          }
     ~~~
       
-2. For *non-coded* data elements where the applicable AU Core profile mandates a sub-element, e.g. in AU Core Practitioner, the sub-element `Practitioner.name.family` is mandatory, then the resource must contain the sub-element otherwise the resource will not be conformant.
+2. For *non-coded* data elements where the applicable AU Core profile mandates a sub-element, e.g. in AU Core Practitioner, the sub-element `Practitioner.name.family` is mandatory, the resource must contain the sub-element otherwise the resource will not be conformant.
 
 3. For *coded* data elements:
     - *required* binding strength:
