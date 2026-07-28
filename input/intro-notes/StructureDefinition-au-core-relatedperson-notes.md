@@ -93,7 +93,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
       1. GET [base]/RelatedPerson?patient=5678&amp;relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode\|MTH
       1. GET [base]/RelatedPerson?patient.identifier=http://example.org/fhir/mrn\|12345&amp;relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode\|MTH
 
-    *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient and relationship code ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient and relationship ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference) and [how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/relatedperson.html#search)** and **[`name`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
