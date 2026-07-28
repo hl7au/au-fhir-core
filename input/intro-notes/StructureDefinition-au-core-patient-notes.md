@@ -163,7 +163,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     
       1. GET [base]/Patient?name=Wang&amp;birthdate=gt2007-03-20
 
-    *Implementation Notes:* Fetches a bundle of all Patient resources matching the name and a birthdate greater than that specified ([how to search by date](http://hl7.org/fhir/R4/search.html#date) and [how to search by string](http://hl7.org/fhir/R4/search.html#string))
+    *Implementation Notes:* Fetches a bundle of all Patient resources matching specified birthdate and name ([how to search by date](http://hl7.org/fhir/R4/search.html#date) and [how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
 1. **SHOULD** support searching using the combination of the **[`family`](https://hl7.org/fhir/R4/patient.html#search)** and **[`gender`](https://hl7.org/fhir/R4/patient.html#search)** search parameters:
     
