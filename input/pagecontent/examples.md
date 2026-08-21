@@ -20,8 +20,8 @@ In addition to the examples defined in this implementation, synthetic (realistic
 * [MedicationRequest - prescription, paracetamol 500 mg + codeine phosphate hemihydrate 30 mg (missing data for status and requester)](MedicationRequest-paracetamol-codeine.html) 
 
 ### Suppressed Data
-* [Condition - Data suppressed for category and code](Condition-condition-masked.html)
-* [Observation - Data suppressed for category, code and effectiveDate](Observation-observation-masked.html)
+* [Condition - Data suppressed for category and code](Condition-masked.html)
+* [Observation - Data suppressed for category, code and effectiveDate](Observation-masked.html)
 
 
 
