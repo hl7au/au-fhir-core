@@ -312,7 +312,7 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Condition/noknown"/>
+				<reference value="Condition/noneknown"/>
 			</reference>
 			<name value="Condition - No known condition"/>
 			<description value="Shows an example of no known conditions for the *AU Core Condition* profile. Patient: Deangelo HOWE."/>
