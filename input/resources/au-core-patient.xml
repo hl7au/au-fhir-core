@@ -338,6 +338,13 @@
         </extension>
       </extension>
       <path value="Patient.telecom"/>
+      <min value="1"/>
+       <constraint>
+        <key value="au-core-telecom-01"/>
+        <severity value="error"/>
+        <human value="must not be a fax!"/>
+        <expression value="system != 'fax'"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Patient.telecom.system">
