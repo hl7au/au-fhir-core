@@ -28,7 +28,7 @@ If you've found an issue with this repository or it's contents then you please [
 
 ## Contributing to AU Core Development
 
-AU Core R2 is now published. Scoping for AU Core R3 is currently underway.
+AU Core R3 is now in development, with the ballot for Working Standard currently open.
 
 ### 1. Join the AU Core Work Group
 
