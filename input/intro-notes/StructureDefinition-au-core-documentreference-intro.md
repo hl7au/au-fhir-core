@@ -8,4 +8,4 @@ The following are supported usage scenarios for this profile:
 - Record or update a document belonging to a patient
 
 ### Profile Specific Implementation Guidance
-No guidance defined.
+- `DocumentReference.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
