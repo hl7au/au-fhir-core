@@ -47,9 +47,9 @@ implementation. This implementation guide will be used as the basis for Australi
 
 The following actors are part of AU Core:
 
-**AU Core Requestor**
+**AU Core Requester**
 
-A system that creates and initiates a data access request to retrieve core digital health and administrative information. The AU Core Requestor is the client in a client-server interaction.  
+A system that creates and initiates a data access request to retrieve core digital health and administrative information. The AU Core Requester is the client in a client-server interaction.  
 <br/>
 
 **AU Core Responder**
