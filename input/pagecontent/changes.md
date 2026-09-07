@@ -6,7 +6,8 @@
 This change log documents the significant updates and resolutions implemented from version [3.0.0-ballot1](https://hl7.org.au/fhir/core/3.0.0-ballot1/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
-
+- [AU Core DocumentReference](StructureDefinition-au-core-documentreference.html):
+  - added support for comparators gt, le, lt, ge as SHALL, multipleAnd support as SHOULD and precision to the second + time offset as SHALL for period search parameter [AU Core: FHIR-57934](https://jira.hl7.org/browse/FHIR-57934)
 
 ### Release 3.0.0-ballot1
 - Publication date: 2026-07-29
