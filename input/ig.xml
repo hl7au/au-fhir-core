@@ -304,7 +304,7 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Condition/condition-masked"/>
+				<reference value="Condition/masked"/>
 			</reference>
 			<name value="Condition - Data suppressed for category and code"/>
 			<description value="Shows an example of a condition with suppressed data (category and code) where the data requester has access rights to know that data is suppressed for the *AU Core Condition* profile. Patient: Anne Bennelong."/>
@@ -312,7 +312,7 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Condition/noknown"/>
+				<reference value="Condition/noneknown"/>
 			</reference>
 			<name value="Condition - No known condition"/>
 			<description value="Shows an example of no known conditions for the *AU Core Condition* profile. Patient: Deangelo HOWE."/>
@@ -707,7 +707,7 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Observation/observation-masked"/>
+				<reference value="Observation/masked"/>
 			</reference>
 			<name value="Observation - Data suppressed for category, code, effective[x] and value[x]"/>
 			<description value="Shows an example of an observation with suppressed data (category, code, effectivePeriod, and valueQuantity) where the data requester has access rights to know that data is suppressed for the  *AU Core Diagnostic Result Observation* profile. Patient: Ronny Lawrence Irvine."/>
