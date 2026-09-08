@@ -7,10 +7,10 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 - [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) 
-  - added the existing AU Core reference search parameter requirements to supply type and id values to the MedicationDispense'prescription' search parameter [AU Core: FHIR-57858](https://jira.hl7.org/browse/FHIR-57858)
+  - added the existing AU Core reference search parameter requirements to supply type and id values to the MedicationDispense prescription search parameter [AU Core: FHIR-57858](https://jira.hl7.org/browse/FHIR-57858)
   - added support for _include=MedicationDispense:medication as SHOULD, and where a responder references an external Medication resource as SHALL [AU Core: FHIR-57894](https://jira.hl7.org/browse/FHIR-57894)
 - [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html)
-  - added the existing AU Core reference search parameter requirements to supply type and id values to the MedicationDispense'prescription' search parameter [AU Core: FHIR-57858](https://jira.hl7.org/browse/FHIR-57858)
+  - added the existing AU Core reference search parameter requirements to supply type and id values to the MedicationDispense prescription search parameter [AU Core: FHIR-57858](https://jira.hl7.org/browse/FHIR-57858)
   - added support for _include=MedicationDispense:medication as SHOULD, and where a responder references an external Medication resource as SHALL [AU Core: FHIR-57894](https://jira.hl7.org/browse/FHIR-57894)
 
 ### Release 3.0.0-ballot1
