@@ -19,7 +19,7 @@
         <td>practitioner</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code></td>
-        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile. The responder <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile.</td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile. The responder <b>SHOULD</b> support chained search practitioner.identifier using a HPI-I identifier as defined in the AU Core Practitioner profile.</td>
   </tr>
   <tr>
         <td>_id</td>
@@ -68,7 +68,7 @@ The following search parameters **SHALL** be supported:
     - **SHOULD** support chained searching of practitioner canonical identifier `practitioner.identifier` (e.g. `practitioner.identifier=[system|][code]`)
     - **SHOULD** support these **[`_include`](http://hl7.org/fhir/R4/search.html#include)** parameters: `PractitionerRole:practitioner`
 
-    `GET [base]/PractitionerRole?practitioner={Type/}[id]` 
+    `GET [base]/PractitionerRole?practitioner={type/}[id]` 
     or optionally `GET [base]/PractitionerRole?practitioner.identifier=[system|][code]`
 
     Example:
