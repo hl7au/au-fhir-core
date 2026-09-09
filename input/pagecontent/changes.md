@@ -7,7 +7,7 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 - [AU Core MedicationDispense](StructureDefinition-au-core-medicationdispense.html):
-  - added invariant au-core-meddisp-01 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [AU Core: FHIR-46417](https://jira.hl7.org/browse/FHIR-46417)
+  - added invariant au-core-meddisp-01 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [AU Core: FHIR-57857](https://jira.hl7.org/browse/FHIR-57857)
 
 ### Release 3.0.0-ballot1
 - Publication date: 2026-07-29
