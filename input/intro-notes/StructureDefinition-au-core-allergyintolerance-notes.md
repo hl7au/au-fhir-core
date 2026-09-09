@@ -57,7 +57,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
 
-    `GET [base]/AllergyIntolerance?patient={type/}[id]&clinical-status={system|}[code]{,{system|}[code],...}`
+    `GET [base]/AllergyIntolerance?patient={Type/}[id]&clinical-status={system|}[code]`
 
     Example:
     
