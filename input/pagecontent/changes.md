@@ -6,9 +6,9 @@
 This change log documents the significant updates and resolutions implemented from version [3.0.0-ballot1](https://hl7.org.au/fhir/core/3.0.0-ballot1/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
-- [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) 
+- [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html):
   - added existing AU Core date search parameter requirements to the DocumentReference period search parameter, including required precision and comparator support, and recommended multipleAnd support [AU Core: FHIR-57934](https://jira.hl7.org/browse/FHIR-57934)
-- [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html)
+- [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html):
   - added existing AU Core date search parameter requirements to the DocumentReference period search parameter, including required precision and comparator support, and recommended multipleAnd support [AU Core: FHIR-57934](https://jira.hl7.org/browse/FHIR-57934)
 
 ### Release 3.0.0-ballot1
