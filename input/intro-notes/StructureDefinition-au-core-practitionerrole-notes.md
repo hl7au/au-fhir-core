@@ -43,7 +43,7 @@
         <td>organization</td>
         <td><b>MAY</b></td>
         <td><code>reference</code></td>
-        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the type and id values. The responder <b>SHALL</b> support both.</td>
   </tr>
  </tbody>
 </table>
