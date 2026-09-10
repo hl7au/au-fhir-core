@@ -6,12 +6,12 @@
 This change log documents the significant updates and resolutions implemented from version [3.0.0-ballot1](https://hl7.org.au/fhir/core/3.0.0-ballot1/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
-- [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html) 
-  - added the existing AU Core reference search parameter requirements to supply type and id values to the MedicationDispense prescription search parameter [AU Core: FHIR-57858](https://jira.hl7.org/browse/FHIR-57858)
-  - added support for _include=MedicationDispense:medication as SHOULD, and where a responder references an external Medication resource as SHALL [AU Core: FHIR-57894](https://jira.hl7.org/browse/FHIR-57894)
-- [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html)
-  - added the existing AU Core reference search parameter requirements to supply type and id values to the MedicationDispense prescription search parameter [AU Core: FHIR-57858](https://jira.hl7.org/browse/FHIR-57858)
-  - added support for _include=MedicationDispense:medication as SHOULD, and where a responder references an external Medication resource as SHALL [AU Core: FHIR-57894](https://jira.hl7.org/browse/FHIR-57894)
+- [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html):
+  - added requirements for the MedicationDispense presription search parameter for the requester to provide an id value as SHALL and type value as MAY, and for the responder to support both as SHALL [AU Core: FHIR-57858](https://jira.hl7.org/browse/FHIR-57858)
+  - added support for _include=MedicationDispense:medication as SHOULD for requester and responder, and as SHALL for responder where an external Medication resource is referenced [AU Core: FHIR-57894](https://jira.hl7.org/browse/FHIR-57894)
+- [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html):
+  - added requirements for the MedicationDispense presription search parameter for the requester to provide an id value as SHALL and type value as MAY, and for the responder to support both as SHALL [AU Core: FHIR-57858](https://jira.hl7.org/browse/FHIR-57858)
+  - added support for _include=MedicationDispense:medication as SHOULD for requester and responder, and as SHALL for responder where an external Medication resource is referenced [AU Core: FHIR-57894](https://jira.hl7.org/browse/FHIR-57894)
 
 ### Release 3.0.0-ballot1
 - Publication date: 2026-07-29

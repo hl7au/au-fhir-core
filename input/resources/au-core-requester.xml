@@ -1113,6 +1113,11 @@
 <type value="reference"/>
 <documentation value="The requester **SHALL** provide at least an id value and **MAY** provide both the type and id values.&#xa;&#xa;The responder **SHALL** support both."/>
 </searchParam>
+<searchInclude value="MedicationDispense:medication">
+<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+<valueCode value="SHOULD"/>
+</extension>
+</searchInclude>
 </resource>
 <!-- MEDICATIONREQUEST :: DONE -->
 <resource>
