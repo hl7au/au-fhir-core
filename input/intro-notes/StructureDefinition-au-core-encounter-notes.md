@@ -13,7 +13,7 @@
         <td>patient</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code></td>
-        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
   </tr>
   <tr>
         <td>patient+date</td>
@@ -55,7 +55,7 @@
         <td>location</td>
         <td><b>MAY</b></td>
         <td><code>reference</code></td>
-        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.</td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the type and id values. The responder <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>status</td>
@@ -74,7 +74,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** search parameter:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
-    `GET [base]/Encounter?patient={Type/}[id]` or optionally `GET [base]/Encounter?patient.identifier=[system|][code]`
+    `GET [base]/Encounter?patient={type/}[id]` or optionally `GET [base]/Encounter?patient.identifier=[system|][code]`
 
     Example:
     
@@ -89,7 +89,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     - **SHALL** support these `date` comparators: `gt,lt,ge,le`
     - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g. `date=[date]&date=[date]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, <strong>SHALL</strong> support the search comparators `gt,lt,ge,le`
 
-    `GET [base]/Encounter?patient={Type/}[id]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/Encounter?patient={type/}[id]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
@@ -105,7 +105,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`class`](https://hl7.org/fhir/R4/encounter.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
-    `GET [base]/Encounter?patient={Type/}[id]&class={system|}[code]`
+    `GET [base]/Encounter?patient={type/}[id]&class={system|}[code]`
 
     Example:
     
@@ -116,7 +116,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/encounter.html#search)** and **[`location`](https://hl7.org/fhir/R4/encounter.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
-    `GET [base]/Encounter?patient={Type/}[id]&location={Type/}[id]`
+    `GET [base]/Encounter?patient={type/}[id]&location={type/}[id]`
 
     Example:
     
@@ -128,7 +128,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g. `status={system|}[code],{system|}[code],...`)
 
-    `GET [base]/Encounter?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
+    `GET [base]/Encounter?patient={type/}[id]&status={system|}[code]{,{system|}[code],...}`
 
     Example:
     

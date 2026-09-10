@@ -6,7 +6,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
 
-    `GET [base]/Observation?patient={Type/}[id]&category={system|}[code]`
+    `GET [base]/Observation?patient={type/}[id]&category={system|}[code]`
 
     Example:
     
@@ -21,7 +21,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g. `date=[date]&date=[date]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, <strong>SHALL</strong> support the search comparators `gt,lt,ge,le`
 
 
-    `GET [base]/Observation?patient={Type/}[id]&category={system|}[code]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/Observation?patient={type/}[id]&category={system|}[code]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
@@ -34,7 +34,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `code` (e.g. `code={system|}[code],{system|}[code],...`)
 
 
-    `GET [base]/Observation?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}`
+    `GET [base]/Observation?patient={type/}[id]&code={system|}[code]{,{system|}[code],...}`
 
     Example:
     
@@ -64,7 +64,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     - **SHALL** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `status` (e.g. `status={system|}[code],{system|}[code],...`)
 
 
-    `GET [base]/Observation?patient={Type/}[id]&category={system|}[code]&status={system|}[code]{,{system|}[code],...}`
+    `GET [base]/Observation?patient={type/}[id]&category={system|}[code]&status={system|}[code]{,{system|}[code],...}`
 
     Example:
     
@@ -79,7 +79,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g. `date=[date]&date=[date]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, <strong>SHALL</strong> support the search comparators `gt,lt,ge,le`
 
 
-    `GET [base]/Observation?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/Observation?patient={type/}[id]&code={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
