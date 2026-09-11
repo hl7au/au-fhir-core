@@ -6,7 +6,8 @@
 This change log documents the significant updates and resolutions implemented from version [3.0.0-ballot1](https://hl7.org.au/fhir/core/3.0.0-ballot1/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
-
+- [AU Core MedicationDispense](StructureDefinition-au-core-medicationdispense.html):
+  - added invariant au-core-meddisp-01 to allow for a Data Absent Reason extension in order to meet AU Core Missing Data and Suppressed Data requirements [AU Core: FHIR-57857](https://jira.hl7.org/browse/FHIR-57857)
 
 ### Release 3.0.0-ballot1
 - Publication date: 2026-07-29
