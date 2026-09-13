@@ -10,8 +10,8 @@ The following are supported usage scenarios for this profile:
 
 ### Profile Specific Implementation Guidance
 - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#business-identifiers) in AU Base.
-- For pathology report guidance, see [AU Base Pathology Report](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-pathologyreport.html#usage-notes).
-- For diagnostic imaging report guidance, see [AU Base Diagnostic Imaging Report](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-imagingreport.html#usage-notes).
+- See the [AU Base Pathology Report](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-pathologyreport.html#usage-notes) profile for guidance on pathology reports.
+- See the [AU Base Diagnostic Imaging Report](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-imagingreport.html#usage-notes) profile for guidance on diagnostic imaging reports.
 - `DiagnosticReport.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
 - For DiagnosticReport resources reporting a panel:
     - `DiagnosticReport.code` identifies the panel procedure (e.g. Lipid panel)
