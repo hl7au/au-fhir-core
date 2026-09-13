@@ -13,7 +13,7 @@
         <td>patient</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code></td>
-        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.</td>
   </tr>
   <tr>
         <td>patient+date</td>
@@ -63,7 +63,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
 
-    `GET [base]/Composition?patient={Type/}[id]` or optionally `GET [base]/Composition?patient.identifier=[system|][code]`
+    `GET [base]/Composition?patient={type/}[id]` or optionally `GET [base]/Composition?patient.identifier=[system|][code]`
 
     Example:
     
@@ -79,7 +79,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     - **SHOULD** support *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* search on `date` (e.g. `date=[date]&date=[date]&...`), and if *[multipleAnd](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)* is supported, **SHALL** support the search comparators `gt,lt,ge,le`
 
 
-    `GET [base]/Composition?patient={Type/}[id]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/Composition?patient={type/}[id]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
@@ -92,7 +92,7 @@ The following search parameters and search parameter combinations **SHALL** be s
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
 
-    `GET [base]/Composition?patient={Type/}[id]&type={system|}[code]`
+    `GET [base]/Composition?patient={type/}[id]&type={system|}[code]`
 
     Example:
     
@@ -109,7 +109,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
 
-    `GET [base]/Composition?patient={Type/}[id]&author={Type/}[id]`
+    `GET [base]/Composition?patient={type/}[id]&author={type/}[id]`
 
     Example:
     
