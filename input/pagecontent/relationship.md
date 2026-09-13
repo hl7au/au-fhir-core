@@ -40,7 +40,7 @@ AU Core aligns to, and leverages international standards and other national stan
 - [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)
 - [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/)
 - [International Patient Summary 2.0.1](https://hl7.org/fhir/uv/ips/2.0.1/)
-- [US Core 8.0.0](https://hl7.org/fhir/us/core/STU8/)
+- [US Core 8.0.1](https://hl7.org/fhir/us/core/STU8.0.1/)
 
 The relationship of AU Core to AUCDI and other implementation guides is shown in the figure below.
 

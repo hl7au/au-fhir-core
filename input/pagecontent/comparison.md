@@ -107,6 +107,12 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
         </tr>
         <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-endpoint.html">AU Core Endpoint</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+        </tr>
+        <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-core-healthcareservice.html">AU Core HealthcareService</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
@@ -467,6 +473,24 @@ The following IPS profile(s) contain additional requirements. Implementers are a
             <td  style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
         </tr>
         <tr>
+            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-core-diagnosticreport.html">AU Core DiagnosticReport</a></td>
+            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html">DiagnosticReport (IPS)</a></td>
+            <td style="width: 25%;">DiagnosticReport.status</td>
+            <td style="width: 25%;">IPS requires value from <a href="https://hl7.org/fhir/uv/ips/STU2/ValueSet-diagnostics-report-status-uv-ips.html">Diagnostics Report Status Codes - IPS</a>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.code</td>
+            <td style="width: 25%;">Sub-elements of <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html">CodeableConceptIPS</a> are flagged as <i>Must Support</i>.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.subject.reference</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Element flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">DiagnosticReport.effective[x]</td>
+            <td style="width: 25%;">IPS requires minimum of 1. Type choice dateTime is flagged as <i>Must Support</i> in IPS.</td>
+        </tr>
+        <tr>
             <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
             <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></td>
             <td style="width: 25%;">Immunization.vaccineCode</td>
@@ -627,7 +651,6 @@ This version of AU Core has no equivalent profile for the following IPS profiles
 - Device (IPS)
 - Device - Performer or Observer (IPS)
 - DeviceUseStatement (IPS)
-- DiagnosticReport (IPS)
 - Flag - Alert (IPS)
 - ImagingStudy (IPS)
 - Observation Pregnancy - Expected Delivery Date (IPS) 
@@ -879,7 +902,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         <tr>
             <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a></td>
             <td style="width: 25%;">DocumentReference.type</td>
-            <td style="width: 25%;">US Core required binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-documentreference-type.htmll">US Core DocumentReference Type</a>. US Core min binding to <a href="https://hl7.org/fhir/us/core/STU8.0.1/ValueSet-us-core-clinical-note-type.html">US Core Clinical Note Type</a>.</td>
+            <td style="width: 25%;">US Core required binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-documentreference-type.htmll">US Core DocumentReference Type</a>. US Core min binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-clinical-note-type.html">US Core Clinical Note Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">DocumentReference.category</td>
@@ -1313,7 +1336,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-relatedperson.html">AU Core RelatedPerson</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-procedure.html">US Core RelatedPerson Profile</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-relatedperson.html">US Core RelatedPerson Profile</a></td>
             <td style="width: 25%;">RelatedPerson.active</td>
             <td style="width: 25%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>
@@ -1625,6 +1648,15 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
         </tr>
         <tr>
             <td style="text-align: left; vertical-align: middle;">Encounter</td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+			<td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: middle;">Endpoint</td>
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>

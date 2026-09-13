@@ -13,7 +13,7 @@
         <td>patient</td>
         <td><b>SHALL</b></td>
         <td><code>reference</code></td>
-        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the type and id values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile. The responder <b>SHOULD</b> support chained search patient.identifier using IHI, Medicare Number, and DVA Number identifiers as defined in the AU Core Patient profile.
         </td>
   </tr>
     <tr>
@@ -58,7 +58,7 @@ The following search parameters and search parameter combinations **SHALL** be s
 1. **SHALL** support searching using the **[`patient`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameter:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
-    `GET [base]/RelatedPerson?patient={Type/}[id]` or optionally `GET [base]/RelatedPerson?patient.identifier=[system|][code]`
+    `GET [base]/RelatedPerson?patient={type/}[id]` or optionally `GET [base]/RelatedPerson?patient.identifier=[system|][code]`
 
     Example:
     
@@ -86,7 +86,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/relatedperson.html#search)** and **[`relationship`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
-    `GET [base]/RelatedPerson?patient={Type/}[id]&relationship={system|}[code]`
+    `GET [base]/RelatedPerson?patient={type/}[id]&relationship={system|}[code]`
 
     Example:
     
@@ -98,7 +98,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 1. **SHOULD** support searching using the combination of the **[`patient`](https://hl7.org/fhir/R4/relatedperson.html#search)** and **[`name`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameters:
     - **SHOULD** support chained searching of patient canonical identifier `patient.identifier` (e.g. `patient.identifier=[system|][code]`)
 
-    `GET [base]/RelatedPerson?patient={Type/}[id]&name=[string]`
+    `GET [base]/RelatedPerson?patient={type/}[id]&name=[string]`
 
     Example:
 
