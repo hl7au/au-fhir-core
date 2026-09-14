@@ -902,7 +902,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         <tr>
             <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a></td>
             <td style="width: 25%;">DocumentReference.type</td>
-            <td style="width: 25%;">US Core required binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-documentreference-type.htmll">US Core DocumentReference Type</a>. US Core min binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-clinical-note-type.html">US Core Clinical Note Type</a>.</td>
+            <td style="width: 25%;">US Core required binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-documentreference-type.html">US Core DocumentReference Type</a>. US Core min binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-clinical-note-type.html">US Core Clinical Note Type</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">DocumentReference.category</td>
@@ -1090,7 +1090,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">MedicationDispense.dosageInstruction.route</td>
-            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113762.1.4.1267.22-20241015">	Route of Administration of Therapeutic Agents</a>.</td>
+            <td style="width: 25%;">Element flagged as <i>Must Support</i> in US Core. US Core extensible binding to <a href="https://tx.fhir.org/r4/ValueSet/2.16.840.1.113762.1.4.1267.22-20241015">Route of Administration of Therapeutic Agents</a>.</td>
         </tr>
         <tr>
             <td style="width: 25%;">MedicationDispense.dosageInstruction.doseAndRate</td>
@@ -1330,7 +1330,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-core-procedure.html">AU Core Procedure</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-relatedperson.html">US Core Procedure Profile</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-procedure.html">US Core Procedure Profile</a></td>
             <td style="width: 25%;">Procedure.code</td>
             <td style="width: 25%;">US Core extensible binding to <a href="https://hl7.org/fhir/us/core/STU9/ValueSet-us-core-procedure-code.html">US Core Procedure Codes</a>.</td>
         </tr>
@@ -2391,7 +2391,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> provide references to documents within the supplied date range when a context date range is supplied to the <code>$docref</code> operation.</td>
         </tr>
         <tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> provide references to the last or current document(s) when no date range is supplied to the <code>$docref</code> operation.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> provide references to the last or current document(s) when no date range is supplied to the <code>$docref</code> operation.</td>
         </tr>
         <tr>
             <td rowspan="9">Encounter</td>
@@ -2460,7 +2460,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient</code> search parameter.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+code</code> search parameter.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>patient+code</code> search parameter combination.</td>
         </tr>
         <tr>
@@ -2511,7 +2511,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support <code>_revinclude=Provenance:target</code>.</td>
         </tr>
         <tr>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> use the status code "not-done" to represent that an immunization was not given.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> use the status code "not-done" to represent that an immunisation was not given.</td>
         </tr>
         <tr>
             <td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>vread</code> and <code>history-instance</code> interactions.</td>
@@ -2581,7 +2581,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least one target resource in <code>MedicationRequest.reasonReference</code>.</td>
         </tr>  
 		<tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> return all active medications following the Get All Active Medications guidance.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> return all active medications following the <a href="https://hl7.org/fhir/us/core/STU9/medication-list.html#get-all-active-medications">Get All Active Medications</a> guidance.</td>
 			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>patient+intent+encounter</code> search parameter combination.</td>
         </tr>
         <tr>
@@ -2658,8 +2658,8 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
 			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support the US Core Interpreter Needed Extension on this profile or the US Core Encounter Profile.</td>
 		</tr>
         <tr>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHOULD</strong> support <code>death-date+family</code> search parameter combination.</td>
-			<td><img src="arrow_up.png" width="20"/> <strong>SHOUL</strong> support <code>death-date+family</code> search parameter combination.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>death-date+family</code> search parameter combination.</td>
+			<td><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> support <code>death-date+family</code> search parameter combination.</td>
 		</tr>	
         <tr>
             <td rowspan="6">Practitioner</td>
@@ -2709,7 +2709,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
         <tr>
             <td rowspan="6">Procedure</td>
             <td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Procedure which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
-			<td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support the US Core Procedure which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
+			<td><img src="arrow_up.png" width="20"/> <strong>SHALL</strong> support the US Core Procedure which has additional requirements, see <a href="#us-core-profile-additional-requirements">US Core profile additional requirements</a>.</td>
         </tr>
 		<tr>
             <td rowspan="2"><img src="plus_sign.png" width="20"/> <strong>SHOULD</strong> ensure that referenced resources in <code>Procedure.reasonReference</code> conform to US Core profiles</td>
@@ -2843,7 +2843,7 @@ A system conforming to an AU Core CapabilityStatement aligns with US Core Capabi
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least one of <code>ServiceRequest.reasonCode</code> and <code>ServiceRequest.reasonReference</code>.</td>
         </tr>
         <tr>
-            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support all target resource in <code>ServiceRequest.reasonReference</code>.</td>
+            <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support all target resources in <code>ServiceRequest.reasonReference</code>.</td>
             <td><img src="plus_sign.png" width="20"/> <strong>SHALL</strong> support at least one target resource in <code>ServiceRequest.reasonReference</code>.</td>
         </tr>
 		<tr>
