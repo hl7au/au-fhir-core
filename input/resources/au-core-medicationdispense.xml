@@ -316,7 +316,7 @@
         <severity value="error"/>
         <human value="If a date is provided, it shall be precise to at least the day"/>
         <expression value="$this.hasValue() implies $this.toString().length() >= 10"/>
-        <xpath value="(f:whenPrepared[string-length(.)>=10]) or not(f:whenPrepared)"/>
+        <xpath value="not(f:whenPrepared) or string-length(f:whenPrepared/@value) &gt;= 10"/>
         <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
       </constraint>
       <mustSupport value="true"/>
