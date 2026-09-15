@@ -120,7 +120,9 @@ Typically, invariants defined in AU Core are used to:
   * define conditional cardinality rules such as 'at least one of' (e.g. [AU Core Location](StructureDefinition-au-core-location.html) invariant **au-core-loc-01:** The location shall at least have a valid identifier or address or type)
   * define terminology rules (e.g. [AU Core Procedure](StructureDefinition-au-core-procedure.html) invariant **au-core-pro-01:** If a coded body site is provided, at least one coding shall be from SNOMED CT)
 
-AU Core invariants are intentionally written to allow for the AU Core requirements on [Missing Data](general-requirements.html#missing-data) to be met (e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) invariant **au-core-pat-01:** At least one patient identifier shall be valid, or if not available, the Data Absent Reason extension shall be present).
+AU Core invariants are intentionally written to allow for the AU Core requirements on [Missing Data](general-requirements.html#missing-data) to be met (e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) invariant **au-core-pat-01:** At least one patient identifier shall be valid, or if not available, the Data Absent Reason extension shall be present).  
+
+AU Core invariants are defined so that they do not constrain choices that may be made by downstream IGs. For example, unless otherwise stated, AU Core invariants preclude the use of Data Absent Reason, allowing downstream IGs to make their own decisions about its use.
 
 ##### Use of Slicing, Pattern, and Fixed Value  
 
