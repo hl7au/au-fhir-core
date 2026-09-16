@@ -893,7 +893,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         </tr>
         <tr>
             <td style="width: 25%;">DocumentReference.content.format</td>
-            <td style="width: 25%;">US Core extensible binding to <a href="http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes">HHL7 ValueSet of Format Codes for use with Document Sharing</a>. Element flagged as <i>Must Support</i> in US Core. </td>
+            <td style="width: 25%;">US Core extensible binding to <a href="http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes">HL7 ValueSet of Format Codes for use with Document Sharing</a>. Element flagged as <i>Must Support</i> in US Core. </td>
         </tr>
         <tr>
             <td style="width: 25%;">DocumentReference.content.attachment</td>
