@@ -266,8 +266,7 @@
         <key value="au-core-medreq-01"/>
         <severity value="error"/>
         <human value="Date shall be precise to the day or, if not available, the Data Absent Reason extension shall be present"/>
-        <expression value="$this.hasValue() implies (extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').value.exists().not() and $this.toString().length() >= 10)"/>
-        <xpath value="(f:authoredOn[string-length(.)>=10]) and not(exists(f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'])))"/>
+        <expression value="($this.hasValue() and $this.toString().length() >= 10) xor extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
         <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
       </constraint>
       <mustSupport value="true"/>
