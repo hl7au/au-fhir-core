@@ -33,7 +33,7 @@ The AU Core Sparked project includes:
 AU Core is particularly useful in defining:
 
 - A testable level of system conformance
-- Assumed support by client applications
+- Capabilities that client applications can rely on being supported
 - The basis of downstream implementation guides
 
 Implementation of capabilities defined in AU Core enables specifications, applications and business logic to be developed with confidence.

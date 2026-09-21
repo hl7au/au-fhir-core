@@ -89,7 +89,7 @@ The guidance for how to support coded or text identification of medicinal produc
       - ingredient strength in the FHIR R5 to R4 pre-adoption extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html), with the ingredient identified in `Medication.ingredient.itemCodeableConcept` and the strength represented in the extension's `valueCodeableConcept.coding`
          - Note that where possible, ingredient strength is to be represented using the native FHIR `Medication.ingredient.strength` element as a [Ratio](https://hl7.org/fhir/R4/datatypes.html#Ratio) instead of using the FHIR R5 to R4 pre-adoption extension. 
 
-    Example: Medication with coded brand name, generic name, item form and igredient strength.
+    Example: Medication with coded brand name, generic name, item form and ingredient strength.
     ~~~
     {
       "resourceType": "Medication",
@@ -125,7 +125,7 @@ The guidance for how to support coded or text identification of medicinal produc
               "system": "http://snomed.info/sct",
               "code": "3539011000036105",
               "display": "Benpen"
-            }, 
+            }
           ]
         },
         "manufacturer": {
@@ -155,20 +155,22 @@ The guidance for how to support coded or text identification of medicinal produc
                 }
               ]
             },
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "system": "http://hl7.org/fhir/CodeSystem/medication-ingredientstrength",
-                      "code": "qs",
-                      "display": "QS"
-                    }
-                  ]
+            "strength": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/CodeSystem/medication-ingredientstrength",
+                        "code": "qs",
+                        "display": "QS"
+                      }
+                    ]
+                  }
                 }
-              }
-            ]
+              ]
+            }
           }
         ]
     }

@@ -196,7 +196,7 @@ The following search parameters and search parameter combinations **SHOULD** be 
 
     Example:
     
-      1. GET [base]/DiagnosticReport?patient=5678&amp;code=444821009&amp;date=ge2022-03-21
+      1. GET [base]/DiagnosticReport?patient=5678&amp;code=444821009&amp;date=ge2022-03-21T00:00:00Z
       1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/medicare-number\|32788511952&amp;code=444821009&amp;date=ge2022-03-21T00:00:00Z
       1. GET [base]/DiagnosticReport?patient.identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0\|8003608833357361&amp;code=444821009&amp;date=ge2022-03-21T00:00:00Z
 
