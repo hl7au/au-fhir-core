@@ -9,9 +9,11 @@ This change log documents the significant updates and resolutions implemented fr
 - [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html):
   - added requirements for the MedicationDispense prescription search parameter for the requester to provide an id value as SHALL and type value as MAY, and for the responder to support both as SHALL [AU Core: FHIR-57858](https://jira.hl7.org/browse/FHIR-57858)
   - added support for _include=MedicationDispense:medication as SHOULD for requester and responder, and as SHALL for responder where an external Medication resource is referenced [AU Core: FHIR-57894](https://jira.hl7.org/browse/FHIR-57894)
+  - added support for comparators gt, lt, ge, and le as SHALL, multipleAnd as SHOULD, and precision to the second with time offset as SHALL for the DocumentReference period search parameter for both requester and responder [AU Core: FHIR-57934](https://jira.hl7.org/browse/FHIR-57934)
 - [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html):
   - added requirements for the MedicationDispense prescription search parameter for the requester to provide an id value as SHALL and type value as MAY, and for the responder to support both as SHALL [AU Core: FHIR-57858](https://jira.hl7.org/browse/FHIR-57858)
   - added support for _include=MedicationDispense:medication as SHOULD for requester and responder, and as SHALL for responder where an external Medication resource is referenced [AU Core: FHIR-57894](https://jira.hl7.org/browse/FHIR-57894)
+  - added support for comparators gt, lt, ge, and le as SHALL, multipleAnd as SHOULD, and precision to the second with time offset as SHALL for the DocumentReference period search parameter for both requester and responder [AU Core: FHIR-57934](https://jira.hl7.org/browse/FHIR-57934)
 
 ### Release 3.0.0-ballot1
 - Publication date: 2026-07-29
