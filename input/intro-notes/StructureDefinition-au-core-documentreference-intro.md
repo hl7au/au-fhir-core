@@ -9,3 +9,4 @@ The following are supported usage scenarios for this profile:
 
 ### Profile Specific Implementation Guidance
 - `DocumentReference.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations.
+- Multiple `DocumentReference.content` repetitions can represent the same document in different formats or attachment metadata, and **SHALL NOT** represent different versions of the same document.
