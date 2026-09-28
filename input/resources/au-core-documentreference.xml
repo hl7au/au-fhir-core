@@ -230,6 +230,14 @@
         </extension>
       </extension>
       <path value="DocumentReference.content.attachment"/>
+      <constraint>
+        <key value="au-core-docref-01"/>
+        <severity value="error"/>
+        <human
+               value="At least url or data shall be present."/>
+        <expression value="url.exists() or data.exists()"/>
+        <xpath value="f:url or f:content"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="DocumentReference.content.attachment.contentType">
