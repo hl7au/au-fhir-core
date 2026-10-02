@@ -291,6 +291,7 @@ The table below lists the applicable profiles and elements in AU Core.
 
 AU Core Profile |Must Support Choice Elements
 ---|---
+[AU Core DocumentReference](StructureDefinition-au-core-documentreference.html)|DocumentReference.content.attachment.url, DocumentReference.content.attachment.data
 [AU Core Encounter](StructureDefinition-au-core-encounter.html)|Encounter.reasonCode, Encounter.reasonReference
 [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html)|MedicationRequest.reasonCode, MedicationRequest.reasonReference
 [AU Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html)|MedicationStatement.reasonCode, MedicationStatement.reasonReference
