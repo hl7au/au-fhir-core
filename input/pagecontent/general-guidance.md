@@ -115,10 +115,11 @@ While the work to include a new terminology binding in the underlying AU Base re
 ##### Use of Invariants
 AU Core profiles include invariants when a minimum data quality requirement requires logic that cannot be represented through other profiling techniques (e.g. cardinality or terminology binding). These invariants are formally defined using FHIRPath so that the constraint can be computationally evaluated.
 
-Typically, invariants defined in AU Core are used to:
+Typically, invariants defined in AU Core:
   * define data precision rules (e.g. [AU Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html) invariant **au-core-obs-01:** Date shall be at least to day)
   * define conditional cardinality rules such as 'at least one of' (e.g. [AU Core Location](StructureDefinition-au-core-location.html) invariant **au-core-loc-01:** The location shall at least have a valid identifier or address or type)
   * define terminology rules (e.g. [AU Core Procedure](StructureDefinition-au-core-procedure.html) invariant **au-core-pro-01:** If a coded body site is provided, at least one coding shall be from SNOMED CT)
+  * enforce only the essential AU Core requirements, allowing downstream IGs to apply constraints specific to their use case (e.g [AU Core MedicationDispense](StructureDefinition-au-core-medicationdispense.html) invariant **au-core-meddisp-01** (If a date is provided, it shall be precise to at least the day) does not explicitly include Data Absent Reason and allows any extension by default as it applies to an optional element, while invariants for mandatory elements explicitly include Data Absent Reason)
 
 AU Core invariants are intentionally written to allow for the AU Core requirements on [Missing Data](general-requirements.html#missing-data) to be met (e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) invariant **au-core-pat-01:** At least one patient identifier shall be valid, or if not available, the Data Absent Reason extension shall be present).
 
