@@ -202,6 +202,7 @@
 <name value="author"/>
 <definition value="http://hl7.org/fhir/SearchParameter/Composition-author"/>
 <type value="reference"/>
+<documentation value="The requester **SHALL** provide both the type and id values.&#xa;&#xa;The responder **SHALL** support both."/>
 </searchParam>
 </resource>
 <!-- CONDITION :: DONE -->
@@ -596,6 +597,7 @@
 <name value="author"/>
 <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-author"/>
 <type value="reference"/>
+<documentation value="The requester **SHALL** provide both the type and id values.&#xa;&#xa;The responder **SHALL** support both."/>
 </searchParam>
 <searchParam>
 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
