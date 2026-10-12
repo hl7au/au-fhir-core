@@ -37,7 +37,7 @@
         <td>author</td>
         <td><b>MAY</b></td>
         <td><code>reference</code></td>
-        <td></td>
+        <td>The requester <b>SHALL</b> provide both the type and id values. The responder <b>SHALL</b> support both.</td>
   </tr>
   <tr>
         <td>date</td>
