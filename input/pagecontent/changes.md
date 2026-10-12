@@ -6,16 +6,24 @@
 This change log documents the significant updates and resolutions implemented from version [3.0.0-ballot1](https://hl7.org.au/fhir/core/3.0.0-ballot1/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
+- [AU Core DocumentReference](StructureDefinition-au-core-documentreference.html):
+  - added profile specific implementation guidance that DocumentReference.content SHALL NOT represent different versions of the same document [AU Core: FHIR-58787](https://jira.hl7.org/browse/FHIR-58787)
+  - added profile specific implementation guidance that the responder SHALL support at least one of DocumentReference.content.attachment.url and DocumentReference.content.attachment.data, and the requester SHALL support both [AU Core: FHIR-58786](https://jira.hl7.org/browse/FHIR-58786)
+  - added invariant au-core-docref-01 requiring at least one of DocumentReference.content.attachment.url or DocumentReference.content.attachment.data to be present [AU Core: FHIR-58786](https://jira.hl7.org/browse/FHIR-58786)
 - [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html):
   - applied technical corrrection to invariant au-core-medreq-01 FHIRPath expression to align with existing human description requiring date precision to the day or presence of a Data Absent Reason extension [AU Core: FHIR-59045](https://jira.hl7.org/browse/FHIR-59045)
 - [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html):
   - added requirements for the MedicationDispense prescription search parameter for the requester to provide an id value as SHALL and type value as MAY, and for the responder to support both as SHALL [AU Core: FHIR-57858](https://jira.hl7.org/browse/FHIR-57858)
   - added support for _include=MedicationDispense:medication as SHOULD for requester and responder, and as SHALL for responder where an external Medication resource is referenced [AU Core: FHIR-57894](https://jira.hl7.org/browse/FHIR-57894)
   - added support for comparators gt, lt, ge, and le as SHALL, multipleAnd as SHOULD, and precision to the second with time offset as SHALL for the DocumentReference period search parameter for both requester and responder [AU Core: FHIR-57934](https://jira.hl7.org/browse/FHIR-57934)
+  - added requirements for the Composition author search parameter for the requester to provide both the type and id value as SHALL, and for the responder to support both as SHALL [AU Core: FHIR-58432](https://jira.hl7.org/browse/FHIR-58432)
+  - added requirements for the DocumentReference author search parameter for the requester to provide both the type and id value as SHALL, and for the responder to support both as SHALL [AU Core: FHIR-58432](https://jira.hl7.org/browse/FHIR-58432)
 - [AU Core Responder CapabilityStatement](CapabilityStatement-au-core-responder.html):
   - added requirements for the MedicationDispense prescription search parameter for the requester to provide an id value as SHALL and type value as MAY, and for the responder to support both as SHALL [AU Core: FHIR-57858](https://jira.hl7.org/browse/FHIR-57858)
   - added support for _include=MedicationDispense:medication as SHOULD for requester and responder, and as SHALL for responder where an external Medication resource is referenced [AU Core: FHIR-57894](https://jira.hl7.org/browse/FHIR-57894)
   - added support for comparators gt, lt, ge, and le as SHALL, multipleAnd as SHOULD, and precision to the second with time offset as SHALL for the DocumentReference period search parameter for both requester and responder [AU Core: FHIR-57934](https://jira.hl7.org/browse/FHIR-57934)
+  - added requirements for the Composition author search parameter for the requester to provide both the type and id value as SHALL, and for the responder to support both as SHALL [AU Core: FHIR-58432](https://jira.hl7.org/browse/FHIR-58432)
+  - added requirements for the DocumentReference author search parameter for the requester to provide both the type and id value as SHALL, and for the responder to support both as SHALL [AU Core: FHIR-58432](https://jira.hl7.org/browse/FHIR-58432)
 
 ### Release 3.0.0-ballot1
 - Publication date: 2026-07-29

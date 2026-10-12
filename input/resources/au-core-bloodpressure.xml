@@ -448,7 +448,7 @@
       </extension>
       <path value="Observation.component.valueQuantity.unit"/> 
     </element> 
-    <element id="Observation.component:DiastolicBP.valueQuantity.system">
+    <element id="Observation.component:SystolicBP.valueQuantity.system">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
