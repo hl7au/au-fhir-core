@@ -336,7 +336,7 @@ It is important to differentiate between the following mutually exclusive circum
 
 In the above circumstances the following is applied:
 * When stating "no known X" or "no history of X", systems **SHOULD** implement the guidance of the [No Known X](general-requirements.html#no-known-x) section.
-* Where data is missing for a section and the reason is not known, systems **SHALL** implement the requirements of the [Empty Document Sections](general-requirements.html#empty-document-sections) section.
+* Where data is missing for a document section and the reason is not known, systems **SHALL** implement the requirements of the [Empty Document Sections](general-requirements.html#empty-document-sections) section.
 * When asserting data is not available due to a known workflow reason, systems **SHOULD** implement the requirements of the [Known Absence of Data Due to Workflow](general-requirements.html#known-absence-of-data-due-to-workflow) section.
 * Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
 
@@ -501,7 +501,7 @@ Example: Allergies and Intolerances Document Section where there is a workflow r
 
 #### No Known X
 
-Where the system can assert "no known X" (for example, no known conditions) or "no history of X" (for example, no history of cardiovascular system disease), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance. 
+Where the system can assert "no known X" (for example, no known conditions) or "no history of X" (for example, no history of cardiovascular system disease) in a document section, the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance. 
 
 For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code` as per the profile specific implementation guidance.
 
