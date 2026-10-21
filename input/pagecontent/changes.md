@@ -12,6 +12,8 @@ This change log documents the significant updates and resolutions implemented fr
   - added invariant au-core-docref-01 requiring at least one of DocumentReference.content.attachment.url or DocumentReference.content.attachment.data to be present [AU Core: FHIR-58786](https://jira.hl7.org/browse/FHIR-58786)
 - [AU Core MedicationDispense](StructureDefinition-au-core-medicationdispense.html):
   - added invariant au-core-meddisp-01 to require MedicationDispense.whenPrepared, if provided, to be precise to at least the day [AU Core: FHIR-57857](https://jira.hl7.org/browse/FHIR-57857)
+- [AU Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html):
+  - applied technical corrrection to invariant au-core-medreq-01 FHIRPath expression to align with existing human description requiring date precision to the day or presence of a Data Absent Reason extension [AU Core: FHIR-59045](https://jira.hl7.org/browse/FHIR-59045)
 - [AU Core Requester CapabilityStatement](CapabilityStatement-au-core-requester.html):
   - added requirements for the MedicationDispense prescription search parameter for the requester to provide an id value as SHALL and type value as MAY, and for the responder to support both as SHALL [AU Core: FHIR-57858](https://jira.hl7.org/browse/FHIR-57858)
   - added support for _include=MedicationDispense:medication as SHOULD for requester and responder, and as SHALL for responder where an external Medication resource is referenced [AU Core: FHIR-57894](https://jira.hl7.org/browse/FHIR-57894)
