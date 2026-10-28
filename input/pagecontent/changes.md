@@ -6,6 +6,7 @@
 This change log documents the significant updates and resolutions implemented from version [3.0.0-ballot1](https://hl7.org.au/fhir/core/3.0.0-ballot1/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
+- added guidance on representing empty sections, known absence of data due to workflow, and "no known x" to the [General Requirements](general-requirements.html) page [AU Core: FHIR-58678](https://jira.hl7.org/browse/FHIR-58678)
 - [AU Core Composition](StructureDefinition-au-core-composition.html):
   - added profile specific implementation guidance on representing the author and provenance of a human-curated or software-assembled Composition [AU Core: FHIR-58791](https://jira.hl7.org/browse/FHIR-58791)
 - [AU Core DocumentReference](StructureDefinition-au-core-documentreference.html):
