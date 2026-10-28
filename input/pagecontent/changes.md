@@ -6,6 +6,8 @@
 This change log documents the significant updates and resolutions implemented from version [3.0.0-ballot1](https://hl7.org.au/fhir/core/3.0.0-ballot1/index.html) to TBD. The list below includes substantive changes to mandatory and _Must Support_ elements inherited from AU Base.
 
 #### Changes in this version
+- [AU Core Composition](StructureDefinition-au-core-composition.html):
+  - added profile specific implementation guidance on representing the author and provenance of a human-curated or software-assembled Composition [AU Core: FHIR-58791](https://jira.hl7.org/browse/FHIR-58791)
 - [AU Core DocumentReference](StructureDefinition-au-core-documentreference.html):
   - added profile specific implementation guidance that DocumentReference.content SHALL NOT represent different versions of the same document [AU Core: FHIR-58787](https://jira.hl7.org/browse/FHIR-58787)
   - added profile specific implementation guidance that the responder SHALL support at least one of DocumentReference.content.attachment.url and DocumentReference.content.attachment.data, and the requester SHALL support both [AU Core: FHIR-58786](https://jira.hl7.org/browse/FHIR-58786)
