@@ -327,16 +327,16 @@ When claiming conformance to the AU Core Medication profile:
 
 Systems **MAY** populate and accept concepts from other value sets but this is not a requirement of AU Core.
 
-### Missing Data, Empty Document Sections, Known Absence of Data, No Known X
+### Missing Data, Empty Sections, Known Absence of Data, No Known X
 It is important to differentiate between the following mutually exclusive circumstances:
 * Affirmatively stating that a patient has "no known X" or "no history of X" (for example, that a patient has no known allergies). 
-* Not having data in the record for a particular document section (for example, where a source system does not have information on a patient's allergies). 
+* Not having data in the record for a particular section (for example, where a source system does not have information on a patient's allergies). 
 * Asserting that this data is not available due to a workflow reason (for example, allergies were not reviewed and are unknown). 
 * Not having data for a particular element within a resource (for example, the onset date of a particular allergy is not available in the system and the system does not know the reason for the absence).
 
 In the above circumstances the following is applied:
 * When stating "no known X" or "no history of X", systems **SHOULD** implement the guidance of the [No Known X](general-requirements.html#no-known-x) section.
-* Where data is missing for a document section and the reason is not known, systems **SHALL** implement the requirements of the [Empty Document Sections](general-requirements.html#empty-document-sections) section.
+* Where data is missing for a section and the reason is not known, systems **SHALL** implement the requirements of the [Empty Sections](general-requirements.html#empty-sections) section.
 * When asserting data is not available due to a known workflow reason, systems **SHOULD** implement the requirements of the [Known Absence of Data Due to Workflow](general-requirements.html#known-absence-of-data-due-to-workflow) section.
 * Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
 
@@ -416,17 +416,17 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
         ~~~
     - For some AU Core Observation profiles the `Observation.value` element is conditionally mandatory, e.g. AU Core Smoking Status.  In this case the `Observation.dataAbsentReason` element is used with the code "unknown" rather than the [DataAbsentReason extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html). Requesters are advised that other meaningful values can be captured in `Observation.dataAbsentReason` beyond missing or suppressed.
 
-#### Empty Document Sections
+#### Empty Sections
 
-A source system **SHOULD** omit non-mandatory document sections when the source system does not have any information and does not know the reason the information is absent.
+A source system **SHOULD** omit non-mandatory sections when the source system does not have any information and does not know the reason the information is absent.
 
-For a mandatory document section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent. In this circumstance, the source system **SHALL**:
+For a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent. In this circumstance, the source system **SHALL**:
 
 * use the code `unavailable` from the [List Empty Reasons](http://terminology.hl7.org/CodeSystem/list-empty-reason) code system
 
 Requesters are advised that other meaningful values can be captured in `Composition.section.emptyReason` beyond missing or suppressed.
   
-  Example: Allergies and Intolerances Document Section where the patient's allergy information is not available.
+  Example: Allergies and Intolerances Section where the patient's allergy information is not available.
   ~~~
     ...
     "section" : [
@@ -461,12 +461,12 @@ Requesters are advised that other meaningful values can be captured in `Composit
 
 #### Known Absence of Data Due to Workflow
 
-Where the system does not have information for a particular document section and there is a known workflow reason (for example, the patient preferred not to answer), the system **SHOULD** represent that reason by populating `Composition.section.emptyReason`:
+Where the system does not have information for a particular section and there is a known workflow reason (for example, the patient preferred not to answer), the system **SHOULD** represent that reason by populating `Composition.section.emptyReason`:
 * *Prefer not to answer* may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-declined"
 * *Asked but not known* may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-unknown"
 * Where the workflow does not obtain the information, it may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "notasked"
 
-Example: Allergies and Intolerances Document Section where there is a workflow reason the patient's allergy information is not available.
+Example: Allergies and Intolerances Section where there is a workflow reason the patient's allergy information is not available.
 ~~~
   ...
   "section" : [
@@ -501,7 +501,7 @@ Example: Allergies and Intolerances Document Section where there is a workflow r
 
 #### No Known X
 
-Where the system can assert "no known X" (for example, no known conditions) or "no history of X" (for example, no history of cardiovascular system disease) in a document section, the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance. 
+Where the system can assert "no known X" (for example, no known conditions) or "no history of X" (for example, no history of cardiovascular system disease) in a section, the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance. 
 
 For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code` as per the profile specific implementation guidance.
 
