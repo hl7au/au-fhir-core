@@ -122,7 +122,7 @@ Typically, invariants defined in AU Core are used to:
 
 AU Core invariants are intentionally written to allow for the AU Core requirements on [Missing Data](general-requirements.html#missing-data) to be met, without unnecessarily restricting downstream IGs.
 * For optional elements, invariants that constrain element values are written to only apply when a value is present, allowing downstream IGs to define additional requirements for missing values (e.g. [AU Core MedicationDispense](StructureDefinition-au-core-medicationdispense.html) invariant **au-core-meddisp-01**: If a date is provided, it shall be precise to at least the day).
-* Where applicable, invariants are written to allow a Data Absent Reason extension when a value is unavailable (e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) invariant **au-core-pat-01:** At least one patient identifier shall be valid, or if not available, the Data Absent Reason extension shall be present).
+* For mandatory elements, invariants are written to allow a Data Absent Reason extension when a value is unavailable (e.g. [AU Core Patient](StructureDefinition-au-core-patient.html) invariant **au-core-pat-01:** At least one patient identifier shall be valid, or if not available, the Data Absent Reason extension shall be present).
 
 ##### Use of Slicing, Pattern, and Fixed Value  
 
