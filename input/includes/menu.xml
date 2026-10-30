@@ -3,7 +3,7 @@
     <a href="index.html">Home</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance
+    <a data-toggle="dropdown" href="conformance.html" class="dropdown-toggle">Conformance
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -14,7 +14,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -48,7 +48,7 @@
     <a href="security.html">Security and Privacy</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
+    <a data-toggle="dropdown" href="fhirartefacts.html" class="dropdown-toggle">FHIR Artefacts
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -76,7 +76,7 @@
     <a href="examples.html">Examples</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+    <a data-toggle="dropdown" href="support.html" class="dropdown-toggle">Support
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
