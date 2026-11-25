@@ -7,6 +7,7 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 - added guidance on representing empty sections, known absence of data due to workflow, and "no known x" to the [General Requirements](general-requirements.html) page [AU Core: FHIR-58678](https://jira.hl7.org/browse/FHIR-58678)
+- changed [Medicine Information](medicine-information.html) guidance to use the term 'generic drug name' instead of 'generic name' to align with the definition of the [Medication Generic Drug Name](https://build.fhir.org/ig/hl7au/au-fhir-base/en/StructureDefinition-medication-generic-name.html) extension [AU Base: FHIR-57962](https://jira.hl7.org/browse/FHIR-57962)
 - [AU Core Composition](StructureDefinition-au-core-composition.html):
   - added profile specific implementation guidance on representing the author and provenance of a human-curated or software-assembled Composition [AU Core: FHIR-58791](https://jira.hl7.org/browse/FHIR-58791)
 - [AU Core DocumentReference](StructureDefinition-au-core-documentreference.html):
