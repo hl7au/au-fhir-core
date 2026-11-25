@@ -109,6 +109,18 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/au-core-diagnosticresult"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-diagnosticresult-path"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-core-encounter"/>
 			</reference>
 			<exampleBoolean value="false"/>
@@ -140,6 +152,12 @@
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-medicationrequest"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-medicationstatement"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
@@ -243,6 +261,12 @@
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-composition"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-relatedperson"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
